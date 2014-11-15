@@ -1,6 +1,6 @@
-// SNES Blend Hi Color (3840 On Screen) Demo by krom (Peter Lemon):
+// SNES Blend Hi Color (1241 On Screen) Dragon's Lair Demo by krom (Peter Lemon):
 arch snes.cpu
-output "HiColor3840.sfc", create
+output "HiColor1241DLair.sfc", create
 
 macro seek(variable offset) {
   origin ((offset & $7F0000) >> 1) | (offset & $7FFF)
@@ -15,11 +15,12 @@ include "LIB\SNES_GFX.INC"    // Include Graphics Macros
 seek($8000); Start:
   SNES_INIT() // Run SNES Initialisation Routine
 
-  LoadPAL(BGPalBRG, $00, BGPalBRG.size, 0) // Load 2 BG Palettes (BG Palettes Use 240 & 16 Colors)
+  LoadPAL(BGPalBGR, $00, BGPalBGR.size, 0) // Load 2 BG Palettes (BG Palettes Use 240 & 16 Colors)
   LoadVRAM(BGTiles240, $0000, $8000, 0) // Load BG1 256 Tiles To VRAM
-  LoadVRAM(BGTiles240+$10000, $8000, $30C0, 0) // Load BG1 256 Tiles To VRAM
-  LoadVRAM(BGTiles16, $C000, BGTiles16.size, 0) // Load BG2 16  Tiles To VRAM
-  LoadVRAM(BGMap240, $F000, BGMap240.size + BGMap16.size, 0) // Load 2 Background Tile Maps To VRAM (2 * $800 bytes)
+  LoadVRAM(BGTiles240+$10000, $8000, $5F40, 0) // Load BG1 256 Tiles To VRAM
+  LoadVRAM(BGTiles16, $E000, BGTiles16.size, 0) // Load BG2 16 Tiles To VRAM
+  LoadVRAM(BGMap240, $F000, BGMap240.size, 0) // Load BG1 256 Tile Map To VRAM
+  LoadVRAM(BGMap16, $F800, BGMap16.size, 0) // Load BG2 16 Tile Map To VRAM
 
   // Setup Video
   lda.b #%00001011   // DCBAPMMM: M = Mode, P = Priority, ABCD = BG1,2,3,4 Tile Size
@@ -28,7 +29,7 @@ seek($8000); Start:
   // Setup BG1 256 Color Background
   lda.b #%11111000    // AAAAAASS: S = BG Map Size, A = BG Map Address
   sta.w {REG_BG1SC}   // $2107: BG1 32x32, BG1 Map Address = $F000 (VRAM Address / $400)
-  lda.b #%11100000    // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
+  lda.b #%11110000    // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
   sta.w {REG_BG12NBA} // $210B: BG1 Tile Address = $0000, BG2 Tile Address = $E000 (VRAM Address / $1000)
 
   // Setup BG2 16 Color Background
@@ -64,10 +65,10 @@ Loop:
 
 // Character Data
 // BANK 0
-insert BGPalBRG, "GFX\MaxColRGB.pal" // Include 2 BG Palette Data (512 Bytes)
-insert BGMap240, "GFX\MaxColGB240.map" // Include BG Map Data (2048 Bytes)
-insert BGMap16, "GFX\MaxColR16.map" // Include BG Map Data (2048 Bytes)
-insert BGTiles16, "GFX\MaxColR16.pic" // Include BG Tile Data (96 Bytes)
+insert BGPalBGR, "GFX\BGR256.pal" // Include 2 BG Palette Data (512 Bytes)
+insert BGMap240, "GFX\GR240.map" // Include BG Map Data (1792 Bytes)
+insert BGMap16, "GFX\B16.map"    // Include BG Map Data (1792 Bytes)
+insert BGTiles16, "GFX\B16.pic" // Include BG Tile Data (512 Bytes)
 // BANK 1 & 2
 seek($18000)
-insert BGTiles240, "GFX\MaxColGB240.pic" // Include BG Tile Data (28736 Bytes)
+insert BGTiles240, "GFX\GR240.pic" // Include BG Tile Data (57152 Bytes)

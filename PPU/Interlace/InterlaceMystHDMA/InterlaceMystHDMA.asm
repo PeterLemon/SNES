@@ -29,7 +29,7 @@ SetupVideo:
 
   // Setup BG1 16 Color Background
   lda.b #%01111010    // AAAAAASS: S = BG Map Size, A = BG Map Address
-  sta.w {REG_BG1SC}   // $2107: BG1 64x32, BG1 Map Address = $F000 (VRAM Address / $400)
+  sta.w {REG_BG1SC}   // $2107: BG1 64x32, BG1 Map Address = $F200 (VRAM Address / $400)
   lda.b #%00000000    // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
   sta.w {REG_BG12NBA} // $210B: BG1 Tile Address = $0000 (VRAM Address / $1000)
 

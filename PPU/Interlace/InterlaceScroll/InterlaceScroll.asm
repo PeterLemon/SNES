@@ -32,9 +32,9 @@ seek($8000); Start:
 
   // Setup BG1 16 Color Background
   lda.b #%00100011    // AAAAAASS: S = BG Map Size, A = BG Map Address
-  sta.w {REG_BG1SC}   // $2107: BG1 64x64, BG1 Map Address = $8 (VRAM Address / $400)
+  sta.w {REG_BG1SC}   // $2107: BG1 64x64, BG1 Map Address = $4000 (VRAM Address / $400)
   lda.b #%00000100    // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
-  sta.w {REG_BG12NBA} // $210B: BG1 Tile Address = $4 (VRAM Address / $1000)
+  sta.w {REG_BG12NBA} // $210B: BG1 Tile Address = $8000 (VRAM Address / $1000)
 
   lda.b #$01     // Enable BG1
   sta.w {REG_TM} // $212C: BG1 To Main Screen Designation

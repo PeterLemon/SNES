@@ -15,14 +15,9 @@ include "LIB\SNES_GFX.INC"    // Include Graphics Macros
 seek($8000); Start:
   SNES_INIT() // Run SNES Initialisation Routine
 
-  // Load Background Palette (BG Palette Uses 16 Colors)
-  LoadPAL(BGPal, $00, 32, 0) // Load Palette SRCDATA, DEST, SIZE, CHAN
-
-  // Load Background Tile Map To VRAM
-  LoadVRAM(BGMap, $4000, $2000, 0) // Load VRAM SRCDATA, DEST, SIZE, CHAN
-
-  // Load Background Tiles To VRAM
-  LoadVRAM(BGTiles, $8000, $1640, 0) // Load VRAM SRCDATA, DEST, SIZE, CHAN
+  LoadPAL(BGPal, $00, 32, 0) // Load Background Palette (BG Palette Uses 16 Colors)
+  LoadVRAM(BGMap, $4000, $2000, 0) // Load Background Tile Map To VRAM
+  LoadVRAM(BGTiles, $8000, $1640, 0) // Load Background Tiles To VRAM
 
   // Setup Video
   lda.b #%00001101   // DCBAPMMM: M = Mode, P = Priority, ABCD = BG1,2,3,4 Tile Size
