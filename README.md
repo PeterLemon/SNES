@@ -17,6 +17,6 @@ Using bass Run: make.bat<br />
 <br />
 Howto Run:<br />
 I only test with a real SNES using a SD2SNES Cartridge by ikari:<br />
-http://http://sd2snes.de<br />
+http://sd2snes.de<br />
 <br />
 You can also use SNES emulators like higan & the MESS SNES Driver.
