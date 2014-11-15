@@ -54,8 +54,8 @@ seek($8000); Start:
   stx.b BG1ScrPosX
 
   lda.b #$00      // Reset BG1 Y Position
-  sta.w {REG_BG1VOFS} // $210E: BG1 Position Y Lo Byte
-  sta.w {REG_BG1VOFS} // $210E: BG1 Position Y Hi Byte
+  sta.w {REG_BG1VOFS} // $210E: BG1 Vertical Scroll Position Lo Byte
+  sta.w {REG_BG1VOFS} // $210E: BG1 Vertical Scroll Position Hi Byte
 
   ldx.w #$0080    // Reset MODE7 Center X Pos
   stx.b Mode7PosX
@@ -109,9 +109,9 @@ InputLoop:
   WaitNMI() // Wait For Vertical Blank
 
   lda.b BG1ScrPosX
-  sta.w {REG_BG1HOFS} // $210D: BG1 Position X Lo Byte
+  sta.w {REG_BG1HOFS} // $210D: BG1 Horizontal Scroll Position Lo Byte
   lda.b BG1ScrPosX + 1
-  sta.w {REG_BG1HOFS} // $210D: BG1 Position X Hi Byte
+  sta.w {REG_BG1HOFS} // $210D: BG1 Horizontal Scroll Position Hi Byte
 
   lda.b Mode7PosX
   sta.w {REG_M7X} // $211F: MODE7 Center Position X Lo Byte
@@ -121,7 +121,7 @@ InputLoop:
   JoyLeft:
     ReadJOY({JOY_LEFT}) // Test LEFT Button
     beq JoyRight // IF (LEFT ! Pressed) Branch Down
-    ldx.b BG1ScrPosX // Decrement BG1 X Pos
+    ldx.b BG1ScrPosX // Decrement BG1 Horizontal Scroll Position
     dex
     stx.b BG1ScrPosX
 
@@ -132,7 +132,7 @@ InputLoop:
   JoyRight:
     ReadJOY({JOY_RIGHT}) // Test RIGHT Button
     beq Finish // IF (RIGHT ! Pressed) Branch Down
-    ldx.b BG1ScrPosX // Increment BG1 X Pos
+    ldx.b BG1ScrPosX // Increment BG1 Horizontal Scroll Position
     inx
     stx.b BG1ScrPosX
 
