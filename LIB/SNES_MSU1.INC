@@ -72,7 +72,7 @@ macro MSU1LoadVRAM(DEST, SIZE, CHAN) {
 macro MSU1LoadM7VRAM(DEST, SIZEMAP, SIZETILES, CHAN) {
   // Load Mode7 Map Data To VRAM
   stz.w {REG_VMAIN}  // $2115: Video Port Control
-  ldx.w #{DEST}      // VRAM Destination
+  ldx.w #{DEST} >> 1 // VRAM Destination
   stx.w {REG_VMADDL} // $2116: VRAM
 
   lda.b #$08
