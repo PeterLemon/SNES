@@ -27,7 +27,7 @@ SetupVideo:
   lda.b #%00000001   // Interlace Mode On
   sta.w {REG_SETINI} // $2133: Screen Mode Select
 
-  // Setup BG1 16 Colour Background
+  // Setup BG1 16 Color Background
   lda.b #%01111010    // AAAAAASS: S = BG Map Size, A = BG Map Address
   sta.w {REG_BG1SC}   // $2107: BG1 64x32, BG1 Map Address = $F000 (VRAM Address / $400)
   lda.b #%00000000    // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
@@ -49,12 +49,12 @@ SetupVideo:
   lda.b #%00000001     // HDMA Channel Select (Channel 0)
   sta.w {REG_HDMAEN}   // $420C: Select H-Blank DMA (H-DMA) Channels 
 
-  stz.w {REG_BG1HOFS} // Store Zero To BG Scroll Position Lo Byte
-  stz.w {REG_BG1HOFS} // Store Zero To BG Scroll Position Hi Byte
+  stz.w {REG_BG1HOFS} // Store Zero To BG Horizontal Scroll Position Lo Byte
+  stz.w {REG_BG1HOFS} // Store Zero To BG Horizontal Scroll Position Hi Byte
 
   lda.b #62 // Scroll BG 62 Pixels Up
-  sta.w {REG_BG1VOFS} // Store A To BG Scroll Position Lo Byte
-  stz.w {REG_BG1VOFS} // Store Zero To BG Scroll Position Hi Byte
+  sta.w {REG_BG1VOFS} // Store A To BG Vertical Scroll Position Lo Byte
+  stz.w {REG_BG1VOFS} // Store Zero To BG Vertical Scroll Position Hi Byte
 
   FadeIN() // Screen Fade In
 

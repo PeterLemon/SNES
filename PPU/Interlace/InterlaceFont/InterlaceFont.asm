@@ -1,6 +1,6 @@
-// SNES Interlace Moogle Demo by krom (Peter Lemon):
+// SNES Interlace Font Demo by krom (Peter Lemon):
 arch snes.cpu
-output "InterlaceMoogle.sfc", create
+output "InterlaceFont.sfc", create
 
 macro seek(variable offset) {
   origin ((offset & $7F0000) >> 1) | (offset & $7FFF)
@@ -15,9 +15,14 @@ include "LIB\SNES_GFX.INC"    // Include Graphics Macros
 seek($8000); Start:
   SNES_INIT() // Run SNES Initialisation Routine
 
-  LoadPAL(BGPal, $00, BGPal.size, 0) // Load Background Palette (BG Palette Uses 16 Colors)
-  LoadVRAM(BGTiles, $0000, BGTiles.size, 0) // Load Background Tiles To VRAM
-  LoadVRAM(BGMap, $F200, BGMap.size, 0) // Load Background Tile Map To VRAM
+  // Load Background Palette (BG Palette Uses 16 Colors)
+  LoadPAL(BGPal, $00, 32, 0) // Load Palette SRCDATA, DEST, SIZE, CHAN
+
+  // Load Background Tile Map To VRAM
+  LoadVRAM(BGMap, $4000, $2000, 0) // Load VRAM SRCDATA, DEST, SIZE, CHAN
+
+  // Load Background Tiles To VRAM
+  LoadVRAM(BGTiles, $8000, $1640, 0) // Load VRAM SRCDATA, DEST, SIZE, CHAN
 
   // Setup Video
   lda.b #%00001101   // DCBAPMMM: M = Mode, P = Priority, ABCD = BG1,2,3,4 Tile Size
@@ -27,10 +32,10 @@ seek($8000); Start:
   sta.w {REG_SETINI} // $2133: Screen Mode Select
 
   // Setup BG1 16 Color Background
-  lda.b #%01111010    // AAAAAASS: S = BG Map Size, A = BG Map Address
-  sta.w {REG_BG1SC}   // $2107: BG1 64x32, BG1 Map Address = $F000 (VRAM Address / $400)
-  lda.b #%00000000    // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
-  sta.w {REG_BG12NBA} // $210B: BG1 Tile Address = $0000 (VRAM Address / $1000)
+  lda.b #%00100010    // AAAAAASS: S = BG Map Size, A = BG Map Address
+  sta.w {REG_BG1SC}   // $2107: BG1 64x32, BG1 Map Address = $8000 (VRAM Address / $400)
+  lda.b #%00000100    // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
+  sta.w {REG_BG12NBA} // $210B: BG1 Tile Address = $4000 (VRAM Address / $1000)
 
   lda.b #$01     // Enable BG1
   sta.w {REG_TM} // $212C: BG1 To Main Screen Designation
@@ -38,10 +43,8 @@ seek($8000); Start:
 
   stz.w {REG_BG1HOFS} // Store Zero To BG1 Horizontal Scroll Position Lo Byte
   stz.w {REG_BG1HOFS} // Store Zero To BG1 Horizontal Scroll Position Hi Byte
-
-  lda.b #62 // Scroll BG 62 Pixels Up
-  sta.w {REG_BG1VOFS} // Store A To BG Scroll Vertical Position Lo Byte
-  stz.w {REG_BG1VOFS} // Store Zero To BG Scroll Vertical Position Hi Byte
+  stz.w {REG_BG1VOFS} // Store Zero To BG1 Vertical Scroll Position Lo Byte
+  stz.w {REG_BG1VOFS} // Store Zero To BG1 Vertical Scroll Position Hi Byte
 
   FadeIN() // Screen Fade In
 
@@ -50,6 +53,4 @@ Loop:
 
 // Character Data
 // BANK 0
-insert BGPal, "GFX\BG.pal" // Include BG Palette Data (32 Bytes)
-insert BGMap, "GFX\BG.map" // Include BG Map Data (3584 Bytes)
-insert BGTiles, "GFX\BG.pic" // Include BG Tile Data (16576 Bytes)
+include "GFX\BG.asm" // Include BG
