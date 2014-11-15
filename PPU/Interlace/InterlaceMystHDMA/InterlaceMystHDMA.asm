@@ -1,6 +1,6 @@
-// SNES Interlace Simpsons HDMA Demo by krom (Peter Lemon):
+// SNES Interlace Myst HDMA Demo by krom (Peter Lemon):
 arch snes.cpu
-output "InterlaceSimpsonsHDMA.sfc", create
+output "InterlaceMystHDMA.sfc", create
 
 macro seek(variable offset) {
   origin ((offset & $7F0000) >> 1) | (offset & $7FFF)
@@ -17,7 +17,7 @@ seek($8000); Start:
 
   LoadPAL(BGPal, $00, BGPal.size, 0) // Load Background Palette (BG Palette Uses 16 Colors)
   LoadVRAM(BGTilesHI, $0000, BGTilesHI.size, 0) // Load Background Tiles To VRAM
-  LoadVRAM(BGTilesLO, $8000, BGTilesLO.size, 0) // Load Background Tiles To VRAM
+  LoadVRAM(BGTilesLO, $6000, BGTilesLO.size, 0) // Load Background Tiles To VRAM
   LoadVRAM(BGMap, $F200, BGMap.size, 0) // Load Background Tile Map To VRAM
 
 SetupVideo:
@@ -63,16 +63,15 @@ Loop:
 
 HDMATable:
   db 112, 0 // Repeat 112 Scanlines, BG1 Tile Address = $0000
-  db  32, 0 // Repeat  32 Scanlines, BG1 Tile Address = $0000
-  db  80, 4 // Repeat  80 Scanlines, BG1 Tile Address = $4000
+  db 112, 3 // Repeat 112 Scanlines, BG1 Tile Address = $3000
   db 0 // End Of HDMA
 
 // Character Data
 // BANK 0
 insert BGPal, "GFX\BG.pal" // Include BG Palette Data (32 Bytes)
 insert BGMap, "GFX\BG.map" // Include BG Map Data (3584 Bytes)
-insert BGTilesLO, "GFX\BGLO.pic" // Include BG Tile Data (27776 Bytes)
+insert BGTilesHI, "GFX\BGHI.pic" // Include BG Tile Data (23488 Bytes)
 
 // BANK 1
 seek($18000)
-insert BGTilesHI, "GFX\BGHI.pic" // Include BG Tile Data (29312 Bytes)
+insert BGTilesLO, "GFX\BGLO.pic" // Include BG Tile Data (29952 Bytes)
