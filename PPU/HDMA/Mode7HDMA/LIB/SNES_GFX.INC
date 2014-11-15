@@ -108,7 +108,7 @@ macro UpdatePAL(SRC, DEST, SIZE, CHAN) {
 // SIZE: Size Of Data (BYTE Size)
 // CHAN: DMA Channel To Transfer Data (0..7)
 macro LoadVRAM(SRC, DEST, SIZE, CHAN) {
-  ldx.w #{DEST}      // VRAM Destination
+  ldx.w #{DEST} >> 1 // VRAM Destination
   stx.w {REG_VMADDL} // $2116: VRAM
 
   lda.b #$01
@@ -134,7 +134,7 @@ macro LoadVRAM(SRC, DEST, SIZE, CHAN) {
 // SIZE: Size Of Data (BYTE Size)
 // CHAN: DMA Channel To Transfer Data (0..7)
 macro UpdateVRAM(SRC, DEST, SIZE, CHAN) {
-  ldx.w #{DEST}      // VRAM Destination
+  ldx.w #{DEST} >> 1 // VRAM Destination
   stx.w {REG_VMADDL} // $2116: VRAM
 
   lda.b #$01
@@ -168,7 +168,7 @@ macro UpdateVRAM(SRC, DEST, SIZE, CHAN) {
 macro LoadM7VRAM(SRCMAP, SRCTILES, DEST, SIZEMAP, SIZETILES, CHAN) {
   // Load Mode7 Map Data To VRAM
   stz.w {REG_VMAIN}  // $2115: Video Port Control
-  ldx.w #{DEST}      // VRAM Destination
+  ldx.w #{DEST} >> 1 // VRAM Destination
   stx.w {REG_VMADDL} // $2116: VRAM
 
   lda.b #$18             // Set Destination Register ($2118: VRAM Write)

@@ -54,15 +54,15 @@ seek($8000); Start:
   stx.b BG1ScrPosX
 
   lda.b #$00      // Reset BG1 Y Position
-  sta.w {REG_BG1VOFS} // $210E: BG1 Pos Y Lo Byte
-  sta.w {REG_BG1VOFS} // $210E: BG1 Pos Y Hi Byte
+  sta.w {REG_BG1VOFS} // $210E: BG1 Position Y Lo Byte
+  sta.w {REG_BG1VOFS} // $210E: BG1 Position Y Hi Byte
 
   ldx.w #$0080    // Reset MODE7 Center X Pos
   stx.b Mode7PosX
   
   lda.b #$00      // Reset MODE7 Center Y Pos
-  sta.w {REG_M7Y} // $2120: MODE7 Center Pos Y Lo Byte
-  sta.w {REG_M7Y} // $2120: MODE7 Center Pos Y Hi Byte
+  sta.w {REG_M7Y} // $2120: MODE7 Center Position Y Lo Byte
+  sta.w {REG_M7Y} // $2120: MODE7 Center Position Y Hi Byte
 
   // HDMA Mode7 Scanline Zoom (X)    
   lda.b #%00000010   // HMDA: Write 2 Bytes Each Scanline, Repeat A/B-bus Address Twice
@@ -97,10 +97,10 @@ seek($8000); Start:
   lda.b #%00000111   // HDMA Channel Select (Channel 0,1,2)
   sta.w {REG_HDMAEN} // $420C: Select H-Blank DMA (H-DMA) Channels
 
-  stz.w {REG_BG1HOFS} // Store Zero To BG1 Horizontal Scroll Pos Lo Byte
-  stz.w {REG_BG1HOFS} // Store Zero To BG1 Horizontal Scroll Pos Hi Byte
-  stz.w {REG_BG1VOFS} // Store Zero To BG1 Vertical Scroll Pos Lo Byte
-  stz.w {REG_BG1VOFS} // Store Zero To BG1 Vertical Scroll Pos Hi Byte
+  stz.w {REG_BG1HOFS} // Store Zero To BG1 Horizontal Scroll Position Lo Byte
+  stz.w {REG_BG1HOFS} // Store Zero To BG1 Horizontal Scroll Position Hi Byte
+  stz.w {REG_BG1VOFS} // Store Zero To BG1 Vertical Scroll Position Lo Byte
+  stz.w {REG_BG1VOFS} // Store Zero To BG1 Vertical Scroll Position Hi Byte
 
   lda.b #$F // Turn On Screen, Maximum Brightness
   sta.w {REG_INIDISP} // $2100: Screen Display
@@ -109,14 +109,14 @@ InputLoop:
   WaitNMI() // Wait For Vertical Blank
 
   lda.b BG1ScrPosX
-  sta.w {REG_BG1HOFS} // $210D: BG1 Pos X Lo Byte
+  sta.w {REG_BG1HOFS} // $210D: BG1 Position X Lo Byte
   lda.b BG1ScrPosX + 1
-  sta.w {REG_BG1HOFS} // $210D: BG1 Pos X Hi Byte
+  sta.w {REG_BG1HOFS} // $210D: BG1 Position X Hi Byte
 
   lda.b Mode7PosX
-  sta.w {REG_M7X} // $211F: MODE7 Center Pos X Lo Byte
+  sta.w {REG_M7X} // $211F: MODE7 Center Position X Lo Byte
   lda.b Mode7PosX + 1
-  sta.w {REG_M7X} // $211F: MODE7 Center Pos X Hi Byte
+  sta.w {REG_M7X} // $211F: MODE7 Center Position X Hi Byte
 
   JoyLeft:
     ReadJOY({JOY_LEFT}) // Test LEFT Button
@@ -125,7 +125,7 @@ InputLoop:
     dex
     stx.b BG1ScrPosX
 
-    ldx.b Mode7PosX // Decrement Mode7 X Pos
+    ldx.b Mode7PosX // Decrement Mode7 X Position
     dex
     stx.b Mode7PosX
 
@@ -136,7 +136,7 @@ InputLoop:
     inx
     stx.b BG1ScrPosX
 
-    ldx.b Mode7PosX // Increment Mode7 X Pos
+    ldx.b Mode7PosX // Increment Mode7 X Position
     inx
     stx.b Mode7PosX
 
