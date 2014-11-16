@@ -1,6 +1,6 @@
-// SNES Window HDMA Demo by krom (Peter Lemon):
+// SNES Window Multi HDMA Demo by krom (Peter Lemon):
 arch snes.cpu
-output "WindowHDMA.sfc", create
+output "WindowMultiHDMA.sfc", create
 
 macro seek(variable offset) {
   origin ((offset & $7F0000) >> 1) | (offset & $7FFF)
@@ -43,13 +43,15 @@ seek($8000); Start:
   sta.w {REG_CGDATA} // $2122: CGRAM Data Write Hi Byte
 
   // Window
-  lda.b #3           // Load Window BG1 Inside
+  lda.b #%00001111   // Load Window 1 & 2 BG1 Inside
   sta.w {REG_W12SEL} // $2123: Window BG1/BG2  Mask Settings Write Byte
   lda.b #1           // Load Window BG1 Disable
   sta.w {REG_TMW}    // $212E: Window Area Main Screen Disable Write Byte
+  lda.b #1           // Load Window 1 & 2 BG Mask Logic Settings (BG1 = AND)
+  sta.w {REG_WBGLOG} // $212E: Window Area Main Screen Disable Write Byte
 
   // HDMA Window     
-  lda.b #%00000001   // HMDA: Write 2 Bytes Each Scanline
+  lda.b #%00000100   // HMDA: Write 4 Bytes Each Scanline
   sta.w {REG_DMAP0}  // $4300: DMA0 DMA/HDMA Parameters
   lda.b #{REG_WH0}   // $26: Start At Window 1 Left Position (X1)($2126)
   sta.w {REG_BBAD0}  // $4301: DMA0 DMA/HDMA I/O-Bus Address (PPU-Bus AKA B-Bus)
@@ -105,20 +107,20 @@ InputLoop:
     jmp InputLoop
 
 HDMATable:
-  db 16,   1,   0 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2
-  db 16,  15, 240 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2
-  db 16,  14, 241 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2
-  db 16,  13, 242 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2
-  db 16,  12, 243 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2
-  db 16,  11, 244 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2
-  db 16,  10, 245 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2
-  db 16,  10, 245 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2
-  db 16,  11, 244 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2
-  db 16,  12, 243 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2
-  db 16,  13, 242 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2
-  db 16,  14, 241 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2
-  db 16,  15, 240 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2
-  db 16,   1,   0 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2
+  db 16,   1,   0,   1,   0 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2, Window 2 X1, Window 2 X2
+  db 16,  16, 112, 144, 240 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2, Window 2 X1, Window 2 X2
+  db 16,  16, 112, 144, 240 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2, Window 2 X1, Window 2 X2
+  db 16,  16, 112, 144, 240 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2, Window 2 X1, Window 2 X2
+  db 16,  16, 112, 144, 240 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2, Window 2 X1, Window 2 X2
+  db 16,  16, 112, 144, 240 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2, Window 2 X1, Window 2 X2
+  db 16,   1,   0,   1,   0 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2, Window 2 X1, Window 2 X2
+  db 16,   1,   0,   1,   0 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2, Window 2 X1, Window 2 X2
+  db 16,  16, 112, 144, 240 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2, Window 2 X1, Window 2 X2
+  db 16,  16, 112, 144, 240 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2, Window 2 X1, Window 2 X2
+  db 16,  16, 112, 144, 240 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2, Window 2 X1, Window 2 X2
+  db 16,  16, 112, 144, 240 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2, Window 2 X1, Window 2 X2
+  db 16,  16, 112, 144, 240 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2, Window 2 X1, Window 2 X2
+  db 16,   1,   0,   1,   0 // Repeat 16 Scanlines, Window 1 X1, Window 1 X2, Window 2 X1, Window 2 X2
   db 0 // End Of HDMA
 
 // Character Data
