@@ -13,7 +13,7 @@ include "LIB\SNES_HEADER.ASM" // Include Header & Vector Table
 include "LIB\SNES_GFX.INC"    // Include Graphics Macros
 
 seek($8000); Start:
-  SNES_INIT() // Run SNES Initialisation Routine
+  SNES_INIT({SLOWROM}) // Run SNES Initialisation Routine
 
   LoadPAL(BGPalBGR, $00, BGPalBGR.size, 0) // Load 2 BG Palettes (BG Palettes Use 240 & 16 Colors)
   LoadVRAM(BGTiles241, $0000, $8000, 0) // Load BG1 256 Tiles To VRAM

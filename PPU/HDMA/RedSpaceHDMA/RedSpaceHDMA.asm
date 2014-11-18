@@ -12,7 +12,7 @@ include "LIB\SNES.INC"        // Include SNES Definitions
 include "LIB\SNES_HEADER.ASM" // Include Header & Vector Table
 
 seek($8000); Start:
-  SNES_INIT() // Run SNES Initialisation Routine
+  SNES_INIT({SLOWROM}) // Run SNES Initialisation Routine
 
   // Load Red HDMA Gradient Backround Palette Color
   lda.b #%00000011   // HMDA: Write 4 Bytes Each Scanline, Repeat A/B-bus Address Twice

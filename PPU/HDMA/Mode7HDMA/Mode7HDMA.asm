@@ -21,7 +21,7 @@ BG1ScrPosX:
   dw 0 // Mode7 BG1 Scroll Position X Word
 
 seek($8000); Start:
-  SNES_INIT() // Run SNES Initialisation Routine
+  SNES_INIT({SLOWROM}) // Run SNES Initialisation Routine
 
   LoadPAL(BGPal, $00, BGPal.size, 0) // Load Background Palette (BG Palette Uses 256 Colors)
   LoadM7VRAM(BGMap, BGTiles, $0000, BGMap.size, BGTiles.size, 0) // Load Background Map & Tiles To VRAM

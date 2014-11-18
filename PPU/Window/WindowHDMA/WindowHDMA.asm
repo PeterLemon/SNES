@@ -14,7 +14,7 @@ include "LIB\SNES_GFX.INC"    // Include Graphics Macros
 include "LIB\SNES_INPUT.INC"  // Include Input Macros
 
 seek($8000); Start:
-  SNES_INIT() // Run SNES Initialisation Routine
+  SNES_INIT({SLOWROM}) // Run SNES Initialisation Routine
 
   LoadPAL(BGPal, $00, BGPal.size, 0) // Load Background Palette (BG Palette Uses 256 Colors)
   LoadVRAM(BGMap, $0000, BGMap.size, 0) // Load Background Tile Map To VRAM
