@@ -236,9 +236,9 @@ macro SPCWaitBoot() { // Wait For SPC To Boot (Call At first Use Of SPC & After 
   WaitAPUIO(1)
 }
 
-macro SPCExecute(ADDR) { // Starts Executing At SPC ADDR Y
-  ldy.w #{ADDR}
-  sty.w {REG_APUIO2}
+macro SPCExecute(ADDR) { // Starts Executing At SPC ADDR X
+  ldx.w #{ADDR}
+  stx.w {REG_APUIO2}
   stz.w {REG_APUIO1}
   lda.w {REG_APUIO0}
   clc
@@ -247,16 +247,16 @@ macro SPCExecute(ADDR) { // Starts Executing At SPC ADDR Y
   WaitAPUIO(0) // Wait For Acknowledgement
 }
 
-macro SPCLoadByte() { // Loads Byte A To SPC & Increments Y
+macro SPCLoadByte() { // Loads Byte A To SPC & Increments X
   sta.w {REG_APUIO1}
-  tya // Ready Signal
+  txa // Ready Signal
   sta.w {REG_APUIO0}
-  iny
+  inx // Increment X
   WaitAPUIO(0) // Wait For Acknowledgement
 }
 
-macro SPCBeginUpload() { // Starts Upload To SPC ADDR Y & Sets Y To 0 For Use As Index With SPCLoadByte
-  sty.w {REG_APUIO2}
+macro SPCBeginUpload() { // Starts Upload To SPC ADDR X & Sets X To 0 For Use As Index With SPCLoadByte
+  stx.w {REG_APUIO2}
   lda.w {REG_APUIO0} // Send Command
   clc
   adc.b #$22
@@ -266,21 +266,21 @@ macro SPCBeginUpload() { // Starts Upload To SPC ADDR Y & Sets Y To 0 For Use As
   sta.w {REG_APUIO1}
   sta.w {REG_APUIO0}
   WaitAPUIO(0) // Wait For Acknowledgement
-  ldy.w #0 // Initialize Y Index To 0
+  ldx.w #0 // Initialize X Index To 0
 }
 
 macro TransferBlockSPC(SRC_ADDR, SPC_ADDR, SIZE) { // Transfer A Block Of Data To SPC RAM
-  ldy.w #{SPC_ADDR}
+  ldx.w #{SPC_ADDR}
   SPCBeginUpload()
 -
-  lda {SRC_ADDR},y
+  lda.l {SRC_ADDR},x
   SPCLoadByte()
-  cpy.w #{SIZE}
+  cpx.w #{SIZE}
   bne --
 }
 
 macro WriteDSP(REG, BYTE) { // Write Byte To SPC-700 DSP Register
-  ldy.w #{REG_DSPADDR} // Do A Two Byte Upload To $00F2..$00F3, Setting DSP Register & Data Byte
+  ldx.w #{REG_DSPADDR} // Do A Two Byte Upload To $00F2..$00F3, Setting DSP Register & Data Byte
   SPCBeginUpload()
   lda.b #{REG}
   SPCLoadByte() // DSP REG To $F2
@@ -289,7 +289,7 @@ macro WriteDSP(REG, BYTE) { // Write Byte To SPC-700 DSP Register
 }
 
 macro WriteCTRL(BYTE) { // Write Byte To SPC-700 Control Register
-  ldy.w #{REG_CONTROL}  // Do A Byte Upload To $00F1, Writing Control Register
+  ldx.w #{REG_CONTROL}  // Do A Byte Upload To $00F1, Writing Control Register
   SPCBeginUpload()
   lda.b #{BYTE}
   SPCLoadByte() // Control DATA To $F1
