@@ -268,8 +268,8 @@ SongStart:
 
 jmp SongStart
 
-seek($1A00); sampleDIR:
+seek($0A00); sampleDIR:
   dw Harp, Harp + 927 // 0
 
-seek($1B00) // Sample Data
+seek($0B00) // Sample Data
   insert Harp, "BRR\034. Harp (Loop=927,AD=$FF,SR=$F0,Echo)(C9Freq=$C900).brr"
