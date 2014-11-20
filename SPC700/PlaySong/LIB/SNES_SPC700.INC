@@ -9,22 +9,22 @@ define SPCRAM($0200)      // RAM (Code, Data, Dir-Table, BRR-Samples, Echo-Buffe
 define SPCIPL($FFC0)      // 64-Byte IPL Boot ROM Or RAM (Selectable Via Port $00F1)  64B/RW
 
 // I/O Ports (CPU Includes 16 Memory Mapper Ports At Address $00F0..$00FF)
-define REG_TEST($F0)    // Testing Functions                                           1B/W
-define REG_CONTROL($F1) // Timer, I/O & ROM Control                                    1B/W
-define REG_DSPADDR($F2) // DSP Register Index                                          1B/RW
-define REG_DSPDATA($F3) // DSP Register Data                                           1B/RW
-define REG_CPUIO0($F4)  // CPU Input & Output Register 0                               1B/W
-define REG_CPUIO1($F5)  // CPU Input & Output Register 1                               1B/W
-define REG_CPUIO2($F6)  // CPU Input & Output Register 2                               1B/W
-define REG_CPUIO3($F7)  // CPU Input & Output Register 3                               1B/W
-define REG_AUXIO4($F8)  // External I/O Port P4 (S-SMP Pins 34-27)                     1B/RW
-define REG_AUXIO5($F9)  // External I/O Port P5 (S-SMP Pins 25-18)                     1B/RW
-define REG_T0DIV($FA)   // Timer 0 Divider  (8000Hz Clock Source)                      1B/W
-define REG_T1DIV($FB)   // Timer 1 Divider  (8000Hz Clock Source)                      1B/W
-define REG_T2DIV($FC)   // Timer 2 Divider (64000Hz Clock Source)                      1B/W
-define REG_T0OUT($FD)   // Timer 0 Output                                              1B/R
-define REG_T1OUT($FE)   // Timer 1 Output                                              1B/R
-define REG_T2OUT($FF)   // Timer 2 Output                                              1B/R
+define REG_TEST($F0)      // Testing Functions                                         1B/W
+define REG_CONTROL($F1)   // Timer, I/O & ROM Control                                  1B/W
+define REG_DSPADDR($F2)   // DSP Register Index                                        1B/RW
+define REG_DSPDATA($F3)   // DSP Register Data                                         1B/RW
+define REG_CPUIO0($F4)    // CPU Input & Output Register 0                             1B/W
+define REG_CPUIO1($F5)    // CPU Input & Output Register 1                             1B/W
+define REG_CPUIO2($F6)    // CPU Input & Output Register 2                             1B/W
+define REG_CPUIO3($F7)    // CPU Input & Output Register 3                             1B/W
+define REG_AUXIO4($F8)    // External I/O Port P4 (S-SMP Pins 34-27)                   1B/RW
+define REG_AUXIO5($F9)    // External I/O Port P5 (S-SMP Pins 25-18)                   1B/RW
+define REG_T0DIV($FA)     // Timer 0 Divider  (8000Hz Clock Source)                    1B/W
+define REG_T1DIV($FB)     // Timer 1 Divider  (8000Hz Clock Source)                    1B/W
+define REG_T2DIV($FC)     // Timer 2 Divider (64000Hz Clock Source)                    1B/W
+define REG_T0OUT($FD)     // Timer 0 Output                                            1B/R
+define REG_T1OUT($FE)     // Timer 1 Output                                            1B/R
+define REG_T2OUT($FF)     // Timer 2 Output                                            1B/R
 
 // DSP Registers (128 DSP Registers Are Indirectly Accessed Via I/O Ports $00F2/$00F3)
 define DSP_MVOLL($0C)     // Left  Channel Master Volume                               1B/RW
@@ -94,7 +94,7 @@ define DSP_V2ENVX($28)    // Voice 2 Current Envelope Value                     
 define DSP_V2OUTX($29)    // Voice 2 Current Sample   Value                            1B/R
 define DSP_V2UNUSEDA($2A) // Voice 2 Unused Byte A (1 Byte Of General-Purpose RAM)     1B/RW
 define DSP_V2UNUSEDB($2B) // Voice 2 Unused Byte B (1 Byte Of General-Purpose RAM)     1B/RW
-define DSP_V2UNUSEDC($0E) // Voice 2 Unused Byte C (1 Byte Of General-Purpose RAM)     1B/RW
+define DSP_V2UNUSEDC($2E) // Voice 2 Unused Byte C (1 Byte Of General-Purpose RAM)     1B/RW
 
 define DSP_V3VOLL($30)    // Voice 3 Left  Volume                                      1B/RW
 define DSP_V3VOLR($31)    // Voice 3 Right Volume                                      1B/RW
@@ -177,6 +177,17 @@ macro WDSP(REG, variable DATA) {
 macro WDSP_REG(REG) {
   lda #{REG}
   stw {REG_DSPADDR}
+}
+
+macro SPC_INIT() { // SPC700 Initialisation
+  WDSP({DSP_FLG},$20)  // Disable Echo Buffer Writes
+  WDSP({DSP_KON},$00)  // Reset Key On Flags
+  WDSP({DSP_KOFF},$FF) // Set Key Off Flags
+  WDSP({DSP_PMON},$00) // Reset Pitch Modulation Enable Flags
+  WDSP({DSP_NON},$00)  // Reset Noise Enable Flags
+  WDSP({DSP_EON},$00)  // Reset Echo On Flags
+  WDSP({DSP_EVOLL},0)  // Reset Echo Volume Left
+  WDSP({DSP_EVOLR},0)  // Reset Echo Volume Right
 }
 
 macro SPCWaitMS(AMOUNT) { // Wait For MilliSecond Amount (Granularity = 1ms, Max Wait = 255ms)

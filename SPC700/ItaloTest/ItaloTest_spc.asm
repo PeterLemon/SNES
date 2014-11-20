@@ -20,9 +20,8 @@ define SynthC9Pitch($FB00)
 define HandClapC9Pitch($8000)
 
 seek({SPCRAM}); Start:
-  WDSP({DSP_FLG},$20)  // Disable Echo Buffer Writes 
-  WDSP({DSP_KON},$00)  // Reset Key On Flags
-  WDSP({DSP_KOFF},$FF) // Set Key Off Flags
+  SPC_INIT() // Run SPC700 Initialisation Routine
+
   WDSP({DSP_DIR},sampleDIR >> 8) // Sample Directory Offset
 
   WDSP({DSP_KOFF},$00) // Reset Key Off Flags

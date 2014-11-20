@@ -12,9 +12,8 @@ include "LIB\SNES_SPC700.INC" // Include SPC700 Definitions & Macros
 define HarpC9Pitch($C900)
 
 seek({SPCRAM}); Start:
-  WDSP({DSP_FLG},$20)  // Disable Echo Buffer Writes 
-  WDSP({DSP_KON},$00)  // Reset Key On Flags
-  WDSP({DSP_KOFF},$FF) // Set Key Off Flags
+  SPC_INIT() // Run SPC700 Initialisation Routine
+
   WDSP({DSP_DIR},sampleDIR >> 8) // Sample Directory Offset
 
   WDSP({DSP_KOFF},$00) // Reset Key Off Flags
@@ -28,6 +27,13 @@ seek({SPCRAM}); Start:
   WDSP({DSP_FLG},0)    // Enable Echo Buffer Writes
   WDSP({DSP_EFB},100)  // Echo Feedback
   WDSP({DSP_FIR0},127) // Echo FIR Filter Coefficient 0
+  WDSP({DSP_FIR1},0)   // Echo FIR Filter Coefficient 1
+  WDSP({DSP_FIR2},0)   // Echo FIR Filter Coefficient 2
+  WDSP({DSP_FIR3},0)   // Echo FIR Filter Coefficient 3
+  WDSP({DSP_FIR4},0)   // Echo FIR Filter Coefficient 4
+  WDSP({DSP_FIR5},0)   // Echo FIR Filter Coefficient 5
+  WDSP({DSP_FIR6},0)   // Echo FIR Filter Coefficient 6
+  WDSP({DSP_FIR7},0)   // Echo FIR Filter Coefficient 7
   WDSP({DSP_EVOLL},25) // Echo Volume Left
   WDSP({DSP_EVOLR},25) // Echo Volume Right
 
