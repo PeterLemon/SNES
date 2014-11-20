@@ -23,4 +23,5 @@ Loop:
   jmp Loop
 
 // SPC Code
+// BANK 0
 insert SPCROM, "PlaySong.spc"
