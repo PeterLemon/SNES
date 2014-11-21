@@ -1,0 +1,12 @@
+cartridge region=NTSC
+  rom name=AUDIO.sfc size=0x8000
+  map id=rom address=00-3f,80-bf:8000-ffff
+  map id=rom address=40-7f,c0-ff:0000-ffff
+
+  msu1
+    rom name=AUDIO.msu size=0
+    track number=0 name=AUDIO-0.pcm
+    map id=io address=00-3f,80-bf:2000-2007
+
+information
+  title: AUDIO
