@@ -14,13 +14,25 @@ define MSU_TRACK($2004)    // MSU1 Track Register         2B/W
 define MSU_VOLUME($2006)   // MSU1 Volume Register        1B/W
 define MSU_CONTROL($2007)  // MSU1 Control Register       1B/W
 
-//==============================================================
-// MSU1LoadPAL - Load Palette Data To CGRAM (Seek Position Set)
-//==============================================================
+macro MSUWaitAudioBusy() {
+  -
+    bit.w {MSU_STATUS} // $2000: MSU1 Status Register
+    bvs - // Wait For MSU1 Audio Busy Flag Status Bit To Clear
+}
+
+macro MSUWaitDataBusy() {
+  -
+    bit.w {MSU_STATUS} // $2000: MSU1 Status Register
+    bmi - // Wait For MSU1 Data Busy Flag Status Bit To Clear
+}
+
+//=============================================================
+// MSULoadPAL - Load Palette Data To CGRAM (Seek Position Set)
+//=============================================================
 // DEST: CGRAM Destination Address (Color # To Start On)
 // SIZE: Size Of Data (# Of Colors To Copy)
 // CHAN: DMA Channel To Transfer Data (0..7)
-macro MSU1LoadPAL(DEST, SIZE, CHAN) {
+macro MSULoadPAL(DEST, SIZE, CHAN) {
   lda.b #{DEST}     // CGRAM Destination
   sta.w {REG_CGADD} // $2121: CGRAM
 
@@ -38,13 +50,13 @@ macro MSU1LoadPAL(DEST, SIZE, CHAN) {
   sta.w {REG_MDMAEN}   // $420B: DMA Enable
 }
 
-//==========================================================
-// MSU1LoadVRAM - Load GFX Data To VRAM (Seek Position Set)
-//----------------------------------------------------------
+//=========================================================
+// MSULoadVRAM - Load GFX Data To VRAM (Seek Position Set)
+//---------------------------------------------------------
 // DEST: VRAM Destination Address (WORD Address)
 // SIZE: Size Of Data (BYTE Size)
 // CHAN: DMA Channel To Transfer Data (0..7)
-macro MSU1LoadVRAM(DEST, SIZE, CHAN) {
+macro MSULoadVRAM(DEST, SIZE, CHAN) {
   ldx.w #{DEST} >> 1 // VRAM Destination
   stx.w {REG_VMADDL} // $2116: VRAM
 
@@ -62,14 +74,14 @@ macro MSU1LoadVRAM(DEST, SIZE, CHAN) {
   sta.w {REG_MDMAEN}   // $420B: DMA Enable
 }
 
-//==================================================================
-// MSU1LoadM7VRAM - Load Mode7 GFX Data To VRAM (Seek Position Set)
-//==================================================================
+//=================================================================
+// MSULoadM7VRAM - Load Mode7 GFX Data To VRAM (Seek Position Set)
+//=================================================================
 //      DEST: VRAM Destination Address (WORD Address)
 //   SIZEMAP: Size Of Map Data (BYTE Size)
 // SIZETILES: Size Of Tile Data (BYTE Size)
 //      CHAN: DMA Channel To Transfer Data (0..7)
-macro MSU1LoadM7VRAM(DEST, SIZEMAP, SIZETILES, CHAN) {
+macro MSULoadM7VRAM(DEST, SIZEMAP, SIZETILES, CHAN) {
   // Load Mode7 Map Data To VRAM
   stz.w {REG_VMAIN}  // $2115: Video Port Control
   ldx.w #{DEST} >> 1 // VRAM Destination
