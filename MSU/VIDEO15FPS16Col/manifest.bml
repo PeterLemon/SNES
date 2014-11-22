@@ -1,0 +1,12 @@
+cartridge region=NTSC
+  rom name=VIDEO15FPS16Col.sfc size=0x8000
+  map id=rom address=00-3f,80-bf:8000-ffff
+  map id=rom address=40-7f,c0-ff:0000-ffff
+
+  msu1
+    rom name=VIDEO15FPS16Col.msu size=0
+    track number=0 name=VIDEO15FPS16Col-0.pcm
+    map id=io address=00-3f,80-bf:2000-2007
+
+information
+  title: Video 15 Frames Per Second 16 Color
