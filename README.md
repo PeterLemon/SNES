@@ -4,7 +4,7 @@ SNES
 SNES Assembly Code by krom (Peter Lemon).<br />
 <br />
 All code compiles out of box with the bass assembler by byuu:<br />
-http://byuu.org<br />
+http://byuu.org/programming/bass/<br />
 I have included binaries of all the demos.<br />
 <br />
 Special thanks to byuu, for making the higan emulator, & the bass assembler =D<br />
