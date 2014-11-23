@@ -1,0 +1,149 @@
+﻿どらぼっちゃん OPEN
+young master Open
+$7FBC3
+9C	37	B0	C8	64	C5	3E	00	19	1A	0F	18	| Original Japanese Hex
+ど	ら	ぼ	っ	ち	ゃ	ん		O	P	E	N	| Original Japanese Text
+M	A	S	T	E	R	S		O	P	E	N	| New English Text
+17	0B	1D	1E	0F	1C	1D	00	19	1A	0F	18	| New English Hex
+
+PLAYにんずう
+Number of Players
+$7E804
+1A	16	0B	23	2B	3E	95	27	| Original Japanese Hex
+P	L	A	Y	に	ん	ず	う	| Original Japanese Text
+P	L	A	Y	E	R	S	?	| New English Text
+1A	16	0B	23	0F	1C	1D	86	| New English Hex
+||
+ゲームプレイにんずうをきめてね!...
+Decide the number of people playing games!...
+$7B3E8 (Line 1)
+A0	82	4B	BD	54	40	2B	3E	95	27	3D	5A	32	66	2D	85	88	88	88	| Original Japanese Hex
+ゲ	ー	ム	プ	レ	イ	に	ん	ず	う	を	き	め	て	ね	!	.	.	.	| Original Japanese Text
+S	E	T	S		U	P		P	L	A	Y	E	R	S	!	.	.	.	| New English Text
+1D	0F	1E	1D	00	1F	1A	00	1A	16	0B	23	0F	1C	1D	85	88	88	88	| New English Hex
+だけどマッチプレイは 2PLAYのみです
+But match play is only 2 Player
+$7B3FF (Line 2)
+98	5C	9C	49	D1	73	BD	54	40	77	00	03	1A	16	0B	23	2E	30	9B	60	| Original Japanese Hex
+だ	け	ど	マ	ッ	チ	プ	レ	イ	は		2	P	L	A	Y	の	み	で	す	| Original Japanese Text
+M	A	T	C	H	P	L	A	Y		I	S		2	P	L	A	Y	E	R	| New English Text
+17	0B	1E	0D	12	1A	16	0B	23	00	13	1D	00	03	1A	16	0B	23	0F	1C	| New English Hex
+
+プレイHOLEすう
+Number of holes?
+$7E81D
+BD	54	40	12	19	16	0F	60	27	| Original Japanese Hex
+プ	レ	イ	H	O	L	E	す	う	| Original Japanese Text
+N	O	.	H	O	L	E	S	?	| New English Text
+18	19	88	12	19	16	0F	1D	86	| New English Hex
+||
+プレイするホールのかずを えらんでね
+Select the number of holes to play
+$7B416
+BD	54	40	60	39	80	82	53	2E	59	95	3D	00	28	37	3E	9B	2D	| Original Japanese Hex
+プ	レ	イ	す	る	ホ	ー	ル	の	か	ず	を		え	ら	ん	で	ね	| Original Japanese Text
+P	I	C	K		H	O	L	E	S		T	O		P	L	A	Y	| New English Text
+1A	13	0D	15	00	12	19	16	0F	1D	00	1E	19	00	1A	16	0B	23	| New English Hex
+
+モード
+Mode
+$7E835
+4D	82	AB	| Original Japanese Hex
+モ	ー	ド	| Original Japanese Text
+S	E	T	| New English Text
+1D	0F	1E	| New English Hex
+|
+ノーマル
+Normal
+$7F946
+48	00	82	00	49	00	53	| Original Japanese Hex
+ノ		ー		マ		ル	| Original Japanese Text
+A	M	A	T	E	U	R	| New English Text
+0B	17	0B	1E	0F	1F	1C	| New English Hex
+||
+ゲームモードを えらんでね!
+Select game mode!
+$7B42B (Line 1)
+A0	82	4B	4D	82	AB	3D	00	28	37	3E	9B	2D	85	| Original Japanese Hex
+ゲ	ー	ム	モ	ー	ド	を		え	ら	ん	で	ね	!	| Original Japanese Text
+S	E	T		G	A	M	E		M	O	D	E	!	| New English Text
+1D	0F	1E	00	11	0B	17	0F	00	17	19	0E	0F	85	| New English Hex
+いっておくけど PROはむずいぞぁ!
+PRO HAMUZU and keep going, but I'll go outside. or However you say, as for PRO the [mu] [zu] to be, the [a]!
+$7B43D (Line 2)
+26	C8	66	29	5B	5C	9C	00	1A	1C	19	77	31	95	26	97	C4	85	| Original Japanese Hex
+い	っ	て	お	く	け	ど		P	R	O	は	む	ず	い	ぞ	ぁ	!	| Original Japanese Text
+T	R	Y		P	R	O		C	H	A	L	L	E	N	G	E	!	| New English Text
+1E	1C	23	00	1A	1C	19	00	0D	12	0B	16	16	0F	18	11	0F	85	| New English Hex
+
+もじスピード
+Text Speed
+$7E83D
+33	94	6F	BC	82	AB	| Original Japanese Hex
+も	じ	ス	ピ	ー	ド	| Original Japanese Text
+T	E	X	T	S	?	| New English Text
+1E	0F	22	1E	1D	86	| New English Hex
+|
+はやい
+Fast
+$7F95C
+77	00	34	00	26	| Original Japanese Hex
+は		や		い	| Original Japanese Text
+F	A	S	T		| New English Text
+10	0B	1D	1E	00	| New English Hex
+|
+ふつう
+Normal
+$7F962
+79	00	65	00	27	| Original Japanese Hex
+ふ		つ		う	| Original Japanese Text
+N	O	R	M		| New English Text
+18	19	1C	17	00	| New English Hex
+|
+おそい
+Slow
+$7F968
+29	00	62	00	26	| Original Japanese Hex
+お		そ		い	| Original Japanese Text
+S	L	O	W		| New English Text
+1D	16	19	21	00	| New English Hex
+||
+もじの ひょうじスピードをきめてね
+Set text display speed
+$7B452
+33	94	2E	00	78	C7	27	94	6F	BC	82	AB	3D	5A	32	66	2D	| Original Japanese Hex
+も	じ	の		ひ	ょ	う	じ	ス	ピ	ー	ド	を	き	め	て	ね	| Original Japanese Text
+S	E	T		M	E	S	S	A	G	E		S	P	E	E	D	| New English Text
+1D	0F	1E	00	17	0F	1D	1D	0B	11	0F	00	1D	1A	0F	0F	0E	| New English Hex
+
+BGM.モード
+BGM.Mode
+$7E848
+0C	11	17	88	4D	82	AB	| Original Japanese Hex
+B	G	M	.	モ	ー	ド	| Original Japanese Text
+B	G	M	.	S	E	T	| New English Text
+0C	11	17	88	1D	0F	1E	| New English Hex
+|
+ステレオ
+Stereo
+$7F972
+6F	00	75	00	54	00	43	| Original Japanese Hex
+ス		テ		レ		オ	| Original Japanese Text
+S	T	E	R	E	O		| New English Text
+1D	1E	0F	1C	0F	19	00	| New English Hex
+|
+モノラル
+Monaural
+$7F97A
+4D	00	48	00	51	00	53	| Original Japanese Hex
+モ		ノ		ラ		ル	| Original Japanese Text
+	M	O	N	O			| New English Text
+00	17	19	18	19	00	00	| New English Hex
+||
+サウンドモードをきめてね!
+Decide the sound mode!
+$7B466
+6D	41	58	AB	4D	82	AB	3D	5A	32	66	2D	85	| Original Japanese Hex
+サ	ウ	ン	ド	モ	ー	ド	を	き	め	て	ね	!	| Original Japanese Text
+S	O	U	N	D		O	U	T	P	U	T	!	| New English Text
+1D	19	1F	18	0E	00	19	1F	1E	1A	1F	1E	85	| New English Hex

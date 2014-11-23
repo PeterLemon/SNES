@@ -1,0 +1,80 @@
+﻿-------------------
+Status - Messages:
+-------------------
+しんでいる
+Is dead (Top Half)
+$27639	$27645	$27651	$2765D	$27669
+64 28	A6 28	C4 28	4A 28	A1 28	| Original Japanese Hex
+しGOLD	んGOLD	でGOLD	いGOLD	るGOLD	| Original Japanese Text
+DGOLD	EGOLD	AGOLD	TGOLD	HGOLD	| New English Text
+0D 28	0E 28	0A 28	2D 28	21 28	| New English Hex
+	Is dead (Bottom Half)
+	$2763F	$2764B	$27657	$27663	$2766F
+	74 28	B6 28	D4 28	5A 28	B1 28	| Original Japanese Hex
+	しGOLD	んGOLD	でGOLD	いGOLD	るGOLD	| Original Japanese Text
+	DGOLD	EGOLD	AGOLD	TGOLD	HGOLD	| New English Text
+	1D 28	1E 28	1A 28	3D 28	31 28	| New English Hex
+
+まひ
+Paralysis (Top Half)
+$2767A	$27686
+87 28	83 28	| Original Japanese Hex
+まGOLD	ひGOLD	| Original Japanese Text
+SGOLD	TGOLD	| New English Text
+2C 28	2D 28	| New English Hex
+	Paralysis (Bottom Half)
+	$27680	$2768C
+	97 28	93 28	| Original Japanese Hex
+	まGOLD	ひGOLD	| Original Japanese Text
+	SGOLD	TGOLD	| New English Text
+	3C 28	3D 28	| New English Hex
+
+---------------
+Status - Item:
+---------------
+装備+
+Equipment+ (Top Half)
+$4EA49	$4EA55	$4EA61
+C0 22	C1 22	28 22	| Original Japanese Hex
+装WHITE	備WHITE	+WHITE	| Original Japanese Text
+EWHITE	QWHITE	+WHITE	| New English Text
+0E 20	2A 20	28 22	| New English Hex
+	Equipment+ (Bottom Half)
+	$4EA4F	$4EA5B	$4EA67
+	D0 22	D1 22	38 22	| Original Japanese Hex
+	装WHITE	備WHITE	+WHITE	| Original Japanese Text
+	EWHITE	QWHITE	+WHITE	| New English Text
+	1E 20	3A 20	38 22	| New English Hex
+
+---------------
+Status - Time:
+---------------
+ごご
+P.M. (Uses Only Top Half Of Letters)
+$249A5	$249A5
+AB 20	AB 20	| Original Japanese Hex
+ごWHITE	ごWHITE	| Original Japanese Text
+PWHITE	PWHITE	| New English Text
+29 20	29 20	| New English Hex
+
+ごぜん
+A.M. (Uses Only Top Half Of Letters)
+$249BC	$249C9	$249D6
+AB 20	AF 20	A6 20	| Original Japanese Hex
+ごWHITE	ぜWHITE	んWHITE	| Original Japanese Text
+AWHITE	MWHITE	 WHITE	| New English Text
+0A 20	26 20	48 20	| New English Hex
+
+じ
+Hour (Top Half)
+$24A14
+AD 20	| Original Japanese Hex
+じWHITE	| Original Japanese Text
+HWHITE	| New English Text
+21 20	| New English Hex
+	Hour (Bottom Half)
+	$24A1A
+	BD 20	| Original Japanese Hex
+	じWHITE	| Original Japanese Text
+	HWHITE	| New English Text
+	31 20	| New English Hex

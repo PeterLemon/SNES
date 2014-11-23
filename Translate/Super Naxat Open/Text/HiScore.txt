@@ -1,0 +1,159 @@
+﻿おおわるさ
+Badass, multiply
+$0CBA2
+29	29	3C	39	5E	| Original Japanese Hex
+お	お	わ	る	さ	| Original Japanese Text
+B	A	S	S	X	| New English Text
+0C	0B	1D	1D	22	| New English Hex
+
+ヨロヨロイ
+Yoroyoroi
+$0CBAA
+50	55	50	55	40	| Original Japanese Hex
+ヨ	ロ	ヨ	ロ	イ	| Original Japanese Text
+Y	O	R	O	I	| New English Text
+23	19	1C	19	13	| New English Hex
+
+マドラゴラ
+Madoragora
+$0CBB2
+49	AB	51	A1	51	| Original Japanese Hex
+マ	ド	ラ	ゴ	ラ	| Original Japanese Text
+M	G	O	R	A	| New English Text
+17	11	19	1C	0B	| New English Hex
+
+いえてぃ
+Yeti
+$0CBBA
+26	28	66	C1	00	| Original Japanese Hex
+い	え	て	ぃ		| Original Japanese Text
+Y	E	T	I		| New English Text
+23	0F	1E	13	00	| New English Hex
+
+てぃあな!
+Tiana!
+$0CBC2
+66	C1	25	2A	85	| Original Japanese Hex
+て	ぃ	あ	な	!	| Original Japanese Text
+T	I	A	N	A	| New English Text
+1E	13	0B	18	0B	| New English Hex
+
+ゆきんこ
+Yu safe
+$0CBCA
+35	5A	3E	5D	00	| Original Japanese Hex
+ゆ	き	ん	こ		| Original Japanese Text
+Y	U	S	A	F	| New English Text
+23	1F	1D	0B	10	| New English Hex
+
+すかるまん
+Skull Man
+$0CBD2
+60	59	39	2F	3E	| Original Japanese Hex
+す	か	る	ま	ん	| Original Japanese Text
+S	K	U	L	L	| New English Text
+1D	15	1F	16	16	| New English Hex
+
+かにお
+Get to or
+$0CBDA
+59	2B	29	00	00	| Original Japanese Hex
+か	に	お			| Original Japanese Text
+G	E	T	O	R	| New English Text
+11	0F	1E	19	1C	| New English Hex
+
+ダミやん
+Yan dummy
+$0CBE2
+A7	4A	34	3E	00	| Original Japanese Hex
+ダ	ミ	や	ん		| Original Japanese Text
+Y	A	N	D	U	| New English Text
+23	0B	18	0E	1F	| New English Hex
+
+カードだす
+Carddass
+$0CBEA
+68	82	AB	98	60	| Original Japanese Hex
+カ	ー	ド	だ	す	| Original Japanese Text
+C	D	A	S	S	| New English Text
+0D	0E	0B	1D	1D	| New English Hex
+
+マンドラー
+Mandora
+$0CC10
+49	58	AB	51	82	| Original Japanese Hex
+マ	ン	ド	ラ	ー	| Original Japanese Text
+M	D	O	R	A	| New English Text
+17	0E	19	1C	0B	| New English Hex
+
+さばちーの
+Repellent over the
+$0CC18
+5E	AC	64	82	2E	| Original Japanese Hex
+さ	ば	ち	ー	の	| Original Japanese Text
+R	E	P	E	L	| New English Text
+1C	0F	19	0F	16	| New English Hex
+
+ゆーに!
+To You!
+$0CC20
+35	82	2B	85	00	| Original Japanese Hex
+ゆ	ー	に	!		| Original Japanese Text
+T	O	Y	O	U	| New English Text
+1E	19	23	19	1F	| New English Hex
+
+ゆきうさめ
+Yuki rabbit order
+$0CC28
+35	5A	27	5E	32	| Original Japanese Hex
+ゆ	き	う	さ	め	| Original Japanese Text
+Y	U	K	I	R	| New English Text
+23	1F	15	13	1C	| New English Hex
+
+らごら
+Ragora
+$0CC30
+37	92	37	00	00	| Original Japanese Hex
+ら	ご	ら			| Original Japanese Text
+R	G	O	R	A	| New English Text
+1C	11	19	1C	0B	| New English Hex
+
+かりんこ
+Come Karin
+$0CC38
+59	38	3E	5D	00	| Original Japanese Hex
+か	り	ん	こ		| Original Japanese Text
+K	A	R	I	N	| New English Text
+15	0B	1C	13	18	| New English Hex
+
+ひさこ
+Toshiko
+$0CC40
+78	5E	5D	00	00	| Original Japanese Hex
+ひ	さ	こ			| Original Japanese Text
+T	O	S	H	I	| New English Text
+1E	19	1D	12	13	| New English Hex
+
+あずさ
+Azusa
+$0CC48
+25	95	5E	00	00	| Original Japanese Hex
+あ	ず	さ			| Original Japanese Text
+A	Z	U	S	A	| New English Text
+0B	24	1F	1D	0B	| New English Hex
+
+GOごん
+GO you do
+$0CC50
+11	19	92	3E	00	| Original Japanese Hex
+G	O	ご	ん		| Original Japanese Text
+G	O	U	D	O	| New English Text
+11	19	1F	0E	19	| New English Hex
+
+のっとるだ
+Nikki's ride
+$0CC58
+2E	C8	67	39	98	| Original Japanese Hex
+の	っ	と	る	だ	| Original Japanese Text
+N	I	K	K	I	| New English Text
+18	13	15	15	13	| New English Hex

@@ -1,0 +1,137 @@
+﻿"
+$7D8EC
+00	00	00	00	00	00	8B	| Original Japanese Hex
+						"	| Original Japanese Text
+T	O		U	S	E		| New English Text
+1E	19	00	1F	1D	0F	00	| New English Hex
+|
+つかう Yボタン
+To Use Y Push-Buttons
+$7D8FB
+65	59	27	00	23	80	72	58	| Original Japanese Hex
+つ	か	う		Y	ボ	タ	ン	| Original Japanese Text
+	P	R	E	S	S		Y	| New English Text
+00	1A	1C	0F	1D	1D	00	23	| New English Hex
+|
+. "
+$7D90B
+00	8C	00	00	00	00	8B	| Original Japanese Hex
+	.					"	| Original Japanese Text
+T	O		S	K	I	P	| New English Text
+1E	19	00	1D	15	13	1A	| New English Hex
+|
+パス Aボタン
+Pass/Skipping a move A  Push-Buttons
+$7D91A
+7C	6F	00	00	0B	80	72	58	| Original Japanese Hex
+パ	ス			A	ボ	タ	ン	| Original Japanese Text
+	P	R	E	S	S		A	| New English Text
+00	1A	1C	0F	1D	1D	00	0B	| New English Hex
+|
+"
+$7D92A
+00	00	00	8B	| Original Japanese Hex
+			"	| Original Japanese Text
+L	E	F	T	| New English Text
+16	0F	10	1E	| New English Hex
+|
+えらぶ さゆう
+to choose; to select; left and right
+$7D936
+28	37	79	00	5E	35	27	| Original Japanese Hex
+え	ら	ぶ		さ	ゆ	う	| Original Japanese Text
++		R	I	G	H	T	| New English Text
+81	00	1C	13	11	12	1E	| New English Hex
+|
+キー
+Key
+$7D945
+00	00	00	00	00	69	82	| Original Japanese Hex
+					キ	ー	| Original Japanese Text
+	S	E	L	E	C	T	| New English Text
+00	1D	0F	16	0F	0D	1E	| New English Hex
+
+くっつくんカード
+.ボールがちゃくちしたとき
+Card does stick
+.When the ball landed
+No longer bound
+$7FB0D	(Line 1)						$7BC7E
+5B	C8	65	5B	3E	68	82	AB	88	B5	82	53	8E	64	C5	5B	64	5F	63	67	5A	| Original Japanese Hex
+く	っ	つ	く	ん	カ	ー	ド	.	ボ	ー	ル	が	ち	ゃ	く	ち	し	た	と	き	| Original Japanese Text
+G	L	U	E	T	U	B	E	.	G	L	U	E		B	A	L	L		T	O	| New English Text
+11	16	1F	0F	1E	1F	0C	0F	88	11	16	1F	0F	00	0C	0B	16	16	00	1E	19	| New English Hex
+バウンドしなくなります
+$7BC8F	(Line 2)
+B1	41	58	AB	5F	2A	5B	2A	38	2F	60	| Original Japanese Hex
+バ	ウ	ン	ド	し	な	く	な	り	ま	す	| Original Japanese Text
+T	H	E		G	R	O	U	N	D	.	| New English Text
+1E	12	0F	00	11	1C	19	1F	18	0E	88	| New English Hex
+
+サイコカード
+.いどうちゅうのボールを
+Psycho card
+.I will take and is a four-way
+controller ball on the move
+$7FB16	(Line 1)				$7BCA2
+6D	40	6C	68	82	AB	88	26	9C	27	64	C6	27	2E	B5	82	53	3D	| Original Japanese Hex
+サ	イ	コ	カ	ー	ド	.	い	ど	う	ち	ゅ	う	の	ボ	ー	ル	を	| Original Japanese Text
+P	S	Y	C	H	O	.	U	S	E		D	P	A	D		T	O	| New English Text
+1A	1D	23	1D	12	19	88	1F	1D	0F	00	0E	1A	0B	0E	00	1E	19	| New English Hex
+じゅうじキーであやつれます
+$7BCB2	(Line 2)
+94	C6	27	94	69	82	9B	25	34	65	3A	2F	60	| Original Japanese Hex
+じ	ゅ	う	じ	キ	ー	で	あ	や	つ	れ	ま	す	| Original Japanese Text
+C	O	N	T	R	O	L		B	A	L	L	.	| New English Text
+0D	19	18	1E	1C	19	16	00	0C	0B	16	16	88	| New English Hex
+
+ねっけつカード
+.パワーが2ばいになって
+Dashing card
+.Power is double
+Flying distance is extended
+$7FB1D	(Line 1)					$7BCC7
+2D	C8	5C	65	68	82	AB	88	BB	56	82	8E	03	AC	26	2B	2A	C8	66	| Original Japanese Hex
+ね	っ	け	つ	カ	ー	ド	.	パ	ワ	ー	が	2	ば	い	に	な	っ	て	| Original Japanese Text
+D	A	S	H	I	N	G	.	2	X	P	O	W	E	R		A	I	R	| New English Text
+0E	0B	1D	12	13	18	11	88	03	22	1A	19	21	0F	1C	00	0B	13	1C	| New English Hex
+ひきょりが のびます
+$7BCD7	(Line 2)
+78	5A	C7	38	8E	00	2E	AD	2F	60	| Original Japanese Hex
+ひ	き	ょ	り	が		の	び	ま	す	| Original Japanese Text
+D	I	S	T	A	N	C	E	+	+	| New English Text
+0E	13	1D	1E	0B	18	0D	0F	81	81	| New English Hex
+
+ホーミンくん
+.カップのあるほうこうへ
+Homing card
+.The direction of cup
+Ball will be attracted
+$7FB2C	(Line 1)				$7BD0A
+80	82	4A	58	5B	3E	88	68	D1	BD	2E	25	39	7B	27	5D	27	7A	| Original Japanese Hex
+ホ	ー	ミ	ン	く	ん	.	カ	ッ	プ	の	あ	る	ほ	う	こ	う	へ	| Original Japanese Text
+H	O	M	I	N	G	.		A	T	T	R	A	C	T	I	O	N	| New English Text
+12	19	17	13	18	11	88	00	0B	1E	1E	1C	0B	0D	1E	13	19	18	| New English He
+ボールがひきよせられます
+$7BD1A	(Line 2)
+B5	82	53	8E	78	5A	36	61	37	3A	2F	60	| Original Japanese Hex
+ボ	ー	ル	が	ひ	き	よ	せ	ら	れ	ま	す	| Original Japanese Text
+T	O		T	H	E		H	O	L	E	.	| New English Text
+1E	19	00	1E	12	0F	00	12	19	16	0F	88	| New English Hex
+
+まっすぐショット
+.ナニガアロウト ボール
+Shot straight
+.Arrows ball
+Straight ahead
+$7FB45	(Line 1)						$7BEFF
+2F	C8	60	90	6E	D0	D1	76	88	44	45	9D	3F	55	41	76	00	B5	82	53	| Original Japanese Hex
+ま	っ	す	ぐ	シ	ョ	ッ	ト	.	ナ	ニ	ガ	ア	ロ	ウ	ト		ボ	ー	ル	| Original Japanese Text
+S	T	R	A	I	G	H	T	.	A	S		A	N		A	R	R	O	W	| New English Text
+1D	1E	1C	0B	13	11	12	1E	88	0B	1D	00	0B	18	00	0B	1C	1C	19	21	| New English Hex
+マッスグススム..
+$7BF0F	(Line 2)
+49	D1	6F	9F	6F	6F	4B	88	88	| Original Japanese Hex
+マ	ッ	ス	グ	ス	ス	ム	.	.	| Original Japanese Text
+B	A	L	L		H	I	T	.	| New English Text
+0C	0B	16	16	00	12	13	1E	88	| New English Hex

@@ -1,0 +1,121 @@
+﻿フッフッフッ ちょうぜつムテキで すてきな
+The nice in Fuffuffu~tsu transcendence Muteki
+While Walther emperor of evil
+Hear it in ... I'll give advice!
+Not able to speak well this bloody hole...
+I shoot at full power and without thinking!
+$78340	(Line 1)
+7E	D1	7E	D1	7E	D1	00	64	C7	27	96	65	4B	75	69	9B	00	60	66	5A	2A	| Original Japanese Hex
+フ	ッ	フ	ッ	フ	ッ		ち	ょ	う	ぜ	つ	ム	テ	キ	で		す	て	き	な	| Original Japanese Text
+I		A	M		T	H	E		E	V	I	L		E	M	P	E	R	O	R	| New English Text
+13	00	0B	17	00	1E	12	0F	00	0F	20	13	16	00	0F	17	1A	0F	1C	19	1C	| New English Hex
+あくのていおうオオワルサーさまが
+$78359	(Line 2)
+25	5B	2E	66	26	29	27	43	43	56	53	6D	82	5E	2F	8E	| Original Japanese Hex
+あ	く	の	て	い	お	う	オ	オ	ワ	ル	サ	ー	さ	ま	が	| Original Japanese Text
+I	L	L		G	I	V	E		A	D	V	I	C	E	!	| New English Text
+13	16	16	00	11	13	20	0F	00	0B	0E	20	13	0D	0F	85	| New English Hex
+アドバイスをしてやろう..では きけ!
+$7836E	(Line 3)
+3F	AB	B1	40	6F	3D	5F	66	34	3B	27	88	88	9B	77	00	5A	5C	85	| Original Japanese Hex
+ア	ド	バ	イ	ス	を	し	て	や	ろ	う	.	.	で	は		き	け	!	| Original Japanese Text
+N	O	T		M	U	C	H		T	O		S	A	Y		F	O	R	| New English Text
+18	19	1E	00	17	1F	0D	12	00	1E	19	00	1D	0B	23	00	10	19	1C	| New English Hex
+このホールで ちゅういすることはない..
+$78385	(Line 4)
+5D	2E	80	82	53	9B	00	64	C6	27	26	60	39	5D	67	77	2A	26	88	88	| Original Japanese Hex
+こ	の	ホ	ー	ル	で		ち	ゅ	う	い	す	る	こ	と	は	な	い	.	.	| Original Japanese Text
+T	H	I	S		H	O	L	E	.	.	.		I		S	H	O	O	T	| New English Text
+1E	12	13	1D	00	12	19	16	0F	88	88	88	00	13	00	1D	12	19	19	1E	| New English Hex
+なにもかんがえず フルパワーでうつのだ!
+$7839E	(Line 5)
+2A	2B	33	59	3E	8E	28	95	00	7E	53	BB	56	82	9B	27	65	2E	98	85	| Original Japanese Hex
+な	に	も	か	ん	が	え	ず		フ	ル	パ	ワ	ー	で	う	つ	の	だ	!	| Original Japanese Text
+B	L	I	N	D		A	T		F	U	L	L		P	O	W	E	R	!	| New English Text
+0C	16	13	18	0E	00	0B	1E	00	10	1F	16	16	00	1A	19	21	0E	1C	85	| New English Hex
+
+ふぉっふぉっふぉっ...
+'Ll folder Tsu Tsu Fo Fo ...
+When it should be noted in this Hole
+Dji cut-to judge around the fairway
+Ball is too rolling as hard accused
+The back spin to avoid falling in bunker
+Prudently the fairway over
+Na 's Causeway that I aimed at?
+$78E3D	(Line 1)
+79	C4	C8	79	C4	C8	79	C4	C8	88	88	88	| Original Japanese Hex
+ふ	ぉ	っ	ふ	ぉ	っ	ふ	ぉ	っ	.	.	.	| Original Japanese Text
+L	I	S	T	E	N		U	P	.	.	.	| New English Text
+16	13	1D	1E	0F	18	00	1F	1A	88	88	88	| New English Hex
+このホールでちゅういすべきところは
+$78E4D	(Line 2)
+5D	2E	80	82	53	9B	64	C6	27	26	60	AF	5A	67	5D	3B	77	| Original Japanese Hex
+こ	の	ホ	ー	ル	で	ち	ゅ	う	い	す	べ	き	と	こ	ろ	は	| Original Japanese Text
+F	O	R		T	H	I	S		H	O	L	E		Y	O	U	| New English Text
+10	19	1C	00	1E	12	13	1D	00	12	19	16	0F	00	23	19	1F	| New English Hex
+フェアウェイの まわりのさばくぢゃ
+$78E63	(Line 3)
+7E	CC	3F	41	CC	40	2E	00	2F	3C	38	2E	5E	AC	5B	99	C5	| Original Japanese Hex
+フ	ェ	ア	ウ	ェ	イ	の		ま	わ	り	の	さ	ば	く	ぢ	ゃ	| Original Japanese Text
+C	A	N		S	L	I	C	E		T	O		K	E	E	P	| New English Text
+0D	0B	18	00	1D	16	13	0D	0F	00	1E	19	00	15	0F	0F	1A	| New English Hex
+せめかたとしては ボールがころがりすぎて
+$78E78	(Line 4)
+61	32	59	63	67	5F	66	77	00	B5	82	53	8E	5D	3B	8E	38	60	8F	66	| Original Japanese Hex
+せ	め	か	た	と	し	て	は		ボ	ー	ル	が	こ	ろ	が	り	す	ぎ	て	| Original Japanese Text
+O	N		T	H	E		F	A	I	R	W	A	Y	.		N	E	E	D	| New English Text
+19	18	00	1E	12	0F	00	10	0B	13	1C	21	0B	23	88	00	18	0F	0F	0E	| New English Hex
+バンカーにおちないようにバックスピンを
+$78E91	(Line 5)
+B1	58	68	82	2B	29	64	2A	26	36	27	2B	B1	D1	6A	6F	BC	58	3D	| Original Japanese Hex
+バ	ン	カ	ー	に	お	ち	な	い	よ	う	に	バ	ッ	ク	ス	ピ	ン	を	| Original Japanese Text
+B	A	C	K	S	P	I	N		T	O		H	E	L	P		T	O	| New English Text
+0C	0B	0D	15	1D	1A	13	18	00	1E	19	00	12	0F	16	1A	00	1E	19	| New English Hex
+かけて てがたくフェアウェイを
+$78EA8	(Line 6)
+59	5C	66	00	66	8E	63	5B	7E	CC	3F	41	CC	40	3D	| Original Japanese Hex
+か	け	て		て	が	た	く	フ	ェ	ア	ウ	ェ	イ	を	| Original Japanese Text
+A	V	O	I	D		E	N	D	I	N	G		I	N	| New English Text
+0B	20	19	13	0E	00	0F	18	0E	13	18	11	00	13	18	| New English Hex
+ねらったらどうじゃな?
+$78EBC	(Line 7)
+2D	37	C8	63	37	9C	27	94	C5	2A	86	| Original Japanese Hex
+ね	ら	っ	た	ら	ど	う	じ	ゃ	な	?	| Original Japanese Text
+T	H	E		B	U	N	K	E	R	.	| New English Text
+1E	12	0F	00	0C	1F	18	15	0F	1C	88	| New English Hex
+
+はーい? わたしをよぶからには
+And now that call me? Yesss
+Things very much You're a must have happened...
+I speak is at stake to long drive contest in this hole
+Central course because narrow
+Anymore under the fairway!
+$7A258	(Line 1)
+77	82	26	86	00	3C	63	5F	3D	36	AE	59	37	2B	77	| Original Japanese Hex
+は	ー	い	?		わ	た	し	を	よ	ぶ	か	ら	に	は	| Original Japanese Text
+Y	O	U		C	A	L	L	E	D	?		Y	E	S	| New English Text
+23	19	1F	00	0D	0B	16	16	0F	0E	86	00	23	0F	1D	| New English Hex
+よほどのことがおきたにちがいないわね...
+$7A26B	(Line 2)
+36	7B	9C	2E	5D	67	8E	29	5A	63	2B	64	8E	26	2A	26	3C	2D	88	88	88	| Original Japanese Hex
+よ	ほ	ど	の	こ	と	が	お	き	た	に	ち	が	い	な	い	わ	ね	.	.	.	| Original Japanese Text
+I	T		I	S		A		L	O	N	G		D	R	I	V	E		O	N	| New English Text
+13	1E	00	13	1D	00	0B	00	16	19	18	11	00	0E	1C	13	20	0F	00	19	18	| New English Hex
+このホールにはドラコンしょうがかかってるわ
+$7A285	(Line 3)
+5D	2E	80	82	53	2B	77	AB	51	6C	58	5F	C7	27	8E	59	59	C8	66	39	3C	| Original Japanese Hex
+こ	の	ホ	ー	ル	に	は	ド	ラ	コ	ン	し	ょ	う	が	か	か	っ	て	る	わ	| Original Japanese Text
+T	H	I	S		H	O	L	E		T	R	Y		T	O		S	T	A	Y	| New English Text
+1E	12	13	1D	00	12	19	16	0F	00	1E	1C	23	00	1E	19	00	1D	1E	0B	23	| New English Hex
+コースがせまいから ちゅうおうの
+$7A29E	(Line 4)
+6C	82	6F	8E	61	2F	26	59	37	00	64	C6	27	29	27	2E	| Original Japanese Hex
+コ	ー	ス	が	せ	ま	い	か	ら		ち	ゅ	う	お	う	の	| Original Japanese Text
+I	N		T	H	E		C	E	N	T	E	R		O	F	| New English Text
+13	18	00	1E	12	0F	00	0D	0F	18	1E	0F	1C	00	19	10	| New English Hex
+フェアウェイキープに はげもう!
+$7A2B3	(Line 5)
+7E	CC	3F	41	CC	40	69	82	BD	2B	00	77	91	33	27	85	| Original Japanese Hex
+フ	ェ	ア	ウ	ェ	イ	キ	ー	プ	に		は	げ	も	う	!	| Original Japanese Text
+A		N	A	R	R	O	W		F	A	I	R	W	A	Y	| New English Text
+0B	00	18	0B	1C	1C	19	21	00	10	0B	13	1C	21	0B	23	| New English Hex

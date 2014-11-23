@@ -1,0 +1,293 @@
+﻿----------
+Chiberus:
+----------
+----------------------
+Chiberus - Item Shop:
+----------------------
+ここは どうぐやです。どんな ごようでしょうか?
+Well Here are such things as tools. How can I help? 
+$4375A (Line 1)
+17	32	32	42	28	65	2B	59	4C	64	35	C3	65	56	3D	28	5B	4E	2B	64	34	74	2B	2E	24	| Original Japanese Hex
+LENGTH	こ	こ	は		ど	う	ぐ	や	で	す	。	ど	ん	な		ご	よ	う	で	し	ょ	う	か	?	| Original Japanese Text
+LENGTH	H	O	W		M	A	Y		I		B	E		O	F		S	E	R	V	I	C	E	?	| New English Text
+17	11	18	20	28	16	0A	22	28	12	28	0B	0E	28	18	0F	28	1C	0E	1B	1F	12	0C	0E	24	| New English Hex
+
+	かいにきた
+	I came to buy
+	$43773 (Line 2)
+	05	28	2E	2A	3E	2F	38	| Original Japanese Hex
+	LENGTH		か	い	に	き	た	| Original Japanese Text
+	LENGTH		B	U	Y	き	た	| New English Text
+	03	28	0B	1E	22	2F	38	| New English Hex
+
+	うりにきた
+	I came to sell
+	$4377A (Line 3)
+	05	28	2B	50	3E	2F	38	| Original Japanese Hex
+	LENGTH		う	り	に	き	た	| Original Japanese Text
+	LENGTH		S	E	L	L	た	| New English Text
+	04	28	1C	0E	15	15	38	| New English Hex
+
+Buy Selected:
+おきゃくさん。 サービスさせてもらうわね なにを かってくださるのかしら?
+customer. I can let these services
+$437D9 (Line 1)
+12	2D	2F	72	30	33	56	C3	7F	F7	B3	81	33	36	3B	4B	4F	2B	54	40	| Original Japanese Hex
+LENGTH	お	き	ゃ	く	さ	ん	。	サ	ー	ビ	ス	さ	せ	て	も	ら	う	わ	ね	| Original Japanese Text
+LENGTH	W	H	A	T		W	O	U	L	D		Y	O	U		L	I	K	E	| New English Text
+12	20	11	0A	1D	28	20	18	1E	15	0D	28	22	18	1E	28	15	12	14	0E	| New English Hex
+$437FF	(Line 2)
+0F	3D	3E	55	28	2E	71	3B	30	61	33	51	41	2E	34	4F	24	| Original Japanese Hex
+LENGTH	な	に	を		か	っ	て	く	だ	さ	る	の	か	し	ら	?	| Original Japanese Text
+LENGTH	T	O		P	U	R	C	H	A	S	E		N	O	W	?	| New English Text
+0F	1D	18	28	19	1E	1B	0C	11	0A	1C	0E	28	17	18	20	24	| New English Hex
+
+Sell Selected:
+おたかく かいとりますわ さぁ しなものを みせてちょうだい
+Come in and show me a thing Now
+$437CC	(Line 1)
+0B	2D	38	2E	30	28	2E	2A	3C	50	47	35	54	| Original Japanese Hex
+LENGTH	お	た	か	く		か	い	と	り	ま	す	わ	| Original Japanese Text
+LENGTH	L	E	T	S		L	O	O	K		A	T	| New English Text
+0B	15	0E	1D	1C	28	15	18	18	14	28	0A	1D	| New English Hex
+$437ED	(Line 2)
+10	33	70	28	34	3D	4B	41	55	28	48	36	3B	39	74	2B	61	2A	| Original Japanese Hex
+LENGTH	さ	ぁ		し	な	も	の	を		み	せ	て	ち	ょ	う	だ	い	| Original Japanese Text
+LENGTH	Y	O	U	R		I	T	E	M	S		V	A	L	U	E	S	| New English Text
+10	22	18	1E	1B	28	12	1D	0E	16	1C	28	1F	0A	15	1E	0E	1C	| New English Hex
+
+またの おこしを おまちしてます
+I look forward to welcoming you again
+$4387C
+0F	47	38	41	28	2D	32	34	55	28	2D	47	39	34	3B	47	35	| Original Japanese Hex
+LENGTH	ま	た	の		お	こ	し	を		お	ま	ち	し	て	ま	す	| Original Japanese Text
+LENGTH	C	O	M	E		A	G	A	I	N		S	O	O	N	.	| New English Text
+0F	0C	18	16	0E	28	0A	10	0A	12	17	28	1C	18	18	17	C3	| New English Hex
+
+---------------------
+Chiberus - Egg Shop:
+---------------------
+おーちゃん「ここのタマゴは おいしいですわよ」
+Hay Girl: I'm here, eggs are delicious
+$41ED3 (Line 1)
+F6	2D 0C	F7 0C	39 0C	72 0C	56 0C	C1 00	32 00	32 00	41 00	84 00	93 00	A7 00	42 00	28 00	2D 00	2A 00	34 00	2A 00	64 00	35 00	54 00	4E 00	C2 00	| Original Japanese Hex
+LENGTH	おRED	ーRED	ちRED	ゃRED	んRED	「BLACK	こBLACK	こBLACK	のBLACK	タBLACK	マBLACK	ゴBLACK	はBLACK	BLACK	おBLACK	いBLACK	しBLACK	いBLACK	でBLACK	すBLACK	わBLACK	よBLACK	」BLACK	| Original Japanese Text
+LENGTH	HRED	ARED	YRED	RED	GRED	IRED	RRED	LRED	:RED	HBLACK	EBLACK	RBLACK	EBLACK	BLACK	IBLACK	SBLACK	BLACK	ABLACK	NBLACK	BLACK	EBLACK	GBLACK	GBLACK	| New English Text
+F6	11 0C	0A 0C	22 0C	28 0C	10 0C	12 0C	1B 0C	15 0C	D6 0C	11 00	0E 00	1B 00	0E 00	28 00	12 00	1C 00	28 00	0A 00	17 00	28 00	0E 00	10 00	10 00	| New English Hex
+
+	かう
+	To buy
+	$41F02 (Line 2)
+	02	28	2E	2B	| Original Japanese Hex
+	LENGTH		か	う	| Original Japanese Text
+	LENGTH		O	K	| New English Text
+	02	28	18	14	| New English Hex
+
+	いらない
+	I do not need
+	$41F06 (Line 3)
+	04	28	2A	4F	3D	2A	| Original Japanese Hex
+	LENGTH		い	ら	な	い	| Original Japanese Text
+	LENGTH		N	O	な	い	| New English Text
+	02	28	17	18	3D	2A	| New English Hex
+
+OK Selected:
+うれしいですわ。 おほほほほ
+I'm happy. Ho ho ho ho
+$41F0C
+0C	2B	52	34	2A	64	35	54	C3	2D	46	46	46	46	| Original Japanese Hex
+LENGTH	う	れ	し	い	で	す	わ	。	お	ほ	ほ	ほ	ほ	| Original Japanese Text
+LENGTH	I	M		G	L	A	D	,	H	O		H	O	| New English Text
+0C	12	16	28	10	15	0A	0D	C4	11	18	28	11	18	| New English Hex
+
+No Selected:
+ざんねんですわ おいしいタマゴなのに また いらしてくださいですわ
+Please come Though I also delicious eggs I'm sorry 
+$4201C	(Line 1)
+11	5C	56	40	56	64	35	54	28	2D	2A	34	2A	84	93	A7	3D	41	3E	| Original Japanese Hex
+LENGTH	ざ	ん	ね	ん	で	す	わ		お	い	し	い	タ	マ	ゴ	な	の	に	| Original Japanese Text
+LENGTH	M	Y		E	G	G	S		A	R	E		R	E	A	L	L	Y	| New English Text
+11	16	22	28	0E	10	10	1C	28	0A	1B	0E	28	1B	0E	0A	15	15	22	| New English Hex
+$44527	(Line 2)
+0D	47	38	28	2A	4F	34	3B	30	61	33	2A	64	35	54	| Original Japanese Hex
+LENGTH	ま	た		い	ら	し	て	く	だ	さ	い	で	す	わ	| Original Japanese Text
+LENGTH	V	E	R	Y		D	E	L	I	C	I	O	U	S	| New English Text
+0D	1F	0E	1B	22	28	0D	0E	15	12	0C	12	18	1E	1C	| New English Hex
+
+--------------
+Gort - Forge:
+--------------
+Blacksmith:
+なんだ!オレに なんかようか?
+The softening in melting! Me What?
+$43817	(Line 1)
+0E	3D	56	61	25	79	9E	3E	28	3D	56	2E	4E	2B	2E	24	| Original Japanese Hex
+LENGTH	な	ん	だ	!	オ	レ	に		な	ん	か	よ	う	か	?	| Original Japanese Text
+LENGTH	H	I	!	I		W	O	R	K		M	E	T	A	L	| New English Text
+0E	11	12	25	12	28	20	18	1B	14	28	16	0E	1D	0A	15	| New English Hex
+
+	武器を かいにきた
+	I came to buy the weapon
+	$43827	(Line 2)
+	09	28	C5	C6	55	28	2E	2A	3E	2F	38	| Original Japanese Hex
+	LENGTH		武	器	を		か	い	に	き	た	| Original Japanese Text
+	LENGTH		B	U	Y		G	O	O	D	S	| New English Text
+	09	28	0B	1E	22	28	10	18	18	0D	1C	| New English Hex
+
+	ただ よんでみた
+	I just tried calling
+	$43832	(Line 3)
+	08	28	38	61	28	4E	56	64	48	38	| Original Japanese Hex
+	LENGTH		た	だ		よ	ん	で	み	た	| Original Japanese Text
+	LENGTH		N	O		T	R	A	D	E	| New English Text
+	08	28	17	18	28	1D	1B	0A	0D	0E	| New English Hex
+
+Buy Goods Selected:
+どれも いっきゅうひんだぜっ じっくり選んでいきなっ
+It became Ki have chosen carefully Ikkyu Hindaze~tsu any
+$4383C	(Line 1)
+0D	65	52	4B	28	2A	71	2F	73	2B	43	56	61	5F	71	| Original Japanese Hex
+LENGTH	ど	れ	も		い	っ	き	ゅ	う	ひ	ん	だ	ぜ	っ	| Original Japanese Text
+LENGTH	T	A	K	E		Y	O	U	R		T	I	M	E	| New English Text
+0D	1D	0A	14	0E	28	22	18	1E	1B	28	1D	12	16	0E	| New English Hex
+$4384B	(Line 2)
+2A	04	5D	71	30	50	1C	56	64	2A	2F	3D	71	| Original Japanese Hex
+LENGTH	LENGTH	じ	っ	く	り	選	ん	で	い	き	な	っ	| Original Japanese Text
+LENGTH	S	E	E		M	Y		G	O	O	D	S	| New English Text
+0B	1D	0E	0E	28	16	22	28	10	18	18	0D	1C	| New English Hex
+
+No Trade Selected:
+てめぇ! ようもねぇのに よぶんじゃねぇ
+Hey! Is not it call to not be imported goods
+$438C1	(Line 1)
+23	02	3B	4A	5D	25	| Original Japanese Hex
+LENGTH	LENGTH	て	め	ぇ	!	| Original Japanese Text
+LENGTH	W	H	A	T	!	| New English Text
+04	20	11	0A	1D	25	| New English Hex
+$43858	(Line 2)
+4E	04	0E	4E	2B	4B	40	5D	41	3E	28	4E	68	56	5D	72	40	5D	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	よ	う	も	ね	ぇ	の	に		よ	ぶ	ん	じ	ゃ	ね	ぇ	| Original Japanese Text
+LENGTH	I		H	A	V	E		F	I	N	E		G	O	O	D	S	| New English Text
+10	12	28	11	0A	1F	0E	28	0F	12	17	0E	28	10	18	18	0D	1C	| New English Hex
+
+いつでも 持ってるからな
+Because I have at any time
+$438C7
+2B	05	2A	3A	64	4B	28	3C	71	3B	51	2E	4F	3D	| Original Japanese Hex
+LENGTH	LENGTH	い	つ	で	も		持	っ	て	る	か	ら	な	| Original Japanese Text
+LENGTH	C	O	M	E		A	N	Y		T	I	M	E	| New English Text
+0C	0C	18	16	0E	28	0A	17	22	28	1D	12	16	0E	| New English Hex
+
+-----------------------------
+Gort - Shade Shop (Red Cap):
+-----------------------------
+Shade:
+すけざえもん「ゴートの鬼いは いかがでござるか?」
+Sukezaemon "Oni-i of Gort or a bamboo basket How?"
+$4482E
+F8	35 0C	31 0C	5C 0C	2C 0C	4B 0C	56 0C	C1 00	A7 00	F7 00	88 00	41 00	3D 01	2A 00	42 00	28 00	2A 00	2E 00	57 00	64 00	5B 00	5C 00	51 00	2E 00	24 00	C2 00	| Original Japanese Hex
+LENGTH	すRED	けRED	ざRED	えRED	もRED	んRED	「BLACK	ゴBLACK	ーBLACK	トBLACK	のBLACK	鬼BLACK	いBLACK	はBLACK	BLACK	いBLACK	かBLACK	がBLACK	でBLACK	ごBLACK	ざBLACK	るBLACK	かBLACK	?BLACK	」BLACK	| Original Japanese Text
+LENGTH	SRED	HRED	ARED	DRED	ERED	:RED	DBLACK	OBLACK	BLACK	YBLACK	OBLACK	UBLACK	BLACK	WBLACK	ABLACK	NBLACK	TBLACK	BLACK	ABLACK	BLACK	WBLACK	ABLACK	RBLACK	PBLACK	?BLACK	| New English Text
+F8	1C 0C	11 0C	0A 0C	0D 0C	0E 0C	D6 0C	0D 00	18 00	28 00	22 00	18 00	1E 00	28 00	20 00	0A 00	17 00	1D 00	28 00	0A 00	28 00	20 00	0A 00	1B 00	19 00	24 00	| New English Hex
+
+OK Selected:
+きゃくじん さーびすしてしんぜよう
+Let Shinzeyo with guests service
+$44861
+10	2F	72	30	5D	56	28	33	F7	67	35	34	3B	34	56	5F	4E	2B	| Original Japanese Hex
+LENGTH	き	ゃ	く	じ	ん		さ	ー	び	す	し	て	し	ん	ぜ	よ	う	| Original Japanese Text
+LENGTH	H	E	R	E	S		W	H	A	T		I		H	A	V	E	| New English Text
+10	11	0E	1B	0E	1C	28	20	11	0A	1D	28	12	28	11	0A	1F	0E	| New English Hex
+
+No Selected:
+そうでござるか また くるでござる
+The bamboo basket comes again or bamboo basket so
+$4487D	(Line 1)
+06	37	2B	64	5B	5C	51	2E	| Original Japanese Hex
+LENGTH	そ	う	で	ご	ざ	る	か	| Original Japanese Text
+LENGTH	Y	O	U		C	A	N	| New English Text
+06	22	18	1E	28	0C	0A	17	| New English Hex
+$44873	(Line 2)
+08	47	38	28	30	51	64	5B	5C	51	| Original Japanese Hex
+LENGTH	ま	た		く	る	で	ご	ざ	る	| Original Japanese Text
+LENGTH	W	A	R	P		H	E	R	E	| New English Text
+08	20	0A	1B	19	28	11	0E	1B	0E	| New English Hex
+
+-----------------------------
+Gort - Hebe Shop (Blue Cap):
+-----------------------------
+Hebereke:
+へべ「**でかいくつ かうかぴょー?」
+Hebe "Some strapping boots?"
+$447C1
+F2	45 0C	69 0C	C1 00	08 01	09 01	64 00	2E 00	2A 00	30 00	3A 00	28 00	2E 00	2B 00	2E 00	6C 00	74 00	F7 00	24 00	C2 00	| Original Japanese Hex
+LENGTH	へRED	べRED	「BLACK	*BLACK	*BLACK	でBLACK	かBLACK	いBLACK	くBLACK	つBLACK	BLACK	かBLACK	うBLACK	かBLACK	ぴBLACK	ょBLACK	ーBLACK	?BLACK	」BLACK	| Original Japanese Text
+LENGTH	HRED	ERED	BRED	ERED	:RED	SBLACK	EBLACK	EBLACK	BLACK	MBLACK	YBLACK	BLACK	NBLACK	IBLACK	CBLACK	EBLACK	*BLACK	*BLACK	?BLACK	| New English Text
+F2	11 0C	0E 0C	0B 0C	0E 0C	D6 0C	1C 00	0E 00	0E 00	28 00	16 00	22 00	28 00	17 00	12 00	0C 00	0E 00	08 01	09 01	24 00	| New English Hex
+
+OK Selected:
+らっきーだにょーう。うれなくて こまってたでげしょぱぴ
+U Lucky Danyoｰ. The Papi Gesho in was in trouble, rather than ripe
+$447E8
+1A	4F	71	2F	F7	61	3E	74	F7	2B	C3	2B	52	3D	30	3B	28	32	47	71	3B	38	64	5A	34	74	6B	6C	| Original Japanese Hex
+LENGTH	ら	っ	き	ー	だ	に	ょ	ー	う	。	う	れ	な	く	て		こ	ま	っ	て	た	で	げ	し	ょ	ぱ	ぴ	| Original Japanese Text
+LENGTH	S	E	E		M	Y		A	M	A	Z	I	N	G	L	Y		F	I	N	E		G	O	O	D	S	| New English Text
+1A	1C	0E	0E	28	16	22	28	0A	16	0A	23	12	17	10	15	22	28	0F	12	17	0E	28	10	18	18	0D	1C	| New English Hex
+
+No Selected:
+やっぱり うれないひょろぷー また きてくれだにょーう
+The U Nyoｰ that I come again Hyoro Pooh not sell after all
+$44811	(Line 1)
+0D	4C	71	6B	50	28	2B	52	3D	2A	43	74	53	6D	F7	| Original Japanese Hex
+LENGTH	や	っ	ぱ	り		う	れ	な	い	ひ	ょ	ろ	ぷ	ー	| Original Japanese Text
+LENGTH	C	O	M	E		A	G	A	I	N	,		I	F	| New English Text
+0D	0C	18	16	0E	28	0A	10	0A	12	17	C4	28	12	0F	| New English Hex
+$44804	(Line 2)
+0B	47	38	28	2F	3B	30	52	61	3E	74	F7	2B	| Original Japanese Hex
+LENGTH	ま	た		き	て	く	れ	だ	に	ょ	ー	う	| Original Japanese Text
+LENGTH	Y	O	U		W	A	N	T		I	T	.	| New English Text
+0B	22	18	1E	28	20	0A	17	1D	28	12	1D	C3	| New English Hex
+
+足に はくんじゃないんだひょろぴぷーん
+Hyoropipun I do not Hakunja feet
+$47F3C
+32	00	64	3E	28	42	30	56	5D	72	3D	2A	56	61	43	74	53	6C	6D	F7	56	| Original Japanese Hex
+LENGTH	LENGTH	足	に		は	く	ん	じ	ゃ	な	い	ん	だ	ひ	ょ	ろ	ぴ	ぷ	ー	ん	| Original Japanese Text
+LENGTH	I		C	A	N		N	O	T		W	E	A	R		T	H	E	M	.	| New English Text
+13	12	28	0C	0A	17	28	17	18	1D	28	20	0E	0A	1B	28	1D	11	0E	16	C3	| New English Hex
+
+--------------------------------------
+Neurath - Jennifer Shop (Green Head):
+--------------------------------------
+
+Frog:
+ぢぇにふぁー「ノイラートの鬼いは どうだい?」
+Jennifer "Demon physician Neurath to university?"
+$44A55
+F6	62 0C	5D 0D	3E 0C	44 0C	70 0C	F7 0C	C1 00	8D 00	76 00	9B 00	F7 00	88 00	41 00	3D 01	2A 00	42 00	28 00	65 00	2B 00	61 00	2A 00	24 00	C2 00	| Original Japanese Hex
+LENGTH	ぢRED	ぇRED	にRED	ふRED	ぁRED	ーRED	「BLACK	ノBLACK	イBLACK	ラBLACK	ーBLACK	トBLACK	のBLACK	鬼BLACK	いBLACK	はBLACK	BLACK	どBLACK	うBLACK	だBLACK	いBLACK	?BLACK	」BLACK	| Original Japanese Text
+LENGTH	JRED	ERED	NRED	YRED	:BLACK	NBLACK	EBLACK	EBLACK	DBLACK	BLACK	NBLACK	EBLACK	UBLACK	RBLACK	ABLACK	TBLACK	HBLACK	BLACK	WBLACK	ABLACK	RBLACK	PBLACK	?BLACK	| New English Text
+F6	13 0C	0E 0C	17 0C	22 0C	D6 00	17 00	0E 00	0E 00	0D 00	28 00	17 00	0E 00	1E 00	1B 00	0A 00	1D 00	11 00	28 00	20 00	0A 00	1B 00	19 00	24 00	| New English Hex
+
+OK Selected:
+かんしゃするぜっいぇーい
+Yay Thanks
+$44A84
+2B	09	2E	56	34	72	35	51	5F	71	2A	5D	F7	2A	| Original Japanese Hex
+LENGTH	LENGTH	か	ん	し	ゃ	す	る	ぜ	っ	い	ぇ	ー	い	| Original Japanese Text
+LENGTH	Y	A	Y	,	T	H	A	N	K		Y	O	U	| New English Text
+0C	22	0A	22	C4	1D	11	0A	17	14	28	22	18	1E	| New English Hex
+
+No Selected:
+いらねーのかっ いつでも持っているぜベイビー
+Ll do the Irane Baby ze you have at any time
+$44AA2	(Line 1)
+06	2A	4F	40	F7	41	2E	71	| Original Japanese Hex
+LENGTH	い	ら	ね	ー	の	か	っ	| Original Japanese Text
+LENGTH	P	L	E	A	S	E	,	| New English Text
+06	19	15	0E	0A	1C	0E	C4	| New English Hex
+$44A92	(Line 2)
+2D	04	2A	3A	64	4B	3C	71	3B	2A	51	5F	B5	76	B3	F7	| Original Japanese Hex
+LENGTH	LENGTH	い	つ	で	も	持	っ	て	い	る	ぜ	ベ	イ	ビ	ー	| Original Japanese Text
+LENGTH	I		H	A	V	E		C	H	I	L	D	R	E	N	| New English Text
+0E	12	28	11	0A	1F	0E	28	0C	11	12	15	0D	1B	0E	17	| New English Hex

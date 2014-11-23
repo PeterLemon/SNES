@@ -1,0 +1,130 @@
+﻿------------------------
+Albert Transformations:
+------------------------
+PsykeHit (Automatically Generated From "Psyke" & "Hit")
+
+攻撃目標
+Attack targets
+$40C74
+E3	C7 08	C8 08	52 09	59 09	| Original Japanese Hex
+LENGTH	攻GOLD	撃GOLD	目GOLD	標GOLD	| Original Japanese Text
+LENGTH	TGOLD	AGOLD	RGOLD	GGOLD	| New English Text
+E3	1D 08	0A 08	1B 08	10 08	| New English Hex
+
+	(攻撃目標) 向きを選んでください
+	Please choose a direction
+	$41077
+	E9	FE 08	2F 08	55 00	1C 01	56 00	64 00	30 00	61 00	33 00	2A 00	| Original Japanese Hex
+	LENGTH	向GOLD	きGOLD	をWHITE	選WHITE	んWHITE	でWHITE	くWHITE	だWHITE	さWHITE	いWHITE	| Original Japanese Text
+	LENGTH	GOLD	SGOLD	EGOLD	TGOLD	SWHITE	EWHITE	LWHITE	EWHITE	CWHITE	TWHITE	| New English Text
+	E9	28 08	1C 08	0E 08	1D 08	1C 00	0E 00	15 00	0E 00	0C 00	1D 00	| New English Hex
+
+	(攻撃目標)に 敵はいません
+	No enemy targets
+	$410AD
+	E7	3E 00	28 00	39 09	42 00	2A 00	47 00	36 00	56 00	| Original Japanese Hex
+	LENGTH	にWHITE	WHITE	敵WHITE	はWHITE	いWHITE	まWHITE	せWHITE	んWHITE	| Original Japanese Text
+	LENGTH	EGOLD	TGOLD	WHITE	EWHITE	MWHITE	PWHITE	TWHITE	YWHITE	| New English Text
+	E7	0E 08	1D 08	28 00	0E 00	16 00	19 00	1D 00	22 00	| New English Hex
+
+--------------------
+Neumann Holy Magic:
+--------------------
+しんせい魔法
+Holy Magic
+$479C5
+E5	34 18	56 18	36 18	2A 18	E0 18	E1 18	| Original Japanese Hex
+LENGTH	しWHITE	んWHITE	せWHITE	いWHITE	魔WHITE	法WHITE	| Original Japanese Text
+LENGTH	WWHITE	MWHITE	AWHITE	GWHITE	IWHITE	CWHITE	| New English Text
+E5	20 18	16 18	0A 18	10 18	12 18	0C 18	| New English Hex
+
+かいふく
+Restoration
+$479B9
+03	2E	2A	44	30	| Original Japanese Hex
+LENGTH	か	い	ふ	く	| Original Japanese Text
+LENGTH	C	U	R	E	| New English Text
+03	0C	1E	1B	0E	| New English Hex
+
+	だれの体力を かいふくさせますか?
+	Who's strength to restore?
+	$444E6
+	30	03	61	52	41	45	CF	55	28	2E	2A	44	30	33	36	47	35	2E	24	| Original Japanese Hex
+	LENGTH	LENGTH	だ	れ	の	体	力	を		か	い	ふ	く	さ	せ	ま	す	か	?	| Original Japanese Text
+	LENGTH	W	H	O		W	I	L	L		Y	O	U		C	U	R	E	?	| New English Text
+	11	20	11	18	28	20	12	15	15	28	22	18	1E	28	0C	1E	1B	0E	24	| New English Hex
+
+蘇生
+Revival / Resurrection
+$479BE
+21	00	50	C9	| Original Japanese Hex
+LENGTH	LENGTH	蘇	生	| Original Japanese Text
+LENGTH	L	I	F	| New English Text
+02	15	12	0F	| New English Hex
+
+ちゆ
+Healing
+$479C2
+01	39	4D	| Original Japanese Hex
+LENGTH	ち	ゆ	| Original Japanese Text
+LENGTH	H	L	| New English Text
+01	11	15	| New English Hex
+
+	だれを?
+	Who?
+	$44693
+	03	61	52	55	24	| Original Japanese Hex
+	LENGTH	だ	れ	を	?	| Original Japanese Text
+	LENGTH	W	H	O	?	| New English Text
+	03	20	11	18	24	| New English Hex
+
+-------------
+Sofia Magic:
+-------------
+魔法
+Magic
+$41347
+E1	E0 18	E1 18	| Original Japanese Hex
+LENGTH	魔WHITE	法WHITE	| Original Japanese Text
+LENGTH	BWHITE	LWHITE	| New English Text
+E1	0B 18	15 18	| New English Hex
+
+魔法
+Magic
+$4196B (Shows When Doing Multiple Magic)
+E3	28 18	E0 18	E1 18	28 18	| Original Japanese Hex
+LENGTH	WHITE	魔WHITE	法WHITE	WHITE	| Original Japanese Text
+LENGTH	BWHITE	LWHITE	?WHITE	?WHITE	| New English Text
+E3	0B 18	15 18	?? 18	?? 18	| New English Hex
+
+雷撃
+Lightning Strike
+$479D8
+21	00	37	C8	| Original Japanese Hex
+LENGTH	LENGTH	雷	撃	| Original Japanese Text
+LENGTH	L	I	T	| New English Text
+02	15	12	1D	| New English Hex
+
+火えん弾
+Fire bullet
+$479DC
+23	00	38	2C	56	F1	| Original Japanese Hex
+LENGTH	LENGTH	火	え	ん	弾	| Original Japanese Text
+LENGTH	F	I	R	E	弾	| New English Text
+03	0F	12	1B	0E	F1	| New English Hex
+
+瞬間移動
+Teleportation
+$479E2
+43	00	01	2E	55	CD	CE	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	瞬	間	移	動	| Original Japanese Text
+LENGTH	W	A	R	P	移	動	| New English Text
+03	20	0A	1B	19	CD	CE	| New English Hex
+
+	どこに?
+	Where?
+	$4468E
+	03	65	32	3E	24	| Original Japanese Hex
+	LENGTH	ど	こ	に	?	| Original Japanese Text
+	LENGTH	T	O		?	| New English Text
+	03	1D	18	28	24	| New English Hex

@@ -1,0 +1,98 @@
+﻿-------
+Items:
+-------
+タマゴ
+Egg
+$4100E
+02	84	93	A7	| Original Japanese Hex
+LENGTH	タ	マ	ゴ	| Original Japanese Text
+LENGTH	E	G	G	| New English Text
+02	0E	10	10	| New English Hex
+
+ねがいのともしび
+Wish Of Light / There are lights in the root
+$412EA
+07	40	57	2A	41	3C	4B	34	67	| Original Japanese Hex
+LENGTH	ね	が	い	の	と	も	し	び	| Original Japanese Text
+LENGTH	D	A	Y	L	I	G	H	T	| New English Text
+07	0D	0A	22	15	12	10	11	1D	| New English Hex
+
+ゴートの鬼い
+Gort only
+$416DB
+25	04	A7	F7	88	41	3D	2A	| Original Japanese Hex
+LENGTH	LENGTH	ゴ	ー	ト	の	鬼	い	| Original Japanese Text
+LENGTH	G	R	T	W	A	R	P	| New English Text
+06	10	1B	1D	20	0A	1B	19	| New English Hex
+
+ゴーレムの頭
+Head of the Golem
+$41764
+25	05	A7	F7	9E	95	41	43	| Original Japanese Hex
+LENGTH	LENGTH	ゴ	ー	レ	ム	の	頭	| Original Japanese Text
+LENGTH	G	L	.	H	E	A	D	| New English Text
+06	10	15	C3	11	0E	0A	0D	| New English Hex
+
+王のてがみ
+Letter of the king
+$4176C
+04	EB	41	3B	57	48	| Original Japanese Hex
+LENGTH	王	の	て	が	み	| Original Japanese Text
+LENGTH	L	E	T	T	R	| New English Text
+04	15	0E	1D	1D	1B	| New English Hex
+
+ノイラートの鬼い
+Neurath only
+$41772
+27	06	8D	76	9B	F7	88	41	3D	2A	| Original Japanese Hex
+LENGTH	LENGTH	ノ	イ	ラ	ー	ト	の	鬼	い	| Original Japanese Text
+LENGTH	N	E	U	R	A	W	A	R	P	| New English Text
+08	17	0E	1E	1B	0A	20	0A	1B	19	| New English Hex
+
+かげのゆびわ
+Ring shadow
+$417A2
+05	2E	5A	41	4D	67	54	| Original Japanese Hex
+LENGTH	か	げ	の	ゆ	び	わ	| Original Japanese Text
+LENGTH	S	H	A	D	O	W	| New English Text
+05	1C	11	0A	0D	18	20	| New English Hex
+
+薬草
+Medicinal herb
+$4183D
+41	00	01	67	1F	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	薬	草	| Original Japanese Text
+LENGTH	H	E	R	B	| New English Text
+03	11	0E	1B	0B	| New English Hex
+
+目ざまし草
+Alarm Grass
+$41842
+44	00	04	52	5C	47	34	1F	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	目	ざ	ま	し	草	| Original Japanese Text
+LENGTH	A	.	G	R	A	S	S	| New English Text
+06	0A	C3	10	1B	0A	1C	1C	| New English Hex
+
+チベリスの鬼い
+Chiberus only
+$4184A
+26	05	85	B5	9C	81	41	3D	2A	| Original Japanese Hex
+LENGTH	LENGTH	チ	ベ	リ	ス	の	鬼	い	| Original Japanese Text
+LENGTH	C	H	I	B	W	A	R	P	| New English Text
+07	0C	11	12	0B	20	0A	1B	19	| New English Hex
+
+ふしぎな果物
+Strange Fruit
+$41853
+45	04	05	44	34	58	3D	34	33	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	ふ	し	ぎ	な	果	物	| Original Japanese Text
+LENGTH	O	D	D	F	R	U	I	T	| New English Text
+07	18	0D	0D	0F	1B	1E	12	1D	| New English Hex
+
+なにを うりますか かいますか
+What action, To sell, To buy
+$438A4				$438A8						$438AE
+02	3D	3E	55	04	2B	50	47	35	2E	04	2E	2A	47	35	2E	| Original Japanese Hex
+LENGTH	な	に	を	LENGTH	う	り	ま	す	か	LENGTH	か	い	ま	す	か	| Original Japanese Text
+LENGTH	T	O	:		S	E	L	L	?		B	U	Y	?	か	| New English Text
+02	1D	18	D6	04	1C	0E	15	15	24	03	0B	1E	22	24	2E	| New English Hex

@@ -1,0 +1,220 @@
+﻿ぼっくんに おまかせで
+In leave it to Mr. offs
+Offs do more!
+$78007 (Line 1)
+B0	C8	5B	3E	2B	00	29	2F	59	61	9B	| Original Japanese Hex
+ぼ	っ	く	ん	に		お	ま	か	せ	で	| Original Japanese Text
+T	R	Y		T	O	D	O		M	Y	| New English Text
+1E	1C	23	00	1E	19	0E	19	00	17	23	| New English Hex
+ぼっくん!
+$78016 (Line 2)
+B0	C8	5B	3E	85	| Original Japanese Hex
+ぼ	っ	く	ん	!	| Original Japanese Text
+B	E	S	T	!	| New English Text
+0C	0F	1D	1E	85	| New English Hex
+
+ぼっくんの でばんで
+In turn do more of offs
+Offs do more!
+$7801F	(Line 1)
+B0	C8	5B	3E	2E	00	9B	AC	3E	9B	| Original Japanese Hex
+ぼ	っ	く	ん	の		で	ば	ん	で	| Original Japanese Text
+I		T	R	Y		M	U	C	H	| New English Text
+13	00	1E	1C	23	00	17	1F	0D	12	| New English Hex
+ぼっくん!
+$7802D	(Line 2)
+B0	C8	5B	3E	85	| Original Japanese Hex
+ぼ	っ	く	ん	!	| Original Japanese Text
+M	O	R	E	!	| New English Text
+17	19	1C	0F	85	| New English Hex
+
+まけないで ぼっくんよー!
+I will try as much as possible not to give up!
+$78036
+2F	5C	2A	26	9B	00	B0	C8	5B	3E	36	82	85	| Original Japanese Hex
+ま	け	な	い	で		ぼ	っ	く	ん	よ	ー	!	| Original Japanese Text
+W	O	N	T		G	I	V	E		U	P	!	| New English Text
+21	19	18	1E	00	11	13	20	0F	00	1F	1A	85	| New English Hex
+
+もっと もっと つよくなって
+Become more strong
+I 'll aim to be a pro golfer!
+$78061	(Line 1)
+33	C8	67	00	33	C8	67	00	65	36	5B	2A	C8	66	| Original Japanese Hex
+も	っ	と		も	っ	と		つ	よ	く	な	っ	て	| Original Japanese Text
+B	E	C	O	M	E		S	T	R	O	N	G	!	| New English Text
+0C	0F	0D	19	17	0F	00	1D	1E	1C	19	18	11	85	| New English Hex
+わたし プロゴルファーをめざすわっ!!
+$78073	(Line 2)
+3C	63	5F	00	BD	55	A1	53	7E	C9	82	3D	32	93	60	3C	C8	85	85	| Original Japanese Hex
+わ	た	し		プ	ロ	ゴ	ル	フ	ァ	ー	を	め	ざ	す	わ	っ	!	!	| Original Japanese Text
+I		A	I	M		T	O		B	E		A		P	R	O	!	!	| New English Text
+13	00	0A	13	17	00	1E	19	00	0C	0F	00	0B	00	1A	1C	19	85	85	| New English Hex
+
+わたし ぜえーったい きろくをのこすわっ!
+Wow want to keep a record Tsu er ze me!
+$7808A
+3C	63	5F	00	96	28	82	C8	63	26	00	5A	3B	5B	3D	2E	5D	60	3C	C8	85	| Original Japanese Hex
+わ	た	し		ぜ	え	ー	っ	た	い		き	ろ	く	を	の	こ	す	わ	っ	!	| Original Japanese Text
+T	R	Y		F	O	R		A		N	E	W		R	E	C	O	R	D	!	| New English Text
+1E	1C	23	00	10	19	1C	00	0B	00	18	0F	21	00	1C	0F	0D	19	1C	0E	85	| New English Hex
+
+よーし ちょうしが のってきたわ!
+Luck-pusher is Alright I've been riding!
+It's got this hole!
+$780A3	(Line 1)
+36	82	5F	00	64	C7	27	5F	8E	00	2E	C8	66	5A	63	3C	85	| Original Japanese Hex
+よ	ー	し		ち	ょ	う	し	が		の	っ	て	き	た	わ	!	| Original Japanese Text
+T	R	Y		M	Y		L	U	C	K	!		T	H	I	S	| New English Text
+??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	| New English Hex
+このホール もらったわ!
+$780B8	(Line 2)
+5D	2E	80	82	53	00	33	37	C8	63	3C	85	| Original Japanese Hex
+こ	の	ホ	ー	ル		も	ら	っ	た	わ	!	| Original Japanese Text
+H	O	L	E		I	S		M	I	N	E	| New English Text
+??	??	??	??	??	??	??	??	??	??	??	85	| New English Hex
+
+このてんさいプロゴルファー コワルさまの
+The genius or a professional golfer Kowal is this
+Do not be skip the waist looking at the ability!
+$780E4	(Line 1)
+5D	2E	66	3E	5E	26	BD	55	A1	53	7E	C9	82	00	6C	56	53	5E	2F	2E	| Original Japanese Hex
+こ	の	て	ん	さ	い	プ	ロ	ゴ	ル	フ	ァ	ー		コ	ワ	ル	さ	ま	の	| Original Japanese Text
+S	E	E		G	E	N	I	U	S		A	S		I		P	L	A	Y	| New English Text
+1D	0F	0F	00	11	0F	18	13	1F	1D	00	0B	1D	00	13	00	1A	16	0B	23	| New English Hex
+じつりょくをみて こしをぬかすなよ!
+$780FC	(Line 2)
+94	65	38	C7	5B	3D	30	66	00	5D	5F	3D	2C	59	60	2A	36	85	| Original Japanese Hex
+じ	つ	り	ょ	く	を	み	て		こ	し	を	ぬ	か	す	な	よ	!	| Original Japanese Text
+P	R	O	F	E	S	S	I	O	N	A	L		G	O	L	F	!	| New English Text
+1A	1C	19	10	0F	1D	1D	13	19	18	0B	16	00	11	19	16	10	85	| New English Hex
+
+フッ...オレのでばんか...
+hah... Now it's my turn...
+$78112
+7E	D1	88	88	88	43	54	2E	9B	AC	3E	59	88	88	88	| Original Japanese Hex
+フ	ッ	.	.	.	オ	レ	の	で	ば	ん	か	.	.	.	| Original Japanese Text
+H	A	.	.	.	M	Y		T	U	R	N	.	.	.	| New English Text
+12	0B	88	88	88	17	23	00	1E	1F	1C	18	88	88	88	| New English Hex
+
+はっはっはっ..やっときたな コワルさまの
+Kowal of various Na came finally Tsu .. ha ha ha
+I'll show the real power!
+$78125	(Line 1)
+77	C8	77	C8	77	C8	88	88	34	C8	67	5A	63	2A	00	6C	56	53	5E	2F	2E	| Original Japanese Hex
+は	っ	は	っ	は	っ	.	.	や	っ	と	き	た	な		コ	ワ	ル	さ	ま	の	| Original Japanese Text
+H	E	R	E		I		C	O	M	E	.	.	.		I		W	I	L	L	| New English Text
+12	0F	1C	0F	00	13	00	1D	19	17	0F	88	88	88	00	13	00	21	13	16	16	| New English Hex
+しんのじつりょくをみせてやろう!
+$7813E	(Line 2)
+5F	3E	2E	94	65	38	C7	5B	3D	30	61	66	34	3B	27	85	| Original Japanese Hex
+し	ん	の	じ	つ	り	ょ	く	を	み	せ	て	や	ろ	う	!	| Original Japanese Text
+S	H	O	W		R	E	A	L		P	O	W	E	R	!	| New English Text
+1D	12	19	21	00	1C	0F	0B	16	00	1A	19	21	0F	1C	85	| New English Hex
+
+みー! みー!
+Look over! See over!
+$7818A
+30	82	85	00	30	82	85	| Original Japanese Hex
+み	ー	!		み	ー	!	| Original Japanese Text
+L	O	O	K	I	E	!	| New English Text
+16	19	19	15	13	0F	85	| New English Hex
+
+み..みいーっ!
+See .. see I~tsu!
+$78195
+30	88	88	30	26	82	C8	85	| Original Japanese Hex
+み	.	.	み	い	ー	っ	!	| Original Japanese Text
+L	O	O	K		O	N	!	| New English Text
+16	19	19	15	00	19	18	85	| New English Hex
+
+みみみいーっ!
+The Yaa it has seen only look!
+$781A1
+30	30	30	26	82	C8	85	| Original Japanese Hex
+み	み	み	い	ー	っ	!	| Original Japanese Text
+S	E	E		M	E	!	| New English Text
+1D	0F	0F	00	17	0F	85	| New English Hex
+
+どっこいしょっ..もお わしのでばんかね?
+Heigh-Ho.. I guess turn your eagle also?
+$781BF
+9C	C8	5D	26	5F	C7	C8	88	88	33	29	00	3C	5F	2E	9B	AC	3E	59	2D	86	| Original Japanese Hex
+ど	っ	こ	い	し	ょ	っ	.	.	も	お		わ	し	の	で	ば	ん	か	ね	?	| Original Japanese Text
+C	O	U	L	D		I	T		B	E		A	N		E	A	G	L	E	?	| New English Text
+0D	19	1F	16	0E	00	13	1E	00	0C	0F	00	0A	18	00	0F	0B	11	16	0F	86	| New English Hex
+
+やれやれ わしのしんのちからをみせなくては
+Not show the true power of the an eagle is well
+The Wow Wow uncertainties which stem of .. seems there or not ..
+$781D8	(Line 1)
+34	3A	34	3A	00	3C	5F	2E	5F	3E	2E	64	59	37	3D	30	61	2A	5B	66	77	| Original Japanese Hex
+や	れ	や	れ		わ	し	の	し	ん	の	ち	か	ら	を	み	せ	な	く	て	は	| Original Japanese Text
+I	T	S		T	I	M	E		F	O	R		T	H	E		T	R	U	E	| New English Text
+13	1E	1D	00	1E	13	17	0F	00	10	19	1C	00	1E	12	0E	00	1E	1C	1F	0F	| New English Hex
+いかんらしいのお..ふぉっふぉっ..
+$781F1	(Line 2)
+26	59	3E	37	5F	26	2E	29	88	88	79	C4	C8	79	C4	C8	88	88	| Original Japanese Hex
+い	か	ん	ら	し	い	の	お	.	.	ふ	ぉ	っ	ふ	ぉ	っ	.	.	| Original Japanese Text
+P	O	W	E	R		O	F		T	H	E		E	A	G	L	E	| New English Text
+1A	19	21	0F	1C	00	1C	10	00	1E	12	0F	00	0F	0B	11	16	0F	| New English Hex
+
+クラブふり ボールとびこむ みずのおと..
+The sound of not only non-come flying club swing ball..
+And a cut-comes into play that same feeling of well.. an eagle transfer
+$78207	(Line 1)
+6A	51	B3	79	38	00	B5	82	53	67	AD	5D	31	00	30	95	2E	29	67	88	88	| Original Japanese Hex
+ク	ラ	ブ	ふ	り		ボ	ー	ル	と	び	こ	む		み	ず	の	お	と	.	.	| Original Japanese Text
+I		T	H	I	N	K		I		C	A	N		C	O	N	V	E	R	T	| New English Text
+13	00	1E	12	13	18	15	00	13	00	0D	0B	18	00	0D	19	18	20	0F	1C	1E	| New English Hex
+いかんいかん..わしのでばんじゃな
+$78220	(Line 2)
+26	59	3E	26	59	3E	88	88	3C	5F	2E	9B	AC	3E	94	C5	2A	| Original Japanese Hex
+い	か	ん	い	か	ん	.	.	わ	し	の	で	ば	ん	じ	ゃ	な	| Original Japanese Text
+I	T		I	N	T	O		A	N		E	A	G	L	E	!	| New English Text
+13	1E	00	13	18	13	19	00	0B	18	00	0F	0B	11	16	0F	85	| New English Hex
+
+ひょっひょっひょーっ!
+Tsu Hyo~tsu Hyo~tsu Hyo!
+It would have got this game!
+$78251	(Line 1)
+78	C7	C8	78	C7	C8	78	C7	82	C8	85	| Original Japanese Hex
+ひ	ょ	っ	ひ	ょ	っ	ひ	ょ	ー	っ	!	| Original Japanese Text
+I		T	H	I	N	K		I	V	E	| New English Text
+13	00	1E	12	13	18	15	00	13	20	0F	| New English Hex
+このしょうぶ もらったでひょう!
+$78260	(Line 2)
+5D	2E	5F	C7	27	AE	00	33	37	C8	63	9B	78	C7	27	85	| Original Japanese Hex
+こ	の	し	ょ	う	ぶ		も	ら	っ	た	で	ひ	ょ	う	!	| Original Japanese Text
+G	O	T		H	A	N	G		O	F		I	T	!	!	| New English Text
+11	19	1E	00	12	0B	18	11	00	19	10	00	13	1E	85	85	| New English Hex
+
+キャハハハハハ...え?
+For example calibration lol lol ...?
+Van will I get? There?
+$78274	(Line 1)
+69	CE	7C	7C	7C	7C	7C	88	88	88	28	86	| Original Japanese Hex
+キ	ャ	ハ	ハ	ハ	ハ	ハ	.	.	.	え	?	| Original Japanese Text
+C	A	N		I		M	A	N	A	G	E	| New English Text
+0D	0B	18	00	13	00	17	0B	18	0B	11	0F	| New English Hex
+あっ? もお あたしのばん?
+$78284	(Line 2)
+25	C8	86	00	33	29	00	25	63	5F	2E	AC	3E	86	| Original Japanese Hex
+あ	っ	?		も	お		あ	た	し	の	ば	ん	?	| Original Japanese Text
+A		G	R	E	A	T		S	C	O	R	E	?	| New English Text
+0B	00	11	1C	0F	0B	1D	00	1C	0D	19	1C	0F	86	| New English Hex
+
+キャハハハハハ...
+Calibration lol lol ...
+I'll show you my power!
+$78296	(Line 1)
+69	CE	7C	7C	7C	7C	7C	88	88	88	| Original Japanese Hex
+キ	ャ	ハ	ハ	ハ	ハ	ハ	.	.	.	| Original Japanese Text
+I		A	M		G	O	N	N	A	| New English Text
+13	00	0B	17	00	11	19	18	18	0B	| New English Hex
+あたしのちからをみせてあげるわね!
+$782A4	(Line 2)
+25	63	5F	2E	64	59	37	3D	30	61	66	25	91	39	3C	2D	85	| Original Japanese Hex
+あ	た	し	の	ち	か	ら	を	み	せ	て	あ	げ	る	わ	ね	!	| Original Japanese Text
+S	H	O	W		Y	O	U		M	Y		P	O	W	E	R	| New English Text
+1D	12	19	21	00	23	19	1F	00	17	23	00	1A	19	21	0F	1C	| New English Hex

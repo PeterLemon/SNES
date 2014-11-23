@@ -1,0 +1,81 @@
+﻿ルール の せつめい
+Rule Description
+$7EE42
+53	82	53	00	2E	00	61	65	32	26	| Original Japanese Hex
+ル	ー	ル		の		せ	つ	め	い	| Original Japanese Text
+G	A	M	E		R	U	L	E	S	| New English Text
+11	0B	17	0F	00	1C	1F	16	0F	1D	| New English Hex
+
+.マッチプレイモード
+Match Play Mode
+$7D0F8
+00	00	00	00	00	00	88	49	D1	73	BD	54	40	4D	82	AB	| Original Japanese Hex
+						.	マ	ッ	チ	プ	レ	イ	モ	ー	ド	| Original Japanese Text
+.	M	A	T	C	H		P	L	A	Y		M	O	D	E	| New English Text
+88	17	0B	1E	0D	12	00	1A	16	0B	23	00	17	19	0E	0F	| New English Hex
+
+2PLAYたいせんモードで ホールごとの だすうで
+Will be the value of the player were to win the final number of strokes per hole decided the game in battle mode 2PLAY
+$7D10C (Line 1)
+03	1A	16	0B	23	63	26	61	3E	4D	82	AB	9B	00	80	82	53	92	67	2E	00	98	60	27	9B	| Original Japanese Hex
+2	P	L	A	Y	た	い	せ	ん	モ	ー	ド	で		ホ	ー	ル	ご	と	の		だ	す	う	で	| Original Japanese Text
+2		P	L	A	Y	E	R	S		E	A	R	N		P	O	I	N	T	S		F	O	R	| New English Text
+03	00	1A	16	0B	23	0F	1C	1D	00	0F	0B	1C	18	00	1A	19	13	18	1E	1D	00	10	19	1C	| New English Hex
+しょうぶをきめ さいしゅうてきに かちすうがおおかった
+$7D129 (Line 2)
+5F	C7	27	AE	3D	5A	32	00	5E	26	5F	C6	27	66	5A	2B	00	59	64	60	27	8E	29	29	59	C8	63	| Original Japanese Hex
+し	ょ	う	ぶ	を	き	め		さ	い	し	ゅ	う	て	き	に		か	ち	す	う	が	お	お	か	っ	た	| Original Japanese Text
+E	V	E	R	Y		H	O	L	E		W	O	N		A		H	I	G	H		S	C	O	R	E	| New English Text
+0F	20	0F	1C	23	00	12	19	16	0F	00	21	19	18	00	0B	00	12	13	11	12	00	1D	0D	19	1C	0F	| New English Hex
+プレイヤーのかちになります
+$7D148 (Line 3)
+BD	54	40	4E	82	2E	59	64	2B	2A	38	2F	60	| Original Japanese Hex
+プ	レ	イ	ヤ	ー	の	か	ち	に	な	り	ま	す	| Original Japanese Text
+W	I	N	S		T	H	E		G	A	M	E	| New English Text
+21	13	18	1D	00	1E	12	0F	00	11	0B	17	0F	| New English Hex
+
+.PROモード.ノーマルモードのちがいについて
+. For the difference in PRO mode . Normal mode
+$7D15A
+88	1A	1C	19	4D	82	AB	88	48	82	49	53	4D	82	AB	2E	64	8E	26	2B	65	26	66	| Original Japanese Hex
+.	P	R	O	モ	ー	ド	.	ノ	ー	マ	ル	モ	ー	ド	の	ち	が	い	に	つ	い	て	| Original Japanese Text
+.	P	R	O		M	O	D	E		-		D	I	F	F	E	R	E	N	C	E	S	| New English Text
+88	1A	1C	19	00	17	19	0E	0F	00	82	00	0E	13	10	10	0F	1C	0F	18	0D	0F	1D	| New English Hex
+
+PROモードはノーマルモードと くらべて..
+Compared with the normal mode .. PRO mode
+$7D175
+1A	1C	19	4D	82	AB	77	48	82	49	53	4D	82	AB	67	00	5B	37	AF	66	88	88	| Original Japanese Hex
+P	R	O	モ	ー	ド	は	ノ	ー	マ	ル	モ	ー	ド	と		く	ら	べ	て	.	.	| Original Japanese Text
+B	E	T	W	E	E	N		A	M	A	T	E	U	R		M	O	D	E	.	.	| New English Text
+0C	0F	1E	21	0F	0F	18	00	0B	17	0B	1E	0F	1F	1C	00	17	19	0E	0F	88	88	| New English Hex
+
+かぜのむきと そのちからのあたいが かなりシビアに
+The value of quite severe and their direction of the wind power
+$7D18F (Line 1)
+59	96	2E	31	5A	67	00	62	2E	64	59	37	2E	25	63	26	8E	00	59	2A	38	6E	B2	3F	2B	| Original Japanese Hex
+か	ぜ	の	む	き	と		そ	の	ち	か	ら	の	あ	た	い	が		か	な	り	シ	ビ	ア	に	| Original Japanese Text
+W	I	N	D		D	I	R	E	C	T	I	O	N	/	S	P	E	E	D		M	U	C	H	| New English Text
+21	13	18	0E	00	0E	13	1C	0F	0D	1E	13	19	18	87	1D	1A	0F	0F	0E	00	17	1F	0D	12	| New English Hex
+なっています ノーマルモードでは ものたりない..
+In normal mode has become unsatisfactory is ..
+$7D1AC (Line 2)
+2A	C8	66	26	2F	60	00	48	82	49	53	4D	82	AB	9B	77	00	33	2E	63	38	2A	26	88	88	| Original Japanese Hex
+な	っ	て	い	ま	す		ノ	ー	マ	ル	モ	ー	ド	で	は		も	の	た	り	な	い	.	.	| Original Japanese Text
+M	O	R	E		S	E	V	E	R	E		T	H	A	N		N	O	R	M	A	L	.	.	| New English Text
+17	19	1C	0F	00	1D	0F	20	0F	1C	0F	00	1E	12	0B	18	00	18	19	1C	17	0B	16	88	88	| New English Hex
+
+というかた よりスリリングなプレイをおのぞみのかた
+Those who want to play more thrilling than that
+$7D1C9 (Line 1)
+67	26	27	59	63	00	36	38	6F	52	52	58	9F	2A	BD	54	40	3D	29	2E	97	30	2E	59	63	| Original Japanese Hex
+と	い	う	か	た		よ	り	ス	リ	リ	ン	グ	な	プ	レ	イ	を	お	の	ぞ	み	の	か	た	| Original Japanese Text
+I	F		Y	O	U		L	I	K	E		T	H	R	I	L	L	S		T	H	E	R	E	| New English Text
+13	10	00	23	19	1F	00	16	13	15	0F	00	1E	12	1C	13	16	16	1D	00	1E	12	0F	1C	0F	| New English Hex
+などでも じゅうぶんに たのしめるモードです!
+This mode is also plenty to enjoy, such as!
+$7D1E6 (Line 2)
+2A	9C	9B	33	00	94	C6	27	AE	3E	2B	00	63	2E	5F	32	39	4D	82	AB	9B	60	85	| Original Japanese Hex
+な	ど	で	も		じ	ゅ	う	ぶ	ん	に		た	の	し	め	る	モ	ー	ド	で	す	!	| Original Japanese Text
+I	S		P	L	E	N	T	Y		I	N		T	H	I	S		M	O	D	E	!	| New English Text
+13	1D	00	1A	16	0F	18	1E	23	00	13	18	00	1E	12	13	1D	00	17	19	0E	0F	85	| New English Hex

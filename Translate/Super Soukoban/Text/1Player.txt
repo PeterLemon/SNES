@@ -1,0 +1,97 @@
+﻿こてしらベ コース
+Preliminary test or trial; tryout Course
+$4DE08
+9A	00	A3	00	9C	00	B7	00	F7	AD	00	BE	B9	C2	DA	00	90	00	77	DD	00	| Original Japanese Hex
+こ		て		し		ら			ベ					コ		ー			ス		| Original Japanese Text
+T		R		I		A			L					S		E			T		| New English Text
+74	00	72	00	69	00	61	00	F7	6C	00	00	B9	C2	73	00	65	00	77	74	00	| New English Hex
+|
+ウォーミング
+Warming/up Course
+$4DE20
+D3	00	CB	65	00	9F	F0	00	FD	00	D8	5D	| Original Japanese Hex
+ウ		ォ	ー			ミ		ン		グ		| Original Japanese Text
+W		A	R			M						| New English Text
+77	00	61	65	00	9F	6D	00	00	00	00	5D	| New English Hex
+|
+ひっかけ
+Grappling/Sumo Course
+$4DE2F
+AB	3F	00	8F	00	96	00	99	B5	| Original Japanese Hex
+ひ			っ		か		け		| Original Japanese Text
+S			U		M		O		| New English Text
+73	3F	00	75	00	6D	00	6F	B5	| New English Hex	
+|
+たいさく
+Wants to spend/epic Course
+$4DE2E
+A0	00	92	00	9B	00	98	DB	| Original Japanese Hex
+た		い		さ		く		| Original Japanese Text
+E		P		I		C		| New English Text
+65	00	70	00	69	00	63	DB	| New English Hex
+|
+エレガント
+Elegant Course
+$4DE46
+D4	00	FA	00	D6	5D	00	FD	00	5D	E4	5F	| Original Japanese Hex
+エ		レ		ガ			ン			ト		| Original Japanese Text
+G		R		A			N			D		| New English Text
+67	00	72	00	61	5D	00	6E	00	5D	64	5F	| New English Hex
+|
+なんかい
+Difficult Course
+$4DE53
+A5	00	BD	D7	00	92	DB	| Original Japanese Hex
+な		ん	か		い		| Original Japanese Text
+T		O		U	G		| New English Text
+74	00	6F	D7	00	67	DB	| New English Hex
+T		O		U		G		H
+74	00	6F	00	75	00	67	00	68	DB	| New English Hex
+
+こてしらベ コース
+Preliminary test or trial; tryout Course
+$16A1
+9A	A3	9C	B7	ED	BE	00	00	DA	90	DD	| Original Japanese Hex
+こ	て	し	ら	ベ				コ	ー	ス	| Original Japanese Text
+T	R	I	A	L				S	E	T	| New English Text
+54	52	49	41	4C	00	00	00	53	45	54	| New English Hex
+|
+ウォーミング コース
+Warming/up Course
+$16AC
+D3	CB	90	F0	FD	D8	BE	00	DA	90	DD	| Original Japanese Hex
+ウ	ォ	ー	ミ	ン	グ			コ	ー	ス	| Original Japanese Text
+W	A	R	M					S	E	T	| New English Text
+57	41	52	4D	00	00	00	00	53	45	54	| New English Hex
+|
+ひっかけ コース
+Grappling/Sumo Course
+$16B7
+AB	8F	96	99	00	00	00	00	DA	90	DD	| Original Japanese Hex
+ひ	っ	か	け					コ	ー	ス	| Original Japanese Text
+S	U	M	O					S	E	T	| New English Text
+53	55	4D	4F	00	00	00	00	53	45	54	| New English Hex	
+|
+たいさく コース
+Wants to spend/epic Course
+$16C2
+A0	92	9B	98	00	00	00	00	DA	90	DD	| Original Japanese Hex
+た	い	さ	く					コ	ー	ス	| Original Japanese Text
+E	P	I	C					S	E	T	| New English Text
+45	50	49	43	00	00	00	00	53	45	54	| New English Hex
+|
+エレガント コース
+Elegant Course
+$16CD
+D4	FA	D6	BE	FD	E4	00	00	DA	90	DD	| Original Japanese Hex
+エ	レ	ガ		ン	ト			コ	ー	ス	| Original Japanese Text
+G	R	A	N	D				S	E	T	| New English Text
+47	52	41	4E	44	00	00	00	53	45	54	| New English Hex
+|
+なんかい コース
+Difficult Course
+$16D8
+A5	BD	96	92	00	00	00	00	DA	90	DD	| Original Japanese Hex
+な	ん	か	い					コ	ー	ス	| Original Japanese Text
+T	O	U	G	H				S	E	T	| New English Text
+54	4F	55	47	48	00	00	00	53	45	54	| New English Hex

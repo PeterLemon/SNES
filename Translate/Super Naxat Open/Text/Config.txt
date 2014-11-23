@@ -1,0 +1,8 @@
+﻿コントロールパットのわりふりをしてください
+Please allocation control pad
+$7E8F4
+6C	58	76	55	82	53	BB	D1	76	2E	3C	38	79	38	3D	5F	66	5B	98	56	26	| Original Japanese Hex
+コ	ン	ト	ロ	ー	ル	パ	ッ	ト	の	わ	り	ふ	り	を	し	て	く	だ	さ	い	| Original Japanese Text
+C	O	N	F	I	G	U	R	E		C	O	N	T	R	O	L		P	A	D	| New English Text
+0D	19	18	10	13	11	1F	1C	0F	00	0D	19	18	1E	1C	19	16	00	1A	0B	0E	| New English Hex
+

@@ -1,0 +1,219 @@
+﻿どらぼっちゃん
+Spike
+$7F3E9
+9C	37	B0	C8	64	C5	3E	| Original Japanese Hex
+ど	ら	ぼ	っ	ち	ゃ	ん	| Original Japanese Text
+S	P	I	K	E			| New English Text
+1D	1A	13	15	0F	00	00	| New English Hex
+|
+カミーラ
+Camilla or Camelia (from twisted tales)
+$7F3F1
+68	4A	82	51	00	00	00	| Original Japanese Hex
+カ	ミ	ー	ラ				| Original Japanese Text
+C	A	M	E	L	I	A	| New English Text
+0D	0B	17	0F	16	13	0B	| New English Hex
+|
+コワル
+Kowal or Hydra (from twisted tales)
+$7F3F9
+6C	56	53	00	00	00	00	| Original Japanese Hex
+コ	ワ	ル					| Original Japanese Text
+H	Y	D	R	A			| New English Text
+12	23	0E	1C	0B	00	00	| New English Hex
+|
+にんにくん
+Garlic or Killer Clove (from twisted tales)
+$7F401
+2B	3E	2B	5B	3E	00	00	| Original Japanese Hex
+に	ん	に	く	ん			| Original Japanese Text
+K	.	C	L	O	V	E	| New English Text
+15	88	0D	16	19	20	0F	| New English Hex
+|
+しつじちょう
+Professor Steam
+$7F409
+5F	65	94	64	C7	27	00	| Original Japanese Hex
+し	つ	じ	ち	ょ	う		| Original Japanese Text
+P	.	S	T	E	A	M	| New English Text
+1A	88	1D	1E	0F	0B	17	| New English Hex
+|
+ひょうひょう
+Felina
+$7F411
+78	C7	27	78	C7	27	00	| Original Japanese Hex
+ひ	ょ	う	ひ	ょ	う		| Original Japanese Text
+F	E	L	I	N	A		| New English Text
+10	0F	16	13	18	0B	00	| New English Hex
+
+パワー
+Power
+$7E5EE
+BB	56	82	| Original Japanese Hex
+パ	ワ	ー	| Original Japanese Text
+H	I	T	| New English Text
+12	13	1E	| New English Hex
+|
+テクニック
+Technique
+$7E601
+75	6A	45	D1	6A	| Original Japanese Hex
+テ	ク	ニ	ッ	ク	| Original Japanese Text
+S	K	I	L	L	| New English Text
+1D	15	13	16	16	| New English Hex
+|
+スタンス
+Stance
+$7E614
+6F	72	58	6F	| Original Japanese Hex
+ス	タ	ン	ス	| Original Japanese Text
+P	O	S	E	| New English Text
+1A	19	1D	0F	| New English Hex
+|
+スピン
+Spin
+$7E627
+6F	BC	58	| Original Japanese Hex
+ス	ピ	ン	| Original Japanese Text
+S	P	N	| New English Text
+1D	1A	18	| New English Hex
+|
+すペしゃる
+Special
+$7E63C
+60	B9	5F	C5	39	| Original Japanese Hex
+す	ペ	し	ゃ	る	| Original Japanese Text
+P	O	W	E	R	| New English Text
+1A	19	21	0F	1C	| New English Hex
+
+しばめのききめがはんぶん
+Turf eye/sprout Field Efficiancy half
+$7F7DD
+5F	AC	32	2E	5A	5A	32	8E	77	3E	AE	3E	| Original Japanese Hex
+し	ば	め	の	き	き	め	が	は	ん	ぶ	ん	| Original Japanese Text
+G	R	A	S	S		D	R	I	V	E	S	| New English Text
+11	1C	0B	1D	1D	00	0E	1C	13	20	0F	1D	| New English Hex
+|
+ヘいきんてきなちからをもったプレイヤーよ
+Player with a well of strength that I come onto Oh... Will do for beginners!
+$7B477 (Line 1)
+7A	26	5A	3E	66	5A	2A	64	59	37	3D	33	C8	63	BD	54	40	4E	82	36	| Original Japanese Hex
+ヘ	い	き	ん	て	き	な	ち	か	ら	を	も	っ	た	プ	レ	イ	ヤ	ー	よ	| Original Japanese Text
+H	E		I	S		E	V	E	N	L	Y		S	K	I	L	L	E	D	| New English Text
+12	0F	00	13	1D	00	0F	20	0F	18	16	23	00	1D	15	13	16	16	0F	0E	| New English Hex
+まあ。。。しょしんしゃむけかなっ!
+$7B48F (Line 2)
+2F	25	88	88	88	5F	C7	5F	3E	5F	C5	31	5C	59	2A	C8	85	| Original Japanese Hex
+ま	あ	。	。	。	し	ょ	し	ん	し	ゃ	む	け	か	な	っ	!	| Original Japanese Text
+B	E	G	I	N	N	E	R	S		C	H	O	I	C	E	!	| New English Text
+0C	0F	11	13	18	18	0F	1C	1D	00	0D	12	19	13	0D	0F	85	| New English Hex
+
+ラフでのショットがとくい
+Is good at shots in the rough
+$7F7A9
+51	7E	9B	2E	6E	D0	D1	76	8E	67	5B	26	| Original Japanese Hex
+ラ	フ	で	の	シ	ョ	ッ	ト	が	と	く	い	| Original Japanese Text
+R	O	U	G	H		S	H	O	T	S		| New English Text
+1C	19	1F	11	12	00	1D	12	19	1E	1D	00	| New English Hex
+|
+パワーはないけど そのぶんを わざで
+In any portion I do not have power skills I had enough Game to cover
+$7B4A3 (Line 1)
+BB	56	82	77	2A	26	5C	9C	00	62	2E	AE	3E	3D	00	3C	93	9B	| Original Japanese Hex
+パ	ワ	ー	は	な	い	け	ど		そ	の	ぶ	ん	を		わ	ざ	で	| Original Japanese Text
+N	O	T		T	O	O		M	U	C	H		P	O	W	E	R	| New English Text
+18	19	1E	00	1E	19	19	00	17	1F	0D	12	00	1A	19	21	0F	1C	| New English Hex
+じゅうぶんにカバーしてる プレイヤーよ
+$7B4B9 (Line 2)
+94	C6	27	AE	3E	2B	68	B1	82	5F	66	39	00	BD	54	40	4E	82	36	| Original Japanese Hex
+じ	ゅ	う	ぶ	ん	に	カ	バ	ー	し	て	る		プ	レ	イ	ヤ	ー	よ	| Original Japanese Text
+B	U	T		P	L	E	N	T	Y		O	F		S	K	I	L	L	| New English Text
+0C	1F	1E	00	1A	16	0F	18	1E	23	00	19	10	00	1D	15	13	16	16	| New English Hex
+
+とくになし
+None in particular
+$7F79C
+67	5B	2B	2A	5F	00	00	00	00	00	00	00	| Original Japanese Hex
+と	く	に	な	し								| Original Japanese Text
+N	O	N	E		S	P	E	C	I	A	L	| New English Text
+18	19	18	0F	00	1D	1A	0F	0D	13	0B	16	| New English Hex
+|
+ちょっとぶきようだけど パワーさいきょうの
+It is the strongest power but a little clumsy Best player to knock out please!
+$7B4CF (Line 1)
+64	C7	C8	67	AE	5A	36	27	98	5C	9C	00	BB	56	82	5E	26	5A	c7	27	2E	| Original Japanese Hex
+ち	ょ	っ	と	ぶ	き	よ	う	だ	け	ど		パ	ワ	ー	さ	い	き	ょ	う	の	| Original Japanese Text
+H	A	S		T	H	E		S	T	R	O	N	G	E	S	T		H	I	T	| New English Text
+12	0B	1D	00	1E	12	0F	00	1D	1E	1C	29	18	11	0F	1D	1E	00	12	13	1E	| New English Hex
+プレイヤーよ かっとばしたいひとはどうぞ!
+$7B4E8 (Line 2)
+BD	54	40	4E	82	36	00	59	C8	67	AC	5F	63	26	78	67	77	9C	27	97	85	| Original Japanese Hex
+プ	レ	イ	ヤ	ー	よ		か	っ	と	ば	し	た	い	ひ	と	は	ど	う	ぞ	!	| Original Japanese Text
+C	A	N		B	E		A		B	I	T		C	L	U	M	S	Y	!	!	| New English Text
+0D	0B	18	00	0C	0F	00	0B	00	0C	13	1E	00	0C	16	1F	17	1D	23	85	85	| New English Hex
+
+スーパーショットがうてる
+Super shot strike/wedge
+$7F7C3
+6F	82	BB	82	6E	D0	D1	76	8E	27	66	39	| Original Japanese Hex
+ス	ー	パ	ー	シ	ョ	ッ	ト	が	う	て	る	| Original Japanese Text
+W	E	D	G	E		S	T	R	I	K	E	| New English Text
+21	0F	0E	11	0F	00	1D	1E	1C	13	15	0F	| New English Hex
+|
+パワーはひくいけど うちにひめたちからを
+While the small from his power, but lower in If you should lose to anyone
+$7B500 (Line 1)
+BB	56	82	77	78	5B	26	5C	9C	00	27	64	2B	78	32	63	64	59	37	3D	| Original Japanese Hex
+パ	ワ	ー	は	ひ	く	い	け	ど		う	ち	に	ひ	め	た	ち	か	ら	を	| Original Japanese Text
+S	M	A	L	L		I	N		S	T	A	T	U	R	E		B	U	T	| New English Text
+1D	17	0A	16	16	00	13	18	00	1D	1E	0B	1E	1F	1C	0F	00	0C	1F	1E	| New English Hex
+かいほうすれば だれにもまけないわ
+$7B518 (Line 2)
+59	26	7B	27	60	3A	AC	00	98	3A	2B	33	2F	5C	2A	26	3C	| Original Japanese Hex
+か	い	ほ	う	す	れ	ば		だ	れ	に	も	ま	け	な	い	わ	| Original Japanese Text
+H	A	S		A		G	O	O	D		S	T	A	N	C	E	| New English Text
+12	0B	1D	00	0B	00	11	19	19	0E	00	1D	1E	0B	18	0D	0F	| New English Hex
+
+バンカーショットがとくい
+Is good at bunker shots
+$7F7B6
+B1	58	68	82	6E	D0	D1	76	8E	67	5B	26	| Original Japanese Hex
+バ	ン	カ	ー	シ	ョ	ッ	ト	が	と	く	い	| Original Japanese Text
+B	U	N	K	E	R		S	H	O	T	S	| New English Text
+0C	1F	18	15	0F	1C	00	1D	12	19	1E	1D	| New English Hex
+|
+スピンにかけては まかいいち..しかも
+A master of spin between bunker shots Dust it over the bunker
+$7B52C (Line 1)
+6F	BC	58	2B	59	5C	66	77	00	2F	59	26	26	64	88	88	5F	59	33	| Original Japanese Hex
+ス	ピ	ン	に	か	け	て	は		ま	か	い	い	ち	.	.	し	か	も	| Original Japanese Text
+S	P	I	N	S		T	H	E		B	A	L	L		W	H	E	N	| New English Text
+1D	1A	13	18	1D	00	1E	12	0F	00	0C	0B	16	16	00	21	12	0F	18	| New English Hex
+バンカーショットの たつじんよ
+$7B543 (Line 2)
+B1	58	68	82	6E	D0	D1	76	2E	00	63	65	94	3E	36	| Original Japanese Hex
+バ	ン	カ	ー	シ	ョ	ッ	ト	の		た	つ	じ	ん	よ	| Original Japanese Text
+O	U	T		O	F		A		B	U	N	K	E	R	| New English Text
+19	1F	1E	00	19	10	00	0B	00	0C	1F	18	15	0F	1C	| New English Hex
+
+かぜをあやつる
+Manipulate the wind
+$7F7D0
+59	96	3D	25	34	65	39	00	00	00	00	00	| Original Japanese Hex
+か	ぜ	を	あ	や	つ	る						| Original Japanese Text
+W	I	N	D	Y		S	T	R	I	K	E	| New English Text
+21	13	18	0E	23	00	1D	1E	1C	13	15	0F	| New English Hex
+|
+のうりょくは そんなに めだたないけど
+Capacity is so obvious but Can manipulate the wind
+$7B555 (Line 1)
+2E	27	38	C7	5B	77	00	62	3E	2A	2B	00	32	98	63	2A	26	5C	9C	| Original Japanese Hex
+の	う	り	ょ	く	は		そ	ん	な	に		め	だ	た	な	い	け	ど	| Original Japanese Text
+M	A	N	I	P	U	L	A	T	E	S		A		W	I	N	D	Y	| New English Text
+17	0B	18	13	1A	1F	16	0B	1E	0F	1D	00	0B	00	21	13	18	0E	23	| New English Hex
+かぜをあやつることができるわ
+$7B56C (Line 2)
+59	96	3D	25	34	65	39	5D	67	8E	9B	5A	39	3C	| Original Japanese Hex
+か	ぜ	を	あ	や	つ	る	こ	と	が	で	き	る	わ	| Original Japanese Text
+S	H	O	T		V	E	R	Y		W	E	L	L	| New English Text
+1D	12	19	1E	00	20	0F	1C	23	00	21	0F	16	16	| New English Hex

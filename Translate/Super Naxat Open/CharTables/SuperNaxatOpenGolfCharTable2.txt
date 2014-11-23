@@ -1,0 +1,18 @@
+﻿  0	1	2	3	4	5	6	7	8	9	A	B	C	D	E	F
+  _______________________________________________________________________________________________________________________
+0|ヨ	ラ	リ	ル	レ	ロ	ワ	ヲ	ン	か	き	く	け	こ	さ	し	// Top Half
+1|す	せ	そ	た	ち	つ	て	と	カ	キ	ク	ケ	コ	サ	シ	ス	// Top Half
+2|セ	ソ	タ	チ	ツ	テ	ト	は	ひ	ふ	へ	ほ	ハ	ヒ	フ	ヘ	// Top Half
+3|ホ	+	-	X	X	!	?	/	X	X	X	X	X	X			// Top Half
+4|
+5|
+6|
+7|	0	1	2	3	4	5	6	7	8	9	A	B	C	D	E	// Bottom Half
+8|F	G	H	I	J	K	L	M	N	O	P	Q	R	S	T	U	// Bottom Half
+9|V	W	X	Y	Z	あ	い	う	え	お	な	に	ぬ	ね	の	ま	// Bottom Half
+A|み	む	め	も	や	ゆ	よ	ら	り	る	れ	ろ	わ	を	ん	ア	// Bottom Half
+B|イ	ウ	エ	オ	ナ	ニ	ヌ	ネ	ノ	マ	ミ	ム	メ	モ	ヤ	ユ	// Bottom Half 
+C|ヨ	ラ	リ	ル	レ	ロ	ワ	ヲ	ン	か	き	く	け	こ	さ	し	// Bottom Half
+D|す	せ	そ	た	ち	つ	て	と	カ	キ	ク	ケ	コ	サ	シ	ス	// Bottom Half
+E|セ	ソ	タ	チ	ツ	テ	ト	は	ひ	ふ	へ	ほ	ハ	ヒ	フ	ヘ	// Bottom Half
+F|ホ	+	-	X	X	!	?	/	X	X	X		X	X	X		// Bottom Half

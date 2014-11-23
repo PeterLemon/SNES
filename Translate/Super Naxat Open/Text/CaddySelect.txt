@@ -1,0 +1,195 @@
+﻿CADY SELECT
+CADDYSELECT
+$7E66B
+0D	0B	0E	23	00	1D	0F	16	0F	0D	1E	| Original Japanese Hex
+C	A	D	Y		S	E	L	E	C	T	| Original Japanese Text
+C	A	D	D	Y	S	E	L	E	C	T	| New English Text
+0D	0B	0E	0E	23	1D	0F	16	0F	0D	1E	| New English Hex
+
+オオワルサー
+General Von Hesler
+$7F429
+43	43	56	53	6D	82	00	| Original Japanese Hex
+オ	オ	ワ	ル	サ	ー		| Original Japanese Text
+V	H	E	S	L	E	R	| New English Text
+20	12	0F	1D	16	0F	1C	| New English Hex
+
+だいちょうろう
+Clarence or Master Ching Cao Qiang
+$7F431
+98	26	64	C7	27	3B	27	| Original Japanese Hex
+だ	い	ち	ょ	う	ろ	う	| Original Japanese Text
+C	L	A	R	E	N	C	| New English Text
+0D	16	0B	1C	0F	18	0D	| New English Hex
+
+エンドラ
+Endora (might be Vampra from u.s)
+$7F439
+42	58	AB	51	00	00	00	| Original Japanese Hex
+エ	ン	ド	ラ				| Original Japanese Text
+E	N	D	O	R	A		| New English Text
+0F	18	0E	19	1C	0B	00	| New English Hex
+
+ユーニ
+Yuni
+$7F441
+4F	82	45	00	00	00	00	| Original Japanese Hex
+ユ	ー	ニ					| Original Japanese Text
+Y	U	N	I				| New English Text
+23	1F	18	13	00	00	00	| New English Hex
+
+アイスゴン
+The Freezer / Ice Gun
+$7F449
+3F	40	6F	A1	58	00	00	| Original Japanese Hex
+ア	イ	ス	ゴ	ン			| Original Japanese Text
+F	R	E	E	Z	E	R	| New English Text
+10	1C	0F	0F	24	0F	1C	| New English Hex
+
+わにどじーん
+Croc
+$7F451
+3C	2B	9C	94	82	3E	00	| Original Japanese Hex
+わ	に	ど	じ	ー	ん		| Original Japanese Text
+C	R	O	C				| New English Text
+0D	1C	19	0D	00	00	00	| New English Hex
+
+カード.
+Card.
+$7E709
+68	82	AB	88	| Original Japanese Hex
+カ	ー	ド	.	| Original Japanese Text
+C	A	R	D	| New English Text
+0D	0B	1C	0E	| New English Hex
+
+わんきょくんR
+Curvature height
+$7F8EA
+3C	3E	5A	C7	5B	3E	1C	| Original Japanese Hex
+わ	ん	き	ょ	く	ん	R	| Original Japanese Text
+.	H	E	I	G	H	T	| New English Text
+88	12	0F	13	11	12	1E	| New English Hex
+|
+こうげきりょくのある クラブをもっている
+It 's Intermediate beast shrine's caddy has a club with attack power
+$7B57D (Line 1)
+5D	27	91	5A	38	C7	5B	2E	25	39	00	6A	51	B3	3D	33	C8	66	26	39	| Original Japanese Hex
+こ	う	げ	き	り	ょ	く	の	あ	る		ク	ラ	ブ	を	も	っ	て	い	る	| Original Japanese Text
+C	A	D	D	Y		P	O	S	S	E	S	S		A		C	L	U	B	| New English Text
+0D	0B	0E	0E	23	00	1A	19	1D	1D	0F	1D	1D	00	0B	00	0D	16	1F	0C	| New English Hex
+キャディさんだよ ちゅうきゅうしゃむけだね
+$7B595 (Line 2)
+69	CE	AA	CA	5E	3E	98	36	00	64	C6	27	5A	C6	27	5F	C5	31	5C	98	2D	| Original Japanese Hex
+キ	ャ	デ	ィ	さ	ん	だ	よ		ち	ゅ	う	き	ゅ	う	し	ゃ	む	け	だ	ね	| Original Japanese Text
+T	H	A	T		H	A	S		A	T	T	A	C	K		P	O	W	E	R	| New English Text
+1E	12	0B	1E	00	12	0B	1D	00	0B	1E	1E	0B	0D	15	00	1A	19	21	0F	1C	| New English Hex
+
+おーけーデス
+Is okay
+$7F92A
+29	82	5C	82	AA	6F	00	| Original Japanese Hex
+お	ー	け	ー	デ	ス		| Original Japanese Text
+.	O	K	A	Y			| New English Text
+88	19	15	0B	23	00	00	| New English Hex
+|
+しぶめのクラブをそろえている じいさまだわ
+I guess it can not only have I been called a city that truly it 's grandfather align the club the second branch
+$7B5AD (Line 1)
+5F	AE	32	2E	6A	51	B3	3D	62	3B	28	66	26	39	00	94	26	5E	2F	98	3C	| Original Japanese Hex
+し	ぶ	め	の	ク	ラ	ブ	を	そ	ろ	え	て	い	る		じ	い	さ	ま	だ	わ	| Original Japanese Text
+H	I	S		G	R	E	A	T		G	R	A	N	D	F	A	T	H	E	R	| New English Text
+12	13	1D	00	11	1C	0F	0B	1E	00	11	1C	0B	18	0E	10	0B	1E	12	0F	1C	| New English Hex
+さすが としをめされているだけでわないわね
+$7B5C6 (Line 2)
+5E	60	8E	00	67	5F	3D	32	5E	3A	66	26	39	98	5C	9B	3C	2A	26	3C	2D	| Original Japanese Hex
+さ	す	が		と	し	を	め	さ	れ	て	い	る	だ	け	で	わ	な	い	わ	ね	| Original Japanese Text
+W	A	S		T	H	E		C	L	U	B	S		F	O	U	N	D	E	R	| New English Text
+21	0B	1D	00	1E	12	0F	00	0D	16	1F	0C	1D	00	10	19	1F	18	0E	0F	1C	| New English Hex
+
+ねっけつカード
+Dashing / Passionate / Hot Blood
+$7F90A
+2D	C8	5C	65	68	82	AB	| Original Japanese Hex
+ね	っ	け	つ	カ	ー	ド	| Original Japanese Text
+.	D	A	S	H			| New English Text
+88	0E	0B	1D	12	00	00	| New English Hex
+|
+テクニカルなクラブをそろえている
+The club offers a large selection of technical It 's sister .. aunt which burns
+$7B5DE (Line 1)
+75	6A	45	68	53	2A	6A	51	B3	3D	62	3B	28	66	26	39	| Original Japanese Hex
+テ	ク	ニ	カ	ル	な	ク	ラ	ブ	を	そ	ろ	え	て	い	る	| Original Japanese Text
+T	H	I	S		C	A	D	D	Y		H	A	S		A	| New English Text
+1E	12	13	1D	00	0D	0B	0E	0E	23	00	12	0B	1D	00	0B	| New English Hex
+もえるおば..おねえさんだわ
+$7B5F2 (Line 2)
+33	28	39	29	AC	88	88	29	2D	28	5E	3E	98	3C	| Original Japanese Hex
+も	え	る	お	ば	.	.	お	ね	え	さ	ん	だ	わ	| Original Japanese Text
+T	E	C	H	N	I	C	A	L		C	L	U	B	| New English Text
+1E	0F	0D	12	18	13	0D	0B	16	00	0D	16	1F	0C	| New English Hex
+
+ホーミンくん
+Homing ok
+$7F91A
+80	82	4A	58	5B	3E	00	| Original Japanese Hex
+ホ	ー	ミ	ン	く	ん		| Original Japanese Text
+.	H	O	M	I	N	G	| New English Text
+88	12	19	17	13	18	11	| New English Hex
+|
+もってるクラブはまともだし アドバイスも
+Club you have is decent then also advice I'm able to play with confidence from friendly
+$7B603 (Line 1)
+33	C8	66	39	6A	51	B3	77	2F	67	33	98	5F	00	3F	AB	B1	40	6F	33	| Original Japanese Hex
+も	っ	て	る	ク	ラ	ブ	は	ま	と	も	だ	し		ア	ド	バ	イ	ス	も	| Original Japanese Text
+H	A	S		D	E	C	E	N	T		C	L	U	B	S		A	N	D	| New English Text
+12	0B	1D	00	0E	0F	0D	0F	18	1E	00	0D	16	1F	0C	1D	00	0B	18	0E	| New English Hex
+やさしいから あんしんしてプレイできるわよ
+$7B61B (Line 2)
+34	5E	5F	26	59	37	00	25	3E	5F	3E	5F	66	BD	54	40	9B	5A	39	3C	36	| Original Japanese Hex
+や	さ	し	い	か	ら		あ	ん	し	ん	し	て	プ	レ	イ	で	き	る	わ	よ	| Original Japanese Text
+G	I	V	E	S		F	R	I	E	N	D	L	Y		A	D	V	I	C	E	| New English Text
+11	13	20	0F	1D	00	10	1C	13	0F	18	0E	16	23	00	0A	0E	20	13	0D	0F	| New English Hex
+
+TOPぅカード
+TOP~U Card
+$7F8E2
+1E	19	1A	C2	68	82	AB	| Original Japanese Hex
+T	O	P	ぅ	カ	ー	ド	| Original Japanese Text
+T	O	P	S	P	I	N	| New English Text
+1E	19	1A	1D	1A	13	18	| New English Hex
+|
+ひつようなクラブは てがたくおさえている
+Necessary club is kept on a steady basis I'm Caddy's
+$7B633 (Line 1)
+78	65	36	27	2A	6A	51	B3	77	00	66	8E	63	5B	29	5E	28	66	26	39	| Original Japanese Hex
+ひ	つ	よ	う	な	ク	ラ	ブ	は		て	が	た	く	お	さ	え	て	い	る	| Original Japanese Text
+M	A	K	E	S		S	T	E	A	D	Y		C	H	O	I	C	E	S	| New English Text
+17	0B	15	0F	1D	00	1D	1E	0F	0B	0E	23	00	0D	12	19	13	0D	0F	1D	| New English Hex
+キャディーさんだよ
+$7B64B (Line 2)
+69	CE	AA	CA	82	5E	3E	98	36	| Original Japanese Hex
+キ	ャ	デ	ィ	ー	さ	ん	だ	よ	| Original Japanese Text
+F	O	R		S	H	O	T	S	| New English Text
+10	19	1C	00	1D	12	19	1E	1D	| New English Hex
+
+ボールルイス
+Ballroom Position
+$7F912
+B5	82	53	53	40	6F	00	| Original Japanese Hex
+ボ	ー	ル	ル	イ	ス		| Original Japanese Text
+R	E	P	L	A	C	E	| New English Text
+1C	0F	1A	16	0B	0D	0F	| New English Hex
+|
+きょうりょくな クラブしか もたない
+It does not have only a strong club It 's experienced person for'm caddy's
+$7B657 (Line 1)
+5A	C7	27	38	C7	5B	2A	00	6A	51	B3	5F	59	00	33	63	2A	26	| Original Japanese Hex
+き	ょ	う	り	ょ	く	な		ク	ラ	ブ	し	か		も	た	な	い	| Original Japanese Text
+E	X	P	E	R	I	E	N	C	E	D		B	R	I	N	G	S	| New English Text
+0F	22	1A	0F	1C	13	0F	18	0D	0F	0E	00	0C	1C	13	18	11	1D	| New English Hex
+キャディさんだよ じょうきゅうしゃむけだね
+$7B66D (Line 2)
+69	CE	AA	CA	5E	3E	98	36	00	94	C7	27	5A	C6	27	5F	C5	31	5C	98	2D	| Original Japanese Hex
+キ	ャ	デ	ィ	さ	ん	だ	よ		じ	ょ	う	き	ゅ	う	し	ゃ	む	け	だ	ね	| Original Japanese Text
+A		S	T	R	O	N	G		S	E	T		O	F		C	L	U	B	S	| New English Text
+0B	00	1D	1E	1C	19	18	11	00	1D	0F	1E	00	19	10	00	0D	16	1F	0C	1D	| New English Hex

@@ -1,0 +1,524 @@
+﻿-----------
+Gort City:
+-----------
+----------------
+Gort - Outside:
+----------------
+Knight - Bottom Right:
+ここはゴートの都です。きっと いい物が かえますよ
+This is the the City of Gort. The change is a good thing surely
+$42087
+58	07	11	32	32	42	A7	F7	88	41	28	64	35	C3	2F	71	3C	28	2A	2A	33	57	28	2E	2C	47	35	4E	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	こ	こ	は	ゴ	ー	ト	の	都	で	す	。	き	っ	と		い	い	物	が		か	え	ま	す	よ	| Original Japanese Text
+LENGTH	W	E	L	C	O	M	E		T	O		T	H	E		C	I	T	Y		O	F		G	O	R	T	| New English Text
+1A	20	0E	15	0C	18	16	0E	28	1D	18	28	1D	11	0E	28	0C	12	1D	22	28	18	0F	28	10	18	1B	1D	| New English Hex
+
+Knight - Bottom Middle:
+王様に おあいください このさきの お城に いらっしゃいます
+You come to the castle earlier this please love your king
+$420EA	(Line 1)
+2A	01	EB	2D	3E	28	2D	29	2A	30	61	33	2A	| Original Japanese Hex
+LENGTH	LENGTH	王	様	に		お	あ	い	く	だ	さ	い	| Original Japanese Text
+LENGTH	P	L	E	A	S	E		V	I	S	I	T	| New English Text
+0B	19	15	0E	0A	1C	0E	28	1F	12	1C	12	1D	| New English Hex
+$420F7	(Line 2)
+31	07	32	41	33	2F	41	28	2D	6A	3E	28	2A	4F	71	34	72	2A	47	35	| Original Japanese Hex
+LENGTH	LENGTH	こ	の	さ	き	の		お	城	に		い	ら	っ	し	ゃ	い	ま	す	| Original Japanese Text
+LENGTH	C	A	S	T	L	E	,		T	O		S	E	E		K	I	N	G	| New English Text
+13	0C	0A	1C	1D	15	0E	C4	28	1D	18	28	1C	0E	0E	28	14	12	17	10	| New English Hex
+
+Knight - Bottom Left:
+ノイラートの村が どこにあるか しってますか?
+Do you know where to find the village of Neurath?
+$420A3
+36	06	8D	76	9B	F7	88	41	27	57	28	65	32	3E	29	51	2E	28	34	71	3B	47	35	2E	24	| Original Japanese Hex
+LENGTH	LENGTH	ノ	イ	ラ	ー	ト	の	村	が		ど	こ	に	あ	る	か		し	っ	て	ま	す	か	?	| Original Japanese Text
+LENGTH	K	N	O	W		A	B	O	U	T		N	E	U	R	A	T	H		T	O	W	N	?	| New English Text
+17	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	24	| New English Hex
+
+Yes Selected:
+かげのゆびわを 特つ レッサーデーモンに おそわれているらしいですよ
+Is apparently being attacked by Tokutsu Lesser daemon ring shadow
+$4518C	(Line 1)
+29	08	2E	5A	41	4D	67	54	55	28	32	3A	| Original Japanese Hex
+LENGTH	LENGTH	か	げ	の	ゆ	び	わ	を		特	つ	| Original Japanese Text
+LENGTH	I	T		I	S		B	E	I	N	G	| New English Text
+0A	12	1D	28	12	1C	28	0B	0E	12	17	10	| New English Hex
+$420BC	(Line 2)
+16	9E	BD	7F	F7	B0	F7	97	A2	3E	28	2D	37	54	52	3B	2A	51	4F	34	2A	64	35	4E	| Original Japanese Hex
+LENGTH	レ	ッ	サ	ー	デ	ー	モ	ン	に		お	そ	わ	れ	て	い	る	ら	し	い	で	す	よ	| Original Japanese Text
+LENGTH	A	T	T	A	C	K	E	D		B	Y		A		D	E	M	O	N		N	O	W	| New English Text
+16	0A	1D	1D	0A	0D	14	0E	0D	28	0B	22	28	0A	28	0D	0E	16	18	17	28	17	18	20	| New English Hex
+
+No Selected:
+この町からみて 北西の方向に ありますよ
+It is in the direction of northwest viewed from this town
+$420D4
+33	02	32	41	26	2E	4F	48	3B	28	FC	FA	41	FD	FE	3E	28	29	50	47	35	4E	| Original Japanese Hex
+LENGTH	LENGTH	こ	の	町	か	ら	み	て		北	西	の	方	向	に		あ	り	ま	す	よ	| Original Japanese Text
+LENGTH	I	T	S		I	N		T	H	E		N	O	R	T	H	W	E	S	T	.	| New English Text
+14	12	1D	1C	28	12	17	28	1D	11	0E	28	17	18	1B	1D	11	20	0E	1C	1D	C3	| New English Hex
+
+Knight - Middle Right:
+かくちのモンスターさわぎで 町中が あわただしいんです
+The whole town I busy monster commotion around the country
+$4202F
+5A	0E	0F	2E	30	39	41	97	A2	81	84	F7	33	54	58	64	28	26	4A	57	28	29	54	38	61	34	2A	56	64	35	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	か	く	ち	の	モ	ン	ス	タ	ー	さ	わ	ぎ	で		町	中	が		あ	わ	た	だ	し	い	ん	で	す	| Original Japanese Text
+LENGTH	M	O	N	S	T	E	R	S		A	P	P	E	A	R	I	N	G		A	L	L		O	V	E	R	で	す	| New English Text
+1A	16	18	17	1C	1D	0E	1B	1C	28	0A	19	19	0E	0A	1B	12	17	10	28	0A	15	15	28	18	1F	0E	1B	64	35	| New English Hex	
+
+Knight - Top Right:
+魔物どもを みはるのも きつい しごとです
+It's amazing monsters us it is also hard work
+$4210B
+34	01	E0	33	65	4B	55	28	48	42	51	41	4B	28	2F	3A	2A	28	34	5B	3C	64	35	| Original Japanese Hex
+LENGTH	LENGTH	魔	物	ど	も	を		み	は	る	の	も		き	つ	い		し	ご	と	で	す	| Original Japanese Text
+LENGTH	M	O	N	S	T	E	R	S		A	R	E		H	A	R	D		W	O	R	K	| New English Text
+15	16	18	17	1C	1D	0E	1B	1C	28	0A	1B	0E	28	11	0A	1B	0D	28	20	18	1B	14	| New English Hex
+
+Knight - Bottom Left:
+われら 騎士団は 町の中を守るだけで せいいっぱい かなしいことです
+Our Knights is sad as hard as possible just to protect the town in the
+$4206A	(Line 1)
+78	05	09	0B	54	52	4F	28	D0	20	D1	42	28	26	41	4A	55	DB	51	61	31	64	28	36	2A	2A	71	6B	2A	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	LENGTH	わ	れ	ら		騎	士	団	は		町	の	中	を	守	る	だ	け	で		せ	い	い	っ	ぱ	い	| Original Japanese Text
+LENGTH	I	T	S		H	A	R	D		E	N	O	U	G	H	,		P	R	O	T	E	C	T	I	N	G	い	| New English Text
+1A	12	1D	1C	28	11	0A	1B	0D	28	0E	17	18	1E	10	11	C4	28	19	1B	18	1D	0E	0C	1D	12	17	10	2A	| New English Hex
+$4214F	(Line 2)
+07	2E	3D	34	2A	32	3C	64	35	| Original Japanese Hex
+LENGTH	か	な	し	い	こ	と	で	す	| Original Japanese Text
+LENGTH	O	U	R		T	O	W	N	| New English Text
+07	18	1E	1B	28	1D	18	20	17	| New English Hex
+
+--------------------------
+Gort - Bottom Left House:
+--------------------------
+Old Man:
+王様も わしとおなじで もう むりはできん おとしじゃ
+Impossible the other 's losing banishment in the same King and I
+$44734
+3A	01	EB	2D	4B	28	54	34	3C	2D	3D	5D	64	28	4B	2B	28	49	50	42	64	2F	56	28	2D	3C	34	5D	72	| Original Japanese Hex
+LENGTH	LENGTH	王	様	も		わ	し	と	お	な	じ	で		も	う		む	り	は	で	き	ん		お	と	し	じ	ゃ	| Original Japanese Text
+LENGTH	S	H	O	U	L	D		N	O	T		C	O	N	T	E	M	P	L	A	T	E		L	O	S	S	ゃ	| New English Text
+1A	1D	11	18	1E	15	0D	28	17	18	1D	28	0C	18	17	1D	0E	16	19	15	0A	1D	0E	28	15	18	1C	1C	72	| New English Hex
+
+---------------------------------
+Gort - Bottom Middle Left House:
+---------------------------------
+Knight - Left:
+いつから こんなじだいに なってしまったんですかねぇ
+Since when fame did you ended up with this era
+$4204D
+3A	1A	2A	3A	2E	4F	28	32	56	3D	28	5D	61	2A	3E	28	3D	71	3B	34	47	71	38	56	64	35	2E	40	5D	| Original Japanese Hex
+LENGTH	LENGTH	い	つ	か	ら		こ	ん	な		じ	だ	い	に		な	っ	て	し	ま	っ	た	ん	で	す	か	ね	ぇ	| Original Japanese Text
+LENGTH	W	H	Y		W	A	S		I		B	O	R	N		I	N		T	H	I	S		E	R	A	.	ぇ	| New English Text
+1A	20	11	22	28	20	0A	1C	28	12	28	0B	18	1B	17	28	12	17	28	1D	11	12	1C	28	0E	1B	0A	C3	5D	| New English Hex
+
+Knight - Left:
+わたしのちちも ゴートの 騎士 でした
+My father was also a Knight of Gort
+$42122	(Line 1)
+32	0E	54	38	34	41	39	39	4B	28	A7	F7	88	41	28	D0	20	28	64	34	38	| Original Japanese Hex
+LENGTH	LENGTH	わ	た	し	の	ち	ち	も		ゴ	ー	ト	の		騎	士		で	し	た	| Original Japanese Text
+LENGTH	M	Y		D	A	D		W	A	S		A		K	N	I	G	H	T	.	| New English Text
+13	16	22	28	0D	0A	0D	28	20	0A	1C	28	0A	28	14	17	12	10	11	1D	C3	| New English Hex
+
+ゴート騎士団は きっと スレイ団長の もとに むかしの力を取り戻すと 鬼いますよ
+There are demon and regain the power of the past on the basis of Sleigh Grandmaster surely Gort Knights
+$42137	(Line 2)
+35	04	A7	F7	88	D0	20	D1	42	28	2F	71	3C	28	81	9E	76	D1	D2	41	28	4B	3C	3E	| Original Japanese Hex
+LENGTH	LENGTH	ゴ	ー	ト	騎	士	団	は		き	っ	と		ス	レ	イ	団	長	の		も	と	に	| Original Japanese Text
+LENGTH	W	E		N	E	E	D		T	O		R	E	G	A	I	N		P	O	W	E	R	| New English Text
+16	20	0E	28	17	0E	0E	0D	28	1D	18	28	1B	0E	10	0A	12	17	28	19	18	20	0E	1B	| New English Hex
+$42158	(Line 3)
+70	06	08	0C	49	2E	34	41	CF	55	22	50	1A	35	3C	28	3D	2A	47	35	4E	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	LENGTH	む	か	し	の	力	を	取	り	戻	す	と		鬼	い	ま	す	よ	| Original Japanese Text
+LENGTH	U	S	I	N	G		S	L	A	Y	S		E	X	A	M	P	L	E	.	| New English Text
+13	1E	1D	12	17	10	28	1C	15	0A	22	1D	28	0E	21	0A	16	19	15	0E	C3	| New English Hex
+
+Knight (Night):
+ああ ねむい
+Is sleepy Oh
+$443FD
+05	29	29	28	40	49	2A	| Original Japanese Hex
+LENGTH	あ	あ		ね	む	い	| Original Japanese Text
+LENGTH	S	L	E	E	P	Y	| New English Text
+05	1C	15	0E	0E	19	22	| New English Hex
+
+----------------------------------
+Gort - Bottom Middle Right House:
+----------------------------------
+Old Man:
+むかしは 王様も いせいのいい おひとだったんじゃよ
+King also Ja did was contact person of the opposite sex good old days
+$44963
+39	06	49	2E	34	42	28	EB	2D	4B	28	2A	36	2A	41	2A	2A	28	2D	43	3C	61	71	38	56	5D	72	4E	| Original Japanese Hex
+LENGTH	LENGTH	む	か	し	は		王	様	も		い	せ	い	の	い	い		お	ひ	と	だ	っ	た	ん	じ	ゃ	よ	| Original Japanese Text
+LENGTH	W	O	M	E	N		U	S	E	D		T	O		B	E		R	E	C	R	U	I	T	E	D	.	| New English Text
+1A	20	18	16	0E	17	28	1E	1C	0E	0D	28	1D	18	28	0B	0E	28	1B	0E	0C	1B	1E	12	1D	0E	0D	C3	| New English Hex
+
+Girl:
+オズワルドなんかに こだいぶんめいを わたしては いけないわ!
+Do not pass the ancient literary fame to something Oswald!
+$441C1	(Line 1)
+11	79	AA	A0	9D	B1	3D	56	2E	3E	28	32	61	2A	68	56	4A	2A	55	| Original Japanese Hex
+LENGTH	オ	ズ	ワ	ル	ド	な	ん	か	に		こ	だ	い	ぶ	ん	め	い	を	| Original Japanese Text
+LENGTH	O	S	W	A	L	D		I	S		B	E	C	O	M	I	N	G	| New English Text
+11	18	1C	20	0A	15	0D	28	12	1C	28	0B	0E	0C	18	16	12	17	10	| New English Hex
+$441D4	(Line 2)
+0B	54	38	34	3B	42	28	2A	31	3D	2A	54	25	| Original Japanese Hex
+LENGTH	わ	た	し	て	は		い	け	な	い	わ	!	| Original Japanese Text
+LENGTH	M	O	R	E		F	A	M	O	U	S	!	| New English Text
+0B	16	18	1B	0E	28	0F	0A	16	18	1E	1C	25	| New English Hex
+
+---------------------------
+Gort - Bottom Right House:
+---------------------------
+Man:
+グローバスの水晶を さがすには 「水晶の行方」って物が ひつようらしいよ
+Thing seems to need What is it, "The Future of the crystal" to find a crystal of Globus
+$448FF	(Line 1)
+0E	A5	9F	F7	B2	81	41	DD	DE	55	28	33	57	35	3E	42	| Original Japanese Hex
+LENGTH	グ	ロ	ー	バ	ス	の	水	晶	を		さ	が	す	に	は	| Original Japanese Text
+LENGTH	W	E		N	E	E	D		T	O		F	I	N	D	| New English Text
+0E	20	0E	28	17	0E	0E	0D	28	1D	18	28	0F	12	17	0D	| New English Hex
+$4490F	(Line 2)
+33	09	C1	DD	DE	41	F2	FD	C2	71	3B	33	57	28	43	3A	4E	2B	4F	34	2A	4E	| Original Japanese Hex
+LENGTH	LENGTH	「	水	晶	の	行	方	」	っ	て	物	が		ひ	つ	よ	う	ら	し	い	よ	| Original Japanese Text
+LENGTH	T	H	E		C	R	Y	S	T	A	L		O	F		G	L	O	B	U	S	| New English Text
+14	1D	11	0E	28	0C	1B	22	1C	1D	0A	15	28	18	0F	28	10	15	18	0B	1E	1C	| New English Hex
+
+Old Man:
+王様は スレイ団長だけが たよりなんじゃ
+Only Slay Grandmaster is not you depend on ... on king
+$44925	(Line 1)
+33	01	EB	2D	42	28	81	9E	76	D1	D2	61	31	57	28	38	4E	50	3D	56	5D	72	| Original Japanese Hex
+LENGTH	LENGTH	王	様	は		ス	レ	イ	団	長	だ	け	が		た	よ	り	な	ん	じ	ゃ	| Original Japanese Text
+LENGTH	W	E		C	A	N		D	E	P	E	N	D		O	N		S	L	A	Y	| New English Text
+14	20	0E	28	0C	0A	17	28	0D	0E	19	0E	17	0D	28	18	17	28	1C	15	0A	22	| New English Hex
+
+いま オズワルドに 攻められでもしたら このせかいは ひとたまりもないからのう
+Because not stand a chance in this world When you have even been attacked Oswald now
+$4493B	(Line 2)
+12	2A	47	28	79	AA	A0	9D	B1	3E	28	C7	4A	4F	52	64	4B	34	38	4F	| Original Japanese Hex
+LENGTH	い	ま		オ	ズ	ワ	ル	ド	に		攻	め	ら	れ	で	も	し	た	ら	| Original Japanese Text
+LENGTH	W	O	N	T		S	T	A	N	D		A		C	H	A	N	C	E	| New English Text
+12	20	18	17	1D	28	1C	1D	0A	17	0D	28	0A	28	0C	11	0A	17	0C	0E	| New English Hex
+$4494F	(Line 3)
+12	32	41	36	2E	2A	42	28	43	3C	38	47	50	4B	3D	2A	2E	4F	41	2B	| Original Japanese Hex
+LENGTH	こ	の	せ	か	い	は		ひ	と	た	ま	り	も	な	い	か	ら	の	う	| Original Japanese Text
+LENGTH	A	G	A	I	N	S	T		O	S	W	A	L	D		N	O	W	.	| New English Text
+12	0A	10	0A	12	17	1C	1D	28	18	1C	20	0A	15	0D	28	17	18	20	C3	| New English Hex
+
+---------------------------
+Gort - Middle Right House:
+---------------------------
+Girl:
+ゴート8せいが いま このせかいを おさめてるんですよ
+8 due to Gort is I've been met with this world today
+$4477D
+1A	A7	F7	88	08	36	2A	57	28	2A	47	28	32	41	36	2E	2A	55	28	2D	33	4A	3B	51	56	64	35	4E	| Original Japanese Hex
+LENGTH	ゴ	ー	ト	8	せ	い	が		い	ま		こ	の	せ	か	い	を		お	さ	め	て	る	ん	で	す	よ	| Original Japanese Text
+LENGTH	I		C	A	M	E		T	O		G	O	R	T		8		Y	E	A	R	S		A	G	O	.	| New English Text
+1A	12	28	0C	0A	16	0E	28	1D	18	28	10	18	1B	1D	28	08	28	22	0E	0A	1B	1C	28	0A	10	18	C3	| New English Hex
+
+Boy:
+ぼく 大きくなったら ゴート騎士団に はいるんだ だって かっこいいだろー
+Low's cool to me I'm entering the Gort Knights when you grow up I
+$44799	(Line 1)
+57	03	0F	6A	30	28	02	2F	30	3D	71	38	4F	28	A7	F7	88	D0	20	D1	3E	28	42	2A	51	56	61	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	ぼ	く		大	き	く	な	っ	た	ら		ゴ	ー	ト	騎	士	団	に		は	い	る	ん	だ	| Original Japanese Text
+LENGTH	W	H	E	N		I		G	R	O	W	,	I		W	A	N	T		T	O		B	E		A	| New English Text
+19	20	11	0E	17	28	12	28	10	1B	18	20	C4	12	28	20	0A	17	1D	28	1D	18	28	0B	0E	28	0A	| New English Hex
+$447B4	(Line 2)
+0B	61	71	3B	28	2E	71	32	2A	2A	61	53	F7	| Original Japanese Hex
+LENGTH	だ	っ	て		か	っ	こ	い	い	だ	ろ	ー	| Original Japanese Text
+LENGTH	G	O	R	T		K	N	I	G	H	T	.	| New English Text
+0B	10	18	1B	1D	28	14	17	12	10	11	1D	C3	| New English Hex
+
+Girl (Night):
+こんな よるおそくまで げんきなのね
+It's the spirit until late this evening
+$44404
+11	32	56	3D	28	4E	51	2D	37	30	47	64	28	5A	56	2F	3D	41	40	| Original Japanese Hex
+LENGTH	こ	ん	な		よ	る	お	そ	く	ま	で		げ	ん	き	な	の	ね	| Original Japanese Text
+LENGTH	U	P		L	A	T	E		T	H	I	S		N	I	G	H	T	| New English Text
+11	1E	19	28	15	0A	1D	0E	28	1D	11	12	1C	28	17	12	10	11	1D	| New English Hex
+
+------------
+Gort - Bar:
+------------
+Barmaid:
+さいきんは しょうばい あがったり+++ あなたも さけは のみそうにないしねぇ
+Business go bankrupt + + + sake is the best of all medicines Hey not likely to be your only recently
+$446D3	(Line 1)
+73	11	12	13	33	2A	2F	56	42	28	34	74	2B	66	2A	28	29	57	71	38	50	18	18	18	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	LENGTH	さ	い	き	ん	は		し	ょ	う	ば	い		あ	が	っ	た	り	+	+	+	| Original Japanese Text
+LENGTH	B	U	S	I	N	E	S	S		I	S		G	O	I	N	G		S	L	O	W	,	| New English Text
+16	0B	1E	1C	12	17	0E	1C	1C	28	12	1C	28	10	18	12	17	10	28	1C	15	18	20	C4	| New English Hex
+$446EB	(Line 2)
+32	12	29	3D	38	4B	28	33	31	42	28	41	48	37	2B	3E	3D	2A	34	40	5D	| Original Japanese Hex
+LENGTH	LENGTH	あ	な	た	も		さ	け	は		の	み	そ	う	に	な	い	し	ね	ぇ	| Original Japanese Text
+LENGTH	W	I	N	E	S		T	H	E		B	E	S	T		C	U	R	E	.	| New English Text
+13	20	12	17	0E	1C	28	1D	11	0E	28	0B	0E	1C	1D	28	0C	1E	1B	0E	C3	| New English Hex
+
+でも こうして わたしが グダググねていられるのも スレイ団長率いる ゴート騎士団の おかげなのよ
+But this way I have is sleeping exhausted also is it a Gort thanks to the Knights, led by Slay Grandmaster
+$44700	(Line 3)
+18	64	4B	28	32	2B	34	3B	28	54	38	34	57	28	A5	AD	A5	AD	40	3B	2A	4F	52	51	41	4B	| Original Japanese Hex
+LENGTH	で	も		こ	う	し	て		わ	た	し	が		グ	ダ	グ	グ	ね	て	い	ら	れ	る	の	も	| Original Japanese Text
+LENGTH	A	T		L	E	A	S	T		I		C	A	N		S	L	E	E	P		S	A	F	E	| New English Text
+18	0A	1D	28	15	0E	0A	1C	1D	28	12	28	0C	0A	17	28	1C	15	0E	0E	19	28	1C	0A	0F	0E	| New English Hex
+$4471A	(Line 4)
+56	05	0D	81	9E	76	D1	D2	58	2A	51	28	A7	F7	88	D0	20	D1	41	28	2D	2E	5A	3D	41	4E	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	ス	レ	イ	団	長	率	い	る		ゴ	ー	ト	騎	士	団	の		お	か	げ	な	の	よ	| Original Japanese Text
+LENGTH	T	H	A	N	K	S		T	O		T	H	E		K	N	I	G	H	T	S		A	I	D	| New English Text
+18	1D	11	0A	17	14	1C	28	1D	18	28	1D	11	0E	28	14	17	12	10	11	1D	1C	28	0A	12	0D	| New English Hex
+
+--------------------------
+Gort - Middle Left House:
+--------------------------
+Girl:
+大地にふういんされた グローバスのおんねんが オズワルドを よびおこしたっていう うわさよ
+Rumor grudge of Globus, which is sealed in the earth called aroused Oswald
+$448D0	(Line 1)
+35	00	02	DF	3E	44	2B	2A	56	33	52	38	28	A5	9F	F7	B2	81	41	2D	56	40	56	57	| Original Japanese Hex
+LENGTH	LENGTH	大	地	に	ふ	う	い	ん	さ	れ	た		グ	ロ	ー	バ	ス	の	お	ん	ね	ん	が	| Original Japanese Text
+LENGTH	G	L	O	B	U	S		I	S		S	E	A	L	E	D		I	N		T	H	E	| New English Text
+16	10	15	18	0B	1E	1C	28	12	1C	28	1C	0E	0A	15	0E	0D	28	12	17	28	1D	11	0E	| New English Hex
+$448E8	(Line 2)
+15	79	AA	A0	9D	B1	55	28	4E	67	2D	32	34	38	71	3B	2A	2B	28	2B	54	33	4E	| Original Japanese Hex
+LENGTH	オ	ズ	ワ	ル	ド	を		よ	び	お	こ	し	た	っ	て	い	う		う	わ	さ	よ	| Original Japanese Text
+LENGTH	G	R	O	U	N	D	.	O	S	W	A	L	D		I	S		T	H	E	R	E	| New English Text
+15	10	1B	18	1E	17	0D	C3	18	1C	20	0A	15	0D	28	12	1C	28	1D	11	0E	1B	0E	| New English Hex
+
+---------------
+Gort - Castle:
+---------------
+Guards:
+わたしたちで 王様をお守りしなくては+++
+Not have to observe the king with we
+$4497F
+94	08	12	13	14	54	38	34	38	39	64	28	EB	2D	55	2D	DB	50	34	3D	30	3B	42	18	18	18	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	LENGTH	LENGTH	わ	た	し	た	ち	で		王	様	を	お	守	り	し	な	く	て	は	+	+	+	| Original Japanese Text
+LENGTH	W	E	R	E		P	R	O	T	E	C	T	I	N	G		T	H	E		K	I	N	G	.	| New English Text
+18	20	0E	1B	0E	28	19	1B	18	1D	0E	0C	1D	12	17	10	28	1D	11	0E	28	14	12	17	10	C3	| New English Hex
+
+King Guards:
+このえへい「王様に なにか ごようですか?」
+Guards "Do you need something to our king?"
+$449AC
+F5	32 0C	41 0C	2C 0C	45 0C	2A 0C	C1 00	EB 00	2D 01	3E 00	28 00	3D 00	3E 00	2E 00	28 00	5B 00	4E 00	2B 00	64 00	35 00	2E 00	24 00	C2 00	| Original Japanese Hex
+LENGTH	こRED	のRED	えRED	へRED	いRED	「BLACK	王BLACK	様BLACK	にBLACK	BLACK	なBLACK	にBLACK	かBLACK	BLACK	ごBLACK	よBLACK	うBLACK	でBLACK	すBLACK	かBLACK	?BLACK	」BLACK	| Original Japanese Text
+LENGTH	GRED	URED	ARED	RRED	DRED	SRED	:RED	BLACK	NBLACK	EBLACK	EBLACK	DBLACK	BLACK	TBLACK	HBLACK	EBLACK	BLACK	KBLACK	IBLACK	NBLACK	GBLACK	?BLACK	| New English Text
+F5	10 0C	1E 0C	0A 0C	1B 0C	0D 0C	1C 0C	D6 0C	28 00	17 00	0E 00	0E 00	0D 00	28 00	1D 00	11 00	0E 00	28 00	14 00	12 00	17 00	10 00	24 00	| New English Hex
+
+OK Selected:
+ごぶれいのない様 おはなしください
+Please tell as there is no Goburei
+$44999
+30	07	5B	68	52	2A	41	3D	2A	2D	28	2D	42	3D	34	30	61	33	2A	| Original Japanese Hex
+LENGTH	LENGTH	ご	ぶ	れ	い	の	な	い	様		お	は	な	し	く	だ	さ	い	| Original Japanese Text
+LENGTH	S	P	E	A	K		T	O		T	H	E		K	I	N	G	.	| New English Text
+11	1C	19	0E	0A	14	28	1D	18	28	1D	11	0E	28	14	12	17	10	C3	| New English Hex
+
+No Selected:
+ならば わたくし 王様を守る者として ここを とおすわけには まいりません!
+If it does not visit To not pass here as those who protect the private affairs king!
+$449D9	(Line 1)
+31	0A	3D	4F	66	28	54	38	30	34	28	EB	2D	55	DB	51	E7	3C	34	3B	| Original Japanese Hex
+LENGTH	LENGTH	な	ら	ば		わ	た	く	し		王	様	を	守	る	者	と	し	て	| Original Japanese Text
+LENGTH	D	O	N	T		N	E	E	D		T	O		V	I	S	I	T	,	| New English Text
+12	0D	18	17	1D	28	17	0E	0E	0D	28	1D	18	28	1F	12	1C	12	1D	C4	| New English Hex
+?????????
+$449ED	(Line 2)
+12	32	32	55	28	3C	2D	35	54	31	3E	42	28	47	2A	50	47	36	56	25	| Original Japanese Hex
+LENGTH	こ	こ	を		と	お	す	わ	け	に	は		ま	い	り	ま	せ	ん	!	| Original Japanese Text
+LENGTH	Y	O	U	R	E		W	A	S	T	I	N	G		T	I	M	E	!	| New English Text
+12	22	18	1E	1B	0E	28	20	0A	1C	1D	12	17	10	28	1D	12	16	0E	25	| New English Hex
+
+Queen:
+ゴート王も さいきんでは くろうばかり すっかり体の方も よわってしまって+++
+Gort King even if I weakened even better body completely just struggling in recent years +++
+$4216D	(Line 1)
+12	A7	F7	88	EB	4B	28	33	2A	2F	56	64	42	28	30	53	2B	66	2E	50	| Original Japanese Hex
+LENGTH	ゴ	ー	ト	王	も		さ	い	き	ん	で	は		く	ろ	う	ば	か	り	| Original Japanese Text
+LENGTH	K	I	N	G	S		S	T	R	O	N	G	E	R		T	H	A	N	| New English Text
+12	14	12	17	10	1C	28	1C	1D	1B	18	17	10	0E	1B	28	1D	11	0A	17	| New English Hex
+$42181	(Line 2)
+93	04	11	12	13	35	71	2E	50	45	41	FD	4B	28	4E	54	71	3B	34	47	71	3B	18	18	18	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	LENGTH	LENGTH	す	っ	か	り	体	の	方	も		よ	わ	っ	て	し	ま	っ	て	+	+	+	| Original Japanese Text
+LENGTH	E	V	E	R		T	O		R	E	S	O	L	V	E		P	R	O	B	L	E	M	S	| New English Text
+17	0E	1F	0E	1B	28	1D	18	28	1B	0E	1C	18	15	1F	0E	28	19	1B	18	0B	15	0E	16	1C	| New English Hex
+
+King:
+そうか やはりオズワルドが 蘇ったのか よく しらせてくれた
+It made ​​me well-known Oswald Did revived still so?
+$4219A	(Line 1)
+32	0E	37	2B	2E	28	4C	42	50	79	AA	A0	9D	B1	57	28	50	71	38	41	2E	| Original Japanese Hex
+LENGTH	LENGTH	そ	う	か		や	は	り	オ	ズ	ワ	ル	ド	が		蘇	っ	た	の	か	| Original Japanese Text
+LENGTH	I	V	E		B	E	E	N		T	O	L	D		O	S	W	A	L	D	| New English Text
+13	12	1F	0E	28	0B	0E	0E	17	28	1D	18	15	0D	28	18	1D	20	0A	15	0D	| New English Hex
+$421AF	(Line 2)
+09	4E	30	28	34	4F	36	3B	30	52	38	| Original Japanese Hex
+LENGTH	よ	く		し	ら	せ	て	く	れ	た	| Original Japanese Text
+LENGTH	I	S		R	E	V	I	V	E	D	| New English Text
+09	12	1C	28	1B	0E	1F	12	1F	0E	0D	| New English Hex
+
+だが わしには うつ手が のこされてないんじゃ
+Depression hand is not you not left the Dagawashi
+$421BA
+36	0A	61	57	28	54	34	3E	42	28	2B	3A	40	57	28	41	32	33	52	3B	3D	2A	56	5D	72	| Original Japanese Hex
+LENGTH	LENGTH	だ	が		わ	し	に	は		う	つ	手	が		の	こ	さ	れ	て	な	い	ん	じ	ゃ	| Original Japanese Text
+LENGTH	H	I	S		E	V	I	L		G	R	I	P		I	S		T	I	G	H	T	E	R	| New English Text
+17	11	12	1C	28	0E	1F	12	15	28	10	1B	12	19	28	12	1C	28	1D	12	10	11	1D	0E	1B	| New English Hex
+
+わしのないちがいかも しれんが+++ そなた+++
+That Way + + + I was in the middle of the field as usual + + + but I was a sitting duck, it was an ordeal
+$421D3
+F8	54 00	34 00	41 00	3D 00	2A 00	39 00	57 00	2A 00	2E 00	4B 00	28 00	34 00	52 00	56 00	57 00	18 01	18 01	18 01	28 00	37 00	3D 00	38 00	18 01	18 01	18 01	| Original Japanese Hex
+LENGTH	わBLACK	しBLACK	のBLACK	なBLACK	いBLACK	ちBLACK	がBLACK	いBLACK	かBLACK	もBLACK	BLACK	しBLACK	れBLACK	んBLACK	がBLACK	+BLACK	+BLACK	+BLACK	BLACK	そBLACK	なBLACK	たBLACK	+BLACK	+BLACK	+BLACK	| Original Japanese Text
+LENGTH	W  E	   A	R  E	   S	I  T	T  I	N  G	   D	U  C	K  S	   H	E  R	E  .	.BLACK	がBLACK	+BLACK	+BLACK	+BLACK	BLACK	そBLACK	なBLACK	たBLACK	+BLACK	+BLACK	+BLACK	| New English Text
+1A	20 0E	28 0A	1B 0E	28 1C	12 1D	1D 12	17 10	28 0D	1E 0C	14 1C	28 11	0E 1B	0E C3	C3 00	57 00	18 01	18 01	18 01	28 00	37 00	3D 00	38 00	18 01	18 01	18 01	| New English Hex
+
+このせかいを へいわに導こうとしてるんじゃないのか?
+Is it not you are going to lead to peace this world?
+$42206
+19	32	41	36	2E	2A	55	28	45	2A	54	3E	E5	32	2B	3C	34	3B	51	56	5D	72	3D	2A	41	2E	24	| Original Japanese Hex
+LENGTH	こ	の	せ	か	い	を		へ	い	わ	に	導	こ	う	と	し	て	る	ん	じ	ゃ	な	い	の	か	?	| Original Japanese Text
+LENGTH	A	R	E		Y	O	U		T	O		B	R	I	N	G		U	S		P	E	A	C	E	?	| New English Text
+19	0A	1B	0E	28	22	18	1E	28	1D	18	28	0B	1B	12	17	10	28	1E	1C	28	19	0E	0A	0C	0E	24	| New English Hex
+
+No Selected:
+すまん かんちがいじゃ だれだって命はおしいからな
+Everyone life because I'm regrettable misunderstanding sorry
+$42221
+38	11	35	47	56	28	2E	56	39	57	2A	5D	72	28	61	52	61	71	3B	1D	42	2D	34	2A	2E	4F	3D	| Original Japanese Hex
+LENGTH	LENGTH	す	ま	ん		か	ん	ち	が	い	じ	ゃ		だ	れ	だ	っ	て	命	は	お	し	い	か	ら	な	| Original Japanese Text
+LENGTH	S	O	R	R	Y		I		M	I	S	U	N	D	E	R	S	T	O	O	D		Y	O	U	.	| New English Text
+19	1C	18	1B	1B	22	28	12	28	16	12	1C	1E	17	0D	0E	1B	1C	1D	18	18	0D	28	22	18	1E	C3	| New English Hex
+
+OK Selected:
+おお!なんというゆうき ならば スレイにあうといい ゴートの騎士団長だ
+It is a good knight head of the gort when meet the sleigh if What a courage! Oh
+$4223C	(Line 1)
+0A	2D	2D	25	3D	56	3C	2A	2B	4D	2B	2F	| Original Japanese Hex
+LENGTH	お	お	!	な	ん	と	い	う	ゆ	う	き	| Original Japanese Text
+LENGTH	O	H		C	O	U	R	A	G	E	!	| New English Text
+0A	18	11	28	0C	18	1E	1B	0A	10	0E	25	| New English Hex
+$42248	(Line 2)
+36	13	3D	4F	66	28	81	9E	76	3E	29	2B	3C	2A	2A	28	A7	F7	88	41	D0	20	D1	D2	61	| Original Japanese Hex
+LENGTH	LENGTH	な	ら	ば		ス	レ	イ	に	あ	う	と	い	い		ゴ	ー	ト	の	騎	士	団	長	だ	| Original Japanese Text
+LENGTH	Y	O	U		M	U	S	T		M	E	E	T		W	I	T	H		S	L	A	Y	.	| New English Text
+17	22	18	1E	28	16	1E	1C	1D	28	16	0E	0E	1D	28	20	12	1D	11	28	1C	15	0A	22	C3	| New English Hex
+
+かれも またオズワルドに命をねらわれておる
+I Nikki Neraware life to Oswald he also
+$42261
+34	0C	2E	52	4B	28	47	38	79	AA	A0	9D	B1	3E	1D	55	40	4F	54	52	3B	2D	51	| Original Japanese Hex
+LENGTH	LENGTH	か	れ	も		ま	た	オ	ズ	ワ	ル	ド	に	命	を	ね	ら	わ	れ	て	お	る	| Original Japanese Text
+LENGTH	H	E		A	L	S	O		F	O	U	G	H	T		O	S	W	A	L	D	.	| New English Text
+15	11	0E	28	0A	15	1C	18	28	0F	18	1E	10	11	1D	28	18	1C	20	0A	15	0D	C3	| New English Hex
+
+そなたを しんようせんわけじゃないのだが+++
+Although he does not mean you do not trust your company + + +
+$42278
+76	14	15	16	37	3D	38	55	28	34	56	4E	2B	36	56	54	31	5D	72	3D	2A	41	61	57	18	18	18	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	LENGTH	そ	な	た	を		し	ん	よ	う	せ	ん	わ	け	じ	ゃ	な	い	の	だ	が	+	+	+	| Original Japanese Text
+LENGTH	Y	O	U		N	E	E	D		T	O		G	A	I	N		H	I	S		T	R	U	S	T	| New English Text
+17	22	18	1E	28	17	0E	0E	0D	28	1D	18	28	10	0A	12	17	28	11	12	1C	28	1D	1B	1E	1C	1D	| New English Hex
+
+そうじゃ ゴーレムの頭を特ってまいれ すれば スレイのいばしょを おしえてやろう
+I'll tell me the whereabouts of Slay if Maile I solve the head of the Golem 's so
+$42293	(Line 1)
+51	0A	0C	37	2B	5D	72	28	A7	F7	9E	95	41	43	55	32	71	3B	47	2A	52	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	そ	う	じ	ゃ		ゴ	ー	レ	ム	の	頭	を	特	っ	て	ま	い	れ	| Original Japanese Text
+LENGTH	H	E		W	I	L	L		H	E	L	P	,		I	F		Y	O	U	| New English Text
+13	11	0E	28	20	12	15	15	28	11	0E	15	19	C4	28	12	0F	28	22	18	1E	| New English Hex
+$422A8	(Line 2)
+14	35	52	66	28	81	9E	76	41	2A	66	34	74	55	28	2D	34	2C	3B	4C	53	2B	| Original Japanese Hex
+LENGTH	す	れ	ば		ス	レ	イ	の	い	ば	し	ょ	を		お	し	え	て	や	ろ	う	| Original Japanese Text
+LENGTH	B	R	I	N	G		M	E		G	O	L	E	M	S		H	E	A	D	.	| New English Text
+14	0B	1B	12	17	10	28	16	0E	28	10	18	15	0E	16	1C	28	11	0E	0A	0D	C3	| New English Hex
+
+それに おまえはゴーレムの頭も特っておるし+++
+And to dwell especially I also head of the golem you, + + +
+$422BE
+B7	0D	0F	15	16	17	37	52	3E	28	2D	47	2C	42	A7	F7	9E	95	41	43	4B	32	71	3B	2D	51	34	18	18	18	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	LENGTH	LENGTH	LENGTH	そ	れ	に		お	ま	え	は	ゴ	ー	レ	ム	の	頭	も	特	っ	て	お	る	し	+	+	+	| Original Japanese Text
+LENGTH	I		A	L	S	O		N	E	E	D		T	H	E		G	O	L	E	M		H	E	A	D	.	+	+	| New English Text
+1A	12	28	0A	15	1C	18	28	17	0E	0E	0D	28	1D	11	0E	28	10	18	15	0E	16	28	11	0E	0A	0D	C3	18	18	| New English Hex
+
+そなたなら しんようできる
+I trust you can accomplish this
+$422DC
+0C	37	3D	38	3D	4F	28	34	56	4E	2B	64	2F	51	| Original Japanese Hex
+LENGTH	そ	な	た	な	ら		し	ん	よ	う	で	き	る	| Original Japanese Text
+LENGTH	M	A	Y		I		H	A	V	E		I	T	| New English Text
+0C	16	0A	22	28	12	28	11	0A	1F	0E	28	12	1D	| New English Hex
+
+その頭とひきかえに このてがみを特っていかれよ
+The Ikareyo Te Toku~tsu this letter in exchange for his head
+$422EA
+56	02	10	37	41	43	3C	43	2F	2E	2C	3E	28	32	41	3B	57	48	55	32	71	3B	2A	2E	52	4E	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	そ	の	頭	と	ひ	き	か	え	に		こ	の	て	が	み	を	特	っ	て	い	か	れ	よ	| Original Japanese Text
+LENGTH	E	X	C	H	A	N	G	E		L	E	T	T	E	R		F	O	R		H	E	A	D	?	| New English Text
+18	0E	21	0C	11	0A	17	10	0E	28	15	0E	1D	1D	0E	1B	28	0F	18	1B	28	11	0E	0A	0D	24	| New English Hex
+
+OK Selected:
+スレイは ゴート騎士団に ふさわしい者が ノイラートにおるときいて たびだっていったんじゃ
+Slay not you went traveled to hear that dwell in Neurath is a person who is worthy of goat Knights
+$42304	(Line 1)
+33	09	81	9E	76	42	28	A7	F7	88	D0	20	D1	3E	28	44	33	54	34	2A	E7	57	| Original Japanese Hex
+LENGTH	LENGTH	ス	レ	イ	は		ゴ	ー	ト	騎	士	団	に		ふ	さ	わ	し	い	者	が	| Original Japanese Text
+LENGTH	S	L	A	Y		L	I	V	E	S		I	N		N	E	U	R	A	T	H	| New English Text
+14	1C	15	0A	22	28	15	12	1F	0E	1C	28	12	17	28	17	0E	1E	1B	0A	1D	11	| New English Hex
+$4231A	(Line 2)
+17	8D	76	9B	F7	88	3E	2D	51	3C	2F	2A	3B	28	38	67	61	71	3B	2A	71	38	56	5D	72	| Original Japanese Hex
+LENGTH	ノ	イ	ラ	ー	ト	に	お	る	と	き	い	て		た	び	だ	っ	て	い	っ	た	ん	じ	ゃ	| Original Japanese Text
+LENGTH	H	E	S		A		G	R	E	A	T		G	O	R	T		K	N	I	G	H	T	.	| New English Text
+17	11	0E	1C	28	0A	28	10	1B	0E	0A	1D	28	10	18	1B	1D	28	14	17	12	10	11	1D	C3	| New English Hex
+
+さぁ早く このてがみを特って スレイをおうのじゃ きっと そなたの力になるであろう
+It will be the force of the sonata I'm sure 'll king slay Te Toku~tsu this letter soon Now
+$42333	(Line 1)
+37	0B	33	70	CA	30	28	32	41	3B	57	48	55	32	71	3B	28	81	9E	76	55	2D	2B	41	5D	72	| Original Japanese Hex
+LENGTH	LENGTH	さ	ぁ	早	く		こ	の	て	が	み	を	特	っ	て		ス	レ	イ	を	お	う	の	じ	ゃ	| Original Japanese Text
+LENGTH	Y	O	U		S	H	O	U	L	D		G	E	T		T	H	E		L	E	T	T	E	R	| New English Text
+18	22	18	1E	28	1C	11	18	1E	15	0D	28	10	0E	1D	28	1D	11	0E	28	15	0E	1D	1D	0E	1B	| New English Hex
+$4234D	(Line 2)
+0F	2F	71	3C	28	37	3D	38	41	CF	3E	3D	51	64	29	53	2B	| Original Japanese Hex
+LENGTH	き	っ	と		そ	な	た	の	力	に	な	る	で	あ	ろ	う	| Original Japanese Text
+LENGTH	T	O		S	L	A	Y		Q	U	I	C	K	L	Y	.	| New English Text
+0F	1D	18	28	1C	15	0A	22	28	1A	1E	12	0C	14	15	22	c3	| New English Hex
+
+No Selected:
+そうか しかたない
+There is no way that so?
+$44A0E
+08	37	2B	2E	28	34	2E	38	3D	2A	| Original Japanese Hex
+LENGTH	そ	う	か		し	か	た	な	い	| Original Japanese Text
+LENGTH	S	O		B	E		I	T	.	| New English Text
+08	1C	18	28	0B	0E	28	12	1D	C3	| New English Hex
+
+よく戻ってきたな だが わしには なにもしてやれることがない すまんのう
+I'm sorry that they do not do better with anything to Dagawashi Na came back well
+$44A18	(Line 1)
+27	02	4E	30	1A	71	3B	2F	38	3D	| Original Japanese Hex
+LENGTH	LENGTH	よ	く	戻	っ	て	き	た	な	| Original Japanese Text
+LENGTH	T	H	A	T	S		A	L	L	| New English Text
+08	1D	11	0A	1D	1C	28	0A	15	15	| New English Hex
+$44A22	(Line 2)
+1A	61	57	28	54	34	3E	42	28	3D	3E	4B	34	3B	4C	52	51	32	3C	57	3D	2A	28	35	47	56	41	2B	| Original Japanese Hex
+LENGTH	だ	が		わ	し	に	は		な	に	も	し	て	や	れ	る	こ	と	が	な	い		す	ま	ん	の	う	| Original Japanese Text
+LENGTH	I		H	O	P	E		T	H	A	T		Y	O	U		R	E	T	U	R	N		S	A	F	E	| New English Text
+1A	12	28	11	18	19	0E	28	1D	11	0A	1D	28	22	18	1E	28	1B	0E	1D	1E	1B	17	28	1C	0A	0F	0E	| New English Hex
+
+おまえの かつやくを きたいしておるからな!
+I from Nikki expect success of you!
+$44A3E
+15	2D	47	2C	41	28	2E	3A	4C	30	55	28	2F	38	2A	34	3B	2D	51	2E	4F	3D	25	| Original Japanese Hex
+LENGTH	お	ま	え	の		か	つ	や	く	を		き	た	い	し	て	お	る	か	ら	な	!	| Original Japanese Text
+LENGTH	E	X	P	E	C	T		Y	O	U		T	O		S	U	C	C	E	E	D	!	| New English Text
+15	0E	21	19	0E	0C	1D	28	22	18	1E	28	1D	18	28	1C	1E	0C	0C	0E	0E	0D	25	| New English Hex

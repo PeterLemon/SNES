@@ -1,0 +1,141 @@
+﻿面さつくる
+Making surface
+$01C65
+6A	86	A2	98	B9	20	20	20	| Original Japanese Hex
+面	さ	つ	く	る				| Original Japanese Text
+M	A	P		E	D	I	T	| New English Text
+4D	41	50	20	45	44	49	54	| New English Hex
+	|
+	キャラクターへんこう
+	Change Character
+	$01CC5
+	D7	CC	F7	D8	E0	90	AD	BD	9A	93	| Original Japanese Hex
+	キ	ャ	ラ	ク	タ	ー	へ	ん	こ	う	| Original Japanese Text
+		S	E	T		T	I	L	E		| New English Text
+	20	53	45	54	20	54	49	4C	45	20	| New English Hex
+
+あそんでみる
+Try playing
+$01C6F
+91	9F	BD	A3	BE	B0	B9	20	| Original Japanese Hex
+あ	そ	ん	で		み	る		| Original Japanese Text
+P	L	A	Y		M	A	P	| New English Text
+50	4C	41	59	20	4D	41	50	| New English Hex
+	|
+	面さ みなおして くだ さい。
+	Please Reconsider the surface.
+	$01D61
+	6A	86	20	B0	A5	95	9C	A3	20	98	A0	BE	9B	92	81	| Original Japanese Hex
+	面	さ		み	な	お	し	て		く	だ		さ	い	。	| Original Japanese Text
+	N	O		M	A	P		T	O		P	L	A	Y	.	| New English Text
+	4E	4F	20	4D	41	50	20	54	4F	20	50	4C	41	59	2E	| New English Hex
+	
+ゲーム面さよぶ
+We call the game surfaces
+$01C79
+D9	6B	F1	6A	86	B6	AC	BE	| Original Japanese Hex
+ゲ	ー	ム	面	さ	よ	ぶ		| Original Japanese Text
+M	A	P		L	O	A	D	| New English Text
+4D	41	50	20	4C	4F	41	44	| New English Hex
+	|
+	ゲーム面さよびます。
+	The surfaces called a game.
+	$01D02
+	D9	6B	F1	6A	86	B6	AB	BE	AF	9D	81	| Original Japanese Hex
+	ゲ	ー	ム	面	さ	よ	び		ま	す	。	| Original Japanese Text
+	L	O	A	D		L	E	V	E	L	:	| New English Text
+	4C	4F	41	44	20	4C	45	56	45	4C	3A	| New English Hex
+	|
+	こてしらベ コース
+	Preliminary test or trial; tryout Course
+	$018D4
+	9A	A3	9C	B7	AD	BE	6D	6E	6F	| Original Japanese Hex
+	こ	て	し	ら	ベ		コ	ー	ス	| Original Japanese Text
+	T	R	I	A	L		S	E	T	| New English Text
+	54	52	49	41	4C	20	53	45	54	| New English Hex
+	|
+	ウォーミング コース
+	Warming/up Course
+	$018DD
+	D3	CB	7C	7D	7E	7F	6D	6E	6F	| Original Japanese Hex
+	ウ	ォ	ー	ミ	ン	グ	コ	ー	ス	| Original Japanese Text
+	W	A	R	M			S	E	T	| New English Text
+	57	41	52	4D	20	20	53	45	54	| New English Hex
+	|
+	ひっかけ コース
+	Grappling/Sumo Course
+	$018E6
+	AB	8F	96	99	20	20	6D	6E	6F	| Original Japanese Hex
+	ひ	っ	か	け			コ	ー	ス	| Original Japanese Text
+	S	U	M	O			S	E	T	| New English Text
+	53	55	4D	4F	20	20	53	45	54	| New English Hex	
+        |
+	たいさく コース
+	Wants to spend/epic Course
+	$018EF
+	A0	92	9B	98	20	20	6D	6E	6F	| Original Japanese Hex
+	た	い	さ	く			コ	ー	ス	| Original Japanese Text
+	E	P	I	C			S	E	T	| New English Text
+	45	50	49	43	20	20	53	45	54	| New English Hex
+	|
+	エレガント コース
+	Elegant Course
+	$018F8
+	D4	FA	D6	BE	FD	E4	6D	6E	6F	| Original Japanese Hex
+	エ	レ	ガ		ン	ト	コ	ー	ス	| Original Japanese Text
+	G	R	A	N	D		S	E	T	| New English Text
+	47	52	41	4E	44	20	53	45	54	| New English Hex
+	|
+	なんかい コース
+	Difficult Course
+	$01901
+	A5	BD	96	92	20	20	6D	6E	6F	| Original Japanese Hex
+	な	ん	か	い			コ	ー	ス	| Original Japanese Text
+	T	O	U	G	H		S	E	T	| New English Text
+	54	4F	55	47	48	20	53	45	54	| New English Hex
+        |
+	num 面
+	Surface
+	$01D36
+	20	20	20	20	30	31	6A	| Original Japanese Hex
+					num		面	| Original Japanese Text
+	M	A	P	:	num			| New English Text
+	4D	41	50	3A	30	31	20	| New English Hex
+
+面さけす
+Surface Disappear
+$01C83
+6A	86	99	9D	20	20	| Original Japanese Hex
+面	さ	け	す			| Original Japanese Text
+D	E	L	E	T	E	| New English Text
+44	45	4C	45	54	45	| New English Hex
+	|
+	面さ けしますか?
+	The け it does?
+	$01D8E
+	6A	86	20	99	9C	AF	9D	96	3F	| Original Japanese Hex
+	面	さ		け	し	ま	す	か	?	| Original Japanese Text
+	E	R	A	S	E		A	L	L	| New English Text
+	45	52	41	53	45	20	41	4C	4C	| New English Hex
+	|
+	$01D99
+	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+										| Original Japanese Text
+	M	A	P		D	A	T	A	?	| New English Text
+	4D	41	50	20	44	41	54	41	3F	| New English Hex
+		|
+		はい / いいえ
+		Yes / No
+		$01DA4
+		20	AA	20	92	2F	92	92	94	20	| Original Japanese Hex
+			は		い	/	い	い	え		| Original Japanese Text
+			Y	E	S	/	N	O			| New English Text
+		20	59	45	53	2F	4E	4F	20	20	| New English Hex
+
+もどる
+Back / Return
+$01C8D
+B3	85	B9	20	| Original Japanese Hex
+も	ど	る		| Original Japanese Text
+E	X	I	T	| New English Text
+45	58	49	54	| New English Hex

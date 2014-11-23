@@ -1,0 +1,146 @@
+﻿-----------
+Equipment:
+-----------
+勇者の剣
+Brave/Hero Sword
+$40FE5
+EF 00	E7 00	41 00	D8 00	| Original Japanese Hex
+勇BLACK	者BLACK	のBLACK	剣BLACK	| Original Japanese Text
+HBLACK	EBLACK	RBLACK	OBLACK	| New English Text
+11 00	0E 00	1B 00	18 00	| New English Hex
+
+魔術師のつえ
+Magician Wand
+$416FD
+E0 00	E4 00	DA 00	41 00	3A 00	2C 00	| Original Japanese Hex
+魔BLACK	術BLACK	師BLACK	のBLACK	つBLACK	えBLACK	| Original Japanese Text
+WBLACK	IBLACK	ZBLACK	ABLACK	RBLACK	DBLACK	| New English Text
+20 00	12 00	23 00	0A 00	1B 00	0D 00	| New English Hex
+
+僧侶のつえ
+Priest Cane/Staff
+$417B9
+E2 00	E3 00	41 00	3A 00	2C 00	| Original Japanese Hex
+僧BLACK	侶BLACK	のBLACK	つBLACK	えBLACK	| Original Japanese Text
+VBLACK	IBLACK	CBLACK	ABLACK	RBLACK	| New English Text
+1F 00	12 00	0C 00	0A 00	1B 00	| New English Hex
+
+ぬののふく
+Cloth Clothes
+$416E8
+3F	41	41	44	30	| Original Japanese Hex
+ぬ	の	の	ふ	く	| Original Japanese Text
+C	L	O	T	H	| New English Text
+0C	15	18	1D	11	| New English Hex
+
+どうのよろい
+Copper Armour
+$416F2
+65	2B	41	4E	53	2A	| Original Japanese Hex
+ど	う	の	よ	ろ	い	| Original Japanese Text
+C	O	P	P	E	R	| New English Text
+0C	18	19	19	0E	1B	| New English Hex
+
+スピア
+Spear
+$4170E
+81	B8	75	| Original Japanese Hex
+ス	ピ	ア	| Original Japanese Text
+S	P	R	| New English Text
+1C	19	1B	| New English Hex
+
+こんぼう
+Club
+$41716
+32	56	6A	2B	| Original Japanese Hex
+こ	ん	ぼ	う	| Original Japanese Text
+C	L	U	B	| New English Text
+0C	15	1E	0B	| New English Hex
+
+ショートソード
+Short Sword
+$41728
+80	C0	F7	88	83	F7	B1	| Original Japanese Hex
+シ	ョ	ー	ト	ソ	ー	ド	| Original Japanese Text
+S	H	O	R	T			| New English Text
+1C	11	18	1B	1D	28	28	| New English Hex
+
+ダガー
+Dagger
+$41734
+AD	A3	F7	| Original Japanese Hex
+ダ	ガ	ー	| Original Japanese Text
+D	A	G	| New English Text
+0D	0A	10	| New English Hex
+
+ラージシールド
+Large Shield
+$4173C
+9B	F7	A9	80	F7	9D	B1	| Original Japanese Hex
+ラ	ー	ジ	シ	ー	ル	ド	| Original Japanese Text
+L	A	R	G	E			| New English Text
+15	0A	1B	10	0E	28	28	| New English Hex
+
+バックラー
+Buckler
+$41748
+B2	BD	7C	9B	F7	| Original Japanese Hex
+バ	ッ	ク	ラ	ー	| Original Japanese Text
+B	U	C	K	L	| New English Text
+0B	1E	0C	14	15	| New English Hex
+
+チェーンメイル
+chain Mail
+$4174D					$41752
+68	00	01	03	76	77	85	4D	F7	A2	96	76	9D	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	LENGTH	MAIL	MAIL	チ	ェ	ー	ン	メ	イ	ル	| Original Japanese Text
+LENGTH	LENGTH	LENGTH	MAIL	MAIL	C	H	A	I	N				| New English Text
+49	00	01	76	77	0C	11	0A	12	17	28	28	28	| New English Hex
+
+でかいくつ
+Big/Huge/Large Shoes
+$4175F
+64	2E	2A	30	3A	| Original Japanese Hex
+で	か	い	く	つ	| Original Japanese Text
+L	A	R	G	E	| New English Text
+15	0A	1B	10	0E	| New English Hex
+
+ヘルム
+Helm
+$4178E
+91	9D	95	| Original Japanese Hex
+ヘ	ル	ム	| Original Japanese Text
+H	L	M	| New English Text
+11	15	16	| New English Hex
+
+ぼうし
+Hat/Cap
+$417C8
+6A	2B	34	| Original Japanese Hex
+ぼ	う	し	| Original Japanese Text
+C	A	P	| New English Text
+0C	0A	19	| New English Hex
+
+かわのくつ
+Leather/Hide Shoes
+$417D0
+2E	54	41	30	3A	| Original Japanese Hex
+か	わ	の	く	つ	| Original Japanese Text
+L	E	A	T	H	| New English Text
+15	0E	0A	1D	11	| New English Hex
+
+かわのブーツ
+River/Water boots
+$417DA
+2E	54	41	B4	F7	86	| Original Japanese Hex
+か	わ	の	ブ	ー	ツ	| Original Japanese Text
+R	U	B	B	E	R	| New English Text
+1B	1E	0B	0B	0E	1B	| New English Hex
+
+かわのたて
+Shield Skin/Leather
+$41861
+2E	54	41	38	3B	| Original Japanese Hex
+か	わ	の	た	て	| Original Japanese Text
+L	E	A	T	H	| New English Text
+15	0E	0A	1D	11	| New English Hex

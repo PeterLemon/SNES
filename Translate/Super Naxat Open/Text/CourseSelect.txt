@@ -1,0 +1,59 @@
+﻿さいしょに プレイするコースをえらんでね!
+It choose the course to play to specification!
+By the way, one course has become a six-hole
+$7BBA9 (Line 1)
+5E	26	5F	C7	2B	00	BD	54	40	60	39	6C	82	6F	3D	28	37	3E	9B	2D	85	| Original Japanese Hex
+さ	い	し	ょ	に		プ	レ	イ	す	る	コ	ー	ス	を	え	ら	ん	で	ね	!	| Original Japanese Text
+C	H	O	O	S	E		A		C	O	U	R	S	E		T	Y	P	E	!	| New English Text
+0D	12	19	19	1D	0E	00	0B	00	0D	19	1F	1C	1D	0F	00	1E	23	1A	0F	85	| New English Hex
+ちなみに 1コースは6ホールになってます
+$7BBC2 (Line 2)
+64	2A	30	2B	00	02	6C	82	6F	77	07	80	82	53	2B	2A	C8	66	2F	60	| Original Japanese Hex
+ち	な	み	に		1	コ	ー	ス	は	6	ホ	ー	ル	に	な	っ	て	ま	す	| Original Japanese Text
+S	I	X		H	O	L	E	S		P	E	R		C	O	U	R	S	E	| New English Text
+1D	13	22	00	12	19	16	0F	1D	00	1A	0F	1C	00	0D	19	1F	1C	1D	0F	| New English Hex
+
+このコースは さばくのおおいところよ
+This course is placed in a large desert
+Take care not to get your leg stuck in the sand!
+$7B758 (Line 1)
+5D	2E	6C	82	6F	77	00	5E	AC	5B	2E	29	29	26	67	5D	3B	36	| Original Japanese Hex
+こ	の	コ	ー	ス	は		さ	ば	く	の	お	お	い	と	こ	ろ	よ	| Original Japanese Text
+D	E	S	E	R	T		C	O	U	R	S	E	.		T	R	Y	| New English Text
+0E	0F	1D	0F	1C	1E	00	0D	19	1F	1C	1D	0F	88	00	1E	1C	23	| New English Hex
+すなにあしをとられないようにねっ!
+$7B76E (Line 2)
+60	2A	2B	25	5F	3D	67	37	3A	2A	26	36	27	2B	2D	C8	85	| Original Japanese Hex
+す	な	に	あ	し	を	と	ら	れ	な	い	よ	う	に	ね	っ	!	| Original Japanese Text
+N	O	T		T	O		G	E	T		S	T	U	C	K	!	| New English Text
+18	19	1E	00	1E	19	00	11	0F	1E	00	1D	1E	1F	0D	15	85	| New English Hex
+
+このコースはジャングルコースですわ
+This course is a jungle course I
+It'll have you addicted to rough If you do not care
+$7B782 (Line 1)
+5D	2E	6C	82	6F	77	A3	CE	58	9F	53	6C	82	6F	9B	60	3C	| Original Japanese Hex
+こ	の	コ	ー	ス	は	ジ	ャ	ン	グ	ル	コ	ー	ス	で	す	わ	| Original Japanese Text
+J	U	N	G	L	E		C	O	U	R	S	E	.	I	T	S	| New English Text
+14	1F	18	11	16	0F	00	0D	19	1F	1C	1D	0F	88	13	1E	1D	| New English Hex
+きをつけてないと ラフにはまっちゃいますわ
+$7B797 (Line 2)
+5A	3D	65	5C	66	2A	26	67	00	51	7E	2B	77	2F	C8	64	C5	26	2F	60	3C	| Original Japanese Hex
+き	を	つ	け	て	な	い	と		ラ	フ	に	は	ま	っ	ち	ゃ	い	ま	す	わ	| Original Japanese Text
+E	A	S	Y		T	O		L	A	N	D		I	N		R	O	U	G	H	| New English Text
+0F	0B	1D	23	00	1E	19	00	16	0B	18	0E	00	13	18	00	1C	19	1F	11	12	| New English Hex
+
+このコースはでっかいみずうみのあるコースよ
+This course is by a huge lake
+It's a water hazard if you do not care!
+$7B7AF (Line 1)
+5D	2E	6C	82	6F	77	9B	C8	59	26	30	95	27	30	2E	25	39	6C	82	6F	36	| Original Japanese Hex
+こ	の	コ	ー	ス	は	で	っ	か	い	み	ず	う	み	の	あ	る	コ	ー	ス	よ	| Original Japanese Text
+L	A	K	E		C	O	U	R	S	E	.	T	A	K	E		C	A	R	E	| New English Text
+16	0B	15	0F	00	0D	19	1F	1C	1D	0F	88	1E	0B	15	0F	00	0D	0B	1C	0F	| New English Hex
+きをつけないと ウォーターハザードですわ!
+$7B7C8 (Line 2)
+5A	3D	65	5C	2A	26	67	00	41	CD	82	72	82	7C	A2	82	AB	9B	60	3C	85	| Original Japanese Hex
+き	を	つ	け	な	い	と		ウ	ォ	ー	タ	ー	ハ	ザ	ー	ド	で	す	わ	!	| Original Japanese Text
+N	O	T		T	O		L	A	N	D		I	N		W	A	T	E	R	!	| New English Text
+18	19	1E	00	1E	19	00	16	0B	18	0E	00	13	18	00	21	0B	1E	0F	1C	85	| New English Hex

@@ -1,0 +1,26 @@
+﻿-------
+Towns:
+-------
+チベリス
+Chiberus / Chiberis
+$41983
+03	85	B5	9C	81	| Original Japanese Hex
+LENGTH	チ	ベ	リ	ス	| Original Japanese Text
+LENGTH	C	H	I	B	| New English Text
+03	0C	11	12	0B	| New English Hex
+
+ゴート
+Gort / Goto
+$41988
+02	A7	F7	88	| Original Japanese Hex
+LENGTH	ゴ	ー	ト	| Original Japanese Text
+LENGTH	G	R	T	| New English Text
+02	10	1B	1D	| New English Hex
+
+ノイラート
+Neurath / Noirato
+$41997
+04	8D	76	9B	F7	88	| Original Japanese Hex
+LENGTH	ノ	イ	ラ	ー	ト	| Original Japanese Text
+LENGTH	N	E	U	R	A	| New English Text
+04	17	0E	1E	1B	0A	| New English Hex

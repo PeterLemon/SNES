@@ -1,0 +1,140 @@
+﻿-------------------------
+Albert Battle Selection:
+-------------------------
+移動					| 攻撃					| へんしん					| 行動終了
+Movement				| Attack				| Transformation			| Exit action
+$410DF					| $40C5C				| $479A7				| $40C61
+03	28	CD	CE	28	| 03	28	C7	C8	28	| 03	45	56	34	56	| 43	02	03	F2	CE	24	25	| Original Japanese Hex
+LENGTH		移	動		| LENGTH	攻	撃		| LENGTHへ	ん	し	ん	| LENGTHLENGTH	LENGTH	行	動	終	了	| Original Japanese Text
+LENGTH	M	O	V	E	| LENGTH	H	I	T	| LENGTHP	S	Y	K	| LENGTHE	N	D	G	O	了	| New English Text
+03	16	18	1F	0E	| 03	28	11	12	1D	| 03	19	1C	22	14	| 04	0E	17	0D	10	18	25	| New English Hex
+
+----------------------------------
+Neumann & Sofia Battle Selection:
+----------------------------------
+移動					| 攻撃					| 魔法					| 行動終了
+Movement				| Attack				| Magic					| Exit action
+$410DF					| $40C5C				| $40CBF				| $40C61
+03	28	CD	CE	28	| 03	28	C7	C8	28	| 03	28	E0	E1	28	| 43	02	03	F2	CE	24	25	| Original Japanese Hex
+LENGTH		移	動		| LENGTH	攻	撃		| LENGTH	魔	法		| LENGTHLENGTH	LENGTH	行	動	終	了	| Original Japanese Text
+LENGTH	M	O	V	E	| LENGTH	H	I	T	| LENGTHC	A	S	T	| LENGTHE	N	D	G	O	了	| New English Text
+03	16	18	1F	0E	| 03	28	11	12	1D	| 03	0C	0A	1C	1D	| 04	0E	17	0D	10	18	25	| New English Hex
+
+---------------
+Movement Text:
+---------------
+移動
+Movement
+$41950
+E3	28 18	CD 18	CE 18	28 18	| Original Japanese Hex
+LENGTH	WHITE	移WHITE	動WHITE	WHITE	| Original Japanese Text
+LENGTH	MWHITE	OWHITE	VWHITE	EWHITE	| New English Text
+E3	16 18	18 18	1F 18	0E 18	| New English Hex
+
+移動範囲測定
+Moving range measurement
+$4106C
+85	02	03	04	05	CD	CE	4B	4C	4E	00	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	LENGTH	LENGTH	移	動	範	囲	測	定	| Original Japanese Text
+LENGTH	P	R	O	C	E	S	S	I	N	G	| New English Text
+09	19	1B	18	0C	0E	1C	1C	12	17	10	| New English Hex
+
+移動力:
+Locomotion: (Top Half)
+$4E8AF	$4E8BB	$4E8C7	$4E8D3
+8D 21	8E 21	8F 21	A6 21	| Original Japanese Hex
+移WHITE	動WHITE	力WHITE	:WHITE	| Original Japanese Text
+SWHITE	TWHITE	PWHITE	:WHITE	| New English Text
+2C 20	2D 20	29 20	A6 21	| New English Hex
+	Locomotion: (Bottom Half)
+	$4E8B5	$4E8C1	$4E8CD	$4E8D9
+	9D 21	9E 21	9F 21	B6 21	| Original Japanese Hex
+	移WHITE	動WHITE	力WHITE	:WHITE	| Original Japanese Text
+	SWHITE	TWHITE	PWHITE	:WHITE	| New English Text
+	3C 20	3D 20	39 20	B6 21	| New English Hex
+
+-------------
+Attack Text:
+-------------
+攻撃
+Attack
+$41962
+E3	28 18	C7 18	C8 18	28 18	| Original Japanese Hex
+LENGTH		攻	撃		| Original Japanese Text
+LENGTH		H	I	T	| New English Text
+E3	28 18	11 18	12 18	1D 18	| New English Hex
+
+まわりに敵はいません
+No enemies around
+$41098
+29	04	47	54	50	3E	39	42	2A	47	36	56	| Original Japanese Hex
+LENGTH	LENGTH	ま	わ	り	に	敵	は	い	ま	せ	ん	| Original Japanese Text
+LENGTH	N	O		O	N	E		N	E	A	R	| New English Text
+0A	17	18	28	18	17	0E	28	17	0E	0A	1B	| New English Hex
+
+向きを選んでください
+Please choose a direction
+$413C5
+29	03	FE	2F	55	1C	56	64	30	61	33	2A	| Original Japanese Hex
+LENGTH	LENGTH	向	き	を	選	ん	で	く	だ	さ	い	| Original Japanese Text
+LENGTH	T	O	:		T	A	R	G	E	T	い	| New English Text
+09	1D	18	D6	28	1D	0A	1B	10	0E	1D	2A	| New English Hex
+
+攻撃は 敵に向って!
+Attack towards the enemy!
+$4108C	(Line 1)
+29	04	C7	C8	42	28	39	3E	FE	71	3B	25	| Original Japanese Hex
+LENGTH	LENGTH	攻	撃	は		敵	に	向	っ	て	!	| Original Japanese Text
+LENGTH	E	M	P	T	Y		S	P	A	C	E	| New English Text
+0A	0E	16	19	1D	22	28	1C	19	0A	0C	0E	| New English Hex
+
+------------------
+Exit Action Text:
+------------------
+行動終了
+Exit action
+$41959
+E3	F2 18	CE 18	24 19	25 19	| Original Japanese Hex
+LENGTH	行WHITE	動WHITE	終WHITE	了WHITE	| orig kanji text
+LENGTH	EWHITE	NWHITE	DWHITE	SWHITE	| New English Text
+E3	0E 18	17 18	0D 18	1C 18	| New English Hex
+
+移動キャンセル中
+Canceling movement
+$41035
+E7	CD 08	CE 08	7B 00	BE 00	A2 00	82 00	9D 00	4A 09	| Original Japanese Hex
+LENGTH	移GOLD	動GOLD	キWHITE	ャWHITE	ンWHITE	セWHITE	ルWHITE	中GOLD	| Original Japanese Text
+LENGTH	CGOLD	AGOLD	NGOLD	CGOLD	EGOLD	LGOLD	ルWHITE	中GOLD	| New English Text
+E5	0C 08	0A 08	17 08	0C 08	0E 08	15 08	9D 00	4A 09	| New English Hex
+
+行動終了している
+Action has been completed
+$40CD0	(Line 1)
+47	02	03	F2	CE	24	25	34	3B	2A	51	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	行	動	終	了	し	て	い	る	| Original Japanese Text
+LENGTH	T	U	R	N		E	N	D	E	D	| New English Text
+09	0D	1E	1B	17	28	0E	17	0D	0E	0D	| New English Hex
+
+ターンを終了しますか?
+Do you want to end your turn?
+$463CE
+4A	04	05	84	F7	A2	55	24	25	34	47	35	2E	24	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	タ	ー	ン	を	終	了	し	ま	す	か	?	| Original Japanese Text
+LENGTH	E	N	D	O	F		T	U	R	N	?	か	?	| New English Text
+0A	0E	17	0D	18	0F	28	1D	1E	1B	17	24	2E	24	| New English Hex
+
+YES-A ボタン NO-B ボタン
+YES-A Button NO-B Button
+$40E35
+10	22	0E	1C	26	0A	B6	84	A2	28	28	17	18	26	0B	B6	84	A2	| Original Japanese Hex
+LENGTH	Y	E	S	-	A	ボ	タ	ン			N	O	-	B	ボ	タ	ン	| Original Japanese Text
+LENGTH	Y	E	S	-	A		N	O	-	B		B	U	T	T	O	N	| New English Text
+10	22	0E	1C	26	0A	28	17	18	26	0B	28	0B	1E	1D	1D	18	17	| New English Hex
+
+持後する
+After you have
+$410A4
+E3	3C 09	D9 08	35 00	51 00	| Original Japanese Hex
+LENGTH	持GOLD	後GOLD	すWHITE	るWHITE	| Original Japanese Text
+LENGTH	VWHITE	IWHITE	EWHITE	WWHITE	| New English Text
+E3	1F 00	12 00	0E 00	20 00	| New English Hex

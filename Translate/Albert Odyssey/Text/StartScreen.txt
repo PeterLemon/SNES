@@ -1,0 +1,136 @@
+﻿--------------
+Start Screen:
+--------------
+-------------------------------------------
+BG Edit to make stuff fit (Does not work):
+
+$41595
+2A	11	36	| Original BG Hex
+47	11	2A	| New BG Hex
+
+$415F4
+5F	11	| Original BG Hex
+28	00	| New BG Hex
+
+EXP.:
+$415CB
+0E	0C	21	0C	19	0C	30	0D	| Original BG Hex
+E		X		P		.		| Original BG Text
+		E		X		P		| New BG Text
+5E	11	0E	0C	21	0C	19	0C	| New BG Hex
+
+-------------------------------------------
+
+耐久力
+Endurance/Stamina (Top Half)
+$10EBB	$10EC7	$10ED3
+A4 21	A5 21	8F 21	| Original Japanese Hex
+耐BLACK	久BLACK	力BLACK	| Original Japanese Text
+BLACK	HBLACK	PBLACK	| New English Text
+48 20	21 20	29 20	| New English Hex
+	Endurance/Stamina (Bottom Half)
+	$10EC1	$10ECD	$10ED9
+	B4 21	B5 21	9F 21	| Original Japanese Hex
+	耐BLACK	久BLACK	力BLACK	| Original Japanese Text
+	BLACK	HBLACK	PBLACK	| New English Text
+	58 20	31 20	39 20	| New English Hex
+
+正常
+Normal (Top half)
+$17A39	$17A45
+8B 29	C6 2A	| Original Japanese Hex
+正GOLD	常GOLD	| Original Japanese Text
+OGOLD	KGOLD	| New English Text
+28 28	24 28	| New English Hex
+	Normal (Bottom half)
+	$17A3F	$17A4B
+	9B 29	D6 2A	| Original Japanese Hex
+	正GOLD	常GOLD	| Original Japanese Text
+	OGOLD	KGOLD	| New English Text
+	38 28	34 28	| New English Hex
+
+装備
+Equipment
+$41699
+43	00	01	60	61	28	28	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	装	備			| Original Japanese Text
+LENGTH	E	Q	U	I			| New English Text
+03	0E	1A	1E	12	28	28	| New English Hex
+
+右手
+Right Hand
+$416A0
+E3	41 0D	40 0D	28 00	D6 00	| Original Japanese Hex
+LENGTH	右RED	手RED	BLACK	:BLACK	| Original Japanese Text
+LENGTH	RRED	HRED	BLACK	:BLACK	| New English Text
+E3	1B 0C	11 0C	28 00	D6 00	| New English Hex
+
+左手
+Left Hand
+$416A9
+E3	42 0D	40 0D	28 00	D6 00	| Original Japanese Hex
+LENGTH	左RED	手RED	BLACK	:BLACK	| Original Japanese Text
+LENGTH	LRED	HRED	BLACK	:BLACK	| New English Text
+E3	15 0C	11 0C	28 00	D6 00	| New English Hex
+
+両うで
+Arms
+$416B2
+E3	63 0D	2B 0C	64 0C	D6 00	| Original Japanese Hex
+LENGTH	両RED	うRED	でRED	:BLACK	| Original Japanese Text
+LENGTH	ARED	RRED	MRED	:BLACK	| New English Text
+E3	0A 0C	1B 0C	16 0C	D6 00	| New English Hex
+
+両足
+Feet/Legs
+$416BB
+E3	63 0D	64 0D	28 00	D6 00	| Original Japanese Hex
+LENGTH	両RED	足RED	BLACK	:BLACK	| Original Japanese Text
+LENGTH	LRED	ERED	GRED	:BLACK	| New English Text
+E3	15 0C	0E 0C	10 0C	D6 00	| New English Hex
+
+胴体
+Body
+$416C4
+E3	44 0D	45 0D	28 00	D6 00	| Original Japanese Hex
+LENGTH	胴RED	体RED	BLACK	:BLACK	| Original Japanese Text
+LENGTH	BRED	DRED	YRED	:BLACK	| New English Text
+E3	0B 0C	0D 0C	22 0C	D6 00	| New English Hex
+
+頭
+Head
+$416CD
+E3	43 0D	28 00	28 00	D6 00	| Original Japanese Hex
+LENGTH	頭RED	BLACK		:	| Original Japanese Text
+LENGTH	HRED	DRED		:	| New English Text
+E3	11 0C	0D 0C	28 00	D6 00	| New English Hex
+
+攻撃力:
+Attack/Offensive Power
+$40C7D
+03	C7	C8	CF	D6	| Original Japanese Hex
+LENGTH	攻	撃	力	:	| Original Japanese Text
+LENGTH	A	T	P	:	| New English Text
+03	0A	1D	19	D6	| New English Hex
+
+守備力:
+Defensive Power:
+$416D6
+03	DB	DC	CF	D6	| Original Japanese Hex
+LENGTH	守	備	力	:	| Original Japanese Text
+LENGTH	D	F	P	:	| New English Text
+03	0D	0F	19	D6	| New English Hex
+
+移動力
+Locomotion (Top Half)
+$17EA5	$17EB1	$17EBD
+8D 21	8E 21	8F 21	| Original Japanese Hex
+移BLACK	動BLACK	力BLACK	| Original Japanese Text
+SBLACK	TBLACK	PBLACK	| New English Text
+2C 20	2D 20	29 20	| New English Hex
+	Locomotion (Bottom Half)
+	$17EAB	$17EB7	$17EC3
+	9D 21	9E 21	9F 21	| Original Japanese Hex
+	移BLACK	動BLACK	力BLACK	| Original Japanese Text
+	SBLACK	TBLACK	PBLACK	| New English Text
+	3C 20	3D 20	39 20	| New English Hex

@@ -1,0 +1,117 @@
+﻿--------------
+Neurath Town:
+--------------
+-------------------
+Neurath - Outside:
+-------------------
+Girl - Bottom Left:
+ほうろうの大賢者 フィロを しってる?
+Do you know a large sage Philo of wandering?
+$45E68	(Line 1)
+52	05	0A	46	2B	53	2B	41	02	E6	E7	28	90	5C	9F	55	28	34	71	3B	51	24	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	ほ	う	ろ	う	の	大	賢	者		フ	ィ	ロ	を		し	っ	て	る	?	| Original Japanese Text
+LENGTH	K	N	O	W		A	B	O	U	T		S	A	G	E		F	I	L	O	?	| New English Text
+14	14	17	18	20	28	0A	0B	18	1E	1D	28	1C	0A	10	0E	28	0F	12	15	18	24	| New English Hex
+
+No Selected:
+ごめんなさい。わたしも しらないの
+I am sorry. I am also not a known
+$45E7E
+10	5B	4A	56	3D	33	2A	C3	54	38	34	4B	28	34	4F	3D	2A	41	| Original Japanese Hex
+LENGTH	ご	め	ん	な	さ	い	。	わ	た	し	も		し	ら	な	い	の	| Original Japanese Text
+LENGTH	I		A	L	S	O		D	O	N	T		K	N	O	W	.	| New English Text
+10	12	28	0A	15	1C	18	28	0D	18	17	1D	28	14	17	18	20	C3	| New English Hex
+
+OK Selected:
+すごいわ。かれとは めったに あえないのよ
+Is amazing. Not a rarely met with him
+$45E90
+14	35	5B	2A	54	C3	2E	52	3C	42	28	4A	71	38	3E	28	29	2C	3D	2A	41	4E	| Original Japanese Hex
+LENGTH	す	ご	い	わ	。	か	れ	と	は		め	っ	た	に		あ	え	な	い	の	よ	| Original Japanese Text
+LENGTH	V	E	R	Y		R	A	R	E		T	O		M	E	E	T		H	I	M	| New English Text
+14	1F	0E	1B	22	28	1B	0A	1B	0E	28	1D	18	28	16	0E	0E	1D	28	11	12	16	| New English Hex
+
+-----------------------------
+Neurath - Bottom Left House:
+-----------------------------
+Old Man:
+ミケアナには もう 行かれたか?
+Were you going anymore Mikeana?
+$45768
+0F	94	7D	75	89	3E	42	28	4B	2B	28	F2	2E	52	38	2E	24	| Original Japanese Hex
+LENGTH	ミ	ケ	ア	ナ	に	は		も	う		行	か	れ	た	か	?	| Original Japanese Text
+LENGTH	G	O	I	N	G		T	O		M	I	K	E	A	N	A	| New English Text
+0F	10	18	12	17	10	28	1D	18	28	16	12	14	0E	0A	17	0A	| New English Hex
+
+No Selected:
+ゴートから南東に向かえば いいんじゃよ
+The Ja should I celebrating southeast of Gort
+$45779
+12	A7	F7	88	2E	4F	FB	F9	3E	FE	2E	2C	66	28	2A	2A	56	5D	72	4E	| Original Japanese Hex
+LENGTH	ゴ	ー	ト	か	ら	南	東	に	向	か	え	ば		い	い	ん	じ	ゃ	よ	| Original Japanese Text
+LENGTH	S	O	U	T	H	E	A	S	T		F	R	O	M		G	O	R	T	| New English Text
+12	1C	18	1E	1D	11	0E	0A	1C	1D	28	0F	1B	18	16	28	10	18	1B	1D	| New English Hex
+
+OK Selected:
+そうか。コートロードへ行くのに あそこを とおるからな
+That's good. I from passing through over there to go to Court Road
+$46ABD
+1A	37	2B	2E	C3	7E	F7	88	9F	F7	B1	45	F2	30	41	3E	28	29	37	32	55	28	3C	2D	51	2E	4F	3D	| Original Japanese Hex
+LENGTH	そ	う	か	。	コ	ー	ト	ロ	ー	ド	へ	行	く	の	に		あ	そ	こ	を		と	お	る	か	ら	な	| Original Japanese Text
+LENGTH	P	A	S	S		I	T		T	O		R	E	A	C	H		C	O	U	R	T		R	O	A	D	| New English Text
+1A	19	0A	1C	1C	28	12	1D	28	1D	18	28	1B	0E	0A	0C	11	28	0C	18	1E	1B	1D	28	1B	18	0A	0D	| New English Hex
+
+Man:
+あの ばーちゃんたちと はなすのかい?
+Do you speak with Anoba and her friends?
+$44AC5
+12	29	41	28	66	F7	39	72	56	38	39	3C	28	42	3D	35	41	2E	2A	24	| Original Japanese Hex
+LENGTH	あ	の		ば	ー	ち	ゃ	ん	た	ち	と		は	な	す	の	か	い	?	| Original Japanese Text
+LENGTH	C	O	N	V	E	R	S	E		W	I	T	H		A	N	O	B	A	| New English Text
+12	0C	18	17	1F	0E	1B	1C	0E	28	20	12	1D	11	28	0A	17	18	0B	0A	| New English Hex
+
+OK Selected:
+なんかへん なんだよなー。あのばーちゃんたち
+I'm behaving badly. Anoba and her friends
+$44AD9
+15	3D	56	2E	45	56	28	3D	56	61	4E	3D	F7	C3	29	41	66	F7	39	72	56	38	39	| Original Japanese Hex
+LENGTH	な	ん	か	へ	ん		な	ん	だ	よ	な	ー	。	あ	の	ば	ー	ち	ゃ	ん	た	ち	| Original Japanese Text
+LENGTH	P	L	E	A	S	E		B	E	H	A	V	E		P	O	L	I	T	E	L	Y	| New English Text
+15	19	15	0E	0A	1C	0E	28	0B	0E	11	0A	1F	0E	28	19	18	15	12	1D	0E	15	22	| New English Hex
+
+No Selected:
+ふー-ん
+Hmm
+$44AF0
+03	44	F7	26	56	| Original Japanese Hex
+LENGTH	ふ	ー	-	ん	| Original Japanese Text
+LENGTH	H	M	M	M	| New English Text
+03	11	16	16	16	| New English Hex
+
+Anoba:
+「水晶」のありか なんて しらないよ!
+I do not know What or there "crystal"!
+$44AF5
+12	C1	DD	DE	C2	41	29	50	2E	28	3D	56	3B	28	34	4F	3D	2A	4E	25	| Original Japanese Hex
+LENGTH	「	水	晶	」	の	あ	り	か		な	ん	て		し	ら	な	い	よ	!	| Original Japanese Text
+LENGTH	W	H	E	R	E	S		T	H	E		C	R	Y	S	T	A	L	!	| New English Text
+12	20	11	0E	1B	0E	1C	28	1D	11	0E	28	0C	1B	22	1C	1D	0A	15	25	| New English Hex
+
+---------------------------
+Neurath - Top Right House:
+---------------------------
+Knight:
+?????????
+????????????????????????????
+$?????
+??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	| Original Japanese Hex
+?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| Original Japanese Text
+?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
+??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	| New English Hex
+
+
+
+
+
+
+

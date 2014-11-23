@@ -1,0 +1,18 @@
+﻿-----------
+Exit Town:
+-----------
+そと に でます か?
+Exit To Outside Location?
+$40DE5
+08	37	3C	3E	28	64	47	35	2E	24	02	AC	| Original Japanese Hex
+LENGTH	そ	と	に		で	ま	す	か	?			| Original Japanese Text
+LENGTH	G	O		O	U	T	S	I	D	E	?	| New English Text
+0A	10	18	28	18	1E	1D	1C	12	0D	0E	24	| New English Hex
+
+YES - A ボタン
+YES - A Button
+$40DF8
+E9	22 0C	0E 0C	1C 0C	28 00	26 00	28 00	0A 0C	B6 0C	84 0C	A2 0C	| Original Japanese Hex
+LENGTH	YRED	ERED	SRED	BLACK	-BLACK	BLACK	ARED	ボRED	タRED	ンRED	| Original Japanese Text
+LENGTH	YRED	ERED	SRED	BLACK	-BLACK	BLACK	RED	ARED	タRED	ンRED	| New English Text
+E7	22 0C	0E 0C	1C 0C	28 00	26 00	28 00	28 0C	0A 0C	84 0C	A2 0C	| New English Hex

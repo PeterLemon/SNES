@@ -1,0 +1,46 @@
+﻿スーパー そうこばん
+Super Sokoban (Top Half)
+$4DB79
+9B	08	9C	37	00	9D	FE	37	00	9E	08	9F	08	A0	08	A1	EE	37	00	A2	08	29	75	80	2A	09	2B	EE	75	80	2C	09	2D	75	80	2E	09	2F	EE	75	80	30	09	31	B3	| Original Japanese Hex
+ス					ー				パ				ー						そ					う						こ					ば						ん				| Original Japanese Text
+S				U				P				E				R					S				O				K				O				B		A				N		| New English Text
+B3	09	00	37	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	B3	??	??	??	AF	??	??	??	AB	??	??	??	AF	??	??	??	A2	??	A1	??	A0	09	AE	B3	| New English Hex
+|
+????????? (Bottom Half)
+$?????
+
+ 155, 156, 000, 157, 000, 158
+009B,009C,0000,009D,0000,009E
+
+
+スーパー そうこばん
+Super Sokoban
+$01085
+50	19	1D	1A	D0	19	47	1A	48	1A	49	1A	DF	19	D3	19	DA	19	EA	19	45	1A	46	1A	| Original Japanese Hex
+		ス		ー				パ		ー		そ		う		こ		ば		ん				| Original Japanese Text
+		1		P				S		O		K		O		B		A		N				| New English Text
+A0	19	56	19	B0	19	A0	19	B3	19	AF	19	AB	19	AF	19	A2	19	A1	19	AE	19	A0	19	| New English Hex
+
+たいせん そうこばん
+Sokoban Game (Top Half)
+$010A1
+50	19	50	1A	51	1A	52	1A	53	1A	50	19	54	1A	55	1A	56	1A	57	1A	58	1A	50	19	| Original Japanese Hex
+				た		い		せ				ん		そ		う		こ		ば		ん		| Original Japanese Text
+		2		P				S		O		K		O		B		A		N				| New English Text
+A0	19	57	19	B0	19	A0	19	B3	19	AF	19	AB	19	AF	19	A2	19	A1	19	AE	19	A0	19	| New English Hex
+|
+たいせん うこばん
+Koban game (Bottom Half)
+$010BD
+50	19	60	1A	61	1A	62	1A	63	1A	50	19	64	1A	65	1A	66	1A	67	1A	68	1A	69	1A	| Original Japanese Hex
+		た				い		せ				ん		う		こ		ば		ん				| Original Japanese Text
+																								| New English Text
+A0	19	A0	19	A0	19	A0	19	A0	19	A0	19	A0	19	A0	19	A0	19	A0	19	A0	19	A0	19	| New English Hex
+
+そうこばん エディット
+Edit Sokoban
+$010D9
+50	19	DF	19	D3	19	DA	19	EA	19	45	1A	46	1A	14	1A	23	1A	4A	1A	4B	1A	4C	1A	| Original Japanese Hex
+		そ		う		こ		ば		ん		エ		デ		ィ		ッ		ト				| Original Japanese Text
+		M		A		P				E		D		I		T		O		R				| New English Text
+A0	19	AD	19	A1	19	B0	19	A0	19	A5	19	A4	19	A9	19	B4	19	AF	19	B2	19	A0	19	| New English Hex

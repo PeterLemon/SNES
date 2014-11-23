@@ -1,0 +1,21 @@
+﻿--------------------
+Boss Monster Magic:
+--------------------
+-------
+Golem:
+-------
+間接攻撃
+Shock indirect attack
+$418E0
+43	00	01	55	56	C7	C8	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	間	接	攻	撃	| Original Japanese Text
+LENGTH	S	H	O	C	攻	撃	| New English Text
+03	1D	11	18	0C	C7	C8	| New English Hex
+
+間接攻撃
+Shock indirect attack
+$418E7
+E3	55 19	56 19	C7 18	C8 18	| Original Japanese Hex
+LENGTH	間WHITE	接WHITE	攻WHITE	撃WHITE	| Original Japanese Text
+LENGTH	SWHITE	HWHITE	OWHITE	CWHITE	| New English Text
+E3	1D 18	11 18	18 18	0C 18	| New English Hex

@@ -1,0 +1,53 @@
+﻿------------------
+Intro Characters:
+------------------
+ゴート騎士
+Gothic Knights
+$40CE6
+24	04	A7	F7	88	D0	20	| Original Japanese Hex
+LENGTH	LENGTH	ゴ	ー	ト	騎	士	| Original Japanese Text
+LENGTH	K	N	I	G	H	T	| New English Text
+05	14	17	12	10	11	1D	| New English Hex
+
+スレイ団長
+Slay head
+$40CF3
+04	81	9E	76	D1	D2	| Original Japanese Hex
+LENGTH	ス	レ	イ	団	長	| Original Japanese Text
+LENGTH	S	L	A	Y	長	| New English Text
+03	1C	15	0A	22	D2	| New English Hex
+
+総督
+Governor-General
+$40F8E
+01	F3	F5	| Original Japanese Hex
+LENGTH	総	督	| Original Japanese Text
+LENGTH	G	N	| New English Text
+01	10	17	| New English Hex
+
+---------------------
+Playable Characters:
+---------------------
+勇者 アルバ-ト
+Hero Albert
+$40C6B
+07	EF	E7	28	75	9D	B2	26	88	| Original Japanese Hex
+LENGTH	勇	者		ア	ル	バ	-	ト	| Original Japanese Text
+LENGTH	A	L	B	E	R	T	-	ト	| New English Text
+05	0A	15	0B	0E	1B	1D	26	88	| New English Hex
+
+僧侶 ノイマン
+Priest Neumann
+$413BD
+06	E2	E3	28	8D	76	93	A2	| Original Japanese Hex
+LENGTH	僧	侶		ノ	イ	マ	ン	| Original Japanese Text
+LENGTH	N	E	U	M	A	N	N	| New English Text
+06	17	0E	1E	16	0A	17	17	| New English Hex
+
+魔術師 ソフィア
+Magician Sofia
+$40C82
+27	06	E0	E4	DA	28	83	90	5C	75	| Original Japanese Hex
+LENGTH	LENGTH	魔	術	師		ソ	フ	ィ	ア	| Original Japanese Text
+LENGTH	S	O	F	I	A	ソ	フ	ィ	ア	| New English Text
+04	1C	18	0F	12	0A	83	90	5C	75	| New English Hex

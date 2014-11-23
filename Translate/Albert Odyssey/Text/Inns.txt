@@ -1,0 +1,84 @@
+﻿--------------
+Chiberus Inn:
+--------------
+おつかれさ ま です。ここは やどやですが+++
+You can be tired. +++ Here is the inn
+$43781 (Line 1)
+75	13	14	15	2D	3A	2E	52	33	47	64	35	C3	32	32	42	28	4C	65	4C	64	35	57	18	18	18	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	LENGTH	お	つ	か	れ	さ	ま	で	す	。	こ	こ	は		や	ど	や	で	す	が	+	+	+	| Original Japanese Text
+LENGTH	R	E	S	T	,		I	F		Y	O	U		A	R	E		T	I	R	E	D	.	.	.	| New English Text
+18	1B	0E	1C	1D	C4	28	12	0F	28	22	18	1E	28	0A	1B	0E	28	1D	12	1B	0E	0D	C3	C3	C3	| New English Hex
+
+	とまる
+	Stay
+	$47B80 (Line 2)
+	03	28	3C	47	51	| Original Japanese Hex
+	LENGTH		と	ま	る	| Original Japanese Text
+	LENGTH		B	E	D	| New English Text
+	03	28	0B	0E	0D	| New English Hex
+
+	SAVEする
+	Save To File
+	$47B85 (Line 3)
+	06	28	1C	0A	1F	0E	35	51	| Original Japanese Hex
+	LENGTH		S	A	V	E	す	る	| Original Japanese Text
+	LENGTH		S	A	V	E			| New English Text
+	04	28	1C	0A	1F	0E	28	28	| New English Hex
+
+しゅくはくりょう は $10 と なっております
+Price of Room is $10
+$437A4 (Line 1)
+09	34	73	30	42	30	50	74	2B	28	42	| Original Japanese Hex
+LENGTH	し	ゅ	く	は	く	り	ょ	う		は	| Original Japanese Text
+LENGTH	I	T		W	I	L	L		B	E	| New English Text
+09	12	1D	28	20	12	15	15	28	0B	0E	| New English Hex
+$437AF (Line 2)
+0C	F6	01	00	28	3C	28	3D	71	3B	2D	50	47	35	| Original Japanese Hex
+LENGTH	$	1	0		と		な	っ	て	お	り	ま	す	| Original Japanese Text
+LENGTH	$	1	0		T	O		S	T	A	Y	.	す	| New English Text
+0B	F6	01	00	28	1D	18	28	1C	1D	0A	22	C3	35	| New English Hex
+
+わかりました。では このノートに+++
+All right. In this note
+$47B8D
+72	10	11	12	54	2E	50	47	34	38	C3	64	42	28	32	41	8D	F7	88	3E	18	18	18	| Original Japanese Hex
+LENGTH	LENGTH	LENGTH	LENGTH	わ	か	り	ま	し	た	。	で	は		こ	の	ノ	ー	ト	に	+	+	+	| Original Japanese Text
+LENGTH	R	E	C	O	R	D	I	N	G		S	A	V	E		D	A	T	A	.	.	.	| New English Text
+15	1B	0E	0C	18	1B	0D	12	17	10	28	1C	0A	1F	0E	28	0D	0A	1D	0A	C3	C3	C3	| New English Hex
+
+このさき お気をつけて いってらっしゃいませ
+Take care and safe trip going ahead
+$4388D (Line 1)
+03	32	41	33	2F	| Original Japanese Hex
+LENGTH	こ	の	さ	き	| Original Japanese Text
+LENGTH	S	T	A	Y	| New English Text
+03	1C	1D	0A	22	| New English Hex
+$43892 (Line 2)
+10	2D	ED	55	3A	31	3B	28	2A	71	3B	4F	71	34	72	2A	47	36	| Original Japanese Hex
+LENGTH	お	気	を	つ	け	て		い	っ	て	ら	っ	し	ゃ	い	ま	せ	| Original Japanese Text
+LENGTH	A	N	Y	T	I	M	E		Y	O	U		W	A	N	T	.	| New English Text
+10	0A	17	22	1D	12	16	0E	28	22	18	1E	28	20	0A	17	1D	C3	| New English Hex
+
+ここまでのぼうけんをセーブしますか?
+Do you want to save the adventure so far?
+$4443C (Line 1)
+11	32	32	47	64	41	6A	2B	31	56	55	82	F7	B4	34	47	35	2E	24	| Original Japanese Hex
+LENGTH	こ	こ	ま	で	の	ぼ	う	け	ん	を	セ	ー	ブ	し	ま	す	か	?	| Original Japanese Text
+LENGTH	R	E	C	O	R	D		A		D	A	T	A		L	O	G	?	| New English Text
+11	1B	0E	0C	18	1B	0D	28	0A	28	0D	0A	1D	0A	28	15	18	10	24	| New English Hex
+
+	する
+	To File
+	$438E8 (Line 2)
+	01	35	51	| Original Japanese Hex
+	LENGTH	す	る	| Original Japanese Text
+	LENGTH	O	K	| New English Text
+	01	18	14	| New English Hex
+
+	しない
+	Not
+	$4444F (Line 3)
+	02	34	3D	2A	| Original Japanese Hex
+	LENGTH	し	な	い	| Original Japanese Text
+	LENGTH	N	O	い	| New English Text
+	01	17	18	2A	| New English Hex

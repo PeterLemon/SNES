@@ -1,0 +1,7 @@
+﻿じゃら
+Clink
+$7DC57
+94	C5	37	| Original Japanese Hex
+じ	ゃ	ら	| Original Japanese Text
+P	T	S	| New English Text
+1A	1E	1D	| New English Hex

@@ -1,0 +1,116 @@
+﻿-----------------
+Battle Messages:
+-----------------
+耐久力
+Endurance (Top Half)
+$14E62	$14EAF	$14EFC
+A4 21	A5 21	8F 21	| Original Japanese Hex
+耐WHITE	久WHITE	力WHITE	| Original Japanese Text
+HWHITE	PWHITE	:WHITE	| New English Text
+21 20	29 20	A6 21	| New English Hex
+	Endurance (Bottom Half)
+	$14E6B	$14EB8	$14F05
+	B4 21	B5 21	9F 21	| Original Japanese Hex
+	耐WHITE	久WHITE	力WHITE	| Original Japanese Text
+	HWHITE	PWHITE	:WHITE	| New English Text
+	31 20	39 20	B6 21	| New English Hex
+
+地形効果
+Terrain effect (Top half)
+$14DFE	$14E17	$14E30	$14E49
+AF 21	07 22	4F 22	64 22	| Original Japanese Hex
+地WHITE	形WHITE	効WHITE	果WHITE	| Original Japanese Text
+AWHITE	RWHITE	EWHITE	AWHITE	| New English Text
+0A 20	2B 20	0E 20	0A 20	| New English Hex
+	Terrain effect (Bottom half)
+	$14E07	$14E20	$14E39	$14E52
+	BF 21	17 22	5F 22	74 22	| orig kanji hex
+	地WHITE	形WHITE	効WHITE	果WHITE	| Original Japanese Text
+	AWHITE	RWHITE	EWHITE	AWHITE	| New English Text
+	1A 20	3B 20	1E 20	1A 20	| New English Hex
+
+向き補正率
+Orientation correction factor (Top Half)
+$14F5B	$14F74	$14F8D	$14FA6	$14FBF
+EE 21	4F 20	C9 21	8B 21	A8 22	| Original Japanese Hex
+向WHITE	きWHITE	補WHITE	正WHITE	率WHITE	| Original Japanese Text
+FWHITE	OWHITE	CWHITE	UWHITE	SWHITE	| New English Text
+0F 20	28 20	0C 20	2E 20	2C 20	| New English Hex
+	Orientation correction factor (Bottom Half)
+	$14F64	$14F7D	$14F96	$14FAF	$14FC8
+	FE 21	5F 20	D9 21	9B 21	B8 22	| Original Japanese Hex
+	向WHITE	きWHITE	補WHITE	正WHITE	率WHITE	| Original Japanese Text
+	FWHITE	OWHITE	CWHITE	UWHITE	SWHITE	| New English Text
+	1F 20	38 20	1C 20	3E 20	3C 20	| New English Hex
+
+と
+And
+$444D4
+E3	3C 00	28 00	F6 08	D6 00	| Original Japanese Hex
+LENGTH	とWHITE	WHITE	$GOLD	:WHITE	| Original Japanese Text
+LENGTH	+WHITE	WHITE	$GOLD	:WHITE	| New English Text
+E3	18 01	28 00	F6 08	D6 00	| New English Hex
+
+を手にいれた!
+Got the!
+$444DD
+26	01	55	40	3E	2A	52	38	25	| Original Japanese Hex
+LENGTH	LENGTH	を	手	に	い	れ	た	!	| Original Japanese Text
+LENGTH	R	E	C	E	I	V	E	D	| New English Text
+07	1B	0E	0C	0E	12	1F	0E	0D	| New English Hex
+
+は、
+The
+$446B4
+01	42 	C4	| Original Japanese Hex
+LENGTH	は	、	| Original Japanese Text
+LENGTH		:	| New English Text
+01	28	D6	| New English Hex
+
+を、ひろった!
+Picked Up the!
+$446B7
+06	55	C4	43	53	71	38	25	| Original Japanese Hex
+LENGTH	を	、	ひ	ろ	っ	た	!	| Original Japanese Text
+LENGTH	S	E	I	Z	E	D	!	| New English Text
+06	1C	0E	12	23	0E	0D	25	| New English Hex
+
+は、しんでしまった
+It died
+$44538
+08	42	C4	34	56	64	34	47	71	38	| Original Japanese Hex
+LENGTH	は	、	し	ん	で	し	ま	っ	た	| Original Japanese Text
+LENGTH	H	A	S		D	I	E	D	.	| New English Text
+08	11	0A	1C	28	0D	12	0E	0D	C3	| New English Hex
+
+は、まひ してしまった
+Had paralyzed
+$446BF
+0A	42	C4	47	43	28	34	3B	34	47	71	38	| Original Japanese Hex
+LENGTH	は	、	ま	ひ		し	て	し	ま	っ	た	| Original Japanese Text
+LENGTH	I	S		S	T	O	N	E	.	.	.	| New English Text
+0A	12	1C	28	1C	1D	18	17	0E	C3	C3	C3	| New English Hex
+
+まひ している
+Has paralysis
+$446CB
+06	47	43	28	34	3B	2A	51	| Original Japanese Hex
+LENGTH	ま	ひ		し	て	い	る	| Original Japanese Text
+LENGTH	S	T	O	N	E	.	.	| New English Text
+06	1C	1D	18	17	0E	C3	C3	| New English Hex
+
+は、まひ した!
+Is paralyzed!
+$47B19
+07	42	C4	47	43	28	34	38	25	| Original Japanese Hex
+LENGTH	は	、	ま	ひ		し	た	!	| Original Japanese Text
+LENGTH	I	S		S	T	O	N	E	| New English Text
+07	12	1C	28	1C	1D	18	17	0E	| New English Hex
+
+の まひ が とけた!
+Paralysis Removed!
+$47F51
+0A	41	28	47	43	28	57	28	3C	31	38	25	| Original Japanese Hex
+LENGTH	の		ま	ひ		が		と	け	た	!	| Original Japanese Text
+LENGTH	S	T	O	N	E		G	O	N	E	!	| New English Text
+0A	1C	1D	18	17	0E	28	10	18	17	0E	25	| New English Hex	

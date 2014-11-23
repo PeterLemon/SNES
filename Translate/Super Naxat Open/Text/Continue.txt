@@ -1,0 +1,76 @@
+﻿ロードする スロットを えらんでください
+Please select a slot to load
+$7EB01
+55	82	AB	60	39	00	6F	55	D1	76	3D	00	28	37	3E	9B	5B	98	5E	26	| Original Japanese Hex
+ロ	ー	ド	す	る		ス	ロ	ッ	ト	を		え	ら	ん	で	く	だ	さ	い	| Original Japanese Text
+C	H	O	O	S	E		S	L	O	T		T	O		L	O	A	D		| New English Text
+0D	12	19	19	1D	0F	00	1D	16	19	1E	00	1E	19	00	16	19	0B	0E	00	| New English Hex
+
+
+" "
+There is no data
+$7EC1C (Line 1)
+00	8B	00	00	8B	| Original Japanese Hex
+	"			"	| Original Japanese Text
+T	H	E	R	E	| New English Text
+1E	12	0F	1C	0F	| New English Hex
+データが ありません
+$7EC24 (Line 2)
+75	82	72	59	00	25	38	2F	61	3E	| Original Japanese Hex
+デ	ー	タ	が		あ	り	ま	せ	ん	| Original Japanese Text
+I	S		N	O		D	A	T	A	| New English Text
+13	1D	00	18	19	00	0E	0B	1E	0B	| New English Hex
+
+すとろーく
+Stroke
+$7F995
+60	67	3B	82	5B	| Original Japanese Hex
+す	と	ろ	ー	く	| Original Japanese Text
+S	T	R	O	K	| New English Text
+1D	1E	1C	19	15	| New English Hex
+|
+マッチ
+Match
+$7F99B
+00	49	8A	73	00	| Original Japanese Hex
+	マ	ッ	チ		| Original Japanese Text
+M	A	T	C	H	| New English Text
+17	0B	1E	0D	12	| New English Hex
+
+。 "
+Speed
+$7EBD8 (Line 1)
+00	8C	00	8B	| Original Japanese Hex
+	。		"	| Original Japanese Text
+T	E	X	T	| New English Text
+1E	0F	22	1E	| New English Hex
+すぴーど
+$7EBDF (Line 2)
+60	78	82	67	| Original Japanese Hex
+す	ひ	ー	と	| Original Japanese Text
+	S	P	D	| New English Text
+00	1D	1A	0E	| New English Hex
+|
+はやい
+Fast
+$7F8A7
+77	34	26	| Original Japanese Hex
+は	や	い	| Original Japanese Text
+F	S	T	| New English Text
+10	1D	1E	| New English Hex
+|
+ふつう
+Normal
+$7F9AB
+79	65	27	| Original Japanese Hex
+ふ	つ	う	| Original Japanese Text
+N	O	R	| New English Text
+18	19	1C	| New English Hex
+|
+おそい
+Slow
+$7F9AF
+29	62	26	| Original Japanese Hex
+お	そ	い	| Original Japanese Text
+S	L	W	| New English Text
+1D	16	21	| New English Hex

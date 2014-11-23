@@ -1,0 +1,47 @@
+﻿とーたるすこあ
+Total Score
+$7DB7B
+67	82	63	39	60	5D	25	| Original Japanese Hex
+と	ー	た	る	す	こ	あ	| Original Japanese Text
+O	V	E	R	A	L	L	| New English Text
+19	20	0F	1C	0B	16	16	| New English Hex
+
+しょうきん
+Prize
+$7DB8F
+5F	C7	27	5A	3E	| Original Japanese Hex
+し	ょ	う	き	ん	| Original Japanese Text
+P	R	I	Z	E	| New English Text
+1A	1C	13	24	0F	| New English Hex
+
+じゃら
+Score
+$7DB9D
+94	C5	37	| Original Japanese Hex
+じ	ゃ	ら	| Original Japanese Text
+P	T	S	| New English Text
+1A	1E	1D	| New English Hex
+
+BOGGY
+BOGEY
+$7F67D
+00	00	00	0C	19	11	11	23	| Original Japanese Hex
+			B	O	G	G	Y	| Original Japanese Text
+			B	O	G	E	Y	| New English Text
+00	00	00	0C	19	11	0F	23	| New English Hex
+
+DOUBLE BOGGY
+DOUBLE BOGEY
+$7F686
+0E	19	1F	0C	16	0F	00	0C	19	11	11	23	| Original Japanese Hex
+D	O	U	B	L	E		B	O	G	G	Y	| Original Japanese Text
+D	O	U	B	L	E		B	O	G	E	Y	| New English Text
+0E	19	1F	0C	16	0F	00	0C	19	11	0F	23	| New English Hex
+
+TRIPLE BOGGY
+TRIPLE BOGEY
+$7F693
+1E	1C	13	1A	16	0F	00	0C	19	11	11	23	| Original Japanese Hex
+T	R	I	P	L	E		B	O	G	G	Y	| Original Japanese Text
+T	R	I	P	L	E		B	O	G	E	Y	| New English Text
+1E	1C	13	1A	16	0F	00	0C	19	11	0F	23	| New English Hex

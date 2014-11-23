@@ -1,0 +1,101 @@
+﻿---------------
+Boss Monsters:
+---------------
+ゴーレム
+Golem
+$40CBA
+03	A7	F7	9E	95	| Original Japanese Hex
+LENGTH	ゴ	ー	レ	ム	| Original Japanese Text
+LENGTH	G	O	L	M	| New English Text
+03	10	18	15	16	| New English Hex
+
+レッサーデーモン
+Lesser Demon / Laser Demon
+$418D0
+07	9E	BD	7F	F7	B0	F7	97	A2	| Original Japanese Hex
+LENGTH	レ	ッ	サ	ー	デ	ー	モ	ン	| Original Japanese Text
+LENGTH	L	O	.	D	E	M	O	N	| New English Text
+07	15	18	C3	0D	0E	16	18	17	| New English Hex
+
+ハーピー
+Harpy
+$43A8B
+03	8E	F7	B8	F7	| Original Japanese Hex
+LENGTH	ハ	ー	ピ	ー	| Original Japanese Text
+LENGTH	H	A	R	P	| New English Text
+03	11	0A	1B	19	| New English Hex
+
+-----------------
+Normal Monsters:
+-----------------
+スケルトン
+Skeleton
+$40C9E
+04	81	7D	9D	88	A2	| Original Japanese Hex
+LENGTH	ス	ケ	ル	ト	ン	| Original Japanese Text
+LENGTH	S	K	E	L	T	| New English Text
+04	1C	14	0E	15	1D	| New English Hex
+
+ローパー
+Roper
+$40CAC
+03	9F	F7	B7	F7	| Original Japanese Hex
+LENGTH	ロ	ー	パ	ー	| Original Japanese Text
+LENGTH	R	O	P	E	| New English Text
+03	1B	18	19	0E	| New English Hex
+
+ガーゴイル
+Gargoyle
+$40CDB
+04	A3	F7	A7	76	9D	| Original Japanese Hex
+LENGTH	ガ	ー	ゴ	イ	ル	| Original Japanese Text
+LENGTH	G	A	R	G	O	| New English Text
+04	10	0A	1B	10	18	| New English Hex
+
+ゴブリン
+Goblin
+$40CE1
+03	A7	B4	9C	A2	| Original Japanese Hex
+LENGTH	ゴ	ブ	リ	ン	| Original Japanese Text
+LENGTH	G	O	B	L	| New English Text
+03	10	18	0B	15	| New English Hex
+
+おおこうもり
+Fruit Bat / Flying Fox
+$4189A
+05	2D	2D	32	2B	4B	50	| Original Japanese Hex
+LENGTH	お	お	こ	う	も	り	| Original Japanese Text
+LENGTH	F	R	U	B	A	T	| New English Text
+05	0F	1B	1E	0B	0A	1D	| New English Hex
+
+リザード マン
+Lizard Man
+$418A6
+05	9C	A8	26	B1	93	A2	| Original Japanese Hex
+LENGTH	リ	ザ	ー	ド	マ	ン	| Original Japanese Text
+LENGTH	L	I	Z	M	A	N	| New English Text
+05	15	12	23	16	0A	17	| New English Hex
+
+ドラゴン
+Dragon
+$418AD
+03	B1	9B	A7	A2	| Original Japanese Hex
+LENGTH	ド	ラ	ゴ	ン	| Original Japanese Text
+LENGTH	D	R	A	G	| New English Text
+03	0D	1B	0A	10	| New English Hex
+
+レッドローパー
+Red Roper
+$47A25
+06	9E	BD	B1	9F	F7	B7	F7	| Original Japanese Hex
+LENGTH	レ	ッ	ド	ロ	ー	パ	ー	| Original Japanese Text
+LENGTH	R	E	D	R	O	P	E	| New English Text
+06	1B	0E	0D	1B	18	19	0E	| New English Hex
+
+マントスカル
+Skull Cloak
+$47A33
+05	93	A2	88	81	7A	9D	| Original Japanese Hex
+LENGTH	マ	ン	ト	ス	カ	ル	| Original Japanese Text
+LENGTH	S	K	U	L	L	C	| New English Text
+05	1C	14	1E	15	15	0C	| New English Hex

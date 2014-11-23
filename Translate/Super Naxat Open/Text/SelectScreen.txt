@@ -1,0 +1,45 @@
+﻿すこあ
+Score
+$7E3BA
+60	5D	25	| Original Japanese Hex
+す	こ	あ	| Original Japanese Text
+S	C	R	| New English Text
+1D	0D	1C	| New English Hex
+
+しょうきん
+Prize
+$7E303
+5F	85	27	5A	3E	| Original Japanese Hex
+し	ょ	う	き	ん	| Original Japanese Text
+P	R	I	Z	E	| New English Text
+1A	1C	13	24	0F	| New English Hex
+
+フッフッフッ たたかいは はじまった
+Fuffuffu~tsu battle began
+Aim: accept a gift or top good! I aim at!
+$78B5E	(Line 1)
+7E	D1	7E	D1	7E	D1	00	63	63	59	26	77	00	77	94	2F	C8	63	| Original Japanese Hex
+フ	ッ	フ	ッ	フ	ッ		た	た	か	い	は		は	じ	ま	っ	た	| Original Japanese Text
+T	H	E		B	A	T	T	L	E		H	A	S		N	O	W	| New English Text
+??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	| New English Hex
+よいか! トップをねらえ! ねらうのだ!
+$78B74	(Line 2)
+36	26	59	85	00	76	D1	BD	3D	2D	37	28	85	00	2D	37	27	2E	98	85	| Original Japanese Hex
+よ	い	か	!		ト	ッ	プ	を	ね	ら	え	!		ね	ら	う	の	だ	!	| Original Japanese Text
+S	T	A	R	T	E	D	!	A	I	M		F	O	R		T	O	P	!	| New English Text
+??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	85	| New English Hex
+
+まだ たたかいは はじまったばかりですわ
+It is still only just began
+With it, and I do my best to please you.
+$7A65D (Line 1)
+2F	98	00	63	63	59	26	77	00	77	94	2F	C8	63	AC	59	38	9B	60	3C	| Original Japanese Hex
+ま	だ		た	た	か	い	は		は	じ	ま	っ	た	ば	か	り	で	す	わ	| Original Japanese Text
+T	H	I	S		I	S		T	H	E		S	T	A	R	T		O	F	| New English Text
+1E	12	13	1D	00	13	1D	00	1E	12	0F	00	1D	1E	0B	1C	1E	00	19	10	| New English Hex
+おうえんしてますわ がんばってくださいね
+$7A675 (Line 2)
+29	27	28	3E	5F	66	2F	60	3C	00	8E	3E	AC	C8	66	5B	98	5E	26	2D	| Original Japanese Hex
+お	う	え	ん	し	て	ま	す	わ		が	ん	ば	っ	て	く	だ	さ	い	ね	| Original Japanese Text
+T	H	E		R	O	U	N	D	.	G	O	O	D		L	U	C	K	!	| New English Text
+1E	12	0F	00	1C	19	1F	18	0E	88	11	19	19	0E	00	16	1F	0D	15	85	| New English Hex
