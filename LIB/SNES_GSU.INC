@@ -116,6 +116,3 @@ define GSU_CBR($303E) // GSU Cache Base Register (%CCCCCCCCCCCC----: C = Cache A
 
 // GSU Cache Start Exposed To SCPU - Access From SNES CPU (Write Only, 1 Byte)
 define GSU_CACHE($3100) // GSU Cache Start Exposed To SCPU (%CCCCCCCC: C = Cache Start Exposed To SCPU)
-
-// GSU ? Register - Access From SNES CPU (Read/Write?, 1 Byte)
-define GSU_UNKNOWN($347F) // GSU ? Register (%BBBBBBBB: B = ?)
