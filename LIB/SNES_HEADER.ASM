@@ -1,7 +1,7 @@
 //=============
 // SNES Header
 //=============
-seek ($FFC0)
+seek($FFC0)
 // PROGRAM TITLE (21 Byte ASCII String, Use Spaces For Unused Bytes)
 db "SNES PROGRAM TITLE   "
 // "123456789012345678901"
