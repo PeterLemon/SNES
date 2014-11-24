@@ -11,6 +11,8 @@ Special thanks to byuu, for making the higan emulator, & the bass assembler =D<b
 Please check out higan, a cycle accurate SNES Emulator:<br />
 http://byuu.org/emulation/higan<br />
 <br />
+Also thanks to ARM9, for helping me with my SNES initialisation routine, & SuperFX/GSU LIB file.<br />
+<br />
 Howto Compile:<br />
 All the code compiles into a single binary (ROMNAME.sfc) file.<br />
 Using bass Run: make.bat<br />
