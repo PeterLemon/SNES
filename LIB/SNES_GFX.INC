@@ -4,31 +4,31 @@
 
 macro WaitNMI() {
   -
-    bit.w {REG_RDNMI} // $4210: Read NMI Flag Register
+    bit.w REG_RDNMI // $4210: Read NMI Flag Register
     bpl - // Wait For NMI Flag
 }
 
 macro WaitHV() {
   -
-    bit.w {REG_TIMEUP} // $4210: Read H/V-Timer IRQ Flag
+    bit.w REG_TIMEUP // $4210: Read H/V-Timer IRQ Flag
     bpl - // Wait For H/V Timer IRQ Flag
 }
 
 macro WaitHVB() {
   -
-    bit.w {REG_HVBJOY} // $4212: Read H/V-Blank Flag & Joypad Busy Flag
+    bit.w REG_HVBJOY // $4212: Read H/V-Blank Flag & Joypad Busy Flag
     bpl - // Wait For V-Blank Period Flag
 }
 
 macro FadeIN() { // Increment Screen Brightness From 0..15 (VSYNC Timing)
   ldx.w #$0000 // Set X To Mininmum Brightness Level
   -
-    bit.w {REG_RDNMI} // $4210: Read NMI Flag Register
+    bit.w REG_RDNMI // $4210: Read NMI Flag Register
     bpl - // Wait For NMI Flag
 
-  inx                 // Increments Brightness Level
-  txa                 // Swap 16-Bit X To 8-Bit A
-  sta.w {REG_INIDISP} // $2100: Turn Screen To Brightness Level
+  inx // Increments Brightness Level
+  txa // Swap 16-Bit X To 8-Bit A
+  sta.w REG_INIDISP // $2100: Turn Screen To Brightness Level
   cmp.b #$0F // Compare With Maximum Brightness Level (15)
   bne -      // IF (Screen != Maximum Brightness Level) Loop
 }
@@ -36,12 +36,12 @@ macro FadeIN() { // Increment Screen Brightness From 0..15 (VSYNC Timing)
 macro FadeOUT() { // Decrement Screen Brightness From 15..0 (VSYNC Timing)
   ldx.w #$000F // Set X To Maximum Brightness Level
   -
-    bit.w {REG_RDNMI} // $4210: Read NMI Flag Register
+    bit.w REG_RDNMI // $4210: Read NMI Flag Register
     bpl - // Wait For NMI Flag
 
-  dex                 // Decrement Brightness Level
-  txa                 // Swap 16-Bit X To 8-Bit A
-  sta.w {REG_INIDISP} // $2100: Turn Screen To Brightness Level
+  dex // Decrement Brightness Level
+  txa // Swap 16-Bit X To 8-Bit A
+  sta.w REG_INIDISP // $2100: Turn Screen To Brightness Level
   cmp.b #$00 // Compare With Minimum Brightness Level
   bne -      // IF (Screen != Minimum Brightness Level) Loop
 }
@@ -54,21 +54,21 @@ macro FadeOUT() { // Decrement Screen Brightness From 15..0 (VSYNC Timing)
 // SIZE: Size Of Data (# Of Colors To Copy)
 // CHAN: DMA Channel To Transfer Data (0..7)
 macro LoadPAL(SRC, DEST, SIZE, CHAN) {
-  lda.b #{DEST}     // CGRAM Destination
-  sta.w {REG_CGADD} // $2121: CGRAM
+  lda.b #{DEST}   // CGRAM Destination
+  sta.w REG_CGADD // $2121: CGRAM
 
-  stz.w {REG_DMAP{CHAN}} // Set DMA Mode (Byte, Normal Increment) ($43X0: DMA Control)
-  lda.b #$22             // Set Destination Register ($2122: CGRAM Write)
-  sta.w {REG_BBAD{CHAN}} // $43X1: DMA Destination
-  ldx.w #{SRC}           // Source Data
-  stx.w {REG_A1T{CHAN}L} // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
-  lda.b #{SRC} >> 16     // Source Bank
-  sta.w {REG_A1B{CHAN}}  // Store Data Bank To DMA Source Bank ($43X4: Source Bank)
-  ldx.w #{SIZE}          // Size In Bytes To DMA Transfer (2 Bytes For Each Color)
-  stx.w {REG_DAS{CHAN}L} // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
+  stz.w REG_DMAP{CHAN} // Set DMA Mode (Byte, Normal Increment) ($43X0: DMA Control)
+  lda.b #$22           // Set Destination Register ($2122: CGRAM Write)
+  sta.w REG_BBAD{CHAN} // $43X1: DMA Destination
+  ldx.w #{SRC}         // Source Data
+  stx.w REG_A1T{CHAN}L // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
+  lda.b #{SRC} >> 16   // Source Bank
+  sta.w REG_A1B{CHAN}  // Store Data Bank To DMA Source Bank ($43X4: Source Bank)
+  ldx.w #{SIZE}        // Size In Bytes To DMA Transfer (2 Bytes For Each Color)
+  stx.w REG_DAS{CHAN}L // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
 
   lda.b #$01 << {CHAN} // Initiate DMA Transfer On Channel
-  sta.w {REG_MDMAEN}   // $420B: DMA Enable
+  sta.w REG_MDMAEN     // $420B: DMA Enable
 }
 
 //==========================================
@@ -79,25 +79,25 @@ macro LoadPAL(SRC, DEST, SIZE, CHAN) {
 // SIZE: Size Of Data (# Of Colors To Copy)
 // CHAN: DMA Channel To Transfer Data (0..7)
 macro UpdatePAL(SRC, DEST, SIZE, CHAN) {
-  lda.b #{DEST}     // CGRAM Destination
-  sta.w {REG_CGADD} // $2121: CGRAM
+  lda.b #{DEST}   // CGRAM Destination
+  sta.w REG_CGADD // $2121: CGRAM
 
-  stz.w {REG_DMAP{CHAN}} // Set DMA Mode (Byte, Normal Increment) ($43X0: DMA Control)
-  lda.b #$22             // Set Destination Register ($2122: CGRAM Write)
-  sta.w {REG_BBAD{CHAN}} // $43X1: DMA Destination
-  ldx.w #{SRC}           // Source Data
-  stx.w {REG_A1T{CHAN}L} // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
-  lda.b #{SRC} >> 16     // Source Bank
-  sta.w {REG_A1B{CHAN}}  // Store Data Bank To DMA Source Bank ($43X4: Source Bank)
-  ldx.w #{SIZE}          // Size In Bytes To DMA Transfer (2 Bytes For Each Color)
-  stx.w {REG_DAS{CHAN}L} // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
+  stz.w REG_DMAP{CHAN} // Set DMA Mode (Byte, Normal Increment) ($43X0: DMA Control)
+  lda.b #$22           // Set Destination Register ($2122: CGRAM Write)
+  sta.w REG_BBAD{CHAN} // $43X1: DMA Destination
+  ldx.w #{SRC}         // Source Data
+  stx.w REG_A1T{CHAN}L // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
+  lda.b #{SRC} >> 16   // Source Bank
+  sta.w REG_A1B{CHAN}  // Store Data Bank To DMA Source Bank ($43X4: Source Bank)
+  ldx.w #{SIZE}        // Size In Bytes To DMA Transfer (2 Bytes For Each Color)
+  stx.w REG_DAS{CHAN}L // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
 
   -
-    bit.w {REG_HVBJOY} // $4212: Read H/V-Blank Flag & Joypad Busy Flag
+    bit.w REG_HVBJOY // $4212: Read H/V-Blank Flag & Joypad Busy Flag
     bpl - // Wait For V-Blank Period Flag
 
   lda.b #$01 << {CHAN} // Initiate DMA Transfer On Channel
-  sta.w {REG_MDMAEN}   // $420B: DMA Enable
+  sta.w REG_MDMAEN     // $420B: DMA Enable
 }
 
 //==================================
@@ -109,21 +109,21 @@ macro UpdatePAL(SRC, DEST, SIZE, CHAN) {
 // CHAN: DMA Channel To Transfer Data (0..7)
 macro LoadVRAM(SRC, DEST, SIZE, CHAN) {
   ldx.w #{DEST} >> 1 // VRAM Destination
-  stx.w {REG_VMADDL} // $2116: VRAM
+  stx.w REG_VMADDL   // $2116: VRAM
 
   lda.b #$01
-  sta.w {REG_DMAP{CHAN}} // Set DMA Mode (Word, Normal Increment) ($43X0: DMA Control)
-  lda.b #$18             // Set Destination Register ($2118: VRAM Write)
-  sta.w {REG_BBAD{CHAN}} // $43X1: DMA Destination
-  ldx.w #{SRC}           // Source Data
-  stx.w {REG_A1T{CHAN}L} // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
-  lda.b #{SRC} >> 16     // Source Bank
-  sta.w {REG_A1B{CHAN}}  // Store Data Bank To DMA Source Bank ($43X4: Source Bank)
-  ldx.w #{SIZE}          // Size In Bytes To DMA Transfer
-  stx.w {REG_DAS{CHAN}L} // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
+  sta.w REG_DMAP{CHAN} // Set DMA Mode (Word, Normal Increment) ($43X0: DMA Control)
+  lda.b #$18           // Set Destination Register ($2118: VRAM Write)
+  sta.w REG_BBAD{CHAN} // $43X1: DMA Destination
+  ldx.w #{SRC}         // Source Data
+  stx.w REG_A1T{CHAN}L // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
+  lda.b #{SRC} >> 16   // Source Bank
+  sta.w REG_A1B{CHAN}  // Store Data Bank To DMA Source Bank ($43X4: Source Bank)
+  ldx.w #{SIZE}        // Size In Bytes To DMA Transfer
+  stx.w REG_DAS{CHAN}L // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
 
   lda.b #$01 << {CHAN} // Initiate DMA Transfer On Channel
-  sta.w {REG_MDMAEN}   // $420B: DMA Enable
+  sta.w REG_MDMAEN     // $420B: DMA Enable
 }
 
 //======================================
@@ -135,25 +135,25 @@ macro LoadVRAM(SRC, DEST, SIZE, CHAN) {
 // CHAN: DMA Channel To Transfer Data (0..7)
 macro UpdateVRAM(SRC, DEST, SIZE, CHAN) {
   ldx.w #{DEST} >> 1 // VRAM Destination
-  stx.w {REG_VMADDL} // $2116: VRAM
+  stx.w REG_VMADDL   // $2116: VRAM
 
   lda.b #$01
-  sta.w {REG_DMAP{CHAN}} // Set DMA Mode (Word, Normal Increment) ($43X0: DMA Control)
-  lda.b #$18             // Set Destination Register ($2118: VRAM Write)
-  sta.w {REG_BBAD{CHAN}} // $43X1: DMA Destination
-  ldx.w #{SRC}           // Source Data
-  stx.w {REG_A1T{CHAN}L} // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
-  lda.b #{SRC} >> 16     // Source Bank
-  sta.w {REG_A1B{CHAN}}  // Store Data Bank To DMA Source Bank ($43X4: Source Bank)
-  ldx.w #{SIZE}          // Size In Bytes To DMA Transfer
-  stx.w {REG_DAS{CHAN}L} // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
+  sta.w REG_DMAP{CHAN} // Set DMA Mode (Word, Normal Increment) ($43X0: DMA Control)
+  lda.b #$18           // Set Destination Register ($2118: VRAM Write)
+  sta.w REG_BBAD{CHAN} // $43X1: DMA Destination
+  ldx.w #{SRC}         // Source Data
+  stx.w REG_A1T{CHAN}L // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
+  lda.b #{SRC} >> 16   // Source Bank
+  sta.w REG_A1B{CHAN}  // Store Data Bank To DMA Source Bank ($43X4: Source Bank)
+  ldx.w #{SIZE}        // Size In Bytes To DMA Transfer
+  stx.w REG_DAS{CHAN}L // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
 
   -
-    bit.w {REG_HVBJOY} // $4212: Read H/V-Blank Flag & Joypad Busy Flag
+    bit.w REG_HVBJOY // $4212: Read H/V-Blank Flag & Joypad Busy Flag
     bpl - // Wait For V-Blank Period Flag
 
   lda.b #$01 << {CHAN} // Initiate DMA Transfer On Channel
-  sta.w {REG_MDMAEN}   // $420B: DMA Enable
+  sta.w REG_MDMAEN     // $420B: DMA Enable
 }
 
 //===========================================
@@ -167,37 +167,37 @@ macro UpdateVRAM(SRC, DEST, SIZE, CHAN) {
 //      CHAN: DMA Channel To Transfer Data (0..7)
 macro LoadM7VRAM(SRCMAP, SRCTILES, DEST, SIZEMAP, SIZETILES, CHAN) {
   // Load Mode7 Map Data To VRAM
-  stz.w {REG_VMAIN}  // $2115: Video Port Control
+  stz.w REG_VMAIN    // $2115: Video Port Control
   ldx.w #{DEST} >> 1 // VRAM Destination
-  stx.w {REG_VMADDL} // $2116: VRAM
+  stx.w REG_VMADDL   // $2116: VRAM
 
-  lda.b #$18             // Set Destination Register ($2118: VRAM Write)
-  sta.w {REG_BBAD{CHAN}} // $43X1: DMA Destination
-  ldx.w #{SRCMAP}        // Source Map
-  stx.w {REG_A1T{CHAN}L} // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
-  lda.b #{SRCMAP} >> 16  // Source Bank
-  sta.w {REG_A1B{CHAN}}  // Store Data Bank To DMA Source Bank ($43X4: Source Bank)
-  ldx.w #{SIZEMAP}       // Size In Bytes To DMA Transfer
-  stx.w {REG_DAS{CHAN}L} // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
+  lda.b #$18            // Set Destination Register ($2118: VRAM Write)
+  sta.w REG_BBAD{CHAN}  // $43X1: DMA Destination
+  ldx.w #{SRCMAP}       // Source Map
+  stx.w REG_A1T{CHAN}L  // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
+  lda.b #{SRCMAP} >> 16 // Source Bank
+  sta.w REG_A1B{CHAN}   // Store Data Bank To DMA Source Bank ($43X4: Source Bank)
+  ldx.w #{SIZEMAP}      // Size In Bytes To DMA Transfer
+  stx.w REG_DAS{CHAN}L  // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
 
   lda.b #$01 << {CHAN} // Initiate DMA Transfer On Channel
-  sta.w {REG_MDMAEN}   // $420B: DMA Enable
+  sta.w REG_MDMAEN     // $420B: DMA Enable
 
   // Load Mode7 Tile Data To VRAM (Needs To Be On Same Bank As Map)
   lda.b #$80
-  sta.w {REG_VMAIN}  // $2115: Video Port Control
-  ldx.w #{DEST}      // VRAM Destination
-  stx.w {REG_VMADDL} // $2116: VRAM
+  sta.w REG_VMAIN    // $2115: Video Port Control
+  ldx.w #{DEST} >> 1 // VRAM Destination
+  stx.w REG_VMADDL   // $2116: VRAM
 
-  lda.b #$19             // Set Destination Register ($2119: VRAM Write)
-  sta.w {REG_BBAD{CHAN}} // $43X1: DMA Destination
-  ldx.w #{SRCTILES}      // Source Tile
-  stx.w {REG_A1T{CHAN}L} // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
-  ldx.w #{SIZETILES}     // Size In Bytes To DMA Transfer
-  stx.w {REG_DAS{CHAN}L} // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
+  lda.b #$19           // Set Destination Register ($2119: VRAM Write)
+  sta.w REG_BBAD{CHAN} // $43X1: DMA Destination
+  ldx.w #{SRCTILES}    // Source Tile
+  stx.w REG_A1T{CHAN}L // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
+  ldx.w #{SIZETILES}   // Size In Bytes To DMA Transfer
+  stx.w REG_DAS{CHAN}L // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
 
   lda.b #$01 << {CHAN} // Initiate DMA Transfer On Channel
-  sta.w {REG_MDMAEN}   // $420B: DMA Enable
+  sta.w REG_MDMAEN     // $420B: DMA Enable
 }
 
 //==================================
@@ -247,23 +247,23 @@ macro Mode7CALC(A, B, C, D, ANGLE, SX, SY, SINCOS) {
   // Calculate B & C (SIN)
   // B
   lda.b {SX}       // Scale X
-  sta.w {REG_M7A}  // $211B: MODE7 COSINE A (Multiplicand A)
+  sta.w REG_M7A    // $211B: MODE7 COSINE A (Multiplicand A)
   lda.b {SX} + 1
-  sta.w {REG_M7A}  // $211B: MODE7 COSINE A (Multiplicand A)
+  sta.w REG_M7A    // $211B: MODE7 COSINE A (Multiplicand A)
   lda.w {SINCOS},x // SIN(X)
-  sta.w {REG_M7B}  // $211C: MODE7 SINE A   (Multiplicand B)
-  ldy.w {REG_MPYM} // $2135: Multiplication Result -> 8.8
+  sta.w REG_M7B    // $211C: MODE7 SINE A   (Multiplicand B)
+  ldy.w REG_MPYM   // $2135: Multiplication Result -> 8.8
   sty.w {B}
   // C
   lda.b {SY}       // Scale Y
-  sta.w {REG_M7A}  // $211B: MODE7 COSINE A (Multiplicand A)
+  sta.w REG_M7A    // $211B: MODE7 COSINE A (Multiplicand A)
   lda.b {SY} + 1   // High Byte
-  sta.w {REG_M7A}  // $211B: MODE7 COSINE A (Multiplicand A)
+  sta.w REG_M7A    // $211B: MODE7 COSINE A (Multiplicand A)
   lda.w {SINCOS},x // SIN(X)
   eor.b #$FF       // Make Negative
   inc
-  sta.w {REG_M7B}  // $211C: MODE7 SINE A   (Multiplicand B)
-  ldy.w {REG_MPYM} // $2135: Multiplication Result -> 8.8
+  sta.w REG_M7B  // $211C: MODE7 SINE A   (Multiplicand B)
+  ldy.w REG_MPYM // $2135: Multiplication Result -> 8.8
   sty.w {C}
 
   // Change X Index To Point To COS Values (X + 64)
@@ -275,41 +275,41 @@ macro Mode7CALC(A, B, C, D, ANGLE, SX, SY, SINCOS) {
   // Calculate A & D (COS)
   // A
   lda.b {SX}       // Scale X
-  sta.w {REG_M7A}  // $211B: MODE7 COSINE A (Multiplicand A)
+  sta.w REG_M7A    // $211B: MODE7 COSINE A (Multiplicand A)
   lda.b {SX} + 1
-  sta.w {REG_M7A}  // $211B: MODE7 COSINE A (Multiplicand A)
+  sta.w REG_M7A    // $211B: MODE7 COSINE A (Multiplicand A)
   lda.w {SINCOS},x // COS(X)
-  sta.w {REG_M7B}  // $211C: MODE7 SINE A   (Multiplicand B)
-  ldy.w {REG_MPYM} // $2135: Multiplication Result -> 8.8
+  sta.w REG_M7B    // $211C: MODE7 SINE A   (Multiplicand B)
+  ldy.w REG_MPYM   // $2135: Multiplication Result -> 8.8
   sty.w {A}
   // D
   lda.b {SY}       // Scale Y
-  sta.w {REG_M7A}  // $211B: MODE7 COSINE A (Multiplicand A)
+  sta.w REG_M7A    // $211B: MODE7 COSINE A (Multiplicand A)
   lda.b {SY} + 1
-  sta.w {REG_M7A}  // $211B: MODE7 COSINE A (Multiplicand A)
+  sta.w REG_M7A    // $211B: MODE7 COSINE A (Multiplicand A)
   lda.w {SINCOS},x // COS(X)
-  sta.w {REG_M7B}  // $211C: MODE7 SINE A   (Multiplicand B)
-  ldy.w {REG_MPYM} // $2135: Multiplication Result -> 8.8
+  sta.w REG_M7B    // $211C: MODE7 SINE A   (Multiplicand B)
+  ldy.w REG_MPYM   // $2135: Multiplication Result -> 8.8
   sty.w {D}
 
   // Store Result To Matrix
   lda.b {A}
-  sta.w {REG_M7A} // $211B: MODE7 COSINE A (Multiplicand A)
+  sta.w REG_M7A // $211B: MODE7 COSINE A (Multiplicand A)
   lda.b {A} + 1
-  sta.w {REG_M7A} // $211B: MODE7 COSINE A (Multiplicand A)
+  sta.w REG_M7A // $211B: MODE7 COSINE A (Multiplicand A)
 
   lda.b {B}
-  sta.w {REG_M7B} // $211C: MODE7 SINE A   (Multiplicand B)
+  sta.w REG_M7B // $211C: MODE7 SINE A   (Multiplicand B)
   lda.b {B} + 1
-  sta.w {REG_M7B} // $211C: MODE7 SINE A   (Multiplicand B)
+  sta.w REG_M7B // $211C: MODE7 SINE A   (Multiplicand B)
 
   lda.b {C}
-  sta.w {REG_M7C} // $211D: MODE7 SINE B
+  sta.w REG_M7C // $211D: MODE7 SINE B
   lda.b {C} + 1
-  sta.w {REG_M7C} // $211D: MODE7 SINE B
+  sta.w REG_M7C // $211D: MODE7 SINE B
 
   lda.b {D}
-  sta.w {REG_M7D} // $211E: MODE7 COSINE B
+  sta.w REG_M7D // $211E: MODE7 COSINE B
   lda.b {D} + 1
-  sta.w {REG_M7D} // $211E: MODE7 COSINE B
+  sta.w REG_M7D // $211E: MODE7 COSINE B
 }
