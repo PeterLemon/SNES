@@ -24,14 +24,14 @@ map '>', $31
 map '%', $35
 
 // Text Type
-define TextType0(%00000000)
-define TextType1(%00100000)
-define TextType2(%01000000)
-define TextType3(%01100000)
-define TextType4(%10000000)
-define TextType5(%10100000)
-define TextType6(%11000000)
-define TextType7(%11100000)
+constant TextType0(%00000000)
+constant TextType1(%00100000)
+constant TextType2(%01000000)
+constant TextType3(%01100000)
+constant TextType4(%10000000)
+constant TextType5(%10100000)
+constant TextType6(%11000000)
+constant TextType7(%11100000)
 
 macro TextStyle1(OFFSET, TEXT) {
   origin {OFFSET} // Offset
@@ -85,7 +85,7 @@ TextStyle1($43D3B, "THE BRAVE KNIGHTS.")
 
 TextStyle1($4454F, "KNIGHTS OF GORT - LAST STAND.")
 
-TextStyle2($41E3A, "K4N4I4G4H4T4:4	0O0H0 0N0O0.0.0.0 0I0M0P0O0S0S0I0B0L0E0!0", {TextType7})
+TextStyle2($41E3A, "K4N4I4G4H4T4:4	0O0H0 0N0O0.0.0.0 0I0M0P0O0S0S0I0B0L0E0!0", TextType7)
 
 TextStyle1($43929, "KNIGHT1: CAPTAIN SLAY!")
 
@@ -115,29 +115,29 @@ TextStyle1($43A03, "LOOK AFTER SOFIA.")
 TextStyle1($43A15, "SOFIA: NO! PLEASE DONT GO!")
 TextStyle1($43A65, " DADDY!")
 
-TextStyle2($43AD1, "SCLCACYC:C 0H0E0R0E0 0I0 0G0O0!0!0", {TextType7})
+TextStyle2($43AD1, "SCLCACYC:C 0H0E0R0E0 0I0 0G0O0!0!0", TextType7)
 
-TextStyle2($43AF4, "SCLCACYC:C 0W0E0R0E0 0L0O0S0I0N0G0 0T0H0E0 0B0A0T0T0L0E0.0.0.0", {TextType7})
+TextStyle2($43AF4, "SCLCACYC:C 0W0E0R0E0 0L0O0S0I0N0G0 0T0H0E0 0B0A0T0T0L0E0.0.0.0", TextType7)
 
-TextStyle2($43B33, "SCLCACYC:CG0E0N0E0R0A0L0!0W0E0 0C0A0N0T0 0G0O0 0O0N0!0", {TextType7})
+TextStyle2($43B33, "SCLCACYC:CG0E0N0E0R0A0L0!0W0E0 0C0A0N0T0 0G0O0 0O0N0!0", TextType7)
 
-TextStyle2($43B6A, "G8E8N8E8R8A8L8:8 0Y0O0U0 0O0K0?0!0", {TextType7})
+TextStyle2($43B6A, "G8E8N8E8R8A8L8:8 0Y0O0U0 0O0K0?0!0", TextType7)
 
-TextStyle2($43B8D, "SCLCACYC:C 0W0E0 0M0U0S0T0 0R0E0T0R0E0A0T0 0N0O0W0!0", {TextType7})
+TextStyle2($43B8D, "SCLCACYC:C 0W0E0 0M0U0S0T0 0R0E0T0R0E0A0T0 0N0O0W0!0", TextType7)
 
-TextStyle2($43BC2, "SCLCACYC:C 0G0E0N0E0R0A0L0!0", {TextType7})
+TextStyle2($43BC2, "SCLCACYC:C 0G0E0N0E0R0A0L0!0", TextType7)
 
-TextStyle2($43BDF, "G8E8N8E8R8A8L8:8 0E0V0A0C0U0A0T0E0 0T0H0E0 0V0I0L0L0A0G0E0!0", {TextType7})
+TextStyle2($43BDF, "G8E8N8E8R8A8L8:8 0E0V0A0C0U0A0T0E0 0T0H0E0 0V0I0L0L0A0G0E0!0", TextType7)
 
-TextStyle2($43C1C, "SCLCACYC:CC0O0M0E0 0B0A0C0K0,0F0O0R0 0S0O0F0I0A0!0", {TextType7})
+TextStyle2($43C1C, "SCLCACYC:CC0O0M0E0 0B0A0C0K0,0F0O0R0 0S0O0F0I0A0!0", TextType7)
 
-TextStyle2($43C4F, "SCLCACYC:CC0A0N0T0 0W0I0N0,0L0E0T0S0 0G0O0 0B0A0C0K0.0", {TextType7})
+TextStyle2($43C4F, "SCLCACYC:CC0A0N0T0 0W0I0N0,0L0E0T0S0 0G0O0 0B0A0C0K0.0", TextType7)
 
-TextStyle2($43C86, "K4N4I4G4H4T4:4M0U0S0T0 0E0V0A0C0U0A0T0E0 0V0I0L0L0A0G0E0R0S0!0", {TextType7})
+TextStyle2($43C86, "K4N4I4G4H4T4:4M0U0S0T0 0E0V0A0C0U0A0T0E0 0V0I0L0L0A0G0E0R0S0!0", TextType7)
 
 TextStyle1($43A3E, "SOFIA: WHERES MY DADDY?")
 
-TextStyle2($43A90, "SCLCACYC:C 0.0.0.0.0", {TextType7})
+TextStyle2($43A90, "SCLCACYC:C 0.0.0.0.0", TextType7)
 
 TextStyle1($43CC5, "SOFIA:WHERE ARE YOU...?")
 
@@ -145,7 +145,7 @@ TextStyle1($43D9A, "OSWALD:CRYSTAL?")
 
 TextStyle1($43DB9, "OSWALD:YOU POSSESS MAGIC...")
 
-TextStyle2($43CE8, "SCOCFCICAC:C 0M0U0M0-0-0-0M0Y0!0", {TextType7})
+TextStyle2($43CE8, "SCOCFCICAC:C 0M0U0M0-0-0-0M0Y0!0", TextType7)
 
 TextStyle1($43E46, "SOFIA: GIVE BACK MY MUMMY!")
 
@@ -223,7 +223,7 @@ TextStyle1($438AE, "BUY?")
 
 // Exit Town
 TextStyle1($40DE5, "GO OUTSIDE?")
-TextStyle2($40DF8, "YCECSC 0-0 0 CAC", {TextType7})
+TextStyle2($40DF8, "YCECSC 0-0 0 CAC", TextType7)
 
 
 // Battle Selection:
@@ -238,32 +238,32 @@ TextStyle1($479A7, "PSYK")
 TextStyle1($40CBF, "CAST")
 
 // Movement Text
-TextStyle2($41950, "MOOOVOEO", {TextType7})
+TextStyle2($41950, "MOOOVOEO", TextType7)
 TextStyle1($4106C, "PROCESSING")
 TextStyle3($4E8AF, 'S', $20, $37, $6) ; TextStyle3($4E8BB, 'T', $20, $37, $6) ; TextStyle3($4E8C7, 'P', $20, $37, $6) ; TextStyle3($4E8D3, $D6, $21, $00, $6)
 
 // Attack Text
-TextStyle2($41962, " OHOIOTO", {TextType7})
+TextStyle2($41962, " OHOIOTO", TextType7)
 TextStyle1($41098, "NO ONE NEAR")
 TextStyle1($413C5, "TO: TARGET")
 TextStyle1($4108C, "EMPTY SPACE")
 
 // Exit Action Text
-TextStyle2($41959, "EONODOSO", {TextType7})
-TextStyle2($41035, "C8A8N8C8E8L8", {TextType7})
+TextStyle2($41959, "EONODOSO", TextType7)
+TextStyle2($41035, "C8A8N8C8E8L8", TextType7)
 TextStyle1($40CD0, "TURN ENDED")
 TextStyle1($463CE, "ENDOF TURN?")
 TextStyle1($40E35, "YES-A NO-B BUTTON")
-TextStyle2($410A4, "V0I0E0W0", {TextType7})
+TextStyle2($410A4, "V0I0E0W0", TextType7)
 
 
 // Albert Transformations
-TextStyle2($40C74, "T8A8R8G8", {TextType7})
-TextStyle2($41077, " 8S8E8T8S0E0L0E0C0T0", {TextType7})
-TextStyle2($410AD, "E8T8 0E0M0P0T0Y0", {TextType7})
+TextStyle2($40C74, "T8A8R8G8", TextType7)
+TextStyle2($41077, " 8S8E8T8S0E0L0E0C0T0", TextType7)
+TextStyle2($410AD, "E8T8 0E0M0P0T0Y0", TextType7)
 
 // Neumann Magic
-TextStyle2($479C5, "WOMOAOGOIOCO", {TextType7})
+TextStyle2($479C5, "WOMOAOGOIOCO", TextType7)
 TextStyle1($479B9, "CURE")
 TextStyle1($444E6, "WHO WILL YOU CURE?")
 TextStyle1($479BE, "LIF")
@@ -271,8 +271,8 @@ TextStyle1($479C2, "HL")
 TextStyle1($44693, "WHO?")
 
 // Sofia Magic
-TextStyle2($41347, "BOLO", {TextType7})
-TextStyle2($4196B, "BOLOCOKO", {TextType7})
+TextStyle2($41347, "BOLO", TextType7)
+TextStyle2($4196B, "BOLOCOKO", TextType7)
 TextStyle1($479D8, "LIT")
 TextStyle1($479DC, "FIRE")
 TextStyle1($479E2, "WARP")
@@ -281,7 +281,7 @@ TextStyle1($4468E, "TO ?")
 
 // Boss Monster Magic
 TextStyle1($418E0, "SHOC") // Golem
-TextStyle2($418E7, "SOHOOOCO", {TextType7})
+TextStyle2($418E7, "SOHOOOCO", TextType7)
 
 
 // Battle Messages
@@ -289,7 +289,7 @@ TextStyle3($14E62, 'H', $20, $37, $9) ; TextStyle3($14EAF, 'P', $20, $37, $9) ; 
 TextStyle3($14DFE, 'A', $20, $37, $9) ; TextStyle3($14E17, 'R', $20, $37, $9) ; TextStyle3($14E30, 'E', $20, $37, $9) ; TextStyle3($14E49, 'A', $20, $37, $9)
 TextStyle3($14F5B, 'F', $20, $37, $9) ; TextStyle3($14F74, 'O', $20, $37, $9) ; TextStyle3($14F8D, 'C', $20, $37, $9) ; TextStyle3($14FA6, 'U', $20, $37, $9) ; TextStyle3($14FBF, 'S', $20, $37, $9)
 
-TextStyle2($444D4, "+1 0$8:0", {TextType7})
+TextStyle2($444D4, "+1 0$8:0", TextType7)
 TextStyle1($444DD, "RECEIVED")
 TextStyle1($446B4, " :")
 TextStyle1($446B7, "SEIZED!")
@@ -303,7 +303,7 @@ TextStyle1($47F51, "STONE GONE!")
 // Map Messages
 TextStyle3($4E69E, 'X', $20, $37, $6)
 TextStyle3($4E711, 'Y', $20, $37, $6)
-TextStyle2($40E20, "M8A8P8 8V8I8E8W8", {TextType7})
+TextStyle2($40E20, "M8A8P8 8V8I8E8W8", TextType7)
 
 // Map Terrain Types
 TextStyle4($4E605, 'T', $20, $37) ; TextStyle4($4E612, 'P', $20, $37) ; TextStyle4($4E61F, $D6, $21, $00)
@@ -338,19 +338,19 @@ TextStyle3($24A14, 'H', $20, $37, $6)
 TextStyle3($10EBB, $28, $20, $00, $6) ; TextStyle3($10EC7, 'H', $20, $37, $6) ; TextStyle3($10ED3, 'P', $20, $37, $6)
 TextStyle3($17A39, 'O', $28, $37, $6) ; TextStyle3($17A45, 'K', $28, $37, $6)
 TextStyle1($41699, "EQUI")
-TextStyle2($416A0, "RCHC 0:0", {TextType7})
-TextStyle2($416A9, "LCHC 0:0", {TextType7})
-TextStyle2($416B2, "ACRCMC:0", {TextType7})
-TextStyle2($416BB, "LCECGC:0", {TextType7})
-TextStyle2($416C4, "BCDCYC:0", {TextType7})
-TextStyle2($416CD, "HCDC 0:0", {TextType7})
+TextStyle2($416A0, "RCHC 0:0", TextType7)
+TextStyle2($416A9, "LCHC 0:0", TextType7)
+TextStyle2($416B2, "ACRCMC:0", TextType7)
+TextStyle2($416BB, "LCECGC:0", TextType7)
+TextStyle2($416C4, "BCDCYC:0", TextType7)
+TextStyle2($416CD, "HCDC 0:0", TextType7)
 TextStyle1($40C7D, "ATP:")
 TextStyle1($416D6, "DFP:")
 TextStyle3($17EA5, 'S', $20, $37, $6) ; TextStyle3($17EB1, 'T', $20, $37, $6) ; TextStyle3($17EBD, 'P', $20, $37, $6)
 
 
 // Chiberus - Start Of Game
-TextStyle2($44619, "MCUCMC:CW0A0N0T0 0T0O0 0H0E0A0R0 0T0H0E0 0S0T0O0R0Y0?0", {TextType7})
+TextStyle2($44619, "MCUCMC:CW0A0N0T0 0T0O0 0H0E0A0R0 0T0H0E0 0S0T0O0R0Y0?0", TextType7)
 TextStyle1($4379B, " OK")
 TextStyle1($4379F, " NO")
 
@@ -363,14 +363,14 @@ TextStyle1($43E1F, "PRIEST:OH NO!WHOS THIS?")
 
 TextStyle1($43EA9, "---THE NEXT DAY---")
 
-TextStyle2($43E65, "MCUCMC:C 0W0A0K0E0 0U0P0.0.0.0", {TextType7})
+TextStyle2($43E65, "MCUCMC:C 0W0A0K0E0 0U0P0.0.0.0", TextType7)
 
-TextStyle2($41C7B, "MCUCMC:C 0N0O0W0 0Y0O0U0 0A0R0E0 01060", {TextType7})
+TextStyle2($41C7B, "MCUCMC:C 0N0O0W0 0Y0O0U0 0A0R0E0 01060", TextType7)
 
 TextStyle1($41CA4, "YOU INHERIT THE HERO")
 TextStyle1($43E99, "SWORD HEIRLOOM.")
 
-TextStyle2($43DF0, "MCUCMC:C 0H0E0R0E0S0 0$010000000 0I0 0H0A0V0E0", {TextType7})
+TextStyle2($43DF0, "MCUCMC:C 0H0E0R0E0S0 0$010000000 0I0 0H0A0V0E0", TextType7)
 TextStyle1($43E84, "BEEN SAVING FOR YOU.")
 
 TextStyle1($43EBC, "I THINK YOU WILL")
@@ -412,10 +412,10 @@ TextStyle1($41C40, "TO SEE YOU")
 TextStyle1($41C4B, "ALBERT: ALL RIGHT")
 TextStyle1($41C62, "NEUMANN: THANKS")
 
-TextStyle2($41CB9, "PCRCICECSCTC:CP0L0E0A0S0E0 0L0I0S0T0E0N0", {TextType7})
+TextStyle2($41CB9, "PCRCICECSCTC:CP0L0E0A0S0E0 0L0I0S0T0E0N0", TextType7)
 TextStyle1($41CE2, "TO MY STORY CLOSELY ALBERT")
 
-TextStyle2($41F1A, "SCOCFCICAC:C 0I0M0 0A0 0M0A0G0E0 0F0R0O0M0 0G0O0R0T0", {TextType7})
+TextStyle2($41F1A, "SCOCFCICAC:C 0I0M0 0A0 0M0A0G0E0 0F0R0O0M0 0G0O0R0T0", TextType7)
 
 TextStyle1($41F4F, "ON THE WAY HERE, SUDDENLY")
 TextStyle1($41F69, "A MONSTER APPEARED.")
@@ -451,9 +451,9 @@ TextStyle1($44342, "WILL LOOK FOR ME")
 TextStyle1($44353, "ILL ASK YOU TO KEEP THIS")
 TextStyle1($4436C, "AS A SECRET")
 
-TextStyle2($41DA8, "SCOCFCICAC:C 0I0 0A0M0 0W0E0L0L0 0N0O0W0", {TextType7})
+TextStyle2($41DA8, "SCOCFCICAC:C 0I0 0A0M0 0W0E0L0L0 0N0O0W0", TextType7)
 
-TextStyle2($41DD1, "PCRCICECSCTC:C 0T0A0K0E0 0C0A0R0E0 0O0F0 0S0O0F0I0A0", {TextType7})
+TextStyle2($41DD1, "PCRCICECSCTC:C 0T0A0K0E0 0C0A0R0E0 0O0F0 0S0O0F0I0A0", TextType7)
 TextStyle1($41E06, "ALBERT,NEUMANN I THINK YOU")
 TextStyle1($41E21, "WILL BECOME A GREAT MONK")
 
@@ -611,7 +611,7 @@ TextStyle1($44489, "NOBODY SEEMS TO BE DEAD")
 
 
 // Chiberus - Egg Shop
-TextStyle2($41ED3, "HCACYC CGCICRCLC:CH0E0R0E0 0I0S0 0A0N0 0E0G0G0", {TextType7})
+TextStyle2($41ED3, "HCACYC CGCICRCLC:CH0E0R0E0 0I0S0 0A0N0 0E0G0G0", TextType7)
 TextStyle1($41F02, " OK")
 TextStyle1($41F06, " NO")
 
@@ -712,7 +712,7 @@ TextStyle1($438C7, "COME ANY TIME")
 
 
 // Gort - Shade Shop (Red Cap)
-TextStyle2($4482E, "SCHCACDCEC:CD0O0 0Y0O0U0 0W0A0N0T0 0A0 0W0A0R0P0?0", {TextType7})
+TextStyle2($4482E, "SCHCACDCEC:CD0O0 0Y0O0U0 0W0A0N0T0 0A0 0W0A0R0P0?0", TextType7)
 
 TextStyle1($44861, "HERES WHAT I HAVE")
 
@@ -720,7 +720,7 @@ TextStyle1($4487D, "YOU CAN")
 TextStyle1($44873, "WARP HERE")
 
 // Gort - Hebe Shop (Blue Cap)
-TextStyle2($447C1, "HCECBCEC:CS0E0E0 0M0Y0 0N0I0C0E08191?0", {TextType7})
+TextStyle2($447C1, "HCECBCEC:CS0E0E0 0M0Y0 0N0I0C0E08191?0", TextType7)
 
 TextStyle1($447E8, "SEE MY AMAZINGLY FINE GOODS")
 
@@ -733,7 +733,7 @@ TextStyle1($47F3C, "I CAN NOT WEAR THEM.")
 // Gort - Castle
 TextStyle1($4497F, "WERE PROTECTING THE KING.")
 
-TextStyle2($449AC, "GCUCACRCDCSC:C 0N0E0E0D0 0T0H0E0 0K0I0N0G0?0", {TextType7})
+TextStyle2($449AC, "GCUCACRCDCSC:C 0N0E0E0D0 0T0H0E0 0K0I0N0G0?0", TextType7)
 
 TextStyle1($44999, "SPEAK TO THE KING.")
 
@@ -809,7 +809,7 @@ TextStyle1($44AF5, "WHERES THE CRYSTAL!")
 
 
 // Neurath - Jennifer Shop (Green Head)
-TextStyle2($44A55, "JCECNCYC:CN0E0E0D0 0N0E0U0R0A0T0H0 0W0A0R0P0?0", {TextType7})
+TextStyle2($44A55, "JCECNCYC:CN0E0E0D0 0N0E0U0R0A0T0H0 0W0A0R0P0?0", TextType7)
 
 TextStyle1($44A84, "YAY,THANK YOU")
 
