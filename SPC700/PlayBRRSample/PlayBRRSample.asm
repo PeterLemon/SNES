@@ -13,11 +13,11 @@ include "LIB\SNES_HEADER.ASM" // Include Header & Vector Table
 include "LIB\SNES_SPC700.INC" // Include SPC700 Definitions & Macros
 
 seek($8000); Start:
-  SNES_INIT({SLOWROM}) // Run SNES Initialisation Routine
+  SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
 
   SPCWaitBoot() // Wait For SPC To Boot
-  TransferBlockSPC(SPCROM, {SPCRAM}, SPCROM.size) // Load SPC File To SMP/DSP
-  SPCExecute({SPCRAM}) // Execute SPC At $0200
+  TransferBlockSPC(SPCROM, SPCRAM, SPCROM.size) // Load SPC File To SMP/DSP
+  SPCExecute(SPCRAM) // Execute SPC At $0200
 
 Loop:
   jmp Loop
