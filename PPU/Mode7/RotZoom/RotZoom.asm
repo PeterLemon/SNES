@@ -14,7 +14,7 @@ include "LIB\SNES_GFX.INC"    // Include Graphics Macros
 include "LIB\SNES_INPUT.INC"  // Include Input Macros
 
 // Variable Data
-seek({WRAM}) // 8Kb WRAM Mirror ($0000..$1FFF)
+seek(WRAM) // 8Kb WRAM Mirror ($0000..$1FFF)
 Mode7Angle:
   db 0 // Mode7 Angle Byte
 Mode7A:
@@ -39,22 +39,22 @@ BG1ScrPosY:
   dw 0 // Mode7 BG1 Scroll Position Y Word
 
 seek($8000); Start:
-  SNES_INIT({SLOWROM}) // Run SNES Initialisation Routine
+  SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
 
   LoadPAL(BGPal, $00, BGPal.size, 0) // Load Background Palette (BG Palette Uses 256 Colors)
   LoadM7VRAM(BGMap, BGTiles, $0000, BGMap.size, BGTiles.size, 0) // Load Background Map & Tiles To VRAM
 
   lda.b #$01 // Enable Joypad NMI Reading Interrupt
-  sta.w {REG_NMITIMEN}
+  sta.w REG_NMITIMEN
     
   // Setup Video
-  lda.b #%00000111   // DCBAPMMM: M = Mode, P = Priority, ABCD = BG1,2,3,4 Tile Size
-  sta.w {REG_BGMODE} // $2105: BG Mode 7, Priority 0, BG1 8x8 Tiles
+  lda.b #%00000111 // DCBAPMMM: M = Mode, P = Priority, ABCD = BG1,2,3,4 Tile Size
+  sta.w REG_BGMODE // $2105: BG Mode 7, Priority 0, BG1 8x8 Tiles
 
-  lda.b #$01     // Enable BG1
-  sta.w {REG_TM} // $212C: Set BG1 To Main Screen Designation
+  lda.b #$01   // Enable BG1
+  sta.w REG_TM // $212C: Set BG1 To Main Screen Designation
 
-  stz.w {REG_M7SEL} // $211A: Mode7 Settings
+  stz.w REG_M7SEL // $211A: Mode7 Settings
 
   stz.b Mode7Angle // Reset Angle
 
@@ -71,37 +71,37 @@ seek($8000); Start:
   stx.b Mode7PosY
 
   lda.b #$80
-  sta.w {REG_M7X} // $211F: Mode7 Center Position X Lo Byte
-  stz.w {REG_M7X} // $211F: Mode7 Center Position X Hi Byte
-  sta.w {REG_M7Y} // $2120: Mode7 Center Position Y Lo Byte
-  stz.w {REG_M7Y} // $2120: Mode7 Center Position Y Hi Byte
+  sta.w REG_M7X // $211F: Mode7 Center Position X Lo Byte
+  stz.w REG_M7X // $211F: Mode7 Center Position X Hi Byte
+  sta.w REG_M7Y // $2120: Mode7 Center Position Y Lo Byte
+  stz.w REG_M7Y // $2120: Mode7 Center Position Y Hi Byte
 
   lda.b #$F // Turn On Screen, Full Brightness
-  sta {REG_INIDISP} // $2100: Screen Display
+  sta.w REG_INIDISP // $2100: Screen Display
 
 InputLoop: 
   WaitNMI() // Wait For Vertical Blank
   Mode7CALC(Mode7A, Mode7B, Mode7C, Mode7D, Mode7Angle, Mode7ScaleX, Mode7ScaleY, SINCOS256) // Calculate Mode 7 matrix
 
   lda.b BG1ScrPosX
-  sta.w {REG_BG1HOFS} // $210D: BG1 Position X Lo Byte
+  sta.w REG_BG1HOFS // $210D: BG1 Position X Lo Byte
   lda.b BG1ScrPosX + 1
-  sta.w {REG_BG1HOFS} // $210D: BG1 Position X Hi Byte
+  sta.w REG_BG1HOFS // $210D: BG1 Position X Hi Byte
 
   lda.b BG1ScrPosY
-  sta.w {REG_BG1VOFS} // $210E: BG1 Position Y Lo Byte
+  sta.w REG_BG1VOFS // $210E: BG1 Position Y Lo Byte
   lda.b BG1ScrPosY + 1
-  sta.w {REG_BG1VOFS} // $210E: BG1 Position Y Hi Byte
+  sta.w REG_BG1VOFS // $210E: BG1 Position Y Hi Byte
 
   lda.b Mode7PosX
-  sta.w {REG_M7X} // $211F: Mode7 Center Position X Lo Byte
+  sta.w REG_M7X // $211F: Mode7 Center Position X Lo Byte
   lda.b Mode7PosX + 1
-  sta.w {REG_M7X} // $211F: Mode7 Center Position X Hi Byte
+  sta.w REG_M7X // $211F: Mode7 Center Position X Hi Byte
 
   lda.b Mode7PosY
-  sta.w {REG_M7Y} // $2120: Mode7 Center Position Y Lo Byte
+  sta.w REG_M7Y // $2120: Mode7 Center Position Y Lo Byte
   lda.b Mode7PosY + 1
-  sta.w {REG_M7Y} // $2120: Mode7 Center Position Y Hi Byte
+  sta.w REG_M7Y // $2120: Mode7 Center Position Y Hi Byte
 
   JoyA:
     ReadJOY({JOY_A}) // Test A Button
@@ -213,6 +213,6 @@ SINCOS256: // 256 SINE Values Ranging From -127 To 127 (Add 64 To Offset To Get 
 
 // Character Data
 // BANK 0
-insert BGPal, "GFX\BG.pal" // Include BG Palette Data (512 Bytes)
-insert BGMap, "GFX\BG.map" // Include BG Map Data (16384 Bytes)
+insert BGPal,   "GFX\BG.pal" // Include BG Palette Data (512 Bytes)
+insert BGMap,   "GFX\BG.map" // Include BG Map Data (16384 Bytes)
 insert BGTiles, "GFX\BG.pic" // Include BG Tile Data (10944 Bytes)

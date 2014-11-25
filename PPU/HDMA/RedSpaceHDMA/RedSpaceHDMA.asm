@@ -12,24 +12,24 @@ include "LIB\SNES.INC"        // Include SNES Definitions
 include "LIB\SNES_HEADER.ASM" // Include Header & Vector Table
 
 seek($8000); Start:
-  SNES_INIT({SLOWROM}) // Run SNES Initialisation Routine
+  SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
 
   // Load Red HDMA Gradient Backround Palette Color
-  lda.b #%00000011   // HMDA: Write 4 Bytes Each Scanline, Repeat A/B-bus Address Twice
-  sta.w {REG_DMAP0}  // $4300: DMA0 DMA/HDMA Parameters
-  lda.b #{REG_CGADD} // $21: Start At Palette CGRAM Address ($2121)
-  sta.w {REG_BBAD0}  // $4301: DMA0 DMA/HDMA I/O-Bus Address (PPU-Bus AKA B-Bus)
-  ldx.w #HDMATable   // HMDA Table Address
-  stx.w {REG_A1T0L}  // $4302: DMA0 DMA/HDMA Table Start Address
-  lda.b #0           // HDMA Table Bank
-  sta.w {REG_A1B0}   // $4304: DMA0 DMA/HDMA Table Start Address (Bank)
-  lda.b #%00000001   // HDMA Channel Select (Channel 0)
-  sta.w {REG_HDMAEN} // $420C: Select H-Blank DMA (H-DMA) Channels 
+  lda.b #%00000011 // HMDA: Write 4 Bytes Each Scanline, Repeat A/B-bus Address Twice
+  sta.w REG_DMAP0  // $4300: DMA0 DMA/HDMA Parameters
+  lda.b #REG_CGADD // $21: Start At Palette CGRAM Address ($2121)
+  sta.w REG_BBAD0  // $4301: DMA0 DMA/HDMA I/O-Bus Address (PPU-Bus AKA B-Bus)
+  ldx.w #HDMATable // HMDA Table Address
+  stx.w REG_A1T0L  // $4302: DMA0 DMA/HDMA Table Start Address
+  lda.b #0         // HDMA Table Bank
+  sta.w REG_A1B0   // $4304: DMA0 DMA/HDMA Table Start Address (Bank)
+  lda.b #%00000001 // HDMA Channel Select (Channel 0)
+  sta.w REG_HDMAEN // $420C: Select H-Blank DMA (H-DMA) Channels 
 
-  stz.w {REG_TM} // $212C: Main Screen Designation
+  stz.w REG_TM // $212C: Main Screen Designation
 
   lda.b #$F // Turn On Screen, Maximum Brightness
-  sta.w {REG_INIDISP} // $2100: Screen Display
+  sta.w REG_INIDISP // $2100: Screen Display
 
 Loop:
   jmp Loop
