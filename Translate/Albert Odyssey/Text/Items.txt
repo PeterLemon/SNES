@@ -66,15 +66,15 @@ LENGTH	H	E	R	B	| New English Text
 03	11	0E	1B	0B	| New English Hex
 
 目ざまし草
-Alarm Grass
+Awakening
 $41842
 44	00	04	52	5C	47	34	1F	| Original Japanese Hex
 LENGTH	LENGTH	LENGTH	目	ざ	ま	し	草	| Original Japanese Text
-LENGTH	A	.	G	R	A	S	S	| New English Text
-06	0A	C3	10	1B	0A	1C	1C	| New English Hex
+LENGTH	A	W	A	K	E	N	草	| New English Text
+06	0A	20	0A	14	0E	17	1F	| New English Hex
 
 チベリスの鬼い
-Chiberus only
+Heart of Chiberus
 $4184A
 26	05	85	B5	9C	81	41	3D	2A	| Original Japanese Hex
 LENGTH	LENGTH	チ	ベ	リ	ス	の	鬼	い	| Original Japanese Text

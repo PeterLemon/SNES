@@ -2,7 +2,7 @@
 Chiberus Inn:
 --------------
 おつかれさ ま です。ここは やどやですが+++
-You can be tired. +++ Here is the inn
+You must be tired. +++ Here is the inn
 $43781 (Line 1)
 75	13	14	15	2D	3A	2E	52	33	47	64	35	C3	32	32	42	28	4C	65	4C	64	35	57	18	18	18	| Original Japanese Hex
 LENGTH	LENGTH	LENGTH	LENGTH	お	つ	か	れ	さ	ま	で	す	。	こ	こ	は		や	ど	や	で	す	が	+	+	+	| Original Japanese Text
@@ -39,7 +39,7 @@ LENGTH	$	1	0		T	O		S	T	A	Y	.	す	| New English Text
 0B	F6	01	00	28	1D	18	28	1C	1D	0A	22	C3	35	| New English Hex
 
 わかりました。では このノートに+++
-All right. In this note
+All right. Please Write down you progress in this notebook
 $47B8D
 72	10	11	12	54	2E	50	47	34	38	C3	64	42	28	32	41	8D	F7	88	3E	18	18	18	| Original Japanese Hex
 LENGTH	LENGTH	LENGTH	LENGTH	わ	か	り	ま	し	た	。	で	は		こ	の	ノ	ー	ト	に	+	+	+	| Original Japanese Text
@@ -47,7 +47,7 @@ LENGTH	R	E	C	O	R	D	I	N	G		S	A	V	E		D	A	T	A	.	.	.	| New English Text
 15	1B	0E	0C	18	1B	0D	12	17	10	28	1C	0A	1F	0E	28	0D	0A	1D	0A	C3	C3	C3	| New English Hex
 
 このさき お気をつけて いってらっしゃいませ
-Take care and safe trip going ahead
+Take care and have a safe trip on your journey
 $4388D (Line 1)
 03	32	41	33	2F	| Original Japanese Hex
 LENGTH	こ	の	さ	き	| Original Japanese Text

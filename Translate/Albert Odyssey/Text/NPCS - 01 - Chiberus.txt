@@ -189,67 +189,67 @@ LENGTH	N  E	U  M	A  N	N  :	O  H	   A	L  B	E  R	T  ,	   C	O  M	E	O  N	!BLACK	BLAC
 1A	17 0E	1E 16	0A 17	17 D6	18 11	28 0A	15 0B	0E 1B	1D C4	28 0C	18 16	0E 28	18 17	25 00	28 00	18 00	17 00	25 00	C2 00	| New English Hex
 
 きょう大な魔力で せい地をしはいしていた グローバスと はがねをまといし勇者、ゴートの 戦いは
-Brave fight, and Clad in steel Great War rules the land had been controlled by the high magical Globus today
+Brave heroes of Gort Clad in steel, fought a great war against the high magician Globus who ruled the world
 $41B59 (Line 1)
 3A	03	2F	74	2B	02	3D	E0	CF	64	28	36	2A	DF	55	34	42	2A	34	3B	2A	38	28	A5	9F	F7	B2	81	3C	| Original Japanese Hex
 LENGTH	LENGTH	き	ょ	う	大	な	魔	力	で		せ	い	地	を	し	は	い	し	て	い	た		グ	ロ	ー	バ	ス	と	| Original Japanese Text
-LENGTH	B	R	A	V	E		H	E	R	O		C	L	A	D		I	N		S	T	E	E	L	.	.	.	と	| New English Text| New English Text
-1A	0B	1B	0A	1F	0E	28	11	0E	1B	18	28	0C	15	0A	0D	28	12	17	28	1C	1D	0E	0E	15	C3	C3	C3	3C	| New English Hex
+LENGTH	W	A	R		A	G	A	I	N	S	T		T	H	E		M	A	G	E		G	L	O	B	U	S	と	| New English Text| New English Text
+1A	20	0A	1B	28	0A	10	0A	12	17	1C	1D	28	1D	11	0E	28	16	0A	10	0E	28	10	15	18	0B	1E	1C	3C	| New English Hex
 $41B76 (Line 2)
 12	42	57	40	55	47	3C	2A	34	EF	E7	C4	A7	F7	88	41	28	D7	2A	42	| Original Japanese Hex
 LENGTH	は	が	ね	を	ま	と	い	し	勇	者	、	ゴ	ー	ト	の		戦	い	は	| Original Japanese Text
-LENGTH	W	A	R		R	U	L	E	S		T	H	E		L	A	N	D	.	| New English Text| New English Text
-12	20	0A	1B	28	1B	1E	15	0E	1C	28	1D	11	0E	28	15	0A	17	0D	C3	| New English Hex
+LENGTH	W	H	O		R	U	L	E	D		T	H	E		W	O	R	L	D	| New English Text| New English Text
+12	20	11	18	28	1B	1E	15	0E	0D	28	1D	11	0E	28	20	18	1B	15	0D	| New English Hex
 
 いつまでも 終わりをみせることはなかった
-Show that there was no end forever
+Seemed to never end...
 $41B8A
 33	06	2A	3A	47	64	4B	28	24	54	50	55	48	36	51	32	3C	42	3D	2E	71	38	| Original Japanese Hex
 LENGTH	LENGTH	い	つ	ま	で	も		終	わ	り	を	み	せ	る	こ	と	は	な	か	っ	た	| Original Japanese Text
-LENGTH	F	O	R	E	V	E	R		N	E	V	E	R		E	N	D	S	.	.	.	| New English Text
-14	0F	18	1B	0E	1F	0E	1B	28	17	0E	1F	0E	1B	28	0E	17	0D	1C	C3	C3	C3	| New English Hex
+LENGTH	S	E	E	M	E	D		T	O		N	E	V	E	R		E	N	D	.	.	| New English Text
+14	1C	0E	0E	16	0E	0D	28	1D	18	28	17	0E	1F	0E	1B	28	0E	17	0D	C3	C3	| New English Hex
 
 だが あるとき、むげんの魔力の みなもとが グローバスの特つ 水晶にあるとしった ゴートは
-I know when there was Gort, and one in the crystal characteristics of the Globus is infinite but the magic of Minamoto
+However, Gort came to realize that there was an infinite source of energy within a crystal that Globus had and...
 $41BA0 (Line 1)
 14	61	57	28	29	51	3C	2F	C4	49	5A	56	41	E0	CF	41	28	48	3D	4B	3C	57	| Original Japanese Hex
 LENGTH	だ	が		あ	る	と	き	、	む	げ	ん	の	魔	力	の		み	な	も	と	が	| Original Japanese Text
-LENGTH	I	T		W	A	S		I	N		G	O	R	T		T	H	A	T		A	| New English Text| New English Text
-14	12	0D	28	20	0A	1C	28	12	17	28	10	18	1B	1D	28	1D	11	0A	1D	28	0A	| New English Hex
+LENGTH	G	O	R	T		B	E	G	A	N		T	O		R	E	A	L	I	Z	E	| New English Text| New English Text
+14	10	18	1B	1D	28	0B	0E	10	0A	17	28	1D	18	28	1B	0E	0A	15	12	23	0E	| New English Hex
 $41BB6 (Line 2)
 36	06	A5	9F	F7	B2	81	41	32	3A	28	DD	DE	3E	29	51	3C	34	71	38	28	A7	F7	88	42	| Original Japanese Hex
 LENGTH	LENGTH	グ	ロ	ー	バ	ス	の	特	つ		水	晶	に	あ	る	と	し	っ	た		ゴ	ー	ト	は	| Original Japanese Text
-LENGTH	M	A	G	I	C	A	L		C	R	Y	S	T	A	L		W	A	S		H	E	L	D	| New English Text| New English Text
-17	16	0A	10	12	0C	0A	15	28	0C	1B	22	1C	1D	0A	15	28	20	0A	1C	28	11	0E	15	0D	| New English Hex
+LENGTH	A		C	R	Y	S	T	A	L		G	A	V	E		H	I	M		P	O	W	E	R	| New English Text| New English Text
+17	0A	28	0C	1B	22	1C	1D	0A	15	28	10	0A	1F	0E	28	11	12	16	28	19	18	20	0E	1B	| New English Hex
 
 それを うばい取ることに せいこうし みごと グローバスを うちたおす
-Globus stunning defeat able to take it deprived
+took the crystal away from Globus and defeated him
 $41BCF	(Line 1)
 31	07	37	52	55	28	2B	66	2A	22	51	32	3C	3E	28	36	2A	32	2B	34	| Original Japanese Hex
 LENGTH	LENGTH	そ	れ	を		う	ば	い	取	る	こ	と	に		せ	い	こ	う	し	| Original Japanese Text
-LENGTH	T	H	A	T		P	O	W	E	R		W	A	S		U	S	E	D	| New English Text
-12	1D	11	0A	1D	28	19	18	20	0E	1B	28	20	0A	1C	28	1E	1C	0E	0D	| New English Hex
+LENGTH	T	O	O	K		I 	T		F	R	O	M		G	L	O	B	U	S	| New English Text
+12	1D	18	18	14	28	12	1D	28	0F	1B	18	16	28	10	15	18	0B	1E	1C	| New English Hex
 $41BE3	(Line 2)
 0F	48	5B	3C	28	A5	9F	F7	B2	81	55	28	2B	39	38	2D	35	| Original Japanese Hex
 LENGTH	み	ご	と		グ	ロ	ー	バ	ス	を		う	ち	た	お	す	| Original Japanese Text
-LENGTH	T	O		R	E	V	I	V	E		G	O	L	B	U	S	| New English Text
-0F	1D	18	28	1B	0E	1F	12	1F	0E	28	10	18	15	0B	1E	1C	| New English Hex
+LENGTH	A	N	D		D	E	F	E	A	T	E	D		H	I	M	| New English Text
+0F	0A	17	0D	28	0D	0E	0F	0E	0A	1D	0E	0D	28	11	12	16	| New English Hex
 
 ゴートをのろい続ける グローバスのたましいを 大地にふういんすると
-Globus to keep the spirit of Gort curse The seal on the ground
+Gort sealed the spirit of Globus under deep earth.
 $41BF4	(Line 1)
 35	07	A7	F7	88	55	41	53	2A	1B	31	51	28	A5	9F	F7	B2	81	41	38	47	34	2A	55	| Original Japanese Hex
 LENGTH	LENGTH	ゴ	ー	ト	を	の	ろ	い	続	け	る		グ	ロ	ー	バ	ス	の	た	ま	し	い	を	| Original Japanese Text
-LENGTH	C	U	R	S	E		O	F		G	O	R	T		S	E	A	L	E	D		I	N	| New English Text
-16	0C	1E	1B	1C	0E	28	18	0F	28	10	18	1B	1D	28	1C	0E	0A	15	0E	0D	28	12	17	| New English Hex
+LENGTH	S	E	A	L	I	N	G		H	I	S		S	P	I	R	I	T		D	E	E	P	| New English Text
+16	1C	0E	0A	15	12	17	10	28	11	12	1C	28	1C	19	12	1B	12	1D	28	0D	0E	0E	19	| New English Hex
 $41C0C	(Line 2)
 29	00	02	DF	3E	44	2B	2A	56	35	51	3C	| Original Japanese Hex
 LENGTH	LENGTH	大	地	に	ふ	う	い	ん	す	る	と	| Original Japanese Text
-LENGTH	T	H	E		G	R	O	U	N	D	.	| New English Text
-0A	1D	11	0E	28	10	1B	18	1E	17	0D	C3	| New English Hex
+LENGTH	U	N	D	E	R	G	R	O	U	N	D	| New English Text
+0A	1E	17	0D	0E	1B	10	1B	18	1E	17	0D	| New English Hex
 
 せかいは ひとつとなり ひとびとは ながきへいわを えたのであった
-Everybody was given a long time to maintain (preserve) peace world became one
+The world lived in peace for a long time.
 $45F4A	(Line 1)
 0A	36	2E	2A	42	28	43	3C	3A	3C	3D	50	| Original Japanese Hex
 LENGTH	せ	か	い	は		ひ	と	つ	と	な	り	| Original Japanese Text
@@ -258,21 +258,21 @@ LENGTH	P	E	A	C	E		C	A	M	E	,	| New English Text
 $41C18	(Line 2)
 14	43	3C	67	3C	42	28	3D	57	2F	45	2A	54	55	28	2C	38	41	64	29	71	38	| Original Japanese Hex
 LENGTH	ひ	と	び	と	は		な	が	き	へ	い	わ	を		え	た	の	で	あ	っ	た	| Original Japanese Text
-LENGTH	T	H	E		W	O	R	L	D		B	E	C	O	M	E	S		O	N	E	| New English Text
-14	1D	11	0E	28	20	18	1B	15	0D	28	0B	0E	0C	18	16	0E	1C	28	18	17	0E	| New English Hex
+LENGTH	T	O		T	H	E		L	A	N	D		O	N	C	E		M	O	R	E	| New English Text
+14	1D	18	28	1D	11	0E	28	15	0A	17	0D	28	18	17	0C	0E	28	16	18	1B	0E	| New English Hex
 
 アルバート!司祭さまが よんでるよ ノイマンも こいって
-Albert! Neumann also Come priest I'll are referred
+Albert! The Priest is calling you! Neumann you too!
 $41C2E	(Line 1)
 10	75	9D	B2	F7	88	25	F8	EC	33	47	57	28	4E	56	64	51	4E	| Original Japanese Hex
 LENGTH	ア	ル	バ	ー	ト	!	司	祭	さ	ま	が		よ	ん	で	る	よ	| Original Japanese Text
 LENGTH	T	H	E		P	R	I	E	S	T		W	A	N	T	E	D	| New English Text
-10	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	| New English Hex
+10	1D	11	0E	28	19	1B	12	0E	1C	1D	28	20	0A	17	1D	0E	0D	| New English Hex
 $41C40	(Line 2)
 09	8D	76	93	A2	4B	28	32	2A	71	3B	| Original Japanese Hex
 LENGTH	ノ	イ	マ	ン	も		こ	い	っ	て	| Original Japanese Text
 LENGTH	T	O		S	E	E		Y	O	U	| New English Text
-09	??	??	??	??	??	??	??	??	??	??	| New English Hex
+09	1D	18	28	1C	0E	0E	28	22	18	1E	| New English Hex
 
 アルバ-ト「わかった」 ノイマン「THANKS」
 Albert "all right" Neumann "THANKS"
@@ -288,7 +288,7 @@ LENGTH	N E	U M	A N	N :	  T	H A	N K	SBLACK	NBLACK	KBLACK	SBLACK	」BLACK	| New En
 0E	17 0E	1E 16	0A 17	17 D6	28 1D	11 0A	17 14	1C 00	17 00	14 00	1C 00	C2 00	| New English Hex	
 
 司祭「おお、きたか アルバート。そなたは 勇者の血を ひく者、このこの はなしを きくがよい」
-Priest "Oh, who draw the blood of the brave, a good listen to this this story is Albert. Sonata or came"
+Priest "Ah you came, Albert. You are the son of a great soldier. Listen to my story"
 $41CB9	(Line 1)
 F3	F8 0C	EC 0C	C1 00	2D 00	2D 00	C4 00	2F 00	38 00	2E 00	28 00	75 00	9D 00	B2 00	F7 00	88 00	C3 00	37 00	3D 00	38 00	42 00	| Original Japanese Hex
 LENGTH	司RED	祭RED	「BLACK	おBLACK	おBLACK	、BLACK	きBLACK	たBLACK	かBLACK	BLACK	アBLACK	ルBLACK	バBLACK	ーBLACK	トBLACK	。BLACK	そBLACK	なBLACK	たBLACK	はBLACK	| Original Japanese Text
@@ -301,7 +301,7 @@ LENGTH	T	O		M	Y		S	T	O	R	Y		C	L	O	S	E	L	Y		A	L	B	E	R	T	| New English Text
 19	1D	18	28	16	22	28	1C	1D	18	1B	22	28	0C	15	18	1C	0E	15	22	28	0A	15	0B	0E	1B	1D	| New English Hex
 
 ソフィア「わたしは ゴートきゅうてい魔術師ソフィア」
-Sofia "I magician Sofia has come speak Gort"
+Sofia "I am Sofia, a magician from Gort"
 $41F1A
 F9	83 0C	90 0C	5C 0D	75 0C	C1 00	54 00	38 00	34 00	42 00	28 00	A7 00	F7 00	88 00	2F 00	73 00	2B 00	3B 00	2A 00	E0 00	E4 00	DA 00	83 00	90 00	5C 01	75 00	C2 00	| Original Japanese Hex
 LENGTH	ソRED	フRED	ィRED	アRED	「BLACK	わBLACK	たBLACK	しBLACK	はBLACK	BLACK	ゴBLACK	ーBLACK	トBLACK	きBLACK	ゅBLACK	うBLACK	てBLACK	いBLACK	魔BLACK	術BLACK	師BLACK	ソBLACK	フBLACK	ィBLACK	アBLACK	」BLACK	| Original Japanese Text
@@ -309,28 +309,28 @@ LENGTH	SRED	ORED	FRED	IRED	ARED	:RED	BLACK	IBLACK	MBLACK	BLACK	ABLACK	BLACK	MBLA
 F9	1C 0C	18 0C	0F 0C	12 0C	0A 0C	D6 0C	28 00	12 00	16 00	28 00	0A 00	28 00	16 00	0A 00	10 00	0E 00	28 00	0F 00	1B 00	18 00	16 00	28 00	10 00	18 00	1B 00	1D 00	| New English Hex
 
 かく地に とつぜん あらわれた モンスターのことを しらべるために たびをしていたんですが
-While I was on a journey to find out that the monster that appeared suddenly in the nuclear area
+I was researching about the monsters that have suddenly appeared around the world
 $41F4F	(Line 1)
 18	2E	30	DF	3E	28	3C	3A	5F	56	28	29	4F	54	52	38	28	97	A2	81	84	F7	41	32	3C	55	| Original Japanese Hex
 Length	か	く	地	に		と	つ	ぜ	ん		あ	ら	わ	れ	た		モ	ン	ス	タ	ー	の	こ	と	を	| Original Japanese Text
-Length	O	N		T	H	E		W	A	Y		H	E	R	E	,		S	U	D	D	E	N	L	Y	| New English Text
-18	18	17	28	1D	11	0E	28	20	0A	22	28	11	0E	1B	0E	C4	28	1C	1E	0D	0D	0E	17	15	22	| New English Hex
+Length	M	O	N	S	T	E	R	S		A	R	E		S	P	R	I	N	G	I	N	G		U	P	| New English Text
+18	16	18	17	1C	1D	0E	1B	1C	28	0A	1B	0E	28	1C	19	1B	12	17	10	12	17	10	28	1E	19	| New English Hex
 $41F69	(Line 2)
 12	34	4F	69	51	38	4A	3E	28	38	67	55	34	3B	2A	38	56	64	35	57	| Original Japanese Hex
 Length	し	ら	べ	る	た	め	に		た	び	を	し	て	い	た	ん	で	す	が	| Original Japanese Text
-LENGTH	A		M	O	N	S	T	E	R		A	P	P	E	A	R	E	D	.	| New English Text
-12	0A	28	16	18	17	1C	1D	0E	1B	28	0A	19	19	0E	0A	1B	0E	0D	C3	| New English Hex
+LENGTH	A	L	L		O	V	E	R		T	H	E		W	O	R	L	D	.	| New English Text
+12	0A	15	15	28	18	1F	0E	1B	28	1D	11	0E	28	20	18	1B	15	0D	C3	| New English Hex
 
 きのう、魔物におそわれ この村に にげこみました
-Yesterday, we fled to this village is attacked by monsters
+Yesterday, I was attacked by a monster & passed out in front of this church.
 $41F7D
 57	05	0E	2F	41	2B	C4	E0	33	3E	2D	37	54	52	28	32	41	27	3E	28	3E	5A	32	48	47	34	38	| Original Japanese Hex
 LENGTH	LENGTH	LENGTH	き	の	う	、	魔	物	に	お	そ	わ	れ		こ	の	村	に		に	げ	こ	み	ま	し	た	| Original Japanese Text
-LENGTH	I		E	S	C	A	P	E	D	,	A	F	T	E	R		T	H	E		A	T	T	A	C	K	| New English Text
-19	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	??	| New English Hex
+LENGTH	I		W	A	S		A	T	T	A	C	K	E	D		C	O	M	I	N	G		H	E	R	E	| New English Text
+19	12	28	20	0A	1C	28	0A	1D	1D	0A	0C	14	0E	0D	28	0C	18	16	12	17	10	28	11	0E	1B	0E	| New English Hex
 
 10ねんまえ せかいを きょうふに おとしいれた オズワルドが ふたたび 蘇りました
-Oswald was terrorizing the world 10 years ago revived again
+Oswald who was terrorizing the world 10 years ago has been revived again
 $41F98	(Line 1)
 17	01	00	40	56	47	2C	28	36	2E	2A	55	28	2F	74	2B	44	3E	28	2D	3C	34	2A	52	38	| Original Japanese Hex
 LENGTH	1	0	ね	ん	ま	え		せ	か	い	を		き	ょ	う	ふ	に		お	と	し	い	れ	た	| Original Japanese Text
@@ -343,15 +343,15 @@ LENGTH	1	0		Y	E	A	R	S		O	F		P	E	A	C	E	.	| New English Text
 11	01	00	28	22	0E	0A	1B	1C	28	18	0F	28	19	0E	0A	0C	0E	C3	| New English Hex
 
 このことを いっこくも早く 王につたえねばなりません
-I'll need to tell the king as soon as possible of this
+We must tell the king as soon as possible of this
 $41FC4
 19	32	41	32	3C	55	28	2A	71	32	30	4B	CA	30	28	EB	3E	3A	38	2C	40	66	3D	50	47	36	56	| Original Japanese Hex
 LENGTH	こ	の	こ	と	を		い	っ	こ	く	も	早	く		王	に	つ	た	え	ね	ば	な	り	ま	せ	ん	| Original Japanese Text
-LENGTH	I		N	E	E	D		T	O		T	E	L	L		T	H	E		K	I	N	G	.	.	.	| New English Text
-19	12	28	17	0E	0E	0D	28	1D	18	28	1D	0E	15	15	28	1D	11	0E	28	14	12	17	10	C3	C3	C3	| New English Hex
+LENGTH	W	E		M	U	S	T		T	E	L	L		T	H	E		K	I	N	G		T	H	I	S	| New English Text
+19	20	0E	28	16	1E	1C	1D	28	1D	0E	15	15	28	1D	11	0E	28	14	12	17	10	28	1D	11	12	1C	| New English Hex
 
 どうか いっしょに ゴートまで行ってくれませんか?
-Will you go to gort together or not?
+Will you please come to Gort with me?
 $41FDF	(Line 1)
 18	65	2B	2E	28	2A	71	34	74	3E	28	A7	F7	88	47	64	F2	71	3B	30	52	47	36	56	2E	24	| Original Japanese Hex
 LENGTH	ど	う	か		い	っ	し	ょ	に		ゴ	ー	ト	ま	で	行	っ	て	く	れ	ま	せ	ん	か	?	| Original Japanese Text
@@ -393,7 +393,7 @@ LENGTH	I		W	I	L	L		N	E	E	D		Y	O	U	R		H	E	L	P	.	| New English Text
 15	12	28	20	12	15	15	28	17	0E	0E	0D	28	22	18	1E	1B	28	11	0E	15	19	C3	| New English Hex
 
 それから ひとつ いっておきたいことがあるの
-Is that then I want to say one
+Oh I have one more thing to say
 $442B8
 15	37	52	2E	4F	28	43	3C	3A	28	2A	71	3B	2D	2F	38	2A	32	3C	57	29	51	41	| Original Japanese Hex
 LENGTH	そ	れ	か	ら		ひ	と	つ		い	っ	て	お	き	た	い	こ	と	が	あ	る	の	| Original Japanese Text
@@ -401,7 +401,7 @@ LENGTH	O	N	E		M	O	R	E		T	H	I	N	G		T	O		S	A	Y	,	| New English Text
 15	18	17	0E	28	16	18	1B	0E	28	1D	11	12	17	10	28	1D	18	28	1C	0A	22	C4	| New English Hex
 
 10ねんまえの ひかりのことは しってるでしょ
-And you know that the light of the 10 Nenmae
+You know that the light from 10 years ago
 $442CF
 16	01	00	40	56	47	2C	41	28	43	2E	50	41	32	3C	42	28	34	71	3B	51	64	34	74	| Original Japanese Hex
 LENGTH	1	0	ね	ん	ま	え	の		ひ	か	り	の	こ	と	は		し	っ	て	る	で	し	ょ	| Original Japanese Text
@@ -409,7 +409,7 @@ LENGTH	T	H	E		L	I	G	H	T		1	0		Y	E	A	R	S		A	G	O	,	| New English Text
 16	1D	11	0E	28	15	12	10	11	1D	28	01	00	28	22	0E	0A	1B	1C	28	0A	10	18	C4	| New English Hex
 
 そこにいた おんなのこの ことも+++
-That the girl was there as well + + +
+And the girl who was there + + +
 $442E7
 72	10	11	12	37	32	3E	2A	38	28	2D	56	3D	41	32	41	28	32	3C	4B	18	18	18	| Original Japanese Hex
 LENGTH	LENGTH	LENGTH	LENGTH	そ	こ	に	い	た		お	ん	な	の	こ	の		こ	と	も	+	+	+	| Original Japanese Text
@@ -417,7 +417,7 @@ LENGTH	I		W	I	T	N	E	S	S	E	D		I	T		M	Y	S	E	L	F	.	| New English Text
 15	12	28	20	12	1D	17	0E	1C	1C	0E	0D	28	12	1D	28	16	22	1C	0E	15	0F	C3	| New English Hex
 
 わたしのことなの+++
-It would mean so me + + +
+It was actually me + + +
 $442FE
 6A	08	09	0A	54	38	34	41	32	3C	3D	41	18	18	18	| Original Japanese Hex
 LENGTH	LENGTH	LENGTH	LENGTH	わ	た	し	の	こ	と	な	の	+	+	+	| Original Japanese Text
@@ -425,7 +425,7 @@ LENGTH	I		S	U	M	M	O	N	E	D		I	T	.	| New English Text
 0D	12	28	1C	1E	16	16	18	17	0E	0D	28	12	1D	C3	| New English Hex
 
 でも わたしには あのふしぎな力は もう でないし
-But that mysterious force to not anymore to me
+But I have no such strong power now
 $4430D
 18	64	4B	28	54	38	34	3E	42	28	29	41	44	34	58	3D	CF	42	28	4B	2B	28	64	3D	2A	34	| Original Japanese Hex
 LENGTH	で	も		わ	た	し	に	は		あ	の	ふ	し	ぎ	な	力	は		も	う		で	な	い	し	| Original Japanese Text
@@ -433,7 +433,7 @@ LENGTH	I		L	O	S	T		T	H	A	T		S	T	R	A	N	G	E		P	O	W	E	R	| New English Text
 18	12	28	15	18	1C	1D	28	1D	11	0A	1D	28	1C	1D	1B	0A	17	10	0E	28	19	18	20	0E	1B	| New English Hex
 
 ふっかつしたオズワルドは あのときのことを おそれて ひっしで わたしをさがしているわ
-Oswald was resurrected I'll looking for me to be inevitable for fear that at that time
+Oswald must be looking for me because of what I did to him back then.
 $44327	(Line 1)
 19	44	71	2E	3A	34	38	79	AA	A0	9D	B1	42	28	29	41	3C	2F	41	32	3C	55	28	2D	37	52	3B	| Original Japanese Hex
 LENGTH	ふ	っ	か	つ	し	た	オ	ズ	ワ	ル	ド	は		あ	の	と	き	の	こ	と	を		お	そ	れ	て	| Original Japanese Text
@@ -446,7 +446,7 @@ LENGTH	W	I	L	L		L	O	O	K		F	O	R		M	E	| New English Text
 0F	20	12	15	15	28	15	18	18	14	28	0F	18	1B	28	16	0E	| New English Hex
 
 だから このことは ないしょにしておいてほしいの おねがいね アルバート
-So this is Albert I ask of you want to keep in a secret
+So this is Albert I ask of you to keep it a secret
 $44353	(Line 1)
 17	61	2E	4F	28	32	41	32	3C	42	28	3D	2A	34	74	3E	34	3B	2D	2A	3B	46	34	2A	41	| Original Japanese Hex
 LENGTH	だ	か	ら		こ	の	こ	と	は		な	い	し	ょ	に	し	て	お	い	て	ほ	し	い	の	| Original Japanese Text
@@ -467,7 +467,7 @@ LENGTH	SRED	ORED	FRED	IRED	ARED	:RED	BLACK	IBLACK	BLACK	ABLACK	MBLACK	BLACK	WBLA
 F3	1C 0C	18 0C	0F 0C	12 0C	0A 0C	D6 0C	28 00	12 00	28 00	0A 00	16 00	28 00	20 00	0E 00	15 00	15 00	28 00	17 00	18 00	20 00	| New English Hex
 
 司祭「気をつけてな。ソフィアをたのんだぞ アルバート それから ノイマン、わしは おまえが いちにんまえの 僧侶になるのを きたいしておる。がんばるんだぞ」
-Priest "Take care. Neumann Albert'll then asked him to Sofia, eagle I do my best. You Nikki expect you, to become full-fledged monk"
+Priest "Be careful out there. Please take care of her Albert. Neumann I look forward to seeing you as a fine monk. Don't disappoint me"
 $41DD1	(Line 1)
 F9	F8 0C	EC 0C	C1 00	ED 00	55 00	3A 00	31 00	3B 00	3D 00	C3 00	83 00	90 00	5C 01	75 00	55 00	38 00	41 00	56 00	61 00	60 00	28 00	75 00	9D 00	B2 00	F7 00	88 00	| Original Japanese Hex
 LENGTH	司RED	祭RED	「BLACK	気BLACK	をBLACK	つBLACK	けBLACK	てBLACK	なBLACK	。BLACK	ソBLACK	フBLACK	ィBLACK	アBLACK	をBLACK	たBLACK	のBLACK	んBLACK	だBLACK	ぞBLACK	BLACK	アBLACK	ルBLACK	バBLACK	ーBLACK	トBLACK	| Original Japanese Text
@@ -526,7 +526,7 @@ LENGTH	M	U	S	I	C	| New English Text
 
 Brown Hair Girl:
 東にむかい ハシをわたったところに ゴートがあるわ
-There is Gort in the place where I was heading east across the bridge
+If you go over the bridge in the east, you can get to Gort
 $41D70
 18	F9	3E	49	2E	2A	28	8E	80	55	54	38	71	38	3C	32	53	3E	28	A7	F7	88	57	29	51	54	| Original Japanese Hex
 LENGTH	東	に	む	か	い		ハ	シ	を	わ	た	っ	た	と	こ	ろ	に		ゴ	ー	ト	が	あ	る	わ	| Original Japanese Text

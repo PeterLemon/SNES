@@ -5,12 +5,12 @@ Chiberus:
 Chiberus - Item Shop:
 ----------------------
 ここは どうぐやです。どんな ごようでしょうか?
-Well Here are such things as tools. How can I help? 
+This is an item shop. How can I help you? 
 $4375A (Line 1)
 17	32	32	42	28	65	2B	59	4C	64	35	C3	65	56	3D	28	5B	4E	2B	64	34	74	2B	2E	24	| Original Japanese Hex
 LENGTH	こ	こ	は		ど	う	ぐ	や	で	す	。	ど	ん	な		ご	よ	う	で	し	ょ	う	か	?	| Original Japanese Text
-LENGTH	H	O	W		M	A	Y		I		B	E		O	F		S	E	R	V	I	C	E	?	| New English Text
-17	11	18	20	28	16	0A	22	28	12	28	0B	0E	28	18	0F	28	1C	0E	1B	1F	12	0C	0E	24	| New English Hex
+LENGTH	I	T	E	M		S	H	O	P	.	H	O	W		C	A	N		I		H	E	L	P	| New English Text
+17	12	1D	0E	16	28	1C	11	18	19	C3	11	18	20	28	0C	0A	17	28	12	28	11	0E	15	19	| New English Hex
 
 	かいにきた
 	I came to buy
@@ -30,7 +30,7 @@ LENGTH	H	O	W		M	A	Y		I		B	E		O	F		S	E	R	V	I	C	E	?	| New English Text
 
 Buy Selected:
 おきゃくさん。 サービスさせてもらうわね なにを かってくださるのかしら?
-customer. I can let these services
+I will get you a discount. What can I get you?
 $437D9 (Line 1)
 12	2D	2F	72	30	33	56	C3	7F	F7	B3	81	33	36	3B	4B	4F	2B	54	40	| Original Japanese Hex
 LENGTH	お	き	ゃ	く	さ	ん	。	サ	ー	ビ	ス	さ	せ	て	も	ら	う	わ	ね	| Original Japanese Text
