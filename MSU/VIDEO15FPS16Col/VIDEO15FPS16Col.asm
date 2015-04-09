@@ -130,7 +130,7 @@ VIDLoop:
   lda.b #%00000000  // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
   sta.w REG_BG12NBA // $210B: BG2 Tile Address = $0000 (VRAM Address / $1000)
   lda.b #%00111100  // AAAAAASS: S = BG Map Size, A = BG Map Address
-  sta.w REG_BG2SC   // $2107: BG2 32x32, BG2 Map Address = $7800 (VRAM Address / $400)
+  sta.w REG_BG2SC   // $2108: BG2 32x32, BG2 Map Address = $7800 (VRAM Address / $400)
 
   ////////////////////////////////////////////////////////
   ldy.w #$8000 >> 1 // VRAM Destination
@@ -165,7 +165,7 @@ VIDLoop:
   lda.b #%01000000  // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
   sta.w REG_BG12NBA // $210B: BG2 Tile Address = $8000 (VRAM Address / $1000)
   lda.b #%11111100  // AAAAAASS: S = BG Map Size, A = BG Map Address
-  sta.w REG_BG2SC   // $2107: BG2 32x32, BG2 Map Address = $F800 (VRAM Address / $400)
+  sta.w REG_BG2SC   // $2108: BG2 32x32, BG2 Map Address = $F800 (VRAM Address / $400)
 
   ////////////////////////////////////////////////////////
 

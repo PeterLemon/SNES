@@ -127,7 +127,7 @@ VIDLoop:
   WaitNMI() // Wait For Frame 1 4th Vertical Blank
   sta.w REG_MDMAEN // $420B: DMA Enable
 
-  // Setup Frame 1 BG1 256 Colour Background
+  // Setup Frame 1 BG1 16 Colour Background
   lda.b #%00000000  // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
   sta.w REG_BG12NBA // $210B: BG1 Tile Address = $0000 (VRAM Address / $1000)
   lda.b #%00111010  // AAAAAASS: S = BG Map Size, A = BG Map Address
@@ -158,7 +158,7 @@ VIDLoop:
   WaitNMI() // Wait For Frame 2 4th Vertical Blank
   sta.w REG_MDMAEN // $420B: DMA Enable
 
-  // Setup Frame 2 BG1 256 Colour Background
+  // Setup Frame 2 BG1 16 Colour Background
   lda.b #%00000100  // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
   sta.w REG_BG12NBA // $210B: BG1 Tile Address = $8000 (VRAM Address / $1000)
   lda.b #%01111010  // AAAAAASS: S = BG Map Size, A = BG Map Address
