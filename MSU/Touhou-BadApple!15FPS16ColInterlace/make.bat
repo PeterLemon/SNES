@@ -1,0 +1,2 @@
+bass Touhou-BadApple!15FPS16ColInterlace_spc.asm
+bass Touhou-BadApple!15FPS16ColInterlace.asm
