@@ -176,7 +176,7 @@ Restart:
 
 HDMATable:
   db 12, %10000000 // Repeat 12 Scanlines, Turn Off Screen, Zero Brightness
-  db 20, %00001111 // Repeat 20 Scanlines, Turn Off Screen, Zero Brightness
+  db 20, %00001111 // Repeat 20 Scanlines, Turn On Screen, Full Brightness
   db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
   db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
   db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
