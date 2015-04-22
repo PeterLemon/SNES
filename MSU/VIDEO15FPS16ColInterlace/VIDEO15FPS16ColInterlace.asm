@@ -83,6 +83,8 @@ RestartVid:
   stx.w REG_A1T1L // Store Data Offset Into DMA Source Offset ($4312: DMA Source)
   stz.w REG_A1B1  // Store Zero Into DMA Source Bank ($4314: Source Bank)
 
+  WaitNMI() // Wait For Vertical Blank Before Starting HDMA
+
   // Screen Display HDMA Channel 2     
   lda.b #%00000000   // HMDA: Write 1 Byte Each Scanline
   sta.w REG_DMAP2    // $4320: DMA2 DMA/HDMA Parameters
