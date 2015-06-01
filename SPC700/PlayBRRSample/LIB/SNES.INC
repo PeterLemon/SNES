@@ -77,7 +77,7 @@ constant REG_APUIO0($2140)   // Main CPU To Sound CPU Communication Port 0      
 constant REG_APUIO1($2141)   // Main CPU To Sound CPU Communication Port 1            1B/RW
 constant REG_APUIO2($2142)   // Main CPU To Sound CPU Communication Port 2            1B/RW
 constant REG_APUIO3($2143)   // Main CPU To Sound CPU Communication Port 3            1B/RW
-// APU Ports $2140-$2143 Mirrored To ($2144..$217F
+// $2140..$2143 - APU Ports Mirrored To $2144..$217F
 
 // WRAM Access Ports
 constant REG_WMDATA($2180)   // WRAM Data Read/Write                                  1B/RW
