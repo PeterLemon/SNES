@@ -111,8 +111,6 @@ seek($8000); Start:
   lda.b #0         // HDMA Table Bank
   sta.w REG_A1B7   // $4374: DMA7 DMA/HDMA Table Start Address (Bank)
 
-
-
   WaitNMI() // Wait For Vertical Blank
 
   lda.b #$0F
