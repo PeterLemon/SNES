@@ -1,0 +1,105 @@
+﻿BACK GROUND
+	2PキャラBG
+	2P Character BG
+	$0121B
+	32	50	B7	AC	D7	42	47	FF	| Original Japanese Hex
+	2	P	キ	ャ	ラ	B	G	#	| Original Japanese Text
+	2	P	C	H	R	B	G	#	| New English Text
+	32	50	43	48	52	42	47	FF	| New English Hex
+
+	ハロウィン
+	Halloween
+	$01223
+	CA	DB	B3	A8	DD	20	20	FF	| Original Japanese Hex
+	ハ	ロ	ウ	ィ	ン	 	 	#	| Original Japanese Text
+	H	A	L	L	O	W	E 	#	| New English Text
+	48	41	4C	4C	4F	57	45	FF	| New English Hex
+
+	ミルルン
+	Mirurun
+	$0122B
+	D0	D9	D9	DD	20	20	20	FF	| Original Japanese Hex
+	ミ	ル	ル	ン	 	 	 	#	| Original Japanese Text
+	M	I	R	U	R	U	N	#	| New English Text
+	4D	49	52	55	52	55	4E	FF	| New English Hex
+
+	シャーマン
+	Shaman
+	$01233
+	BC	AC	B0	CF	DD	20	20	FF	| Original Japanese Hex
+	シ	ャ	ー	マ	ン	 	 	#	| Original Japanese Text
+	S	H	A	M	A	N	 	#	| New English Text
+	53	48	41	4D	41	4E	20	FF	| New English Hex
+
+	アラジン
+	Aladdin
+	$0123B
+	B1	D7	BC	DE	DD	20	20	FF	| Original Japanese Hex
+	ア	ラ	シ	"	ン	 	 	#	| Original Japanese Text
+	A	L	A	D	D	I	N	#	| New English Text
+	41	4C	41	44	44	49	4E	FF	| New English Hex
+
+	プリンセス
+	Princess
+	$01243
+	CC	DF	D8	DD	BE	BD	20	FF	| Original Japanese Hex
+	フ	o	リ	ン	セ	ス	 	#	| Original Japanese Text
+	P	R	I	N	C	E	S 	#	| New English Text
+	50	52	49	4E	43	45	53	FF	| New English Hex
+
+	ビット
+	Bit
+	$0124B
+	CB	DE	AF	C4	20	20	20	FF	| Original Japanese Hex
+	ヒ	"	ッ	ト	 	 	 	#	| Original Japanese Text
+	B	I	T	 	 	 	 	#	| New English Text
+	42	49	54	20	20	20	20	FF	| New English Hex
+
+	ニンジャ
+	Ninja
+	$1253
+	C6	DD	BC	DE	AC	20	20	FF	| Original Japanese Hex
+	ニ	ン	シ	"	ャ	 	 	#	| Original Japanese Text
+	N	I	N	J	A	 	 	#	| New English Text
+	4E	49	4E	4A	41	20	20	FF	| New English Hex
+
+	オオカミオトコ
+	Wolfman
+	$0125B
+	B5	B5	B6	D0	B5	C4	BA	FF	| Original Japanese Hex
+	オ	オ	カ	ミ	オ	ト	コ	#	| Original Japanese Text
+	W	O	L	F	M	A	N	#	| New English Text
+	57	4F	4C	46	4D	41	4E	FF	| New English Hex
+
+	ドラゴン
+	Dragon
+	$01263
+	C4	DE	D7	BA	DE	DD	20	FF	| Original Japanese Hex
+	ト	"	ラ	コ	"	ン	 	#	| Original Japanese Text
+	D	R	A	G	O	N	 	#	| New English Text
+	44	52	41	47	4F	4E	20	FF	| New English Hex
+
+	グラプリ
+	Grand Princess (Queen) Empress
+	$0126B
+	B8	DE	D7	CC	DF	D8	20	FF	| Original Japanese Hex
+	?	"	ラ	フ	o	リ	 	#	| Original Japanese Text
+	Q	U	E	E	N	 	 	#	| New English Text
+	51	55	45	45	4E	20	20	FF	| New English Hex
+
+STEREO/MONO
+	ステレオ
+	Stereo
+	$01277
+	BD	C3	DA	B5	FF	| Original Japanese Hex
+	ス	テ	レ	オ	#	| Original Japanese Text
+	S	T	E	R	#	| New English Text
+	53	54	45	52	FF	| New English Hex
+
+	モノラル
+	Monaural
+	$0127C
+	D3	C9	D7	D9	FF	| Original Japanese Hex
+	モ	ノ	ラ	ル	#	| Original Japanese Text
+	M	O	N	O	#	| New English Text
+	4D	4F	4E	4F	FF	| New English Hex
