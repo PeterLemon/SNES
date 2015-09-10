@@ -3,6 +3,33 @@
 output "Tetris Battle Gaiden.sfc", create
 origin $00000; insert "Tetris Battle Gaiden (J).sfc" // Include Japanese Tetris Battle Gaiden SNES ROM
 
+//macro TextStyle1(OFFSET, TEXT) {
+//  origin {OFFSET}
+//  db {TEXT}
+//  db $FF
+//}
+
+macro TextStyle2(OFFSET, TEXT) {
+  // Map Font HI
+  map ' ', $20, 16
+
+  origin {OFFSET} // Offset
+  variable labeloffset(+)
+  variable length(labeloffset - {OFFSET} - 1)
+  db length
+  db {TEXT}
+  +
+  db $94, $00
+
+  // Map Font LO
+  map ' ', $30, 16
+
+  origin {OFFSET} + (length + 3) // Offset
+  db length
+  db {TEXT}
+  db $94, $00
+}
+
 // SETTING
 // BACK GROUND
 origin $00C87
@@ -82,12 +109,12 @@ db "    ", $00, $00
 origin $1B355
 db "LIKES:    "
 db "   DANCING"
-db "          "
 db "HATES:    "
 db "   THUNDER"
 db "          "
 db "BORN IN:  "
-db "RAINFOREST"
+db "    YANBOO"
+db "    FOREST"
 db "  ", $00, $00
 
 origin $1B3BB
@@ -98,7 +125,7 @@ db "HATES:    "
 db " REAL LIFE"
 db "          "
 db "BORN IN:  "
-db "    ARABIA"
+db "   NAKADAT"
 db "      ", $00, $00
 
 origin $1B425
@@ -109,18 +136,18 @@ db "HATES:    "
 db "EARTHWORMS"
 db "     SLUGS"
 db "BORN IN:  "
-db "  A CASTLE"
+db "    L-SHIP"
 db "        ", $00, $00, $00
 
 origin $1B491
 db "LIKES:    "
 db "FUN, JOKES"
-db "          "
 db "HATES:    "
 db "   SILENCE"
 db "          "
 db "BORN IN:  "
-db " MOUNTAINS"
+db "  SUNHOUSE"
+db "     HILLS"
 db "  ", $00, $00
 
 origin $1B4F7
@@ -131,7 +158,7 @@ db "HATES:    "
 db " COCKROACH"
 db "          "
 db "BORN IN:  "
-db "EDO, JAPAN"
+db "     GEKKO"
 db "    ", $00
 
 origin $1B55F
@@ -144,3 +171,5 @@ db "BORN IN:  "
 db " DOWNTOWN,"
 db "     TOKYO"
 db "    "
+
+//TextStyle2($849F2, "!!!!!!!!!!!!")

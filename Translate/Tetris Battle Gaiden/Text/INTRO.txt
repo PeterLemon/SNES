@@ -121,41 +121,41 @@ B5	C4	DE	D8	20	20	20	20	20	20	| Original Japanese Hex
 $1B369	(Line 3)
 20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
  	 	 	 	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	 	 	 	 	 	 	 	| New English Text
-20	20	20	20	20	20	20	20	20	20	| New English Hex
+H	A	T	E	S	:	 	 	 	 	| New English Text
+48	41	54	45	53	3A	20	20	20	20	| New English Hex
 きらいなもの
 Things I Hate:
 $1B373	(Line 4)
 B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
 き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
-H	A	T	E	S	:	 	 	 	 	| New English Text
-48	41	54	45	53	3A	20	20	20	20	| New English Hex
+ 	 	 	T	H	U	N	D	E	R	| New English Text
+20	20	20	54	48	55	4E	44	45	52	| New English Hex
 かみなり
 Thunder/Lightning/Storms
 $1B37D	(Line 5)
 B6	D0	C5	D8	20	20	20	20	20	20	| Original Japanese Hex
 か	み	な	り	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	T	H	U	N	D	E	R	| New English Text
-20	20	20	54	48	55	4E	44	45	52	| New English Hex
+ 	 	 	 	 	 	 	 	 		| New English Text
+20	20	20	20	20	20	20	20	20	20	| New English Hex
 $1B387	(Line 3)
 20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
  	 	 	 	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	 	 	 	 	 	 	 	| New English Text
-20	20	20	20	20	20	20	20	20	20	| New English Hex
+B	O	R	N	 	I	N	:	 	 	| New English Text
+42	4F	52	4E	20	49	4E	3A	20	20	| New English Hex
 うまれ
 Born In:
 $1B391	(Line 7)
 B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
 う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
-B	O	R	N	 	I	N	:	 	 	| New English Text
-42	4F	52	4E	20	49	4E	3A	20	20	| New English Hex
+ 	 	 	 	Y	A	N	B	O	O	| New English Text
+20	20	20	20	59	41	4E	42	4F	4F	| New English Hex
 ヤンブーフォレスト
-Yang Boo Forest
+Yanboo Forest
 $1B39B	(Line 8)
 5B	D4	DD	CC	DE	B0	CC	AB	DA	BD	C4	5D	00	00	| Original Japanese Hex
 [	ヤ	ン	フ	"	ー	フ	ォ	レ	ス	ト	]	#	#	| Original Japanese Text
-R	A	I	N	F	O	R	E	S	T	 	 	#	#	| New English Text
-52	41	49	4E	46	4F	52	45	53	54	20	20	00	00	| New English Hex
+ 	 	 	 	F	O	R	E	S	T	 	 	#	#	| New English Text
+20	20	20	20	46	4F	52	45	53	54	20	20	00	00	| New English Hex
 
 すきなもの
 Favorite Things:
@@ -200,15 +200,15 @@ Born In:
 $1B3FB	(Line 7)
 B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
 う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
- 	I	N	:	 	 	 	 	 	 	| New English Text
-20	49	4E	3A	20	20	20	20	20	20	| New English Hex
+ 	I	N	:	 	 	 	 	 	N	| New English Text
+20	49	4E	3A	20	20	20	20	20	4E	| New English Hex
 ナカダット
-Arabia
+Nakadat
 $1B405	(Line 8)
 5B	C5	B6	C0	DE	AF	C4	5D	20	20	20	20	00	00	| Original Japanese Hex
 [	ナ	カ	タ	"	ッ	ト	]	 	 	 	 	#	#	| Original Japanese Text
-A	R	A	B	I	A	 	 	 	 	 	 	#	#	| New English Text
-41	52	41	42	49	41	20	20	20	20	20	20	00	00	| New English Hex
+A	K	A	D	A	T	 	 	 	 	 	 	#	#	| New English Text
+41	4B	41	44	41	54	20	20	20	20	20	20	00	00	| New English Hex
 
 すきなもの
 Favorite Things:
@@ -253,15 +253,15 @@ Born In:
 $1B467	(Line 7)
 B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
 う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
-N	:	 	 	 	 	A	 	C	A	| New English Text
-4E	3A	20	20	20	20	41	20	43	41	| New English Hex
+N	:	 	 	 	 	 	 	L	-	| New English Text
+4E	3A	20	20	20	20	20	20	4C	2D	| New English Hex
 エルシップおうこく
-Erushippu/Crystal Kingdom
+L-Ship Kingdom
 $1B471	(Line 8)
 5B	B4	D9	BC	AF	CC	DF	5D	B5	B3	BA	B8	00	00	00	| Original Japanese Hex
 [	エ	ル	シ	ッ	フ	o	]	お	う	こ	く	#	#	#	| Original Japanese Text
-S	T	L	E	 	 	 	 	 	 	 	 	#	#	#	| New English Text
-53	54	4C	45	20	20	20	20	20	20	20	20	00	00	00	| New English Hex
+S	H	I	P	 	 	 	 	 	 	 	 	#	#	#	| New English Text
+53	48	49	50	20	20	20	20	20	20	20	20	00	00	00	| New English Hex
 
 すきなもの
 Favorite Things:
@@ -280,41 +280,41 @@ F	U	N	,	 	J	O	K	E	S	| New English Text
 $1B4A5	(Line 3)
 20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
  	 	 	 	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	 	 	 	 	 	 	 	| New English Text
-20	20	20	20	20	20	20	20	20	20	| New English Hex
+H	A	T	E	S	:	 	 	 	 	| New English Text
+48	41	54	45	53	3A	20	20	20	20	| New English Hex
 きらいなもの
 Things I Hate:
 $1B4AF	(Line 4)
 B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
 き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
-H	A	T	E	S	:	 	 	 	 	| New English Text
-48	41	54	45	53	3A	20	20	20	20	| New English Hex
+ 	 	 	S	I	L	E	N	C	E	| New English Text
+20	20	20	53	49	4C	45	4E	43	45	| New English Hex
 ちんもく
 Silence
 $1B4B9	(Line 5)
 C1	DD	D3	B8	20	20	20	20	20	20	| Original Japanese Hex
 ち	ん	も	く	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	S	I	L	E	N	C	E	| New English Text
-20	20	20	53	49	4C	45	4E	43	45	| New English Hex
+ 	 	 	 	 	 	 	 	 		| New English Text
+20	20	20	20	20	20	20	20	20	20	| New English Hex
 $1B4C3	(Line 6)
 20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
  	 	 	 	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	 	 	 	 	 	 	 	| New English Text
-20	20	20	20	20	20	20	20	20	20	| New English Hex
+B	O	R	N	 	I	N	:	 	 	| New English Text
+42	4F	52	4E	20	49	4E	3A	20	20	| New English Hex
 うまれ
 Born In:
 $1B4CD	(Line 7)
 B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
 う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
-B	O	R	N	 	I	N	:	 	 	| New English Text
-42	4F	52	4E	20	49	4E	3A	20	20	| New English Hex
+ 	 	S	U	N	H	O	U	S	E	| New English Text
+20	20	53	55	4E	48	4F	55	53	45	| New English Hex
 サンハウスヒルズ
-San House/Hose Hills
+SunHouse Hills
 $1B4D7	(Line 8)
 5B	BB	DD	CA	B3	BD	CB	D9	BD	DE	5D	20	00	00	| Original Japanese Hex
 [	サ	ン	ハ	ウ	ス	ヒ	ル	ス	"	]	 	#	#	| Original Japanese Text
- 	M	O	U	N	T	A	I	N	S	 	 	#	#	| New English Text
-20	4D	4F	55	4E	54	41	49	4E	53	20	20	00	00	| New English Hex
+ 	 	 	 	 	H	I	L	L	S	 	 	#	#	| New English Text
+20	20	20	20	20	48	49	4C	4C	53	20	20	00	00	| New English Hex
 
 すきなもの
 Favorite Things:
@@ -359,15 +359,15 @@ Born In:
 $1B537	(Line 7)
 B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
 う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
- 	I	N	:	 	 	E	D	O	,	| New English Text
-20	49	4E	3A	20	20	45	44	4F	2C	| New English Hex
+ 	I	N	:	 	 	 	 	 		| New English Text
+20	49	4E	3A	20	20	20	20	20	20	| New English Hex
 げっこうえどむら
-Gekkou Edo-mura
+Gekko Edo-mura
 $1B541	(Line 8)
 B9	DE	AF	BA	B3	B4	C4	DE	D1	D7	00	| Original Japanese Hex
 け	"	っ	こ	う	え	と	"	む	ら	#	| Original Japanese Text
- 	J	A	P	A	N	 	 	 	 	#	| New English Text
-20	4A	41	50	41	4E	20	20	20	20	00	| New English Hex
+ 	G	E	K	K	O	 	 	 	 	#	| New English Text
+20	47	45	4B	4B	4F	20	20	20	20	00	| New English Hex
 
 すきなもの
 Favorite Things:
