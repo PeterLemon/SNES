@@ -4,13 +4,13 @@ output "Tetris Battle Gaiden.sfc", create
 origin $00000; insert "Tetris Battle Gaiden (J).sfc" // Include Japanese Tetris Battle Gaiden SNES ROM
 
 // SETTING
-// BACK GROUND
 origin $00C87
 dw SETTINGBACKGROUND + $8000
 
 origin $00CA0
 dw SETTINGSTEREOMONO + $8000
 
+// BACK GROUND
 origin $01950
 SETTINGBACKGROUND:
   dw TWOPLAYERBGText + $8000
