@@ -3,33 +3,6 @@
 output "Tetris Battle Gaiden.sfc", create
 origin $00000; insert "Tetris Battle Gaiden (J).sfc" // Include Japanese Tetris Battle Gaiden SNES ROM
 
-//macro TextStyle1(OFFSET, TEXT) {
-//  origin {OFFSET}
-//  db {TEXT}
-//  db $FF
-//}
-
-macro TextStyle2(OFFSET, TEXT) {
-  // Map Font HI
-  map ' ', $20, 16
-
-  origin {OFFSET} // Offset
-  variable labeloffset(+)
-  variable length(labeloffset - {OFFSET} - 1)
-  db length
-  db {TEXT}
-  +
-  db $94, $00
-
-  // Map Font LO
-  map ' ', $30, 16
-
-  origin {OFFSET} + (length + 3) // Offset
-  db length
-  db {TEXT}
-  db $94, $00
-}
-
 // SETTING
 // BACK GROUND
 origin $00C87
@@ -171,5 +144,3 @@ db "BORN IN:  "
 db " DOWNTOWN,"
 db "     TOKYO"
 db "    "
-
-//TextStyle2($849F2, "!!!!!!!!!!!!")
