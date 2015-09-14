@@ -94,15 +94,15 @@ Born In:
 $1B32B	(Line 7)
 B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
 う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
-A	 	B	A	M	B	O	O	 	 	| New English Text
-41	20	42	41	4D	42	4F	4F	20	20	| New English Hex
+ 	 	B	A	N	B	O	O	 	 	| New English Text
+20	20	42	41	4E	42	4F	4F	20	20	| New English Hex
 バンブーヤード
 Bamboo Garden
 $1B335	(Line 8)
 5B	CA	DE	DD	CC	DE	B0	D4	B0	C4	DE	5D	00	00	| Original Japanese Hex
 [	ハ	"	ン	フ	"	ー	ヤ	ー	ト	"	]	#	#	| Original Japanese Text
- 	 	G	A	R	D	E	N	 	 	 	 	#	#	| New English Text
-20	20	47	41	52	44	45	4E	20	20	20	20	00	00	| New English Hex
+ 	 G	A	R	D	E	N	S	 	 	 	 	#	#	| New English Text
+20	47	41	52	44	45	4E	53	20	20	20	20	00	00	| New English Hex
 
 すきなもの
 Favorite Things:

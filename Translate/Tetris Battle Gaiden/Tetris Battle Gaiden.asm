@@ -75,8 +75,8 @@ db "HATES:    "
 db " HALLOWEEN"
 db "          "
 db "BORN IN:  "
-db "  A BAMBOO"
-db "    GARDEN"
+db "    BANBOO"
+db "   GARDENS"
 db "    ", $00, $00
 
 origin $1B355
