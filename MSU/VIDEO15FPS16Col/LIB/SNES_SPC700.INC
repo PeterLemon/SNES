@@ -195,10 +195,8 @@ macro SPCWaitMS(AMOUNT) { // Wait For MilliSecond Amount (Granularity = 1ms, Max
   str REG_T2DIV=#$40
   str REG_CONTROL=#$04
 -
-  lda.b REG_T2OUT
-  beq -
-  dey
-  bne -
+  bbc REG_T2OUT:0=- // IF (REG_T2OUT.BIT0 == 0) Wait For Timer
+  bne --y=- // IF (Y != 0) Y--, Loop Timer Wait
 }
 
 macro SPCRAMClear(ADDR, AMOUNT) { // Clear SPC RAM in 256 Byte Chunks * Amount
