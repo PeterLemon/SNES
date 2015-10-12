@@ -196,25 +196,25 @@ macro SPCWaitMS(AMOUNT) { // Wait For MilliSecond Amount (8KHz Timer)
   str REG_CONTROL=#$01
 -
   bbc REG_T0OUT:0=- // IF (REG_T0OUT.BIT0 == 0) Wait For Timer
-  bne --y=- // IF (Y != 0) Y--, Loop Timer Wait
+  bne --y=- // Y--, IF (Y != 0) Loop Timer Wait
 }
 
 macro SPCWaitSHIFTMS(AMOUNT, SHIFT) { // Wait For Shifted MilliSecond Amount (8KHz Timer)
   ldy #{AMOUNT} // Granularity = 1..16ms, Max Wait = 255 * 1..16ms
-  str REG_T0DIV=#(8<<{SHIFT})&$FF // Shift MilliSecond (0 = 1ms, 1 = 2ms, 2 = 4ms, 3 = 8ms, 4 = 16ms)
+  str REG_T0DIV=#(8 << {SHIFT}) & $FF // Shift MilliSecond (0 = 1ms, 1 = 2ms, 2 = 4ms, 3 = 8ms, 4 = 16ms)
   str REG_CONTROL=#$01
 -
   bbc REG_T0OUT:0=- // IF (REG_T0OUT.BIT0 == 0) Wait For Timer
-  bne --y=- // IF (Y != 0) Y--, Loop Timer Wait
+  bne --y=- // Y--, IF (Y != 0) Loop Timer Wait
 }
 
 macro SPCWaitSHIFTMS64(AMOUNT, SHIFT) { // Wait For Shifted MilliSecond Amount (64KHz Timer)
   ldy #{AMOUNT} // Granularity = 1..4ms, Max Wait = 255 * 1..4ms
-  str REG_T2DIV=#($40<<{SHIFT})&$FF // Shift MilliSecond (0 = 1ms, 1 = 2ms, 2 = 4ms)
+  str REG_T2DIV=#($40 << {SHIFT}) & $FF // Shift MilliSecond (0 = 1ms, 1 = 2ms, 2 = 4ms)
   str REG_CONTROL=#$04
 -
   bbc REG_T2OUT:0=- // IF (REG_T2OUT.BIT0 == 0) Wait For Timer
-  bne --y=- // IF (Y != 0) Y--, Loop Timer Wait
+  bne --y=- // Y--, IF (Y != 0) Loop Timer Wait
 }
 
 macro SPCRAMClear(ADDR, AMOUNT) { // Clear SPC RAM in 256 Byte Chunks * Amount
@@ -222,12 +222,11 @@ macro SPCRAMClear(ADDR, AMOUNT) { // Clear SPC RAM in 256 Byte Chunks * Amount
   ldx #{AMOUNT} // Clear Amount High Byte
   ldy #$00 // Echo Buffer Index
 -
-  sta {ADDR},y // Store Clear Byte Into RAM Using 16bit Offset
-  iny // Increment Y Index
-  bne - // IF (Y != 0) Loop Clear Byte
+  sta {ADDR},y // Store Clear Byte Into RAM Using 16-Bit Offset
+  bne --y=- // Y--, IF (Y != 0) Loop Clear Byte
 
   variable modifyoffset(-)
-  inc modifyoffset + 2 // Self Modify (Increment) 16Bit ADDR Offset Above
+  inc modifyoffset + 2 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
   dex // Decrement X Clear Amount High Byte
   bne - // Loop Another 256 Byte Chunk
 }
