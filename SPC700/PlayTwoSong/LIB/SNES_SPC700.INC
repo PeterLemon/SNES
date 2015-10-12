@@ -190,16 +190,16 @@ macro SPC_INIT() { // SPC700 Initialisation
   WDSP(DSP_EVOLR,0)  // Reset Echo Volume Right
 }
 
-macro SPCWaitMS(AMOUNT) { // Wait For MilliSecond Amount (8KHz Timer)
+macro SPCWaitMS(AMOUNT) { // Wait For MilliSecond Amount (8kHz Timer)
   ldy #{AMOUNT} // Granularity = 1ms, Max Wait = 255ms
-  str REG_T0DIV=#8 // 8KHz Clock Divider 8 = 1024 Clock Ticks (1ms)
+  str REG_T0DIV=#8 // 8kHz Clock Divider 8 = 1024 Clock Ticks (1ms)
   str REG_CONTROL=#$01
 -
   bbc REG_T0OUT:0=- // IF (REG_T0OUT.BIT0 == 0) Wait For Timer
   bne --y=- // Y--, IF (Y != 0) Loop Timer Wait
 }
 
-macro SPCWaitSHIFTMS(AMOUNT, SHIFT) { // Wait For Shifted MilliSecond Amount (8KHz Timer)
+macro SPCWaitSHIFTMS(AMOUNT, SHIFT) { // Wait For Shifted MilliSecond Amount (8kHz Timer)
   ldy #{AMOUNT} // Granularity = 1..16ms, Max Wait = 255 * 1..16ms
   str REG_T0DIV=#(8 << {SHIFT}) & $FF // Shift MilliSecond (0 = 1ms, 1 = 2ms, 2 = 4ms, 3 = 8ms, 4 = 16ms)
   str REG_CONTROL=#$01
@@ -208,7 +208,7 @@ macro SPCWaitSHIFTMS(AMOUNT, SHIFT) { // Wait For Shifted MilliSecond Amount (8K
   bne --y=- // Y--, IF (Y != 0) Loop Timer Wait
 }
 
-macro SPCWaitSHIFTMS64(AMOUNT, SHIFT) { // Wait For Shifted MilliSecond Amount (64KHz Timer)
+macro SPCWaitSHIFTMS64(AMOUNT, SHIFT) { // Wait For Shifted MilliSecond Amount (64kHz Timer)
   ldy #{AMOUNT} // Granularity = 1..4ms, Max Wait = 255 * 1..4ms
   str REG_T2DIV=#($40 << {SHIFT}) & $FF // Shift MilliSecond (0 = 1ms, 1 = 2ms, 2 = 4ms)
   str REG_CONTROL=#$04
