@@ -41,7 +41,7 @@ SongStart:
 
 Loop:
 // Kick
-  WDSP(DSP_FLG,14)   // Enable Echo Buffer Writes, Noise Frequency = 15Hz
+  WDSP(DSP_FLG,14)   // Enable Echo Buffer Writes, Noise Frequency = 14Hz
   WDSP(DSP_V0ADSR1,%10001110) // Voice 0: ADSR1
   WDSP(DSP_V0ADSR2,%11110110) // Voice 0: ADSR2
   WDSP(DSP_KON,%00000001) // Play Voice 0
