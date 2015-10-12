@@ -120,8 +120,7 @@ SongStart:
   jsr ResetCheck
   SetPitch(6,G,5,HarpC9Pitch)
   WDSP(DSP_KON,%01000000) // Play Voice 6
-  SPCWaitMS(255) // Wait 255 ms
-  SPCWaitMS(255) // Wait 255 ms
+  SPCWaitSHIFTMS(255, 1) // Wait 255*2 ms
 
 
   jsr ResetCheck
@@ -157,8 +156,7 @@ SongStart:
   jsr ResetCheck
   SetPitch(6,C,5,HarpC9Pitch)
   WDSP(DSP_KON,%01000000) // Play Voice 6
-  SPCWaitMS(255) // Wait 255 ms
-  SPCWaitMS(255) // Wait 255 ms
+  SPCWaitSHIFTMS(255, 1) // Wait 255*2 ms
 
 
   jsr ResetCheck
@@ -194,8 +192,7 @@ SongStart:
   jsr ResetCheck
   SetPitch(6,D,5,HarpC9Pitch)
   WDSP(DSP_KON,%01000000) // Play Voice 6
-  SPCWaitMS(255) // Wait 255 ms
-  SPCWaitMS(255) // Wait 255 ms
+  SPCWaitSHIFTMS(255, 1) // Wait 255*2 ms
 
 
   jsr ResetCheck
@@ -231,8 +228,7 @@ SongStart:
   jsr ResetCheck
   SetPitch(6,D,5,HarpC9Pitch)
   WDSP(DSP_KON,%01000000) // Play Voice 6
-  SPCWaitMS(255) // Wait 255 ms
-  SPCWaitMS(255) // Wait 255 ms
+  SPCWaitSHIFTMS(255, 1) // Wait 255*2 ms
 
 
   jsr ResetCheck
@@ -268,8 +264,7 @@ SongStart:
   jsr ResetCheck
   SetPitch(6,G,5,HarpC9Pitch)
   WDSP(DSP_KON,%01000000) // Play Voice 6
-  SPCWaitMS(255) // Wait 255 ms
-  SPCWaitMS(255) // Wait 255 ms
+  SPCWaitSHIFTMS(255, 1) // Wait 255*2 ms
 
 
   jsr ResetCheck
