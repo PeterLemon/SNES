@@ -114,32 +114,32 @@ SongStart:
 
   jsr ResetCheck
   WDSP(DSP_KON,%00001000) // Play Voice 3
-  SPCWaitMS(240) // Wait 240 Ms
+  SPCWaitMS(240) // Wait 240 ms
 
 Loop1:
   jsr ResetCheck
   WDSP(DSP_KON,%00010101) // Play Voice 0,2,4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   WDSP(DSP_KON,%00010100) // Play Voice 2,4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   WDSP(DSP_KON,%00010111) // Play Voice 0,1,2,4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   WDSP(DSP_KON,%00010100) // Play Voice 2,4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   pla // Check Loop Amount
   dec
@@ -151,30 +151,30 @@ Loop2:
   jsr ResetCheck
   SetPitch(5,A,3,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110101) // Play Voice 0,2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,4,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,3,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110111) // Play Voice 0,1,2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,4,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   pla // Check Loop Amount
   dec
@@ -197,64 +197,64 @@ Loop3:
   SetPitch(6,A,4,ElectroSynthC9Pitch)
   SetPitch(7,A,4,BassSynthC9Pitch)
   WDSP(DSP_KON,%11110101) // Play Voice 0,2,4,5,6,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,4,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,3,BassSynthC9Pitch)
   SetPitch(6,E,5,ElectroSynthC9Pitch)
   WDSP(DSP_KON,%01110111) // Play Voice 0,1,2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,4,BassSynthC9Pitch)
   SetPitch(6,C,5,ElectroSynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,C,5,BassSynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,3,BassSynthC9Pitch)
   SetPitch(7,E,5,BassSynthC9Pitch)
   WDSP(DSP_KON,%10110101) // Play Voice 0,2,4,5,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,4,BassSynthC9Pitch)
   SetPitch(6,A,4,ElectroSynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,3,BassSynthC9Pitch)
   SetPitch(6,E,5,ElectroSynthC9Pitch)
   WDSP(DSP_KON,%01110111) // Play Voice 0,1,2,4,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,4,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
 
   jsr ResetCheck
@@ -262,64 +262,64 @@ Loop3:
   SetPitch(6,C,5,ElectroSynthC9Pitch)
   SetPitch(7,C,5,BassSynthC9Pitch)
   WDSP(DSP_KON,%11110101) // Play Voice 0,2,4,5,6,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,C,5,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,C,4,BassSynthC9Pitch)
   SetPitch(6,G,5,ElectroSynthC9Pitch)
   WDSP(DSP_KON,%01110111) // Play Voice 0,1,2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,C,5,BassSynthC9Pitch)
   SetPitch(6,E,5,ElectroSynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,E,5,BassSynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,C,4,BassSynthC9Pitch)
   SetPitch(7,G,5,BassSynthC9Pitch)
   WDSP(DSP_KON,%10110101) // Play Voice 0,2,4,5,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,C,5,BassSynthC9Pitch)
   SetPitch(6,C,5,ElectroSynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,C,4,BassSynthC9Pitch)
   SetPitch(6,G,5,ElectroSynthC9Pitch)
   WDSP(DSP_KON,%01110111) // Play Voice 0,1,2,4,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,C,5,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
 
   jsr ResetCheck
@@ -327,65 +327,65 @@ Loop3:
   SetPitch(6,E,5,ElectroSynthC9Pitch)
   SetPitch(7,E,5,BassSynthC9Pitch)
   WDSP(DSP_KON,%11110101) // Play Voice 0,2,4,5,6,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,E,4,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,E,3,BassSynthC9Pitch)
   SetPitch(6,B,5,ElectroSynthC9Pitch)
   WDSP(DSP_KON,%01110111) // Play Voice 0,1,2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,E,4,BassSynthC9Pitch)
   SetPitch(6,G,5,ElectroSynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,G,5,BassSynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,E,3,BassSynthC9Pitch)
   SetPitch(7,B,5,BassSynthC9Pitch)
   WDSP(DSP_KON,%10110101) // Play Voice 0,2,4,5,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,E,4,BassSynthC9Pitch)
   SetPitch(6,E,5,ElectroSynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,E,3,BassSynthC9Pitch)
   SetPitch(6,B,5,ElectroSynthC9Pitch)
   WDSP(DSP_KON,%01110111) // Play Voice 0,1,2,4,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,E,4,BassSynthC9Pitch)
   SetPitch(7,C,6,BassSynthC9Pitch)
   WDSP(DSP_KON,%10110100) // Play Voice 2,4,5,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
 
   jsr ResetCheck
@@ -393,64 +393,64 @@ Loop3:
   SetPitch(6,G,5,ElectroSynthC9Pitch)
   SetPitch(7,D,6,BassSynthC9Pitch)
   WDSP(DSP_KON,%11110101) // Play Voice 0,2,4,5,6,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,5,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,4,BassSynthC9Pitch)
   SetPitch(6,D,6,ElectroSynthC9Pitch)
   WDSP(DSP_KON,%01110111) // Play Voice 0,1,2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,5,BassSynthC9Pitch)
   SetPitch(6,B,5,ElectroSynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,B,5,BassSynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,4,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110101) // Play Voice 0,2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,5,BassSynthC9Pitch)
   SetPitch(6,G,5,ElectroSynthC9Pitch)
   SetPitch(7,G,5,BassSynthC9Pitch)
   WDSP(DSP_KON,%11110100) // Play Voice 2,4,5,6,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,4,BassSynthC9Pitch)
   SetPitch(6,D,6,ElectroSynthC9Pitch)
   WDSP(DSP_KON,%01110111) // Play Voice 0,1,2,4,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,5,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   pla // Check Loop Amount
   dec
@@ -472,260 +472,260 @@ Loop4:
   SetPitch(5,A,3,BassSynthC9Pitch)
   SetPitch(6,G,4,SynthC9Pitch)
   WDSP(DSP_KON,%01110101) // Play Voice 0,2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,A,4,SynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,4,BassSynthC9Pitch)
   SetPitch(6,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,E,5,SynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,3,BassSynthC9Pitch)
   SetPitch(6,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%01110111) // Play Voice 0,1,2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,D,5,SynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,4,BassSynthC9Pitch)
   SetPitch(6,G,4,SynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,3,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110101) // Play Voice 0,2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,4,BassSynthC9Pitch)
   SetPitch(6,D,5,SynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,A,4,SynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,3,BassSynthC9Pitch)
   SetPitch(6,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%01110111) // Play Voice 0,1,2,4,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,A,4,BassSynthC9Pitch)
   SetPitch(7,D,5,SynthC9Pitch)
   WDSP(DSP_KON,%10110100) // Play Voice 2,4,5,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
 
   jsr ResetCheck
   SetPitch(5,C,4,BassSynthC9Pitch)
   SetPitch(6,G,4,SynthC9Pitch)
   WDSP(DSP_KON,%01110101) // Play Voice 0,2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,A,4,SynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,C,5,BassSynthC9Pitch)
   SetPitch(6,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,E,5,SynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,C,4,BassSynthC9Pitch)
   SetPitch(6,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%01110111) // Play Voice 0,1,2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,D,5,SynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,C,5,BassSynthC9Pitch)
   SetPitch(6,G,4,SynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,C,4,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110101) // Play Voice 0,2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,C,5,BassSynthC9Pitch)
   SetPitch(6,D,5,SynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,A,4,SynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,C,4,BassSynthC9Pitch)
   SetPitch(6,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%01110111) // Play Voice 0,1,2,4,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,C,5,BassSynthC9Pitch)
   SetPitch(7,D,5,SynthC9Pitch)
   WDSP(DSP_KON,%10110100) // Play Voice 2,4,5,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
 
   jsr ResetCheck
   SetPitch(5,G,3,BassSynthC9Pitch)
   SetPitch(6,B,4,SynthC9Pitch)
   WDSP(DSP_KON,%01110101) // Play Voice 0,2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,4,BassSynthC9Pitch)
   SetPitch(6,D,5,SynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,G,4,SynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,3,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110111) // Play Voice 0,1,2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,4,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,3,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110101) // Play Voice 0,2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,4,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,3,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110111) // Play Voice 0,1,2,4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,4,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
 
   jsr ResetCheck
   SetPitch(5,G,3,BassSynthC9Pitch)
   SetPitch(6,B,4,SynthC9Pitch)
   WDSP(DSP_KON,%01110101) // Play Voice 0,2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,4,BassSynthC9Pitch)
   SetPitch(6,D,5,SynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(7,G,5,SynthC9Pitch)
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,3,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110111) // Play Voice 0,1,2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,4,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,3,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110101) // Play Voice 0,2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,4,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,3,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110111) // Play Voice 0,1,2,4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,4,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   pla // Check Loop Amount
   dec
@@ -744,135 +744,135 @@ Loop5:
   SetPitch(5,F,3,BassSynthC9Pitch)
   SetPitch(6,F,4,SynthC9Pitch)
   WDSP(DSP_KON,%01110101) // Play Voice 0,2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(6,B,4,SynthC9Pitch)
   WDSP(DSP_KON,%01010000) // Play Voice 4,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,F,4,BassSynthC9Pitch)
   SetPitch(6,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(6,E,5,SynthC9Pitch)
   WDSP(DSP_KON,%01010000) // Play Voice 4,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,F,3,BassSynthC9Pitch)
   SetPitch(6,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%01110111) // Play Voice 0,1,2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(6,D,5,SynthC9Pitch)
   WDSP(DSP_KON,%01010000) // Play Voice 4,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,F,4,BassSynthC9Pitch)
   SetPitch(6,A,4,SynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,F,3,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110101) // Play Voice 0,2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,F,4,BassSynthC9Pitch)
   SetPitch(6,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%11110100) // Play Voice 2,4,5,6,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,F,3,BassSynthC9Pitch)
   SetPitch(6,D,5,SynthC9Pitch)
   WDSP(DSP_KON,%11110111) // Play Voice 0,1,2,4,6,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(6,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%11010000) // Play Voice 4,6,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,F,4,BassSynthC9Pitch)
   SetPitch(6,D,5,SynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
 
   jsr ResetCheck
   SetPitch(5,G,3,BassSynthC9Pitch)
   SetPitch(6,G,4,SynthC9Pitch)
   WDSP(DSP_KON,%01110101) // Play Voice 0,2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(6,A,4,SynthC9Pitch)
   WDSP(DSP_KON,%01010000) // Play Voice 4,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,4,BassSynthC9Pitch)
   SetPitch(6,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(6,E,5,SynthC9Pitch)
   WDSP(DSP_KON,%01010000) // Play Voice 4,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,3,BassSynthC9Pitch)
   SetPitch(6,C,5,SynthC9Pitch)
   WDSP(DSP_KON,%01110111) // Play Voice 0,1,2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(6,D,5,SynthC9Pitch)
   WDSP(DSP_KON,%01010000) // Play Voice 4,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,4,BassSynthC9Pitch)
   SetPitch(6,A,4,SynthC9Pitch)
   WDSP(DSP_KON,%01110100) // Play Voice 2,4,5,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   SetPitch(6,E,5,SynthC9Pitch)
   WDSP(DSP_KON,%01010000) // Play Voice 4,6
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,3,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110101) // Play Voice 0,2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,4,BassSynthC9Pitch)
   SetPitch(6,G,5,SynthC9Pitch)
   WDSP(DSP_KON,%11111100) // Play Voice 2,3,4,5,6,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,3,BassSynthC9Pitch)
   SetPitch(6,A,5,SynthC9Pitch)
   WDSP(DSP_KON,%11110111) // Play Voice 0,1,2,4,6,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%10010000) // Play Voice 4,7
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   jsr ResetCheck
   SetPitch(5,G,4,BassSynthC9Pitch)
   WDSP(DSP_KON,%00110100) // Play Voice 2,4,5
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(120) // Wait 120 Ms
+  SPCWaitMS(120) // Wait 120 ms
 
   pla // Check Loop Amount
   dec

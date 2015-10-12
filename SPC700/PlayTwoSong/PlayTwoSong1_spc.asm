@@ -90,223 +90,222 @@ SongStart:
   jsr ResetCheck
   SetPitch(0,C,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(1,C,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000010) // Play Voice 1
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(2,G,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(3,G,5,HarpC9Pitch)
   WDSP(DSP_KON,%00001000) // Play Voice 3
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(4,A,5,HarpC9Pitch)
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(5,A,5,HarpC9Pitch)
   WDSP(DSP_KON,%00100000) // Play Voice 5
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(6,G,5,HarpC9Pitch)
   WDSP(DSP_KON,%01000000) // Play Voice 6
-  SPCWaitMS(255) // Wait 255 Ms
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
+  SPCWaitMS(255) // Wait 255 ms
 
 
   jsr ResetCheck
   SetPitch(0,F,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(1,F,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000010) // Play Voice 1
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(2,E,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(3,E,5,HarpC9Pitch)
   WDSP(DSP_KON,%00001000) // Play Voice 3
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(4,D,5,HarpC9Pitch)
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(5,D,5,HarpC9Pitch)
   WDSP(DSP_KON,%00100000) // Play Voice 5
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(6,C,5,HarpC9Pitch)
   WDSP(DSP_KON,%01000000) // Play Voice 6
-  SPCWaitMS(255) // Wait 255 Ms
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
+  SPCWaitMS(255) // Wait 255 ms
 
 
   jsr ResetCheck
   SetPitch(0,G,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(1,G,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000010) // Play Voice 1
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(2,F,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(3,F,5,HarpC9Pitch)
   WDSP(DSP_KON,%00001000) // Play Voice 3
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(4,E,5,HarpC9Pitch)
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(5,E,5,HarpC9Pitch)
   WDSP(DSP_KON,%00100000) // Play Voice 5
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(6,D,5,HarpC9Pitch)
   WDSP(DSP_KON,%01000000) // Play Voice 6
-  SPCWaitMS(255) // Wait 255 Ms
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
+  SPCWaitMS(255) // Wait 255 ms
 
 
   jsr ResetCheck
   SetPitch(0,G,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(1,G,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000010) // Play Voice 1
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(2,F,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(3,F,5,HarpC9Pitch)
   WDSP(DSP_KON,%00001000) // Play Voice 3
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(4,E,5,HarpC9Pitch)
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(5,E,5,HarpC9Pitch)
   WDSP(DSP_KON,%00100000) // Play Voice 5
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(6,D,5,HarpC9Pitch)
   WDSP(DSP_KON,%01000000) // Play Voice 6
-  SPCWaitMS(255) // Wait 255 Ms
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
+  SPCWaitMS(255) // Wait 255 ms
 
 
   jsr ResetCheck
   SetPitch(0,C,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(1,C,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000010) // Play Voice 1
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(2,G,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(3,G,5,HarpC9Pitch)
   WDSP(DSP_KON,%00001000) // Play Voice 3
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(4,A,5,HarpC9Pitch)
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(5,A,5,HarpC9Pitch)
   WDSP(DSP_KON,%00100000) // Play Voice 5
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(6,G,5,HarpC9Pitch)
   WDSP(DSP_KON,%01000000) // Play Voice 6
-  SPCWaitMS(255) // Wait 255 Ms
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
+  SPCWaitMS(255) // Wait 255 ms
 
 
   jsr ResetCheck
   SetPitch(0,F,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(1,F,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000010) // Play Voice 1
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(2,E,5,HarpC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(3,E,5,HarpC9Pitch)
   WDSP(DSP_KON,%00001000) // Play Voice 3
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(4,D,5,HarpC9Pitch)
   WDSP(DSP_KON,%00010000) // Play Voice 4
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(5,D,5,HarpC9Pitch)
   WDSP(DSP_KON,%00100000) // Play Voice 5
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitMS(255) // Wait 255 ms
 
   jsr ResetCheck
   SetPitch(6,C,5,HarpC9Pitch)
   WDSP(DSP_KON,%01000000) // Play Voice 6
-  SPCWaitMS(255) // Wait 255 Ms
-  SPCWaitMS(255) // Wait 255 Ms
+  SPCWaitSHIFTMS(255, 1) // Wait 255*2 ms
 
 jmp SongStart
 
