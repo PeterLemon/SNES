@@ -50,24 +50,24 @@ macro FadeOUT() { // Decrement Screen Brightness From 15..0 (VSYNC Timing)
 // LoadPAL - Load Palette Data To CGRAM
 //======================================
 //  SRC: 24-Bit Address Of Source Data
-// DEST: CGRAM Destination Address (Color # To Start On)
+// DEST:  9-Bit CGRAM Destination Address (Color # To Start On)
 // SIZE: Size Of Data (# Of Colors To Copy)
 // CHAN: DMA Channel To Transfer Data (0..7)
 macro LoadPAL(SRC, DEST, SIZE, CHAN) {
-  lda.b #{DEST}   // CGRAM Destination
+  lda.b #{DEST}   // Set CGRAM Destination
   sta.w REG_CGADD // $2121: CGRAM
 
-  stz.w REG_DMAP{CHAN} // Set DMA Mode (Byte, Normal Increment) ($43X0: DMA Control)
+  stz.w REG_DMAP{CHAN} // Set DMA Mode (Write Byte, Increment Source) ($43X0: DMA Control)
   lda.b #$22           // Set Destination Register ($2122: CGRAM Write)
   sta.w REG_BBAD{CHAN} // $43X1: DMA Destination
-  ldx.w #{SRC}         // Source Data
-  stx.w REG_A1T{CHAN}L // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
-  lda.b #{SRC} >> 16   // Source Bank
-  sta.w REG_A1B{CHAN}  // Store Data Bank To DMA Source Bank ($43X4: Source Bank)
-  ldx.w #{SIZE}        // Size In Bytes To DMA Transfer (2 Bytes For Each Color)
-  stx.w REG_DAS{CHAN}L // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
+  ldx.w #{SRC}         // Set Source Offset
+  stx.w REG_A1T{CHAN}L // $43X2: DMA Source
+  lda.b #{SRC} >> 16   // Set Source Bank
+  sta.w REG_A1B{CHAN}  // $43X4: Source Bank
+  ldx.w #{SIZE}        // Set Size In Bytes To DMA Transfer (2 Bytes For Each Color)
+  stx.w REG_DAS{CHAN}L // $43X5: DMA Transfer Size/HDMA
 
-  lda.b #$01 << {CHAN} // Initiate DMA Transfer On Channel
+  lda.b #$01 << {CHAN} // Start DMA Transfer On Channel
   sta.w REG_MDMAEN     // $420B: DMA Enable
 }
 
@@ -75,28 +75,72 @@ macro LoadPAL(SRC, DEST, SIZE, CHAN) {
 // UpdatePAL - Update Palette Data To CGRAM
 //==========================================
 //  SRC: 24-Bit Address Of Source Data
-// DEST: CGRAM Destination Address (Color # To Start On)
+// DEST:  9-Bit CGRAM Destination Address (Color # To Start On)
 // SIZE: Size Of Data (# Of Colors To Copy)
 // CHAN: DMA Channel To Transfer Data (0..7)
 macro UpdatePAL(SRC, DEST, SIZE, CHAN) {
-  lda.b #{DEST}   // CGRAM Destination
+  lda.b #{DEST}   // Set CGRAM Destination
   sta.w REG_CGADD // $2121: CGRAM
 
-  stz.w REG_DMAP{CHAN} // Set DMA Mode (Byte, Normal Increment) ($43X0: DMA Control)
+  stz.w REG_DMAP{CHAN} // Set DMA Mode (Write Byte, Increment Source) ($43X0: DMA Control)
   lda.b #$22           // Set Destination Register ($2122: CGRAM Write)
   sta.w REG_BBAD{CHAN} // $43X1: DMA Destination
-  ldx.w #{SRC}         // Source Data
-  stx.w REG_A1T{CHAN}L // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
-  lda.b #{SRC} >> 16   // Source Bank
-  sta.w REG_A1B{CHAN}  // Store Data Bank To DMA Source Bank ($43X4: Source Bank)
-  ldx.w #{SIZE}        // Size In Bytes To DMA Transfer (2 Bytes For Each Color)
-  stx.w REG_DAS{CHAN}L // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
+  ldx.w #{SRC}         // Set Source Offset
+  stx.w REG_A1T{CHAN}L // $43X2: DMA Source
+  lda.b #{SRC} >> 16   // Set Source Bank
+  sta.w REG_A1B{CHAN}  // $43X4: Source Bank
+  ldx.w #{SIZE}        // Set Size In Bytes To DMA Transfer (2 Bytes For Each Color)
+  stx.w REG_DAS{CHAN}L // $43X5: DMA Transfer Size/HDMA
 
   -
     bit.w REG_HVBJOY // $4212: Read H/V-Blank Flag & Joypad Busy Flag
     bpl - // Wait For V-Blank Period Flag
 
-  lda.b #$01 << {CHAN} // Initiate DMA Transfer On Channel
+  lda.b #$01 << {CHAN} // Start DMA Transfer On Channel
+  sta.w REG_MDMAEN     // $420B: DMA Enable
+}
+
+//===================================
+// ClearVRAM - Fixed Word Clear VRAM
+//===================================
+//  SRC: 24-Bit Address Of Source Data
+// DEST: 16-Bit VRAM Destination (WORD Address)
+// SIZE: Size Of Data (BYTE Size)
+// CHAN: DMA Channel To Transfer Data (0..7)
+macro ClearVRAM(SRC, DEST, SIZE, CHAN) {
+  // Transfer Lo Byte
+  stz.w REG_VMAIN    // Set Increment VRAM Address After Accessing Lo Byte ($2115: Video Port Control)
+  ldx.w #{DEST} >> 1 // Set VRAM Destination
+  stx.w REG_VMADDL   // $2116: VRAM
+
+  lda.b #$08           // Set DMA Mode (Write Byte, Fixed Source)
+  sta.w REG_DMAP{CHAN} // $43X0: DMA Control
+  lda.b #$18           // Set Destination Register ($2118: VRAM Write)
+  sta.w REG_BBAD{CHAN} // $43X1: DMA Destination
+  ldx.w #{SRC}         // Set Source Offset (Lo Byte)
+  stx.w REG_A1T{CHAN}L // $43X2: DMA Source
+  lda.b #{SRC} >> 16   // Set Source Bank
+  sta.w REG_A1B{CHAN}  // $43X4: Source Bank
+  ldx.w #{SIZE}        // Set Size In Bytes To DMA Transfer
+  stx.w REG_DAS{CHAN}L // $43X5: DMA Transfer Size/HDMA
+
+  lda.b #$01 << {CHAN} // Start DMA Transfer On Channel
+  sta.w REG_MDMAEN     // $420B: DMA Enable
+
+  // Transfer Hi Byte
+  lda.b #$80         // Set Increment VRAM Address After Accessing Hi Byte
+  sta.w REG_VMAIN    // $2115: Video Port Control
+  ldx.w #{DEST} >> 1 // Set VRAM Destination
+  stx.w REG_VMADDL   // $2116: VRAM
+
+  lda.b #$19           // Set Destination Register ($2119: VRAM Write)
+  sta.w REG_BBAD{CHAN} // $43X1: DMA Destination
+  ldx.w #({SRC} + 1)   // Set Source Offset (Hi Byte)
+  stx.w REG_A1T{CHAN}L // $43X2: DMA Source
+  ldx.w #{SIZE}        // Set Size In Bytes To DMA Transfer
+  stx.w REG_DAS{CHAN}L // $43X5: DMA Transfer Size/HDMA
+
+  lda.b #$01 << {CHAN} // Start DMA Transfer On Channel
   sta.w REG_MDMAEN     // $420B: DMA Enable
 }
 
@@ -104,25 +148,27 @@ macro UpdatePAL(SRC, DEST, SIZE, CHAN) {
 // LoadVRAM - Load GFX Data To VRAM
 //==================================
 //  SRC: 24-Bit Address Of Source Data
-// DEST: VRAM Destination Address (WORD Address)
+// DEST: 16-Bit VRAM Destination (WORD Address)
 // SIZE: Size Of Data (BYTE Size)
 // CHAN: DMA Channel To Transfer Data (0..7)
 macro LoadVRAM(SRC, DEST, SIZE, CHAN) {
-  ldx.w #{DEST} >> 1 // VRAM Destination
+  lda.b #$80         // Set Increment VRAM Address After Accessing Hi Byte
+  sta.w REG_VMAIN    // $2115: Video Port Control
+  ldx.w #{DEST} >> 1 // Set VRAM Destination
   stx.w REG_VMADDL   // $2116: VRAM
 
-  lda.b #$01
-  sta.w REG_DMAP{CHAN} // Set DMA Mode (Word, Normal Increment) ($43X0: DMA Control)
+  lda.b #$01           // Set DMA Mode (Write Word, Increment Source)
+  sta.w REG_DMAP{CHAN} // $43X0: DMA Control
   lda.b #$18           // Set Destination Register ($2118: VRAM Write)
   sta.w REG_BBAD{CHAN} // $43X1: DMA Destination
-  ldx.w #{SRC}         // Source Data
-  stx.w REG_A1T{CHAN}L // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
-  lda.b #{SRC} >> 16   // Source Bank
-  sta.w REG_A1B{CHAN}  // Store Data Bank To DMA Source Bank ($43X4: Source Bank)
-  ldx.w #{SIZE}        // Size In Bytes To DMA Transfer
-  stx.w REG_DAS{CHAN}L // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
+  ldx.w #{SRC}         // Set Source Offset
+  stx.w REG_A1T{CHAN}L // $43X2: DMA Source
+  lda.b #{SRC} >> 16   // Set Source Bank
+  sta.w REG_A1B{CHAN}  // $43X4: Source Bank
+  ldx.w #{SIZE}        // Set Size In Bytes To DMA Transfer
+  stx.w REG_DAS{CHAN}L // $43X5: DMA Transfer Size/HDMA
 
-  lda.b #$01 << {CHAN} // Initiate DMA Transfer On Channel
+  lda.b #$01 << {CHAN} // Start DMA Transfer On Channel
   sta.w REG_MDMAEN     // $420B: DMA Enable
 }
 
@@ -130,29 +176,31 @@ macro LoadVRAM(SRC, DEST, SIZE, CHAN) {
 // UpdateVRAM - Update GFX Data To VRAM
 //======================================
 //  SRC: 24-Bit Address Of Source Data
-// DEST: VRAM Destination Address (WORD Address)
+// DEST: 16-Bit VRAM Destination (WORD Address)
 // SIZE: Size Of Data (BYTE Size)
 // CHAN: DMA Channel To Transfer Data (0..7)
 macro UpdateVRAM(SRC, DEST, SIZE, CHAN) {
-  ldx.w #{DEST} >> 1 // VRAM Destination
+  lda.b #$80         // Set Increment VRAM Address After Accessing Hi Byte
+  sta.w REG_VMAIN    // $2115: Video Port Control
+  ldx.w #{DEST} >> 1 // Set VRAM Destination
   stx.w REG_VMADDL   // $2116: VRAM
 
-  lda.b #$01
-  sta.w REG_DMAP{CHAN} // Set DMA Mode (Word, Normal Increment) ($43X0: DMA Control)
+  lda.b #$01           // Set DMA Mode (Write Word, Increment Source)
+  sta.w REG_DMAP{CHAN} // $43X0: DMA Control
   lda.b #$18           // Set Destination Register ($2118: VRAM Write)
   sta.w REG_BBAD{CHAN} // $43X1: DMA Destination
-  ldx.w #{SRC}         // Source Data
-  stx.w REG_A1T{CHAN}L // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
-  lda.b #{SRC} >> 16   // Source Bank
-  sta.w REG_A1B{CHAN}  // Store Data Bank To DMA Source Bank ($43X4: Source Bank)
-  ldx.w #{SIZE}        // Size In Bytes To DMA Transfer
-  stx.w REG_DAS{CHAN}L // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
+  ldx.w #{SRC}         // Set Source Offset
+  stx.w REG_A1T{CHAN}L // $43X2: DMA Source
+  lda.b #{SRC} >> 16   // Set Source Bank
+  sta.w REG_A1B{CHAN}  // $43X4: Source Bank
+  ldx.w #{SIZE}        // Set Size In Bytes To DMA Transfer
+  stx.w REG_DAS{CHAN}L // $43X5: DMA Transfer Size/HDMA
 
   -
     bit.w REG_HVBJOY // $4212: Read H/V-Blank Flag & Joypad Busy Flag
     bpl - // Wait For V-Blank Period Flag
 
-  lda.b #$01 << {CHAN} // Initiate DMA Transfer On Channel
+  lda.b #$01 << {CHAN} // Start DMA Transfer On Channel
   sta.w REG_MDMAEN     // $420B: DMA Enable
 }
 
@@ -161,42 +209,69 @@ macro UpdateVRAM(SRC, DEST, SIZE, CHAN) {
 //===========================================
 //    SRCMAP: 24-Bit Address Of Source Map Data
 //  SRCTILES: 24-Bit Address Of Source Tile Data
-//      DEST: VRAM Destination Address (WORD Address)
+//      DEST: 16-Bit VRAM Destination (WORD Address)
 //   SIZEMAP: Size Of Map Data (BYTE Size)
 // SIZETILES: Size Of Tile Data (BYTE Size)
 //      CHAN: DMA Channel To Transfer Data (0..7)
 macro LoadM7VRAM(SRCMAP, SRCTILES, DEST, SIZEMAP, SIZETILES, CHAN) {
   // Load Mode7 Map Data To VRAM
-  stz.w REG_VMAIN    // $2115: Video Port Control
-  ldx.w #{DEST} >> 1 // VRAM Destination
+  stz.w REG_VMAIN    // Set Increment VRAM Address After Accessing Lo Byte ($2115: Video Port Control)
+  ldx.w #{DEST} >> 1 // Set VRAM Destination
   stx.w REG_VMADDL   // $2116: VRAM
 
+  stz.w REG_DMAP{CHAN}  // Set DMA Mode (Write Byte, Increment Source) ($43X0: DMA Control)
   lda.b #$18            // Set Destination Register ($2118: VRAM Write)
   sta.w REG_BBAD{CHAN}  // $43X1: DMA Destination
-  ldx.w #{SRCMAP}       // Source Map
-  stx.w REG_A1T{CHAN}L  // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
-  lda.b #{SRCMAP} >> 16 // Source Bank
-  sta.w REG_A1B{CHAN}   // Store Data Bank To DMA Source Bank ($43X4: Source Bank)
-  ldx.w #{SIZEMAP}      // Size In Bytes To DMA Transfer
-  stx.w REG_DAS{CHAN}L  // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
+  ldx.w #{SRCMAP}       // Set Source Offset (Map)
+  stx.w REG_A1T{CHAN}L  // $43X2: DMA Source
+  lda.b #{SRCMAP} >> 16 // Set Source Bank
+  sta.w REG_A1B{CHAN}   // $43X4: Source Bank
+  ldx.w #{SIZEMAP}      // Set Size In Bytes To DMA Transfer
+  stx.w REG_DAS{CHAN}L  // $43X5: DMA Transfer Size/HDMA
 
-  lda.b #$01 << {CHAN} // Initiate DMA Transfer On Channel
+  lda.b #$01 << {CHAN} // Start DMA Transfer On Channel
   sta.w REG_MDMAEN     // $420B: DMA Enable
 
   // Load Mode7 Tile Data To VRAM (Needs To Be On Same Bank As Map)
-  lda.b #$80
+  lda.b #$80         // Set Increment VRAM Address After Accessing Hi Byte
   sta.w REG_VMAIN    // $2115: Video Port Control
-  ldx.w #{DEST} >> 1 // VRAM Destination
+  ldx.w #{DEST} >> 1 // Set VRAM Destination
   stx.w REG_VMADDL   // $2116: VRAM
 
   lda.b #$19           // Set Destination Register ($2119: VRAM Write)
   sta.w REG_BBAD{CHAN} // $43X1: DMA Destination
-  ldx.w #{SRCTILES}    // Source Tile
-  stx.w REG_A1T{CHAN}L // Store Data Offset To DMA Source Offset ($43X2: DMA Source)
-  ldx.w #{SIZETILES}   // Size In Bytes To DMA Transfer
-  stx.w REG_DAS{CHAN}L // Store Size Of Data ($43X5: DMA Transfer Size/HDMA)
+  ldx.w #{SRCTILES}    // Set Source Offset (Tiles)
+  stx.w REG_A1T{CHAN}L // $43X2: DMA Source
+  ldx.w #{SIZETILES}   // Set Size In Bytes To DMA Transfer
+  stx.w REG_DAS{CHAN}L // $43X5: DMA Transfer Size/HDMA
 
-  lda.b #$01 << {CHAN} // Initiate DMA Transfer On Channel
+  lda.b #$01 << {CHAN} // Start DMA Transfer On Channel
+  sta.w REG_MDMAEN     // $420B: DMA Enable
+}
+
+//==============================================================
+// Load1BPPVRAM - Load 1BPP GFX Data To VRAM (Converts To 4BPP)
+//==============================================================
+//  SRCTILES: 24-Bit Address Of Source Tile Data
+//      DEST: 16-Bit VRAM Destination (WORD Address)
+// SIZETILES: Size Of Tile Data (BYTE Size)
+//      CHAN: DMA Channel To Transfer Data (0..7)
+macro Load1BPPVRAM(SRCTILES, DEST, SIZETILES, CHAN) {
+  stz.w REG_VMAIN    // Set Increment VRAM Address After Accessing Lo Byte ($2115: Video Port Control)
+  ldx.w #{DEST} >> 1 // Set VRAM Destination
+  stx.w REG_VMADDL   // $2116: VRAM
+
+  stz.w REG_DMAP{CHAN}    // Set DMA Mode (Write Byte, Increment Source) ($43X0: DMA Control)
+  lda.b #$18              // Set Destination Register ($2118: VRAM Write)
+  sta.w REG_BBAD{CHAN}    // $43X1: DMA Destination
+  ldx.w #{SRCTILES}       // Set Source Offset
+  stx.w REG_A1T{CHAN}L    // $43X2: DMA Source
+  lda.b #{SRCTILES} >> 16 // Set Source Bank
+  sta.w REG_A1B{CHAN}     // $43X4: Source Bank
+  ldx.w #{SIZETILES}      // Set Size In Bytes To DMA Transfer
+  stx.w REG_DAS{CHAN}L    // $43X5: DMA Transfer Size/HDMA
+
+  lda.b #$01 << {CHAN} // Start DMA Transfer On Channel
   sta.w REG_MDMAEN     // $420B: DMA Enable
 }
 
