@@ -53,7 +53,7 @@ HELLOWORLD:
   db "Hello, World!" // Hello World Text
 
 BGCHR:
-  include "Font8x8.asm" // Include BG 1BPP 8x8 Tile Font Character Data (2808 Bytes)
+  include "Font8x8.asm" // Include BG 1BPP 8x8 Tile Font Character Data (1016 Bytes)
 BGPAL:
   dw $0000, $7FFF // Black / White Palette (4 Bytes)
 BGCLEAR:
