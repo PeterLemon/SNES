@@ -20,7 +20,7 @@ seek($8000); Start:
   SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
 
   LoadPAL(BGPAL, $00, 4, 0) // Load BG Palette Data
-  LoadLOVRAM(BGCHR, $0000, $AF8, 0) // Load 1BPP Tiles To VRAM Lo Bytes (Converts To 2BPP Tiles)
+  LoadLOVRAM(BGCHR, $0000, $3F8, 0) // Load 1BPP Tiles To VRAM Lo Bytes (Converts To 2BPP Tiles)
   ClearVRAM(BGCLEAR, $F800, $400, 0) // Clear VRAM Map To Fixed Tile Word
 
   // Print Text
