@@ -337,7 +337,7 @@ XBANDSHIFTCAPSASCIIMAP:
   db $00, $00, $00, $00, $00, $00, " ", $00, $00, $00, $00, $00, $00, $00, $00, $00
 
 TITLETEXT:
-  db "X-Band Keyboard Input Test:" // Hello World Text
+  db "X-Band Keyboard Input Test:" // Title Text
 
 BGCHR:
   include "Font8x8.asm" // Include BG 1BPP 8x8 Tile Font Character Data (2808 Bytes)
