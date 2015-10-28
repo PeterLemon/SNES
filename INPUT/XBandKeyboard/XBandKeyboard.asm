@@ -34,7 +34,6 @@ KEYSCANCODE:
   db 0 // Key Scancode (0 = Key Released)
 KEYFLAGS:
   db 0 // Bit 0 = Shift State (0 = Shift Released, 1 = Shift On), Bit 1 = CAPSLOCK State (0 = CAPSLOCK Off, 1 = CAPSLOCK On)
-BASICRAM: // BASIC RAM Starts Here
 
 seek($8000); Start:
   SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
