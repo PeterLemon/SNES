@@ -340,7 +340,7 @@ TITLETEXT:
   db "X-Band Keyboard Input Test:" // Title Text
 
 BGCHR:
-  include "Font8x8.asm" // Include BG 1BPP 8x8 Tile Font Character Data (2808 Bytes)
+  include "Font8x8.asm" // Include BG 1BPP 8x8 Tile Font Character Data (1024 Bytes)
 BGPAL:
   dw $7FFF, $0000 // White / Black Palette (4 Bytes)
 BGCLEAR:
