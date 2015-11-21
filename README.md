@@ -22,4 +22,4 @@ Howto Run:<br />
 I only test with a real SNES using a SD2SNES Cartridge by ikari:<br />
 http://sd2snes.de<br />
 <br />
-You can also use SNES emulators like higan & the MESS SNES Driver.
+You can also use SNES emulators like higan & the MAME SNES Driver.
