@@ -55,8 +55,8 @@ seek($8000); Start:
   stz.w REG_VMAIN  // Set Increment VRAM Address After Accessing Lo Byte ($2115: Video Port Control)
 
   // Plot Pixel
+  lda.b #48 // A = Plot Y Coord
   rep #%00110000 // A,X,Y Set To 16-Bit
-  lda.w #48 // A = Plot Y Coord
   asl
   asl
   asl
