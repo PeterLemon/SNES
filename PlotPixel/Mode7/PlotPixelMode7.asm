@@ -69,7 +69,7 @@ seek($8000); Start:
   sta.w REG_VMADDL // $2116: VRAM Address Write (16-Bit)
   sep #%00100000 // A Set To 8-Bit
   lda.b #1 // A = Pixel Color White
-  sta.w REG_VMDATAL // $2118: VRAM Data Write (Lower 8-Bit)
+  sta.w REG_VMDATAL // $2118: VRAM Data Write (Lo 8-Bit)
 
   lda.b #$F // Turn On Screen, Full Brightness
   sta.w REG_INIDISP // $2100: Screen Display
