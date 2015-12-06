@@ -1,0 +1,1 @@
+bass PlotPixelMode7.asm
