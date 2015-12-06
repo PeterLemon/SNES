@@ -56,7 +56,7 @@ seek($8000); Start:
 
   // Plot Pixel
   lda.b #48 // A = Plot Y Coord
-  rep #%00110000 // A,X,Y Set To 16-Bit
+  rep #%00100000 // A Set To 16-Bit
   asl
   asl
   asl
