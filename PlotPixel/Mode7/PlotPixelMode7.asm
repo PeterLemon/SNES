@@ -28,19 +28,19 @@ seek($8000); Start:
   stz.w REG_M7SEL // $211A: MODE7 Settings
 
   lda.b #$04 // Set Mode7 X Scale
-  stz.w REG_M7A // $211B: MODE7 COSINE A Low Byte
-  sta.w REG_M7A // $211B: MODE7 COSINE A High Byte
+  stz.w REG_M7A // $211B: MODE7 COSINE A Lo Byte
+  sta.w REG_M7A // $211B: MODE7 COSINE A Hi Byte
 
-  stz.w REG_M7B // $211C: MODE7 SINE A Low Byte
-  stz.w REG_M7B // $211C: MODE7 SINE A High Byte
+  stz.w REG_M7B // $211C: MODE7 SINE A Lo Byte
+  stz.w REG_M7B // $211C: MODE7 SINE A Hi Byte
 
-  stz.w REG_M7C // $211D: MODE7 SINE B Low Byte
-  stz.w REG_M7C // $211D: MODE7 SINE B High Byte
+  stz.w REG_M7C // $211D: MODE7 SINE B Lo Byte
+  stz.w REG_M7C // $211D: MODE7 SINE B Hi Byte
 
   lda.b #$90 // Set Mode7 Y Scale
-  sta.w REG_M7D // $211E: MODE7 COSINE B Low Byte
+  sta.w REG_M7D // $211E: MODE7 COSINE B Lo Byte
   lda.b #$04
-  sta.w REG_M7D // $211E: MODE7 COSINE B High Byte
+  sta.w REG_M7D // $211E: MODE7 COSINE B Hi Byte
 
   stz.w REG_M7X // $211F: Mode7 Center Position X Lo Byte
   stz.w REG_M7X // $211F: Mode7 Center Position X Hi Byte
@@ -50,7 +50,7 @@ seek($8000); Start:
   stz.w REG_BG1HOFS // Store Zero To BG1 Horizontal Scroll Position Lo Byte
   stz.w REG_BG1HOFS // Store Zero To BG1 Horizontal Scroll Position Hi Byte
   stz.w REG_BG1VOFS // Store Zero To BG1 Vertical Scroll Position Lo Byte
-  stz.w REG_BG1VOFS // Store Zero To BG1 Vertical Scroll Position High Byte
+  stz.w REG_BG1VOFS // Store Zero To BG1 Vertical Scroll Position Hi Byte
 
   stz.w REG_VMAIN  // Set Increment VRAM Address After Accessing Lo Byte ($2115: Video Port Control)
 
