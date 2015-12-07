@@ -91,49 +91,49 @@ seek($8000); Start:
   // Plot Line
   lda.b X0 // A = Line X Coord 0 (X0)
   cmp.b X1 // Compare X0 To X1
-  bmi X1X0DX // IF (X0 > X1) DX = (X0 - X1)
-    sec      // Subtract X1 From X0 (DX)
-    sbc.b X1 // A = DX (X0 - X1)
-    sta.b DX // WRAM: Line Distance X (DX) = A
-    lda.b #-1 // IF (X0 > X1) SX = -1
+  bmi X1X0DX  // IF (X0 > X1) DX = (X0 - X1)
+    sec       // Subtract X1 From X0 (DX)
+    sbc.b X1  // A = DX (X0 - X1)
+    sta.b DX  // WRAM: Line Distance X (DX) = A
+    lda.b #-1 // SX = -1
     bra DXEnd // GOTO DX End
-  X1X0DX: // ELSE DX = (X1 - X0)
+  X1X0DX:    // ELSE DX = (X1 - X0)
     lda.b X1 // A = Line X Coord 1 (X1)
     sec      // Subtract X0 From X1 (DX)
     sbc.b X0 // A = DX (X1 - X0)
     sta.b DX // WRAM: Line Distance X (DX) = A
-    lda.b #1 // IF (X0 < X1) SX = 1
+    lda.b #1 // SX = 1
   DXEnd:
     sta.b SX // WRAM: Line Signed Change X (SX) = A
 
   lda.b Y0 // A = Line Y Coord 0 (Y0)
   cmp.b Y1 // Compare Y0 To Y1
-  bmi Y1Y0DY // IF (Y0 > Y1) DY = (Y0 - Y1)
-    sec      // Subtract Y1 From Y0 (DY)
-    sbc.b Y1 // A = DY (Y0 - Y1)
-    sta.b DY // WRAM: Line Distance Y (DY) = A
-    lda.b #-1 // IF (Y0 > Y1) SY = -1
+  bmi Y1Y0DY  // IF (Y0 > Y1) DY = (Y0 - Y1)
+    sec       // Subtract Y1 From Y0 (DY)
+    sbc.b Y1  // A = DY (Y0 - Y1)
+    sta.b DY  // WRAM: Line Distance Y (DY) = A
+    lda.b #-1 // SY = -1
     bra DYEnd // GOTO DY End
-  Y1Y0DY: // ELSE DY = (Y1 - Y0)
+  Y1Y0DY:    // ELSE DY = (Y1 - Y0)
     lda.b Y1 // A = Line Y Coord 1 (Y1)
     sec      // Subtract Y0 From Y1 (DY)
     sbc.b Y0 // A = DY (Y1 - Y0)
     sta.b DY // WRAM: Line Distance Y (DY) = A
-    lda.b #1 // IF (Y0 < Y1) SY = 1
+    lda.b #1 // SY = 1
   DYEnd:
     sta.b SY // WRAM: Line Signed Change Y (SY) = A
 
   lda.b DX // A = Line Distance X (DX)
   cmp.b DY // Compare DX To DY
-  bmi YError // IF (DX > DY) Error = DX / 2
-    lsr      // A = DX / 2
+  bmi YError    // IF (DX > DY) Error = DX / 2
+    lsr         // A = DX / 2
     sta.b Error // WRAM: Line Error (Error) = A
-    bra LoopX // GOTO Loop X
-  YError: // ELSE Error = DY / 2
-    lda.b DY // A = Line Distance Y (DY)
-    lsr      // A = DY / 2
+    bra LoopX   // GOTO Loop X
+  YError:       // ELSE Error = DY / 2
+    lda.b DY    // A = Line Distance Y (DY)
+    lsr         // A = DY / 2
     sta.b Error // WRAM: Line Error (Error) = A
-    bra LoopY // GOTO Loop Y
+    bra LoopY   // GOTO Loop Y
 
   LoopX: // X Line Drawing
     jsr PlotPixel // GOTO Plot Pixel Subroutine
@@ -141,10 +141,9 @@ seek($8000); Start:
     lda.b X0 // A = Line X Coord 0 (X0)
     cmp.b X1 // While (X0 != X1)
     beq LineEnd // IF (X0 == X1) Branch To Line End
-
     lda.b Error // A = Line Error (Error)
-    sec // Subtract DY From Error (Error -= DY)
-    sbc.b DY // A = Error - DY
+    sec         // Subtract DY From Error (Error -= DY)
+    sbc.b DY    // A = Error - DY
     sta.b Error // WRAM: Line Error (Error) = A
 
     bpl LoopXEnd // IF (Error >= 0) GOTO Loop X End
@@ -153,8 +152,8 @@ seek($8000); Start:
     adc.b SY // A += SY
     sta.b Y0 // WRAM: Line Y Coord 0 (Y0) = A
     lda.b Error // A = Line Error (Error)
-    clc // Add DX To Error (Error += DX)
-    adc.b DX // A += DX
+    clc         // Add DX To Error (Error += DX)
+    adc.b DX    // A += DX
     sta.b Error // WRAM: Line Error (Error) = A
 
     LoopXEnd:
@@ -162,7 +161,7 @@ seek($8000); Start:
       clc      // Add SX To X0 (X0 += SX)
       adc.b SX // A += SX
       sta.b X0 // WRAM: Line X Coord 0 (X0) = A
-      bra LoopX // GOTO X Line Drawing
+    bra LoopX  // GOTO X Line Drawing
 
   LoopY: // Y Line Drawing
     jsr PlotPixel // GOTO Plot Pixel Subroutine
@@ -170,20 +169,19 @@ seek($8000); Start:
     lda.b Y0 // A = Line Y Coord 0 (Y0)
     cmp.b Y1 // While (Y0 != Y1)
     beq LineEnd // IF (Y0 == Y1) Branch To Line End
-
     lda.b Error // A = Line Error (Error)
-    sec // Subtract DX From Error (Error -= DX)
-    sbc.b DX // A = Error - DX
+    sec         // Subtract DX From Error (Error -= DX)
+    sbc.b DX    // A = Error - DX
     sta.b Error // WRAM: Line Error (Error) = A
 
     bpl LoopYEnd // IF (Error >= 0) GOTO Loop Y End
     lda.b X0 // A = Line X Coord 0 (X0)
-    clc // ELSE Add SX To X0 (X0 += SX)
+    clc      // ELSE Add SX To X0 (X0 += SX)
     adc.b SX // A += SX
     sta.b X0 // WRAM: Line X Coord 0 (X0) = A
     lda.b Error // A = Line Error (Error)
-    clc // Add DY To Error (Error += DY)
-    adc.b DY // A += DY
+    clc         // Add DY To Error (Error += DY)
+    adc.b DY    // A += DY
     sta.b Error // WRAM: Line Error (Error) = A
 
     LoopYEnd:
@@ -191,7 +189,7 @@ seek($8000); Start:
       clc      // Add SY To Y0 (Y0 += SY)
       adc.b SY // A += SY
       sta.b Y0 // WRAM: Line Y Coord 0 (Y0) = A
-      bra LoopY // GOTO Y Line Drawing
+    bra LoopY  // GOTO Y Line Drawing
 
   LineEnd: // End of Line Drawing
 
