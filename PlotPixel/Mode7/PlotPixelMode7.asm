@@ -13,7 +13,7 @@ include "LIB\SNES_HEADER.ASM" // Include Header & Vector Table
 include "LIB\SNES_GFX.INC"    // Include Graphics Macros
 
 seek($8000); Start:
-  SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
+  SNES_INIT(FASTROM) // Run SNES Initialisation Routine
 
   LoadPAL(BGPal, $00, 4, 0) // Load Background Palette (BG Palette Uses 256 Colors)
   ClearLOVRAM(BGTiles, $0000, 16384, 0) // Clear Background Map In VRAM To Static Byte
@@ -58,13 +58,9 @@ seek($8000); Start:
   // Plot Pixel
   lda.b #48 // A = Plot Y Coord
   rep #%00100000 // A Set To 16-Bit
-  asl
-  asl
-  asl
-  asl
-  asl
-  asl
-  asl // A *= 128
+  and.w #$00FF // Clear B
+  xba // A *= 256
+  lsr // A /= 2 (A = Plot Y Coord * 128)
   clc
   adc.w #40 // A += Plot X Coord (A = VRAM Address)
   sta.w REG_VMADDL // $2116: VRAM Address Write (16-Bit)

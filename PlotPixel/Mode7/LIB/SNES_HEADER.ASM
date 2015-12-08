@@ -7,7 +7,7 @@ db "PLOT PIXEL MODE7 DEMO"
 // "123456789012345678901"
 
 // ROM MODE/SPEED (Bits 7-4 = Speed, Bits 3-0 = Map Mode)
-db $20
+db $30
 //  ||___________________Map Mode:
 //  |                    $X0 = LoROM/32K Banks           (Mode 20)
 //  |                    $X1 = HiROM/64K Banks           (Mode 21)
