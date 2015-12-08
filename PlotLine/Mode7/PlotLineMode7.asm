@@ -40,7 +40,8 @@ seek($8000); Start:
   SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
 
   LoadPAL(BGPal, $00, 4, 0) // Load Background Palette (BG Palette Uses 256 Colors)
-  LoadM7VRAM(BGMap, BGTiles, $0000, 16384, 128, 0) // Load Background Map & Tiles To VRAM
+  ClearLOVRAM(BGTiles, $0000, 16384, 0) // Clear Background Map In VRAM To Static Byte
+  LoadHIVRAM(BGTiles, $0000, 16384, 0)  // Load Background Tiles To VRAM
     
   // Setup Mode7 128x128 Linear Screen
   lda.b #%00000111 // DCBAPMMM: M = Mode, P = Priority, ABCD = BG1,2,3,4 Tile Size
@@ -217,27 +218,19 @@ PlotPixel: // Plot Pixel
   sta.w REG_VMDATAL // $2118: VRAM Data Write (Lo 8-Bit)
   rts // Return From Subroutine
 
-BGTiles: // Include BG Tile Data (128 Bytes)
-  db 0,0,0,0,0,0,0,0 // Black / Clear Pixel (0)
-  db 0,0,0,0,0,0,0,0
-  db 0,0,0,0,0,0,0,0
-  db 0,0,0,0,0,0,0,0
-  db 0,0,0,0,0,0,0,0
-  db 0,0,0,0,0,0,0,0
-  db 0,0,0,0,0,0,0,0
-  db 0,0,0,0,0,0,0,0
-
-  db 1,1,1,1,1,1,1,1 // White Pixel (1)
-  db 1,1,1,1,1,1,1,1
-  db 1,1,1,1,1,1,1,1
-  db 1,1,1,1,1,1,1,1
-  db 1,1,1,1,1,1,1,1
-  db 1,1,1,1,1,1,1,1
-  db 1,1,1,1,1,1,1,1
-  db 1,1,1,1,1,1,1,1
-
 BGPal:
   dw $0000, $7FFF // Black, White (4 Bytes)
 
-BGMap:
-  fill 16384 // Include BG Map Data (16384 Bytes)
+BGTiles: // Include BG Tile Data (16384 Bytes)
+  define i(0)
+  while {i} < 256 { // Create 256 Tiles Which Map To 256 Palette Colors
+    db {i},{i},{i},{i},{i},{i},{i},{i} // Clear Tile/Pixel Color = ($00)
+    db {i},{i},{i},{i},{i},{i},{i},{i} // Rest Of Colors ($01..$FF)
+    db {i},{i},{i},{i},{i},{i},{i},{i}
+    db {i},{i},{i},{i},{i},{i},{i},{i}
+    db {i},{i},{i},{i},{i},{i},{i},{i}
+    db {i},{i},{i},{i},{i},{i},{i},{i}
+    db {i},{i},{i},{i},{i},{i},{i},{i}
+    db {i},{i},{i},{i},{i},{i},{i},{i}
+    evaluate i({i} + 1)
+  }

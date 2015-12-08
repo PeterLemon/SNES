@@ -100,8 +100,63 @@ macro UpdatePAL(SRC, DEST, SIZE, CHAN) {
   sta.w REG_MDMAEN     // $420B: DMA Enable
 }
 
+//========================================
+// ClearLOVRAM - Clear VRAM Lo Fixed Byte
+//========================================
+//  SRC: 24-Bit Address Of Source Data
+// DEST: 16-Bit VRAM Destination (WORD Address)
+// SIZE: Size Of Data (BYTE Size)
+// CHAN: DMA Channel To Transfer Data (0..7)
+macro ClearLOVRAM(SRC, DEST, SIZE, CHAN) {
+  stz.w REG_VMAIN    // Set Increment VRAM Address After Accessing Lo Byte ($2115: Video Port Control)
+  ldx.w #{DEST} >> 1 // Set VRAM Destination
+  stx.w REG_VMADDL   // $2116: VRAM
+
+  lda.b #$08           // Set DMA Mode (Write Byte, Fixed Source)
+  sta.w REG_DMAP{CHAN} // $43X0: DMA Control
+  lda.b #$18           // Set Destination Register ($2118: VRAM Write)
+  sta.w REG_BBAD{CHAN} // $43X1: DMA Destination
+  ldx.w #{SRC}         // Set Source Offset (Lo Byte)
+  stx.w REG_A1T{CHAN}L // $43X2: DMA Source
+  lda.b #{SRC} >> 16   // Set Source Bank
+  sta.w REG_A1B{CHAN}  // $43X4: Source Bank
+  ldx.w #{SIZE}        // Set Size In Bytes To DMA Transfer
+  stx.w REG_DAS{CHAN}L // $43X5: DMA Transfer Size/HDMA
+
+  lda.b #$01 << {CHAN} // Start DMA Transfer On Channel
+  sta.w REG_MDMAEN     // $420B: DMA Enable
+}
+
+//========================================
+// ClearHIVRAM - Clear VRAM Hi Fixed Byte
+//========================================
+//  SRC: 24-Bit Address Of Source Data
+// DEST: 16-Bit VRAM Destination (WORD Address)
+// SIZE: Size Of Data (BYTE Size)
+// CHAN: DMA Channel To Transfer Data (0..7)
+macro ClearHIVRAM(SRC, DEST, SIZE, CHAN) {
+  lda.b #$80         // Set Increment VRAM Address After Accessing Hi Byte
+  sta.w REG_VMAIN    // $2115: Video Port Control
+  ldx.w #{DEST} >> 1 // Set VRAM Destination
+  stx.w REG_VMADDL   // $2116: VRAM
+
+  lda.b #$08           // Set DMA Mode (Write Byte, Fixed Source)
+  sta.w REG_DMAP{CHAN} // $43X0: DMA Control
+  lda.b #$19           // Set Destination Register ($2119: VRAM Write)
+  sta.w REG_BBAD{CHAN} // $43X1: DMA Destination
+  ldx.w #{SRC}         // Set Source Offset (Lo Byte)
+  stx.w REG_A1T{CHAN}L // $43X2: DMA Source
+  lda.b #{SRC} >> 16   // Set Source Bank
+  sta.w REG_A1B{CHAN}  // $43X4: Source Bank
+  ldx.w #{SIZE}        // Set Size In Bytes To DMA Transfer
+  stx.w REG_DAS{CHAN}L // $43X5: DMA Transfer Size/HDMA
+
+  lda.b #$01 << {CHAN} // Start DMA Transfer On Channel
+  sta.w REG_MDMAEN     // $420B: DMA Enable
+}
+
 //===================================
-// ClearVRAM - Fixed Word Clear VRAM
+// ClearVRAM - Clear VRAM Fixed Word 
 //===================================
 //  SRC: 24-Bit Address Of Source Data
 // DEST: 16-Bit VRAM Destination (WORD Address)
