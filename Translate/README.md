@@ -4,7 +4,7 @@ SNES Japanese To English Translation
 Translation by krom (Peter Lemon).<br />
 <br />
 All code compiles out of box with the bass assembler:<br />
-http://byuu.org/programming/bass/<br />
+http://byuu.org/tool/bass<br />
 I have also included an IPS file of the translation as a patch.<br />
 <br />
 Please check out RomHacking & their forum, a great resource for translation work:<br />
