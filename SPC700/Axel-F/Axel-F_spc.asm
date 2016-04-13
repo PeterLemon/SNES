@@ -38,15 +38,15 @@ seek(SPCRAM); Start:
   WDSP(DSP_EVOLL,25) // Echo Volume Left
   WDSP(DSP_EVOLR,25) // Echo Volume Right
 
-  WDSP(DSP_V0VOLL,25)   // Voice 0: Volume Left
-  WDSP(DSP_V0VOLR,25)   // Voice 0: Volume Right
+  WDSP(DSP_V0VOLL,50)   // Voice 0: Volume Left
+  WDSP(DSP_V0VOLR,50)   // Voice 0: Volume Right
   WDSP(DSP_V0SRCN,0)    // Voice 0: SawTooth
   WDSP(DSP_V0ADSR1,$FA) // Voice 0: ADSR1
   WDSP(DSP_V0ADSR2,$F0) // Voice 0: ADSR2
   WDSP(DSP_V0GAIN,127)  // Voice 0: Gain
 
-  WDSP(DSP_V1VOLL,25)   // Voice 1: Volume Left
-  WDSP(DSP_V1VOLR,25)   // Voice 1: Volume Right
+  WDSP(DSP_V1VOLL,50)   // Voice 1: Volume Left
+  WDSP(DSP_V1VOLR,50)   // Voice 1: Volume Right
   WDSP(DSP_V1SRCN,0)    // Voice 1: SawTooth
   WDSP(DSP_V1ADSR1,$FA) // Voice 1: ADSR1
   WDSP(DSP_V1ADSR2,$F0) // Voice 1: ADSR2
