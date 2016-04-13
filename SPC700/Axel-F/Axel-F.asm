@@ -1,4 +1,4 @@
-// SNES SPC700 Twinkle Song Demo (CPU Code) by krom (Peter Lemon):
+// SNES SPC700 Axel-F Song Demo (CPU Code) by krom (Peter Lemon):
 arch snes.cpu
 output "Axel-F.sfc", create
 
