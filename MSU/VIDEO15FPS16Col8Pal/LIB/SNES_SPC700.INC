@@ -310,16 +310,16 @@ macro WriteCTRL(BYTE) { // Write Byte To SPC-700 Control Register
   SPCLoadByte() // Control DATA To $F1
 }
 
-constant C#(11)
+constant CSharp(11)
 constant D(10)
-constant D#(9)
+constant DSharp(9)
 constant E(8)
 constant F(7)
-constant F#(6)
+constant FSharp(6)
 constant G(5)
-constant G#(4)
+constant GSharp(4)
 constant A(3)
-constant A#(2)
+constant ASharp(2)
 constant B(1)
 constant C(0)
 
