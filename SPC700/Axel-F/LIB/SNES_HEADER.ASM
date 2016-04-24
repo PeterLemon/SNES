@@ -30,7 +30,7 @@ db $00
 // $5X = S-RTC           $XA = ROM+Co-processor+RAM+Battery+Overclocked
 
 // ROM SIZE (Values are rounded-up for carts with 10,12,20,24 Mbits)
-db $01
+db $03
 // $01 = 1 Bank  =  32Kb (0.25 Mbit), $07 =   7 Banks =  224Kb (1.75 Mbit)
 // $02 = 2 Banks =  64Kb (0.50 Mbit), $08 =   8 Banks =  256Kb (2.00 Mbit)
 // $03 = 3 Banks =  96Kb (0.75 Mbit), $09 =  16 Banks =  512Kb (4.00 Mbit)
