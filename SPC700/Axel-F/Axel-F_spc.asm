@@ -60,7 +60,7 @@ seek(SPCRAM); Start:
   WDSP(DSP_V2ADSR2,$F0) // Voice 2: ADSR2
   WDSP(DSP_V2GAIN,127)  // Voice 2: Gain
 
-SongStart:
+SongStart: // Each Bar = 2048ms, Each Beat = 512ms, 3/4 Beat = 384ms, 1/2 Beat = 256ms, 1/4 Beat 128ms
 // Lead Section
 SetPitch(0,F,5,SawToothC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
@@ -68,7 +68,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
 
   SetPitch(0,GSharp,5,SawToothC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
-  SPCWaitSHIFTMS(196, 1) // Wait 196*2 ms
+  SPCWaitSHIFTMS(192, 1) // Wait 192*2 ms
 
   SetPitch(0,F,5,SawToothC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
@@ -90,13 +90,14 @@ SetPitch(0,F,5,SawToothC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
   SPCWaitMS(256) // Wait 256 ms
 
+
   SetPitch(0,F,5,SawToothC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
   SPCWaitSHIFTMS(256, 1) // Wait 256*2 ms
 
   SetPitch(0,C,6,SawToothC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
-  SPCWaitSHIFTMS(196, 1) // Wait 196*2 ms
+  SPCWaitSHIFTMS(192, 1) // Wait 192*2 ms
 
   SetPitch(0,F,5,SawToothC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
@@ -117,6 +118,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(0,GSharp,5,SawToothC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
   SPCWaitMS(256) // Wait 256 ms
+
 
   SetPitch(0,F,5,SawToothC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
@@ -152,6 +154,9 @@ SetPitch(0,F,5,SawToothC9Pitch)
 
   SetPitch(0,F,5,SawToothC9Pitch)
   WDSP(DSP_KON,%00000001) // Play Voice 0
+  SPCWaitMS(256) // Wait 256 ms
+
+  // Rest
   SPCWaitSHIFTMS(256, 3) // Wait 256*8 ms
 
 
@@ -164,7 +169,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(0,GSharp,5,SawToothC9Pitch)
   SetPitch(1,GSharp,5,SawToothDetuneC9Pitch)
   WDSP(DSP_KON,%00000011) // Play Voice 0,1
-  SPCWaitSHIFTMS(196, 1) // Wait 196*2 ms
+  SPCWaitSHIFTMS(192, 1) // Wait 192*2 ms
 
   SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(1,F,5,SawToothDetuneC9Pitch)
@@ -191,6 +196,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
   WDSP(DSP_KON,%00000011) // Play Voice 0,1
   SPCWaitMS(256) // Wait 256 ms
 
+
   SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(1,F,5,SawToothDetuneC9Pitch)
   WDSP(DSP_KON,%00000011) // Play Voice 0,1
@@ -199,7 +205,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(0,C,6,SawToothC9Pitch)
   SetPitch(1,C,6,SawToothDetuneC9Pitch)
   WDSP(DSP_KON,%00000011) // Play Voice 0,1
-  SPCWaitSHIFTMS(196, 1) // Wait 196*2 ms
+  SPCWaitSHIFTMS(192, 1) // Wait 192*2 ms
 
   SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(1,F,5,SawToothDetuneC9Pitch)
@@ -225,6 +231,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(1,GSharp,5,SawToothDetuneC9Pitch)
   WDSP(DSP_KON,%00000011) // Play Voice 0,1
   SPCWaitMS(256) // Wait 256 ms
+
 
   SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(1,F,5,SawToothDetuneC9Pitch)
@@ -269,6 +276,9 @@ SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(1,F,5,SawToothDetuneC9Pitch)
   WDSP(DSP_KON,%00000011) // Play Voice 0,1
+  SPCWaitMS(256) // Wait 256 ms
+
+  // Rest
   SPCWaitSHIFTMS(256, 3) // Wait 256*8 ms
 
 
@@ -279,7 +289,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
 
   SetPitch(2,F,4,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
-  SPCWaitSHIFTMS(196, 1) // Wait 196*2 ms
+  SPCWaitSHIFTMS(192, 1) // Wait 192*2 ms
 
   SetPitch(2,DSharp,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
@@ -300,6 +310,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(2,DSharp,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
   SPCWaitMS(256) // Wait 256 ms
+
 
   SetPitch(2,F,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
@@ -307,7 +318,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
 
   SetPitch(2,F,4,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
-  SPCWaitSHIFTMS(162, 2) // Wait 162*4 ms
+  SPCWaitSHIFTMS(160, 2) // Wait 160*4 ms
 
   SetPitch(2,C,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
@@ -324,6 +335,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(2,F,4,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
   SPCWaitMS(256) // Wait 256 ms
+
 
   SetPitch(2,CSharp,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
@@ -331,7 +343,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
 
   SetPitch(2,CSharp,4,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
-  SPCWaitSHIFTMS(196, 1) // Wait 196*2 ms
+  SPCWaitSHIFTMS(192, 1) // Wait 192*2 ms
 
   SetPitch(2,DSharp,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
@@ -353,9 +365,10 @@ SetPitch(0,F,5,SawToothC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
   SPCWaitMS(256) // Wait 256 ms
 
+
   SetPitch(2,F,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
-  SPCWaitSHIFTMS(256, 2) // Wait 256*4 ms
+  SPCWaitSHIFTMS(144, 3) // Wait 144*8 ms
 
   SetPitch(2,F,4,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
@@ -381,7 +394,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
 
   SetPitch(2,F,4,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
-  SPCWaitSHIFTMS(196, 1) // Wait 196*2 ms
+  SPCWaitSHIFTMS(192, 1) // Wait 192*2 ms
 
   SetPitch(2,DSharp,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
@@ -402,6 +415,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(2,DSharp,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
   SPCWaitMS(256) // Wait 256 ms
+
 
   SetPitch(2,F,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
@@ -409,7 +423,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
 
   SetPitch(2,F,4,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
-  SPCWaitSHIFTMS(162, 2) // Wait 162*4 ms
+  SPCWaitSHIFTMS(160, 2) // Wait 160*4 ms
 
   SetPitch(2,C,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
@@ -426,6 +440,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(2,F,4,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
   SPCWaitMS(256) // Wait 256 ms
+
 
   SetPitch(2,CSharp,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
@@ -433,7 +448,7 @@ SetPitch(0,F,5,SawToothC9Pitch)
 
   SetPitch(2,CSharp,4,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
-  SPCWaitSHIFTMS(196, 1) // Wait 196*2 ms
+  SPCWaitSHIFTMS(192, 1) // Wait 192*2 ms
 
   SetPitch(2,DSharp,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
@@ -455,9 +470,10 @@ SetPitch(0,F,5,SawToothC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
   SPCWaitMS(256) // Wait 256 ms
 
+
   SetPitch(2,F,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
-  SPCWaitSHIFTMS(256, 2) // Wait 256*4 ms
+  SPCWaitSHIFTMS(144, 3) // Wait 144*8 ms
 
   SetPitch(2,F,4,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
@@ -488,7 +504,7 @@ Loop:
   SetPitch(1,GSharp,5,SawToothDetuneC9Pitch)
   SetPitch(2,F,4,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000111) // Play Voice 0,1,2
-  SPCWaitSHIFTMS(196, 1) // Wait 196*2 ms
+  SPCWaitSHIFTMS(192, 1) // Wait 192*2 ms
 
   SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(1,F,5,SawToothDetuneC9Pitch)
@@ -520,6 +536,7 @@ Loop:
   WDSP(DSP_KON,%00000111) // Play Voice 0,1,2
   SPCWaitMS(256) // Wait 256 ms
 
+
   SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(1,F,5,SawToothDetuneC9Pitch)
   SetPitch(2,F,3,SynthBassC9Pitch)
@@ -530,7 +547,7 @@ Loop:
   SetPitch(1,C,6,SawToothDetuneC9Pitch)
   SetPitch(2,F,4,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000111) // Play Voice 0,1,2
-  SPCWaitSHIFTMS(196, 1) // Wait 196*2 ms
+  SPCWaitSHIFTMS(192, 1) // Wait 192*2 ms
 
   SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(1,F,5,SawToothDetuneC9Pitch)
@@ -560,6 +577,7 @@ Loop:
   SetPitch(2,F,4,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000111) // Play Voice 0,1,2
   SPCWaitMS(256) // Wait 256 ms
+
 
   SetPitch(0,F,5,SawToothC9Pitch)
   SetPitch(1,F,5,SawToothDetuneC9Pitch)
@@ -613,9 +631,10 @@ Loop:
   WDSP(DSP_KON,%00000111) // Play Voice 0,1,2
   SPCWaitMS(256) // Wait 256 ms
 
+
   SetPitch(2,F,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
-  SPCWaitSHIFTMS(256, 2) // Wait 256*4 ms
+  SPCWaitSHIFTMS(144, 3) // Wait 144*8 ms
 
   SetPitch(2,F,4,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
