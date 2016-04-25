@@ -15,6 +15,7 @@ constant SynthBassC9Pitch($8868)
 
 constant KickDrumC9Pitch($8868)
 constant SnareC9Pitch($9668)
+constant ClapC9Pitch($9468)
 
 seek(SPCRAM); Start:
   SPC_INIT() // Run SPC700 Initialisation Routine
@@ -25,9 +26,9 @@ seek(SPCRAM); Start:
   WDSP(DSP_MVOLL,63) // Master Volume Left
   WDSP(DSP_MVOLR,63) // Master Volume Right
 
-  SPCRAMClear($8800,$78) // Clear Echo Buffer RAM
-  WDSP(DSP_ESA,$88)  // Echo Source Address
-  WDSP(DSP_EDL,15)   // Echo Delay
+  SPCRAMClear($C000,$40) // Clear Echo Buffer RAM
+  WDSP(DSP_ESA,$C0)  // Echo Source Address
+  WDSP(DSP_EDL,8)    // Echo Delay
   WDSP(DSP_EON,%00111011) // Echo On Flags
   WDSP(DSP_FLG,0)    // Enable Echo Buffer Writes
   WDSP(DSP_EFB,100)  // Echo Feedback
@@ -64,6 +65,13 @@ seek(SPCRAM); Start:
   WDSP(DSP_V2GAIN,127)  // Voice 2: Gain
 
 
+  WDSP(DSP_V5VOLL,80)   // Voice 5: Volume Left
+  WDSP(DSP_V5VOLR,80)   // Voice 5: Volume Right
+  WDSP(DSP_V5SRCN,4)    // Voice 5: Clap
+  WDSP(DSP_V5ADSR1,$FF) // Voice 5: ADSR1
+  WDSP(DSP_V5ADSR2,$F0) // Voice 5: ADSR2
+  WDSP(DSP_V5GAIN,127)  // Voice 5: Gain
+
   WDSP(DSP_V6VOLL,127)  // Voice 6: Volume Left
   WDSP(DSP_V6VOLR,127)  // Voice 6: Volume Right
   WDSP(DSP_V6SRCN,3)    // Voice 6: Snare
@@ -78,6 +86,7 @@ seek(SPCRAM); Start:
   WDSP(DSP_V7ADSR2,$F0) // Voice 7: ADSR2
   WDSP(DSP_V7GAIN,127)  // Voice 7: Gain
 
+  SetPitch(5,C,9,ClapC9Pitch)
   SetPitch(6,C,9,SnareC9Pitch)
   SetPitch(7,C,9,KickDrumC9Pitch)
 
@@ -294,7 +303,7 @@ SongStart: // Each Bar = 2048ms, Each Beat = 512ms, 3/4 Beat = 384ms, 1/2 Beat =
   SPCWaitSHIFTMS(256, 3) // Wait 256*8 ms
 
 
-// Bass Section
+// Bass Section, Clap
   SetPitch(2,F,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%00000100) // Play Voice 2
   SPCWaitSHIFTMS(256, 1) // Wait 256*2 ms
@@ -383,23 +392,23 @@ SongStart: // Each Bar = 2048ms, Each Beat = 512ms, 3/4 Beat = 384ms, 1/2 Beat =
   SPCWaitSHIFTMS(144, 3) // Wait 144*8 ms
 
   SetPitch(2,F,4,SynthBassC9Pitch)
-  WDSP(DSP_KON,%00000100) // Play Voice 2
+  WDSP(DSP_KON,%00100100) // Play Voice 2,5
   SPCWaitMS(128) // Wait 128 ms
 
   SetPitch(2,C,4,SynthBassC9Pitch)
-  WDSP(DSP_KON,%00000100) // Play Voice 2
+  WDSP(DSP_KON,%00100100) // Play Voice 2,5
   SPCWaitMS(256) // Wait 256 ms
 
   SetPitch(2,ASharp,3,SynthBassC9Pitch)
-  WDSP(DSP_KON,%00000100) // Play Voice 2
+  WDSP(DSP_KON,%00100100) // Play Voice 2,5
   SPCWaitMS(256) // Wait 256 ms
 
   SetPitch(2,GSharp,3,SynthBassC9Pitch)
-  WDSP(DSP_KON,%00000100) // Play Voice 2
+  WDSP(DSP_KON,%00100100) // Play Voice 2,5
   SPCWaitMS(256) // Wait 256 ms
 
 
-// Bass Section, Kick Drum
+// Bass Section, Clap, Kick Drum
   SetPitch(2,F,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%10000100) // Play Voice 2,7
   SPCWaitSHIFTMS(256, 1) // Wait 256*2 ms
@@ -442,15 +451,15 @@ SongStart: // Each Bar = 2048ms, Each Beat = 512ms, 3/4 Beat = 384ms, 1/2 Beat =
   SPCWaitMS(128) // Wait 128 ms
 
   SetPitch(2,C,4,SynthBassC9Pitch)
-  WDSP(DSP_KON,%10000100) // Play Voice 2,7
+  WDSP(DSP_KON,%10100100) // Play Voice 2,5,7
   SPCWaitMS(256) // Wait 256 ms
 
   SetPitch(2,DSharp,4,SynthBassC9Pitch)
-  WDSP(DSP_KON,%00000100) // Play Voice 2
+  WDSP(DSP_KON,%00100100) // Play Voice 2,5
   SPCWaitMS(256) // Wait 256 ms
 
   SetPitch(2,F,4,SynthBassC9Pitch)
-  WDSP(DSP_KON,%00000100) // Play Voice 2
+  WDSP(DSP_KON,%00100100) // Play Voice 2,5
   SPCWaitMS(256) // Wait 256 ms
 
 
@@ -491,19 +500,19 @@ SongStart: // Each Bar = 2048ms, Each Beat = 512ms, 3/4 Beat = 384ms, 1/2 Beat =
   SPCWaitSHIFTMS(160, 2) // Wait 160*4 ms
 
   SetPitch(2,F,4,SynthBassC9Pitch)
-  WDSP(DSP_KON,%10000100) // Play Voice 2,7
+  WDSP(DSP_KON,%10100100) // Play Voice 2,5,7
   SPCWaitMS(128) // Wait 128 ms
 
   SetPitch(2,C,4,SynthBassC9Pitch)
-  WDSP(DSP_KON,%10000100) // Play Voice 2,7
+  WDSP(DSP_KON,%10100100) // Play Voice 2,5,7
   SPCWaitMS(256) // Wait 256 ms
 
   SetPitch(2,ASharp,3,SynthBassC9Pitch)
-  WDSP(DSP_KON,%10000100) // Play Voice 2,7
+  WDSP(DSP_KON,%10100100) // Play Voice 2,5,7
   SPCWaitMS(256) // Wait 256 ms
 
   SetPitch(2,GSharp,3,SynthBassC9Pitch)
-  WDSP(DSP_KON,%10000100) // Play Voice 2,7
+  WDSP(DSP_KON,%10100100) // Play Voice 2,5,7
   SPCWaitMS(256) // Wait 256 ms
 
 
@@ -649,19 +658,19 @@ Loop:
   SPCWaitSHIFTMS(160, 2) // Wait 160*4 ms
 
   SetPitch(2,F,4,SynthBassC9Pitch)
-  WDSP(DSP_KON,%10000100) // Play Voice 2,7
+  WDSP(DSP_KON,%10100100) // Play Voice 2,5,7
   SPCWaitMS(128) // Wait 128 ms
 
   SetPitch(2,C,4,SynthBassC9Pitch)
-  WDSP(DSP_KON,%10000100) // Play Voice 2,7
+  WDSP(DSP_KON,%10100100) // Play Voice 2,5,7
   SPCWaitMS(256) // Wait 256 ms
 
   SetPitch(2,ASharp,3,SynthBassC9Pitch)
-  WDSP(DSP_KON,%11000100) // Play Voice 2,6,7
+  WDSP(DSP_KON,%11100100) // Play Voice 2,5,6,7
   SPCWaitMS(256) // Wait 256 ms
 
   SetPitch(2,GSharp,3,SynthBassC9Pitch)
-  WDSP(DSP_KON,%10000100) // Play Voice 2,7
+  WDSP(DSP_KON,%10100100) // Play Voice 2,5,7
   SPCWaitMS(256) // Wait 256 ms
 
 jmp Loop
@@ -671,9 +680,11 @@ seek($1A00); sampleDIR:
   dw SynthBass, 0              // 1
   dw KickDrum, 0               // 2
   dw Snare, 0                  // 3
+  dw Clap, 0                   // 4
 
 seek($1B00) // Sample Data
   insert SawTooth, "BRR\MSAWTOOF(Loop=2691,AD=$FA,SR=$F0,Echo)(C9Pitch=$8868).brr"
   insert SynthBass, "BRR\SYNBSS3(AD=$FF,SR=$F0)(C9Pitch=$8868).brr"
   insert Snare, "BRR\SNAREA13(AD=$FF,SR=$F0)(C9Pitch=$8868).brr"
   insert KickDrum, "BRR\KICK5(AD=$FF,SR=$F0)(C9Pitch=$8868).brr"
+  insert Clap, "BRR\CLAPTRAP(AD=$FF,SR=$F0)(C9Pitch=$8868).brr"
