@@ -14,7 +14,7 @@ constant SawToothDetuneC9Pitch($8748)
 constant SynthBassC9Pitch($8868)
 
 constant KickDrumC9Pitch($8868)
-constant SnareC9Pitch($9868)
+constant SnareC9Pitch($9668)
 
 seek(SPCRAM); Start:
   SPC_INIT() // Run SPC700 Initialisation Routine
