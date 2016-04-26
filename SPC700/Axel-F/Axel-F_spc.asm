@@ -700,12 +700,12 @@ Loop2:
   WDSP(DSP_V0VOLL,100)  // Voice 0: Volume Left
   WDSP(DSP_V0VOLR,100)  // Voice 0: Volume Right
   WDSP(DSP_V0ADSR1,$FE) // Voice 0: ADSR1
-  WDSP(DSP_V0ADSR2,$4F) // Voice 0: ADSR2
+  WDSP(DSP_V0ADSR2,$2F) // Voice 0: ADSR2
 
   WDSP(DSP_V1VOLL,100)  // Voice 1: Volume Left
   WDSP(DSP_V1VOLR,100)  // Voice 1: Volume Right
   WDSP(DSP_V1ADSR1,$FE) // Voice 1: ADSR1
-  WDSP(DSP_V1ADSR2,$4F) // Voice 1: ADSR2
+  WDSP(DSP_V1ADSR2,$2F) // Voice 1: ADSR2
 
   SetPitch(2,F,3,SynthBassC9Pitch)
   WDSP(DSP_KON,%10000100) // Play Voice 2,7
