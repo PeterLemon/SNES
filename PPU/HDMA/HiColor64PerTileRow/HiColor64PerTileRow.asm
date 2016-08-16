@@ -8,9 +8,9 @@ macro seek(variable offset) {
 }
 
 seek($8000); fill $10000 // Fill Upto $FFFF (Bank 1) With Zero Bytes
-include "LIB\SNES.INC"        // Include SNES Definitions
-include "LIB\SNES_HEADER.ASM" // Include Header & Vector Table
-include "LIB\SNES_GFX.INC"    // Include Graphics Macros
+include "LIB/SNES.INC"        // Include SNES Definitions
+include "LIB/SNES_HEADER.ASM" // Include Header & Vector Table
+include "LIB/SNES_GFX.INC"    // Include Graphics Macros
 
 seek($8000); Start:
   SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
@@ -2167,7 +2167,7 @@ BGMap:
 
 // Character Data
 // BANK 0
-insert BGPal,   "GFX\BGRow00.pal" // Include BG Tile Row 00 Palette Data (128 Bytes)
+insert BGPal,   "GFX/BGRow00.pal" // Include BG Tile Row 00 Palette Data (128 Bytes)
 // BANK 1
 seek($18000)
-insert BGTiles, "GFX\BG.pic" // Include BG Tile Data (28672 Bytes)
+insert BGTiles, "GFX/BG.pic" // Include BG Tile Data (28672 Bytes)

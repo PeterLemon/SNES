@@ -7,7 +7,7 @@ macro seek(variable offset) { // Set SPC700 Memory Map
   base offset
 }
 
-include "LIB\SNES_SPC700.INC" // Include SPC700 Definitions & Macros
+include "LIB/SNES_SPC700.INC" // Include SPC700 Definitions & Macros
 
 seek(SPCRAM); Start:
   SPC_INIT() // Run SPC700 Initialisation Routine

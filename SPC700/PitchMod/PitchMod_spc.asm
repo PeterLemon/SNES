@@ -7,7 +7,7 @@ macro seek(variable offset) { // Set SPC700 Memory Map
   base offset
 }
 
-include "LIB\SNES_SPC700.INC" // Include SPC700 Definitions & Macros
+include "LIB/SNES_SPC700.INC" // Include SPC700 Definitions & Macros
 
 constant CelloC9Pitch($8BB0)
 
@@ -66,4 +66,4 @@ seek($0400); sampleDIR:
 seek($0500) // Sample Data
   sineWave:
     db $C3, $77, $99, $77, $99, $77, $99, $77, $99
-  insert Cello, "BRR\032. Cello (Loop=4167,AD=$FF,SR=$E8,Echo)(C9Pitch=$8BB0).brr"
+  insert Cello, "BRR/032. Cello (Loop=4167,AD=$FF,SR=$E8,Echo)(C9Pitch=$8BB0).brr"

@@ -7,7 +7,7 @@ macro seek(variable offset) { // Set SPC700 Memory Map
   base offset
 }
 
-include "LIB\SNES_SPC700.INC" // Include SPC700 Definitions & Macros
+include "LIB/SNES_SPC700.INC" // Include SPC700 Definitions & Macros
 
 constant BassDrumC9Pitch($8000)
 constant SnareC9Pitch($8000)
@@ -807,12 +807,12 @@ seek($3A00); sampleDIR:
   dw HandClap, 0 // 8
 
 seek($3B00) // Sample Data
-  insert BassDrum,     "BRR\101. Axelay. 000. Bass Drum (AD=$FF,SR=$E0)(C9Pitch=$8000).brr"
-  insert Snare,        "BRR\101. Axelay. 001. Snare (AD=$FF,SR=$E0)(C9Pitch=$8000).brr"
-  insert HihatClosed,  "BRR\101. Axelay. 002. Hi-hat Closed (AD=$FF,SR=$E0)(C9Pitch=$8000).brr"
-  insert TomtomFloor,  "BRR\101. Axelay. 003. Tom-tom Floor (AD=$FF,SR=$E0)(C9Pitch=$8000).brr"
-  insert BassGuitar,   "BRR\101. Axelay. 020. Bass Guitar (Loop=900,AD=$F0,SR=$E2)(C9Freq=$A820).brr"
-  insert BassSynth,    "BRR\102. Set Up. 014. Bass Synth (Loop=378,AD=$FF,SR=$E0)(C9Freq=$B2C8).brr"
-  insert ElectroSynth, "BRR\203. Techno de Chocobo. 002. Electro Synth (Loop=0,AD=$FF,SR=$E0,Echo)(C9Freq=$8610).brr"
-  insert Synth,        "BRR\01. Halken Logo. 020. Synth (Loop=405,AD=$FF,SR=$EF)(C9Freq=$FB00).brr"
-  insert HandClap,     "BRR\104. Always Together. 034. Hand Clap (AD=$FF,SR=$E0)(C9Pitch=$8000).brr"
+  insert BassDrum,     "BRR/101. Axelay. 000. Bass Drum (AD=$FF,SR=$E0)(C9Pitch=$8000).brr"
+  insert Snare,        "BRR/101. Axelay. 001. Snare (AD=$FF,SR=$E0)(C9Pitch=$8000).brr"
+  insert HihatClosed,  "BRR/101. Axelay. 002. Hi-hat Closed (AD=$FF,SR=$E0)(C9Pitch=$8000).brr"
+  insert TomtomFloor,  "BRR/101. Axelay. 003. Tom-tom Floor (AD=$FF,SR=$E0)(C9Pitch=$8000).brr"
+  insert BassGuitar,   "BRR/101. Axelay. 020. Bass Guitar (Loop=900,AD=$F0,SR=$E2)(C9Freq=$A820).brr"
+  insert BassSynth,    "BRR/102. Set Up. 014. Bass Synth (Loop=378,AD=$FF,SR=$E0)(C9Freq=$B2C8).brr"
+  insert ElectroSynth, "BRR/203. Techno de Chocobo. 002. Electro Synth (Loop=0,AD=$FF,SR=$E0,Echo)(C9Freq=$8610).brr"
+  insert Synth,        "BRR/01. Halken Logo. 020. Synth (Loop=405,AD=$FF,SR=$EF)(C9Freq=$FB00).brr"
+  insert HandClap,     "BRR/104. Always Together. 034. Hand Clap (AD=$FF,SR=$E0)(C9Pitch=$8000).brr"

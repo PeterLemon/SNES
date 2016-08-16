@@ -8,9 +8,9 @@ macro seek(variable offset) {
 }
 
 seek($8000); fill $18000 // Fill Upto $17FFF (Bank 2) With Zero Bytes
-include "LIB\SNES.INC"        // Include SNES Definitions
-include "LIB\SNES_HEADER.ASM" // Include Header & Vector Table
-include "LIB\SNES_GFX.INC"    // Include Graphics Macros
+include "LIB/SNES.INC"        // Include SNES Definitions
+include "LIB/SNES_HEADER.ASM" // Include Header & Vector Table
+include "LIB/SNES_GFX.INC"    // Include Graphics Macros
 
 seek($8000); Start:
   SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
@@ -64,10 +64,10 @@ Loop:
 
 // Character Data
 // BANK 0
-insert BGPalBRG,  "GFX\MaxColRGB.pal"   // Include 2 BG Palette Data (512 Bytes)
-insert BGMap240,  "GFX\MaxColGB240.map" // Include BG Map Data (2048 Bytes)
-insert BGMap16,   "GFX\MaxColR16.map"   // Include BG Map Data (2048 Bytes)
-insert BGTiles16, "GFX\MaxColR16.pic"   // Include BG Tile Data (96 Bytes)
+insert BGPalBRG,  "GFX/MaxColRGB.pal"   // Include 2 BG Palette Data (512 Bytes)
+insert BGMap240,  "GFX/MaxColGB240.map" // Include BG Map Data (2048 Bytes)
+insert BGMap16,   "GFX/MaxColR16.map"   // Include BG Map Data (2048 Bytes)
+insert BGTiles16, "GFX/MaxColR16.pic"   // Include BG Tile Data (96 Bytes)
 // BANK 1 & 2
 seek($18000)
-insert BGTiles240, "GFX\MaxColGB240.pic" // Include BG Tile Data (28736 Bytes)
+insert BGTiles240, "GFX/MaxColGB240.pic" // Include BG Tile Data (28736 Bytes)

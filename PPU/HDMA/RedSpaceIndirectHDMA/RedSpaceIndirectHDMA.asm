@@ -8,8 +8,8 @@ macro seek(variable offset) {
 }
 
 seek($8000); fill $8000 // Fill Upto $7FFF (Bank 0) With Zero Bytes
-include "LIB\SNES.INC"        // Include SNES Definitions
-include "LIB\SNES_HEADER.ASM" // Include Header & Vector Table
+include "LIB/SNES.INC"        // Include SNES Definitions
+include "LIB/SNES_HEADER.ASM" // Include Header & Vector Table
 
 // Variable Data
 seek(WRAM) // 8Kb WRAM Mirror ($0000..$1FFF)

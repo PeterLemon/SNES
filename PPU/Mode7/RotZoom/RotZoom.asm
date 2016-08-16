@@ -8,10 +8,10 @@ macro seek(variable offset) {
 }
 
 seek($8000); fill $8000 // Fill Upto $7FFF (Bank 0) With Zero Bytes
-include "LIB\SNES.INC"        // Include SNES Definitions
-include "LIB\SNES_HEADER.ASM" // Include Header & Vector Table
-include "LIB\SNES_GFX.INC"    // Include Graphics Macros
-include "LIB\SNES_INPUT.INC"  // Include Input Macros
+include "LIB/SNES.INC"        // Include SNES Definitions
+include "LIB/SNES_HEADER.ASM" // Include Header & Vector Table
+include "LIB/SNES_GFX.INC"    // Include Graphics Macros
+include "LIB/SNES_INPUT.INC"  // Include Input Macros
 
 // Variable Data
 seek(WRAM) // 8Kb WRAM Mirror ($0000..$1FFF)
@@ -213,6 +213,6 @@ SINCOS256: // 256 SINE Values Ranging From -127 To 127 (Add 64 To Offset To Get 
 
 // Character Data
 // BANK 0
-insert BGPal,   "GFX\BG.pal" // Include BG Palette Data (512 Bytes)
-insert BGMap,   "GFX\BG.map" // Include BG Map Data (16384 Bytes)
-insert BGTiles, "GFX\BG.pic" // Include BG Tile Data (10944 Bytes)
+insert BGPal,   "GFX/BG.pal" // Include BG Palette Data (512 Bytes)
+insert BGMap,   "GFX/BG.map" // Include BG Map Data (16384 Bytes)
+insert BGTiles, "GFX/BG.pic" // Include BG Tile Data (10944 Bytes)

@@ -7,7 +7,7 @@ macro seek(variable offset) { // Set SPC700 Memory Map
   base offset
 }
 
-include "LIB\SNES_SPC700.INC" // Include SPC700 Definitions & Macros
+include "LIB/SNES_SPC700.INC" // Include SPC700 Definitions & Macros
 
 constant HarpC9Pitch($C900)
 
@@ -266,4 +266,4 @@ seek($0A00); sampleDIR:
   dw Harp, Harp + 927 // 0
 
 seek($0B00) // Sample Data
-  insert Harp, "BRR\034. Harp (Loop=927,AD=$FF,SR=$F0,Echo)(C9Freq=$C900).brr"
+  insert Harp, "BRR/034. Harp (Loop=927,AD=$FF,SR=$F0,Echo)(C9Freq=$C900).brr"

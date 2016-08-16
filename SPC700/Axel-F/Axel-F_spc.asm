@@ -7,7 +7,7 @@ macro seek(variable offset) { // Set SPC700 Memory Map
   base offset
 }
 
-include "LIB\SNES_SPC700.INC" // Include SPC700 Definitions & Macros
+include "LIB/SNES_SPC700.INC" // Include SPC700 Definitions & Macros
 
 constant SawToothC9Pitch($8868)
 constant SawToothDetuneC9Pitch($8748)
@@ -889,8 +889,8 @@ seek($2A00); sampleDIR:
   dw Clap, 0                   // 4
 
 seek($2B00) // Sample Data
-  insert SawTooth, "BRR\MSAWTOOF(Loop=2691,AD=$FA,SR=$F0,Echo)(C9Pitch=$8868).brr"
-  insert SynthBass, "BRR\SYNBSS3(AD=$FF,SR=$F0)(C9Pitch=$8868).brr"
-  insert Snare, "BRR\SNAREA13(AD=$FF,SR=$F0)(C9Pitch=$8868).brr"
-  insert KickDrum, "BRR\KICK5(AD=$FF,SR=$F0)(C9Pitch=$8868).brr"
-  insert Clap, "BRR\CLAPTRAP(AD=$FF,SR=$F0)(C9Pitch=$8868).brr"
+  insert SawTooth, "BRR/MSAWTOOF(Loop=2691,AD=$FA,SR=$F0,Echo)(C9Pitch=$8868).brr"
+  insert SynthBass, "BRR/SYNBSS3(AD=$FF,SR=$F0)(C9Pitch=$8868).brr"
+  insert Snare, "BRR/SNAREA13(AD=$FF,SR=$F0)(C9Pitch=$8868).brr"
+  insert KickDrum, "BRR/KICK5(AD=$FF,SR=$F0)(C9Pitch=$8868).brr"
+  insert Clap, "BRR/CLAPTRAP(AD=$FF,SR=$F0)(C9Pitch=$8868).brr"
