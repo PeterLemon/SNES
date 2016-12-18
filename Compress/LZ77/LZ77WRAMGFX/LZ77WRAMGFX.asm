@@ -12,6 +12,8 @@ include "LIB/SNES.INC"        // Include SNES Definitions
 include "LIB/SNES_HEADER.ASM" // Include Header & Vector Table
 include "LIB/SNES_GFX.INC"    // Include Graphics Macros
 
+constant LZOUT($7F0000) // LZ Output WRAM Offset (2nd Bank)
+
 // Variable Data
 seek(WRAM) // 8Kb WRAM Mirror ($0000..$1FFF)
 LZFlagData:
@@ -30,86 +32,33 @@ LZDISP:
   dl 0 // LZ Disp Offset Long
 LZDEST:
   dl 0 // LZ Destination Offset Long
-LZOUT: // LZ Output WRAM Offset
+LZSRC:
+  dl 0 // LZ Source Offset Long
+LZSIZE:
+  dw 0 // LZ Data Byte Size
 
 seek($8000); Start:
   SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
 
   LoadPAL(BGPal, $00, BGPal.size, 0) // Load Background Palette (BG Palette Uses 16 Colors)
 
-  ldx.w #LZOUT // WRAM Destination
-  stx.b LZDEST // Store WRAM Long Destination Offset
-  lda.b #$7E // A = WRAM Long Hi Byte
-  sta.b LZDEST+2 // Store WRAM Long Hi Byte
-  sta.b LZDISP+2 // Store WRAM Long Hi Byte
+  ldx.w #BGTiles // LZ Source ROM Offset
+  stx.b LZSRC // Store LZ Source ROM Offset
+  lda.b #BGTiles >> 16 // A = LZ Source ROM Bank
+  sta.b LZSRC+2 // Store LZ Source ROM Bank
+  ldx.w #BGTiles.size // LZ Data Byte Size
+  stx.b LZSIZE // Store LZ Data Byte Size
+  jsl LZDecompress // Decompress LZ Data
+  LoadVRAM(LZOUT, $0000, $40C0, 0) // Load Background Tiles To VRAM
 
-  ldx.w #$0004 // X = Source Address Index (Skip LZ Header)
-
-  LZLoop:
-    lda.l BGTiles,x // A = Flag Data For Next 8 Blocks (0 = Uncompressed Byte, 1 = Compressed Bytes)
-    inx // Add 1 To LZ Offset
-    sta.b LZFlagData // Store Flag Data
-    lda.b #%10000000 // A = Flag Data Block Type Shifter
-    sta.b LZBlockShift // Store Block Type Shifter
-    LZBlockLoop:
-      cpx.w #BGTiles.size // IF (Destination Address == Destination End Offset) LZEnd
-      beq LZEnd
-      lda.b LZBlockShift // A = Flag Data Block Type Shifter
-      lsr LZBlockShift // Shift To Next Flag Data Block Type
-      cmp.b #0 // IF (Flag Data Block Type Shifter == 0) LZLoop
-      beq LZLoop
-      bit.b LZFlagData // Test Block Type
-      bne LZDecode // IF (BlockType != 0) LZDecode Bytes
-      lda.l BGTiles,x // ELSE Copy Uncompressed Byte
-      inx // Add 1 To LZ Offset
-      sta [LZDEST] // Store Uncompressed Byte To Destination
-      ldy.b LZDEST // Y = LZ Destination Offset
-      iny // Add 1 To LZ Destination Offset
-      sty.b LZDEST // LZ Destination Offset = Y
-      bra LZBlockLoop
-
-      LZDecode:
-        lda.l BGTiles,x // A = Number Of Bytes To Copy & Disp MSB's
-        inx // Add 1 To LZ Offset
-        sta.b LZNBDMSB // Store Number Of Bytes To Copy & Disp MSB's
-        and.b #$F // A = Disp MSB's
-        sta.b LZDMSB // Store Disp MSB's
-        lda.l BGTiles,x // A = Disp LSB's
-        inx // Add 1 To LZ Offset
-        sta.b LZDLSB // Store Disp LSB's
-        lda.b LZNBDMSB // A = Number Of Bytes To Copy & Disp MSB's
-        lsr // A >>= 4
-        lsr
-        lsr
-        lsr // A = Number Of Bytes To Copy (Minus 3)
-        clc // Clear Carry Flag
-        adc.b #3 // A = Number Of Bytes To Copy
-        sta.b LZNB // Store Number Of Bytes To Copy
-        ldy.b LZDLSB // Y = Disp
-        iny // Y = Disp + 1
-        sty.b LZDISP // Store Disp
-        rep #$20 // Set 16-Bit Accumulator
-        lda.b LZDEST // A = LZ Destination Offset
-        sec // Set Carry Flag
-        sbc.b LZDISP // A = Destination - Disp - 1 (LZ Disp Offset)
-        sta.b LZDISP // Store LZ Disp Offset
-        sep #$20 // Set 8-Bit Accumulator
-        LZCopy:
-          lda [LZDISP] // A = Byte To Copy
-          ldy.b LZDISP // Y = LZ Disp Offset
-          iny // Add 1 To LZ Disp Offset
-          sty.b LZDISP // LZ Disp Offset = Y
-          sta [LZDEST] // Store Uncompressed Byte To Destination
-          ldy.b LZDEST // Y = LZ Destination Offset
-          iny // Add 1 To LZ Destination Offset
-          sty.b LZDEST // LZ Destination Offset = Y
-          dec LZNB // Decrement Number Of Bytes To Copy
-          bne LZCopy
-          bra LZBlockLoop
-    LZEnd:
-
-  LoadVRAM($7E0000+LZOUT, $0000, $40C0, 0) // Load Background Tiles To VRAM
-  LoadVRAM(BGMap, $F200, BGMap.size, 0) // Load Background Tile Map To VRAM
+  ldx.w #BGMap // LZ Source ROM Offset
+  stx.b LZSRC // Store LZ Source ROM Offset
+  lda.b #BGMap >> 16 // A = LZ Source ROM Bank
+  sta.b LZSRC+2 // Store LZ Source ROM Bank
+  ldx.w #BGMap.size // LZ Data Byte Size
+  stx.b LZSIZE // Store LZ Data Byte Size
+  jsl LZDecompress // Decompress LZ Data
+  LoadVRAM(LZOUT, $F200, $0E00, 0) // Load Background Tile Map To VRAM
 
   // Setup Video
   lda.b #%00001101 // DCBAPMMM: M = Mode, P = Priority, ABCD = BG1,2,3,4 Tile Size
@@ -140,8 +89,81 @@ seek($8000); Start:
 Loop:
   jmp Loop
 
+LZDecompress: // Decompress LZ77/LZSS Data (LZSRC & LZSIZE Required, Maximum 65536 Bytes Output)
+  ldx.w #LZOUT // LZ Destination WRAM Offset
+  stx.b LZDEST // Store LZ Destination WRAM Offset
+  lda.b #LZOUT >> 16 // A = LZ Destination WRAM Bank
+  sta.b LZDEST+2 // Store LZ Destination WRAM Bank
+  sta.b LZDISP+2 // Store LZ Disp WRAM Bank
+
+  ldy.w #$0004 // Y = Source Address Index (Skip LZ Header)
+
+  LZLoop:
+    lda [LZSRC],y // A = Flag Data For Next 8 Blocks (0 = Uncompressed Byte, 1 = Compressed Bytes)
+    iny // Add 1 To LZ Offset
+    sta.b LZFlagData // Store Flag Data
+    lda.b #%10000000 // A = Flag Data Block Type Shifter
+    sta.b LZBlockShift // Store Block Type Shifter
+    LZBlockLoop:
+      cpy.b LZSIZE // IF (Source Address Index == Source End Offset) LZEnd
+      beq LZEnd
+      lda.b LZBlockShift // A = Flag Data Block Type Shifter
+      lsr LZBlockShift // Shift To Next Flag Data Block Type
+      cmp.b #0 // IF (Flag Data Block Type Shifter == 0) LZLoop
+      beq LZLoop
+      bit.b LZFlagData // Test Block Type
+      bne LZDecode // IF (BlockType != 0) LZDecode Bytes
+      lda [LZSRC],y // ELSE Copy Uncompressed Byte
+      iny // Add 1 To LZ Offset
+      sta [LZDEST] // Store Uncompressed Byte To Destination
+      ldx.b LZDEST // X = LZ Destination Offset
+      inx // Add 1 To LZ Destination Offset
+      stx.b LZDEST // LZ Destination Offset = X
+      bra LZBlockLoop
+
+      LZDecode:
+        lda [LZSRC],y // A = Number Of Bytes To Copy & Disp MSB's
+        iny // Add 1 To LZ Offset
+        sta.b LZNBDMSB // Store Number Of Bytes To Copy & Disp MSB's
+        and.b #$F // A = Disp MSB's
+        sta.b LZDMSB // Store Disp MSB's
+        lda [LZSRC],y // A = Disp LSB's
+        iny // Add 1 To LZ Offset
+        sta.b LZDLSB // Store Disp LSB's
+        lda.b LZNBDMSB // A = Number Of Bytes To Copy & Disp MSB's
+        lsr // A >>= 4
+        lsr
+        lsr
+        lsr // A = Number Of Bytes To Copy (Minus 3)
+        clc // Clear Carry Flag
+        adc.b #3 // A = Number Of Bytes To Copy
+        sta.b LZNB // Store Number Of Bytes To Copy
+        ldx.b LZDLSB // X = Disp
+        inx // X = Disp + 1
+        stx.b LZDISP // Store Disp
+        rep #$20 // Set 16-Bit Accumulator
+        lda.b LZDEST // A = LZ Destination Offset
+        sec // Set Carry Flag
+        sbc.b LZDISP // A = Destination - Disp - 1 (LZ Disp Offset)
+        sta.b LZDISP // Store LZ Disp Offset
+        sep #$20 // Set 8-Bit Accumulator
+        LZCopy:
+          lda [LZDISP] // A = Byte To Copy
+          ldx.b LZDISP // X = LZ Disp Offset
+          inx // Add 1 To LZ Disp Offset
+          stx.b LZDISP // LZ Disp Offset = X
+          sta [LZDEST] // Store Uncompressed Byte To Destination
+          ldx.b LZDEST // X = LZ Destination Offset
+          inx // Add 1 To LZ Destination Offset
+          stx.b LZDEST // LZ Destination Offset = X
+          dec LZNB // Decrement Number Of Bytes To Copy
+          bne LZCopy
+          bra LZBlockLoop
+    LZEnd:
+      rtl // Return From Subroutine
+
 // Character Data
 // BANK 0
 insert BGPal,   "GFX/BG.pal"   // Include BG Palette Data (32 Bytes)
-insert BGMap,   "GFX/BG.map"   // Include BG Map Data (3584 Bytes)
+insert BGMap,   "GFX/BGMAP.lz" // Include LZ Compressed BG Map Data (971 Bytes)
 insert BGTiles, "GFX/BGPIC.lz" // Include LZ Compressed BG Tile Data (6871 Bytes)
