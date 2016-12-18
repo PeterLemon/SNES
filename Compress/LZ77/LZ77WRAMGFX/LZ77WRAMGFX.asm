@@ -66,7 +66,7 @@ seek($8000); Start:
       ldy.b LZDEST // Y = LZ Destination Offset
       iny // Add 1 To LZ Destination Offset
       sty.b LZDEST // LZ Destination Offset = Y
-      jmp LZBlockLoop
+      bra LZBlockLoop
 
       LZDecode:
         lda.l BGTiles,x // A = Number Of Bytes To Copy & Disp MSB's
@@ -105,7 +105,7 @@ seek($8000); Start:
           sty.b LZDEST // LZ Destination Offset = Y
           dec LZNB // Decrement Number Of Bytes To Copy
           bne LZCopy
-          jmp LZBlockLoop
+          bra LZBlockLoop
     LZEnd:
 
   LoadVRAM($7E0000+LZOUT, $0000, $40C0, 0) // Load Background Tiles To VRAM
