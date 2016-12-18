@@ -96,16 +96,16 @@ LZDecompress: // Decompress LZ77/LZSS Data (LZSRC & LZSIZE Required, Maximum 655
   sta.b LZDEST+2 // Store LZ Destination WRAM Bank
   sta.b LZDISP+2 // Store LZ Disp WRAM Bank
 
-  ldy.w #$0004 // Y = Source Address Index (Skip LZ Header)
+  ldy.w #$0004 // Y = LZ Source Offset Index (Skip LZ Header)
 
   LZLoop:
     lda [LZSRC],y // A = Flag Data For Next 8 Blocks (0 = Uncompressed Byte, 1 = Compressed Bytes)
-    iny // Add 1 To LZ Offset
+    iny // Add 1 To LZ Source Offset Index
     sta.b LZFlagData // Store Flag Data
     lda.b #%10000000 // A = Flag Data Block Type Shifter
     sta.b LZBlockShift // Store Block Type Shifter
     LZBlockLoop:
-      cpy.b LZSIZE // IF (Source Address Index == Source End Offset) LZEnd
+      cpy.b LZSIZE // IF (Source Offset Index == Source End Offset) LZEnd
       beq LZEnd
       lda.b LZBlockShift // A = Flag Data Block Type Shifter
       lsr LZBlockShift // Shift To Next Flag Data Block Type
@@ -114,7 +114,7 @@ LZDecompress: // Decompress LZ77/LZSS Data (LZSRC & LZSIZE Required, Maximum 655
       bit.b LZFlagData // Test Block Type
       bne LZDecode // IF (BlockType != 0) LZDecode Bytes
       lda [LZSRC],y // ELSE Copy Uncompressed Byte
-      iny // Add 1 To LZ Offset
+      iny // Add 1 To LZ Source Offset Index
       sta [LZDEST] // Store Uncompressed Byte To Destination
       ldx.b LZDEST // X = LZ Destination Offset
       inx // Add 1 To LZ Destination Offset
@@ -123,12 +123,12 @@ LZDecompress: // Decompress LZ77/LZSS Data (LZSRC & LZSIZE Required, Maximum 655
 
       LZDecode:
         lda [LZSRC],y // A = Number Of Bytes To Copy & Disp MSB's
-        iny // Add 1 To LZ Offset
+        iny // Add 1 To LZ Source Offset Index
         sta.b LZNBDMSB // Store Number Of Bytes To Copy & Disp MSB's
         and.b #$F // A = Disp MSB's
         sta.b LZDMSB // Store Disp MSB's
         lda [LZSRC],y // A = Disp LSB's
-        iny // Add 1 To LZ Offset
+        iny // Add 1 To LZ Source Offset Index
         sta.b LZDLSB // Store Disp LSB's
         lda.b LZNBDMSB // A = Number Of Bytes To Copy & Disp MSB's
         lsr // A >>= 4
