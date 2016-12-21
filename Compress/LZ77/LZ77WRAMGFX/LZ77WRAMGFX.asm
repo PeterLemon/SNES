@@ -35,7 +35,7 @@ LZDEST:
 LZSRC:
   dl 0 // LZ Source Offset Long
 LZSIZE:
-  dw 0 // LZ Data Byte Size
+  dw 0 // LZ Data Byte Size Word
 
 seek($8000); Start:
   SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
