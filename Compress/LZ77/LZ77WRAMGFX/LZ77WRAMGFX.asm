@@ -108,9 +108,8 @@ LZDecompress: // Decompress LZ77/LZSS Data (LZSRC & LZSIZE Required, Maximum 655
       cpy.b LZSIZE // IF (Source Offset Index == Source End Offset) LZEnd
       beq LZEnd
       lda.b LZBlockShift // A = Flag Data Block Type Shifter
+      beq LZLoop // IF (Flag Data Block Type Shifter == 0) LZLoop
       lsr LZBlockShift // Shift To Next Flag Data Block Type
-      cmp.b #0 // IF (Flag Data Block Type Shifter == 0) LZLoop
-      beq LZLoop
       bit.b LZFlagData // Test Block Type
       bne LZDecode // IF (BlockType != 0) LZDecode Bytes
       lda [LZSRC],y // ELSE Copy Uncompressed Byte
@@ -119,7 +118,7 @@ LZDecompress: // Decompress LZ77/LZSS Data (LZSRC & LZSIZE Required, Maximum 655
       ldx.b LZDEST // X = LZ Destination Offset
       inx // Add 1 To LZ Destination Offset
       stx.b LZDEST // LZ Destination Offset = X
-      bra LZBlockLoop
+      bra LZBlockLoop // Loop LZ Blocks
 
       LZDecode:
         lda [LZSRC],y // A = Number Of Bytes To Copy & Disp MSB's
@@ -157,8 +156,8 @@ LZDecompress: // Decompress LZ77/LZSS Data (LZSRC & LZSIZE Required, Maximum 655
           inx // Add 1 To LZ Destination Offset
           stx.b LZDEST // LZ Destination Offset = X
           dec LZNB // Decrement Number Of Bytes To Copy
-          bne LZCopy
-          bra LZBlockLoop
+          bne LZCopy // IF (Number Of Bytes To Copy != 0) LZ Copy
+          bra LZBlockLoop // Loop LZ Blocks
     LZEnd:
       rtl // Return From Subroutine
 
