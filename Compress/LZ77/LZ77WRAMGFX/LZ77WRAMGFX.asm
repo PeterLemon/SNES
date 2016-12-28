@@ -156,7 +156,7 @@ LZDecompress: // Decompress LZ77/LZSS Data (LZSRC & LZSIZE Required, Maximum 655
           inx // Add 1 To LZ Destination Offset
           stx.b LZDEST // LZ Destination Offset = X
           dec LZNB // Decrement Number Of Bytes To Copy
-          bne LZCopy // IF (Number Of Bytes To Copy != 0) LZ Copy
+          bne LZCopy // IF (Number Of Bytes To Copy != 0) LZCopy
           bra LZBlockLoop // Loop LZ Blocks
     LZEnd:
       rtl // Return From Subroutine
