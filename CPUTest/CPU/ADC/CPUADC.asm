@@ -2110,9 +2110,333 @@ seek($8000); Start:
     bne Fail48
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
+  /////////////////////////////////////////////////////////////////
+  ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
+  WaitNMI() // Wait For VSync
 
+  // Print Syntax/Opcode Text
+  PrintText(ADCAddrX, $F902, 26) // Load Text To VRAM Lo Bytes
+  
+  /////////////////////////////////////////////////////////////////
+  // Print Modes Text
+  PrintText(Binary8Bit, $FA02, 5) // Load Text To VRAM Lo Bytes
 
+  // Setup Flags
+  rep #$08 // Reset Decimal Flag
+  sep #$20 // Set 8-Bit Accumulator
+  clc // Clear Carry Flag
+
+  // Run Test
+  lda.b #$81 // A = $81
+  sta.b AbsoluteData // Store Absolute Data
+  ldx.w #0 // X = 0
+  lda.b #$7F // A = $7F
+  adc.w AbsoluteData,x // A += $81
+
+  // Store Result & Processor Status Flag Data
+  sta.b ResultData // Store Result To Memory
+  php // Push Processor Status Register To Stack
+  pla // Pull Accumulator Register From Stack
+  sta.b PSRFlagData // Store Processor Status Flag Data To Memory
+
+  // Print Result & Processor Status Flag Data
+  PrintValue(ResultData, $FA12, 1) // Print Result Data
+  PrintPSR(PSRFlagData, $FA24) // Print Processor Status Flag Data
+
+  // Check Result & Processor Status Flag Data
+  lda.b ResultData // A = Result Data
+  cmp.w ADCResultCheckA
+  beq Pass49
+  Fail49:
+    PrintText(Fail, $FA32, 4) // Load Text To VRAM Lo Bytes
+    bra Fail49
+  Pass49:
+    lda.b PSRFlagData // A = Processor Status Flag Data
+    cmp.w PSRResultCheckA
+    bne Fail49
+    PrintText(Pass, $FA32, 4) // Load Text To VRAM Lo Bytes
+
+  /////////////////////////////////////////////////////////////////
+  // Print Modes Text
+  PrintText(Binary8Bit, $FA42, 5) // Load Text To VRAM Lo Bytes
+
+  // Setup Flags
+  rep #$08 // Reset Decimal Flag
+  sep #$20 // Set 8-Bit Accumulator
+  sec // Set Carry Flag
+
+  // Run Test
+  lda.b #$7F // A = $7F
+  sta.b AbsoluteData // Store Absolute Data
+  ldx.w #0 // X = 0
+  lda.b #$7F // A = $7F
+  adc.w AbsoluteData,x // A += $7F
+
+  // Store Result & Processor Status Flag Data
+  sta.b ResultData // Store Result To Memory
+  php // Push Processor Status Register To Stack
+  pla // Pull Accumulator Register From Stack
+  sta.b PSRFlagData // Store Processor Status Flag Data To Memory
+
+  // Print Result & Processor Status Flag Data
+  PrintValue(ResultData, $FA52, 1) // Print Result Data
+  PrintPSR(PSRFlagData, $FA64) // Print Processor Status Flag Data
+
+  // Check Result & Processor Status Flag Data
+  lda.b ResultData // A = Result Data
+  cmp.w ADCResultCheckB
+  beq Pass50
+  Fail50:
+    PrintText(Fail, $FA72, 4) // Load Text To VRAM Lo Bytes
+    bra Fail50
+  Pass50:
+    lda.b PSRFlagData // A = Processor Status Flag Data
+    cmp.w PSRResultCheckB
+    bne Fail50
+    PrintText(Pass, $FA72, 4) // Load Text To VRAM Lo Bytes
+
+  /////////////////////////////////////////////////////////////////
+  // Print Modes Text
+  PrintText(Binary16Bit, $FA82, 6) // Load Text To VRAM Lo Bytes
+
+  // Setup Flags
+  rep #$08 // Reset Decimal Flag
+  rep #$20 // Set 16-Bit Accumulator
+  clc // Clear Carry Flag
+
+  // Run Test
+  lda.w #$8001 // A = $8001
+  sta.b AbsoluteData // Store Absolute Data
+  ldx.w #0 // X = 0
+  lda.w #$7FFF // A = $7FFF
+  adc.w AbsoluteData,x // A += $8001
+
+  // Store Result & Processor Status Flag Data
+  sta.b ResultData // Store Result To Memory
+  sep #$20 // Set 8-Bit Accumulator
+  php // Push Processor Status Register To Stack
+  pla // Pull Accumulator Register From Stack
+  sta.b PSRFlagData // Store Processor Status Flag Data To Memory
+
+  // Print Result & Processor Status Flag Data
+  PrintValue(ResultData, $FA92, 2) // Print Result Data
+  PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
+
+  // Check Result & Processor Status Flag Data
+  ldx.b ResultData // A = Result Data
+  cpx.w ADCResultCheckC
+  beq Pass51
+  Fail51:
+    PrintText(Fail, $FAB2, 4) // Load Text To VRAM Lo Bytes
+    bra Fail51
+  Pass51:
+    lda.b PSRFlagData // A = Processor Status Flag Data
+    cmp.w PSRResultCheckC
+    bne Fail51
+    PrintText(Pass, $FAB2, 4) // Load Text To VRAM Lo Bytes
+
+  /////////////////////////////////////////////////////////////////
+  // Print Modes Text
+  PrintText(Binary16Bit, $FAC2, 6) // Load Text To VRAM Lo Bytes
+
+  // Setup Flags
+  rep #$08 // Reset Decimal Flag
+  rep #$20 // Set 16-Bit Accumulator
+  sec // Set Carry Flag
+
+  // Run Test
+  lda.w #$7FFF // A = $7FFF
+  sta.b AbsoluteData // Store Absolute Data
+  ldx.w #0 // X = 0
+  lda.w #$7FFF // A = $7FFF
+  adc.w AbsoluteData,x // A += $7FFF
+
+  // Store Result & Processor Status Flag Data
+  sta.b ResultData // Store Result To Memory
+  sep #$20 // Set 8-Bit Accumulator
+  php // Push Processor Status Register To Stack
+  pla // Pull Accumulator Register From Stack
+  sta.b PSRFlagData // Store Processor Status Flag Data To Memory
+
+  // Print Result & Processor Status Flag Data
+  PrintValue(ResultData, $FAD2, 2) // Print Result Data
+  PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
+
+  // Check Result & Processor Status Flag Data
+  ldx.b ResultData // A = Result Data
+  cpx.w ADCResultCheckD
+  beq Pass52
+  Fail52:
+    PrintText(Fail, $FAF2, 4) // Load Text To VRAM Lo Bytes
+    bra Fail52
+  Pass52:
+    lda.b PSRFlagData // A = Processor Status Flag Data
+    cmp.w PSRResultCheckD
+    bne Fail52
+    PrintText(Pass, $FAF2, 4) // Load Text To VRAM Lo Bytes
+
+  /////////////////////////////////////////////////////////////////
+  // Print Modes Text
+  PrintText(Decimal8Bit, $FB02, 5) // Load Text To VRAM Lo Bytes
+
+  // Setup Flags
+  sep #$08 // Set Decimal Flag
+  sep #$20 // Set 8-Bit Accumulator
+  clc // Clear Carry Flag
+
+  // Run Test
+  lda.b #$51 // A = $51
+  sta.b AbsoluteData // Store Absolute Data
+  ldx.w #0 // X = 0
+  lda.b #$49 // A = $49
+  adc.w AbsoluteData,x // A += $51
+
+  // Store Result & Processor Status Flag Data
+  sta.b ResultData // Store Result To Memory
+  rep #$08 // Reset Decimal Flag
+  php // Push Processor Status Register To Stack
+  pla // Pull Accumulator Register From Stack
+  sta.b PSRFlagData // Store Processor Status Flag Data To Memory
+
+  // Print Result & Processor Status Flag Data
+  PrintValue(ResultData, $FB12, 1) // Print Result Data
+  PrintPSR(PSRFlagData, $FB24) // Print Processor Status Flag Data
+
+  // Check Result & Processor Status Flag Data
+  lda.b ResultData // A = Result Data
+  cmp.w ADCResultCheckE
+  beq Pass53
+  Fail53:
+    PrintText(Fail, $FB32, 4) // Load Text To VRAM Lo Bytes
+    bra Fail53
+  Pass53:
+    lda.b PSRFlagData // A = Processor Status Flag Data
+    cmp.w PSRResultCheckE
+    bne Fail53
+    PrintText(Pass, $FB32, 4) // Load Text To VRAM Lo Bytes
+
+  /////////////////////////////////////////////////////////////////
+  // Print Modes Text
+  PrintText(Decimal8Bit, $FB42, 5) // Load Text To VRAM Lo Bytes
+
+  // Setup Flags
+  sep #$08 // Set Decimal Flag
+  sep #$20 // Set 8-Bit Accumulator
+  sec // Set Carry Flag
+
+  // Run Test
+  lda.b #$49 // A = $49
+  sta.b AbsoluteData // Store Absolute Data
+  ldx.w #0 // X = 0
+  lda.b #$49 // A = $49
+  adc.w AbsoluteData,x // A += $49
+
+  // Store Result & Processor Status Flag Data
+  sta.b ResultData // Store Result To Memory
+  rep #$08 // Reset Decimal Flag
+  php // Push Processor Status Register To Stack
+  pla // Pull Accumulator Register From Stack
+  sta.b PSRFlagData // Store Processor Status Flag Data To Memory
+
+  // Print Result & Processor Status Flag Data
+  PrintValue(ResultData, $FB52, 1) // Print Result Data
+  PrintPSR(PSRFlagData, $FB64) // Print Processor Status Flag Data
+
+  // Check Result & Processor Status Flag Data
+  lda.b ResultData // A = Result Data
+  cmp.w ADCResultCheckF
+  beq Pass54
+  Fail54:
+    PrintText(Fail, $FB72, 4) // Load Text To VRAM Lo Bytes
+    bra Fail54
+  Pass54:
+    lda.b PSRFlagData // A = Processor Status Flag Data
+    cmp.w PSRResultCheckF
+    bne Fail54
+    PrintText(Pass, $FB72, 4) // Load Text To VRAM Lo Bytes
+
+  /////////////////////////////////////////////////////////////////
+  // Print Modes Text
+  PrintText(Decimal16Bit, $FB82, 6) // Load Text To VRAM Lo Bytes
+
+  // Setup Flags
+  sep #$08 // Set Decimal Flag
+  rep #$20 // Set 16-Bit Accumulator
+  clc // Clear Carry Flag
+
+  // Run Test
+  lda.w #$5001 // A = $5001
+  sta.b AbsoluteData // Store Absolute Data
+  ldx.w #0 // X = 0
+  lda.w #$4999 // A = $4999
+  adc.w AbsoluteData,x // A += $5001
+
+  // Store Result & Processor Status Flag Data
+  sta.b ResultData // Store Result To Memory
+  rep #$08 // Reset Decimal Flag
+  sep #$20 // Set 8-Bit Accumulator
+  php // Push Processor Status Register To Stack
+  pla // Pull Accumulator Register From Stack
+  sta.b PSRFlagData // Store Processor Status Flag Data To Memory
+
+  // Print Result & Processor Status Flag Data
+  PrintValue(ResultData, $FB92, 2) // Print Result Data
+  PrintPSR(PSRFlagData, $FBA4) // Print Processor Status Flag Data
+
+  // Check Result & Processor Status Flag Data
+  ldx.b ResultData // A = Result Data
+  cpx.w ADCResultCheckG
+  beq Pass55
+  Fail55:
+    PrintText(Fail, $FBB2, 4) // Load Text To VRAM Lo Bytes
+    bra Fail55
+  Pass55:
+    lda.b PSRFlagData // A = Processor Status Flag Data
+    cmp.w PSRResultCheckG
+    bne Fail55
+    PrintText(Pass, $FBB2, 4) // Load Text To VRAM Lo Bytes
+
+  /////////////////////////////////////////////////////////////////
+  // Print Modes Text
+  PrintText(Decimal16Bit, $FBC2, 6) // Load Text To VRAM Lo Bytes
+
+  // Setup Flags
+  sep #$08 // Set Decimal Flag
+  rep #$20 // Set 16-Bit Accumulator
+  sec // Set Carry Flag
+
+  // Run Test
+  lda.w #$4999 // A = $4999
+  sta.b AbsoluteData // Store Absolute Data
+  ldx.w #0 // X = 0
+  lda.w #$4999 // A = $4999
+  adc.w AbsoluteData,x // A += $4999
+
+  // Store Result & Processor Status Flag Data
+  sta.b ResultData // Store Result To Memory
+  rep #$08 // Reset Decimal Flag
+  sep #$20 // Set 8-Bit Accumulator
+  php // Push Processor Status Register To Stack
+  pla // Pull Accumulator Register From Stack
+  sta.b PSRFlagData // Store Processor Status Flag Data To Memory
+
+  // Print Result & Processor Status Flag Data
+  PrintValue(ResultData, $FBD2, 2) // Print Result Data
+  PrintPSR(PSRFlagData, $FBE4) // Print Processor Status Flag Data
+
+  // Check Result & Processor Status Flag Data
+  ldx.b ResultData // A = Result Data
+  cpx.w ADCResultCheckH
+  beq Pass56
+  Fail56:
+    PrintText(Fail, $FBF2, 4) // Load Text To VRAM Lo Bytes
+    bra Fail56
+  Pass56:
+    lda.b PSRFlagData // A = Processor Status Flag Data
+    cmp.w PSRResultCheckH
+    bne Fail56
+    PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
 Loop:
   jmp Loop
