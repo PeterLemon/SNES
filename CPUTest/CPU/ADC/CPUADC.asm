@@ -33,7 +33,7 @@ macro PrintValue(SRC, DEST, SIZE) { // Print HEX Characters To VRAM
 
   {#}LoopHEX:
     dex // X--
-    ldy.w #0001 // Y = 1 (Char Count)
+    ldy.w #0002 // Y = 2 (Char Count)
 
     lda.w {SRC},x // A = Result Data
     lsr // A >>= 4
