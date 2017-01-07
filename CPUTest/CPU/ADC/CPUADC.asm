@@ -3120,6 +3120,8 @@ seek($8000); Start:
     PrintText(Pass, $FA32, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  WaitNMI() // Wait For VSync
+
   // Print Modes Text
   PrintText(Binary8Bit, $FA42, 5) // Load Text To VRAM Lo Bytes
 
