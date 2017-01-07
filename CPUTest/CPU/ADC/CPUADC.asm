@@ -33,38 +33,33 @@ macro PrintValue(SRC, DEST, SIZE) { // Print HEX Characters To VRAM
 
   {#}LoopHEX:
     dex // X--
+    ldy.w #0001 // Y = 1 (Char Count)
 
     lda.w {SRC},x // A = Result Data
     lsr // A >>= 4
     lsr
     lsr
     lsr // A = Result Hi Nibble
-    cmp.b #10 // Compare Hi Nibble To 9
-    clc // Clear Carry Flag
-    bpl {#}HexHiLetter
-    adc.b #$30 // Add Hi Nibble To ASCII Numbers
-    sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
-    bra {#}HexHiEnd
-    {#}HexHiLetter:
-    adc.b #$37 // Add Hi Nibble To ASCII Letters
-    sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
-    {#}HexHiEnd:
+
+    {#}LoopChar:
+      cmp.b #10 // Compare Hi Nibble To 9
+      clc // Clear Carry Flag
+      bpl {#}HexLetter
+      adc.b #$30 // Add Hi Nibble To ASCII Numbers
+      sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
+      bra {#}HexEnd
+      {#}HexLetter:
+      adc.b #$37 // Add Hi Nibble To ASCII Letters
+      sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
+      {#}HexEnd:
   
-    lda.w {SRC},x // A = Result Data
-    and.b #$F // A = Result Lo Nibble
-    cmp.b #10 // Compare Lo Nibble To 9
-    clc // Clear Carry Flag
-    bpl {#}HexLoLetter
-    adc.b #$30 // Add Lo Nibble To ASCII Numbers
-    sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
-    bra {#}HexLoEnd
-    {#}HexLoLetter:
-    adc.b #$37 // Add Lo Nibble To ASCII Letters
-    sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
-    {#}HexLoEnd:
+      lda.w {SRC},x // A = Result Data
+      and.b #$F // A = Result Lo Nibble
+      dey // Y--
+      bne {#}LoopChar // IF (Char Count != 0) Loop Char
 
     cpx.w #0 // Compare X To 0
-    bne {#}LoopHEX // IF (X != 0) Loop Hex Charcters
+    bne {#}LoopHEX // IF (X != 0) Loop Hex Characters
 }
 
 macro PrintPSR(SRC, DEST) { // Print Processor Status Flags To VRAM
@@ -73,51 +68,34 @@ macro PrintPSR(SRC, DEST) { // Print Processor Status Flags To VRAM
   stx.w REG_VMADDL   // $2116: VRAM Address
 
   lda.b #%10000000 // A = Negative Flag Bit
-  bit.b {SRC} // Test Processor Status Flag Data With Negative Flag Bit
-  bne {#}NegativeSet
-  lda.b #$30 // A = "0"
-  sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
-  bra {#}NegativeEnd
-  {#}NegativeSet:
-  lda.b #$31 // A = "1"
-  sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
-  {#}NegativeEnd:
+  jsr {#}PSRFlagTest // Test PSR Flag Data
 
   lda.b #%01000000 // A = Overflow Flag Bit
-  bit.b {SRC} // Test Processor Status Flag Data With Overflow Flag Bit
-  bne {#}OverflowSet
-  lda.b #$30 // A = "0"
-  sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
-  bra {#}OverflowEnd
-  {#}OverflowSet:
-  lda.b #$31 // A = "1"
-  sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
-  {#}OverflowEnd:
+  jsr {#}PSRFlagTest // Test PSR Flag Data
 
   lda.b #%00000010 // A = Zero Flag Bit
-  bit.b {SRC} // Test Processor Status Flag Data With Zero Flag Bit
-  bne {#}ZeroSet
-  lda.b #$30 // A = "0"
-  sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
-  bra {#}ZeroEnd
-  {#}ZeroSet:
-  lda.b #$31 // A = "1"
-  sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
-  {#}ZeroEnd:
+  jsr {#}PSRFlagTest // Test PSR Flag Data
 
   lda.b #%00000001 // A = Carry Flag Bit
-  bit.b {SRC} // Test Processor Status Flag Data With Carry Flag Bit
-  bne {#}CarrySet
-  lda.b #$30 // A = "0"
-  sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
-  bra {#}CarryEnd
-  {#}CarrySet:
-  lda.b #$31 // A = "1"
-  sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
-  {#}CarryEnd:
+  jsr {#}PSRFlagTest // Test PSR Flag Data
+
+  bra {#}PSREnd
+
+  {#}PSRFlagTest:
+    bit.b {SRC} // Test Processor Status Flag Data Bit
+    bne {#}PSRFlagSet
+    lda.b #$30 // A = "0"
+    sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
+    rts // Return From Subroutine
+    {#}PSRFlagSet:
+    lda.b #$31 // A = "1"
+    sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
+    rts // Return From Subroutine
+
+  {#}PSREnd:
 }
 
-seek($8000); fill $10000 // Fill Upto $FFFF (Bank 1) With Zero Bytes
+seek($8000); fill $8000 // Fill Upto $7FFF (Bank 0) With Zero Bytes
 include "LIB/SNES.INC"        // Include SNES Definitions
 include "LIB/SNES_HEADER.ASM" // Include Header & Vector Table
 include "LIB/SNES_GFX.INC"    // Include Graphics Macros
@@ -4777,108 +4755,6 @@ seek($8000); Start:
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
-
-  jml Bank1 // Jump To Next Bank
-
-
-Title:
-  db "CPU Test ADC (Add With Carry):"
-
-PageBreak:
-  db "------------------------------"
-
-Key:
-  db "Modes | Result | NVZC | Test |"
-Binary8Bit:
-  db "BIN,8"
-Binary16Bit:
-  db "BIN,16"
-Decimal8Bit:
-  db "BCD,8"
-Decimal16Bit:
-  db "BCD,16"
-Fail:
-  db "FAIL"
-Pass:
-  db "PASS"
-
-ADCConst:
-  db "ADC #const   (Opcode: $69)"
-ADCAddr:
-  db "ADC addr     (Opcode: $6D)"
-ADCLong:
-  db "ADC long     (Opcode: $6F)"
-ADCDP:
-  db "ADC dp       (Opcode: $65)"
-ADCDPIndirect:
-  db "ADC (dp)     (Opcode: $72)"
-ADCDPIndirectLong:
-  db "ADC [dp]     (Opcode: $67)"
-ADCAddrX:
-  db "ADC addr,X   (Opcode: $7D)"
-ADCLongX:
-  db "ADC long,X   (Opcode: $7F)"
-ADCAddrY:
-  db "ADC addr,Y   (Opcode: $79)"
-ADCDPX:
-  db "ADC dp,X     (Opcode: $75)"
-ADCDPIndirectX:
-  db "ADC (dp,X)   (Opcode: $61)"
-ADCDPIndirectY:
-  db "ADC (dp),Y   (Opcode: $71)"
-ADCDPIndirectLongY:
-  db "ADC [dp],Y   (Opcode: $77)"
-ADCSRS:
-  db "ADC sr,S     (Opcode: $63)"
-ADCSRSY:
-  db "ADC (sr,S),Y (Opcode: $73)"
-
-ADCResultCheckA:
-  db $00
-PSRResultCheckA:
-  db $27
-
-ADCResultCheckB:
-  db $FF
-PSRResultCheckB:
-  db $E4
-
-ADCResultCheckC:
-  dw $0000
-PSRResultCheckC:
-  db $27
-
-ADCResultCheckD:
-  dw $FFFF
-PSRResultCheckD:
-  db $E4
-
-ADCResultCheckE:
-  db $00
-PSRResultCheckE:
-  db $67
-
-ADCResultCheckF:
-  db $99
-PSRResultCheckF:
-  db $E4
-
-ADCResultCheckG:
-  dw $0000
-PSRResultCheckG:
-  db $67
-
-ADCResultCheckH:
-  dw $9999
-PSRResultCheckH:
-  db $E4
-
-
-// BANK 1
-seek($18000)
-
-Bank1:
-  /////////////////////////////////////////////////////////////////
   ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
   WaitNMI() // Wait For VSync
@@ -5224,6 +5100,98 @@ Bank1:
 
 Loop:
   jmp Loop
+
+Title:
+  db "CPU Test ADC (Add With Carry):"
+
+PageBreak:
+  db "------------------------------"
+
+Key:
+  db "Modes | Result | NVZC | Test |"
+Binary8Bit:
+  db "BIN,8"
+Binary16Bit:
+  db "BIN,16"
+Decimal8Bit:
+  db "BCD,8"
+Decimal16Bit:
+  db "BCD,16"
+Fail:
+  db "FAIL"
+Pass:
+  db "PASS"
+
+ADCConst:
+  db "ADC #const   (Opcode: $69)"
+ADCAddr:
+  db "ADC addr     (Opcode: $6D)"
+ADCLong:
+  db "ADC long     (Opcode: $6F)"
+ADCDP:
+  db "ADC dp       (Opcode: $65)"
+ADCDPIndirect:
+  db "ADC (dp)     (Opcode: $72)"
+ADCDPIndirectLong:
+  db "ADC [dp]     (Opcode: $67)"
+ADCAddrX:
+  db "ADC addr,X   (Opcode: $7D)"
+ADCLongX:
+  db "ADC long,X   (Opcode: $7F)"
+ADCAddrY:
+  db "ADC addr,Y   (Opcode: $79)"
+ADCDPX:
+  db "ADC dp,X     (Opcode: $75)"
+ADCDPIndirectX:
+  db "ADC (dp,X)   (Opcode: $61)"
+ADCDPIndirectY:
+  db "ADC (dp),Y   (Opcode: $71)"
+ADCDPIndirectLongY:
+  db "ADC [dp],Y   (Opcode: $77)"
+ADCSRS:
+  db "ADC sr,S     (Opcode: $63)"
+ADCSRSY:
+  db "ADC (sr,S),Y (Opcode: $73)"
+
+ADCResultCheckA:
+  db $00
+PSRResultCheckA:
+  db $27
+
+ADCResultCheckB:
+  db $FF
+PSRResultCheckB:
+  db $E4
+
+ADCResultCheckC:
+  dw $0000
+PSRResultCheckC:
+  db $27
+
+ADCResultCheckD:
+  dw $FFFF
+PSRResultCheckD:
+  db $E4
+
+ADCResultCheckE:
+  db $00
+PSRResultCheckE:
+  db $67
+
+ADCResultCheckF:
+  db $99
+PSRResultCheckF:
+  db $E4
+
+ADCResultCheckG:
+  dw $0000
+PSRResultCheckG:
+  db $67
+
+ADCResultCheckH:
+  dw $9999
+PSRResultCheckH:
+  db $E4
 
 BGCHR:
   include "Font8x8.asm" // Include BG 1BPP 8x8 Tile Font Character Data (1016 Bytes)
