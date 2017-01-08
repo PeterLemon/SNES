@@ -453,6 +453,8 @@ seek($8000); Start:
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  WaitNMI() // Wait For VSync
+
   ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
   WaitNMI() // Wait For VSync
@@ -773,6 +775,8 @@ seek($8000); Start:
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  WaitNMI() // Wait For VSync
+
   ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
   WaitNMI() // Wait For VSync
@@ -1093,6 +1097,8 @@ seek($8000); Start:
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  WaitNMI() // Wait For VSync
+
   ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
   WaitNMI() // Wait For VSync
@@ -1413,6 +1419,8 @@ seek($8000); Start:
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  WaitNMI() // Wait For VSync
+
   ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
   WaitNMI() // Wait For VSync
@@ -1751,6 +1759,8 @@ seek($8000); Start:
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  WaitNMI() // Wait For VSync
+
   ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
   WaitNMI() // Wait For VSync
@@ -2089,6 +2099,8 @@ seek($8000); Start:
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  WaitNMI() // Wait For VSync
+
   ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
   WaitNMI() // Wait For VSync
@@ -2417,6 +2429,8 @@ seek($8000); Start:
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  WaitNMI() // Wait For VSync
+
   ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
   WaitNMI() // Wait For VSync
@@ -2745,6 +2759,8 @@ seek($8000); Start:
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  WaitNMI() // Wait For VSync
+
   ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
   WaitNMI() // Wait For VSync
@@ -3073,6 +3089,8 @@ seek($8000); Start:
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  WaitNMI() // Wait For VSync
+
   ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
   WaitNMI() // Wait For VSync
@@ -3403,6 +3421,8 @@ seek($8000); Start:
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  WaitNMI() // Wait For VSync
+
   ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
   WaitNMI() // Wait For VSync
@@ -3749,6 +3769,8 @@ seek($8000); Start:
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  WaitNMI() // Wait For VSync
+
   ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
   WaitNMI() // Wait For VSync
@@ -4093,6 +4115,8 @@ seek($8000); Start:
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  WaitNMI() // Wait For VSync
+
   ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
   WaitNMI() // Wait For VSync
@@ -4437,6 +4461,8 @@ seek($8000); Start:
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  WaitNMI() // Wait For VSync
+
   ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
   WaitNMI() // Wait For VSync
@@ -4757,6 +4783,8 @@ seek($8000); Start:
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  WaitNMI() // Wait For VSync
+
   ClearVRAM(BGCLEAR, $FA00, $100, 0) // Clear VRAM Map To Fixed Tile Word
 
   WaitNMI() // Wait For VSync
