@@ -1,4 +1,4 @@
-// SNES 65816 CPU Test SBC (Add With Carry) demo by krom (Peter Lemon):
+// SNES 65816 CPU Test SBC (Subtract With Borrow) demo by krom (Peter Lemon):
 arch snes.cpu
 output "CPUSBC.sfc", create
 
