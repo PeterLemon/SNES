@@ -1,4 +1,4 @@
-// SNES 65816 CPU Test ORA (Or With Memory) demo by krom (Peter Lemon):
+// SNES 65816 CPU Test ORA (OR With Memory) demo by krom (Peter Lemon):
 arch snes.cpu
 output "CPUORA.sfc", create
 
@@ -2697,7 +2697,7 @@ Loop:
   jmp Loop
 
 Title:
-  db "CPU Test ORA (Or With Memory):"
+  db "CPU Test ORA (OR With Memory):"
 
 PageBreak:
   db "------------------------------"

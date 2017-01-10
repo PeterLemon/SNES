@@ -1,4 +1,4 @@
-// SNES 65816 CPU Test AND (And With Memory) demo by krom (Peter Lemon):
+// SNES 65816 CPU Test AND (AND With Memory) demo by krom (Peter Lemon):
 arch snes.cpu
 output "CPUAND.sfc", create
 
@@ -2697,7 +2697,7 @@ Loop:
   jmp Loop
 
 Title:
-  db "CPU Test AND (And With Memory):"
+  db "CPU Test AND (AND With Memory):"
 
 PageBreak:
   db "------------------------------"
