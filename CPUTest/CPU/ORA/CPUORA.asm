@@ -2708,10 +2708,6 @@ Binary8Bit:
   db "BIN,8"
 Binary16Bit:
   db "BIN,16"
-Decimal8Bit:
-  db "BCD,8"
-Decimal16Bit:
-  db "BCD,16"
 Fail:
   db "FAIL"
 Pass:
