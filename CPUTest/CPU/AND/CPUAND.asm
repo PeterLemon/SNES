@@ -1794,7 +1794,7 @@ seek($8000); Start:
   sta.b AbsoluteData // Store Absolute Data
   ldx.w #0 // X = 0
   lda.w #$FFFF // A = $FFFF
-  and.b AbsoluteData,x // A += $FFFF
+  and.b AbsoluteData,x // A &= $FFFF
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
