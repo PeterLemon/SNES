@@ -1,4 +1,4 @@
-// SNES 65816 CPU Test Dec (Decrement) demo by krom (Peter Lemon):
+// SNES 65816 CPU Test DEC (Decrement) demo by krom (Peter Lemon):
 arch snes.cpu
 output "CPUDEC.sfc", create
 
