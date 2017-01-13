@@ -254,7 +254,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckC
   beq Pass3
   Fail3:
@@ -291,7 +291,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckD
   beq Pass4
   Fail4:
@@ -417,7 +417,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckC
   beq Pass7
   Fail7:
@@ -456,7 +456,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckD
   beq Pass8
   Fail8:
@@ -582,7 +582,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckC
   beq Pass11
   Fail11:
@@ -621,7 +621,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckD
   beq Pass12
   Fail12:
@@ -747,7 +747,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckC
   beq Pass15
   Fail15:
@@ -786,7 +786,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckD
   beq Pass16
   Fail16:
@@ -918,7 +918,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckC
   beq Pass19
   Fail19:
@@ -959,7 +959,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckD
   beq Pass20
   Fail20:
@@ -1091,7 +1091,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckC
   beq Pass23
   Fail23:
@@ -1132,7 +1132,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckD
   beq Pass24
   Fail24:
@@ -1261,7 +1261,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckC
   beq Pass27
   Fail27:
@@ -1301,7 +1301,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckD
   beq Pass28
   Fail28:
@@ -1430,7 +1430,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckC
   beq Pass31
   Fail31:
@@ -1470,7 +1470,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckD
   beq Pass32
   Fail32:
@@ -1599,7 +1599,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckC
   beq Pass35
   Fail35:
@@ -1639,7 +1639,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckD
   beq Pass36
   Fail36:
@@ -1768,7 +1768,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckC
   beq Pass39
   Fail39:
@@ -1808,7 +1808,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckD
   beq Pass40
   Fail40:
@@ -1943,7 +1943,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckC
   beq Pass43
   Fail43:
@@ -1985,7 +1985,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckD
   beq Pass44
   Fail44:
@@ -2120,7 +2120,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckC
   beq Pass47
   Fail47:
@@ -2162,7 +2162,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckD
   beq Pass48
   Fail48:
@@ -2297,7 +2297,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckC
   beq Pass51
   Fail51:
@@ -2339,7 +2339,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckD
   beq Pass52
   Fail52:
@@ -2465,7 +2465,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckC
   beq Pass55
   Fail55:
@@ -2504,7 +2504,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckD
   beq Pass56
   Fail56:
@@ -2639,7 +2639,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAA4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckC
   beq Pass59
   Fail59:
@@ -2681,7 +2681,7 @@ seek($8000); Start:
   PrintPSR(PSRFlagData, $FAE4) // Print Processor Status Flag Data
 
   // Check Result & Processor Status Flag Data
-  ldx.b ResultData // A = Result Data
+  ldx.b ResultData // X = Result Data
   cpx.w EORResultCheckD
   beq Pass60
   Fail60:
