@@ -5226,6 +5226,6 @@ PSRResultCheckH:
 BGCHR:
   include "Font8x8.asm" // Include BG 1BPP 8x8 Tile Font Character Data (1016 Bytes)
 BGPAL:
-  dw $7800, $7FFF // Black / White Palette (4 Bytes)
+  dw $7800, $7FFF // Blue / White Palette (4 Bytes)
 BGCLEAR:
   dw $0020 // BG Clear Character Space " " Fixed Word
