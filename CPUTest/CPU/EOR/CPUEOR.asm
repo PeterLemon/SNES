@@ -244,8 +244,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -281,8 +281,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -407,8 +407,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -446,8 +446,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -572,8 +572,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -611,8 +611,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -737,8 +737,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -776,8 +776,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -908,8 +908,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -949,8 +949,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -1081,8 +1081,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -1122,8 +1122,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -1251,8 +1251,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -1291,8 +1291,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -1420,8 +1420,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -1460,8 +1460,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -1589,8 +1589,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -1629,8 +1629,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -1758,8 +1758,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -1798,8 +1798,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -1933,8 +1933,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -1975,8 +1975,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -2110,8 +2110,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -2152,8 +2152,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -2287,8 +2287,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -2329,8 +2329,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -2455,8 +2455,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -2494,8 +2494,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -2629,8 +2629,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -2671,8 +2671,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -2757,12 +2757,12 @@ PSRResultCheckB:
 EORResultCheckC:
   dw $0000
 PSRResultCheckC:
-  db $26
+  db $06
 
 EORResultCheckD:
   dw $FFFF
 PSRResultCheckD:
-  db $A4
+  db $84
 
 BGCHR:
   include "Font8x8.asm" // Include BG 1BPP 8x8 Tile Font Character Data (1016 Bytes)
