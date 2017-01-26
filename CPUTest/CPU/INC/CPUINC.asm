@@ -244,8 +244,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -281,8 +281,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sta.b ResultData // Store Result To Memory
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -401,8 +401,8 @@ seek($8000); Start:
   inc.w AbsoluteData // Memory++
 
   // Store Processor Status Flag Data
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -438,8 +438,8 @@ seek($8000); Start:
   inc.w AbsoluteData // Memory++
 
   // Store Processor Status Flag Data
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -558,8 +558,8 @@ seek($8000); Start:
   inc.b AbsoluteData // Memory++
 
   // Store Processor Status Flag Data
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -595,8 +595,8 @@ seek($8000); Start:
   inc.b AbsoluteData // Memory++
 
   // Store Processor Status Flag Data
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -718,8 +718,8 @@ seek($8000); Start:
   inc.w AbsoluteData,x // Memory++
 
   // Store Processor Status Flag Data
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -756,8 +756,8 @@ seek($8000); Start:
   inc.w AbsoluteData,x // Memory++
 
   // Store Processor Status Flag Data
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -879,8 +879,8 @@ seek($8000); Start:
   inc.b AbsoluteData,x // Memory++
 
   // Store Processor Status Flag Data
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -917,8 +917,8 @@ seek($8000); Start:
   inc.b AbsoluteData,x // Memory++
 
   // Store Processor Status Flag Data
-  sep #$20 // Set 8-Bit Accumulator
   php // Push Processor Status Register To Stack
+  sep #$20 // Set 8-Bit Accumulator
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -965,8 +965,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   stx.b ResultData // Store Result To Memory
-  rep #$10 // Set 16-Bit X/Y
   php // Push Processor Status Register To Stack
+  rep #$10 // Set 16-Bit X/Y
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -976,14 +976,14 @@ seek($8000); Start:
 
   // Check Result & Processor Status Flag Data
   lda.b ResultData // A = Result Data
-  cmp.w INCResultCheckA
+  cmp.w INCResultCheckE
   beq Pass21
   Fail21:
     PrintText(Fail, $FA32, 4) // Load Text To VRAM Lo Bytes
     bra Fail21
   Pass21:
     lda.b PSRFlagData // A = Processor Status Flag Data
-    cmp.w PSRResultCheckA
+    cmp.w PSRResultCheckE
     bne Fail21
     PrintText(Pass, $FA32, 4) // Load Text To VRAM Lo Bytes
 
@@ -1002,8 +1002,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   stx.b ResultData // Store Result To Memory
-  rep #$10 // Set 16-Bit X/Y
   php // Push Processor Status Register To Stack
+  rep #$10 // Set 16-Bit X/Y
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -1013,14 +1013,14 @@ seek($8000); Start:
 
   // Check Result & Processor Status Flag Data
   lda.b ResultData // A = Result Data
-  cmp.w INCResultCheckB
+  cmp.w INCResultCheckF
   beq Pass22
   Fail22:
     PrintText(Fail, $FA72, 4) // Load Text To VRAM Lo Bytes
     bra Fail22
   Pass22:
     lda.b PSRFlagData // A = Processor Status Flag Data
-    cmp.w PSRResultCheckB
+    cmp.w PSRResultCheckF
     bne Fail22
     PrintText(Pass, $FA72, 4) // Load Text To VRAM Lo Bytes
 
@@ -1049,14 +1049,14 @@ seek($8000); Start:
 
   // Check Result & Processor Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w INCResultCheckC
+  cpx.w INCResultCheckG
   beq Pass23
   Fail23:
     PrintText(Fail, $FAB2, 4) // Load Text To VRAM Lo Bytes
     bra Fail23
   Pass23:
     lda.b PSRFlagData // A = Processor Status Flag Data
-    cmp.w PSRResultCheckC
+    cmp.w PSRResultCheckG
     bne Fail23
     PrintText(Pass, $FAB2, 4) // Load Text To VRAM Lo Bytes
 
@@ -1085,14 +1085,14 @@ seek($8000); Start:
 
   // Check Result & Processor Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w INCResultCheckD
+  cpx.w INCResultCheckH
   beq Pass24
   Fail24:
     PrintText(Fail, $FAF2, 4) // Load Text To VRAM Lo Bytes
     bra Fail24
   Pass24:
     lda.b PSRFlagData // A = Processor Status Flag Data
-    cmp.w PSRResultCheckD
+    cmp.w PSRResultCheckH
     bne Fail24
     PrintText(Pass, $FAF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -1122,8 +1122,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sty.b ResultData // Store Result To Memory
-  rep #$10 // Set 16-Bit X/Y
   php // Push Processor Status Register To Stack
+  rep #$10 // Set 16-Bit X/Y
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -1133,14 +1133,14 @@ seek($8000); Start:
 
   // Check Result & Processor Status Flag Data
   lda.b ResultData // A = Result Data
-  cmp.w INCResultCheckA
+  cmp.w INCResultCheckE
   beq Pass25
   Fail25:
     PrintText(Fail, $FA32, 4) // Load Text To VRAM Lo Bytes
     bra Fail25
   Pass25:
     lda.b PSRFlagData // A = Processor Status Flag Data
-    cmp.w PSRResultCheckA
+    cmp.w PSRResultCheckE
     bne Fail25
     PrintText(Pass, $FA32, 4) // Load Text To VRAM Lo Bytes
 
@@ -1159,8 +1159,8 @@ seek($8000); Start:
 
   // Store Result & Processor Status Flag Data
   sty.b ResultData // Store Result To Memory
-  rep #$10 // Set 16-Bit X/Y
   php // Push Processor Status Register To Stack
+  rep #$10 // Set 16-Bit X/Y
   pla // Pull Accumulator Register From Stack
   sta.b PSRFlagData // Store Processor Status Flag Data To Memory
 
@@ -1170,14 +1170,14 @@ seek($8000); Start:
 
   // Check Result & Processor Status Flag Data
   lda.b ResultData // A = Result Data
-  cmp.w INCResultCheckB
+  cmp.w INCResultCheckF
   beq Pass26
   Fail26:
     PrintText(Fail, $FA72, 4) // Load Text To VRAM Lo Bytes
     bra Fail26
   Pass26:
     lda.b PSRFlagData // A = Processor Status Flag Data
-    cmp.w PSRResultCheckB
+    cmp.w PSRResultCheckF
     bne Fail26
     PrintText(Pass, $FA72, 4) // Load Text To VRAM Lo Bytes
 
@@ -1206,14 +1206,14 @@ seek($8000); Start:
 
   // Check Result & Processor Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w INCResultCheckC
+  cpx.w INCResultCheckG
   beq Pass27
   Fail27:
     PrintText(Fail, $FAB2, 4) // Load Text To VRAM Lo Bytes
     bra Fail27
   Pass27:
     lda.b PSRFlagData // A = Processor Status Flag Data
-    cmp.w PSRResultCheckC
+    cmp.w PSRResultCheckG
     bne Fail27
     PrintText(Pass, $FAB2, 4) // Load Text To VRAM Lo Bytes
 
@@ -1242,14 +1242,14 @@ seek($8000); Start:
 
   // Check Result & Processor Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w INCResultCheckD
+  cpx.w INCResultCheckH
   beq Pass28
   Fail28:
     PrintText(Fail, $FAF2, 4) // Load Text To VRAM Lo Bytes
     bra Fail28
   Pass28:
     lda.b PSRFlagData // A = Processor Status Flag Data
-    cmp.w PSRResultCheckD
+    cmp.w PSRResultCheckH
     bne Fail28
     PrintText(Pass, $FAF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -1301,11 +1301,31 @@ PSRResultCheckB:
 INCResultCheckC:
   dw $0000
 PSRResultCheckC:
-  db $26
+  db $06
 
 INCResultCheckD:
   dw $FFFF
 PSRResultCheckD:
+  db $84
+
+INCResultCheckE:
+  db $00
+PSRResultCheckE:
+  db $36
+
+INCResultCheckF:
+  db $FF
+PSRResultCheckF:
+  db $B4
+
+INCResultCheckG:
+  dw $0000
+PSRResultCheckG:
+  db $26
+
+INCResultCheckH:
+  dw $FFFF
+PSRResultCheckH:
   db $A4
 
 BGCHR:
