@@ -108,8 +108,6 @@ PSRFlagData:
   db 0 // Processor Status Register Flag Data Byte
 AbsoluteData:
   dw 0 // Absolute Data Word
-IndirectData:
-  dl 0 // Indirect Data Long
 
 seek($8000); Start:
   SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
