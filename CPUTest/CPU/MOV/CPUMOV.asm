@@ -364,9 +364,9 @@ Pass:
   db "PASS"
 
 MOVMVN:
-  db "MVN Src,Dest (Opcode: $54)"
+  db "MVN src,dest (Opcode: $54)"
 MOVMVP:
-  db "MVP Src,Dest (Opcode: $44)"
+  db "MVP src,dest (Opcode: $44)"
 
 MOVResultCheckA:
   dw $FFFF
