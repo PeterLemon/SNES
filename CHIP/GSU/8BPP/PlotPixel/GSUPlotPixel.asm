@@ -16,15 +16,19 @@ include "LIB/SNES_GSU.INC"    // Include GSU Definitions
 seek($8000); Start:
   SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
 
-  // Copy CPU Code To RAM
+  // Copy CPU Code To WRAM
   rep #$20 // Set 16-Bit Accumulator
   lda.w #CPURAMEnd-CPURAM // A = Length
   ldx.w #CPURAM // X = Source
-  ldy.w #WRAM // Y = Destination
-  mvn $00=$00 // Block Move Bytes
+  ldy.w #CPURAM // Y = Destination
+  mvn $7E=$00 // Block Move Bytes To WRAM + CPURAM
   sep #$20 // Set 8-Bit Accumulator
 
-  jmp WRAM // Run CPU Code From RAM
+  lda.b #$00 // A = $00
+  pha // Push A To Stack
+  plb // Data Bank = $00
+
+  jml $7E0000+CPURAM // Run CPU Code From WRAM
 
 CPURAM: // CPU Program Code To Be Run From RAM
   // Load Black Background Palette Color (Clear Color)
