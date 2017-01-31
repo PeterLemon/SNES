@@ -16,28 +16,29 @@ include "LIB/SNES_GSU.INC"    // Include GSU Definitions
 seek($8000); Start:
   SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
 
-  // Load Black Background Palette Color
+  // Copy CPU Code To RAM
+  rep #$20 // Set 16-Bit Accumulator
+  lda.w #CPURAMEnd-CPURAM // A = Length
+  ldx.w #CPURAM // X = Source
+  ldy.w #WRAM // Y = Destination
+  mvn $00=$00 // Block Move Bytes
+  sep #$20 // Set 8-Bit Accumulator
+
+  jmp WRAM // Run CPU Code From RAM
+
+CPURAM: // CPU Program Code To Be Run From RAM
+  // Load Black Background Palette Color (Clear Color)
   stz.w REG_CGADD  // $2121: CGRAM Address
-//  stz.w REG_CGDATA // $2122: CGRAM Data Write Lo Byte
-//  stz.w REG_CGDATA // $2122: CGRAM Data Write Hi Byte
-  lda.b #%11100000 // Load Green Colour Lo Byte
+  stz.w REG_CGDATA // $2122: CGRAM Data Write Lo Byte
+  stz.w REG_CGDATA // $2122: CGRAM Data Write Hi Byte
+
+  // Load White Palette Color
+  lda.b #%11111111 // Load White Colour Lo Byte
   sta.w REG_CGDATA // $2122: CGRAM Data Write Lo Byte
-  lda.b #%00000011 // Load Green Colour Hi Byte
+  lda.b #%01111111 // Load White Colour Hi Byte
   sta.w REG_CGDATA // $2122: CGRAM Data Write Hi Byte
 
-  // Load Green Background Palette Color
-  lda.b #%11100000 // Load Green Colour Lo Byte
-  sta.w REG_CGDATA // $2122: CGRAM Data Write Lo Byte
-  lda.b #%00000011 // Load Green Colour Hi Byte
-  sta.w REG_CGDATA // $2122: CGRAM Data Write Hi Byte
-
-  // Load Red Background Palette Color
-  lda.b #%00011111 // Load Red Colour Lo Byte
-  sta.w REG_CGDATA // $2122: CGRAM Data Write Lo Byte
-  lda.b #%00000000 // Load Red Colour Hi Byte
-  sta.w REG_CGDATA // $2122: CGRAM Data Write Hi Byte
-
-  LoadVRAM(BGMap, $F800, $600, 0) // Load Background Tile Map To VRAM
+  LoadVRAM(BGMap, $F800, $800, 0) // Load Background Tile Map To VRAM
 
   // Setup Video
   lda.b #%00001011 // DCBAPMMM: M = Mode, P = Priority, ABCD = BG1,2,3,4 Tile Size
@@ -48,9 +49,6 @@ seek($8000); Start:
   sta.w REG_BG1SC   // $2107: BG1 32x32, BG1 Map Address = $3F (VRAM Address / $400)
   lda.b #%00000000  // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
   sta.w REG_BG12NBA // $210B: BG1 Tile Address = $0 (VRAM Address / $1000)
-
-  lda.b #%00000001 // Enable BG1
-  sta.w REG_TM // $212C: BG1 To Main Screen Designation
 
   stz.w REG_BG1HOFS // Store Zero To BG1 Horizontal Scroll Pos Low Byte
   stz.w REG_BG1HOFS // Store Zero To BG1 Horizontal Scroll Pos High Byte
@@ -76,16 +74,19 @@ seek($8000); Start:
   stz.w GSU_ROMBR // Set Game PAK RAM Bank ($3036)
   stz.w GSU_RAMBR // Set Game PAK RAM Bank ($303C)
 
-  ldx.w #GSUROM // Program Address
-  stx.w GSU_R15 // Sets Program Counter ($301E)
-
   lda.b #(GSU_RON|GSU_RAN|GSU_SCMR_8BPP|GSU_SCMR_H192) // Screen Size Mode
   sta.w GSU_SCMR // Sets RON, RAN Flag, Screen Size & Color Number ($303A)
+
+  ldx.w #GSUROM // Program Address
+  stx.w GSU_R15 // Sets Program Counter ($301E)
 
   LoopGSU:
     lda.w GSU_SFR // X = GSU Status/Flag Register
     bit.b #GSU_SFR_GSU // Check GSU Is Running
     beq LoopGSU
+
+  lda.b #%00000001 // Enable BG1
+  sta.w REG_TM // $212C: BG1 To Main Screen Designation
 
   // Setup DMA on Channel 0
   lda.b #$80       // Set Increment VRAM Address After Accessing Hi Byte
@@ -104,13 +105,11 @@ seek($8000); Start:
   ldx.w #$1800    // Set Size In Bytes To DMA Transfer
   stx.w REG_DAS0L // $43X5: DMA Transfer Size/HDMA
 
-Loop:
-  ldy.w #$0000     // Set VRAM Destination
+Refresh:
+  ldy.w #$0000 // Set VRAM Destination
   sty.w REG_VMADDL // $2116: VRAM
   sty.w REG_A1T0L // $43X2: DMA Source
-
   ldy.w #8 // Y = 8
-
   LoopGSUSRAM:
     WaitNMI() // Wait For VSync
     stx.w REG_DAS0L // $43X5: DMA Transfer Size/HDMA
@@ -118,12 +117,12 @@ Loop:
     sta.w REG_MDMAEN // $420B: DMA Enable
     dey // Y--
     bne LoopGSUSRAM
-
-  jmp Loop
+  bra Refresh
+CPURAMEnd:
 
 // GSU Code
 // BANK 0
 GSUROM:
   include "GSUPlotPixel_gsu.asm" // Include GSU ROM Data
 BGMap:
-  include "GSU256x192Map.asm" // Include GSU 256x192 BG Map (1536 Bytes)
+  include "GSU256x192Map.asm" // Include GSU 256x192 BG Map (2048 Bytes)
