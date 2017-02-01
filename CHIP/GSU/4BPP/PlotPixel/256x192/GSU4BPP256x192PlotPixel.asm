@@ -57,7 +57,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Setup BG2 16 Color Background
   lda.b #%11111100  // AAAAAASS: S = BG Map Size, A = BG Map Address
-  sta.w REG_BG2SC   // $2107: BG2 32x32, BG2 Map Address = $3F (VRAM Address / $400)
+  sta.w REG_BG2SC   // $2108: BG2 32x32, BG2 Map Address = $3F (VRAM Address / $400)
   lda.b #%00000000  // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
   sta.w REG_BG12NBA // $210B: BG2 Tile Address = $0 (VRAM Address / $1000)
 
