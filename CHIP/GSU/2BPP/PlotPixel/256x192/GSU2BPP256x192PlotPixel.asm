@@ -95,19 +95,15 @@ CPURAM: // CPU Program Code To Be Run From RAM
   // Setup DMA on Channel 0
   lda.b #$80       // Set Increment VRAM Address After Accessing Hi Byte
   sta.w REG_VMAIN  // $2115: Video Port Control
-  ldx.w #$0000     // Set VRAM Destination
-  stx.w REG_VMADDL // $2116: VRAM
 
   lda.b #$01      // Set DMA Mode (Write Word, Increment Source)
-  sta.w REG_DMAP0 // $43X0: DMA Control
+  sta.w REG_DMAP0 // $4300: DMA Control
   lda.b #$18      // Set Destination Register ($2118: VRAM Write)
-  sta.w REG_BBAD0 // $43X1: DMA Destination
-  ldx.w #$0000    // Set Source Offset
-  stx.w REG_A1T0L // $43X2: DMA Source
+  sta.w REG_BBAD0 // $4301: DMA Destination
   lda.b #$70      // Set Source Bank
-  sta.w REG_A1B0  // $43X4: Source Bank
+  sta.w REG_A1B0  // $4304: Source Bank
   ldx.w #$1800    // Set Size In Bytes To DMA Transfer
-  stx.w REG_DAS0L // $43X5: DMA Transfer Size/HDMA
+  stx.w REG_DAS0L // $4305: DMA Transfer Size/HDMA
 
 Refresh:
   ldy.w #$0000 // Set VRAM Destination
