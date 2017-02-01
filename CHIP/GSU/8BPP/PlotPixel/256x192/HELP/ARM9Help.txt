@@ -1,0 +1,59 @@
+[18:41] <@krom> ARM9: wow thanks for doing that =D
+[18:42] <@krom> ARM9: I am a bit stuck on my GSU demo, if I add a nop at the top of my code, it goes a bit crazy!
+[18:42] <@krom> so I do not know what is going on lol
+[18:43] <@krom> I check the status register, to see if the GSU has stopped before doing the SRAM -> VRAM copy...
+[18:44] <@krom> I would have thought adding a nop to the start of the gsu code, should not make it crash, in bsnes-plus
+[18:45] <@marshallh> https://twitter.com/TrumpDraws/status/826314938872246273
+[18:46] <@krom> marshallh: lol, that is done pretty well!
+[18:46] <@jero32> lul
+[18:47] <@ARM9> krom code me
+[18:47] <@krom> o.k I'll add the crashing demo to my github gimme a mo...
+[18:50] <@ARM9> I'd also like to discuss the map format if you don't mind
+[18:50] <@ARM9> I never did make a proper 8bpp map and I've forgotten most of the details at this point
+[18:52] <@ARM9> my map generating code is just an uncommented clusterfuck of magic numbers, if I recall it plots columns as rows
+[18:55] <@krom> ARM9: the crashing demo is here, complete with 256x192 working 8BPP map: https://github.com/PeterLemon/SNES/tree/master/CHIP/GSU/PlotPixel
+[18:55] <@krom> if you remove this NOP line here, the demo works perfectly: https://github.com/PeterLemon/SNES/blob/master/CHIP/GSU/PlotPixel/GSUPlotPixel_gsu.asm#L5
+[18:56] <@ARM9> I'll see what I can find
+[18:57] <@krom> ARM9: thanks, my demo is really simple & minimal =D
+[18:58] <@krom> I still need to center the screen & work out a fill for clear color
+[18:58] <@ARM9> if you want to cheat you know where to look
+[18:59] <@krom> yep I saw you had done a fill routine lol, I might just use yours!
+[18:59] <@ARM9> note that it'll only clear colors 0 and 15 in 4bpp mode, due to bpp format
+[19:00] <@ARM9> and 0 and 3 in 2bpp I guess
+[19:00] <@krom> ah o.k =D
+[19:00] <@ARM9> if you pass it anything but $00 or $ff you get stripes or such
+[19:00] <@krom> yep I need to setup a 4BPP demo too
+[19:00] <@ARM9> how did you generate your map? is it for 8bpp?
+[19:01] <@krom> I hand wrote out the MAP, the map will work for 4bpp & 8BPP, my demo is using 8BPP
+[19:01] <@ARM9> I was thinking about writing a macro for bass that you can just pass a width and height and it'll spit out a map in the binary
+[19:01] <@ARM9> ah
+[19:01] <@krom> I can easily generate the maps, it's just culumn order starting at zero
+[19:02] <@ARM9> yeahy
+[19:02] <@krom> I only hand wrote it out, to make it simple for people to see
+[19:02] <@ARM9> my map generator makes a centered 224x192 screen for 4bpp only
+[19:02] <@marshallh> https://pbs.twimg.com/media/C3Dp086VcAEfvNW.jpg:orig
+[19:02] <@krom> I just used martins fullsnes doc, for the map
+[19:02] <@ARM9> right
+[19:02] <@ARM9> do you have a ctrl+f term I can use to find it quick?
+[19:03] <@krom> this is the doc I used for the map: http://problemkaputt.de/fullsnes.htm#snescartgsunbitmapioports
+[19:04] <@krom> it has the 4 types of MAP, 3 BG sizes, & object mode =D
+[19:06] <@krom> you can see how my map matches up with the 256x192 pixels portion of his doc
+[19:09] <@krom> bsnes-plus saves an .srm file out in my demo, you will need to delete it each time running my demo, otherwise it still looks bugged as I do not clear SRAM atm
+[19:11] <@ARM9> ah yes
+[19:13] <@krom> I have tested placing the pixel at differnt x/Y positions on screen, so it is stable, without that NOP at the start of the GSU code
+[19:14] <@ARM9> well I see one error right away
+[19:14] <@ARM9> you're starting the gsu before giving it access to the ROM bus
+[19:15] <@krom> oh, nice tip lol!
+[19:15] <@ARM9> line 79-80 should be the last thing you do when setting up the gsu as that will boot it up
+[19:15] <@ARM9> it starts running once r15 is written
+[19:15] <@krom> ah o.k thanks =D
+[19:18] <@ARM9> you also need to run the scpu from something not on the cart (rom/sram) so usually wram, but you could also technically run it from the internal cpu registers, the dma registers come to mind
+[19:18] <@ARM9> since you're giving the gsu exclusive access to rom, but the cpu is trying to execute from there
+[19:18] <@ARM9> so the scpu probably reads some garbage and crashes
+[19:19] <@krom> ah yep that makes sense, great tips =D
+[19:19] <@krom> I'll incorperate these things =D
+[19:20] <@ARM9> so you just need to make sure you're off the rom bus before writing GSU_R15 and it should be fine
+[19:20] <@krom> nice one, thanks for your help, that all makes sense =D
+[19:21] <@ARM9> actually no, you have to be off the rom bus before writing GSU_SCMR
+[19:21] <@ARM9> haven't done this in a couple years so things are sort of coming back to me as I type
+[19:22] <@krom> heh no probs, all good info =D

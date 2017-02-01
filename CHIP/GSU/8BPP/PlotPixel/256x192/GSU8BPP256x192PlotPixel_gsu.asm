@@ -1,4 +1,4 @@
-// SNES GSU Plot Pixel Demo (GSU Code) by krom (Peter Lemon):
+// SNES GSU 8BPP 256x192 Plot Pixel Demo (GSU Code) by krom (Peter Lemon):
 arch snes.gsu
 
 GSUStart:
@@ -17,7 +17,7 @@ GSUStart:
     inc r3 // Screen Base++ (Delay Slot)
 
   // Plot Pixel Color At X/Y Location
-  ibt r0, #1 // R0 = Color #1
+  ibt r0, #2 // R0 = Color #2
   color // Set Value In COLOR
   ibt r1, #123 // R1 = Plot X Position
   ibt r2, #89 // R2 = Plot Y Position
