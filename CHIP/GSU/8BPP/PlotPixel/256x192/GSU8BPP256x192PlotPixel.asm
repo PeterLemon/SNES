@@ -81,10 +81,6 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   stz.w GSU_SCBR // Set Screen Base ($3038)
   stz.w GSU_PBR // Set Program Code Bank ($3034)
-
-  lda.b #(GSU_RON|GSU_RAN|GSU_SCMR_8BPP|GSU_SCMR_H192) // Screen Size Mode
-  sta.w GSU_SCMR // Sets RON, RAN Flag, Screen Size & Color Number ($303A)
-
   stz.w GSU_ROMBR // Set Game PAK RAM Bank ($3036)
   stz.w GSU_RAMBR // Set Game PAK RAM Bank ($303C)
 
