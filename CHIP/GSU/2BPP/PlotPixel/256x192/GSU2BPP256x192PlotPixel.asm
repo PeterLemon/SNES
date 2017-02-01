@@ -38,17 +38,12 @@ CPURAM: // CPU Program Code To Be Run From RAM
   lda.b #%01111100 // Load Blue Colour Hi Byte
   sta.w REG_CGDATA // $2122: CGRAM Data Write Hi Byte
 
-  // Load Black Background Palette Color (Border Color)
-  stz.w REG_CGDATA // $2122: CGRAM Data Write Lo Byte
-  stz.w REG_CGDATA // $2122: CGRAM Data Write Hi Byte
-
   // Load White Palette Color (Plot Pixel Color)
   lda.b #%11111111 // Load White Colour Lo Byte
   sta.w REG_CGDATA // $2122: CGRAM Data Write Lo Byte
   lda.b #%01111111 // Load White Colour Hi Byte
   sta.w REG_CGDATA // $2122: CGRAM Data Write Hi Byte
 
-  LoadVRAM(BGBorderTile, $3000, $10, 0) // Load Background Border Tile To VRAM
   LoadVRAM(BGMap, $F800, $800, 0) // Load Background Tile Map To VRAM
 
   // Setup Video
@@ -135,6 +130,3 @@ GSUROM:
   include "GSU2BPP256x192PlotPixel_gsu.asm" // Include GSU ROM Data
 BGMap:
   include "GSU256x192Map.asm" // Include GSU 256x192 BG Map (2048 Bytes)
-BGBorderTile:
-  db $FF,$00,$FF,$00,$FF,$00,$FF,$00 // Include BG Border Tile (16 Bytes)
-  db $FF,$00,$FF,$00,$FF,$00,$FF,$00
