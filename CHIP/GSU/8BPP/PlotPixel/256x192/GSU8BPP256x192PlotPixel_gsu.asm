@@ -8,7 +8,7 @@ GSUStart:
   // Fill Screen With Clear Color
   sub r0 // R0 = 0 (Fill Value)
   iwt r3, #$0000 // R3 = Screen Base (SRAM Destination)
-  iwt r12, #256*192 // R12 = Loop Count
+  iwt r12, #(256*192)/2 // R12 = Loop Count
   move r13, r15 // R13 = Loop Address
   // Loop:
     stw (r3) // Store Fill Value Word To Screen Base

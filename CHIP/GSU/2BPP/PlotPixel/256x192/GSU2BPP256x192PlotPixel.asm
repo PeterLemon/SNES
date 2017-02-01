@@ -69,9 +69,6 @@ CPURAM: // CPU Program Code To Be Run From RAM
   lda.b #%00000001 // Enable BG1
   sta.w REG_TM // $212C: BG1 To Main Screen Designation
 
-  lda.b #$F // Turn On Screen, Maximum Brightness
-  sta.w REG_INIDISP // $2100: Screen Display
-
   // Setup GSU SNES Side
   lda.b #GSU_CLSR_21MHz // Clock Data
   sta.w GSU_CLSR // Set Operating Clock Frequency ($3039)
@@ -112,18 +109,31 @@ CPURAM: // CPU Program Code To Be Run From RAM
   ldx.w #$1800    // Set Size In Bytes To DMA Transfer
   stx.w REG_DAS0L // $43X5: DMA Transfer Size/HDMA
 
-  lda.b #%00000001 // Initiate DMA Transfer (Channel 0)
-
 Refresh:
   ldy.w #$0000 // Set VRAM Destination
   sty.w REG_VMADDL // $2116: VRAM
-  sty.w REG_A1T0L // $43X2: DMA Source
+  sty.w REG_A1T0L // $4302: DMA Source
   ldy.w #2 // Y = 2
   LoopGSUSRAM:
-    stx.w REG_DAS0L // $43X5: DMA Transfer Size/HDMA
-    WaitNMI() // Wait For VSync
+    stx.w REG_DAS0L // $4305: DMA Transfer Size/HDMA
+
+    WaitScanline:
+      // Start Vertical Counter Latch
+      lda.w REG_SLHV // A = PPU1 Latch H/V-Counter By Software ($2137)
+      lda.w REG_OPVCT // A = Vertical Counter Latch (Scanline Y) ($213D)
+      cmp.b #208 // Compare Scanline Y To 208
+      bne WaitScanline
+
+    lda.b #$80
+    sta.w REG_INIDISP // $80: Turn Off Screen, Zero Brightness ($2100)
+
+    lda.b #%00000001 // Initiate DMA Transfer (Channel 0)
     sta.w REG_MDMAEN // $420B: DMA Enable
+
+    lda.b #$0F
+    sta.w REG_INIDISP // $0F: Turn On Screen, Full Brightness ($2100)
     dey // Y--
+
     bne LoopGSUSRAM
   bra Refresh
 CPURAMEnd:
