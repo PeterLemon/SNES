@@ -19,8 +19,8 @@ GSUStart:
   // Plot Pixel Color At X/Y Location
   ibt r0, #2 // R0 = Color #2
   color // Set Value In COLOR
-  ibt r1, #123 // R1 = Plot X Position
-  ibt r2, #89 // R2 = Plot Y Position
+  ibt r1, #127 // R1 = Plot X Position
+  ibt r2, #95 // R2 = Plot Y Position
   plot // Plot Color
   rpix // Flush Pixel Cache
 

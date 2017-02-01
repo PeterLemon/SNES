@@ -102,14 +102,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   sta.w REG_BBAD0 // $4301: DMA Destination
   lda.b #$70      // Set Source Bank
   sta.w REG_A1B0  // $4304: Source Bank
-  ldx.w #$2000    // Set Size In Bytes To DMA Transfer
+  ldx.w #$3000    // Set Size In Bytes To DMA Transfer
   stx.w REG_DAS0L // $4305: DMA Transfer Size/HDMA
 
 Refresh:
   ldy.w #$0000 // Set VRAM Destination
   sty.w REG_VMADDL // $2116: VRAM
   sty.w REG_A1T0L // $4302: DMA Source
-  ldy.w #6 // Y = 6
+  ldy.w #4 // Y = 4
   LoopGSUSRAM:
     stx.w REG_DAS0L // $4305: DMA Transfer Size/HDMA
 
@@ -117,7 +117,7 @@ Refresh:
       // Start Vertical Counter Latch
       lda.w REG_SLHV // A = PPU1 Latch H/V-Counter By Software ($2137)
       lda.w REG_OPVCT // A = Vertical Counter Latch (Scanline Y) ($213D)
-      cmp.b #208 // Compare Scanline Y To 208
+      cmp.b #205 // Compare Scanline Y To 205
       bne WaitScanline
 
     lda.b #$80
