@@ -53,13 +53,13 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Setup Video
   lda.b #%00001011 // DCBAPMMM: M = Mode, P = Priority, ABCD = BG1,2,3,4 Tile Size
-  sta.w REG_BGMODE // $2105: BG Mode 3, Priority 1, BG1 8x8 Tiles
+  sta.w REG_BGMODE // $2105: BG Mode 3, Priority 1, BG2 8x8 Tiles
 
   // Setup BG2 16 Color Background
   lda.b #%11111100  // AAAAAASS: S = BG Map Size, A = BG Map Address
   sta.w REG_BG2SC   // $2107: BG2 32x32, BG2 Map Address = $3F (VRAM Address / $400)
   lda.b #%00000000  // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
-  sta.w REG_BG12NBA // $210B: BG1 Tile Address = $0 (VRAM Address / $1000)
+  sta.w REG_BG12NBA // $210B: BG2 Tile Address = $0 (VRAM Address / $1000)
 
   stz.w REG_BG2HOFS // Store Zero To BG2 Horizontal Scroll Pos Low Byte
   stz.w REG_BG2HOFS // Store Zero To BG2 Horizontal Scroll Pos High Byte
@@ -67,7 +67,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stz.w REG_BG2VOFS // Store Zero To BG2 Vertical Pos High Byte
 
   lda.b #%00000010 // Enable BG2
-  sta.w REG_TM // $212C: BG1 To Main Screen Designation
+  sta.w REG_TM // $212C: BG2 To Main Screen Designation
 
   lda.b #$F // Turn On Screen, Maximum Brightness
   sta.w REG_INIDISP // $2100: Screen Display
