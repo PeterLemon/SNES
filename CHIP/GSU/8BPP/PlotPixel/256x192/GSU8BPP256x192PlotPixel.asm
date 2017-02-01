@@ -112,15 +112,16 @@ CPURAM: // CPU Program Code To Be Run From RAM
   ldx.w #$1800    // Set Size In Bytes To DMA Transfer
   stx.w REG_DAS0L // $4305: DMA Transfer Size/HDMA
 
+  lda.b #%00000001 // Initiate DMA Transfer (Channel 0)
+
 Refresh:
   ldy.w #$0000 // Set VRAM Destination
   sty.w REG_VMADDL // $2116: VRAM
   sty.w REG_A1T0L // $4302: DMA Source
   ldy.w #8 // Y = 8
   LoopGSUSRAM:
-    WaitNMI() // Wait For VSync
     stx.w REG_DAS0L // $4305: DMA Transfer Size/HDMA
-    lda.b #%00000001 // Initiate DMA Transfer (Channel 0)
+    WaitNMI() // Wait For VSync
     sta.w REG_MDMAEN // $420B: DMA Enable
     dey // Y--
     bne LoopGSUSRAM

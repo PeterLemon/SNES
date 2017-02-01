@@ -102,25 +102,26 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w REG_VMADDL // $2116: VRAM
 
   lda.b #$01      // Set DMA Mode (Write Word, Increment Source)
-  sta.w REG_DMAP0 // $4300: DMA Control
+  sta.w REG_DMAP0 // $43X0: DMA Control
   lda.b #$18      // Set Destination Register ($2118: VRAM Write)
-  sta.w REG_BBAD0 // $4301: DMA Destination
+  sta.w REG_BBAD0 // $43X1: DMA Destination
   ldx.w #$0000    // Set Source Offset
-  stx.w REG_A1T0L // $4302: DMA Source
+  stx.w REG_A1T0L // $43X2: DMA Source
   lda.b #$70      // Set Source Bank
-  sta.w REG_A1B0  // $4304: Source Bank
+  sta.w REG_A1B0  // $43X4: Source Bank
   ldx.w #$1800    // Set Size In Bytes To DMA Transfer
-  stx.w REG_DAS0L // $4305: DMA Transfer Size/HDMA
+  stx.w REG_DAS0L // $43X5: DMA Transfer Size/HDMA
+
+  lda.b #%00000001 // Initiate DMA Transfer (Channel 0)
 
 Refresh:
   ldy.w #$0000 // Set VRAM Destination
   sty.w REG_VMADDL // $2116: VRAM
-  sty.w REG_A1T0L // $4302: DMA Source
+  sty.w REG_A1T0L // $43X2: DMA Source
   ldy.w #2 // Y = 2
   LoopGSUSRAM:
+    stx.w REG_DAS0L // $43X5: DMA Transfer Size/HDMA
     WaitNMI() // Wait For VSync
-    stx.w REG_DAS0L // $4305: DMA Transfer Size/HDMA
-    lda.b #%00000001 // Initiate DMA Transfer (Channel 0)
     sta.w REG_MDMAEN // $420B: DMA Enable
     dey // Y--
     bne LoopGSUSRAM
