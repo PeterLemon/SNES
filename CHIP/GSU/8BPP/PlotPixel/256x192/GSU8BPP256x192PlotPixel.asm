@@ -66,6 +66,9 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stz.w REG_BG1VOFS // Store Zero To BG1 Vertical Scroll Pos Low Byte
   stz.w REG_BG1VOFS // Store Zero To BG1 Vertical Pos High Byte
 
+  lda.b #%00000001 // Enable BG1
+  sta.w REG_TM // $212C: BG1 To Main Screen Designation
+
   lda.b #$F // Turn On Screen, Maximum Brightness
   sta.w REG_INIDISP // $2100: Screen Display
 
@@ -95,9 +98,6 @@ CPURAM: // CPU Program Code To Be Run From RAM
     lda.w GSU_SFR // X = GSU Status/Flag Register
     bit.b #GSU_SFR_GSU // Check GSU Is Running
     beq LoopGSU
-
-  lda.b #%00000001 // Enable BG1
-  sta.w REG_TM // $212C: BG1 To Main Screen Designation
 
   // Setup DMA on Channel 0
   lda.b #$80       // Set Increment VRAM Address After Accessing Hi Byte
