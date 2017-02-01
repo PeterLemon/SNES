@@ -129,7 +129,6 @@ Refresh:
     lda.b #$0F
     sta.w REG_INIDISP // $0F: Turn On Screen, Full Brightness ($2100)
     dey // Y--
-
     bne LoopGSUSRAM
   bra Refresh
 CPURAMEnd:
