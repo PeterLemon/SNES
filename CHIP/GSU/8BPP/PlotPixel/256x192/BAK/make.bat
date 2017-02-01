@@ -1,1 +1,0 @@
-bass GSU8BPP256x192PlotPixel.asm
