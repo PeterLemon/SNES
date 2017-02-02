@@ -111,7 +111,8 @@ CPURAM: // CPU Program Code To Be Run From RAM
   sta.w REG_BBAD0 // $4301: DMA0 Destination
   lda.b #$70      // Set Source Bank
   sta.w REG_A1B0  // $4304: Source Bank
-  ldx.w #$3000    // Set Size In Bytes To DMA Transfer
+
+  ldx.w #$3000 // Set Size In Bytes To DMA Transfer
 
 Refresh:
   ldy.w #$0000 // Set VRAM Destination

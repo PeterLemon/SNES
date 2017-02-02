@@ -1,6 +1,6 @@
-// SNES GSU 2BPP 256x192 Plot Pixel Demo (CPU Code) by krom (Peter Lemon):
+// SNES GSU 2BPP 256x160 Plot Pixel Demo (CPU Code) by krom (Peter Lemon):
 arch snes.cpu
-output "GSU2BPP256x192PlotPixel.sfc", create
+output "GSU2BPP256x160PlotPixel.sfc", create
 
 macro seek(variable offset) {
   origin ((offset & $7F0000) >> 1) | (offset & $7FFF)
@@ -76,7 +76,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stz.w GSU_ROMBR // Set Game PAK RAM Bank ($3036)
   stz.w GSU_RAMBR // Set Game PAK RAM Bank ($303C)
 
-  lda.b #(GSU_RON|GSU_RAN|GSU_SCMR_2BPP|GSU_SCMR_H192) // Screen Size Mode
+  lda.b #(GSU_RON|GSU_RAN|GSU_SCMR_2BPP|GSU_SCMR_H160) // Screen Size Mode
   sta.w GSU_SCMR // Sets RON, RAN Flag, Screen Size & Color Number ($303A)
 
   ldx.w #GSUROM // Program Address
@@ -112,22 +112,15 @@ CPURAM: // CPU Program Code To Be Run From RAM
   lda.b #$70      // Set Source Bank
   sta.w REG_A1B0  // $4304: Source Bank
 
-  ldx.w #$3000 // Set Size In Bytes To DMA Transfer
+  ldx.w #$2800 // Set Size In Bytes To DMA Transfer
+  lda.b #%00000011 // Initiate DMA Transfer (Channel 0 & 1)
 
 Refresh:
   ldy.w #$0000 // Set VRAM Destination
   sty.w REG_VMADDL // $2116: VRAM
-  sty.w REG_A1T0L // $4302: DMA Source
-  stx.w REG_DAS0L // $4305: DMA Transfer Size/HDMA
-
-  WaitScanline:
-    // Start Vertical Counter Latch
-    lda.w REG_SLHV // A = PPU1 Latch H/V-Counter By Software ($2137)
-    lda.w REG_OPVCT // A = Vertical Counter Latch (Scanline Y) ($213D)
-    cmp.b #205 // Compare Scanline Y To 205
-    bne WaitScanline
-
-  lda.b #%00000011 // Initiate DMA Transfer (Channel 0 & 1)
+  sty.w REG_A1T0L // $4302: DMA0 Source
+  stx.w REG_DAS0L // $4305: DMA0 Transfer Size/HDMA
+  WaitNMI()
   sta.w REG_MDMAEN // $420B: DMA Enable
   bra Refresh
 CPURAMEnd:
@@ -135,16 +128,15 @@ CPURAMEnd:
 // GSU Code
 // BANK 0
 GSUROM:
-  include "GSU2BPP256x192PlotPixel_gsu.asm" // Include GSU ROM Data
+  include "GSU2BPP256x160PlotPixel_gsu.asm" // Include GSU ROM Data
 BGMap:
-  include "GSU256x192Map.asm" // Include GSU 256x192 BG Map (2048 Bytes)
+  include "GSU256x160Map.asm" // Include GSU 256x160 BG Map (2048 Bytes)
 HDMATable:
-  db 19, %10000000 // Repeat 19 Scanlines, Turn Off Screen, Zero Brightness
-  db 29, %00001111 // Repeat 29 Scanlines, Turn On Screen, Full Brightness
+  db 32, %10000000 // Repeat 32 Scanlines, Turn Off Screen, Zero Brightness
   db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
   db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
   db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
   db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
-  db 28, %00001111 // Repeat 28 Scanlines, Turn On Screen, Full Brightness
+  db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
   db  1, %10000000 // Repeat  1 Scanline, Turn Off Screen, Zero Brightness
   db $00 // End Of HDMA
