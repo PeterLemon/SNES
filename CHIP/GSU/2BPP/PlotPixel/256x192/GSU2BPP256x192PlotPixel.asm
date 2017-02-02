@@ -87,18 +87,32 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bit.b #GSU_SFR_GSU // Check GSU Is Running
     beq LoopGSU
 
-  // Setup DMA on Channel 0
+  WaitNMI() // Wait For Vertical Blank Before Starting HDMA
+
+  // Screen Display HDMA Channel 1    
+  lda.b #%00000000   // HMDA: Write 1 Byte Each Scanline
+  sta.w REG_DMAP1    // $4310: DMA1 DMA/HDMA Parameters
+  lda.b #REG_INIDISP // $00: Start Screen Display ($2100)
+  sta.w REG_BBAD1    // $4311: DMA1 DMA/HDMA I/O-Bus Address (PPU-Bus AKA B-Bus)
+  ldx.w #HDMATable   // HMDA Table Address
+  stx.w REG_A1T1L    // $4312: DMA1 DMA/HDMA Table Start Address
+  lda.b #0           // HDMA Table Bank
+  sta.w REG_A1B1     // $4314: DMA1 DMA/HDMA Table Start Address (Bank)
+  lda.b #%00000010   // HDMA Channel Select (Channel 1)
+  sta.w REG_HDMAEN   // $420C: Select H-Blank DMA (H-DMA) Channels
+
+  // Setup DMA On Channel 0
   lda.b #$80       // Set Increment VRAM Address After Accessing Hi Byte
   sta.w REG_VMAIN  // $2115: Video Port Control
 
   lda.b #$01      // Set DMA Mode (Write Word, Increment Source)
-  sta.w REG_DMAP0 // $4300: DMA Control
+  sta.w REG_DMAP0 // $4300: DMA0 Control
   lda.b #$18      // Set Destination Register ($2118: VRAM Write)
-  sta.w REG_BBAD0 // $4301: DMA Destination
+  sta.w REG_BBAD0 // $4301: DMA0 Destination
   lda.b #$70      // Set Source Bank
   sta.w REG_A1B0  // $4304: Source Bank
   ldx.w #$3000    // Set Size In Bytes To DMA Transfer
-  stx.w REG_DAS0L // $4305: DMA Transfer Size/HDMA
+  stx.w REG_DAS0L // $4305: DMA0 Transfer Size/HDMA
 
 Refresh:
   ldy.w #$0000 // Set VRAM Destination
@@ -113,14 +127,8 @@ Refresh:
     cmp.b #205 // Compare Scanline Y To 205
     bne WaitScanline
 
-  lda.b #$80
-  sta.w REG_INIDISP // $80: Turn Off Screen, Zero Brightness ($2100)
-
-  lda.b #%00000001 // Initiate DMA Transfer (Channel 0)
+  lda.b #%00000011 // Initiate DMA Transfer (Channel 0 & 1)
   sta.w REG_MDMAEN // $420B: DMA Enable
-
-  lda.b #$0F
-  sta.w REG_INIDISP // $0F: Turn On Screen, Full Brightness ($2100)
   bra Refresh
 CPURAMEnd:
 
@@ -130,3 +138,13 @@ GSUROM:
   include "GSU2BPP256x192PlotPixel_gsu.asm" // Include GSU ROM Data
 BGMap:
   include "GSU256x192Map.asm" // Include GSU 256x192 BG Map (2048 Bytes)
+HDMATable:
+  db 19, %10000000 // Repeat 19 Scanlines, Turn Off Screen, Zero Brightness
+  db 29, %00001111 // Repeat 29 Scanlines, Turn On Screen, Full Brightness
+  db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
+  db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
+  db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
+  db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
+  db 28, %00001111 // Repeat 28 Scanlines, Turn On Screen, Full Brightness
+  db  1, %10000000 // Repeat  1 Scanline, Turn Off Screen, Zero Brightness
+  db $00 // End Of HDMA
