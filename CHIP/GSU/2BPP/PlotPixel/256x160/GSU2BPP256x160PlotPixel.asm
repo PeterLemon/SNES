@@ -132,7 +132,7 @@ GSUROM:
 BGMap:
   include "GSU256x160Map.asm" // Include GSU 256x160 BG Map (2048 Bytes)
 HDMATable:
-  db 32, %10000000 // Repeat 32 Scanlines, Turn Off Screen, Zero Brightness
+  db 31, %10000000 // Repeat 31 Scanlines, Turn Off Screen, Zero Brightness
   db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
   db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
   db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
