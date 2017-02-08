@@ -25,105 +25,60 @@ GSUStart:
   iwt r3, #255 // R3 = X1
   iwt r4, #159 // R4 = Y1
 
-  move r0, r3 // R0 = X1
-  sub r1 // R0 = DX (X1 - X0)
-  blt SXNeg
-  nop // Delay Slot
-  ibt r5, #1 // IF (X1 > X0), R5 (SX) =	1
+  with r5 ; sub r5 // R5 = 0
+  from r3 ; to r7 ; sub r1 // R7 = DX (X1 - X0)
   bpl SXPos
-  nop // Delay Slot
-  SXNeg:
-  ibt r5, #-1 // IF (X1 < X0), R5 (SX) = -1
-  move r7, r0 // R7 = DX
-  sub r0 // R0 = 0
-  sub r7 // R0 = ABS(DX)
+  inc r5 // IF (X1 > X0), R5 (SX) = 1 (Delay Slot)
+  dec r5 // IF (X1 < X0), R5 (SX) = -1
+  dec r5 // R5 = -1
+  with r7 ; not // R7 ~= R7
+  inc r7 // R7 = ABS(DX)
   SXPos:
-  move r7, r0 // R7 = DX
 
-  move r0, r4 // R0 = Y1
-  sub r2 // R0 = DY (Y1 - Y0)
-  blt SYNeg
-  nop // Delay Slot
-  ibt r6, #1 // IF (Y1 > Y0), R6 (SY) =	1
+  with r6 ; sub r6 // R6 = 0
+  from r4 ; to r8 ; sub r2 // R8 = DY (Y1 - Y0)
   bpl SYPos
-  nop // Delay Slot
-  SYNeg:
-  ibt r6, #-1 // IF (Y1 < Y0), R6 (SY) = -1 (Delay Slot)
-  move r8, r0 // R8 = DY
-  sub r0 // R0 = 0
-  sub r8 // R0 = ABS(DY)
+  inc r6 // IF (Y1 > Y0), R6 (SY) = 1 (Delay Slot)
+  dec r6 // IF (Y1 < Y0), R6 (SY) = -1
+  dec r6 // R6 = -1
+  with r8 ; not // R8 ~= R8
+  inc r8 // R8 = ABS(DY)
   SYPos:
-  move r8, r0 // R8 = DY
 
-  move r0, r7 // R0 = DX
-  cmp r8 // Compare DX To DY
+  from r7 ; cmp r8 // Compare DX To DY
   blt RunY
-  nop // Delay Slot
 
-  move r0, r7 // R0 = DX
-  lsr // IF (DX >= DY), R4 (X Error) = R7 (DX) / 2 (X Error = DX / 2)
-  move r4, r0 // R4 = X Error
+  from r7 ; to r4 ; lsr // IF (DX >= DY), R4 (X Error) = R7 (DX) / 2 (X Error = DX / 2)
   move r12, r7 // R12 = Loop Count (DX)
   inc r12 // R12++
   move r13, r15 // R13 = Loop Address
   // LoopX:
     plot // Plot Color (R1++)
-
-    move r0, r4 // R0 = X Error
-    sub r8 // Subtract R8 (DY) From R4 (X Error) & Compare R4 (X Error) To Zero (X Error -= DY)
-    move r4, r0 // R4 = X Error
+    with r4 ; sub r8 // Subtract R8 (DY) From R4 (X Error) & Compare R4 (X Error) To Zero (X Error -= DY)
     bge XEnd
-    nop // Delay Slot
-
-    move r0, r2 // R0 = Y0
-    add r6 // IF (X Error < 0), Add R6 (SY) To R2 (Y0) (Y0 += SY)
-    move r2, r0 // R2 = Y0
-
-    move r0, r4 // R0 = X Error
-    add r7 // IF (X Error < 0), Add R7 (DX) To R4 (X Error) (X Error += DX)
-    move r4, r0 // R4 = X Error
-
+    with r2 ; add r6 // IF (X Error < 0), Add R6 (SY) To R2 (Y0) (Y0 += SY)
+    with r4 ; add r7 // IF (X Error < 0), Add R7 (DX) To R4 (X Error) (X Error += DX)
     XEnd:
-    move r0, r1 // R0 = X0
-    add r5 // Add R5 (SX) To R1 (X0) (X0 += SX)
-    move r1, r0 // R1 = X0
-
-    loop // LoopX, IF (X0 == X1), Line End
-    dec r1 // R1-- (Delay Slot)
-    bra LineEnd
-    nop // Delay Slot
+      with r1 ; add r5 // Add R5 (SX) To R1 (X0) (X0 += SX)
+      loop // LoopX, IF (X0 == X1), Line End
+      dec r1 // R1-- (Delay Slot)
+      bra LineEnd
 
   RunY:
-  move r0, r8 // R0 = DY
-  lsr // IF (DX < DY), R3 (Y Error) = R8 (DY) / 2 (Y Error = DY / 2)
-  move r3, r0 // R3 = Y Error
+  from r8 ; to r3 ; lsr // IF (DX < DY), R3 (Y Error) = R8 (DY) / 2 (Y Error = DY / 2)
   move r12, r8 // R12 = Loop Count (DY)
   inc r12 // R12++
   move r13, r15 // R13 = Loop Address
   // LoopY:
     plot // Plot Color (R1++)
-
-    move r0, r3 // R0 = Y Error
-    sub r7 // Subtract R7 (DX) From R3 (Y Error) & Compare R1 (Y Error) To Zero
-    move r3, r0 // R4 = Y Error
+    with r3 ; sub r7 // Subtract R7 (DX) From R3 (Y Error) & Compare R1 (Y Error) To Zero
     bge YEnd
-    nop // Delay Slot
-
-    move r0, r1 // R0 = X0
-    add r5 // IF (Y Error < 0), Add R5 (SX) To R1 (X0) (X0 += SX)
-    move r1, r0 // R1 = X0
-
-    move r0, r3 // R0 = Y Error
-    add r8 // IF (Y Error < 0), Add R8 (DY) To R3 (Y Error) (Y Error += DY)
-    move r3, r0 // R3 = Y Error
-
+    with r1 ; add r5 // IF (Y Error < 0), Add R5 (SX) To R1 (X0) (X0 += SX)
+    with r3 ; add r8 // IF (Y Error < 0), Add R8 (DY) To R3 (Y Error) (Y Error += DY)
     YEnd:
-    move r0, r2 // R0 = Y0
-    add r6 // Add R6 (SY) To R2 (Y0) (Y0 += SY)
-    move r2, r0 // R2 = Y0
-
-    loop // LoopY, IF (Y0 == Y1), Line End
-    dec r1 // R1-- (Delay Slot)
+      with r2 ; add r6 // Add R6 (SY) To R2 (Y0) (Y0 += SY)
+      loop // LoopY, IF (Y0 == Y1), Line End
+      dec r1 // R1-- (Delay Slot)
 
   LineEnd:
     rpix // Flush Pixel Cache
