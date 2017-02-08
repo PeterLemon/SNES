@@ -40,26 +40,22 @@ GSUStart:
   ibt r5, #63 // R5 = Fill Y Count (Poly Bottom Scanline - Poly Top Scanline)
 
   LoopFill:
-    ldw (r3) // R0 = Scan Left Word
-    move r1, r0 // R1 = Plot X Position
-    ldw (r4) // R0 = Scan Right Word
-    sub r1 // R0 = Fill Length
-    move r12, r0 // R12 = Loop Count
-    inc r12 // R12++
+    to r1 ; ldw (r3) // R1 = Scan Left Plot X Position
+    ldw (r4) // R0 = Scan Right Plot X Position
+    to r12 ; sub r1 // R12 = Fill Length (Scan Right Plot X - Scan Left Plot X)
+    inc r12 // R12 = Loop Count
     move r13, r15 // R13 = Loop Address
-    // Loop: 
-      plot // Plot Color
+    // Loop:
       loop // IF (Loop Count != 0) Loop
-      nop // Delay Slot
+      plot // Plot Color, R1++ (Delay Slot)
 
-    inc r3 // R3++
-    inc r3 // R3++
-    inc r4 // R4++
-    inc r4 // R4++
-    inc r2 // Plot Y Position++
+    inc r3 // Scan Left RAM Address++
+    inc r3 // Scan Left RAM Address++
+    inc r4 // Scan Right RAM Address++
+    inc r4 // Scan Right RAM Address++
     dec r5 // Fill Y Count--
     bne LoopFill // IF (Fill Y Count != 0) Loop Fill
-    nop // Delay Slot
+    inc r2 // Plot Y Position++ (Delay Slot)
 
   rpix // Flush Pixel Cache
 
