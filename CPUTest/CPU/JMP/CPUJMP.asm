@@ -18,7 +18,7 @@ macro PrintText(SRC, DEST, SIZE) { // Print Text Characters To VRAM
     sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
     inx // X++
     cpx.w #{SIZE}
-    bne {#}LoopText // IF (X != 0) Loop Text Charcters
+    bne {#}LoopText // IF (X != 0) Loop Text Characters
 }
 
 seek($8000); fill $8000 // Fill Upto $7FFF (Bank 0) With Zero Bytes

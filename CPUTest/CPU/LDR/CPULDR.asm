@@ -18,7 +18,7 @@ macro PrintText(SRC, DEST, SIZE) { // Print Text Characters To VRAM
     sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
     inx // X++
     cpx.w #{SIZE}
-    bne {#}LoopText // IF (X != 0) Loop Text Charcters
+    bne {#}LoopText // IF (X != 0) Loop Text Characters
 }
 
 macro PrintValue(SRC, DEST, SIZE) { // Print HEX Characters To VRAM
