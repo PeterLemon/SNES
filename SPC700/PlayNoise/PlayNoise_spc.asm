@@ -35,8 +35,8 @@ seek(SPCRAM); Start:
   WDSP(DSP_EVOLR,25) // Echo Volume Right
 
 SongStart:
-  WDSP(DSP_V0VOLL,127)        // Voice 0; Volume Left
-  WDSP(DSP_V0VOLR,127)        // Voice 0; Volume Right
+  WDSP(DSP_V0VOLL,127)        // Voice 0: Volume Left
+  WDSP(DSP_V0VOLR,127)        // Voice 0: Volume Right
   WDSP(DSP_V0GAIN,127)        // Voice 0: Gain
 
 Loop:
