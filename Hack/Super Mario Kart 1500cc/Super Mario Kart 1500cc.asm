@@ -24,7 +24,7 @@ dw 81<<4 // $01800A - Koopa    (FP12.4) (54.0: $0360)
 dw 81<<4 // $01800C - Toad     (FP12.4) (54.0: $0360)
 dw 82<<4 // $01800E - Yoshi    (FP12.4) (55.0: $0370)
 
-KartUnknown00:
+KartAccelerationSpeed:
          // ROM       Kart Acceleration Speed
 dw $8020 // $018010 - Mario    (????) ($8020)
 dw $8020 // $018012 - Luigi    (????) ($8020)
