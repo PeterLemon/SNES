@@ -1,1 +1,0 @@
-uips c "Super Mario Kart 64 1500cc.ips" "Super Mario Kart (U) [!].sfc" "Super Mario Kart 1500cc.sfc"
