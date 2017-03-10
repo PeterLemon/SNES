@@ -1,5 +1,5 @@
 // SNES "Super Mario Kart" 1500cc Hack by krom (Peter Lemon):
-// Special thanks to Dirtbag for the SMK Mashup Tool, for helping me get started
+// Special thanks to Dirtbag for the SMK Mashup tool, for helping me get started
 
 arch snes.cpu
 output "Super Mario Kart 1500cc.sfc", create
@@ -24,7 +24,7 @@ dw 81<<4 // $01800A - Koopa    (FP12.4) (54.0: $0360)
 dw 81<<4 // $01800C - Toad     (FP12.4) (54.0: $0360)
 dw 82<<4 // $01800E - Yoshi    (FP12.4) (55.0: $0370)
 
-KartAccelerationSpeed:
+KartUnknown00:
          // ROM       Kart Acceleration Speed
 dw $8020 // $018010 - Mario    (????) ($8020)
 dw $8020 // $018012 - Luigi    (????) ($8020)
