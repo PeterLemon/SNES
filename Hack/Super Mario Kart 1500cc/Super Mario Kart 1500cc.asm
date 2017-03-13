@@ -73,38 +73,38 @@ dw $80A7 // $018096 - Yoshi    (????) ($80A7)
 
 KartHandlingNormalMarioLuigi:
         // ROM       Kart Handling Normal Mario/Luigi
-dw 2653 // $018098 - Turn Rate (UINT16) (2453: $0995)
+dw 2753 // $018098 - Turn Rate (UINT16) (2453: $0995)
 db  152 // $01809A - Control   (UINT8)  ( 152: $98)
 db  104 // $01809B - Turning   (UINT8)  ( 104: $68)
 db  112 // $01809C - Grip      (UINT8)  ( 112: $70)
 KartHandlingUnknownMarioLuigi:
         // ROM       Kart Handling Unknown Mario/Luigi
-dw 2888 // $01809D - Turn Rate (UINT16) (2688: $0A80)
+dw 2988 // $01809D - Turn Rate (UINT16) (2688: $0A80)
 db  160 // $01809F - Control   (UINT8)  ( 160: $A0)
 db  120 // $0180A0 - Turning   (UINT8)  ( 120: $78)
 db  128 // $0180A1 - Grip      (UINT8)  ( 128: $80)
 KartHandlingSlidingMarioLuigi:
         // ROM       Kart Handling Sliding Mario/Luigi
-dw 3016 // $0180A2 - Turn Rate (UINT16) (2816: $0B00)
+dw 3116 // $0180A2 - Turn Rate (UINT16) (2816: $0B00)
 db  176 // $0180A4 - Control   (UINT8)  ( 176: $B0)
 db  136 // $0180A5 - Turning   (UINT8)  ( 136: $88)
 db  144 // $0180A6 - Grip      (UINT8)  ( 144: $90)
 
 KartHandlingNormalPrincessYoshi:
         // ROM       Kart Handling Normal Princess/Yoshi
-dw 2653 // $0180A7 - Turn Rate (UINT16) (2453: $0995)
+dw 2753 // $0180A7 - Turn Rate (UINT16) (2453: $0995)
 db  152 // $0180A9 - Control   (UINT8)  ( 152: $98)
 db   88 // $0180AA - Turning   (UINT8)  (  88: $58)
 db  128 // $0180AB - Grip      (UINT8)  ( 128: $80)
 KartHandlingUnknownPrincessYoshi:
         // ROM       Kart Handling Unknown Princess/Yoshi
-dw 2888 // $0180AC - Turn Rate (UINT16) (2688: $0A80)
+dw 2988 // $0180AC - Turn Rate (UINT16) (2688: $0A80)
 db  160 // $0180AE - Control   (UINT8)  ( 160: $A0)
 db  104 // $0180AF - Turning   (UINT8)  ( 104: $68)
 db  112 // $0180B0 - Grip      (UINT8)  ( 112: $70)
 KartHandlingSlidingPrincessYoshi:
         // ROM       Kart Handling Sliding Princess/Yoshi
-dw 3016 // $0180B1 - Turn Rate (UINT16) (2816: $0B00)
+dw 3116 // $0180B1 - Turn Rate (UINT16) (2816: $0B00)
 db  176 // $0180B3 - Control   (UINT8)  ( 176: $B0)
 db  112 // $0180B4 - Turning   (UINT8)  ( 112: $70)
 db  128 // $0180B5 - Grip      (UINT8)  ( 128: $80)
@@ -117,32 +117,32 @@ db  112 // $0180B9 - Turning   (UINT8)  ( 112: $70)
 db  144 // $0180BA - Grip      (UINT8)  ( 144: $90)
 KartHandlingUnknownKoopaToad:
         // ROM       Kart Handling Unknown Koopa/Toad
-dw 2824 // $0180BB - Turn Rate (UINT16) (2624: $0A40)
+dw 2924 // $0180BB - Turn Rate (UINT16) (2624: $0A40)
 db  176 // $0180BD - Control   (UINT8)  ( 176: $B0)
 db  128 // $0180BE - Turning   (UINT8)  ( 128: $80)
 db  160 // $0180BF - Grip      (UINT8)  ( 160: $A0)
 KartHandlingSlidingKoopaToad:
         // ROM       Kart Handling Sliding Koopa/Toad
-dw 2952 // $0180C0 - Turn Rate (UINT16) (2752: $0AC0)
+dw 3052 // $0180C0 - Turn Rate (UINT16) (2752: $0AC0)
 db  160 // $0180C2 - Control   (UINT8)  ( 160: $A0)
 db  144 // $0180C3 - Turning   (UINT8)  ( 144: $90)
 db  192 // $0180C4 - Grip      (UINT8)  ( 192: $C0)
 
 KartHandlingNormalBowserDKJr:
         // ROM       Kart Handling Normal Bowser/D.K.Jr
-dw 2504 // $0180C5 - Turn Rate (UINT16) (2304: $0900)
+dw 2604 // $0180C5 - Turn Rate (UINT16) (2304: $0900)
 db  128 // $0180C7 - Control   (UINT8)  ( 128: $80)
 db   88 // $0180C8 - Turning   (UINT8)  (  88: $58)
 db  136 // $0180C9 - Grip      (UINT8)  ( 136: $88)
 KartHandlingUnknownBowserDKJr:
         // ROM       Kart Handling Unknown Bowser/D.K.Jr
-dw 2824 // $0180CA - Turn Rate (UINT16) (2624: $0A40)
+dw 2924 // $0180CA - Turn Rate (UINT16) (2624: $0A40)
 db  144 // $0180CC - Control   (UINT8)  ( 144: $90)
 db  104 // $0180CD - Turning   (UINT8)  ( 104: $68)
 db  152 // $0180CE - Grip      (UINT8)  ( 152: $98)
 KartHandlingSlidingBowserDKJr:
         // ROM       Kart Handling Sliding Bowser/D.K.Jr
-dw 2952 // $0180CF - Turn Rate (UINT16) (2752: $0AC0)
+dw 3052 // $0180CF - Turn Rate (UINT16) (2752: $0AC0)
 db  160 // $0180D1 - Control   (UINT8)  ( 160: $A0)
 db  120 // $0180D2 - Turning   (UINT8)  ( 120: $78)
 db  168 // $0180D3 - Grip      (UINT8)  ( 168: $A8)
