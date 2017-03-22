@@ -7,7 +7,7 @@ macro seek(variable offset) {
   base offset
 }
 
-seek($8000); fill $18000 // Fill Upto $FFFF (Bank 2) With Zero Bytes
+seek($8000); fill $20000 // Fill Upto $FFFF (Bank 3) With Zero Bytes
 include "LIB/SNES.INC"        // Include SNES Definitions
 include "LIB/SNES_HEADER.ASM" // Include Header & Vector Table
 include "LIB/SNES_GFX.INC"    // Include Graphics Macros
@@ -95,287 +95,47 @@ seek($8000); Start:
   LoadVRAM(TecmoCopyrightTiles, $8400, TecmoCopyrightTiles.size, 0) // Load Sprite Tiles To VRAM
 
   LoadPAL(PressStartButtonPal, $A0, PressStartButtonPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
-  LoadVRAM(PressStartButtonTiles, $8800, PressStartButtonTiles.size, 0) // Load Sprite Tiles To VRAM
+  LoadVRAM(PressStartButtonTiles, $8C00, PressStartButtonTiles.size, 0) // Load Sprite Tiles To VRAM
 
-  // Setup Sprites
-  lda.b #%00000010 // SSSNNBBB: S = Object Size, N = Name, B = Base
-  sta.w REG_OBSEL  // $2101: Object Size = 8x8/16x16, Name = 0, Base = $8000
+  LoadPAL(ComicCPal, $B0, ComicCPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
+  LoadVRAM(ComicCTiles, $9000, ComicCTiles.size, 0) // Load Sprite Tiles To VRAM
 
+  LoadPAL(ComicDPal, $C0, ComicDPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
+  LoadVRAM(ComicDTiles, $A800, ComicDTiles.size, 0) // Load Sprite Tiles To VRAM
+
+  LoadPAL(ComicAPal, $D0, ComicAPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
+  LoadVRAM(ComicATiles, $C000, ComicATiles.size, 0) // Load Sprite Tiles To VRAM
+
+  LoadPAL(ComicBPal, $E0, ComicBPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
+  LoadVRAM(ComicBTiles, $E000, ComicBTiles.size, 0) // Load Sprite Tiles To VRAM
+
+  // Title Screen OAM Info
   stz.w REG_OAMADDL // Store Zero To OAM Access Address Low Byte
+                    // Object Priority Rotation / OAM Data Address High Bit
   stz.w REG_OAMADDH // Store Zero To OAM Access Address High Byte
+  ldx.w #$0000 // X = 0
+  LoopTitleScreenOAM:
+    lda.w TitleScreenOAM,x
+    sta.w REG_OAMDATA // Store Byte Of Sprite Attribute
+    inx // X++
+    cpx.w #$01A0
+    bne LoopTitleScreenOAM
 
-  // OAM Info (Tecmo Mini 64x16)
-  lda.b #96         // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #176        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  // Starting Character (Tile) Number
-  stz.w REG_OAMDATA // Store Zero To 3rd Byte Of Sprite Attribute
-  lda.b #%00000000  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #112        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #176        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #2          // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000000  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #128        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #176        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #4          // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000000  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #144        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #176        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #6          // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000000  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  // OAM Info (Tecmo Copyright 136x8)
-  lda.b #60         // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #32         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #68         // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #33         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #76         // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #34         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #84         // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #35         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #92         // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #36         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #100        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #37         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #108        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #38         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #116        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #39         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #124        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #40         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #132        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #41         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #140        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #42         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #148        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #43         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #156        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #44         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #164        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #45         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #172        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #46         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #180        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #47         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #188        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #200        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #48         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000010  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  // OAM Info (Press Start Button 112x16)
-  lda.b #72         // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #144        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #64         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000100  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #88         // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #144        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #66         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000100  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #104        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #144        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #68         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000100  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #120        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #144        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #70         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000100  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #136        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #144        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #72         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000100  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #152        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #144        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #74         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000100  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  lda.b #168        // Load Sprite X Postion To A
-  sta.w REG_OAMDATA // Store 1st Byte Of Sprite Attribute
-  lda.b #144        // Load Sprite Y Postion To A
-  sta.w REG_OAMDATA // Store 2nd Byte Of Sprite Attribute
-  lda.b #76         // Starting Character (Tile) Number
-  sta.w REG_OAMDATA // Store 3rd Byte Of Sprite Attribute
-  lda.b #%00000100  // VHOOPPPC: C = Tile 9th Bit, P: Palette, O: Priority, H: Horizontal Flip, V = Vertical Flip
-  sta.w REG_OAMDATA // Store 4th Byte Of Sprite Attribute
-
-  // OAM Extra Info
+  // Title Screen OAM Extra Info
   stz.w REG_OAMADDL // Store Zero To OAM Access Address Low Byte
-  lda.b #$01 // A = $01
+  lda.b #%00000001  // Object Priority Rotation / OAM Data Address High Bit
   sta.w REG_OAMADDH // Store OAM Access Address High Byte
-
-  lda.b #%10101010  // Sprite 0..3 Size Big
-  sta.w REG_OAMDATA // Store Byte Of Sprite Attribute
-  stz.w REG_OAMDATA // Store Zero To Byte Of Sprite Attribute
-  stz.w REG_OAMDATA // Store Zero To Byte Of Sprite Attribute
-  stz.w REG_OAMDATA // Store Zero To Byte Of Sprite Attribute
-  stz.w REG_OAMDATA // Store Zero To Byte Of Sprite Attribute
-  lda.b #%10101000  // Sprite 21..23 Size Big
-  sta.w REG_OAMDATA // Store Byte Of Sprite Attribute
-  lda.b #%10101010  // Sprite 24..27 Size Big
-  sta.w REG_OAMDATA // Store Byte Of Sprite Attribute
-
+  LoopTitleScreenOAMSize:
+    lda.w TitleScreenOAM,x
+    sta.w REG_OAMDATA // Store Byte Of Sprite Attribute
+    inx // X++
+    cpx.w #$01BA
+    bne LoopTitleScreenOAMSize
+  
   // Setup Video
+                   // Interlace Mode Off
+  stz.w REG_SETINI // $2133: Screen Mode Select
+
   lda.b #%00000111 // DCBAPMMM: M = Mode, P = Priority, ABCD = BG1,2,3,4 Tile Size
   sta.w REG_BGMODE // $2105: BG Mode 7, Priority 0, BG1 8x8 Tiles
 
@@ -406,6 +166,18 @@ seek($8000); Start:
   stz.w REG_M7A // $211B: Mode7 Rot/Scale A (COSINE A) & Maths 16-Bit Operand
   stz.w REG_M7D // $211E: Mode7 Rot/Scale D (COSINE B)
   stz.w REG_M7D // $211E: Mode7 Rot/Scale D (COSINE B)
+
+  // HDMA OAM Size & Object Base   
+  lda.b #%00000000 // HMDA: Write 1 Bytes Each Scanline
+  sta.w REG_DMAP0  // $4300: DMA0 DMA/HDMA Parameters
+  lda.b #REG_OBSEL // $0B: Start At Object Size & Object Base ($2101)
+  sta.w REG_BBAD0  // $4301: DMA0 DMA/HDMA I/O-Bus Address (PPU-Bus AKA B-Bus)
+  ldx.w #HDMATable // HMDA Table Address
+  stx.w REG_A1T0L  // $4302: DMA0 DMA/HDMA Table Start Address
+  lda.b #0         // HDMA Table Bank
+  sta.w REG_A1B0   // $4304: DMA0 DMA/HDMA Table Start Address (Bank)
+  lda.b #%00000001 // HDMA Channel Select (Channel 0)
+  sta.w REG_HDMAEN // $420C: Select H-Blank DMA (H-DMA) Channels
 
   FadeIN() // Screen Fade In
 
@@ -455,6 +227,17 @@ seek($8000); Start:
 Loop:
   jmp Loop
 
+HDMATable:
+  db 32, %01100011 // Repeat 32 Scanlines, Object Size = 8x8/16x16, Name = 0, Base = $C000
+  db 32, %01100011 // Repeat 32 Scanlines, Object Size = 8x8/16x16, Name = 0, Base = $C000
+  db 32, %01100011 // Repeat 32 Scanlines, Object Size = 8x8/16x16, Name = 0, Base = $C000
+  db 32, %01100011 // Repeat 32 Scanlines, Object Size = 8x8/16x16, Name = 0, Base = $C000
+  db  1, %01100010 // Repeat  1 Scanlines, Object Size = 8x8/16x16, Name = 0, Base = $8000
+  db 0 // End Of HDMA
+
+TitleScreenOAM:
+  include "TitleScreenOAM.asm" // Include Title Screen OAM Table
+
 // Character Data
 // BANK 1
 seek($18000)
@@ -470,7 +253,7 @@ insert TecmoMiniPal,   "GFX/TecmoMini4BPP.pal" // Include Sprite Palette Data (3
 insert TecmoMiniTiles, "GFX/TecmoMini4BPP.pic" // Include Sprite Tile Data (768 Bytes)
 
 insert TecmoCopyrightPal,   "GFX/TecmoCopyright4BPP.pal" // Include Sprite Palette Data (32 Bytes)
-insert TecmoCopyrightTiles, "GFX/TecmoCopyright4BPP.pic" // Include Sprite Tile Data (544 Bytes)
+insert TecmoCopyrightTiles, "GFX/TecmoCopyright4BPP.pic" // Include Sprite Tile Data (1056 Bytes)
 
 insert PressStartButtonPal,   "GFX/PressStartButton4BPP.pal" // Include Sprite Palette Data (32 Bytes)
 insert PressStartButtonTiles, "GFX/PressStartButton4BPP.pic" // Include Sprite Tile Data (960 Bytes)
@@ -480,3 +263,17 @@ seek($28000)
 insert MonsterFarmJumpPal,   "GFX/MonsterFarmJump8BPP.pal" // Include BG Palette Data (256 Bytes)
 insert MonsterFarmJumpMap,   "GFX/MonsterFarmJump8BPP.map" // Include BG Map Data (16384 Bytes)
 insert MonsterFarmJumpTiles, "GFX/MonsterFarmJump8BPP.pic" // Include BG Tile Data (15360 Bytes)
+
+// BANK 3
+seek($38000)
+insert ComicAPal,   "GFX/ComicA4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert ComicATiles, "GFX/ComicA4BPP.pic" // Include Sprite Tile Data (8192 Bytes)
+
+insert ComicBPal,   "GFX/ComicB4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert ComicBTiles, "GFX/ComicB4BPP.pic" // Include Sprite Tile Data (8192 Bytes)
+
+insert ComicCPal,   "GFX/ComicC4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert ComicCTiles, "GFX/ComicC4BPP.pic" // Include Sprite Tile Data (6144 Bytes)
+
+insert ComicDPal,   "GFX/ComicD4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert ComicDTiles, "GFX/ComicD4BPP.pic" // Include Sprite Tile Data (6144 Bytes)
