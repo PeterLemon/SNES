@@ -149,6 +149,8 @@ CourseEasy:
     dec // A--
     bne CourseEasyWait
 
+  ldy.w #$4083 // Y = Border Color
+
   CourseEasyLeft:
     ReadJOY({JOY_LEFT})  // Test LEFT Button
     beq CourseEasyRight  // IF (! LEFT Pressed) GOTO Course Easy Right
@@ -170,7 +172,53 @@ CourseEasy:
     LoadPAL(CourseEasyDarkPal, $90, CourseEasyDarkPal.size, 1) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
     jmp CourseNormal     // ELSE GOTO Course Normal
   CourseEasyEnd:
-    jmp CourseEasyLeft   // GOTO Course Easy Left
+
+    lda.b #$91 // A = Border Palette CGRAM Address
+    sta.w REG_CGADD  // $2121: Palette CGRAM Address
+
+    rep #$20 // Set 16-Bit Accumulator
+    tya // A = Y
+    
+    and.w #%0111110000000000
+    cmp.w #%0111110000000000
+    beq EasyBorderDecrementFlag
+    cmp.w #%0011110000000000
+    beq EasyBorderIncrementFlag
+
+    tya // A = Y
+    bit.w #$8000 // Test Border Decrement Flag
+    beq EasyBorderIncrement
+    bne EasyBorderDecrement
+
+    EasyBorderIncrementFlag:
+      tya // A = Y
+      and.w #$7FFF // Clear Border Decrement Flag
+      bra EasyBorderIncrement
+
+    EasyBorderDecrementFlag:
+      tya // A = Y
+      ora.w #$8000 // Set Border Decrement Flag
+      bra EasyBorderDecrement
+
+    EasyBorderIncrement:
+      clc // Clear Carry Flag
+      adc.w #%0000010000100001
+      bra EasyBorderEnd
+
+    EasyBorderDecrement:
+      sec // Set Carry Flag
+      sbc.w #%0000010000100001
+
+    EasyBorderEnd:
+      tay // Y = A
+      sep #$20 // Set 8-Bit Accumulator
+
+    WaitNMI() // Wait VBlank
+    sta.w REG_CGDATA // $2122: Palette CGRAM Data Write
+    xba // Exchange B & A Accumulators
+    sta.w REG_CGDATA // $2122: Palette CGRAM Data Write
+
+    jmp CourseEasyLeft // GOTO Course Easy Left
 
 CourseHard:
   WaitNMI() // Wait VBlank
@@ -195,6 +243,8 @@ CourseHard:
     dec // A--
     bne CourseHardWait
 
+  ldy.w #$2610 // Y = Border Color
+
   CourseHardLeft:
     ReadJOY({JOY_LEFT})  // Test LEFT Button
     beq CourseHardRight  // IF (! LEFT Pressed) GOTO Course Hard Right
@@ -216,7 +266,53 @@ CourseHard:
     LoadPAL(CourseHardDarkPal, $A0, CourseHardDarkPal.size, 1) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
     jmp CourseVeryHard   // GOTO Course Very Hard
   CourseHardEnd:
-    jmp CourseHardLeft   // ELSE GOTO Course Hard Left
+
+    lda.b #$A1 // A = Border Palette CGRAM Address
+    sta.w REG_CGADD  // $2121: Palette CGRAM Address
+
+    rep #$20 // Set 16-Bit Accumulator
+    tya // A = Y
+    
+    and.w #%0000001111100000
+    cmp.w #%0000001111100000
+    beq HardBorderDecrementFlag
+    cmp.w #%0000000111100000
+    beq HardBorderIncrementFlag
+
+    tya // A = Y
+    bit.w #$8000 // Test Border Decrement Flag
+    beq HardBorderIncrement
+    bne HardBorderDecrement
+
+    HardBorderIncrementFlag:
+      tya // A = Y
+      and.w #$7FFF // Clear Border Decrement Flag
+      bra HardBorderIncrement
+
+    HardBorderDecrementFlag:
+      tya // A = Y
+      ora.w #$8000 // Set Border Decrement Flag
+      bra HardBorderDecrement
+
+    HardBorderIncrement:
+      clc // Clear Carry Flag
+      adc.w #%0000010000100001
+      bra HardBorderEnd
+
+    HardBorderDecrement:
+      sec // Set Carry Flag
+      sbc.w #%0000010000100001
+
+    HardBorderEnd:
+      tay // Y = A
+      sep #$20 // Set 8-Bit Accumulator
+
+    WaitNMI() // Wait VBlank
+    sta.w REG_CGDATA // $2122: Palette CGRAM Data Write
+    xba // Exchange B & A Accumulators
+    sta.w REG_CGDATA // $2122: Palette CGRAM Data Write
+
+    jmp CourseHardLeft // GOTO Course Hard Left
 
 CourseNormal:
   WaitNMI() // Wait VBlank
@@ -241,6 +337,8 @@ CourseNormal:
     dec // A--
     bne CourseNormalWait
 
+  ldy.w #$2A05 // Y = Border Color
+
   CourseNormalLeft:
     ReadJOY({JOY_LEFT})   // Test LEFT Button
     beq CourseNormalRight // IF (! LEFT Pressed) GOTO Course Normal Right
@@ -262,7 +360,53 @@ CourseNormal:
     LoadPAL(CourseNormalDarkPal, $B0, CourseNormalDarkPal.size, 1) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
     jmp CourseEasy        // ELSE GOTO Course Easy
   CourseNormalEnd:
-    jmp CourseNormalLeft  // ELSE GOTO Course Normal Left
+
+    lda.b #$B1 // A = Border Palette CGRAM Address
+    sta.w REG_CGADD  // $2121: Palette CGRAM Address
+
+    rep #$20 // Set 16-Bit Accumulator
+    tya // A = Y
+    
+    and.w #%0000001111100000
+    cmp.w #%0000001111100000
+    beq NormalBorderDecrementFlag
+    cmp.w #%0000000111100000
+    beq NormalBorderIncrementFlag
+
+    tya // A = Y
+    bit.w #$8000 // Test Border Decrement Flag
+    beq NormalBorderIncrement
+    bne NormalBorderDecrement
+
+    NormalBorderIncrementFlag:
+      tya // A = Y
+      and.w #$7FFF // Clear Border Decrement Flag
+      bra NormalBorderIncrement
+
+    NormalBorderDecrementFlag:
+      tya // A = Y
+      ora.w #$8000 // Set Border Decrement Flag
+      bra NormalBorderDecrement
+
+    NormalBorderIncrement:
+      clc // Clear Carry Flag
+      adc.w #%0000010000100001
+      bra NormalBorderEnd
+
+    NormalBorderDecrement:
+      sec // Set Carry Flag
+      sbc.w #%0000010000100001
+
+    NormalBorderEnd:
+      tay // Y = A
+      sep #$20 // Set 8-Bit Accumulator
+
+    WaitNMI() // Wait VBlank
+    sta.w REG_CGDATA // $2122: Palette CGRAM Data Write
+    xba // Exchange B & A Accumulators
+    sta.w REG_CGDATA // $2122: Palette CGRAM Data Write
+
+    jmp CourseNormalLeft // GOTO Course Normal Left
 
 CourseVeryHard:
   WaitNMI() // Wait VBlank
@@ -287,6 +431,8 @@ CourseVeryHard:
     dec // A--
     bne CourseVeryHardWait
 
+  ldy.w #$1890 // Y = Border Color
+
   CourseVeryHardLeft:
     ReadJOY({JOY_LEFT})     // Test LEFT Button
     beq CourseVeryHardRight // IF (! LEFT Pressed) GOTO Course Very Hard Right
@@ -308,4 +454,50 @@ CourseVeryHard:
     LoadPAL(CourseVeryHardDarkPal, $C0, CourseVeryHardDarkPal.size, 1) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
     jmp CourseHard          // ELSE GOTO Course Hard
   CourseVeryHardEnd:
-    jmp CourseVeryHardLeft  // ELSE GOTO Course Very Hard Left
+
+    lda.b #$C1 // A = Border Palette CGRAM Address
+    sta.w REG_CGADD  // $2121: Palette CGRAM Address
+
+    rep #$20 // Set 16-Bit Accumulator
+    tya // A = Y
+    
+    and.w #%0000000000011111
+    cmp.w #%0000000000011111
+    beq VeryHardBorderDecrementFlag
+    cmp.w #%0000000000001111
+    beq VeryHardBorderIncrementFlag
+
+    tya // A = Y
+    bit.w #$8000 // Test Border Decrement Flag
+    beq VeryHardBorderIncrement
+    bne VeryHardBorderDecrement
+
+    VeryHardBorderIncrementFlag:
+      tya // A = Y
+      and.w #$7FFF // Clear Border Decrement Flag
+      bra VeryHardBorderIncrement
+
+    VeryHardBorderDecrementFlag:
+      tya // A = Y
+      ora.w #$8000 // Set Border Decrement Flag
+      bra VeryHardBorderDecrement
+
+    VeryHardBorderIncrement:
+      clc // Clear Carry Flag
+      adc.w #%0000010000100001
+      bra VeryHardBorderEnd
+
+    VeryHardBorderDecrement:
+      sec // Set Carry Flag
+      sbc.w #%0000010000100001
+
+    VeryHardBorderEnd:
+      tay // Y = A
+      sep #$20 // Set 8-Bit Accumulator
+
+    WaitNMI() // Wait VBlank
+    sta.w REG_CGDATA // $2122: Palette CGRAM Data Write
+    xba // Exchange B & A Accumulators
+    sta.w REG_CGDATA // $2122: Palette CGRAM Data Write
+
+    jmp CourseVeryHardLeft // GOTO Course Very Hard Left
