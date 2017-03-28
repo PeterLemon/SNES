@@ -25,16 +25,12 @@ LoadVRAM(CourseNormalTiles, $F000, CourseNormalTiles.size, 0) // Load Sprite Til
 LoadPAL(CourseVeryHardDarkPal, $C0, CourseVeryHardDarkPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
 LoadVRAM(CourseVeryHardTiles, $F800, CourseVeryHardTiles.size, 0) // Load Sprite Tiles To VRAM
 
-LoadPAL(FontPal, $D0, CourseSelectPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
+LoadPAL(FontPal, $F0, CourseSelectPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
 LoadVRAM(FontTiles, $A000, CourseSelectTiles.size, 0) // Load Sprite Tiles To VRAM
 
-// Setup Sprites
-lda.b #%01100011 // Object Size = 16x16/32x32, Name = 0, Base = $C000
-sta.w REG_OBSEL  // $2101: Object Size & Object Base
-
 // Clear OAM
-stz.w REG_OAMADDL // Store Zero To OAM Access Address Low Byte
-stz.w REG_OAMADDH // Store Zero To OAM Access Address High Byte
+ldx.w #$0000 // X = $0000
+stx.w REG_OAMADDL // $2102: OAM Address & Priority Rotation
 ldx.w #$0080
 lda.b #$E0
 -
@@ -52,10 +48,8 @@ ldx.w #$0020
   bne -
 
 // Course Select OAM Info
-stz.w REG_OAMADDL // Store Zero To OAM Access Address Low Byte
-                  // Object Priority Rotation / OAM Data Address High Bit
-stz.w REG_OAMADDH // Store Zero To OAM Access Address High Byte
-ldx.w #$0000 // X = 0
+ldx.w #$0000 // X = $0000
+stx.w REG_OAMADDL // $2102: OAM Address & Priority Rotation
 LoopCourseSelectOAM:
   lda.w CourseSelectOAM,x
   sta.w REG_OAMDATA // Store Byte Of Sprite Attribute
@@ -64,9 +58,8 @@ LoopCourseSelectOAM:
   bne LoopCourseSelectOAM
 
 // Course Select OAM Extra Info
-stz.w REG_OAMADDL // Store Zero To OAM Access Address Low Byte
-lda.b #%00000001  // Object Priority Rotation / OAM Data Address High Bit
-sta.w REG_OAMADDH // Store OAM Access Address High Byte
+ldy.w #$0100 // Y = $0100
+sty.w REG_OAMADDL // $2102: OAM Address & Priority Rotation
 LoopCourseSelectOAMSize:
   lda.w CourseSelectOAM,x
   sta.w REG_OAMDATA // Store Byte Of Sprite Attribute
@@ -131,10 +124,8 @@ CourseEasy:
   LoadPAL(CourseEasyPal, $90, CourseEasyPal.size, 1) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
 
   // Course Easy Text OAM Info
-  lda.b #$AE // A = $AE
-  sta.w REG_OAMADDL // Store OAM Access Address Low Byte
-                    // Object Priority Rotation / OAM Data Address High Bit
-  stz.w REG_OAMADDH // Store Zero To OAM Access Address High Byte
+  ldx.w #$00AE // X = $00AE
+  stx.w REG_OAMADDL // $2102: OAM Address & Priority Rotation
   ldx.w #$0000 // X = 0
   LoopCourseEasyTextOAM:
     lda.w CourseEasyTextOAM,x
@@ -155,7 +146,7 @@ CourseEasy:
     ReadJOY({JOY_LEFT})  // Test LEFT Button
     beq CourseEasyRight  // IF (! LEFT Pressed) GOTO Course Easy Right
     LoadPAL(CourseEasyDarkPal, $90, CourseEasyDarkPal.size, 1) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
-    jmp CourseHard     // ELSE GOTO Course Hard
+    jmp CourseHard       // ELSE GOTO Course Hard
   CourseEasyRight:
     ReadJOY({JOY_RIGHT}) // Test RIGHT Button
     beq CourseEasyUp     // IF (! RIGHT Pressed) GOTO Course Easy Up
@@ -168,9 +159,13 @@ CourseEasy:
     jmp CourseNormal     // ELSE GOTO Course Normal
   CourseEasyDown:
     ReadJOY({JOY_DOWN})  // Test DOWN Button
-    beq CourseEasyEnd    // IF (! DOWN Pressed) GOTO Course Course Easy End
+    beq CourseEasyStart  // IF (! DOWN Pressed) GOTO Course Easy Start
     LoadPAL(CourseEasyDarkPal, $90, CourseEasyDarkPal.size, 1) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
     jmp CourseNormal     // ELSE GOTO Course Normal
+  CourseEasyStart:
+    ReadJOY({JOY_START}) // Test START Button
+    beq CourseEasyEnd    // IF (! START Pressed) GOTO Course Easy End
+    jmp CourseSelectEnd  // ELSE GOTO Course Select End
   CourseEasyEnd:
 
     lda.b #$91 // A = Border Palette CGRAM Address
@@ -225,10 +220,8 @@ CourseHard:
   LoadPAL(CourseHardPal, $A0, CourseHardPal.size, 1) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
 
   // Course Hard Text OAM Info
-  lda.b #$AE // A = $AE
-  sta.w REG_OAMADDL // Store OAM Access Address Low Byte
-                    // Object Priority Rotation / OAM Data Address High Bit
-  stz.w REG_OAMADDH // Store Zero To OAM Access Address High Byte
+  ldx.w #$00AE // X = $00AE
+  stx.w REG_OAMADDL // $2102: OAM Address & Priority Rotation
   ldx.w #$0000 // X = 0
   LoopCourseHardTextOAM:
     lda.w CourseHardTextOAM,x
@@ -259,12 +252,16 @@ CourseHard:
     ReadJOY({JOY_UP})    // Test UP Button
     beq CourseHardDown   // IF (! UP Pressed) GOTO Course Hard Down
     LoadPAL(CourseHardDarkPal, $A0, CourseHardDarkPal.size, 1) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
-    jmp CourseVeryHard   // GOTO Course Very Hard
+    jmp CourseVeryHard   // ELSE GOTO Course Very Hard
   CourseHardDown:
     ReadJOY({JOY_DOWN})  // Test DOWN Button
-    beq CourseHardEnd    // IF (! DOWN Pressed) GOTO Course Hard End
+    beq CourseHardStart  // IF (! DOWN Pressed) GOTO Course Hard Start
     LoadPAL(CourseHardDarkPal, $A0, CourseHardDarkPal.size, 1) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
-    jmp CourseVeryHard   // GOTO Course Very Hard
+    jmp CourseVeryHard   // ELSE GOTO Course Very Hard
+  CourseHardStart:
+    ReadJOY({JOY_START}) // Test START Button
+    beq CourseHardEnd    // IF (! START Pressed) GOTO Course Hard End
+    jmp CourseSelectEnd  // ELSE GOTO Course Select End
   CourseHardEnd:
 
     lda.b #$A1 // A = Border Palette CGRAM Address
@@ -319,10 +316,8 @@ CourseNormal:
   LoadPAL(CourseNormalPal, $B0, CourseNormalPal.size, 1) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
 
   // Course Normal Text OAM Info
-  lda.b #$AE // A = $AE
-  sta.w REG_OAMADDL // Store OAM Access Address Low Byte
-                    // Object Priority Rotation / OAM Data Address High Bit
-  stz.w REG_OAMADDH // Store Zero To OAM Access Address High Byte
+  ldx.w #$00AE // X = $00AE
+  stx.w REG_OAMADDL // $2102: OAM Address & Priority Rotation
   ldx.w #$0000 // X = 0
   LoopCourseNormalTextOAM:
     lda.w CourseNormalTextOAM,x
@@ -356,9 +351,13 @@ CourseNormal:
     jmp CourseEasy        // ELSE GOTO Course Easy
   CourseNormalDown:
     ReadJOY({JOY_DOWN})   // Test DOWN Button
-    beq CourseNormalEnd   // IF (! DOWN Pressed) GOTO Course Normal End
+    beq CourseNormalStart // IF (! DOWN Pressed) GOTO Course Normal Start
     LoadPAL(CourseNormalDarkPal, $B0, CourseNormalDarkPal.size, 1) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
     jmp CourseEasy        // ELSE GOTO Course Easy
+  CourseNormalStart:
+    ReadJOY({JOY_START})  // Test START Button
+    beq CourseNormalEnd   // IF (! START Pressed) GOTO Course Normal End
+    jmp CourseSelectEnd   // ELSE GOTO Course Select End
   CourseNormalEnd:
 
     lda.b #$B1 // A = Border Palette CGRAM Address
@@ -413,10 +412,8 @@ CourseVeryHard:
   LoadPAL(CourseVeryHardPal, $C0, CourseVeryHardPal.size, 1) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
 
   // Course Very Hard Text OAM Info
-  lda.b #$AE // A = $AE
-  sta.w REG_OAMADDL // Store OAM Access Address Low Byte
-                    // Object Priority Rotation / OAM Data Address High Bit
-  stz.w REG_OAMADDH // Store Zero To OAM Access Address High Byte
+  ldx.w #$00AE // X = $00AE
+  stx.w REG_OAMADDL // $2102: OAM Address & Priority Rotation
   ldx.w #$0000 // X = 0
   LoopCourseVeryHardTextOAM:
     lda.w CourseVeryHardTextOAM,x
@@ -450,9 +447,13 @@ CourseVeryHard:
     jmp CourseHard          // ELSE GOTO Course Hard
   CourseVeryHardDown:
     ReadJOY({JOY_DOWN})     // Test DOWN Button
-    beq CourseVeryHardEnd   // IF (! DOWN Pressed) GOTO Course Very Hard End
+    beq CourseVeryHardStart   // IF (! DOWN Pressed) GOTO Course Very Hard Start
     LoadPAL(CourseVeryHardDarkPal, $C0, CourseVeryHardDarkPal.size, 1) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
     jmp CourseHard          // ELSE GOTO Course Hard
+  CourseVeryHardStart:
+    ReadJOY({JOY_START})    // Test START Button
+    beq CourseVeryHardEnd   // IF (! START Pressed) GOTO Course Very Hard End
+    jmp CourseSelectEnd     // ELSE GOTO Course Select End
   CourseVeryHardEnd:
 
     lda.b #$C1 // A = Border Palette CGRAM Address
@@ -501,3 +502,11 @@ CourseVeryHard:
     sta.w REG_CGDATA // $2122: Palette CGRAM Data Write
 
     jmp CourseVeryHardLeft // GOTO Course Very Hard Left
+
+CourseSelectEnd:
+  FadeOUT() // Screen Fade Out
+
+  lda.b #$80
+  sta.w REG_INIDISP // $80: Turn Off Screen, Zero Brightness ($2100)
+
+  stz.w REG_HDMAEN // $420C: Select H-Blank DMA (H-DMA) Channels

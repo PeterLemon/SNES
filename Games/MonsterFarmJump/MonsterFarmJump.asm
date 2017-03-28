@@ -7,7 +7,7 @@ macro seek(variable offset) {
   base offset
 }
 
-seek($8000); fill $30000 // Fill Upto $FFFF (Bank 5) With Zero Bytes
+seek($8000); fill $38000 // Fill Upto $FFFF (Bank 6) With Zero Bytes
 include "LIB/SNES.INC"        // Include SNES Definitions
 include "LIB/SNES_HEADER.ASM" // Include Header & Vector Table
 include "LIB/SNES_GFX.INC"    // Include Graphics Macros
@@ -34,6 +34,11 @@ seek($8000); Start:
   //--------------
   include "CourseSelect.asm" // Include Course Select Routine
 
+  //-----------------
+  // Character Select
+  //-----------------
+  include "CharacterSelect.asm" // Include Character Select Routine
+
 Loop:
   jmp Loop
 
@@ -48,11 +53,19 @@ CourseSelectHDMATable:
   db   1, %00000010 // Repeat   1 Scanlines, Object Size =   8x8/16x16, Name = 0, Base = $8000
   db 0 // End Of HDMA
 
+CharacterSelectHDMATable:
+  db 124, %01100011 // Repeat 124 Scanlines, Object Size = 16x16/32x32, Name = 0, Base = $C000
+  db   1, %00000010 // Repeat   1 Scanlines, Object Size =   8x8/16x16, Name = 0, Base = $8000
+  db 0 // End Of HDMA
+
 TitleScreenOAM:
   include "TitleScreenOAM.asm" // Include OAM Table
 
 CourseSelectOAM:
   include "CourseSelectOAM.asm" // Include OAM Table
+
+CharacterSelectOAM:
+  include "CharacterSelectOAM.asm" // Include OAM Table
 
 // Character Data
 // BANK 1
@@ -94,8 +107,8 @@ insert ComicCTiles, "GFX/TitleScreen/ComicC4BPP.pic" // Include Sprite Tile Data
 insert ComicDPal,   "GFX/TitleScreen/ComicD4BPP.pal" // Include Sprite Palette Data (32 Bytes)
 insert ComicDTiles, "GFX/TitleScreen/ComicD4BPP.pic" // Include Sprite Tile Data (6144 Bytes)
 
-insert CourseSelectDarkBlendMap,   "GFX/CourseSelect/CourseSelectDarkBlend8BPP.map" // Include BG Map Data (1792 Bytes)
-insert CourseSelectDarkBlendTiles, "GFX/CourseSelect/CourseSelectDarkBlend8BPP.pic" // Include BG Tile Data (28672 Bytes)
+insert CourseSelectDarkBlendMap,   "GFX/CourseSelect/CourseSelectDarkBlend8BPP.map" // Include BG Map Data (2048 Bytes)
+insert CourseSelectDarkBlendTiles, "GFX/CourseSelect/CourseSelectDarkBlend8BPP.pic" // Include BG Tile Data (576 Bytes)
 
 // BANK 4
 seek($48000)
@@ -128,3 +141,30 @@ insert CourseVeryHardTiles,   "GFX/CourseSelect/CourseVeryHard4BPP.pic" // Inclu
 
 insert FontPal,   "GFX/Font4BPP.pal" // Include Sprite Palette Data (32 Bytes)
 insert FontTiles, "GFX/Font4BPP.pic" // Include Sprite Tile Data (5632 Bytes)
+
+insert CharacterSelectDarkBlendMap,   "GFX/CharacterSelect/CharacterSelectDarkBlend8BPP.map" // Include BG Map Data (2048 Bytes)
+insert CharacterSelectDarkBlendTiles, "GFX/CharacterSelect/CharacterSelectDarkBlend8BPP.pic" // Include BG Tile Data (832 Bytes)
+
+insert CharacterSelectPal,   "GFX/CharacterSelect/CharacterSelect4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert CharacterSelectTiles, "GFX/CharacterSelect/CharacterSelect4BPP.pic" // Include Sprite Tile Data (6144 Bytes)
+
+// BANK 6
+seek($68000)
+insert CharacterRoochoDarkPal, "GFX/CharacterSelect/CharacterRoochoDark4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert CharacterRoochoPal,     "GFX/CharacterSelect/CharacterRoocho4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert CharacterRoochoTiles,   "GFX/CharacterSelect/CharacterRoocho4BPP.pic" // Include Sprite Tile Data (2048 Bytes)
+
+insert CharacterBeochiDarkPal, "GFX/CharacterSelect/CharacterBeochiDark4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert CharacterBeochiPal,     "GFX/CharacterSelect/CharacterBeochi4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert CharacterBeochiTiles,   "GFX/CharacterSelect/CharacterBeochi4BPP.pic" // Include Sprite Tile Data (2048 Bytes)
+
+insert CharacterChitoDarkPal, "GFX/CharacterSelect/CharacterChitoDark4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert CharacterChitoPal,     "GFX/CharacterSelect/CharacterChito4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert CharacterChitoTiles,   "GFX/CharacterSelect/CharacterChito4BPP.pic" // Include Sprite Tile Data (2048 Bytes)
+
+insert CharacterGolemDarkPal, "GFX/CharacterSelect/CharacterGolemDark4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert CharacterGolemPal,     "GFX/CharacterSelect/CharacterGolem4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert CharacterGolemTiles,   "GFX/CharacterSelect/CharacterGolem4BPP.pic" // Include Sprite Tile Data (2048 Bytes)
+
+insert CharacterArrowPal,     "GFX/CharacterSelect/CharacterArrow4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert CharacterArrowTiles,   "GFX/CharacterSelect/CharacterArrow4BPP.pic" // Include Sprite Tile Data (1024 Bytes)

@@ -26,10 +26,8 @@ LoadPAL(ComicBPal, $E0, ComicBPal.size, 0) // Load Sprite Palette (Sprite Palett
 LoadVRAM(ComicBTiles, $E000, ComicBTiles.size, 0) // Load Sprite Tiles To VRAM
 
 // Title Screen OAM Info
-stz.w REG_OAMADDL // Store Zero To OAM Access Address Low Byte
-                  // Object Priority Rotation / OAM Data Address High Bit
-stz.w REG_OAMADDH // Store Zero To OAM Access Address High Byte
-ldx.w #$0000 // X = 0
+ldx.w #$0000 // X = $0000
+stx.w REG_OAMADDL // $2102: OAM Address & Priority Rotation
 LoopTitleScreenOAM:
   lda.w TitleScreenOAM,x
   sta.w REG_OAMDATA // Store Byte Of Sprite Attribute
@@ -38,9 +36,8 @@ LoopTitleScreenOAM:
   bne LoopTitleScreenOAM
 
 // Title Screen OAM Extra Info
-stz.w REG_OAMADDL // Store Zero To OAM Access Address Low Byte
-lda.b #%00000001  // Object Priority Rotation / OAM Data Address High Bit
-sta.w REG_OAMADDH // Store OAM Access Address High Byte
+ldy.w #$0100 // Y = $0100
+sty.w REG_OAMADDL // $2102: OAM Address & Priority Rotation
 LoopTitleScreenOAMSize:
   lda.w TitleScreenOAM,x
   sta.w REG_OAMDATA // Store Byte Of Sprite Attribute
