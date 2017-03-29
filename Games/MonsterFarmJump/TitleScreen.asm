@@ -190,12 +190,13 @@ LoopTitleScreenForeGroundOAMSize:
   cpx.w #$0079
   bne LoopTitleScreenForeGroundOAMSize
 
-ldx.w #$0000
+ldx.w #$0000 // X = Zoom In / Out Scale
 TitleZoomOut:
   WaitNMI() // Wait VBlank
   ReadJOY({JOY_START}) // Test START Button
   bne TitleScreenEnd   // IF (START Pressed) Branch Down
 
+  // Zoom Logo Out
   txa // A = X
   sta.w REG_M7A // $211B: Mode7 Rot/Scale A (COSINE A) & Maths 16-Bit Operand
   lda.b #$01
@@ -214,6 +215,7 @@ TitleZoomIn:
   ReadJOY({JOY_START}) // Test START Button
   bne TitleScreenEnd   // IF (START Pressed) Branch Down
 
+  // Zoom Logo In
   txa // A = X
   sta.w REG_M7A // $211B: Mode7 Rot/Scale A (COSINE A) & Maths 16-Bit Operand
   lda.b #$01
