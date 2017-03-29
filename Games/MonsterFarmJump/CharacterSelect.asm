@@ -97,20 +97,20 @@ stz.w REG_BG1HOFS // Store Zero To BG1 Horizontal Scroll Position Hi Byte
 stz.w REG_BG2HOFS // Store Zero To BG2 Horizontal Scroll Position Lo Byte
 stz.w REG_BG2HOFS // Store Zero To BG2 Horizontal Scroll Position Hi Byte
 
-lda.b #31 // Scroll BG2 31 Pixels Up
+lda.b #31 // Scroll BG1 & BG2 31 Pixels Up
 sta.w REG_BG1VOFS // Store A To BG1 Vertical Scroll Position Lo Byte
 stz.w REG_BG1VOFS // Store Zero To BG1 Vertical Scroll Position Hi Byte
 sta.w REG_BG2VOFS // Store A To BG Scroll Position Low Byte
 stz.w REG_BG2VOFS // Store Zero To BG Scroll Position High Byte
 
-// HDMA OAM Size & Object Base   
+// HDMA OAM Size & Object Base
 lda.b #%00000000 // HMDA: Write 1 Bytes Each Scanline
 sta.w REG_DMAP0  // $4300: DMA0 DMA/HDMA Parameters
-lda.b #REG_OBSEL // $0B: Start At Object Size & Object Base ($2101)
+lda.b #REG_OBSEL // $01: Start At Object Size & Object Base ($2101)
 sta.w REG_BBAD0  // $4301: DMA0 DMA/HDMA I/O-Bus Address (PPU-Bus AKA B-Bus)
-ldx.w #CharacterSelectHDMATable // HMDA Table Address
+ldx.w #CharacterSelectHDMATableOAM // HMDA Table Address
 stx.w REG_A1T0L  // $4302: DMA0 DMA/HDMA Table Start Address
-lda.b #CharacterSelectHDMATable >> 16 // HDMA Table Bank
+lda.b #CharacterSelectHDMATableOAM >> 16 // HDMA Table Bank
 sta.w REG_A1B0   // $4304: DMA0 DMA/HDMA Table Start Address (Bank)
 lda.b #%00000001 // HDMA Channel Select (Channel 0)
 sta.w REG_HDMAEN // $420C: Select H-Blank DMA (H-DMA) Channels

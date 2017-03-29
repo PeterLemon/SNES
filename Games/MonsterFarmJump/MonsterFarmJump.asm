@@ -42,18 +42,33 @@ seek($8000); Start:
 Loop:
   jmp Loop
 
-TitleScreenHDMATable:
-  db 128, %01100011 // Repeat 128 Scanlines, Object Size = 16x16/32x32, Name = 0, Base = $C000
-  db   1, %01100010 // Repeat   1 Scanlines, Object Size = 16x16/32x32, Name = 0, Base = $8000
+TitleScreenHDMATableOAM1:
+  db 128, %10100011 // Repeat 128 Scanlines, Object Size = 32x32/64x64, Name = 0, Base = $C000
+  db   1, %10100010 // Repeat   1 Scanlines, Object Size = 32x32/64x64, Name = 0, Base = $8000
   db 0 // End Of HDMA
 
-CourseSelectHDMATable:
+TitleScreenHDMATableOAM2:
+  db 128, %10100011 // Repeat 128 Scanlines, Object Size = 32x32/64x64, Name = 0, Base = $C000
+  db   1, %00000010 // Repeat   1 Scanlines, Object Size =   8x8/16x16, Name = 0, Base = $8000
+  db 0 // End Of HDMA
+
+TitleScreenHDMATableBG:
+  db 128, %00000111 // Repeat 128 Scanlines, BG Mode 7, Priority 0, BG1 8x8 Tiles
+  db   1, %00000011 // Repeat   1 Scanlines, BG Mode 3, Priority 0, BG2 8x8 Tiles
+  db 0 // End Of HDMA
+
+TitleScreenHDMATableTM:
+  db 128, %00010011 // Repeat 128 Scanlines, BG1 & Sprites To Main Screen Designation
+  db   1, %00010010 // Repeat   1 Scanlines, BG2 & Sprites To Main Screen Designation
+  db 0 // End Of HDMA
+
+CourseSelectHDMATableOAM:
   db 128, %01100011 // Repeat 128 Scanlines, Object Size = 16x16/32x32, Name = 0, Base = $C000
   db  56, %01100011 // Repeat  56 Scanlines, Object Size = 16x16/32x32, Name = 0, Base = $C000
   db   1, %00000010 // Repeat   1 Scanlines, Object Size =   8x8/16x16, Name = 0, Base = $8000
   db 0 // End Of HDMA
 
-CharacterSelectHDMATable:
+CharacterSelectHDMATableOAM:
   db 124, %01100011 // Repeat 124 Scanlines, Object Size = 16x16/32x32, Name = 0, Base = $C000
   db   1, %00000010 // Repeat   1 Scanlines, Object Size =   8x8/16x16, Name = 0, Base = $8000
   db 0 // End Of HDMA
@@ -82,14 +97,14 @@ insert TecmoMiniPal,   "GFX/TitleScreen/TecmoMini4BPP.pal" // Include Sprite Pal
 insert TecmoMiniTiles, "GFX/TitleScreen/TecmoMini4BPP.pic" // Include Sprite Tile Data (768 Bytes)
 
 insert TecmoCopyrightPal,   "GFX/TitleScreen/TecmoCopyright4BPP.pal" // Include Sprite Palette Data (32 Bytes)
-insert TecmoCopyrightTiles, "GFX/TitleScreen/TecmoCopyright4BPP.pic" // Include Sprite Tile Data (1056 Bytes)
+insert TecmoCopyrightTiles, "GFX/TitleScreen/TecmoCopyright4BPP.pic" // Include Sprite Tile Data (1024 Bytes)
 
 insert PressStartButtonPal,   "GFX/TitleScreen/PressStartButton4BPP.pal" // Include Sprite Palette Data (32 Bytes)
 insert PressStartButtonTiles, "GFX/TitleScreen/PressStartButton4BPP.pic" // Include Sprite Tile Data (960 Bytes)
 
 // BANK 2
 seek($28000)
-insert MonsterFarmJumpPal,   "GFX/TitleScreen/MonsterFarmJump8BPP.pal" // Include BG Palette Data (256 Bytes)
+insert MonsterFarmJumpPal,   "GFX/TitleScreen/MonsterFarmJump8BPP.pal" // Include BG Palette Data (192 Bytes)
 insert MonsterFarmJumpMap,   "GFX/TitleScreen/MonsterFarmJump8BPP.map" // Include BG Map Data (16384 Bytes)
 insert MonsterFarmJumpTiles, "GFX/TitleScreen/MonsterFarmJump8BPP.pic" // Include BG Tile Data (15360 Bytes)
 
@@ -101,11 +116,14 @@ insert ComicATiles, "GFX/TitleScreen/ComicA4BPP.pic" // Include Sprite Tile Data
 insert ComicBPal,   "GFX/TitleScreen/ComicB4BPP.pal" // Include Sprite Palette Data (32 Bytes)
 insert ComicBTiles, "GFX/TitleScreen/ComicB4BPP.pic" // Include Sprite Tile Data (8192 Bytes)
 
-insert ComicCPal,   "GFX/TitleScreen/ComicC4BPP.pal" // Include Sprite Palette Data (32 Bytes)
-insert ComicCTiles, "GFX/TitleScreen/ComicC4BPP.pic" // Include Sprite Tile Data (6144 Bytes)
+insert ComicCPal,   "GFX/TitleScreen/ComicC4BPP.pal" // Include BG/Sprite Palette Data (32 Bytes)
+insert ComicCTiles, "GFX/TitleScreen/ComicC4BPP.pic" // Include BG/Sprite Tile Data (6144 Bytes)
 
-insert ComicDPal,   "GFX/TitleScreen/ComicD4BPP.pal" // Include Sprite Palette Data (32 Bytes)
-insert ComicDTiles, "GFX/TitleScreen/ComicD4BPP.pic" // Include Sprite Tile Data (6144 Bytes)
+insert ComicDPal,   "GFX/TitleScreen/ComicD4BPP.pal" // Include BG/Sprite Palette Data (32 Bytes)
+insert ComicDTiles, "GFX/TitleScreen/ComicD4BPP.pic" // Include BG/Sprite Tile Data (6144 Bytes)
+
+ComicCDMap:
+  include "GFX/TitleScreen/ComicCD4BPPMap.asm" // Include BG Map Data (768 Bytes)
 
 insert CourseSelectDarkBlendMap,   "GFX/CourseSelect/CourseSelectDarkBlend8BPP.map" // Include BG Map Data (2048 Bytes)
 insert CourseSelectDarkBlendTiles, "GFX/CourseSelect/CourseSelectDarkBlend8BPP.pic" // Include BG Tile Data (576 Bytes)
