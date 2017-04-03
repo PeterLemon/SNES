@@ -7,11 +7,24 @@ macro seek(variable offset) {
   base offset
 }
 
-seek($8000); fill $38000 // Fill Upto $FFFF (Bank 6) With Zero Bytes
+seek($8000); fill $80000 // Fill Upto $FFFF (Bank 15) With Zero Bytes
 include "LIB/SNES.INC"        // Include SNES Definitions
 include "LIB/SNES_HEADER.ASM" // Include Header & Vector Table
 include "LIB/SNES_GFX.INC"    // Include Graphics Macros
 include "LIB/SNES_INPUT.INC"  // Include Input Macros
+
+// Variable Data
+seek(WRAM) // 8Kb WRAM Mirror ($0000..$1FFF)
+CourseCharacterSelect:
+  db %00000000 // Course Select (0=Easy, 1=Normal, 2=Hard, 3=Very Hard), Character Select (4=Roocho, 5=Beochi, 6=Chito, 7=Golem) Byte
+Mode7PosX:
+  dw 0 // Mode7 Center Position X Word
+Mode7PosY:
+  dw 0 // Mode7 Center Position Y Word
+BG1ScrPosX:
+  dw 0 // Mode7 BG1 Scroll Position X Word
+BG1ScrPosY:
+  dw 0 // Mode7 BG1 Scroll Position Y Word
 
 seek($8000); Start:
   SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
@@ -39,48 +52,13 @@ seek($8000); Start:
   //-----------------
   include "CharacterSelect.asm" // Include Character Select Routine
 
+  //---------------------
+  // Course Easy Stage 01
+  //---------------------
+  include "CourseEasyStage01.asm" // Include Stage Routine
+
 Loop:
   jmp Loop
-
-TitleScreenHDMATableOAM1:
-  db 128, %10100011 // Repeat 128 Scanlines, Object Size = 32x32/64x64, Name = 0, Base = $C000
-  db   1, %10100010 // Repeat   1 Scanlines, Object Size = 32x32/64x64, Name = 0, Base = $8000
-  db 0 // End Of HDMA
-
-TitleScreenHDMATableOAM2:
-  db 128, %10100011 // Repeat 128 Scanlines, Object Size = 32x32/64x64, Name = 0, Base = $C000
-  db   1, %00000010 // Repeat   1 Scanlines, Object Size =   8x8/16x16, Name = 0, Base = $8000
-  db 0 // End Of HDMA
-
-TitleScreenHDMATableBG:
-  db 128, %00000111 // Repeat 128 Scanlines, BG Mode 7, Priority 0, BG1 8x8 Tiles
-  db   1, %00000011 // Repeat   1 Scanlines, BG Mode 3, Priority 0, BG2 8x8 Tiles
-  db 0 // End Of HDMA
-
-TitleScreenHDMATableTM:
-  db 128, %00010011 // Repeat 128 Scanlines, BG1 & Sprites To Main Screen Designation
-  db   1, %00010010 // Repeat   1 Scanlines, BG2 & Sprites To Main Screen Designation
-  db 0 // End Of HDMA
-
-CourseSelectHDMATableOAM:
-  db 128, %01100011 // Repeat 128 Scanlines, Object Size = 16x16/32x32, Name = 0, Base = $C000
-  db  56, %01100011 // Repeat  56 Scanlines, Object Size = 16x16/32x32, Name = 0, Base = $C000
-  db   1, %00000010 // Repeat   1 Scanlines, Object Size =   8x8/16x16, Name = 0, Base = $8000
-  db 0 // End Of HDMA
-
-CharacterSelectHDMATableOAM:
-  db 124, %01100011 // Repeat 124 Scanlines, Object Size = 16x16/32x32, Name = 0, Base = $C000
-  db   1, %00000010 // Repeat   1 Scanlines, Object Size =   8x8/16x16, Name = 0, Base = $8000
-  db 0 // End Of HDMA
-
-TitleScreenOAM:
-  include "TitleScreenOAM.asm" // Include OAM Table
-
-CourseSelectOAM:
-  include "CourseSelectOAM.asm" // Include OAM Table
-
-CharacterSelectOAM:
-  include "CharacterSelectOAM.asm" // Include OAM Table
 
 // Character Data
 // BANK 1
@@ -186,3 +164,49 @@ insert CharacterGolemTiles,   "GFX/CharacterSelect/CharacterGolem4BPP.pic" // In
 
 insert CharacterArrowPal,     "GFX/CharacterSelect/CharacterArrow4BPP.pal" // Include Sprite Palette Data (32 Bytes)
 insert CharacterArrowTiles,   "GFX/CharacterSelect/CharacterArrow4BPP.pic" // Include Sprite Tile Data (1024 Bytes)
+
+// BANK 7
+seek($78000)
+insert HiScoreLifeHeartPal, "GFX/Course/HiScoreLifeHeart4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert HiScoreTiles,        "GFX/Course/HiScore4BPP.pic" // Include Sprite Tile Data (512 Bytes)
+insert LifeHeartTiles,      "GFX/Course/LifeHeart4BPP.pic" // Include Sprite Tile Data (128 Bytes)
+
+insert DistanceGoalLifeScoreTimePal,   "GFX/Course/DistanceGoalLifeScoreTime4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert DistanceGoalLifeScoreTimeTiles, "GFX/Course/DistanceGoalLifeScoreTime4BPP.pic" // Include Sprite Tile Data (2048 Bytes)
+
+insert ScoreNumberPal,       "GFX/Course/ScoreNumber4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert TimeNumberPal,        "GFX/Course/TimeNumber4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert ScoreTimeNumberTiles, "GFX/Course/ScoreTimeNumber4BPP.pic" // Include Sprite Tile Data (2560 Bytes)
+
+insert DistanceMarkerRoochoPal,   "GFX/Course/DistanceMarkerRoocho4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert DistanceMarkerRoochoTiles, "GFX/Course/DistanceMarkerRoocho4BPP.pic" // Include Sprite Tile Data (256 Bytes)
+
+insert DistanceMarkerBeochiPal,   "GFX/Course/DistanceMarkerBeochi4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert DistanceMarkerBeochiTiles, "GFX/Course/DistanceMarkerBeochi4BPP.pic" // Include Sprite Tile Data (256 Bytes)
+
+insert DistanceMarkerChitoPal,   "GFX/Course/DistanceMarkerChito4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert DistanceMarkerChitoTiles, "GFX/Course/DistanceMarkerChito4BPP.pic" // Include Sprite Tile Data (256 Bytes)
+
+insert DistanceMarkerGolemPal,   "GFX/Course/DistanceMarkerGolem4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert DistanceMarkerGolemTiles, "GFX/Course/DistanceMarkerGolem4BPP.pic" // Include Sprite Tile Data (256 Bytes)
+
+insert CloudDayPal,   "GFX/Course/CloudDay4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert CloudDayTiles, "GFX/Course/CloudDay4BPP.pic" // Include Sprite Tile Data (6144 Bytes)
+
+insert ShadowPal,   "GFX/Character/Shadow4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert ShadowTiles, "GFX/Character/Shadow4BPP.pic" // Include Sprite Tile Data (512 Bytes)
+
+insert RoochoJumpUpPal,   "GFX/Character/Roocho/RoochoJumpUp4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert RoochoJumpUpTiles, "GFX/Character/Roocho/RoochoJumpUp4BPP.pic" // Include Sprite Tile Data (2048 Bytes)
+
+insert BeochiJumpUpPal,   "GFX/Character/Beochi/BeochiJumpUp4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert BeochiJumpUpTiles, "GFX/Character/Beochi/BeochiJumpUp4BPP.pic" // Include Sprite Tile Data (2048 Bytes)
+
+insert ChitoJumpUpPal,   "GFX/Character/Chito/ChitoJumpUp4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert ChitoJumpUpTiles, "GFX/Character/Chito/ChitoJumpUp4BPP.pic" // Include Sprite Tile Data (2048 Bytes)
+
+// BANK 8
+seek($88000)
+insert CourseEasyStage01Pal,   "GFX/Course/Easy/CourseEasyStage01.pal" // Include BG Palette Data (256 Bytes)
+insert CourseEasyStage01Map,   "GFX/Course/Easy/CourseEasyStage01.map" // Include BG Map Data (16384 Bytes)
+insert CourseEasyStage01Tiles, "GFX/Course/Easy/CourseEasyStage01.pic" // Include BG Tile Data (13376 Bytes)
