@@ -1,3 +1,6 @@
+//---------------------
+// Course Easy Stage 01
+//---------------------
 // Direction Pad Changes BG Mode7 X/Z Position
 // X/B Buttons Changes BG Mode7 FOV (Mode7 Distance)
 // Y/A Buttons Changes BG Mode7 Perspective Center Position
@@ -15,17 +18,17 @@ LoadPAL(ScoreNumberPal, $A0, ScoreNumberPal.size, 0) // Load Sprite Palette (Spr
 LoadPAL(TimeNumberPal, $B0, TimeNumberPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
 LoadVRAM(ScoreTimeNumberTiles, $8A00, ScoreTimeNumberTiles.size, 0) // Load Sprite Tiles To VRAM
 
-LoadVRAM(LifeHeartTiles, $8B40, 64, 0) // Load Sprite Tiles To VRAM
-LoadVRAM(LifeHeartTiles + 64, $8D40, 64, 0) // Load Sprite Tiles To VRAM
+LoadVRAM(LifeHeartTiles, $9440, 64, 0) // Load Sprite Tiles To VRAM
+LoadVRAM(LifeHeartTiles + 64, $9640, 64, 0) // Load Sprite Tiles To VRAM
 
 LoadPAL(ShadowPal, $E0, ShadowPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
-LoadVRAM(ShadowTiles, $BD00, 128, 0) // Load Sprite Tiles To VRAM
-LoadVRAM(ShadowTiles + 128, $BF00, 128, 0) // Load Sprite Tiles To VRAM
-LoadVRAM(ShadowTiles + 256, $BD80, 128, 0) // Load Sprite Tiles To VRAM
-LoadVRAM(ShadowTiles + 384, $BF80, 128, 0) // Load Sprite Tiles To VRAM
+LoadVRAM(ShadowTiles, $9500, 128, 0) // Load Sprite Tiles To VRAM
+LoadVRAM(ShadowTiles + 128, $9700, 128, 0) // Load Sprite Tiles To VRAM
+LoadVRAM(ShadowTiles + 256, $9580, 128, 0) // Load Sprite Tiles To VRAM
+LoadVRAM(ShadowTiles + 384, $9780, 128, 0) // Load Sprite Tiles To VRAM
 
 LoadPAL(CloudDayPal, $F0, CloudDayPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
-LoadVRAM(CloudDayTiles, $9400, CloudDayTiles.size, 0) // Load Sprite Tiles To VRAM
+LoadVRAM(CloudDayTiles, $A800, CloudDayTiles.size, 0) // Load Sprite Tiles To VRAM
 
 // Set Character Selection Sprite
 CharacterSelectionRoochoSprite:
@@ -35,10 +38,10 @@ CharacterSelectionRoochoSprite:
   jmp CharacterSelectionBeochiSprite
   CharacterSelectionRoochooSpriteCopy:
     LoadPAL(DistanceMarkerRoochoPal, $C0, DistanceMarkerRoochoPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
-    LoadVRAM(DistanceMarkerRoochoTiles, $8B80, 128, 0) // Load Sprite Tiles To VRAM
-    LoadVRAM(DistanceMarkerRoochoTiles + 128, $8D80, 128, 0) // Load Sprite Tiles To VRAM
+    LoadVRAM(DistanceMarkerRoochoTiles, $9480, 128, 0) // Load Sprite Tiles To VRAM
+    LoadVRAM(DistanceMarkerRoochoTiles + 128, $9680, 128, 0) // Load Sprite Tiles To VRAM
     LoadPAL(RoochoJumpUpPal, $D0, RoochoJumpUpPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
-    LoadVRAM(RoochoJumpUpTiles, $AC00, RoochoJumpUpTiles.size, 0) // Load Sprite Tiles To VRAM
+    LoadVRAM(RoochoJumpUpTiles, $9800, RoochoJumpUpTiles.size, 0) // Load Sprite Tiles To VRAM
     jmp CharacterSelectionSpriteEnd
 CharacterSelectionBeochiSprite:
   bit.b #%00100000 // Test Beochi Bit
@@ -46,10 +49,10 @@ CharacterSelectionBeochiSprite:
   jmp CharacterSelectionChitoSprite
   CharacterSelectionBeochiSpriteCopy:
     LoadPAL(DistanceMarkerBeochiPal, $C0, DistanceMarkerBeochiPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
-    LoadVRAM(DistanceMarkerBeochiTiles, $8B80, 128, 0) // Load Sprite Tiles To VRAM
-    LoadVRAM(DistanceMarkerBeochiTiles + 128, $8D80, 128, 0) // Load Sprite Tiles To VRAM
+    LoadVRAM(DistanceMarkerBeochiTiles, $9480, 128, 0) // Load Sprite Tiles To VRAM
+    LoadVRAM(DistanceMarkerBeochiTiles + 128, $9680, 128, 0) // Load Sprite Tiles To VRAM
     LoadPAL(BeochiJumpUpPal, $D0, BeochiJumpUpPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
-    LoadVRAM(BeochiJumpUpTiles, $AC00, BeochiJumpUpTiles.size, 0) // Load Sprite Tiles To VRAM
+    LoadVRAM(BeochiJumpUpTiles, $9800, BeochiJumpUpTiles.size, 0) // Load Sprite Tiles To VRAM
     jmp CharacterSelectionSpriteEnd
 CharacterSelectionChitoSprite:
   bit.b #%01000000 // Test Chito Bit
@@ -57,10 +60,10 @@ CharacterSelectionChitoSprite:
   jmp CharacterSelectionGolemSprite
   CharacterSelectionChitoSpriteCopy:
     LoadPAL(DistanceMarkerChitoPal, $C0, DistanceMarkerChitoPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
-    LoadVRAM(DistanceMarkerChitoTiles, $8B80, 128, 0) // Load Sprite Tiles To VRAM
-    LoadVRAM(DistanceMarkerChitoTiles + 128, $8D80, 128, 0) // Load Sprite Tiles To VRAM
+    LoadVRAM(DistanceMarkerChitoTiles, $9480, 128, 0) // Load Sprite Tiles To VRAM
+    LoadVRAM(DistanceMarkerChitoTiles + 128, $9680, 128, 0) // Load Sprite Tiles To VRAM
     LoadPAL(ChitoJumpUpPal, $D0, ChitoJumpUpPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
-    LoadVRAM(ChitoJumpUpTiles, $AC00, ChitoJumpUpTiles.size, 0) // Load Sprite Tiles To VRAM
+    LoadVRAM(ChitoJumpUpTiles, $9800, ChitoJumpUpTiles.size, 0) // Load Sprite Tiles To VRAM
     jmp CharacterSelectionSpriteEnd
 CharacterSelectionGolemSprite:
   bit.b #%10000000 // Test Golem Bit
@@ -68,10 +71,10 @@ CharacterSelectionGolemSprite:
   jmp CharacterSelectionSpriteEnd
   CharacterSelectionGolemSpriteCopy:
     LoadPAL(DistanceMarkerGolemPal, $C0, DistanceMarkerGolemPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
-    LoadVRAM(DistanceMarkerGolemTiles, $8B80, 128, 0) // Load Sprite Tiles To VRAM
-    LoadVRAM(DistanceMarkerGolemTiles + 128, $8D80, 128, 0) // Load Sprite Tiles To VRAM
-    LoadPAL(RoochoJumpUpPal, $D0, RoochoJumpUpPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
-    LoadVRAM(RoochoJumpUpTiles, $AC00, RoochoJumpUpTiles.size, 0) // Load Sprite Tiles To VRAM
+    LoadVRAM(DistanceMarkerGolemTiles, $9480, 128, 0) // Load Sprite Tiles To VRAM
+    LoadVRAM(DistanceMarkerGolemTiles + 128, $9680, 128, 0) // Load Sprite Tiles To VRAM
+    LoadPAL(GolemJumpUpPal, $D0, GolemJumpUpPal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
+    LoadVRAM(GolemJumpUpTiles, $9800, GolemJumpUpTiles.size, 0) // Load Sprite Tiles To VRAM
 CharacterSelectionSpriteEnd:
 
 // Clear OAM
@@ -93,10 +96,6 @@ ldx.w #$0020
   dex
   bne -
 
-// Setup Sprites
-lda.b #%00000010 // Object Size = 8x8/16x16, Name = 0, Base = $8000
-sta.w REG_OBSEL // $2101: Object Size & Object Base
-
 // Course Stage OAM Info
 ldx.w #$0000 // X = $0000
 stx.w REG_OAMADDL // $2102: OAM Address & Priority Rotation
@@ -104,7 +103,7 @@ LoopCourseStageOAM:
   lda.w CourseStageOAM,x
   sta.w REG_OAMDATA // Store Byte Of Sprite Attribute
   inx // X++
-  cpx.w #$0200
+  cpx.w #$01D8
   bne LoopCourseStageOAM
 
 // Course Stage OAM Extra Info
@@ -114,7 +113,7 @@ LoopCourseStageOAMSize:
   lda.w CourseStageOAM,x
   sta.w REG_OAMDATA // Store Byte Of Sprite Attribute
   inx // X++
-  cpx.w #$0220
+  cpx.w #$01F6
   bne LoopCourseStageOAMSize
 
 // Setup Video
@@ -217,7 +216,17 @@ stx.w REG_A1T4L  // $4342: DMA4 DMA/HDMA Table Start Address
 lda.b #BDOBJBlendDIVHDMATable >> 16 // HDMA Table Bank
 sta.w REG_A1B4   // $4344: DMA4 DMA/HDMA Table Start Address (Bank)
 
-lda.b #%00011111 // HDMA Channel Select (Channel 0..4)
+// HDMA OAM Size & Object Base
+lda.b #%00000000 // HMDA: Write 1 Bytes Each Scanline
+sta.w REG_DMAP5  // $4350: DMA5 DMA/HDMA Parameters
+lda.b #REG_OBSEL // $01: Start At Object Size & Object Base ($2101)
+sta.w REG_BBAD5  // $4351: DMA5 DMA/HDMA I/O-Bus Address (PPU-Bus AKA B-Bus)
+ldx.w #StageHDMATableOAM // HMDA Table Address
+stx.w REG_A1T5L  // $4352: DMA5 DMA/HDMA Table Start Address
+lda.b #StageHDMATableOAM >> 16 // HDMA Table Bank
+sta.w REG_A1B5   // $4354: DMA5 DMA/HDMA Table Start Address (Bank)
+
+lda.b #%00111111 // HDMA Channel Select (Channel 0..5)
 sta.w REG_HDMAEN // $420C: Select H-Blank DMA (H-DMA) Channels
 
 FadeIN() // Screen Fade In
@@ -321,7 +330,7 @@ Finish:
   jmp InputLoop
 
 CourseStageOAM:
-  // 8x8 / 16x16 Sprites
+  // 8x8 / 32x32 Sprites
   // OAM Info (Course Hi Score 32x8)
   db   8,   8,  10, %00110000
   db  16,   8,  11, %00110000
@@ -339,11 +348,18 @@ CourseStageOAM:
   db  86,   8,   0, %00110000
   db  92,   8,   0, %00110000
 
-  // OAM Info (Score 32x16)
-  db  12,  16,  16, %00110010
-  db  28,  16,  18, %00110010
+  // OAM Info (Course Score 32x16)
+  db  12,  16,  21, %00110010
+  db  20,  16,  22, %00110010
+  db  28,  16,  23, %00110010
+  db  36,  16,  24, %00110010
 
-  // OAM Info (Course Score Number 8x8)
+  db  12,  24,  37, %00110010
+  db  20,  24,  38, %00110010
+  db  28,  24,  39, %00110010
+  db  36,  24,  40, %00110010
+
+  // OAM Info (Course Score Number 8x16)
   db  44,  16,  80, %00110100
   db  44,  24,  96, %00110100
 
@@ -371,175 +387,154 @@ CourseStageOAM:
   db  92,  16,  80, %00110100
   db  92,  24,  96, %00110100
 
+  // 16x16 / 32x32 Sprites
   // OAM Info (Distance Marker 16x16)
-  db   9, 161,  92, %00111000
+  db   9, 161, 164, %00111000
 
-  // OAM Info (Goal 32x16)
-  db   6,  38,  24, %00110010
-  db  22,  38,  26, %00110010
+  // OAM Info (Goal 24x16)
+  db   6,  40,  29, %00110010
+  db  14,  40,  30, %00110010
 
   // OAM Info (Distance Fill 16x112)
-  db  15,  58,  94, %00111000
-  db  15,  74,  94, %00111000
-  db  15,  90,  94, %00111000
-  db  15, 106,  94, %00111000
-  db  15, 122,  94, %00111000
-  db  15, 138,  94, %00111000
-  db  15, 154,  94, %00111000
+  db  15,  58, 166, %00111000
+  db  15,  74, 166, %00111000
+  db  15,  90, 166, %00111000
+  db  15, 106, 166, %00111000
+  db  15, 122, 166, %00111000
+  db  15, 138, 166, %00111000
+  db  15, 154, 166, %00111000
 
-  // OAM Info (Distance Block 8x120)
-  db  15,  51,  28, %00110010
-  db  15,  59,  30, %00110010
-  db  15,  75,  30, %00110010
-  db  15,  91,  30, %00110010
-  db  15, 107,  30, %00110010
-  db  15, 123,  30, %00110010
-  db  15, 139,  30, %00110010
-  db  15, 155,  30, %00110010
-  db  15, 163,  29, %00110010
+  // OAM Info (Distance Block 16x120)
+  db  15,  51,  58, %00110010
+  db  15,  67,  60, %00110010
+  db  15,  83,  60, %00110010
+  db  15,  99,  60, %00110010
+  db  15, 115,  60, %00110010
+  db  15, 131,  60, %00110010
+  db  15, 147,  60, %00110010
+  db  15, 155,  62, %00110010
 
-  // OAM Info (Time Number Large 8x24)
-  db  18, 189, 120, %00110110
-  db  18, 197, 136, %00110110
-  db  18, 205, 152, %00110110
+  // OAM Info (Time Number Large 16x24)
+  db  18, 186, 124, %00110110
+  db  18, 194, 140, %00110110
 
-  db  26, 189, 121, %00110110
-  db  26, 197, 137, %00110110
-  db  26, 205, 153, %00110110
+  db  26, 186, 126, %00110110
+  db  26, 194, 142, %00110110
 
-  // OAM Info (Time Number Small 8x16)
-  db  35, 202, 122, %00110110
+  // OAM Info (Time Number Small 16x16)
+  db  35, 202, 160, %00110110
+  db  41, 193,  94, %00110110
 
-  db  41, 193,  89, %00110110
-  db  41, 201, 105, %00110110
+  // OAM Info (Time 40x40)
+  db  13, 174,  16, %00110010
+  db  37, 174,  19, %00110010
+  db  37, 190,  51, %00110010
 
-  // OAM Info (Time 48x40)
-  db  13, 174,  48, %00110010
-  db  29, 174,  50, %00110010
-  db  45, 174,  52, %00110010
-
-  db  13, 190,  54, %00110010
-  db  29, 190,  56, %00110010
-  db  45, 190,  58, %00110010
-
-  db  13, 206,  60, %00110010
-  db  21, 206,  61, %00110010
-  db  29, 206,  62, %00110010
-  db  37, 206,  63, %00110010
-  db  45, 206,  76, %00110010
+  db  13, 206,  53, %00110010
+  db  29, 206,  55, %00110010
+  db  37, 206,  56, %00110010
 
   // OAM Info (Life 32x16)
-  db 202, 174,  20, %00110010
-  db 218, 174,  22, %00110010
+  db 202, 174,  25, %00110010
+  db 218, 174,  27, %00110010
 
   // OAM Info (Life Heart X5 16x16)
-  db 171, 194,  90, %00110000
-  db 186, 194,  90, %00110000
-  db 201, 194,  90, %00110000
-  db 216, 194,  90, %00110000
-  db 231, 194,  90, %00110000
+  db 171, 194, 162, %00110000
+  db 186, 194, 162, %00110000
+  db 201, 194, 162, %00110000
+  db 216, 194, 162, %00110000
+  db 231, 194, 162, %00110000
 
-  // OAM Info (Character 48x80)
-  db 104,  68,  96, %00111011
-  db 120,  68,  98, %00111011
-  db 136,  68, 100, %00111011
+  // OAM Info (Character 96x96)
+  db  80,  52, 192, %00111010
+  db 112,  52, 196, %00111010
+  db 144,  52, 200, %00111010
 
-  db 104,  84, 102, %00111011
-  db 120,  84, 104, %00111011
-  db 136,  84, 106, %00111011
+  db  80,  84, 204, %00111010
+  db 112,  84,   0, %00111011
+  db 144,  84,   4, %00111011
 
-  db 104, 100, 108, %00111011
-  db 120, 100, 110, %00111011
-  db 136, 100, 128, %00111011
-
-  db 104, 116, 130, %00111011
-  db 120, 116, 132, %00111011
-  db 136, 116, 134, %00111011
-
-  db 104, 132, 136, %00111011
-  db 120, 132, 138, %00111011
-  db 136, 132, 140, %00111011
+  db  80, 116,   8, %00111011
+  db 112, 116,  12, %00111011
 
   // OAM Info (Shadow 32x32)
-  db 112, 132, 232, %00001101
-  db 128, 132, 234, %00001101
+  db 112, 132, 168, %00001100
+  db 128, 132, 170, %00001100
 
-  db 112, 148, 236, %00001101
-  db 128, 148, 238, %00001101
+  db 112, 148, 172, %00001100
+  db 128, 148, 174, %00001100
 
   // OAM Info (Cloud A 80x48)
-  db  44,   2, 160, %00001110
-  db  60,   2, 162, %00001110
-  db  76,   2, 164, %00001110
-  db  92,   2, 166, %00001110
-  db 108,   2, 168, %00001110
+  db  44,   2, 166, %00001111
+  db  76,   2, 170, %00001111
+  db  92,   2, 172, %00001111
 
-  db  44,  18, 192, %00001110
-  db  60,  18, 194, %00001110
-  db  76,  18, 196, %00001110
-  db  92,  18, 198, %00001110
-  db 108,  18, 200, %00001110
+  db  44,  34, 230, %00001111
+  db  52,  34, 231, %00001111
+  db  60,  34, 232, %00001111
+  db  68,  34, 233, %00001111
+  db  76,  34, 234, %00001111
+  db  84,  34, 235, %00001111
+  db  92,  34, 236, %00001111
+  db 100,  34, 237, %00001111
+  db 108,  34, 238, %00001111
 
-  db  44,  34, 224, %00001110
-  db  60,  34, 226, %00001110
-  db  76,  34, 228, %00001110
-  db  92,  34, 230, %00001110
-  db 108,  34, 232, %00001110
+  // OAM Info (Cloud B 80x48)
+  db  84, 174,  76, %00001111
+  db 116, 174, 160, %00001111
+  db 148, 174, 164, %00001111
 
-  // OAM Info (Cloud B 96x48)
+  db 148, 190, 196, %00001111
+
+  db  84, 206, 140, %00001111
+  db 100, 206, 142, %00001111
+  db 116, 206, 224, %00001111
+  db 132, 206, 226, %00001111
+  db 148, 206, 228, %00001111
 
   // OAM Info (Cloud C 96x48)
-  db  84, 174,   6, %00001111
-  db 100, 174,   8, %00001111
-  db 116, 174,  10, %00001111
-  db 132, 174,  12, %00001111
-  db 148, 174,  14, %00001111
+  db 174,  76,  64, %00001111
+  db 206,  76,  68, %00001111
+  db 238,  76,  72, %00001111
 
-  db  84, 190,  38, %00001111
-  db 100, 190,  40, %00001111
-  db 116, 190,  42, %00001111
-  db 132, 190,  44, %00001111
-  db 148, 190,  46, %00001111
-
-  db  84, 206,  70, %00001111
-  db 100, 206,  72, %00001111
-  db 116, 206,  74, %00001111
-  db 132, 206,  76, %00001111
-  db 148, 206,  78, %00001111
+  db 174, 108, 128, %00001111
+  db 190, 108, 130, %00001111
+  db 206, 108, 132, %00001111
+  db 222, 108, 134, %00001111
+  db 238, 108, 136, %00001111
+  db 254, 108, 138, %00001111
 
   // OAM Extra Info
   db %00000000
   db %00000000
   db %00000000
-  db %00101000
   db %00000000
   db %00000000
   db %00000000
   db %00000000
-  db %10101000
+  db %00000000
+  db %00000000
+  db %00000000
+  db %00000000
+  db %00000000
+  db %00000000
+  db %00000000
+  db %00000000
+  db %10000000
+  db %00000000
+  db %00000000
+  db %00000000
   db %10101010
+  db %10101010
+  db %00000000
   db %00101010
-  db %10101010
+  db %00000000
+  db %00000000
   db %00001010
   db %00000000
-  db %00000000
   db %10101000
-  db %00101010
   db %00000000
-  db %10101010
-  db %10101010
-  db %10101010
-  db %10101010
-  db %10101010
-  db %10101010
-  db %10101010
-  db %10101010
-  db %10101010
-  db %10101010
-  db %10101010
-  db %10101010
-  db %10101010
-  db %10101010
+  db %10100000
 
 M7IntensityHDMATable:
   db 1, %11111111 // Repeat 1 Scanlines, RGB Intensity 31
@@ -588,6 +583,11 @@ BDOBJBlendDIVHDMATable:
   db   4, %00000001 // Repeat   4 Scanlines, Enable Colour Addition On BG1
   db  32, %01000001 // Repeat  32 Scanlines, Enable Colour Addition On BG1, Half Result
   db   1, %00000000 // Repeat   1 Scanlines, Enable Colour Addition On BG1
+  db 0 // End Of HDMA
+
+StageHDMATableOAM:
+  db 40, %00100010 // Repeat 40 Scanlines, Object Size =   8x8/32x32, Name = 0, Base = $8000
+  db  1, %01100010 // Repeat  1 Scanlines, Object Size = 16x16/32x32, Name = 0, Base = $8000
   db 0 // End Of HDMA
 
 M7COSHDMATable: // Mode7 +COS (A & D) Table 224 * Rotation / Scaling Ratios (Last 8-Bits Fractional)

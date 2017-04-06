@@ -513,7 +513,7 @@ CourseVeryHard:
 
 CourseSelectHDMATableOAM:
   db 128, %01100011 // Repeat 128 Scanlines, Object Size = 16x16/32x32, Name = 0, Base = $C000
-  db  56, %01100011 // Repeat  56 Scanlines, Object Size = 16x16/32x32, Name = 0, Base = $C000
+  db  58, %01100011 // Repeat  58 Scanlines, Object Size = 16x16/32x32, Name = 0, Base = $C000
   db   1, %00000010 // Repeat   1 Scanlines, Object Size =   8x8/16x16, Name = 0, Base = $8000
   db 0 // End Of HDMA
 

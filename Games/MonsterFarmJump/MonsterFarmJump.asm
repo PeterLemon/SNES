@@ -176,7 +176,7 @@ insert DistanceGoalLifeScoreTimeTiles, "GFX/Course/DistanceGoalLifeScoreTime4BPP
 
 insert ScoreNumberPal,       "GFX/Course/ScoreNumber4BPP.pal" // Include Sprite Palette Data (32 Bytes)
 insert TimeNumberPal,        "GFX/Course/TimeNumber4BPP.pal" // Include Sprite Palette Data (32 Bytes)
-insert ScoreTimeNumberTiles, "GFX/Course/ScoreTimeNumber4BPP.pic" // Include Sprite Tile Data (2560 Bytes)
+insert ScoreTimeNumberTiles, "GFX/Course/ScoreTimeNumber4BPP.pic" // Include Sprite Tile Data (3584 Bytes)
 
 insert DistanceMarkerRoochoPal,   "GFX/Course/DistanceMarkerRoocho4BPP.pal" // Include Sprite Palette Data (32 Bytes)
 insert DistanceMarkerRoochoTiles, "GFX/Course/DistanceMarkerRoocho4BPP.pic" // Include Sprite Tile Data (256 Bytes)
@@ -196,17 +196,22 @@ insert CloudDayTiles, "GFX/Course/CloudDay4BPP.pic" // Include Sprite Tile Data 
 insert ShadowPal,   "GFX/Character/Shadow4BPP.pal" // Include Sprite Palette Data (32 Bytes)
 insert ShadowTiles, "GFX/Character/Shadow4BPP.pic" // Include Sprite Tile Data (512 Bytes)
 
-insert RoochoJumpUpPal,   "GFX/Character/Roocho/RoochoJumpUp4BPP.pal" // Include Sprite Palette Data (32 Bytes)
-insert RoochoJumpUpTiles, "GFX/Character/Roocho/RoochoJumpUp4BPP.pic" // Include Sprite Tile Data (2048 Bytes)
-
-insert BeochiJumpUpPal,   "GFX/Character/Beochi/BeochiJumpUp4BPP.pal" // Include Sprite Palette Data (32 Bytes)
-insert BeochiJumpUpTiles, "GFX/Character/Beochi/BeochiJumpUp4BPP.pic" // Include Sprite Tile Data (2048 Bytes)
-
-insert ChitoJumpUpPal,   "GFX/Character/Chito/ChitoJumpUp4BPP.pal" // Include Sprite Palette Data (32 Bytes)
-insert ChitoJumpUpTiles, "GFX/Character/Chito/ChitoJumpUp4BPP.pic" // Include Sprite Tile Data (2048 Bytes)
-
 // BANK 8
 seek($88000)
 insert CourseEasyStage01Pal,   "GFX/Course/Easy/CourseEasyStage01.pal" // Include BG Palette Data (256 Bytes)
 insert CourseEasyStage01Map,   "GFX/Course/Easy/CourseEasyStage01.map" // Include BG Map Data (16384 Bytes)
 insert CourseEasyStage01Tiles, "GFX/Course/Easy/CourseEasyStage01.pic" // Include BG Tile Data (13376 Bytes)
+
+// BANK 9
+seek($98000)
+insert RoochoJumpUpPal,   "GFX/Character/Roocho/RoochoJumpUp4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert RoochoJumpUpTiles, "GFX/Character/Roocho/RoochoJumpUp4BPP.pic" // Include Sprite Tile Data (4096 Bytes)
+
+insert BeochiJumpUpPal,   "GFX/Character/Beochi/BeochiJumpUp4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert BeochiJumpUpTiles, "GFX/Character/Beochi/BeochiJumpUp4BPP.pic" // Include Sprite Tile Data (4096 Bytes)
+
+insert ChitoJumpUpPal,   "GFX/Character/Chito/ChitoJumpUp4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert ChitoJumpUpTiles, "GFX/Character/Chito/ChitoJumpUp4BPP.pic" // Include Sprite Tile Data (4096 Bytes)
+
+insert GolemJumpUpPal,   "GFX/Character/Golem/GolemJumpUp4BPP.pal" // Include Sprite Palette Data (32 Bytes)
+insert GolemJumpUpTiles, "GFX/Character/Golem/GolemJumpUp4BPP.pic" // Include Sprite Tile Data (4096 Bytes)
