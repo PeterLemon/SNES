@@ -25,6 +25,8 @@ BG1ScrPosX:
   dw 0 // Mode7 BG1 Scroll Position X Word
 BG1ScrPosY:
   dw 0 // Mode7 BG1 Scroll Position Y Word
+StageMapOffset:
+  dw 0 // Stage Map Offset Word
 
 seek($8000); Start:
   SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
@@ -199,11 +201,14 @@ insert ShadowTiles, "GFX/Character/Shadow4BPP.pic" // Include Sprite Tile Data (
 // BANK 8
 seek($88000)
 insert CourseEasyStage01Pal,   "GFX/Course/Easy/CourseEasyStage01.pal" // Include BG Palette Data (256 Bytes)
-insert CourseEasyStage01Map,   "GFX/Course/Easy/CourseEasyStage01.map" // Include BG Map Data (16384 Bytes)
-insert CourseEasyStage01Tiles, "GFX/Course/Easy/CourseEasyStage01.pic" // Include BG Tile Data (13376 Bytes)
+insert CourseEasyStage01Tiles, "GFX/Course/Easy/CourseEasyStage01.pic" // Include BG Tile Data (14400 Bytes)
 
 // BANK 9
 seek($98000)
+insert CourseEasyStage01Map,   "GFX/Course/Easy/CourseEasyStage01.map" // Include BG Map Data (21168 Bytes)
+
+// BANK 10
+seek($A8000)
 insert RoochoJumpUpPal,   "GFX/Character/Roocho/RoochoJumpUp4BPP.pal" // Include Sprite Palette Data (32 Bytes)
 insert RoochoJumpUpTiles, "GFX/Character/Roocho/RoochoJumpUp4BPP.pic" // Include Sprite Tile Data (4096 Bytes)
 
