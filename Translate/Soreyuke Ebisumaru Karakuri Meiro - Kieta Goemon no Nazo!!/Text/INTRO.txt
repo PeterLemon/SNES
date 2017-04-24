@@ -1,0 +1,146 @@
+﻿ゴエモンはーん。いてまっか?
+Hi Goemon. Are you in?
+$F0000
+00	1C	89	83	C2	CD	49	ED	6D	0F	00	21	42	4E	E3	25	EF	00	00	00	00	00	00	00	00	| Original Japanese Hex
+ 	"	ゴ	エ	モ	ン	は	ー	ん	。		い	て	ま	っ	か	?	 	 	 	 	 	 	 	END	| Original Japanese Text
+H	i	 	G	o	e	m	o	n	.	 	A	r	e	 	y	o	u	 	i	n	?	 	 	END	| New English Text
+
+あれ? どこいったんや?
+Huh? Where did you go?
+$F0019
+00	20	69	EF	00	1C	43	29	21	E3	2F	6D	63	EF	00	00	00	00	00	00	00	00	00	00	00	| Original Japanese Hex
+ 	あ	れ	?	 	"	ど	こ	い	っ	た	ん	や	?	 	 	 	 	 	 	 	 	 	 	END	| Original Japanese Text
+H	u	h	?	 	W	h	e	r	e	 	d	i	d	 	y	o	u	 	g	o	?	 	 	END	| New English Text
+
+さては れてにないしょで ひとりで
+Well then, I guess I'll be eating
+$F0032 (Line 1)
+00	2A	42	49	00	6B	42	45	44	21	2B	E2	1C	42	00	4A	43	67	1C	42	00	00	00	00	00	00	| Original Japanese Hex
+ 	さ	て	は	 	れ	て	に	な	い	し	ょ	"	で	 	ひ	と	り	"	で	 	 	 	 	 	END	| Original Japanese Text
+W	e	l	l	,	 	I	 	g	u	e	s	s	 	I	'	l	l	 	h	a	v	e	 	 	END	| New English Text
+うまいもん たべに いったんちゃいまっか!?
+this delicious meal alone!?
+$F004C (Line 2)
+00	22	4E	21	62	6D	00	2F	1C	4C	45	00	21	E3	2F	6D	40	E0	21	4E	E3	25	EE	EF	00	| Original Japanese Hex
+ 	う	ま	い	も	ん	 	た	"	べ	に	 	い	っ	た	ん	ち	ゃ	い	ま	っ	か	!	?	END	| Original Japanese Text
+t	o	 	e	a	t	 	t	h	i	s	 	f	o	o	d	 	a	l	o	n	e	!	?	END	| New English Text
+
+??????????????????????
+??????????????????????
+$F0065
+00	EF	EF	EF	EF	EF	EF	EF	EF	EF	EF	EF	EF	EF	EF	EF	EF	EF	EF	EF	EF	EF	EF	00	| Original Japanese Hex
+ 	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	END	| Original Japanese Text
+?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	END	| New English Text
+
+ん??? なんや このてがみは・・・???
+Hmm??? What is this letter...???
+$F007D (Line 1)
+00	6D	EF	EF	EF	00	44	6D	63	00	29	48	42	1C	25	4F	49	EC	EC	EC	EF	EF	EF	00	00	| Original Japanese Hex
+ 	ん	?	?	?	 	な	ん	や	 	こ	の	て	"	が	み	は	・	・	・	?	?	?	 	END	| Original Japanese Text
+W	h	a	t	 	i	s	 	t	h	i	s		l	e	t	t	e	r	.	.	.	?	 	END	| New English Text
+なに? なに???
+Huh? What???
+$F0096 (Line 2)
+00	44	45	EF	00	44	45	EF	EF	EF	00	00	00	00	00	00	00	00	00	00	00	00	00	00	| Original Japanese Hex
+ 	な	に	?	 	な	に	?	?	?	 		 	 	 	 	 	 	 	 	 	 	 	END	| Original Japanese Text
+H	m	m	?	 	W	h	a	t	?	?	?	 	 	 	 	 	 	 	 	 	 	 	END	| New English Text
+
+「からくりアイランド」に いってくる。
+I'm going to "Karakuri Island".
+$F00AE (Line 1)
+00	EA	25	66	27	67	80	81	C6	CD	1C	A3	EB	45	00	21	E3	42	27	68	0F	00	00	00	00	| Original Japanese Hex
+ 	「	か	ら	く	り	ア	イ	ラ	ン	"	ド	」	に	 	い	っ	て	く	る	。	 	 	 	END	| Original Japanese Text
+I	'	m	 	g	o	i	n	g	 	t	o	 	"	K	a	r	a	k	u	r	i	 	 	END	| New English Text
+るすをたのむ。 ゴエモン。
+Take care of the house. Goemon.
+$F00C7 (Line 2)
+00	68	2C	6C	2F	48	60	0F	00	1C	89	83	C2	CD	0F	00	00	00	00	00	00	00	00	00	00	| Original Japanese Hex
+ 	る	す	を	た	の	む	。	 	"	ゴ	エ	モ	ン	。	 	 	 	 	 	 	 	 	 	END	| Original Japanese Text
+I	s	l	a	n	d	"		t	a	k	e	 	c	a	r	e	・	G	o	e	m	o	n	END	| New English Text
+
+あんなぶっそうなしまに ゴエモンはん
+Do not worry Goemon,
+$F00E0 (Line 1)
+00	20	6D	44	1C	4B	E3	2E	22	44	2B	4E	45	00	1C	89	83	C2	CD	49	6D	00	00	00	00	00	| Original Japanese Hex
+ 	あ	ん	な	"	ぶ	っ	そ	う	な	し	ま	に	 	"	ゴ	エ	モ	ン	は	ん	 	 	 	 	END	| Original Japanese Text
+D	o	 	n	o	t	 	w	o	r	r	y	 	G	o	e	m	o	n	.	.	.	 	 	 	 	 	END	| New English Text
+いったい なにしに いきはったんやろか?
+what on earth am I going to do?
+$F00FA (Line 2)
+00	21	E3	2F	21	00	44	45	2B	45	00	21	26	49	E3	2F	6D	63	6A	25	EF	00	00	00	| Original Japanese Hex
+ 	い	っ	た	い	 	な	に	し	に	 	い	き	は	っ	た	ん	や	ろ	か	?	 	 	END	| Original Japanese Text
+W	h	a	t	 	a	m	 	I	 	g	o	i	n	g	 	t	o	 	d	o	?	 	END	| New English Text
+
+ま、ええわ。 ひまつぶしに グームでもして
+Well, yeah. I could play
+$F0112 (Line 1)
+00	4E	0E	23	23	6B	0F	00	4A	4E	41	1C	4B	2B	45	00	1C	88	ED	C0	1C	42	62	2B	42	00	00	| Original Japanese Hex
+ 	ま	、	え	え	わ	。	 	ひ	ま	つ	"	ぶ	し	に	 	"	グ	ー	ム	"	で	も	し	て	 	END	| Original Japanese Text
+W	e	l	l	,	 	y	e	a	h	.	 	I	 	c	o	u	l	d	 	p	l	a	y	 	 	END	| New English Text
+るすばんでも しといたりまひょか。
+a game to kill time.
+$F012D (Line 2)
+00	68	2C	1C	49	6D	1C	42	62	00	2B	43	21	2F	67	4E	4A	E2	25	0F	00	00	00	00	00	00	| Original Japanese Hex
+ 	る	す	"	ば	ん	"	で	も	 	し	と	い	た	り	ま	ひ	ょ	か	。	 	 	 	 	 	END	| Original Japanese Text
+a	 	g	a	m	e	 	t	o	 	k	i	l	l	 	t	i	m	e	.	 	 	 	 	 	END	| New English Text
+
+それにしても ゴエモンはん。
+At any rate, Goemon.
+$F0147 (Line 1)
+00	2E	69	45	2B	42	62	00	1C	89	83	C2	CD	49	6D	0F	00	00	00	00	00	00	00	00	00	| Original Japanese Hex
+ 	そ	れ	に	し	て	も	 	"	ゴ	エ	モ	ン	は	ん	。	 	 	 	 	 	 	 	 	END	| Original Japanese Text
+A	t	 	a	n	y	 	r	a	t	e	,	 	G	o	e	m	o	n	.	 	 	 	 	END	| New English Text
+かえりおそいなぁ。
+I still feel hungry.
+$F0160 (Line 2)
+00	25	23	67	24	2E	21	44	6E	0F	00	00	00	00	00	00	00	00	00	00	00	00	00	00	| Original Japanese Hex
+ 	か	え	り	お	そ	い	な	ぁ	。	 	 	 	 	 	 	 	 	 	 	 	 	 	END	| Original Japanese Text
+I	 	s	t	i	l	l	 	f	e	e	l	 	h	u	n	g	r	y	.	 	 	 	END	| New English Text
+
+なんか あったんと ちゃうやろか?!
+Are you in any trouble?!
+$F0178
+00	44	6D	25	00	20	E3	2F	6D	43	00	40	E0	22	63	6A	25	EF	EE	00	00	00	00	00	| Original Japanese Hex
+ 	な	ん	か	 	あ	っ	た	ん	と	 	ち	ゃ	う	や	ろ	か	?	!	 	 	 	 	END	| Original Japanese Text
+A	r	e	 	y	o	u	 	i	n	 	a	n	y	 	t	r	o	u	b	l	e	?	END	| New English Text
+
+やはり ゴエモンはんには、わてがついてな
+After all, this does not
+$F0190 (Line 1)
+00	63	49	67	00	1C	89	83	C2	CD	49	6D	45	49	0E	6B	42	1C	25	41	21	42	44	00	00	00	| Original Japanese Hex
+ 	や	は	り	 	"	ゴ	エ	モ	ン	は	ん	に	は	、	わ	て	"	が	つ	い	て	な 	 	 	END	| Original Japanese Text
+A	f	t	e	r	 	a	l	l	,	 	t	h	i	s	 	d	o	e	s	 	n	o	t	 	END	| New English Text
+あかんようやな。
+seem good for Goemon.
+$F01AA (Line 2)
+00	20	25	6D	65	22	63	44	0F	00	00	00	00	00	00	00	00	00	00	00	00	00	00	00	| Original Japanese Hex
+ 	あ	か	ん	よ	う	や	な	。	 	 	 	 	 	 	 	 	 	 	 	 	 	 	END	| Original Japanese Text
+s	e	e	m	 	g	o	o	d	 	f	o	r	 	G	o	e	m	o	n	.	 	 	END	| New English Text
+
+どうせ まいごにでも なったんやろ。
+I hope he is all right.
+$F01C2
+00	1C	43	22	2D	00	4E	21	1C	29	45	1C	42	62	00	44	E3	2F	6D	63	6A	0F	00	00	00	00	00	| Original Japanese Hex
+ 	"	ど	う	せ	 	ま	い	"	ご	に	"	で	も	 	な	っ	た	ん	や	ろ	。	 	 	 	 	END	| Original Japanese Text
+I	 	h	o	p	e	 	h	e	 	i	s	 	a	l	l	 	r	i	g	h	t	.	 		 	END	| New English Text
+
+たベものも なくなった ことやし・・・・・・
+What if he has gone missing......
+$F01DD (Line 1)
+00	2F	1C	4C	62	48	62	00	44	27	44	E3	2F	00	29	43	63	2B	EC	EC	EC	EC	EC	EC	00	| Original Japanese Hex
+ 	た	"	ベ	も	の	も	 	な	く	な	っ	た	 	こ	と	や	し	・	・	・	・	・	・	END	| Original Japanese Text
+W	h	a	t	 	i	f	 	h	e	 	i	s	 	m	i	s	s	i	n	g	.	.	.	END	| New English Text
+いっちよ、たすけに いったりまひょか!!!
+Wait a minute, why did you not say hi!!!
+$F01F6 (Line 2)
+00	21	E3	40	E2	0E	2F	2C	28	45	00	21	E3	2F	67	4E	4A	E2	25	EE	EE	EE	00	00	00	| Original Japanese Hex
+ 	い	っ	ち	よ	、	た	す	け	に	 	い	っ	た	り	ま	ひ	ょ	か	!	!	!	 	 	END	| Original Japanese Text
+W	h	y	 	d	i	d	n	'	t	 	y	o	u	 	s	a	y	 	h	i	!	!	!	END	| New English Text
+
+ついに わてが しゅやくでんな・・・フフフ
+Finally I am in the lead role...
+At last I am the main character...
+$F020E
+00	41	21	45	00	6B	42	1C	25	00	2B	E1	63	27	1C	42	6D	44	EC	EC	EC	AB	AB	AB	00	00	| Original Japanese Hex
+ 	つ	い	に	 	わ	て	"	が	 	し	ゅ	や	く	"	で	ん	な	・	・	・	フ	フ	フ	 	END	| Original Japanese Text
+N	o	w	 	I	'	m	 	t	h	e	 	l	e	a	d	 	r	o	l	e	.	.	.	 	END	| New English Text
