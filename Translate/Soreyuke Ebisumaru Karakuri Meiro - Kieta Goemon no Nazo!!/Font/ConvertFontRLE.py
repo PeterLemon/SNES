@@ -92,7 +92,7 @@ with open("FontENG.pic", "rb") as fin:
                 bytein = fin.read(1)
                 rlecount -= 1
             i += 1
-fout.seek(0) #get to the first position
+fout.seek(0) # Seek To The Start Of The Output File
 fout.write(b"%c" %(bytelength & 0xFF))
 fout.write(b"%c" %(bytelength >> 8))
 fin.close()
