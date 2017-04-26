@@ -11,7 +11,8 @@ with open("FontENG.pic", "rb") as fin:
     zerocount = 0
     while bytein:
         if bytein != b'\x00': # RAW Copy Block
-            if zerocount >= 3:
+            rawcount += 1
+            if zerocount >= 2:
                 if zerocount >= 258: # RLE Data > MAX LENGTH
                     while zerocount >= 258:
                         RAWRLELENGTH.append(BLOCKRLEZERO8)
@@ -22,14 +23,13 @@ with open("FontENG.pic", "rb") as fin:
                 RAWRLELENGTH.append(zerocount-2)
             else:
                 rawcount += zerocount
-            rawcount += 1
             zerocount = 0
         else: # RLE Zero Block (bytein == b'\x00')
-            if zerocount == 3:
+            zerocount += 1
+            if zerocount == 2:
                 if rawcount != 0:
                     RAWRLELENGTH.append(BLOCKRAW+rawcount)
                 rawcount = 0
-            zerocount += 1
 
         if rawcount >= 31: # MAX RAW Copy Length Check
             RAWRLELENGTH.append(BLOCKRAW+31)
@@ -40,7 +40,7 @@ fin.close()
 
 # Get Last Remaing Block (IF Any) After File Has Been Read
 # RLE Zero Block
-if zerocount >= 3:
+if zerocount >= 2:
     if zerocount >= 258: # RLE Data > MAX LENGTH
         while zerocount >= 258:
             RAWRLELENGTH.append(BLOCKRLEZERO8)
