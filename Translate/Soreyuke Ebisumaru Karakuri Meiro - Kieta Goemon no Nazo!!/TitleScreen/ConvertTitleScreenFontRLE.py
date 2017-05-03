@@ -5,7 +5,7 @@ BLOCKRLEZERO8 = 0xFF # BLOCK: RLE Zero 8-Bit "0xFF,  LENGTH-2 (2..257)"
 
 RAWRLELENGTH = []
 # 1st PASS: Get RAW & Zero Run Data Lengths From File in Order
-with open("Font2BPPENG.pic", "rb") as fin:
+with open("TitleScreenFont4BPPENG.pic", "rb") as fin:
     bytein = fin.read(1)
     rawcount = 0
     zerocount = 0
@@ -58,12 +58,12 @@ if rawcount != 0:
     RAWRLELENGTH.append(BLOCKRAW+rawcount)
 
 # 2nd PASS: Save Lengths & RAW Data To File
-fout = open("Font2BPPENG.rle", "wb")
+fout = open("TitleScreenFont4BPPENG.rle", "wb")
 i = 0
 bytelength = 2
 fout.write(b"%c" %0x00) # 2 Byte Pad For Byte Length
 fout.write(b"%c" %0x00)
-with open("Font2BPPENG.pic", "rb") as fin:
+with open("TitleScreenFont4BPPENG.pic", "rb") as fin:
     while i < len(RAWRLELENGTH):
         if RAWRLELENGTH[i] != 255: # RAW Copy Bytes
             fout.write(b"%c" %RAWRLELENGTH[i])

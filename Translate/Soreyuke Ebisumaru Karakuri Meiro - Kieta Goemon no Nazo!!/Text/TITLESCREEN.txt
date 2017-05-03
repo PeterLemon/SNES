@@ -1,0 +1,90 @@
+﻿// Blue Text
+ひとりであそぶ
+PLAYALONE / 1PLAYER / STORYMODE
+$0C629 (Top Half)
+$2260 $2261	$2262 $2263	$2264 $2265	$2266 $2267	$2268 $2269	$222C $222D	$226A $226B	$0000 $0000	| Original Japanese Hex
+ひ		と		り		で		あ		そ		ぶ	 			| Original Japanese Text
+S	T	O	R	Y	 	M	O	D	E	 	 	 	 	 	 	| New English Text
+$0C669 (Bottom Half)
+$2270 $2271	$2272 $2273	$2274 $2275	$2276 $2277	$2278 $2279	$223C $223D	$227A $227B	$0000 $0000	| Original Japanese Hex
+ひ		と		り		で		あ		そ		ぶ	 			| Original Japanese Text
+S	T	O	R	Y	 	M	O	D	E	 	 	 	 	 	 	| New English Text
+
+ふれりで れいせん
+EXHIBITION / 2PLAYER / MULTIPLAYER
+$0C689 (Top Half)
+$226C $226D	$226E $226F	$2264 $2265	$2266 $2267	$226E $226F	$2200 $2201	$2242 $2243	$2280 $2281	| Original Japanese Hex
+ふ		れ		り		で		れ		い		せ		ん		| Original Japanese Text
+M	U	L	T	I	 	P	L	A	Y	E	R	 	 			| New English Text
+$0C6C9 (Bottom Half)
+$227C $227D	$227E $227F	$2274 $2275	$2276 $2277	$227E $227F	$2210 $2211	$2252 $2253	$2290 $2291	| Original Japanese Hex
+ふ		れ		り		で		れ		い		せ		ん		| Original Japanese Text
+M	U	L	T	I	 	P	L	A	Y	E	R	 	 			| New English Text
+
+パスワード
+PASSWORD
+$0C6E9 (Top Half)
+$2282 $2283	$2284 $2285	$2286 $2287	$2288 $2289	$228A $228B	$0000 $0000	$0000 $0000	$0000 $0000	| Original Japanese Hex
+パ		ス		ワ		ー		ド								| Original Japanese Text
+P	A	S	S	W	O	R	D	 	I	N	P	U	T	 	 	| New English Text
+$0C729 (Bottom Half)
+$2292 $2293	$2294 $2295	$2296 $2297	$2298 $2299	$229A $229B	$0000 $0000	$0000 $0000	$0000 $0000	| Original Japanese Hex
+パ		ス		ワ		ー		ド								| Original Japanese Text
+P	A	S	S	W	O	R	D	 	I	N	P	U	T	 	 	| New English Text
+
+そらさ せってい
+SETTINGS / OPTIONS
+$0C749 (Top Half)
+$222C $222D	$222E $222F 	$2240 $2241	$2242 $2243	$2244 $2245	$2246 $2647	$2200 $2201	$0000 $0000	| Original Japanese Hex
+そ		ら		さ		せ		っ		て		い				| Original Japanese Text
+C	O	N	F	I	G	U	R	A	T	I	O	N	 	 	 	| New English Text
+$0C789 (Bottom Half)
+$223C $223D	$223E $223F 	$2250 $2251	$2252 $2253	$2254 $2255	$2256 $2657	$2210 $2211	$0000 $0000	| Original Japanese Hex
+そ		ら		さ		せ		っ		て		い				| Original Japanese Text
+C	O	N	F	I	G	U	R	A	T	I	O	N	 	 	 	| New English Text
+
+
+// Yellow Text
+ひとりであそぶ
+PLAYALONE / 1PLAYER / STORYMODE
+$0C7A9 (Top Half)
+$2660 $2661	$2662 $2663	$2664 $2665	$2666 $2667	$2668 $2669	$262C $262D	$266A $266B	$0000 $0000	| Original Japanese Hex
+ひ		と		り		で		あ		そ		ぶ	 			| Original Japanese Text
+S	T	O	R	Y	 	M	O	D	E	 	 	 	 	 	 	| New English Text
+$0C7E9 (Bottom Half)
+$2670 $2671	$2672 $2673	$2674 $2675	$2676 $2677	$2678 $2679	$263C $263D	$267A $267B	$0000 $0000	| Original Japanese Hex
+ひ		と		り		で		あ		そ		ぶ	 			| Original Japanese Text
+S	T	O	R	Y	 	M	O	D	E	 	 	 	 	 	 	| New English Text
+
+ふれりで れいせん
+EXHIBITION / 2PLAYER / MULTIPLAYER
+$0C809 (Top Half)
+$266C $266D	$266E $266F	$2664 $2665	$2666 $2667	$266E $266F	$2600 $2601	$2642 $2643	$2680 $2681	| Original Japanese Hex
+ふ		れ		り		で		れ		い		せ		ん		| Original Japanese Text
+M	U	L	T	I	 	P	L	A	Y	E	R	 	 			| New English Text
+$0C849 (Bottom Half)
+$267C $267D	$267E $267F	$2674 $2675	$2676 $2677	$267E $267F	$2610 $2611	$2652 $2653	$2690 $2691	| Original Japanese Hex
+ふ		れ		り		で		れ		い		せ		ん		| Original Japanese Text
+M	U	L	T	I	 	P	L	A	Y	E	R	 	 			| New English Text
+
+パスワード
+PASSWORD
+$0C869 (Top Half)
+$2682 $2683	$2684 $2685	$2686 $2687	$2688 $2689	$268A $268B	$0000 $0000	$0000 $0000	$0000 $0000	| Original Japanese Hex
+パ		ス		ワ		ー		ド								| Original Japanese Text
+P	A	S	S	W	O	R	D	 	I	N	P	U	T	 	 	| New English Text
+$0C8A9 (Bottom Half)
+$2692 $2693	$2694 $2695	$2696 $2697	$2698 $2699	$269A $269B	$0000 $0000	$0000 $0000	$0000 $0000	| Original Japanese Hex
+パ		ス		ワ		ー		ド								| Original Japanese Text
+P	A	S	S	W	O	R	D	 	I	N	P	U	T	 	 	| New English Text
+
+そらさ せってい
+SETTINGS / OPTIONS
+$0C8C9 (Top Half)
+$262C $262D	$262E $262F 	$2640 $2641	$2642 $2643	$2644 $2645	$2646 $2647	$2600 $2601	$0000 $0000	| Original Japanese Hex
+そ		ら		さ		せ		っ		て		い				| Original Japanese Text
+C	O	N	F	I	G	U	R	A	T	I	O	N	 	 	 	| New English Text
+$0C909 (Bottom Half)
+$263C $263D	$263E $263F 	$2650 $2651	$2652 $2653	$2654 $2655	$2656 $2657	$2610 $2611	$0000 $0000	| Original Japanese Hex
+そ		ら		さ		せ		っ		て		い				| Original Japanese Text
+C	O	N	F	I	G	U	R	A	T	I	O	N	 	 	 	| New English Text

@@ -10,7 +10,6 @@ $0CEA9 (Line 2)
 36	81	36	81	00	14	23	77	10	31	12	32	39	3A	5F	66	9E	78	20	FD	| Original Japanese Hex
 わ	ざ	わ	ざ	 	こ	の	「	か	ら	く	り	ア	イ	ラ	ン	ド	」	に	NEWPAGE	| Original Japanese Text
 a	r	e	 	y	o	u	 	o	n	NEWPAGE	"	K	a	r	a	k	u	r	i	| New English Text
-
 なにしに きたんだ?
 to "Karakuri Island"?
 $0CEBD (Line 3)
@@ -23,7 +22,6 @@ $0CEC8 (Line 4)
 19	0D	0C	0E	8B	00	0B	10	0C	26	12	89	3A	90	92	60	0B	1A	29	23	FD	| Original Japanese Hex
 そ	う	い	え	ば	 	あ	か	い	ふ	く	で	イ	ガ	グ	リ	あ	た	ま	の	NEWPAGE	| Original Japanese Text
 	g	u	y		i	n		r	e	d		c	l	o	t	h	e	s	NEWPAGE	c	| New English Text
-
 にいちゃんも なにしに きたのかなぁ?
 I wonder what he was doing?
 $0CEDD (Line 5)
@@ -64,7 +62,6 @@ $0CF31 (Line 2)
 19	38	1F	1F	29	0E	82	69	68	1A	10	23	0F	75	74	FD	| Original Japanese Hex
 そ	ん	な	な	ま	え	じ	ゃ	っ	た	か	の	お	?	!	NEWPAGE	| Original Japanese Text
 n	?	!	NEWLINE	W	a	s		t	h	a	t		h	i	s	| New English Text
-
 「からくりじょう」は どこにあるか? って
 Where is "Karakuri Island"?
 $0CF41 (Line 3)
@@ -105,7 +102,6 @@ $0CFA4 (Line 2)
 77	44	73	47	73	78	37	1C	10	68	1D	00	96	6D	66	AB	17	34	8B	0C	0C	71	FD	| Original Japanese Hex
 「	シ	ー	ソ	ー	」	を	つ	か	っ	て	 	ジ	ャ	ン	プ	す	れ	ば	い	い	。	NEWPAGE	| Original Japanese Text
 NEWLINE	u	s	e	 	"	S	e	e	s	a	w	"	 	t	o	 	j	u	m	p	.	NEWPAGE	| New English Text
-
 ただす、「おもり」をもっていかないと
 If you do not have a "Weight"
 $0CFBB (Line 3)
@@ -336,3 +332,193 @@ $0D25F (Line 22)
 86	82	69	34	75	FF	| Original Japanese Hex
 だ	じ	ゃ	れ	?	ENDTEXT	| Original Japanese Text
 ?	?	?	?	?	?	| New English Text
+
+
+てきを いっきにたおすには
+To defeat all enemies at once
+$0D265 (Line 1)
+1D	11	37	00	0C	68	11	20	1A	0F	17	20	24	FE	| Original Japanese Hex
+て	き	を	 	い	っ	き	に	た	お	す	に	は	NEWLINE	| Original Japanese Text
+U	s	e	 	t	h	e	 	s	p	r	i	n	g	| New English Text
+バネのちからを りようしろよ。
+use the power of the spring.
+$0D273 (Line 2)
+9F	50	23	1B	10	31	37	00	32	30	0D	16	35	30	71	FD	| Original Japanese Hex
+バ	ネ	の	ち	か	ら	を	 	り	よ	う	し	ろ	よ	。	NEWPAGE	| Original Japanese Text
+ 	t	o	NEWLINE	d	e	f	e	a	t 	 	e	n	e	m	i	| New English Text
+ただし、 かそくがつくから、
+However, because the stick is accelerating,
+$0D283 (Line 3)
+1A	86	16	70	00	10	19	12	7C	1C	12	10	31	70	FE	| Original Japanese Hex
+た	だ	し	、	 	か	そ	く	が	つ	く	か	ら	、	NEWLINE	| Original Japanese Text
+e	s	.	NEWPAGE	H	o	w	e	v	e	r	, 		i	t	| New English Text
+じぶんの いきさきを さだめていないと
+I must say do not forget that
+$0D292 (Line 4)
+82	8D	38	23	00	0C	11	15	11	37	00	15	86	2C	1D	0C	1F	0C	1E	FD	| Original Japanese Hex
+じ	ぶ	ん	の	 	い	き	さ	き	を	 	さ	だ	め	て	い	な	い	と	NEWPAGE	| Original Japanese Text
+NEWLINE	a	c	c	e	l	e	r	a	t	e	s	 	y	o	u	r		s	p	| New English Text
+あぶないぞ! ちゅういがひつようだ!!
+it is dangerous! Take your time!!
+$0D2A6 (Line 5)
+0B	8D	1F	0C	85	74	00	1B	6A	0D	0C	7C	25	1C	30	0D	86	74	74	FE	| Original Japanese Hex
+あ	ぶ	な	い	ぞ	!	 	ち	ゅ	う	い	が	ひ	つ	よ	う	だ	!	!	NEWLINE	| Original Japanese Text
+e	e	d	NEWPAGE	d	a	n	g	e	r	o	u	s	l	y	!	NEWLINE	T	a	k	| New English Text
+よくかんがえて つかえよ!!!
+Take care when using it!!!
+$0D2BA (Line 6)
+30	12	10	38	7C	0E	1D	00	1C	10	0E	30	74	74	74	FF	| Original Japanese Hex
+よ	く	か	ん	が	え	て	 	つ	か	え	よ	!	!	!	ENDTEXT	| Original Japanese Text
+e		c	a	r	e	 	w	i	t	h		i	t	!	ENDTEXT	| New English Text
+
+
+あんた ほんものの にんげんだね?!
+You're a real person, aren't you?!
+$0D2CA (Line 1)
+0B	38	1A	00	28	38	2D	23	23	00	20	38	7F	38	86	22	75	74	FE	| Original Japanese Hex
+あ	ん	た	 	ほ	ん	も	の	の	 	に	ん	げ	ん	だ	ね	?	!	NEWLINE	| Original Japanese Text
+Y	o	u	'	r	e	 	a	 	r	e	a	l	 	p	e	r	s	o	| New English Text
+ここは あんたのようなにんげんの
+This is not the place to come for
+$0D2DD (Line 2)
+14	14	24	00	0B	38	1A	23	30	0D	1F	20	38	7F	38	23	FD	| Original Japanese Hex
+こ	こ	は	 	あ	ん	た	の	よ	う	な	に	ん	げ	ん	の	NEWPAGE	| Original Japanese Text
+n	?	!	NEWLINE	T	h	i	s	 	i	s	 	n	o	 	p	l	| New English Text
+くるところじゃないよ。
+people like you.
+$0D2EE (Line 3)
+12	33	1E	14	35	82	69	1F	0C	30	71	FE	| Original Japanese Hex
+く	る	と	こ	ろ	じ	ゃ	な	い	よ	。	NEWLINE	| Original Japanese Text
+a	c	e	 	f	o	r	NEWPAGE	y	o	u	.	| New English Text
+いったい なにしに きたんだい?
+What do you want to do?
+$0D2FA (Line 4)
+0C	68	1A	0C	00	1F	20	16	20	00	11	1A	38	86	0C	75	FF	| Original Japanese Hex
+い	っ	た	い	 	な	に	し	に	 	き	た	ん	だ	い	?	ENDTEXT	| Original Japanese Text
+NEWLINE	W	h	y	 	v	i	s	i	t		h	e	r	e	?	ENDTEXT	| New English Text
+
+
+エッ なんですって?? おなかすいたって!?
+What is it?? I am hungry!?
+$0D30B (Line 1)
+3C	6C	00	1F	38	89	17	68	1D	75	75	00	0F	1F	10	17	0C	1A	68	1D	74	75	FE	| Original Japanese Hex
+エ	ッ	 	な	ん	で	す	っ	て	?	?	 	お	な	か	す	い	た	っ	て	!	?	NEWLINE	| Original Japanese Text
+W	h	a	t	?	?	 	I	'	m	 	h	u	n	g	r	y	!	?	NEWLINE	I		d	| New English Text
+ここには たべものなんて うってないわよ。
+I do not sell any food here.
+$0D322 (Line 2)
+14	14	20	24	00	1A	8E	2D	23	1F	38	1D	00	0D	68	1D	1F	0C	36	30	71	FD	| Original Japanese Hex
+こ	こ	に	は	 	た	べ	も	の	な	ん	て	 	う	っ	て	な	い	わ	よ	。	NEWPAGE	| Original Japanese Text
+o	n	'	t	 	h	a	v	e	 	f	o	o	d	.	NEWPAGE	T	h	e	r	e	 	| New English Text
+よろずやにいけば なにかうってるかもネ。
+There might be some if you go to a shop.
+$0D338 (Line 3)
+30	35	83	2E	20	0C	13	8B	00	1F	20	10	0D	68	1D	33	10	2D	50	71	FE	| Original Japanese Hex
+よ	ろ	ず	や	に	い	け	ば	 	な	に	か	う	っ	て	る	か	も	ネ	。	NEWLINE	| Original Japanese Text
+m	i	g	h	t	 	b	e	 	a		s	h	o	p	.	NEWLINE	B	u	t	 	| New English Text
+でも 「からくりじょう」に たべものを
+However, in "Karakuri"
+$0D34D (Line 4)
+89	2D	00	77	10	31	12	32	82	6B	0D	78	20	00	1A	8E	2D	23	37	FD	| Original Japanese Hex
+で	も	 	「	か	ら	く	り	じ	ょ	う	」	に	 	た	べ	も	の	を	NEWPAGE	| Original Japanese Text
+i	n	 	"	K	a	r	a	k	u	r	i	"	NEWPAGE	I	'	v	e		n	| New English Text
+はこびこんでるのを みたことあるわ。
+I have not seen any food.
+$0D361 (Line 5)
+24	14	8C	14	38	89	33	23	37	00	2A	1A	14	1E	0B	33	36	71	FE	| Original Japanese Hex
+は	こ	び	こ	ん	で	る	の	を	 	み	た	こ	と	あ	る	わ	。	NEWLINE	| Original Japanese Text
+o	t		s	e	e	n		a	n	y		f	o	o	d	.	NEWLINE	I	| New English Text
+にんげんが いるのかなぁ?
+I wonder if there is a reason?
+$0D374 (Line 6)
+20	38	7F	38	7C	00	0C	33	23	10	1F	67	75	FF	| Original Japanese Hex
+に	ん	げ	ん	が	 	い	る	の	か	な	ぁ	?	ENDTEXT	| Original Japanese Text
+	w	o	n	d	e	r	 	w	h	y	?	?	ENDTEXT	| New English Text
+
+
+このさきのみせには エジモンがつくった
+The shop next door
+$0D382 (Line 1)
+14	23	15	11	23	2A	18	20	24	00	3C	96	5B	66	7C	1C	12	68	1A	FE	| Original Japanese Hex
+こ	の	さ	き	の	み	せ	に	は	 	エ	ジ	モ	ン	が	つ	く	っ	た	NEWLINE	| Original Japanese Text
+T	h	e	 	s	h	o	p	 	n	e	x	t	 	d	o	o	r	 	h	| New English Text
+スロットマシーンとかいう きかいがある。
+has a slot machine made by Ejimon.
+$0D396 (Line 2)
+45	63	6C	4C	57	44	73	66	1E	10	0C	0D	00	11	10	0C	7C	0B	33	71	FD	| Original Japanese Hex
+ス	ロ	ッ	ト	マ	シ	ー	ン	と	か	い	う	 	き	か	い	が	あ	る	。	NEWPAGE	| Original Japanese Text
+a	s	NEWLINE	a		b	i	g		s	l	o	t		m	a	c	h	i	n	e	| New English Text
+わしには よくわからんが、
+I do not know myself,
+$0D3AB (Line 3)
+36	16	20	24	00	30	12	36	10	31	38	7C	70	FE	| Original Japanese Hex
+わ	し	に	は	 	よ	く	わ	か	ら	ん	が	、	NEWLINE	| Original Japanese Text
+.	NEWPAGE	I		d	o	 n	'	t	 	k	n	o	w	| New English Text
+なにやら えがらを ねらってとめると
+but I think you can win
+$0D3B9 (Line 4)
+1F	20	2E	31	00	0E	7C	31	37	00	22	31	68	1D	1E	2C	33	1E	FD	| Original Japanese Hex
+な	に	や	ら	 	え	が	ら	を	 	ね	ら	っ	て	と	め	る	と	NEWPAGE	| Original Japanese Text
+ 	m	y	s	e	l	f	,	NEWLINE	b	u	t	 	I	 	h	e	a	r	| New English Text
+おかねが もうかるそうじゃ。
+money if you get a pattern.
+$0D3CC (Line 5)
+0F	10	22	7C	00	2D	0D	10	33	19	0D	82	69	71	FE	| Original Japanese Hex
+お	か	ね	が	 	も	う	か	る	そ	う	じ	ゃ	。	NEWLINE	| Original Japanese Text
+d	 	y	o	u	 	w	i	n	NEWPAGE	m	o	n	e	y	| New English Text
+わしのしっとるおとこは 777がそろって
+I heard the jackpot
+$0D3DB (Line 6)
+36	16	23	16	68	1E	33	0F	1E	14	24	00	08	08	08	7C	19	35	68	1D	FD	| Original Japanese Hex
+わ	し	の	し	っ	と	る	お	と	こ	は	 	7	7	7	が	そ	ろ	っ	て	NEWPAGE	| Original Japanese Text
+	b	y		m	a	t	c	h	i	n	g		t	h	e		s	y	m	b	| New English Text
+こしを ぬかしおった。
+can be won with 777.
+$0D3F0 (Line 7)
+14	16	37	00	21	10	16	0F	68	1A	71	FE	| Original Japanese Hex
+こ	し	を	 	ぬ	か	し	お	っ	た	。	NEWLINE	| Original Japanese Text
+o	l	s	.	NEWLINE	A	l	s	o		t	h	| New English Text
+うんがよかったのか わるかったのか・・・・・
+Will you get lucky?.....
+$0D3FC (Line 8)
+0D	38	7C	30	10	68	1A	23	10	00	36	33	10	68	1A	23	10	72	72	72	72	72	FD	| Original Japanese Hex
+う	ん	が	よ	か	っ	た	の	か	 	わ	る	か	っ	た	の	か	・	・	・	・	・	NEWPAGE	| Original Japanese Text
+e		j	a	c	k	p	o	t	NEWPAGE	c	a	n	 	b	e	 	w	o	n		w	i	| New English Text
+なんなら おわかいの、うんだめしに
+Anyway it's stupid, I'd rather
+$0D413 (Line 9)
+1F	38	1F	31	00	0F	36	10	0C	23	70	0D	38	86	2C	16	20	FE	| Original Japanese Hex
+な	ん	な	ら	 	お	わ	か	い	の	、	う	ん	だ	め	し	に	NEWLINE	| Original Japanese Text
+t	h	 	7	7	7	.	NEWLINE W	i	l	l	 	y	o	u	 	g	| New English Text
+いってみたらどうじゃな。
+have a bowl of fish.
+$0D425 (Line 10)
+0C	68	1D	2A	1A	31	8A	0D	82	69	1F	71	FF	| Original Japanese Hex
+い	っ	て	み	た	ら	ど	う	じ	ゃ	な	。	ENDTEXT	| Original Japanese Text
+e	t	 	l	u	c	k	y	?	.	.	.	ENDTEXT	| New English Text
+
+
+おかねがあったら とせんやで ふねにのって
+If you have money, please
+$0D432 (Line 1)
+0F	10	22	7C	0B	68	1A	31	00	1E	18	38	2E	89	00	26	22	20	23	68	1D	FE	| Original Japanese Hex
+お	か	ね	が	あ	っ	た	ら	 	と	せ	ん	や	で	 	ふ	ね	に	の	っ	て	NEWLINE	| Original Japanese Text
+I	f	 	y	o	u	 	h	a	v	e	 	a	n	y		m	o	n	e	y	,	| New English Text
+はなれこじまに いってみな。
+try to go next door.
+$0D448 (Line 2)
+24	1F	34	14	82	29	20	00	0C	68	1D	2A	1F	71	FD	| Original Japanese Hex
+は	な	れ	こ	じ	ま	に	 	い	っ	て	み	な	。	NEWPAGE	| Original Japanese Text
+NEWLINE	t	r	y	 	t	o	 	g	o	 	n	e	x	t	| New English Text
+うわさによると、むかし「からくりいちぞく」が
+According to the rumor, it seems that he is back
+$0D457 (Line 3)
+0D	36	15	20	30	33	1E	70	2B	10	16	77	10	31	12	32	0C	1B	85	12	78	7C	FE	| Original Japanese Hex
+う	わ	さ	に	よ	る	と	、	む	か	し	「	か	ら	く	り	い	ち	ぞ	く	」	が	NEWLINE	| Original Japanese Text
+	d	o	o	r	.	NEWPAGE	H	e		i	s		n	o	w		b	a	c	k		a	| New English Text
+かくした ざいほうが ねむっているらしいぞ。
+after a long absence from "Karakuri Island".
+$0D46E (Line 4)
+10	12	16	1A	00	81	0C	28	0D	7C	00	22	2B	68	1D	0C	33	31	16	0C	85	71	FF	| Original Japanese Hex
+か	く	し	た	 	ざ	い	ほ	う	が	 	ね	む	っ	て	い	る	ら	し	い	ぞ	。	ENDTEXT	| Original Japanese Text
+f	t	e	r		a	NEWLINE	l	o	n	g		t	i	m	e		a	w	a	y	.	ENDTEXT	| New English Text
