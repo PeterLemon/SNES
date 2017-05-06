@@ -1,0 +1,211 @@
+﻿いらっしゃいませ。
+Welcome.
+$0C9D6 (Line 1)
+0C	31	68	16	69	0C	29	18	71	FE	| Original Japanese Hex
+い	ら	っ	し	ゃ	い	ま	せ	。	NEWLINE	| Original Japanese Text
+W	e	l	c	o	m	e	.	NEWLINE	H	| New English Text
+なにか おもとめですか?
+What do you seek? / How may I help? / Are you looking for something?
+$0C9E0 (Line 2)
+1F	20	10	00	0F	2D	1E	2C	89	17	10	75	FD	| Original Japanese Hex
+な	に	か	 	お	も	と	め	で	す	か	?	NEWPAGE	| Original Japanese Text
+o	w		m	a	y		I		h	e	l	p	| New English Text
+ただし、アイテムは 1つしか もてません。
+However, you can only hold 1 item.
+$0C9ED (Line 3)
+1A	86	16	70	39	3A	4B	59	24	00	02	1C	16	10	00	2D	1D	29	18	38	71	FF	| Original Japanese Hex
+た	だ	し	、	ア	イ	テ	ム	は	 	1	つ	し	か	 	も	て	ま	せ	ん	。	ENDTEXT	| Original Japanese Text
+?	NEWPAGE	Y	o	u	 	c	a	n	 	h	o	l	d	 	1	 	i	t	e	m	ENDTEXT	| New English Text
+
+
+よろいです。300$になります。
+This is armor. It will be $300.
+$0CA03 (Line 1)
+30	35	0C	89	17	71	04	01	01	79	20	1F	32	29	17	71	FE	| Original Japanese Hex
+よ	ろ	い	で	す	。	3	0	0	$	に	な	り	ま	す	。	NEWLINE	| Original Japanese Text
+A	r	m	o	r	.	 	P	r	i	c	e	 	$	3	0	0	| New English Text
+てきに あたっても だいじょうぶですよ。
+It is safe to hit the enemy.
+$0CA14 (Line 2)
+1D	11	20	00	0B	1A	68	1D	2D	00	86	0C	82	6B	0D	8D	89	17	30	71	FF	| Original Japanese Hex
+て	き	に	 	あ	た	っ	て	も	 	だ	い	じ	ょ	う	ぶ	で	す	よ	。	ENDTEXT	| Original Japanese Text
+.	NEWLINE T	a	k	e	s		1 		e	n	e	m	y		h	i	t	.	ENDTEXT	| New English Text
+
+
+とけいです。500$になります。
+This is a clock. It will be $500.
+$0CA29 (Line 1)
+1E	13	0C	89	17	71	06	01	01	79	20	1F	32	29	17	71	FE	| Original Japanese Hex
+と	け	い	で	す	。	5	0	0	$	に	な	り	ま	す	。	NEWLINE	| Original Japanese Text
+C	l	o	c	k	.		P	r	i	c	e	 	$	5	0	0	| New English Text
+タイムがなくなっても たすかりますよ。
+Survive even if you run out of time.
+$0CA3A (Line 2)
+48	3A	59	7C	1F	12	1F	68	1D	2D	00	1A	17	10	32	29	17	30	71	FF	| Original Japanese Hex
+タ	イ	ム	が	な	く	な	っ	て	も	 	た	す	か	り	ま	す	よ	。	ENDTEXT	| Original Japanese Text
+.	NEWLINE	G	i	v	e	s		e	x	t	r	a		t	i	m	e	.	ENDTEXT	| New English Text
+
+
+1UPです。800$になります。
+This is a 1UP. It will be $800.
+$0CA4E (Line 1)
+02	7A	7B	89	17	71	09	01	01	79	20	1F	32	29	17	71	FE	| Original Japanese Hex
+1	U	P	で	す	。	8	0	0	$	に	な	り	ま	す	。	NEWLINE	| Original Japanese Text
+1	U	P	.		P	r	i	c	e	 	$	8	0	0	.	NEWLINE	| New English Text
+プレイヤーが ひとりふえます。
+There will be more players.
+$0CA5F (Line 2)
+AB	62	3A	5C	73	7C	00	25	1E	32	26	0E	29	17	71	FF	| Original Japanese Hex
+プ	レ	イ	ヤ	ー	が	 	ひ	と	り	ふ	え	ま	す	。	ENDTEXT	| Original Japanese Text
+A	d	d		e	x	t	r	a		l	i	f	e	.	ENDTEXT	| New English Text
+
+
+おかいに なりますか?
+Would you mind making it?
+$0CA6F (Line 1)
+0F	10	0C	20	00	1F	32	29	17	10	75	FE	| Original Japanese Hex
+お	か	い	に	 	な	り	ま	す	か	?	NEWLINE	| Original Japanese Text
+I	s		t	h	i	s		O	K	?	NEWLINE	| New English Text
+はい     いいえ
+Yes     No
+$0CA7B (Line 2)
+00	00	00	00	00	00	24	0C	00	00	00	00	00	0C	0C	0E	FF	| Original Japanese Hex
+ 	 	 	 	 	 	は	い	 	 	 	 	 	い	い	え	ENDTEXT	| Original Japanese Text
+ 	 	 	 	 	 	Y	e	s	 	 	 	 	N	o	 	ENDTEXT	| New English Text
+
+
+ありがとうございました。
+Thank you very much.
+$0CA8C
+0B	32	7C	1E	0D	80	81	0C	29	16	1A	71	FF	| Original Japanese Hex
+あ	り	が	と	う	ご	ざ	い	ま	し	た	。	ENDTEXT	| Original Japanese Text
+T	h	a	n	k		y	o	u	.	 	 	ENDTEXT	| New English Text
+
+
+あんた おかねが たりないよ!
+You do not have enough money! / Can not afford! / Need more gold!
+$0CA99
+0B	38	1A	00	0F	10	22	7C	00	1A	32	1F	0C	30	74	FF	| Original Japanese Hex
+あ	ん	た	 	お	か	ね	が	 	た	り	な	い	よ	!	ENDTEXT	| Original Japanese Text
+N	e	e	d		m	o	r	e		g	o	l	d	!	ENDTEXT	| New English Text
+
+
+ひやかしは おことわりです。
+A truly memorable service.
+$0CAA9
+25	2E	10	16	24	00	0F	14	1E	36	32	89	17	71	FF	| Original Japanese Hex
+ひ	や	か	し	は	 	お	こ	と	わ	り	で	す	。	ENDTEXT	| Original Japanese Text
+V	i	s	i	t		a	n	y	t	i	m	e	.	ENDTEXT	| New English Text
+
+
+ようこそ いらっしゃいました。
+Welcome.
+$0CC38 (Line 1)
+30	0D	14	19	00	0C	31	68	16	69	0C	29	16	1A	71	FE	| Original Japanese Hex
+よ	う	こ	そ	 	い	ら	っ	し	ゃ	い	ま	し	た	。	NEWLINE	| Original Japanese Text
+W	e	l	c	o	m	e	.		S	l	o	t	 	m	a	| New English Text
+スロットマシーン 1プレイ 5$です。
+Slot machine 1 play is $5.
+$0CC48 (Line 2)
+45	63	6C	4C	57	44	73	66	00	02	AB	62	3A	00	06	79	89	17	71	FD	| Original Japanese Hex
+ス	ロ	ッ	ト	マ	シ	ー	ン	 	1	プ	レ	イ	 	5	$	で	す	。	NEWPAGE	| Original Japanese Text
+c	h	i	n	e	NEWLINE	1	 	p	l	a	y	 	$	5	.	NEWPAGE	R	u	l	| New English Text
+なぁに ルールは かんたんですよ。
+Hey, the rules are simple.
+$0CC5C (Line 3)
+1F	67	20	00	61	73	61	24	00	10	38	1A	38	89	17	30	71	FE	| Original Japanese Hex
+な	ぁ	に	 	ル	ー	ル	は	 	か	ん	た	ん	で	す	よ	。	NEWLINE	| Original Japanese Text
+e	s	 	a	r	e	 	s	i	m	p	l	e	.	 	P	u	s	| New English Text
+ボタンをおして ドラムをとめるだけです。
+Just push the button to stop the drum.
+$0CC6E (Line 4)
+A3	48	66	37	0F	16	1D	00	9E	5F	59	37	1E	2C	33	86	13	89	17	71	FD	| Original Japanese Hex
+ボ	タ	ン	を	お	し	て	 	ド	ラ	ム	を	と	め	る	だ	け	で	す	。	NEWPAGE	| Original Japanese Text
+h	NEWLINE	b	u	t	t	o	n	 	s	t	o	p	s		d	r	u	m	.	NEWPAGE	| New English Text
+えがらがそろえば コバンがもらえます。
+If the pattern is aligned, you get a prize.
+$0CC83 (Line 5)
+0E	7C	31	7C	19	35	0E	8B	00	42	9F	66	7C	2D	31	0E	29	17	71	FD	| Original Japanese Hex
+え	が	ら	が	そ	ろ	え	ば	 	コ	バ	ン	が	も	ら	え	ま	す	。	NEWPAGE	| Original Japanese Text
+M	a	t	c	h		s	y	m	b	o	l	s		t	o		w	i	n	| New English Text
+どうなさいます?
+What would you like todo?
+$0CC97 (Line 6)
+8A	0D	1F	15	0C	29	17	75	FE	| Original Japanese Hex
+ど	う	な	さ	い	ま	す	?	NEWLINE	| Original Japanese Text
+.	NEWPAGE	P	l	a	y	?	NEWLINE  	| New English Text
+やる     やめる
+Play    Quit
+$0CCA0 (Line 7)
+00	00	00	00	00	00	2E	33	00	00	00	00	00	2E	2C	33	FF	| Original Japanese Hex
+ 	 	 	 	 	 	や	る	 	 	 	 	 	や	め	る	ENDTEXT	| Original Japanese Text
+ 	 	 	 	 	P	l	a	y	 	 	 	Q	u	i	t	ENDTEXT	| New English Text
+
+
+ハズレです。
+You lost.
+$0CCB1
+52	97	62	89	17	71	FF	| Original Japanese Hex
+ハ	ズ	レ	で	す	。	ENDTEXT	| Original Japanese Text
+N	o		W	i	n	ENDTEXT	| New English Text
+
+
+スリーセブン!!  コバン 500まい。
+Three Seven!!  It's 500 coins.
+$0CCB8
+45	60	73	46	A1	66	74	74	00	00	42	9F	66	00	06	01	01	29	0C	71	FF	| Original Japanese Hex
+ス	リ	ー	セ	ブ	ン	!	!	 	 	コ	バ	ン	 	5	0	0	ま	い	。	ENDTEXT	| Original Japanese Text
+7	7	7	!	!	 		Y	o	u	 	w	i	n	 	$	5	0	0	.	ENDTEXT	| New English Text
+
+
+さくらんぼ!!  コバン 10まい。
+Cherries!!  It's 10 coins.
+$0CCCD
+15	12	31	38	8F	74	74	00	00	42	9F	66	00	02	01	29	0C	71	FF	| Original Japanese Hex
+さ	く	ら	ん	ぼ	!	!	 	 	コ	バ	ン	 	1	0	ま	い	。	ENDTEXT	| Original Japanese Text
+C	h	e	r	r	i	e	s	!	 	W	i	n	 	$	1	0	.	ENDTEXT	| New English Text
+
+
+すず!!  コバン 15まい。
+Bells!!  It's 15 coins.
+$0CCE0
+17	83	74	74	00	00	42	9F	66	00	02	06	29	0C	71	FF	| Original Japanese Hex
+す	ず	!	!	 	 	コ	バ	ン	 	1	5	ま	い	。	ENDTEXT	| Original Japanese Text
+B	e	l	l	s	!		W	i	n		$	1	5	.	ENDTEXT	| New English Text
+
+
+ネコ!!  コバン 50まい。
+Cats!!  It's 50 coins.
+$0CCF0
+50	42	74	74	00	00	42	9F	66	00	06	01	29	0C	71	FF	| Original Japanese Hex
+ネ	コ	!	!	 	 	コ	バ	ン	 	5	0	ま	い	。	ENDTEXT	| Original Japanese Text
+C	a	t	s	!	!		W	i	n		$	5	0	.	ENDTEXT	| New English Text
+
+
+みかん!!  コバン 15まい。
+Mandarin oranges!!  It's 15 coins.
+$0CD00
+2A	10	38	74	74	00	00	42	9F	66	00	02	06	29	0C	71	FF	| Original Japanese Hex
+み	か	ん	!	!	 	 	コ	バ	ン	 	1	5	ま	い	。	ENDTEXT	| Original Japanese Text
+O	r	a	n	g	e	!		W	i	n		$	1	5	.	ENDTEXT	| New English Text
+
+
+まだチャレンジしますか?
+Do you still want to play?
+$0CD11 (Line 1)
+29	86	49	6D	62	66	96	16	29	17	10	75	FE	| Original Japanese Hex
+ま	だ	チ	ャ	レ	ン	ジ	し	ま	す	か	?	NEWLINE	| Original Japanese Text
+P	l	a	y		a	g	a	i	n	?	NEWLINE 	| New English Text
+Yes     No
+$0CD1E (Line 2)
+00	00	00	00	00	00	24	0C	00	00	00	00	00	0C	0C	0E	FF	| Original Japanese Hex
+ 	 	 	 	 	 	は	い	 	 	 	 	 	い	い	え	ENDTEXT	| Original Japanese Text
+ 	 	 	 	 	Y	e	s	 	 	 	 	N	o	 	 	ENDTEXT	| New English Text
+
+
+そうですか。また おたちよりください。
+Is that so. Please come again.
+$0CD2F
+19	0D	89	17	10	71	29	1A	00	0F	1A	1B	30	32	12	86	15	0C	71	FF	| Original Japanese Hex
+そ	う	で	す	か	。	ま	た	 	お	た	ち	よ	り	く	だ	さ	い	。	ENDTEXT	| Original Japanese Text
+P	l	e	a	s	e	 	c	o	m	e	 	a	g	a	i	n	.	 	ENDTEXT	| New English Text
