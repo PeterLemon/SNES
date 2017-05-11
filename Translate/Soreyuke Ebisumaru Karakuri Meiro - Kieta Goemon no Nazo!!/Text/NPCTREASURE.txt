@@ -1,0 +1,120 @@
+﻿にいちゃん むかし「からくりいちぞく」が
+Long ago on "Karakuri Island"
+$0E307 (Line 1)
+20	0C	1B	69	38	00	2B	10	16	77	10	31	12	32	0C	1B	85	12	78	7C	FE	| Original Japanese Hex
+に	い	ち	ゃ	ん	 	む	か	し	「	か	ら	く	り	い	ち	ぞ	く	」	が	NEWLINE	| Original Japanese Text
+L	o	n	g	 	a	g	o	 	o	n	 	"	K	a	r	a	k	u	r	i	| New English Text
+ざいほうをかくした しままで つれていくぜ。
+I hid a treasure, I can take you there.
+$0E31C (Line 2)
+81	0C	28	0D	37	10	12	16	1A	00	16	29	29	89	00	1C	34	1D	0C	12	84	71	FD	| Original Japanese Hex
+ざ	い	ほ	う	を	か	く	し	た	 	し	ま	ま	で	 	つ	れ	て	い	く	ぜ	。	NEWPAGE	| Original Japanese Text
+"	NEWLINE	I	 	h	i	d	 	a	 	t	r	e	a	s	u	r	e	.	NEWPAGE	D	o	 	| New English Text
+どうだい ひとざいさん きずいてみる
+Do you feel like increasing
+$0E333 (Line 3)
+8A	0D	86	0C	00	25	1E	81	0C	15	38	00	11	83	0C	1D	2A	33	FE	| Original Japanese Hex
+ど	う	だ	い	 	ひ	と	ざ	い	さ	ん	 	き	ず	い	て	み	る	NEWLINE	| Original Japanese Text
+y	o	u	 	w	a	n	t		t	o		g	e	t	NEWLINE	r	i	c	| New English Text
+きはないかい?
+your wealth?
+$0E346 (Line 4)
+11	24	1F	0C	10	0C	75	FD	| Original Japanese Hex
+き	は	な	い	か	い	?	NEWPAGE	| Original Japanese Text
+h	?	NEWPAGE	I	'	m		t	| New English Text
+ただし、あっしは おくりむかえを するだけ。
+However, I am the only one that
+$0E34E (Line 5)
+1A	86	16	70	0B	68	16	24	00	0F	12	32	2B	10	0E	37	00	17	33	86	13	71	FE	| Original Japanese Hex
+た	だ	し	、	あ	っ	し	は	 	お	く	り	む	か	え	を	 	す	る	だ	け	。	NEWLINE	| Original Japanese Text
+h	e	 	o	n	l	y		o	n	e	 	t	h	a	t	NEWLINE	k	n	o	w	s	 	| New English Text
+いのちの ほしょうまで しませんぜ。
+knows the short-cut.
+$0E365 (Line 6)
+0C	23	1B	23	00	28	16	6B	0D	29	89	00	16	29	18	38	84	71	FD	| Original Japanese Hex
+い	の	ち	の	 	ほ	し	ょ	う	ま	で	 	し	ま	せ	ん	ぜ	。	NEWPAGE	| Original Japanese Text
+t	h	e	 	s	h	o	r	t	-	c	u	t	.	NEWPAGE	I	'	l	l	| New English Text
+わたしちんは 500両いただくけど・・・・・
+I will require $500, but...
+$0E378 (Line 7)
+36	1A	16	1B	38	24	00	06	01	01	79	0C	1A	86	12	13	8A	72	72	72	72	72	FE	| Original Japanese Hex
+わ	た	し	ち	ん	は	 	5	0	0	両	い	た	だ	く	け	ど	・	・	・	・	・	NEWLINE	| Original Japanese Text
+ 	n	e	e	d	 	$	5	0	0		t	o		t	a	k	e	NEWLINE	y	o	u	.	| New English Text
+うまくいけば、かせげるぜ。
+Hopefully you will win it back.
+$0E38F (Line 8)
+0D	29	12	0C	13	8B	70	10	18	7F	33	84	71	FD	| Original Japanese Hex
+う	ま	く	い	け	ば	、	か	せ	げ	る	ぜ	。	NEWPAGE	| Original Japanese Text
+.	.	NEWPAGE	D	o		y	o	u		w	a	n	t	| New English Text
+いってみるかい?
+Do you want to go?
+$0E39D (Line 9)
+0C	68	1D	2A	33	10	0C	75	FE	| Original Japanese Hex
+い	っ	て	み	る	か	い	?	NEWLINE	| Original Japanese Text
+	t	o		g	o	?	NEWLINE	 	| New English Text
+はい     いいえ
+Yes     No
+$0E3A6 (Line 10)
+00	00	00	00	00	00	24	0C	00	00	00	00	00	0C	0C	0E	FF	| Original Japanese Hex
+ 	 	 	 	 	 	は	い	 	 	 	 	 	い	い	え	ENDTEXT	| Original Japanese Text
+ 	 	 	 	 	Y	e	s	 	 	 	 	N	o	 	 	ENDTEXT	| New English Text
+
+
+
+
+しっかり ざいほうを あつめてきなよ!
+Please collect the treasure!
+$0E677 (Line 1)
+16	68	10	32	00	81	0C	28	0D	37	00	0B	1C	2C	1D	11	1F	30	74	FE	| Original Japanese Hex
+し	っ	か	り	 	ざ	い	ほ	う	を	 	あ	つ	め	て	き	な	よ	!	NEWLINE	| Original Japanese Text
+C	o	l	l	e	c	t	 	t	h	e	 	t	r	e	a	s	u	r	e	| New English Text
+ただし きをつけてな!!
+However, please be careful!
+$0E68B (Line 2)
+1A	86	16	00	11	37	1C	13	1D	1F	74	74	FF	| Original Japanese Hex
+た	だ	し	 	き	を	つ	け	て	な	!	!	ENDTEXT	| Original Japanese Text
+!	NEWLINE	T	a	k	e		c	a	r	e	!	ENDTEXT	| New English Text
+
+
+にいちゃん それだけしか おかねがなきゃ
+You will need to be able to
+$0E698 (Line 1)
+20	0C	1B	69	38	00	19	34	86	13	16	10	00	0F	10	22	7C	1F	11	69	FE	| Original Japanese Hex
+に	い	ち	ゃ	ん	 	そ	れ	だ	け	し	か	 	お	か	ね	が	な	き	ゃ	NEWLINE	| Original Japanese Text
+Y	o	u	'	l	l	 	n	e	e	d	 	t	o	 	b	r	i	n	g	NEWLINE	| New English Text
+いまどき さんずのかわも わたれねえよ。
+pay me more gold than that.
+$0E6AD (Line 2)
+0C	29	8A	11	00	15	38	83	23	10	36	2D	00	36	1A	34	22	0E	30	71	FF	| Original Japanese Hex
+い	ま	ど	き	 	さ	ん	ず	の	か	わ	も	 	わ	た	れ	ね	え	よ	。	ENDTEXT	| Original Japanese Text
+m	o	r	e		g	o	l	d		t	h	a	n	 	t	h	a	t	.	ENDTEXT	| New English Text
+
+
+ざいほうは みつかったかね・・・・・?
+Did you find treasure...?
+$0E6C2 (Line 1)
+81	0C	28	0D	24	00	2A	1C	10	68	1A	10	22	72	72	72	72	72	75	FE	| Original Japanese Hex
+ざ	い	ほ	う	は	 	み	つ	か	っ	た	か	ね	・	・	・	・	・	?	NEWLINE	| Original Japanese Text
+D	i	d	 	y	o	u	 	f	i	n	d	 	t	r	e	a	s	u	r	| New English Text
+ま、あっしには かんけいねえ ことさね。
+Well, I hope you did not find it too hard.
+$0E6D6 (Line 2)
+29	70	0B	68	16	20	24	00	10	38	13	0C	22	0E	00	14	1E	15	22	71	FF	| Original Japanese Hex
+ま	、	あ	っ	し	に	は	 	か	ん	け	い	ね	え	 	こ	と	さ	ね	。	ENDTEXT	| Original Japanese Text
+e	?	NEWLINE	I		k	n	o	w		i	t	'	s		h	a	r	d	.	ENDTEXT	| New English Text
+
+
+
+
+そうかい。 あっしのふねには「のれねえ」と
+OK. In the meantime, "I'm sorry"
+$0E6FF (Line 1)
+19	0D	10	0C	71	00	0B	68	16	23	26	22	20	24	77	23	34	22	0E	78	1E	FE	| Original Japanese Hex
+そ	う	か	い	。	 	あ	っ	し	の	ふ	ね	に	は	「	の	れ	ね	え	」	と	NEWLINE	| Original Japanese Text
+O	K	.	 	S	a	d		y	o	u		d	o	n	'	t		w	a	n	t	| New English Text
+いうんだね! どきょうのねえ やろうだ・・・
+you do not want to do it! Maybe some other time...
+$0E715 (Line 2)
+0C	0D	38	86	22	74	00	8A	11	6B	0D	23	22	0E	00	2E	35	0D	86	72	72	72	FF	| Original Japanese Hex
+い	う	ん	だ	ね	!	 	ど	き	ょ	う	の	ね	え	 	や	ろ	う	だ	・	・	・	ENDTEXT	| Original Japanese Text
+NEWLINE	t	o	 	g	o	!		M	a	y	b	e		l	a	t	e	r	.	.	.	ENDTEXT	| New English Text

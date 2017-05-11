@@ -239,6 +239,56 @@ TextNormal($0D432, "If you have any money,\n")
                 db "He is now back after a\n"
                 db "long time away.", ENDTEXT
 
+TextNormal($0D485, "Hey. Have you heard?\n")
+                db "A <Bonus Stage> became", NEWPAGE
+                db "available, in the day.\n"
+                db "I hear you can collect", NEWPAGE
+                db "a lot of gold.\n"
+                db "Are you interested?", NEWPAGE
+                db "Good luck...", ENDTEXT
+
+TextNormal($0D50F, "Bad robots in the maze\n")
+                db "can step on switches,", NEWPAGE
+                db "if you time it well.\n"
+                db "That's right! If it is", NEWPAGE
+                db "in a dangerous place,\n"
+                db "use a robot!!", ENDTEXT
+
+TextNormal($0D58C, "Recently at night, a\n")
+                db "bad robot has shown up", NEWPAGE
+                db "in town. You'll find\n"
+                db "it hard on your own.", NEWPAGE
+                db "What? You can handle\n"
+                db "it!? Are you lucky?", NEWPAGE
+                db "Try to dodge the arrows\n"
+                db "to win.", ENDTEXT
+
+// NPC TREASURE
+TextNormal($0E307, "Long ago on <Karakuri>\n")
+                db "I hid a treasure.", NEWPAGE
+                db "Do you want to get\n"
+                db "rich?", NEWPAGE
+                db "I'm the only one that\n"
+                db "knows the short-cut.", NEWPAGE
+                db "I'll need $500 to take\n"
+                db "you...", NEWPAGE
+                db "Do you want to go?\n"
+                db "      Yes    No  ", ENDTEXT
+
+
+TextNormal($0E677, "Collect the treasure!\n")
+                db "Take care!", ENDTEXT
+
+TextNormal($0E698, "You'll need to bring\n")
+                db "more gold than that.", ENDTEXT
+
+TextNormal($0E6C2, "Did you find treasure?\n")
+                db "I know it's hard.", ENDTEXT
+
+
+TextNormal($0E6FF, "OK. Sad you don't want\n")
+                db "to go! Maybe later...", ENDTEXT
+
 // INTRO
 // Char Table (INTRO)
 map ' ', $00
