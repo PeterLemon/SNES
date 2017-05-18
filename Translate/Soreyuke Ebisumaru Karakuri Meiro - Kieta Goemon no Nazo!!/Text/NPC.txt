@@ -191,147 +191,137 @@ NEWLINE	r	o	b	o	t		i	n		t	h	e		m	a	z	e	.	ENDTEXT	| New English Text
 
 
 わたし 「だじゃれ」ひとすじ40ねん。
-I am "Bad Pun"
+I am 40 years old "Pay attention".
 $0D0BC (Line 1)
 36	1A	16	00	77	86	82	69	34	78	25	1E	17	82	05	01	22	38	71	FE	| Original Japanese Hex
 わ	た	し	 	「	だ	じ	ゃ	れ	」	ひ	と	す	じ	4	0	ね	ん	。	NEWLINE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
+I		a	m		4	0		y	e	a	r	s		o	l	d	.	NEWLINE	I	| New English Text
 おもしろい「だじゃれ」かんがえたあるね。
-There is an interesting "Frolic" thinking.
+I have an interesting "Way" of thinking.
 $0D0D0 (Line 2)
 0F	2D	16	35	0C	77	86	82	69	34	78	10	38	7C	0E	1A	0B	33	22	71	FD	| Original Japanese Hex
 お	も	し	ろ	い	「	だ	じ	ゃ	れ	」	か	ん	が	え	た	あ	る	ね	。	NEWPAGE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
-
+	h	a	v	e		g	r	e	a	t		"	i	d	e	a	s	"	.	NEWPAGE	| New English Text
 どうじょうへ どうじょ。
-How about eating.
+How about you?
 $0D0E5 (Line 3)
 8A	0D	82	6B	0D	27	00	8A	0D	82	6B	71	FE	| Original Japanese Hex
 ど	う	じ	ょ	う	へ	 	ど	う	じ	ょ	。	NEWLINE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
+H	o	w	 	a	r	e	 	y	o	u	?	NEWLINE	| New English Text
 ・・・・・・・・・・・・・・・・・・・・・・
 ......................
 $0D0F2 (Line 4)
 72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	FD	| Original Japanese Hex
 ・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWPAGE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
-
+・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWPAGE	| New English Text
 うむ、うこないあるか。 これならどうあるか?
-Well, there is not it. How is this?
+Ah, there is a problem. How is this?
 $0D109 (Line 5)
 0D	2B	70	0D	13	1F	0C	0B	33	10	71	00	14	34	1F	31	8A	0D	0B	33	10	75	FE	| Original Japanese Hex
 う	む	、	う	こ	な	い	あ	る	か	。	 	こ	れ	な	ら	ど	う	あ	る	か	?	NEWLINE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
+A	h	,	 	t	h	e	r	e	'	s	 	a	 	p	r	o	b	l	e	m	?	NEWLINE | New English Text
 でんわをかけても だれもでんわ
-Even if I make a call, no one is calling
+Even if you make a phone call, no one will help.
 $0D120 (Line 6)
 89	38	36	37	10	13	1D	2D	00	86	34	2D	89	38	36	FD	| Original Japanese Hex
 で	ん	わ	を	か	け	て	も	 	だ	れ	も	で	ん	わ	NEWPAGE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
-
+Y	o	u		n	e	e	d		h	e	l	p	?	 	NEWPAGE	| New English Text
 ・・・・・・・・・・・・・・・・・・・・・・
 ......................
 $0D130 (Line 7)
 72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	FE	| Original Japanese Hex
 ・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWLINE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
+・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWLINE	| New English Text
 ・・・・・・・・・・・・・・・・・・・・・・
 ......................
 $0D147 (Line 8)
 72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	FD	| Original Japanese Hex
 ・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWPAGE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
-
+・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWPAGE	| New English Text
 うむ、だめあるか。 これはどうあるか?
 Well, are you useless? How is this?
 $0D15E (Line 9)
 0D	2B	70	86	2C	0B	33	10	71	00	14	34	24	8A	0D	0B	33	10	75	FE	| Original Japanese Hex
 う	む	、	だ	め	あ	る	か	。	 	こ	れ	は	ど	う	あ	る	か	?	NEWLINE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
+H	o	w		c	o	m	e	?		A	r	e		y	o	u	NEWLINE	a	l	| New English Text
 ふとんが ふっとんだー
-Futon is a futsu
+Are you stuck?
 $0D172 (Line 10)
 26	1E	38	7C	00	26	68	1E	38	86	73	FD	| Original Japanese Hex
 ふ	と	ん	が	 	ふ	っ	と	ん	だ	ー	NEWPAGE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
-
+r	e	a	d	y		l	o	s	t	?	NEWPAGE	| New English Text
 ・・・・・・・・・・・・・・・・・・・・・・
 ......................
 $0D17E (Line 11)
 72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	FE	| Original Japanese Hex
 ・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWLINE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
+・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWLINE	| New English Text
 ・・・・・・・・・・・・・・・・・・・・・・
 ......................
 $0D195 (Line 12)
 72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	FD	| Original Japanese Hex
 ・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWPAGE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
-
+・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWPAGE	| New English Text
 うむ、うけないあるか。 これならどうあるか?
-Well, there is not it? How is this?
+Well, that is not right? How is this?
 $0D1AC (Line 13)
 0D	2B	70	0D	13	1F	0C	0B	33	10	71	00	14	34	1F	31	8A	0D	0B	33	10	75	FE	| Original Japanese Hex
 う	む	、	う	け	な	い	あ	る	か	。	 	こ	れ	な	ら	ど	う	あ	る	か	?	NEWLINE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
+H	o	w		i	s		t	h	i	s	?		Y	o	u		n	e	e	d	NEWLINE	t	| New English Text
 メガネをとったら めがねー!
-If you take your glasses, it's glasses!
+You might need glasses!
 $0D1C3 (Line 14)
 5A	90	50	37	1E	68	1A	31	00	2C	7C	22	73	74	FD	| Original Japanese Hex
 メ	ガ	ネ	を	と	っ	た	ら	 	め	が	ね	ー	!	NEWPAGE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
-
+o		l	o	o	k		h	a	r	d	e	r	!	NEWPAGE	| New English Text
 ・・・・・・・・・・・・・・・・・・・・・・
 ......................
 $0D1D2 (Line 15)
 72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	FE	| Original Japanese Hex
 ・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWLINE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
+・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWLINE	| New English Text
 ・・・・・・・・・・・・・・・・・・・・・・
 ......................
 $0D1E9 (Line 16)
 72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	FD	| Original Japanese Hex
 ・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWPAGE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
-
+・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWPAGE	| New English Text
 うむ、では これならどうあるか?
-Well, then how is this?
+Well, then how is this possible?
 $0D200 (Line 17)
 0D	2B	70	89	24	00	14	34	1F	31	8A	0D	0B	33	10	75	FE	| Original Japanese Hex
 う	む	、	で	は	 	こ	れ	な	ら	ど	う	あ	る	か	?	NEWLINE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
+H	o	w	 	i	s	 	t	h	i	s		s	o	?	NEWLINE	S	| New English Text
 そのステッキ、すてき。
-That stick, nice.
+A nice guy like you, in a sticky situation.
 $0D211 (Line 18)
 19	23	45	4B	6C	3F	70	17	1D	11	71	FD	| Original Japanese Hex
 そ	の	ス	テ	ッ	キ	、	す	て	き	。	NEWPAGE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
-
+u	c	h		a		p	i	t	y	.	NEWPAGE	| New English Text
 ・・・・・・・・・・・・・・・・・・・・・・
 ......................
 $0D21D (Line 19)
 72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	FE	| Original Japanese Hex
 ・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWLINE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
+・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWLINE	| New English Text
 ・・・・・・・・・・・・・・・・・・・・・・
 ......................
 $0D234 (Line 20)
 72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	72	FD	| Original Japanese Hex
 ・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWPAGE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
-
+・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	・	NEWPAGE	| New English Text
 そんなつまんない だじゃれをいったのは
 Is not it such a boring funny thing
 $0D24B (Line 21)
 19	38	1F	1C	29	38	1F	0C	00	86	82	69	34	37	0C	68	1A	23	24	FE	| Original Japanese Hex
 そ	ん	な	つ	ま	ん	な	い	 	だ	じ	ゃ	れ	を	い	っ	た	の	は	NEWLINE	| Original Japanese Text
-?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	?	| New English Text
+D	o	 	y	o	u	 	t	h	i	n	k	 	I	'	m	NEWLINE	s	t	r	| New English Text
 だじゃれ?
 to say?
 $0D25F (Line 22)
 86	82	69	34	75	FF	| Original Japanese Hex
 だ	じ	ゃ	れ	?	ENDTEXT	| Original Japanese Text
-?	?	?	?	?	?	| New English Text
+a	n	g	e	?	ENDTEXT	| New English Text
 
 
 てきを いっきにたおすには
@@ -655,3 +645,29 @@ $0D614 (Line 8)
 0B	0C	1D	24	00	2E	82	33	16	37	00	2B	16	16	1D	00	17	17	2B	23	30	71	FF	| Original Japanese Hex
 あ	い	て	は	 	や	じ	る	し	を	 	む	し	し	て	 	す	す	む	の	よ	。	ENDTEXT	| Original Japanese Text
 d	g	e		t	h	e	 	a	r	r	o	w	s	NEWLINE	t	o	 	w	i	n	.	ENDTEXT	| New English Text
+
+
+ほんとうに はらのたつ「すもうロボ」だ!!
+Coming up is a "Sumo Robo"!!
+$0D62B (Line 1)
+28	38	1E	0D	20	00	24	31	23	1A	1C	77	17	2D	0D	63	A3	78	86	74	74	FE	| Original Japanese Hex
+ほ	ん	と	う	に	 	は	ら	の	た	つ	「	す	も	う	ロ	ボ	」	だ	!	!	NEWLINE	| Original Japanese Text
+A	h	e	a	d	 	i	s	 	"	S	u	m	o	 	R	o	b	o	"	!	!	| New English Text
+イヌの「うんち」でもふんで こわれてしまえ。
+Stop it with a dog's "Poop" to break it.
+$0D641 (Line 2)
+3A	4F	23	77	0D	38	1B	78	89	2D	26	38	89	00	14	36	34	1D	16	29	0E	71	FD	| Original Japanese Hex
+イ	ヌ	の	「	う	ん	ち	」	で	も	ふ	ん	で	 	こ	わ	れ	て	し	ま	え	。	NEWPAGE	| Original Japanese Text
+NEWLINE	S	t	o	p	 	i	t	 	w	i	t	h	 	"	D	o	g	P	o	o	"	.	| New English Text
+にいさんも イヌの「うんち」を
+Be careful not to tread in
+$0D658 (Line 3)
+20	0C	15	38	2D	00	3A	4F	23	77	0D	38	1B	78	37	FE	| Original Japanese Hex
+に	い	さ	ん	も	 	イ	ヌ	の	「	う	ん	ち	」	を	NEWLINE	| Original Japanese Text
+NEWPAGE	T	r	y		n	o	t		t	o		s	t	e	p 	| New English Text
+ふまないように きをつけろよ!!
+the dog's "Poop" yourself!!
+$0D668 (Line 4)
+26	29	1F	0C	30	0D	20	00	11	37	1C	13	35	30	74	74	FF	| Original Japanese Hex
+ふ	ま	な	い	よ	う	に	 	き	を	つ	け	ろ	よ	!	!	ENDTEXT	| Original Japanese Text
+	o	n		i	t	NEWLINE	y	o	u	r	s	e	l	f	!	ENDTEXT	| New English Text

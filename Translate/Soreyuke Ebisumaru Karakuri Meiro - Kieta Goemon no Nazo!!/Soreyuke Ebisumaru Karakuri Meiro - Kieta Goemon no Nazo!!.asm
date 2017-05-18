@@ -205,6 +205,28 @@ TextNormal($0D04A, "When entering a\n")
 TextNormal($0D094, "Watchout for the bad\n")
                 db "robot in the maze.", ENDTEXT
 
+TextNormal($0D0BC, "I am 40 years old.\n")
+                db "I have great <Ideas>.", NEWPAGE
+                db "How are you?\n"
+                db "______________________", NEWPAGE
+                db "Ah, there's a problem?\n"
+                db "You need help? ", NEWPAGE
+                db "______________________\n"
+                db "______________________", NEWPAGE
+                db "How come? Are you\n"
+                db "already lost?", NEWPAGE
+                db "______________________\n"
+                db "______________________", NEWPAGE
+                db "How is this? You need\n"
+                db "to look harder!", NEWPAGE
+                db "______________________\n"
+                db "______________________", NEWPAGE
+                db "How is this so?\n"
+                db "Such a pity.", NEWPAGE
+                db "______________________\n"
+                db "______________________", NEWPAGE
+                db "Do you think I'm\n"
+                db "strange?", ENDTEXT
 
 TextNormal($0D265, "Use the spring to\n")
                 db "defeat enemies.", NEWPAGE
@@ -262,6 +284,11 @@ TextNormal($0D58C, "Recently at night, a\n")
                 db "it!? Are you lucky?", NEWPAGE
                 db "Try to dodge the arrows\n"
                 db "to win.", ENDTEXT
+
+TextNormal($0D62B, "Ahead is <Sumo Robo>!!\n")
+                db "Stop it with <DogPoo>.", NEWPAGE
+                db "Try not to step on it\n"
+                db "yourself!", ENDTEXT
 
 // NPC TREASURE
 TextNormal($0E307, "Long ago on <Karakuri>\n")
