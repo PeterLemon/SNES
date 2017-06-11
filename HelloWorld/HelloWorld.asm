@@ -30,7 +30,7 @@ seek($8000); Start:
   lda.b #%00001000 // DCBAPMMM: M = Mode, P = Priority, ABCD = BG1,2,3,4 Tile Size
   sta.w REG_BGMODE // $2105: BG Mode 0, Priority 1, BG1 8x8 Tiles
 
-  // Setup BG1 256 Color Background
+  // Setup BG1 4 Color Background
   lda.b #%11111100  // AAAAAASS: S = BG Map Size, A = BG Map Address
   sta.w REG_BG1SC   // $2108: BG1 32x32, BG1 Map Address = $3F (VRAM Address / $400)
   lda.b #%00000000  // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
