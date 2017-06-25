@@ -201,7 +201,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.b #$FE // A = $FE
+  lda.b #$7F // A = $7F
   inc // A++
 
   // Store Result & Processor Status Flag Data
@@ -274,7 +274,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.w #$FFFE // A = $FFFE
+  lda.w #$7FFF // A = $7FFF
   inc // A++
 
   // Store Result & Processor Status Flag Data
@@ -358,7 +358,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.b #$FE // A = $FE
+  lda.b #$7F // A = $7F
   sta.b AbsoluteData // Store Absolute Data
   inc.w AbsoluteData // Memory++
 
@@ -431,7 +431,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.w #$FFFE // A = $FFFE
+  lda.w #$7FFF // A = $7FFF
   sta.b AbsoluteData // Store Absolute Data
   inc.w AbsoluteData // Memory++
 
@@ -515,7 +515,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.b #$FE // A = $FE
+  lda.b #$7F // A = $7F
   sta.b AbsoluteData // Store Absolute Data
   inc.b AbsoluteData // Memory++
 
@@ -588,7 +588,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.w #$FFFE // A = $FFFE
+  lda.w #$7FFF // A = $7FFF
   sta.b AbsoluteData // Store Absolute Data
   inc.b AbsoluteData // Memory++
 
@@ -673,7 +673,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.b #$FE // A = $FE
+  lda.b #$7F // A = $7F
   sta.b AbsoluteData // Store Absolute Data
   ldx.w #0 // X = 0
   inc.w AbsoluteData,x // Memory++
@@ -748,7 +748,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.w #$FFFE // A = $FFFE
+  lda.w #$7FFF // A = $7FFF
   sta.b AbsoluteData // Store Absolute Data
   ldx.w #0 // X = 0
   inc.w AbsoluteData,x // Memory++
@@ -834,7 +834,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.b #$FE // A = $FE
+  lda.b #$7F // A = $7F
   sta.b AbsoluteData // Store Absolute Data
   ldx.w #0 // X = 0
   inc.b AbsoluteData,x // Memory++
@@ -909,7 +909,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.w #$FFFE // A = $FFFE
+  lda.w #$7FFF // A = $7FFF
   sta.b AbsoluteData // Store Absolute Data
   ldx.w #0 // X = 0
   inc.b AbsoluteData,x // Memory++
@@ -995,7 +995,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  ldx.b #$FE // X = $FE
+  ldx.b #$7F // X = $7F
   inx // X++
 
   // Store Result & Processor Status Flag Data
@@ -1068,7 +1068,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  ldx.w #$FFFE // X = $FFFE
+  ldx.w #$7FFF // X = $7FFF
   inx // X++
 
   // Store Result & Processor Status Flag Data
@@ -1152,7 +1152,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  ldy.b #$FE // Y = $FE
+  ldy.b #$7F // Y = $7F
   iny // Y++
 
   // Store Result & Processor Status Flag Data
@@ -1225,7 +1225,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  ldy.w #$FFFE // Y = $FFFE
+  ldy.w #$7FFF // Y = $7FFF
   iny // Y++
 
   // Store Result & Processor Status Flag Data
@@ -1292,7 +1292,7 @@ PSRResultCheckA:
   db $26
 
 INCResultCheckB:
-  db $FF
+  db $80
 PSRResultCheckB:
   db $A4
 
@@ -1302,7 +1302,7 @@ PSRResultCheckC:
   db $06
 
 INCResultCheckD:
-  dw $FFFF
+  dw $8000
 PSRResultCheckD:
   db $84
 
@@ -1312,7 +1312,7 @@ PSRResultCheckE:
   db $36
 
 INCResultCheckF:
-  db $FF
+  db $80
 PSRResultCheckF:
   db $B4
 
@@ -1322,7 +1322,7 @@ PSRResultCheckG:
   db $26
 
 INCResultCheckH:
-  dw $FFFF
+  dw $8000
 PSRResultCheckH:
   db $A4
 
