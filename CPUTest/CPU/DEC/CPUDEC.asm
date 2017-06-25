@@ -201,7 +201,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.b #$00 // A = $00
+  lda.b #$81 // A = $81
   dec // A--
 
   // Store Result & Processor Status Flag Data
@@ -274,7 +274,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.w #$0000 // A = $0000
+  lda.w #$8001 // A = $8001
   dec // A--
 
   // Store Result & Processor Status Flag Data
@@ -358,7 +358,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.b #$00 // A = $00
+  lda.b #$81 // A = $81
   sta.b AbsoluteData // Store Absolute Data
   dec.w AbsoluteData // Memory--
 
@@ -431,7 +431,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.w #$0000 // A = $0000
+  lda.w #$8001 // A = $8001
   sta.b AbsoluteData // Store Absolute Data
   dec.w AbsoluteData // Memory--
 
@@ -515,7 +515,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.b #$00 // A = $00
+  lda.b #$81 // A = $81
   sta.b AbsoluteData // Store Absolute Data
   dec.b AbsoluteData // Memory--
 
@@ -588,7 +588,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.w #$0000 // A = $0000
+  lda.w #$8001 // A = $8001
   sta.b AbsoluteData // Store Absolute Data
   dec.b AbsoluteData // Memory--
 
@@ -673,7 +673,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.b #$00 // A = $00
+  lda.b #$81 // A = $81
   sta.b AbsoluteData // Store Absolute Data
   ldx.w #0 // X = 0
   dec.w AbsoluteData,x // Memory--
@@ -748,7 +748,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.w #$0000 // A = $0000
+  lda.w #$8001 // A = $8001
   sta.b AbsoluteData // Store Absolute Data
   ldx.w #0 // X = 0
   dec.w AbsoluteData,x // Memory--
@@ -834,7 +834,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.b #$00 // A = $00
+  lda.b #$81 // A = $81
   sta.b AbsoluteData // Store Absolute Data
   ldx.w #0 // X = 0
   dec.b AbsoluteData,x // Memory--
@@ -909,7 +909,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  lda.w #$0000 // A = $0000
+  lda.w #$8001 // A = $8001
   sta.b AbsoluteData // Store Absolute Data
   ldx.w #0 // X = 0
   dec.b AbsoluteData,x // Memory--
@@ -995,7 +995,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  ldx.b #$00 // X = $00
+  ldx.b #$81 // X = $81
   dex // X--
 
   // Store Result & Processor Status Flag Data
@@ -1068,7 +1068,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  ldx.w #$0000 // X = $0000
+  ldx.w #$8001 // X = $8001
   dex // X--
 
   // Store Result & Processor Status Flag Data
@@ -1152,7 +1152,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  ldy.b #$00 // Y = $00
+  ldy.b #$81 // Y = $81
   dey // Y--
 
   // Store Result & Processor Status Flag Data
@@ -1225,7 +1225,7 @@ seek($8000); Start:
   clc // Clear Carry Flag
 
   // Run Test
-  ldy.w #$0000 // Y = $0000
+  ldy.w #$8001 // Y = $8001
   dey // Y--
 
   // Store Result & Processor Status Flag Data
@@ -1292,7 +1292,7 @@ PSRResultCheckA:
   db $26
 
 DECResultCheckB:
-  db $FF
+  db $80
 PSRResultCheckB:
   db $A4
 
@@ -1302,7 +1302,7 @@ PSRResultCheckC:
   db $06
 
 DECResultCheckD:
-  dw $FFFF
+  dw $8000
 PSRResultCheckD:
   db $84
 
@@ -1312,7 +1312,7 @@ PSRResultCheckE:
   db $36
 
 DECResultCheckF:
-  db $FF
+  db $80
 PSRResultCheckF:
   db $B4
 
@@ -1322,7 +1322,7 @@ PSRResultCheckG:
   db $26
 
 DECResultCheckH:
-  dw $FFFF
+  dw $8000
 PSRResultCheckH:
   db $A4
 
