@@ -83,7 +83,7 @@ Loop:
 
   // Key Release
   lda.b $01 // A = MEM[$01] (Keyboard Buffer Scancode)
-  cmp #$F0 // Compare MEM[$01] To Normal/Special Key Released Code
+  cmp.b #$F0 // Compare MEM[$01] To Normal/Special Key Released Code
   bne KeyPressed // IF (ScanCode != $F0) Key Pressed
   stz.b TEXTCOUNT // Store Zero To TEXTCOUNT
   stz.b KEYSCANCODE // Store Zero To KEYSCANCODE
@@ -122,32 +122,32 @@ Loop:
 
   lda.b KEYSCANCODE // A = Keyboard Scancode
 
-  cmp #$E0 // Compare A To Special Key Code
+  cmp.b #$E0 // Compare A To Special Key Code
   bne CancelKey
   jmp SkipChar
 
   CancelKey:
-    cmp #$76 // Compare A To Cancel Key Pressed Code
+    cmp.b #$76 // Compare A To Cancel Key Pressed Code
     bne SwitchKey
     jmp SkipChar
 
   SwitchKey:
-    cmp #$0D // Compare A To Switch Key Pressed Code
+    cmp.b #$0D // Compare A To Switch Key Pressed Code
     bne LeftCtrlKey
     jmp SkipChar
 
   LeftCtrlKey:
-    cmp #$11 // Compare A To Left Ctrl Key Pressed Code
+    cmp.b #$11 // Compare A To Left Ctrl Key Pressed Code
     bne RightCtrlKey
     jmp SkipChar
 
   RightCtrlKey:
-    cmp #$14 // Compare A To Right Ctrl Key Pressed Code
+    cmp.b #$14 // Compare A To Right Ctrl Key Pressed Code
     bne BackSpace
     jmp SkipChar
 
   BackSpace:
-    cmp #$66 // Compare A To BackSpace Key Pressed Code
+    cmp.b #$66 // Compare A To BackSpace Key Pressed Code
     bne ReturnKey
     ldx.b CURSORPOS  // Set VRAM Destination
     stx.w REG_VMADDL // $2116: VRAM
@@ -158,7 +158,7 @@ Loop:
     jmp SkipChar
 
   ReturnKey:
-    cmp #$5A // Compare A To BackSpace Key Pressed Code
+    cmp.b #$5A // Compare A To Return Key Pressed Code
     bne LeftShiftKey
     ldx.b CURSORPOS  // Set VRAM Destination
     stx.w REG_VMADDL // $2116: VRAM
@@ -181,21 +181,21 @@ Loop:
       jmp SkipChar
 
   LeftShiftKey:
-    cmp #$12 // Compare A To Left-SHIFT Key Code
+    cmp.b #$12 // Compare A To Left-SHIFT Key Code
     bne RightShiftKey
     lda.b #$01 // A = Shift Bit
     tsb.b KEYFLAGS // KEYFLAGS: Set Shift Bit 0 (Shift On)
     jmp SkipChar
  
   RightShiftKey:
-    cmp #$59 // Compare A To Right-SHIFT Key Code
+    cmp.b #$59 // Compare A To Right-SHIFT Key Code
     bne CAPSLOCK
     lda.b #$01 // A = KEYFLAGS: Shift Bit
     tsb.b KEYFLAGS // KEYFLAGS: Set Shift Bit 0 (Shift On)
     jmp SkipChar
 
   CAPSLOCK:
-    cmp #$58 // Compare A To CAPSLOCK Key Code
+    cmp.b #$58 // Compare A To CAPSLOCK Key Code
     bne NormalKey
     lda.b #$02 // A = KEYFLAGS: CAPSLOCK Bit
     tsb.b KEYFLAGS // KEYFLAGS: Test & Set CAPSLOCK Bit 1 (CAPSLOCK On)
