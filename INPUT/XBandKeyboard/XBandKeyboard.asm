@@ -170,9 +170,9 @@ Loop:
     lda.b #34 // Increment Cursor Position 34 Times (+= 34)
     ldx.b CURSORPOS // X = Cursor Position
     LoopReturn:
-       inx // X++
-       dec // A--
-       bne LoopReturn
+      inx // X++
+      dec // A--
+      bne LoopReturn
     cpx.w #$7F42  // Compare Cursor Position To Bottom Of Page
     bne ReturnEnd // IF (Cursor Position != Bottom Of Page) Return End
     ldx.w #$7F22  // ELSE Cursor Position = $7F22
