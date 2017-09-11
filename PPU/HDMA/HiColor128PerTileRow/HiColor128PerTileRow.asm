@@ -1,4 +1,4 @@
-// SNES Hi Color (128 Per Tile Row) Using 4BPP BG Mode Demo by krom (Peter Lemon):
+// SNES Hi Color (128 Per Tile Row) Using 4BPP BG & Sprites Demo by krom (Peter Lemon):
 arch snes.cpu
 output "HiColor128PerTileRow.sfc", create
 
@@ -154,8 +154,8 @@ OAMHDMATable:
   db   1, %11000001 // Repeat   1 Scanlines, Object Size = 16x32/32x64, Name = 0, Base = $4000
   db 0 // End Of HDMA
 
-// OAM Info (16x32 / 32x64 Sprites)
-OAM: 
+OAM:
+  // OAM Info (32x64 Sprites)
   db   0, 0,   0, %00000000 // ROW 1..7
   db  32, 0,   4, %00000010
   db  64, 0,   8, %00000100
@@ -183,6 +183,7 @@ OAM:
   db 192, 128, 136, %00001100
   db 224, 128, 140, %00001110
 
+  // OAM Info (16x32 Sprites)
   db   0, 192,  0, %00000001 // ROW 25..27
   db  16, 192,  2, %00000001
   db  32, 192,  4, %00000011
@@ -201,7 +202,7 @@ OAM:
   db 224, 192, 76, %00001111
   db 240, 192, 78, %00001111
 
-// OAM Extra Info (16x32 / 32x64 Sprites)
+  // OAM Extra Info (32x64 Sprites)
   db %10101010 // ROW 1..7
   db %10101010
 
@@ -211,6 +212,7 @@ OAM:
   db %10101010 // ROW 17..23
   db %10101010
 
+  // OAM Extra Info (16x32 Sprites)
   db %00000000 // ROW 25..27
   db %00000000
 
