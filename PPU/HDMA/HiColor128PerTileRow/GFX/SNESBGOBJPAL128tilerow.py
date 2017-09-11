@@ -1,5 +1,5 @@
 # Syntax: SNESBGOBJPAL128tilerow.py image.in file.out
-# Notes: in.png needs to be 256x224 pixel resolution image
+# Notes: image.in needs to be 256x224 pixel resolution image
 # Written for Python 3.6.2 with the Pillow 4.2.1 library
 import sys
 import struct
