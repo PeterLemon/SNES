@@ -107,7 +107,7 @@ seek($8000); Start:
   lda.b #%10010000   // NMI & Horizontal IRQ
   sta.w REG_NMITIMEN // $4200: Interrupt Enable & Joypad Request (Enable NMI)
 
-  ldy.w #$0000 // Y = Scanline Counter
+  ldy.w #0 // Y = Scanline Counter
   cli // Enable Interrupts
 
 loop:
