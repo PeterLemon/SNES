@@ -5,6 +5,11 @@ import sys
 import struct
 import PIL.Image
 
+# Quantize Options:
+colors = 15 # The desired number of colors, <= 256
+method = 0  # 0 = median cut 1 = maximum coverage 2 = fast octree 3 = libimagequant
+kmeans = 3  # Integer
+
 def convert_pal(image, filedata): # Convert To SNES 16 Color Palette Data
     palette = image.getpalette()[:(15*3)] # Get 15 * R,G,B Palette Entries
     i = 0
@@ -76,28 +81,28 @@ def convert_tile(image, tilenum, filedata): # Convert To SNES 8x8 4BPP Tile Data
 def convert_segment(image, height, filedata):
     for i in range(int(height/8)): # Convert Tile Data From 128 Pixel Wide Picture Segment
         tilerowsegment = image.crop((0, i*8, 32, (i*8)+8))
-        tilerowsegment = tilerowsegment.convert("P", dither=PIL.Image.NONE, palette=PIL.Image.ADAPTIVE, colors=15)
+        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
         convert_tile(tilerowsegment, 0, filedata)
         convert_tile(tilerowsegment, 1, filedata)
         convert_tile(tilerowsegment, 2, filedata)
         convert_tile(tilerowsegment, 3, filedata)
 
         tilerowsegment = image.crop((32, i*8, 64, (i*8)+8))
-        tilerowsegment = tilerowsegment.convert("P", dither=PIL.Image.NONE, palette=PIL.Image.ADAPTIVE, colors=15)
+        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
         convert_tile(tilerowsegment, 0, filedata)
         convert_tile(tilerowsegment, 1, filedata)
         convert_tile(tilerowsegment, 2, filedata)
         convert_tile(tilerowsegment, 3, filedata)
 
         tilerowsegment = image.crop((64, i*8, 96, (i*8)+8))
-        tilerowsegment = tilerowsegment.convert("P", dither=PIL.Image.NONE, palette=PIL.Image.ADAPTIVE, colors=15)
+        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
         convert_tile(tilerowsegment, 0, filedata)
         convert_tile(tilerowsegment, 1, filedata)
         convert_tile(tilerowsegment, 2, filedata)
         convert_tile(tilerowsegment, 3, filedata)
 
         tilerowsegment = image.crop((96, i*8, 128, (i*8)+8))
-        tilerowsegment = tilerowsegment.convert("P", dither=PIL.Image.NONE, palette=PIL.Image.ADAPTIVE, colors=15)
+        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
         convert_tile(tilerowsegment, 0, filedata)
         convert_tile(tilerowsegment, 1, filedata)
         convert_tile(tilerowsegment, 2, filedata)
@@ -115,35 +120,35 @@ def main(argv=None):
     # PASS 1: Convert Tile Row Palettes From Full Picture
     for i in range(int(height/8)):
         tilerowsegment = in_img.crop((0, i*8, 32, (i*8)+8))
-        tilerowsegment = tilerowsegment.convert("P", dither=PIL.Image.NONE, palette=PIL.Image.ADAPTIVE, colors=15)
+        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
         convert_pal(tilerowsegment, outpal)
 
         tilerowsegment = in_img.crop((32, i*8, 64, (i*8)+8))
-        tilerowsegment = tilerowsegment.convert("P", dither=PIL.Image.NONE, palette=PIL.Image.ADAPTIVE, colors=15)
+        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
         convert_pal(tilerowsegment, outpal)
 
         tilerowsegment = in_img.crop((64, i*8, 96, (i*8)+8))
-        tilerowsegment = tilerowsegment.convert("P", dither=PIL.Image.NONE, palette=PIL.Image.ADAPTIVE, colors=15)
+        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
         convert_pal(tilerowsegment, outpal)
 
         tilerowsegment = in_img.crop((96, i*8, 128, (i*8)+8))
-        tilerowsegment = tilerowsegment.convert("P", dither=PIL.Image.NONE, palette=PIL.Image.ADAPTIVE, colors=15)
+        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
         convert_pal(tilerowsegment, outpal)
 
         tilerowsegment = in_img.crop((128, i*8, 160, (i*8)+8))
-        tilerowsegment = tilerowsegment.convert("P", dither=PIL.Image.NONE, palette=PIL.Image.ADAPTIVE, colors=15)
+        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
         convert_pal(tilerowsegment, outpal)
 
         tilerowsegment = in_img.crop((160, i*8, 192, (i*8)+8))
-        tilerowsegment = tilerowsegment.convert("P", dither=PIL.Image.NONE, palette=PIL.Image.ADAPTIVE, colors=15)
+        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
         convert_pal(tilerowsegment, outpal)
 
         tilerowsegment = in_img.crop((192, i*8, 224, (i*8)+8))
-        tilerowsegment = tilerowsegment.convert("P", dither=PIL.Image.NONE, palette=PIL.Image.ADAPTIVE, colors=15)
+        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
         convert_pal(tilerowsegment, outpal)
 
         tilerowsegment = in_img.crop((224, i*8, 256, (i*8)+8))
-        tilerowsegment = tilerowsegment.convert("P", dither=PIL.Image.NONE, palette=PIL.Image.ADAPTIVE, colors=15)
+        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
         convert_pal(tilerowsegment, outpal)
 
     # PASS 2: Convert Tile Data From Cropped Picture Segments
