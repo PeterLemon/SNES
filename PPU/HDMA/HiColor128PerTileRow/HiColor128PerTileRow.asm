@@ -107,7 +107,8 @@ seek($8000); Start:
   lda.b #%10010000   // NMI & Horizontal IRQ
   sta.w REG_NMITIMEN // $4200: Interrupt Enable & Joypad Request (Enable NMI)
 
-  ldy.w #0 // Y = Scanline Counter
+  WaitNMI() // Wait For Vertical Blank
+  ldy.w #224 // Y = Scanline Counter
   cli // Enable Interrupts
 
 loop:
@@ -115,14 +116,10 @@ loop:
   jmp loop
 
 VBLANKIRQ:
-  ldy.w #225 // Scanline Counter = 225
-
-  stz.w REG_CGADD // $2121: Palette CGRAM Address (Set To Zero)
-
-  ldx.w #BGOBJPal // DMA Table Address
-  stx.w REG_A1T0L // $4302: DMA0 DMA/HDMA Table Start Address
-  ldx.w #256      // Set Size In Bytes To DMA Transfer (2 Bytes For Each Color)
-  stx.w REG_DAS0L // $4305: DMA Transfer Size/HDMA
+  ldx.w #BGOBJPal  // DMA Table Address
+  stx.w REG_A1T0L  // $4302: DMA0 DMA/HDMA Table Start Address
+  ldx.w #256       // Set Size In Bytes To DMA Transfer (2 Bytes For Each Color)
+  stx.w REG_DAS0L  // $4305: DMA Transfer Size/HDMA
   lda.b #%00000001 // Start DMA Transfer (Channel 0)
   sta.w REG_MDMAEN // $420B: DMA Enable
   rti
@@ -134,11 +131,11 @@ HTIMERIRQ:
   cpy.w #261 // Compare Scanline Counter To 261 (Vertical Counter End NTSC)
   beq StartPaletteUpload 
 
-  cpy.w #224 // Compare Scanline Counter To 224
+  cpy.w #217 // Compare Scanline Counter To 217
   bpl SkipDMA
 
-  ldx.w #32      // Set Size In Bytes To DMA Transfer (2 Bytes For Each Color)
-  stx.w REG_DAS0L // $4305: DMA Transfer Size/HDMA
+  ldx.w #32        // Set Size In Bytes To DMA Transfer (2 Bytes For Each Color)
+  stx.w REG_DAS0L  // $4305: DMA Transfer Size/HDMA
   lda.b #%00000001 // Start DMA Transfer (Channel 0)
   sta.w REG_MDMAEN // $420B: DMA Enable
 
