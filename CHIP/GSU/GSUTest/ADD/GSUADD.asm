@@ -195,14 +195,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR0, $FA02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R1 // X = GSU R1 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR0, $FA02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FA12, 2) // Print Result Data
@@ -226,14 +226,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR0, $FA42, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R1 // X = GSU R1 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR0, $FA42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FA52, 2) // Print Result Data
@@ -257,14 +257,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR1, $FA82, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR1, $FA82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FA92, 2) // Print Result Data
@@ -288,14 +288,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR1, $FAC2, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR1, $FAC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FAD2, 2) // Print Result Data
@@ -319,14 +319,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR2, $FB02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR2, $FB02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FB12, 2) // Print Result Data
@@ -350,14 +350,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR2, $FB42, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR2, $FB42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FB52, 2) // Print Result Data
@@ -381,14 +381,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR3, $FB82, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR3, $FB82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FB92, 2) // Print Result Data
@@ -412,14 +412,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR3, $FBC2, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR3, $FBC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FBD2, 2) // Print Result Data
@@ -443,14 +443,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR4, $FC02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR4, $FC02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FC12, 2) // Print Result Data
@@ -474,14 +474,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR4, $FC42, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR4, $FC42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FC52, 2) // Print Result Data
@@ -505,14 +505,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR5, $FC82, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR5, $FC82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FC92, 2) // Print Result Data
@@ -536,14 +536,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR5, $FCC2, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR5, $FCC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FCD2, 2) // Print Result Data
@@ -567,14 +567,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR6, $FD02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR6, $FD02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FD12, 2) // Print Result Data
@@ -598,14 +598,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR6, $FD42, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR6, $FD42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FD52, 2) // Print Result Data
@@ -629,14 +629,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR7, $FD82, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR7, $FD82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FD92, 2) // Print Result Data
@@ -660,14 +660,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR7, $FDC2, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR7, $FDC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FDD2, 2) // Print Result Data
@@ -696,14 +696,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR8, $FA02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR8, $FA02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FA12, 2) // Print Result Data
@@ -727,14 +727,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR8, $FA42, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR8, $FA42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FA52, 2) // Print Result Data
@@ -754,20 +754,18 @@ CPURAM: // CPU Program Code To Be Run From RAM
     PrintText(Pass, $FA72, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
-  WaitNMI() // Wait For VSync
-
   ldx.w GSU_R15 // Program Address
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
-
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR9, $FA82, 7) // Load Text To VRAM Lo Bytes
 
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR9, $FA82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FA92, 2) // Print Result Data
@@ -791,14 +789,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR9, $FAC2, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR9, $FAC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FAD2, 2) // Print Result Data
@@ -822,14 +820,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR10, $FB02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR10, $FB02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FB12, 2) // Print Result Data
@@ -853,14 +851,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR10, $FB42, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR10, $FB42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FB52, 2) // Print Result Data
@@ -880,20 +878,18 @@ CPURAM: // CPU Program Code To Be Run From RAM
     PrintText(Pass, $FB72, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
-  WaitNMI() // Wait For VSync
-
   ldx.w GSU_R15 // Program Address
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
-
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR11, $FB82, 7) // Load Text To VRAM Lo Bytes
 
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR11, $FB82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FB92, 2) // Print Result Data
@@ -917,14 +913,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR11, $FBC2, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR11, $FBC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FBD2, 2) // Print Result Data
@@ -948,14 +944,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR12, $FC02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR12, $FC02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FC12, 2) // Print Result Data
@@ -979,14 +975,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR12, $FC42, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR12, $FC42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FC52, 2) // Print Result Data
@@ -1010,14 +1006,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR13, $FC82, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR13, $FC82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FC92, 2) // Print Result Data
@@ -1041,14 +1037,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR13, $FCC2, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR13, $FCC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FCD2, 2) // Print Result Data
@@ -1072,14 +1068,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR14, $FD02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR14, $FD02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FD12, 2) // Print Result Data
@@ -1103,14 +1099,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR14, $FD42, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR14, $FD42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FD52, 2) // Print Result Data
@@ -1130,20 +1126,18 @@ CPURAM: // CPU Program Code To Be Run From RAM
     PrintText(Pass, $FD72, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
-  WaitNMI() // Wait For VSync
-
   ldx.w GSU_R15 // Program Address
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
-
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR15, $FD82, 7) // Load Text To VRAM Lo Bytes
 
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR15, $FD82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FD92, 2) // Print Result Data
@@ -1167,14 +1161,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADDR15, $FDC2, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADDR15, $FDC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FDD2, 2) // Print Result Data
@@ -1210,14 +1204,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD0, $FA02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD0, $FA02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FA12, 2) // Print Result Data
@@ -1237,20 +1231,18 @@ CPURAM: // CPU Program Code To Be Run From RAM
     PrintText(Pass, $FA32, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
-  WaitNMI() // Wait For VSync
-
   ldx.w GSU_R15 // Program Address
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
-
-  WaitNMI() // Wait For VSync
-  PrintText(ADD0, $FA42, 7) // Load Text To VRAM Lo Bytes
 
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD0, $FA42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FA52, 2) // Print Result Data
@@ -1274,14 +1266,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD1, $FA82, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD1, $FA82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FA92, 2) // Print Result Data
@@ -1305,14 +1297,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD1, $FAC2, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD1, $FAC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FAD2, 2) // Print Result Data
@@ -1336,14 +1328,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD2, $FB02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD2, $FB02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FB12, 2) // Print Result Data
@@ -1367,14 +1359,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD2, $FB42, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD2, $FB42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FB52, 2) // Print Result Data
@@ -1398,14 +1390,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD3, $FB82, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD3, $FB82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FB92, 2) // Print Result Data
@@ -1429,14 +1421,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD3, $FBC2, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD3, $FBC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FBD2, 2) // Print Result Data
@@ -1460,14 +1452,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD4, $FC02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD4, $FC02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FC12, 2) // Print Result Data
@@ -1487,20 +1479,18 @@ CPURAM: // CPU Program Code To Be Run From RAM
     PrintText(Pass, $FC32, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
-  WaitNMI() // Wait For VSync
-
   ldx.w GSU_R15 // Program Address
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
-
-  WaitNMI() // Wait For VSync
-  PrintText(ADD4, $FC42, 7) // Load Text To VRAM Lo Bytes
 
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD4, $FC42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FC52, 2) // Print Result Data
@@ -1524,14 +1514,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD5, $FC82, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD5, $FC82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FC92, 2) // Print Result Data
@@ -1555,14 +1545,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD5, $FCC2, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD5, $FCC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FCD2, 2) // Print Result Data
@@ -1586,14 +1576,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD6, $FD02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD6, $FD02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FD12, 2) // Print Result Data
@@ -1613,20 +1603,18 @@ CPURAM: // CPU Program Code To Be Run From RAM
     PrintText(Pass, $FD32, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
-  WaitNMI() // Wait For VSync
-
   ldx.w GSU_R15 // Program Address
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
-
-  WaitNMI() // Wait For VSync
-  PrintText(ADD6, $FD42, 7) // Load Text To VRAM Lo Bytes
 
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD6, $FD42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FD52, 2) // Print Result Data
@@ -1650,14 +1638,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD7, $FD82, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD7, $FD82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FD92, 2) // Print Result Data
@@ -1681,14 +1669,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD7, $FDC2, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD7, $FDC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FDD2, 2) // Print Result Data
@@ -1717,14 +1705,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD8, $FA02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD8, $FA02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FA12, 2) // Print Result Data
@@ -1748,14 +1736,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD8, $FA42, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD8, $FA42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FA52, 2) // Print Result Data
@@ -1775,20 +1763,18 @@ CPURAM: // CPU Program Code To Be Run From RAM
     PrintText(Pass, $FA72, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
-  WaitNMI() // Wait For VSync
-
   ldx.w GSU_R15 // Program Address
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
-
-  WaitNMI() // Wait For VSync
-  PrintText(ADD9, $FA82, 7) // Load Text To VRAM Lo Bytes
 
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD9, $FA82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FA92, 2) // Print Result Data
@@ -1812,14 +1798,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD9, $FAC2, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD9, $FAC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FAD2, 2) // Print Result Data
@@ -1843,14 +1829,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD10, $FB02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD10, $FB02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FB12, 2) // Print Result Data
@@ -1874,14 +1860,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD10, $FB42, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD10, $FB42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FB52, 2) // Print Result Data
@@ -1901,20 +1887,18 @@ CPURAM: // CPU Program Code To Be Run From RAM
     PrintText(Pass, $FB72, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
-  WaitNMI() // Wait For VSync
-
   ldx.w GSU_R15 // Program Address
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
-
-  WaitNMI() // Wait For VSync
-  PrintText(ADD11, $FB82, 7) // Load Text To VRAM Lo Bytes
 
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD11, $FB82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FB92, 2) // Print Result Data
@@ -1934,20 +1918,18 @@ CPURAM: // CPU Program Code To Be Run From RAM
     PrintText(Pass, $FBB2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
-  WaitNMI() // Wait For VSync
-
   ldx.w GSU_R15 // Program Address
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
-
-  WaitNMI() // Wait For VSync
-  PrintText(ADD11, $FBC2, 7) // Load Text To VRAM Lo Bytes
 
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD11, $FBC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FBD2, 2) // Print Result Data
@@ -1971,14 +1953,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD12, $FC02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD12, $FC02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FC12, 2) // Print Result Data
@@ -2002,14 +1984,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD12, $FC42, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD12, $FC42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FC52, 2) // Print Result Data
@@ -2033,14 +2015,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD13, $FC82, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD13, $FC82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FC92, 2) // Print Result Data
@@ -2064,14 +2046,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD13, $FCC2, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD13, $FCC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FCD2, 2) // Print Result Data
@@ -2095,14 +2077,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD14, $FD02, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD14, $FD02, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FD12, 2) // Print Result Data
@@ -2126,14 +2108,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
 
-  WaitNMI() // Wait For VSync
-  PrintText(ADD14, $FD42, 7) // Load Text To VRAM Lo Bytes
-
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD14, $FD42, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FD52, 2) // Print Result Data
@@ -2153,20 +2135,18 @@ CPURAM: // CPU Program Code To Be Run From RAM
     PrintText(Pass, $FD72, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
-  WaitNMI() // Wait For VSync
-
   ldx.w GSU_R15 // Program Address
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
-
-  WaitNMI() // Wait For VSync
-  PrintText(ADD15, $FD82, 7) // Load Text To VRAM Lo Bytes
 
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD15, $FD82, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FD92, 2) // Print Result Data
@@ -2186,20 +2166,18 @@ CPURAM: // CPU Program Code To Be Run From RAM
     PrintText(Pass, $FDB2, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
-  WaitNMI() // Wait For VSync
-
   ldx.w GSU_R15 // Program Address
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
-
-  WaitNMI() // Wait For VSync
-  PrintText(ADD15, $FDC2, 7) // Load Text To VRAM Lo Bytes
 
   // Store Result & GSU Status Flag Data
   ldx.w GSU_R0 // X = GSU R0 (Result)
   stx.b ResultData // Store Result To Memory
   ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
   stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(ADD15, $FDC2, 7) // Load Text To VRAM Lo Bytes
 
   // Print Result & GSU Status Flag Data
   PrintValue(ResultData, $FDD2, 2) // Print Result Data

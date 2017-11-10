@@ -216,13 +216,13 @@ GSUStart:
   stop // Stop GSU
   nop // Delay Slot
 
-  iwt r0, #$41FC // R0 = $41FC
+  iwt r0, #$4233 // R0 = $4233
   add r15 // R0 += R15
 
   stop // Stop GSU
   nop // Delay Slot
 
-  iwt r0, #$41F4 // R0 = $41F4
+  iwt r0, #$422B // R0 = $422B
   add r15 // R0 += R15
 
   stop // Stop GSU
