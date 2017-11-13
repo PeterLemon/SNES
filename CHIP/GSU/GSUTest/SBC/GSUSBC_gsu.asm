@@ -216,7 +216,7 @@ GSUStart:
   stop // Stop GSU
   nop // Delay Slot
 
-  iwt r0, #$A0F0 // R0 = $A0F0 1CE0
+  iwt r0, #$A0F0 // R0 = $A0F0
   sbc r15 // R0 -= R15
 
   stop // Stop GSU
