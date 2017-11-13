@@ -1,0 +1,1 @@
+bass GSUCMP.asm
