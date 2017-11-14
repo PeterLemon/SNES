@@ -161,7 +161,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
   WaitNMI() // Wait For VSync
 
   // Print Title Text
-  PrintText(Title, $F882, 22) // Load Text To VRAM Lo Bytes
+  PrintText(Title, $F882, 23) // Load Text To VRAM Lo Bytes
 
   // Print Page Break Text
   PrintText(PageBreak, $F8C2, 30) // Load Text To VRAM Lo Bytes
@@ -1192,7 +1192,7 @@ Loop:
 CPURAMEnd:
 
 Title:
-  db "GSU Test CMP (Compare)"
+  db "GSU Test CMP (Compare):"
 
 PageBreak:
   db "------------------------------"
@@ -1249,9 +1249,9 @@ SFRResultCheckB:
   db $18
 
 CMPResultCheckB:
-  dw $A0E9
+  dw $A0EA
 CMPResultCheckC:
-  dw $A0EE
+  dw $A0EF
 SFRResultCheckC:
   db $08
 
