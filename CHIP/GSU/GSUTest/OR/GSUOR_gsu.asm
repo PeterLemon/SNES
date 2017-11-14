@@ -6,15 +6,15 @@ GSUStart:
   // OR register
   ////////////////////////////
 
-  iwt r1, #$0000 // R1 = $0000
-  iwt r0, #$0000 // R0 = $0000
+  iwt r1, #$00FF // R1 = $00FF
+  iwt r0, #$FFFF // R0 = $FFFF
   with r1 ; or r0 // R1 |= R0
 
   stop // Stop GSU
   nop // Delay Slot
 
-  iwt r1, #$00FF // R1 = $00FF
-  iwt r0, #$FF00 // R0 = $FF00
+  iwt r1, #$FFFF // R1 = $FFFF
+  iwt r0, #$FFFF // R0 = $FFFF
   with r1 ; or r0 // R1 |= R0
 
   stop // Stop GSU

@@ -241,14 +241,14 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckA
+  cpx.w ORResultCheckB
   beq Pass2
   Fail2:
     PrintText(Fail, $FA72, 4) // Load Text To VRAM Lo Bytes
     bra Fail2
   Pass2:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckA
+    cmp.w SFRResultCheckB
     bne Fail2
     PrintText(Pass, $FA72, 4) // Load Text To VRAM Lo Bytes
 
@@ -303,7 +303,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass4
   Fail4:
     PrintText(Fail, $FAF2, 4) // Load Text To VRAM Lo Bytes
@@ -365,7 +365,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass6
   Fail6:
     PrintText(Fail, $FB72, 4) // Load Text To VRAM Lo Bytes
@@ -427,7 +427,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass8
   Fail8:
     PrintText(Fail, $FBF2, 4) // Load Text To VRAM Lo Bytes
@@ -489,7 +489,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass10
   Fail10:
     PrintText(Fail, $FC72, 4) // Load Text To VRAM Lo Bytes
@@ -551,7 +551,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass12
   Fail12:
     PrintText(Fail, $FCF2, 4) // Load Text To VRAM Lo Bytes
@@ -613,7 +613,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass14
   Fail14:
     PrintText(Fail, $FD72, 4) // Load Text To VRAM Lo Bytes
@@ -675,7 +675,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass16
   Fail16:
     PrintText(Fail, $FDF2, 4) // Load Text To VRAM Lo Bytes
@@ -742,7 +742,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass18
   Fail18:
     PrintText(Fail, $FA72, 4) // Load Text To VRAM Lo Bytes
@@ -804,7 +804,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass20
   Fail20:
     PrintText(Fail, $FAF2, 4) // Load Text To VRAM Lo Bytes
@@ -866,7 +866,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass22
   Fail22:
     PrintText(Fail, $FB72, 4) // Load Text To VRAM Lo Bytes
@@ -928,7 +928,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass24
   Fail24:
     PrintText(Fail, $FBF2, 4) // Load Text To VRAM Lo Bytes
@@ -990,7 +990,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass26
   Fail26:
     PrintText(Fail, $FC72, 4) // Load Text To VRAM Lo Bytes
@@ -1052,7 +1052,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass28
   Fail28:
     PrintText(Fail, $FCF2, 4) // Load Text To VRAM Lo Bytes
@@ -1114,7 +1114,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass30
   Fail30:
     PrintText(Fail, $FD72, 4) // Load Text To VRAM Lo Bytes
@@ -1145,7 +1145,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckC
+  cpx.w ORResultCheckD
   beq Pass31
   Fail31:
     PrintText(Fail, $FDB2, 4) // Load Text To VRAM Lo Bytes
@@ -1176,7 +1176,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass32
   Fail32:
     PrintText(Fail, $FDF2, 4) // Load Text To VRAM Lo Bytes
@@ -1250,7 +1250,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckD
+  cpx.w ORResultCheckB
   beq Pass34
   Fail34:
     PrintText(Fail, $FA72, 4) // Load Text To VRAM Lo Bytes
@@ -1312,7 +1312,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass36
   Fail36:
     PrintText(Fail, $FAF2, 4) // Load Text To VRAM Lo Bytes
@@ -1374,7 +1374,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass38
   Fail38:
     PrintText(Fail, $FB72, 4) // Load Text To VRAM Lo Bytes
@@ -1436,7 +1436,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass40
   Fail40:
     PrintText(Fail, $FBF2, 4) // Load Text To VRAM Lo Bytes
@@ -1498,7 +1498,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass42
   Fail42:
     PrintText(Fail, $FC72, 4) // Load Text To VRAM Lo Bytes
@@ -1560,7 +1560,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass44
   Fail44:
     PrintText(Fail, $FCF2, 4) // Load Text To VRAM Lo Bytes
@@ -1622,7 +1622,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass46
   Fail46:
     PrintText(Fail, $FD72, 4) // Load Text To VRAM Lo Bytes
@@ -1684,7 +1684,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass48
   Fail48:
     PrintText(Fail, $FDF2, 4) // Load Text To VRAM Lo Bytes
@@ -1751,7 +1751,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass50
   Fail50:
     PrintText(Fail, $FA72, 4) // Load Text To VRAM Lo Bytes
@@ -1813,7 +1813,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass52
   Fail52:
     PrintText(Fail, $FAF2, 4) // Load Text To VRAM Lo Bytes
@@ -1875,7 +1875,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass54
   Fail54:
     PrintText(Fail, $FB72, 4) // Load Text To VRAM Lo Bytes
@@ -1937,7 +1937,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass56
   Fail56:
     PrintText(Fail, $FBF2, 4) // Load Text To VRAM Lo Bytes
@@ -1999,7 +1999,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass58
   Fail58:
     PrintText(Fail, $FC72, 4) // Load Text To VRAM Lo Bytes
@@ -2061,7 +2061,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass60
   Fail60:
     PrintText(Fail, $FCF2, 4) // Load Text To VRAM Lo Bytes
@@ -2123,7 +2123,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass62
   Fail62:
     PrintText(Fail, $FD72, 4) // Load Text To VRAM Lo Bytes
@@ -2185,7 +2185,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w ORResultCheckB
+  cpx.w ORResultCheckC
   beq Pass64
   Fail64:
     PrintText(Fail, $FDF2, 4) // Load Text To VRAM Lo Bytes
@@ -2293,15 +2293,15 @@ SFRResultCheckA:
   db $02
 
 ORResultCheckB:
-  dw $FFFF
+  dw $00FF
 SFRResultCheckB:
   db $08
 
 ORResultCheckC:
-  dw $BDCF
+  dw $FFFF
 
 ORResultCheckD:
-  dw $00FF
+  dw $BDCF
 
 SFRResultCheckC:
   db $00
