@@ -6,16 +6,16 @@ GSUStart:
   // AND register
   ////////////////////////////
 
-  iwt r1, #$FFFF // R1 = $FFFF
-  iwt r0, #$0000 // R0 = $0000
-  with r1 ; and r0 // R1 &= R0
+  iwt r7, #$00FF // R7 = $00FF
+  iwt r8, #$00FF // R8 = $00FF
+  with r1 ; and r0 // R1 = (R7 & $FF00) + (R8 / $100) (MERGE)
 
   stop // Stop GSU
   nop // Delay Slot
 
-  iwt r1, #$FFFF // R1 = $FFFF
-  iwt r0, #$FFFF // R0 = $FFFF
-  with r1 ; and r0 // R1 &= R0
+  iwt r7, #$FF00 // R7 = $FF00
+  iwt r8, #$FF00 // R8 = $FF00
+  with r1 ; and r0 // R1 = (R7 & $FF00) + (R8 / $100) (MERGE)
 
   stop // Stop GSU
   nop // Delay Slot
@@ -232,14 +232,16 @@ GSUStart:
   // AND #const
   ////////////////////////////
 
-  iwt r0, #$0000 // R0 = $0000
-  and #0 // R0 &= 0
+  iwt r7, #$00FF // R7 = $00FF
+  iwt r8, #$00FF // R8 = $00FF
+  and #0 // R0 = (R7 & $FF00) + (R8 / $100) (MERGE)
 
   stop // Stop GSU
   nop // Delay Slot
 
-  iwt r0, #$FFFF // R0 = $FFFF
-  and #0 // R0 &= 0
+  iwt r7, #$FF00 // R7 = $FF00
+  iwt r8, #$FF00 // R8 = $FF00
+  and #0 // R0 = (R7 & $FF00) + (R8 / $100) (MERGE)
 
   stop // Stop GSU
   nop // Delay Slot
