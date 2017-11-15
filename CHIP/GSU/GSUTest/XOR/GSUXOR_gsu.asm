@@ -8,14 +8,14 @@ GSUStart:
 
   iwt r1, #$00FF // R1 = $00FF
   iwt r0, #$00FF // R0 = $00FF
-  with r1 ; xor r0 // R1 ^= R0
+  with r1 ; xor r0 // R1 ^= R0 (HIB)
 
   stop // Stop GSU
   nop // Delay Slot
 
   iwt r1, #$FF00 // R1 = $FF00
   iwt r0, #$FF00 // R0 = $FF00
-  with r1 ; xor r0 // R1 ^= R0
+  with r1 ; xor r0 // R1 ^= R0 (HIB)
 
   stop // Stop GSU
   nop // Delay Slot
@@ -233,13 +233,13 @@ GSUStart:
   ////////////////////////////
 
   iwt r0, #$00FF // R0 = $00FF
-  xor #0 // R0 ^= 0
+  xor #0 // R0 ^= 0 (HIB)
 
   stop // Stop GSU
   nop // Delay Slot
 
   iwt r0, #$FF00 // R0 = $FF00
-  xor #0 // R0 ^= 0
+  xor #0 // R0 ^= 0 (HIB)
 
   stop // Stop GSU
   nop // Delay Slot
