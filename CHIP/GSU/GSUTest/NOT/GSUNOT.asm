@@ -1125,6 +1125,37 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bne Fail30
     PrintText(Pass, $FD72, 4) // Load Text To VRAM Lo Bytes
 
+  /////////////////////////////////////////////////////////////////
+  ldx.w GSU_R15 // Program Address
+  stx.w GSU_R15 // Sets Program Counter ($301E)
+  GSUWait() // Wait For GSU To Finish
+
+  // Store Result & GSU Status Flag Data
+  ldx.w GSU_R0 // X = GSU R0 (Result)
+  stx.b ResultData // Store Result To Memory
+  ldx.w GSU_SFR // X = GSU SFR (Status/Flag)
+  stx.b SFRFlagData // Store GSU Status Flag Data To Memory
+
+  WaitNMI() // Wait For VSync
+  PrintText(NOTR15, $FD82, 7) // Load Text To VRAM Lo Bytes
+
+  // Print Result & GSU Status Flag Data
+  PrintValue(ResultData, $FD92, 2) // Print Result Data
+  PrintSFR(SFRFlagData, $FDA4) // Print GSU Status Flag Data
+
+  // Check Result & GSU Status Flag Data
+  ldx.b ResultData // X = Result Data
+  cpx.w NOTResultCheckC
+  beq Pass31
+  Fail31:
+    PrintText(Fail, $FDB2, 4) // Load Text To VRAM Lo Bytes
+    bra Fail31
+  Pass31:
+    lda.b SFRFlagData // A = GSU Status Flag Data
+    cmp.w SFRResultCheckC
+    bne Fail31
+    PrintText(Pass, $FDB2, 4) // Load Text To VRAM Lo Bytes
+
 Loop:
   bra Loop
 CPURAMEnd:
@@ -1168,6 +1199,8 @@ NOTR13:
   db "R13/$4F"
 NOTR14:
   db "R14/$4F"
+NOTR15:
+  db "R15/$4F"
 
 Fail:
   db "FAIL"
@@ -1186,6 +1219,11 @@ NOTResultCheckB:
   dw $FFFF
 SFRResultCheckB:
   db $08
+
+NOTResultCheckC:
+  dw $604D
+SFRResultCheckC:
+  db $00
 
 // GSU Code
 // BANK 0
