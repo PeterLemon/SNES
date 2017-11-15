@@ -185,3 +185,8 @@ GSUStart:
 
   stop // Stop GSU
   nop // Delay Slot
+
+  to r0 ; from r15 ; rol // R0 = R15 << 1
+
+  stop // Stop GSU
+  nop // Delay Slot
