@@ -216,13 +216,13 @@ GSUStart:
   stop // Stop GSU
   nop // Delay Slot
 
-  iwt r0, #$A0EA // R0 = $A0EA
+  iwt r0, #$A0E8 // R0 = $A0E8
   cmp r15 // R0 -= R15
 
   stop // Stop GSU
   nop // Delay Slot
 
-  iwt r0, #$A0EF // R0 = $A0EF
+  iwt r0, #$A0ED // R0 = $A0ED
   cmp r15 // R0 -= R15
 
   stop // Stop GSU

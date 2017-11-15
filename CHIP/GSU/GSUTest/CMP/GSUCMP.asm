@@ -1239,7 +1239,7 @@ Pass:
   db "PASS"
 
 CMPRegister:
-  db "CMP register   (Opcode: $3F6n)  "
+  db "CMP register   (Opcode: $3F6n)"
 
 CMPResultCheckA:
   dw $7FFF
@@ -1249,9 +1249,9 @@ SFRResultCheckB:
   db $18
 
 CMPResultCheckB:
-  dw $A0EA
+  dw $A0E8
 CMPResultCheckC:
-  dw $A0EF
+  dw $A0ED
 SFRResultCheckC:
   db $08
 
