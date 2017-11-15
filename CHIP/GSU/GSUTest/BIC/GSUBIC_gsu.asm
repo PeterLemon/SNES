@@ -6,16 +6,16 @@ GSUStart:
   // BIC register
   ////////////////////////////
 
-  iwt r1, #$FFFF // R1 = $FFFF
-  iwt r0, #$FFFF // R0 = $FFFF
-  with r1 ; bic r0 // R1 &= !R0
+  iwt r7, #$00FF // R7 = $00FF
+  iwt r8, #$00FF // R8 = $00FF
+  with r1 ; bic r0 // R1 = (R7 & $FF00) + (R8 / $100) (MERGE)
 
   stop // Stop GSU
   nop // Delay Slot
 
-  iwt r1, #$FFFF // R1 = $FFFF
-  iwt r0, #$0000 // R0 = $0000
-  with r1 ; bic r0 // R1 &= !R0
+  iwt r7, #$FF00 // R7 = $FF00
+  iwt r8, #$FF00 // R8 = $FF00
+  with r1 ; bic r0 // R1 = (R7 & $FF00) + (R8 / $100) (MERGE)
 
   stop // Stop GSU
   nop // Delay Slot
@@ -216,7 +216,7 @@ GSUStart:
   stop // Stop GSU
   nop // Delay Slot
 
-  iwt r0, #$BDE8 // R0 = $BDE8
+  iwt r0, #$BDF0 // R0 = $BDF0
   bic r15 // R0 &= !R15
 
   stop // Stop GSU
@@ -232,14 +232,16 @@ GSUStart:
   // BIC #const
   ////////////////////////////
 
-  iwt r0, #$0000 // R0 = $0000
-  bic #0 // R0 &= !0
+  iwt r7, #$00FF // R7 = $00FF
+  iwt r8, #$00FF // R8 = $00FF
+  bic #0 // R0 = (R7 & $FF00) + (R8 / $100) (MERGE)
 
   stop // Stop GSU
   nop // Delay Slot
 
-  iwt r0, #$FFFF // R0 = $FFFF
-  bic #0 // R0 &= !0
+  iwt r7, #$FF00 // R7 = $FF00
+  iwt r8, #$FF00 // R8 = $FF00
+  bic #0 // R0 = (R7 & $FF00) + (R8 / $100) (MERGE)
 
   stop // Stop GSU
   nop // Delay Slot

@@ -241,18 +241,20 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w BICResultCheckA
+  cpx.w BICResultCheckB
   beq Pass2
   Fail2:
     PrintText(Fail, $FA72, 4) // Load Text To VRAM Lo Bytes
     bra Fail2
   Pass2:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckA
+    cmp.w SFRResultCheckC
     bne Fail2
     PrintText(Pass, $FA72, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  stz.w GSU_SFR // GSU SFR (Status/Flag) = 0
+
   ldx.w GSU_R15 // Program Address
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
@@ -310,7 +312,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail4
   Pass4:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail4
     PrintText(Pass, $FAF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -372,7 +374,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail6
   Pass6:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail6
     PrintText(Pass, $FB72, 4) // Load Text To VRAM Lo Bytes
 
@@ -434,7 +436,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail8
   Pass8:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail8
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -496,7 +498,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail10
   Pass10:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail10
     PrintText(Pass, $FC72, 4) // Load Text To VRAM Lo Bytes
 
@@ -558,7 +560,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail12
   Pass12:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail12
     PrintText(Pass, $FCF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -620,7 +622,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail14
   Pass14:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail14
     PrintText(Pass, $FD72, 4) // Load Text To VRAM Lo Bytes
 
@@ -682,7 +684,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail16
   Pass16:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail16
     PrintText(Pass, $FDF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -749,7 +751,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail18
   Pass18:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail18
     PrintText(Pass, $FA72, 4) // Load Text To VRAM Lo Bytes
 
@@ -811,7 +813,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail20
   Pass20:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail20
     PrintText(Pass, $FAF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -873,7 +875,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail22
   Pass22:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail22
     PrintText(Pass, $FB72, 4) // Load Text To VRAM Lo Bytes
 
@@ -935,7 +937,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail24
   Pass24:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail24
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -997,7 +999,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail26
   Pass26:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail26
     PrintText(Pass, $FC72, 4) // Load Text To VRAM Lo Bytes
 
@@ -1059,7 +1061,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail28
   Pass28:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail28
     PrintText(Pass, $FCF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -1121,7 +1123,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail30
   Pass30:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail30
     PrintText(Pass, $FD72, 4) // Load Text To VRAM Lo Bytes
 
@@ -1250,18 +1252,20 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   // Check Result & GSU Status Flag Data
   ldx.b ResultData // X = Result Data
-  cpx.w BICResultCheckA
+  cpx.w BICResultCheckB
   beq Pass34
   Fail34:
     PrintText(Fail, $FA72, 4) // Load Text To VRAM Lo Bytes
     bra Fail34
   Pass34:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckA
+    cmp.w SFRResultCheckC
     bne Fail34
     PrintText(Pass, $FA72, 4) // Load Text To VRAM Lo Bytes
 
   /////////////////////////////////////////////////////////////////
+  stz.w GSU_SFR // GSU SFR (Status/Flag) = 0
+
   ldx.w GSU_R15 // Program Address
   stx.w GSU_R15 // Sets Program Counter ($301E)
   GSUWait() // Wait For GSU To Finish
@@ -1319,7 +1323,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail36
   Pass36:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail36
     PrintText(Pass, $FAF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -1381,7 +1385,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail38
   Pass38:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail38
     PrintText(Pass, $FB72, 4) // Load Text To VRAM Lo Bytes
 
@@ -1443,7 +1447,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail40
   Pass40:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail40
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -1505,7 +1509,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail42
   Pass42:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail42
     PrintText(Pass, $FC72, 4) // Load Text To VRAM Lo Bytes
 
@@ -1567,7 +1571,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail44
   Pass44:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail44
     PrintText(Pass, $FCF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -1629,7 +1633,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail46
   Pass46:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail46
     PrintText(Pass, $FD72, 4) // Load Text To VRAM Lo Bytes
 
@@ -1691,7 +1695,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail48
   Pass48:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail48
     PrintText(Pass, $FDF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -1758,7 +1762,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail50
   Pass50:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail50
     PrintText(Pass, $FA72, 4) // Load Text To VRAM Lo Bytes
 
@@ -1820,7 +1824,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail52
   Pass52:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail52
     PrintText(Pass, $FAF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -1882,7 +1886,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail54
   Pass54:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail54
     PrintText(Pass, $FB72, 4) // Load Text To VRAM Lo Bytes
 
@@ -1944,7 +1948,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail56
   Pass56:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail56
     PrintText(Pass, $FBF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -2006,7 +2010,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail58
   Pass58:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail58
     PrintText(Pass, $FC72, 4) // Load Text To VRAM Lo Bytes
 
@@ -2068,7 +2072,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail60
   Pass60:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail60
     PrintText(Pass, $FCF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -2130,7 +2134,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail62
   Pass62:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail62
     PrintText(Pass, $FD72, 4) // Load Text To VRAM Lo Bytes
 
@@ -2192,7 +2196,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
     bra Fail64
   Pass64:
     lda.b SFRFlagData // A = GSU Status Flag Data
-    cmp.w SFRResultCheckC
+    cmp.w SFRResultCheckD
     bne Fail64
     PrintText(Pass, $FDF2, 4) // Load Text To VRAM Lo Bytes
 
@@ -2297,10 +2301,12 @@ SFRResultCheckB:
 BICResultCheckB:
   dw $FFFF
 SFRResultCheckC:
+  db $1E
+SFRResultCheckD:
   db $08
 
 BICResultCheckC:
-  dw $420C
+  dw $4205
 
 // GSU Code
 // BANK 0
