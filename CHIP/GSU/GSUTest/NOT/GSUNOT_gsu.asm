@@ -115,7 +115,7 @@ GSUStart:
   nop // Delay Slot
 
   iwt r9, #$FFFF // R9 = $FFFF
-  with r9 ; not // R0 ~= R9
+  with r9 ; not // R9 ~= R9
 
   stop // Stop GSU
   nop // Delay Slot
