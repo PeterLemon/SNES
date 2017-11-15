@@ -185,3 +185,8 @@ GSUStart:
 
   stop // Stop GSU
   nop // Delay Slot
+
+  to r0 ; from r15 ; sex // R0 = R15 Signed (16-Bit)
+
+  stop // Stop GSU
+  nop // Delay Slot
