@@ -1239,7 +1239,7 @@ Pass:
   db "PASS"
 
 SBCRegister:
-  db "SBC register   (Opcode: $3D6n)  "
+  db "SBC register   (Opcode: $3D6n)"
 
 SBCResultCheckA:
   dw $0000
