@@ -2201,7 +2201,7 @@ Loop:
 CPURAMEnd:
 
 Title:
-  db "GSU Test MULT (Multiply):"
+  db "GSU Test MULT (Multiply Byte):"
 
 PageBreak:
   db "------------------------------"
@@ -2298,7 +2298,7 @@ SFRResultCheckB:
   db $08
 
 MULTResultCheckC:
-  dw $E92E
+  dw $EBA9
 
 // GSU Code
 // BANK 0
