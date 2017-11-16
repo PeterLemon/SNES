@@ -161,7 +161,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
   WaitNMI() // Wait For VSync
 
   // Print Title Text
-  PrintText(Title, $F882, 25) // Load Text To VRAM Lo Bytes
+  PrintText(Title, $F882, 30) // Load Text To VRAM Lo Bytes
 
   // Print Page Break Text
   PrintText(PageBreak, $F8C2, 30) // Load Text To VRAM Lo Bytes
