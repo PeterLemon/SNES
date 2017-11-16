@@ -1,4 +1,4 @@
-// SNES GSU Test MULT (Signed Multiply) demo by krom (Peter Lemon):
+// SNES GSU Test MULT (Signed Multiply Byte) demo by krom (Peter Lemon):
 arch snes.cpu
 output "GSUMULT.sfc", create
 

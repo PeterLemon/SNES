@@ -1,4 +1,4 @@
-// SNES GSU Test MULT (Signed Multiply) demo (GSU Code) by krom (Peter Lemon):
+// SNES GSU Test MULT (Signed Multiply Byte) demo (GSU Code) by krom (Peter Lemon):
 arch snes.gsu
 
 GSUStart:
