@@ -57,11 +57,10 @@ seek($8000); Start:
 
   // Plot Pixel
   lda.b #48 // A = Plot Y Coord
-  rep #%00100000 // A Set To 16-Bit
-  and.w #$00FF // Clear B
   xba // A *= 256
+  and.b #$00 // Clear A
+  rep #%00100000 // A Set To 16-Bit  
   lsr // A /= 2 (A = Plot Y Coord * 128)
-  clc
   adc.w #40 // A += Plot X Coord (A = VRAM Address)
   sta.w REG_VMADDL // $2116: VRAM Address Write (16-Bit)
   sep #%00100000 // A Set To 8-Bit
