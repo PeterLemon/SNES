@@ -14,27 +14,33 @@ include "LIB/SNES_GFX.INC"    // Include Graphics Macros
 
 // Variable Data
 seek(WRAM) // 8Kb WRAM Mirror ($0000..$1FFF)
-X0:
-  dw 0 // Line X Coord 0 Word (X0)
-Y0:
-  db 0 // Line Y Coord 0 Byte (Y0)
 X1:
-  db 0 // Line X Coord 1 Byte (X1)
+  dw 0 // Line Point 1 X Word (X1)
 Y1:
-  db 0 // Line Y Coord 1 Byte (Y1)
+  dw 0 // Line Point 1 Y Byte (Y1)
+X2:
+  dw 0 // Line Point 2 X Word (X2)
+Y2:
+  dw 0 // Line Point 2 Y Byte (Y2)
 
 DX:
-  db 0 // Line Distance X Byte (DX)
+  dw 0 // Line Delta X Byte (DX)
 DY:
-  db 0 // Line Distance Y Byte (DY)
+  dw 0 // Line Delta Y Byte (DY)
 
 SX:
-  db 0 // Line Signed Change X Byte (SX)
+  dw 0 // Line Signed Change X Word (SX)
 SY:
-  db 0 // Line Signed Change Y Byte (SY)
+  dw 0 // Line Signed Change Y Word (SY)
+
+P1:
+  dw 0 // Point Start Word (P1)
+
+Count:
+  dw 0 // Line Count X/Y Byte (Count)
 
 Error:
-  db 0 // Line Error Byte (Error)
+  dw 0 // Line Error X/Y Byte (Error)
 
 seek($8000); Start:
   SNES_INIT(FASTROM) // Run SNES Initialisation Routine
@@ -80,138 +86,128 @@ seek($8000); Start:
   stz.w REG_VMAIN  // Set Increment VRAM Address After Accessing Lo Byte ($2115: Video Port Control)
 
   // Setup Variable Data
-  ldx.w #40  // X = Line X Coord 0 (X0)
-  stx.b X0   // WRAM: Line X Coord 0 (X0) = X (16-Bit)
-  lda.b #48  // A = Line Y Coord 0 (Y0)
-  sta.b Y0   // WRAM: Line Y Coord 0 (Y0) = A (8-Bit)
-  lda.b #116 // A = Line X Coord 1 (X1)
-  sta.b X1   // WRAM: Line X Coord 1 (X1) = A (8-Bit)
-  lda.b #112 // A = Line Y Coord 1 (Y1)
-  sta.b Y1   // WRAM: Line Y Coord 1 (Y1) = A (8-Bit)
+  ldx.w #0   // X = Line Point 1 X (X1)
+  stx.b X1   // Store X1
+  ldx.w #0   // X = Line Point 1 Y (Y1)
+  stx.b Y1   // Store Y1
+  ldx.w #64 // X = Line Point 2 X (X2)
+  stx.b X2   // Store X2
+  ldx.w #127  // X = Line Point 2 Y (Y2)
+  stx.b Y2   // Store Y2
 
   // Plot Line
-  lda.b X0 // A = Line X Coord 0 (X0)
-  cmp.b X1 // Compare X0 To X1
-  bmi X1X0DX  // IF (X0 > X1) DX = (X0 - X1)
-    sec       // Subtract X1 From X0 (DX)
-    sbc.b X1  // A = DX (X0 - X1)
-    sta.b DX  // WRAM: Line Distance X (DX) = A
-    lda.b #-1 // SX = -1
-    bra DXEnd // GOTO DX End
-  X1X0DX:    // ELSE DX = (X1 - X0)
-    lda.b X1 // A = Line X Coord 1 (X1)
-    sec      // Subtract X0 From X1 (DX)
-    sbc.b X0 // A = DX (X1 - X0)
-    sta.b DX // WRAM: Line Distance X (DX) = A
-    lda.b #1 // SX = 1
-  DXEnd:
-    sta.b SX // WRAM: Line Signed Change X (SX) = A
+  rep #%00100000 // A Set To 16-Bit
+  lda.b X2 // A = Line Point 2 X (X2)
+  sec // Set Carry
+  sbc.b X1 // A = X2 - X1 (DX)
+  bmi DXNEG
+    ldx.w #1 // X = 1 (SX)
+    bra DXSX
+  DXNEG:
+    eor.w #$FFFF // A ^= $FFFF
+    inc // A = ABS(DX)
+    ldx.w #-1 // X = -1 (SX)
+  DXSX:
+    sta.b DX // Store DX
+    stx.b SX // Store SX
 
-  lda.b Y0 // A = Line Y Coord 0 (Y0)
-  cmp.b Y1 // Compare Y0 To Y1
-  bmi Y1Y0DY  // IF (Y0 > Y1) DY = (Y0 - Y1)
-    sec       // Subtract Y1 From Y0 (DY)
-    sbc.b Y1  // A = DY (Y0 - Y1)
-    sta.b DY  // WRAM: Line Distance Y (DY) = A
-    lda.b #-1 // SY = -1
-    bra DYEnd // GOTO DY End
-  Y1Y0DY:    // ELSE DY = (Y1 - Y0)
-    lda.b Y1 // A = Line Y Coord 1 (Y1)
-    sec      // Subtract Y0 From Y1 (DY)
-    sbc.b Y0 // A = DY (Y1 - Y0)
-    sta.b DY // WRAM: Line Distance Y (DY) = A
-    lda.b #1 // SY = 1
-  DYEnd:
-    sta.b SY // WRAM: Line Signed Change Y (SY) = A
+  lda.b Y2 // A = Line Point 2 Y (Y2)
+  sec // Set Carry
+  sbc.b Y1 // A = Y2 - Y1 (DY)
+  bmi DYNEG
+    ldx.w #128 // X = 128 (SY)
+    bra DYSY
+  DYNEG:
+    eor.w #$FFFF // A ^= $FFFF
+    inc // A = ABS(DY)
+    ldx.w #-128 // X = -128 (SY)
+  DYSY:
+    sta.b DY // Store DY
+    stx.b SY // Store SY
 
-  lda.b DX // A = Line Distance X (DX)
+  lda.b Y1 // A = Line Point 1 Y
+  xba // A *= 256
+  and.w #$FF00 // Clear A
+  lsr // A /= 2 (Line Point 1 Y * 128)
+  adc.b X1 // A += Line Point 1 X
+  sta.b P1 // Store Point Start (P1)
+
+  lda.b DX // A = Delta X (DX)
   cmp.b DY // Compare DX To DY
-  bmi YError    // IF (DX > DY) Error = DX / 2
+  bmi YError    // IF (DX > DY) X Error = DX / 2
+    sta.b Count // Store X Count
     lsr         // A = DX / 2
-    sta.b Error // WRAM: Line Error (Error) = A
-    bra LoopX   // GOTO Loop X
-  YError:       // ELSE Error = DY / 2
-    lda.b DY    // A = Line Distance Y (DY)
+    sta.b Error // Store X Error
+    bra LoopX   // Loop X
+  YError:       // ELSE Y Error = DY / 2
+    lda.b DY    // A = Delta Y (DY)
+    sta.b Count // Store Y Count
     lsr         // A = DY / 2
-    sta.b Error // WRAM: Line Error (Error) = A
-    bra LoopY   // GOTO Loop Y
+    sta.b Error // Store Y Error
+    bra LoopY   // Loop Y
 
   LoopX: // X Line Drawing
-    jsr PlotPixel // GOTO Plot Pixel Subroutine
+    lda.b P1 // A = Point Start (P1)
+    sta.w REG_VMADDL // $2116: VRAM Address Write (16-Bit)
+    clc // Clear Carry
+    adc.b SX // P1 += SX
+    sta.b P1 // Store P1
+    sep #%00100000 // A Set To 8-Bit
+    lda.b #1 // A = Pixel Color White
+    sta.w REG_VMDATAL // $2118: VRAM Data Write (Lo 8-Bit)
+    rep #%00100000 // A Set To 16-Bit
+    dec.b Count // X Count--, Compare X Count To Zero
+    bmi LineEnd // IF (X Count < 0) Line End
 
-    lda.b X0 // A = Line X Coord 0 (X0)
-    cmp.b X1 // While (X0 != X1)
-    beq LineEnd // IF (X0 == X1) Branch To Line End
-    lda.b Error // A = Line Error (Error)
-    sec         // Subtract DY From Error (Error -= DY)
-    sbc.b DY    // A = Error - DY
-    sta.b Error // WRAM: Line Error (Error) = A
-
-    bpl LoopXEnd // IF (Error >= 0) GOTO Loop X End
-    lda.b Y0 // A = Line Y Coord 0 (Y0)
-    clc      // ELSE Add SY To Y0 (Y0 += SY)
-    adc.b SY // A += SY
-    sta.b Y0 // WRAM: Line Y Coord 0 (Y0) = A
-    lda.b Error // A = Line Error (Error)
-    clc         // Add DX To Error (Error += DX)
-    adc.b DX    // A += DX
-    sta.b Error // WRAM: Line Error (Error) = A
-
-    LoopXEnd:
-      lda.b X0 // A = Line X Coord 0 (X0)
-      clc      // Add SX To X0 (X0 += SX)
-      adc.b SX // A += SX
-      sta.b X0 // WRAM: Line X Coord 0 (X0) = A
-    bra LoopX  // GOTO X Line Drawing
+    lda.b Error // A = X Error
+    sec // Set Carry
+    sbc.b DY // X Error -= DY, Compare X Error To Zero
+    sta.b Error // Store X Error
+    bpl LoopX // Loop X
+    clc // Clear Carry
+    adc.b DX // IF (X Error < 0) X Error += DX
+    sta.b Error // Store X Error
+    lda.b P1 // A = Point Start (P1)
+    clc // Clear Carry
+    adc.b SY // IF (X Error < 0) Point Start += SY
+    sta.b P1 // Store Point Start (P1)
+    bra LoopX  // Loop X
 
   LoopY: // Y Line Drawing
-    jsr PlotPixel // GOTO Plot Pixel Subroutine
+    lda.b P1 // A = Point Start (P1)
+    sta.w REG_VMADDL // $2116: VRAM Address Write (16-Bit)
+    clc // Clear Carry
+    adc.b SY // P1 += SY
+    sta.b P1 // Store P1
+    sep #%00100000 // A Set To 8-Bit
+    lda.b #1 // A = Pixel Color White
+    sta.w REG_VMDATAL // $2118: VRAM Data Write (Lo 8-Bit)
+    rep #%00100000 // A Set To 16-Bit
+    dec.b Count // Y Count--, Compare Y Count To Zero
+    bmi LineEnd // IF (Y Count < 0) Line End
 
-    lda.b Y0 // A = Line Y Coord 0 (Y0)
-    cmp.b Y1 // While (Y0 != Y1)
-    beq LineEnd // IF (Y0 == Y1) Branch To Line End
-    lda.b Error // A = Line Error (Error)
-    sec         // Subtract DX From Error (Error -= DX)
-    sbc.b DX    // A = Error - DX
-    sta.b Error // WRAM: Line Error (Error) = A
-
-    bpl LoopYEnd // IF (Error >= 0) GOTO Loop Y End
-    lda.b X0 // A = Line X Coord 0 (X0)
-    clc      // ELSE Add SX To X0 (X0 += SX)
-    adc.b SX // A += SX
-    sta.b X0 // WRAM: Line X Coord 0 (X0) = A
-    lda.b Error // A = Line Error (Error)
-    clc         // Add DY To Error (Error += DY)
-    adc.b DY    // A += DY
-    sta.b Error // WRAM: Line Error (Error) = A
-
-    LoopYEnd:
-      lda.b Y0 // A = Line Y Coord 0 (Y0)
-      clc      // Add SY To Y0 (Y0 += SY)
-      adc.b SY // A += SY
-      sta.b Y0 // WRAM: Line Y Coord 0 (Y0) = A
-    bra LoopY  // GOTO Y Line Drawing
+    lda.b Error // A = Y Error
+    sec // Set Carry
+    sbc.b DX // Y Error -= DX, Compare Y Error To Zero
+    sta.b Error // Store Y Error
+    bpl LoopY // Loop Y
+    clc // Clear Carry
+    adc.b DY // IF (Y Error < 0) Y Error += DY
+    sta.b Error // Store X Error
+    lda.b P1 // A = Point Start (P1)
+    clc // Clear Carry
+    adc.b SX // IF (Y Error < 0) Point Start += SX
+    sta.b P1 // Store Point Start (P1)
+    bra LoopY  // Loop Y
 
   LineEnd: // End of Line Drawing
+  sep #%00100000 // A Set To 8-Bit
 
   lda.b #$F // Turn On Screen, Full Brightness
   sta.w REG_INIDISP // $2100: Screen Display
 
 Loop:
   jmp Loop
-
-PlotPixel: // Plot Pixel
-  lda.b Y0 // A = Plot Y Coord
-  xba // A *= 256
-  and.b #$00 // Clear A
-  rep #%00100000 // A Set To 16-Bit  
-  lsr // A /= 2 (A = Plot Y Coord * 128)
-  adc.b X0 // A += Plot X Coord (A = VRAM Address)
-  sta.w REG_VMADDL // $2116: VRAM Address Write (16-Bit)
-  sep #%00100000 // A Set To 8-Bit
-  lda.b #1 // A = Pixel Color White
-  sta.w REG_VMDATAL // $2118: VRAM Data Write (Lo 8-Bit)
-  rts // Return From Subroutine
 
 BGPal:
   dw $0000, $7FFF // Black, White (4 Bytes)
