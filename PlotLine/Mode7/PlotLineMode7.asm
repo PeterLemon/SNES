@@ -11,6 +11,7 @@ seek($8000); fill $8000 // Fill Upto $7FFF (Bank 0) With Zero Bytes
 include "LIB/SNES.INC"        // Include SNES Definitions
 include "LIB/SNES_HEADER.ASM" // Include Header & Vector Table
 include "LIB/SNES_GFX.INC"    // Include Graphics Macros
+include "LIB/SNES_INPUT.INC"  // Include Input Macros
 
 // Variable Data
 seek(WRAM) // 8Kb WRAM Mirror ($0000..$1FFF)
@@ -44,6 +45,9 @@ Error:
 
 seek($8000); Start:
   SNES_INIT(FASTROM) // Run SNES Initialisation Routine
+
+  lda.b #$01
+  sta.w REG_NMITIMEN // Enable Joypad NMI Reading Interrupt
 
   LoadPAL(BGPal, $00, 4, 0) // Load Background Palette (BG Palette Uses 256 Colors)
   ClearLOVRAM(BGTiles, $0000, 16384, 0) // Clear Background Map In VRAM To Static Byte
@@ -85,15 +89,40 @@ seek($8000); Start:
 
   stz.w REG_VMAIN  // Set Increment VRAM Address After Accessing Lo Byte ($2115: Video Port Control)
 
+  // Setup Clear Screen DMA
+  lda.b #$01 // Set WRAM Destination
+  sta.w REG_WMADDH // $2183: WRAM Address (Upper 1-Bit)
+  lda.b #$0A // Set DMA Mode (Write 2 Bytes, Fixed Source)
+  sta.w REG_DMAP0 // $4300: DMA Control
+  lda.b #REG_WMDATA // $80: Set Destination Register ($2180: WRAM Write)
+  sta.w REG_BBAD0 // $4301: DMA Destination
+  ldx.w #BGPal // Set Source Offset
+  stx.w REG_A1T0L // $4302: DMA Source
+  lda.b #BGPal>>16 // Set Source Bank
+  sta.w REG_A1B0 // $4304: Source Bank
+
+  lda.b #$F // Turn On Screen, Full Brightness
+  sta.w REG_INIDISP // $2100: Screen Display
+
   // Setup Variable Data
   ldx.w #0   // X = Line Point 1 X (X1)
   stx.b X1   // Store X1
   ldx.w #0   // X = Line Point 1 Y (Y1)
   stx.b Y1   // Store Y1
-  ldx.w #64 // X = Line Point 2 X (X2)
+  ldx.w #127 // X = Line Point 2 X (X2)
   stx.b X2   // Store X2
-  ldx.w #127  // X = Line Point 2 Y (Y2)
+  ldx.w #127 // X = Line Point 2 Y (Y2)
   stx.b Y2   // Store Y2
+
+//  WaitNMI() // Wait For NMI Flag
+Refresh:
+  // Clear Screen
+  ldx.w #$0000 // Set WRAM Destination
+  stx.w REG_WMADDL // $2181: WRAM Address
+  ldx.w #$4000 // Set Size In Bytes To DMA Transfer
+  stx.w REG_DAS0L // $4305: DMA Transfer Size/HDMA
+  lda.b #%00000001 // Start DMA Transfer On Channel 0
+  sta.w REG_MDMAEN // $420B: DMA Enable
 
   // Plot Line
   rep #%00100000 // A Set To 16-Bit
@@ -147,15 +176,15 @@ seek($8000); Start:
     bra LoopY   // Loop Y
 
   LoopX: // X Line Drawing
+    ldx.b P1 // X = Point Start (P1)
+    sep #%00100000 // A Set To 8-Bit
+    lda.b #1 // A = Pixel Color White
+    sta.l $7F0000,x // WRAM Data Write
+    rep #%00100000 // A Set To 16-Bit
     lda.b P1 // A = Point Start (P1)
-    sta.w REG_VMADDL // $2116: VRAM Address Write (16-Bit)
     clc // Clear Carry
     adc.b SX // P1 += SX
     sta.b P1 // Store P1
-    sep #%00100000 // A Set To 8-Bit
-    lda.b #1 // A = Pixel Color White
-    sta.w REG_VMDATAL // $2118: VRAM Data Write (Lo 8-Bit)
-    rep #%00100000 // A Set To 16-Bit
     dec.b Count // X Count--, Compare X Count To Zero
     bmi LineEnd // IF (X Count < 0) Line End
 
@@ -174,15 +203,15 @@ seek($8000); Start:
     bra LoopX  // Loop X
 
   LoopY: // Y Line Drawing
+    ldx.b P1 // X = Point Start (P1)
+    sep #%00100000 // A Set To 8-Bit
+    lda.b #1 // A = Pixel Color White
+    sta.l $7F0000,x // WRAM Data Write (Lo 8-Bit)
+    rep #%00100000 // A Set To 16-Bit
     lda.b P1 // A = Point Start (P1)
-    sta.w REG_VMADDL // $2116: VRAM Address Write (16-Bit)
     clc // Clear Carry
     adc.b SY // P1 += SY
     sta.b P1 // Store P1
-    sep #%00100000 // A Set To 8-Bit
-    lda.b #1 // A = Pixel Color White
-    sta.w REG_VMDATAL // $2118: VRAM Data Write (Lo 8-Bit)
-    rep #%00100000 // A Set To 16-Bit
     dec.b Count // Y Count--, Compare Y Count To Zero
     bmi LineEnd // IF (Y Count < 0) Line End
 
@@ -203,11 +232,75 @@ seek($8000); Start:
   LineEnd: // End of Line Drawing
   sep #%00100000 // A Set To 8-Bit
 
-  lda.b #$F // Turn On Screen, Full Brightness
-  sta.w REG_INIDISP // $2100: Screen Display
 
-Loop:
-  jmp Loop
+  WaitNMI() // Wait For NMI Flag
+  LoadLOVRAM($7F0000, $0000, $1555, 1) // Copy 1st 1/2 WRAM Buffer To VRAM
+
+  Up:
+    lda.b Y1 // A = Y1
+    cmp.b #0 // IF (Y1 == 0) Skip
+    beq Down
+    ReadJOY({JOY_UP}) // Test UP Button
+    beq Down // "UP" Not Pressed? Branch Down
+    dec.b Y1 // Y1--
+  Down:
+    lda.b Y1 // A = Y1
+    cmp.b #127 // IF (Y1 == 127) Skip
+    beq Left
+    ReadJOY({JOY_DOWN}) // Test DOWN Button
+    beq Left // "DOWN" Not Pressed? Branch Down
+    inc.b Y1 // Y1++
+  Left:
+    lda.b X1 // A = X1
+    cmp.b #0 // IF (X1 == 0) Skip
+    beq Right
+    ReadJOY({JOY_LEFT}) // Test LEFT Button
+    beq Right // "LEFT" Not Pressed? Branch Down
+    dec.b X1 // X1--
+  Right:
+    lda.b X1 // A = X1
+    cmp.b #127 // IF (X1 == 127) Skip
+    beq X
+    ReadJOY({JOY_RIGHT}) // Test RIGHT Button
+    beq X // "RIGHT" Not Pressed? Branch Down
+    inc.b X1 // X1++
+  X:
+    lda.b Y2 // B = Y2
+    cmp.b #0 // IF (Y2 == 0) Skip
+    beq B
+    ReadJOY({JOY_X}) // Test X Button
+    beq B // "X" Not Pressed? Branch Down
+    dec.b Y2 // Y2--
+  B:
+    lda.b Y2 // B = Y2
+    cmp.b #127 // IF (Y2 == 127) Skip
+    beq Y
+    ReadJOY({JOY_B}) // Test B Button
+    beq Y // "B" Not Pressed? Branch Down
+    inc.b Y2 // Y2++
+  Y:
+    lda.b X2 // B = X2
+    cmp.b #0 // IF (X2 == 0) Skip
+    beq A
+    ReadJOY({JOY_Y}) // Test Y Button
+    beq A // "Y" Not Pressed? Branch Down
+    dec.b X2 // X2--
+  A:
+    lda.b X2 // B = X2
+    cmp.b #127 // IF (X2 == 127) Skip
+    beq Finish
+    ReadJOY({JOY_A}) // Test A Button
+    beq Finish // "A" Not Pressed? Branch Down
+    inc.b X2 // X2++
+  Finish:
+
+  WaitNMI() // Wait For NMI Flag
+  LoadLOVRAM($7F1555, $2AAA, $1555, 1) // Copy 2nd 1/2 WRAM Buffer To VRAM
+
+  WaitNMI() // Wait For NMI Flag
+  LoadLOVRAM($7F2AAA, $5554, $1556, 1) // Copy 1st 1/2 WRAM Buffer To VRAM
+
+  jmp Refresh
 
 BGPal:
   dw $0000, $7FFF // Black, White (4 Bytes)
