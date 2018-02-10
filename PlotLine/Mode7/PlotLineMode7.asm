@@ -36,6 +36,8 @@ SY:
 
 P1:
   dw 0 // Point Start Word (P1)
+P2:
+  dw 0 // Point End Word (P2)
 
 Count:
   dw 0 // Line Count X/Y Byte (Count)
@@ -114,7 +116,6 @@ seek($8000); Start:
   ldx.w #127 // X = Line Point 2 Y (Y2)
   stx.b Y2   // Store Y2
 
-//  WaitNMI() // Wait For NMI Flag
 Refresh:
   // Clear Screen
   ldx.w #$0000 // Set WRAM Destination
@@ -161,6 +162,13 @@ Refresh:
   adc.b X1 // A += Line Point 1 X
   sta.b P1 // Store Point Start (P1)
 
+  lda.b Y2 // A = Line Point 2 Y
+  xba // A *= 256
+  and.w #$FF00 // Clear A 
+  lsr // A /= 2 (Line Point 2 Y * 128)
+  adc.b X2 // A += Line Point 2 X
+  sta.b P2 // Store Point End (P2)
+
   lda.b DX // A = Delta X (DX)
   cmp.b DY // Compare DX To DY
   bmi YError    // IF (DX > DY) X Error = DX / 2
@@ -188,25 +196,40 @@ Refresh:
     dec.b Count // X Count--, Compare X Count To Zero
     bmi LineEnd // IF (X Count < 0) Line End
 
+    ldx.b P2 // X = Point End (P2)
+    sep #%00100000 // A Set To 8-Bit
+    lda.b #1 // A = Pixel Color White
+    sta.l $7F0000,x // WRAM Data Write
+    rep #%00100000 // A Set To 16-Bit
+    lda.b P2 // A = Point Start (P2)
+    sec // Set Carry
+    sbc.b SX // P2 -= SX
+    sta.b P2 // Store P2
+    dec.b Count // X Count--, Compare X Count To Zero
+    bmi LineEnd // IF (X Count < 0) Line End
+
     lda.b Error // A = X Error
     sec // Set Carry
     sbc.b DY // X Error -= DY, Compare X Error To Zero
     sta.b Error // Store X Error
     bpl LoopX // Loop X
-    clc // Clear Carry
     adc.b DX // IF (X Error < 0) X Error += DX
     sta.b Error // Store X Error
     lda.b P1 // A = Point Start (P1)
     clc // Clear Carry
     adc.b SY // IF (X Error < 0) Point Start += SY
     sta.b P1 // Store Point Start (P1)
+    lda.b P2 // A = Point End (P2)
+    sec // Set Carry
+    sbc.b SY // IF (X Error < 0) Point End -= SY
+    sta.b P2 // Store Point End (P2)
     bra LoopX  // Loop X
 
   LoopY: // Y Line Drawing
     ldx.b P1 // X = Point Start (P1)
     sep #%00100000 // A Set To 8-Bit
     lda.b #1 // A = Pixel Color White
-    sta.l $7F0000,x // WRAM Data Write (Lo 8-Bit)
+    sta.l $7F0000,x // WRAM Data Write
     rep #%00100000 // A Set To 16-Bit
     lda.b P1 // A = Point Start (P1)
     clc // Clear Carry
@@ -215,23 +238,37 @@ Refresh:
     dec.b Count // Y Count--, Compare Y Count To Zero
     bmi LineEnd // IF (Y Count < 0) Line End
 
+    ldx.b P2 // X = Point End (P2)
+    sep #%00100000 // A Set To 8-Bit
+    lda.b #1 // A = Pixel Color White
+    sta.l $7F0000,x // WRAM Data Write
+    rep #%00100000 // A Set To 16-Bit
+    lda.b P2 // A = Point Start (P2)
+    sec // Set Carry
+    sbc.b SY // P2 -= SY
+    sta.b P2 // Store P2
+    dec.b Count // Y Count--, Compare Y Count To Zero
+    bmi LineEnd // IF (Y Count < 0) Line End
+
     lda.b Error // A = Y Error
     sec // Set Carry
     sbc.b DX // Y Error -= DX, Compare Y Error To Zero
     sta.b Error // Store Y Error
     bpl LoopY // Loop Y
-    clc // Clear Carry
     adc.b DY // IF (Y Error < 0) Y Error += DY
     sta.b Error // Store X Error
     lda.b P1 // A = Point Start (P1)
     clc // Clear Carry
     adc.b SX // IF (Y Error < 0) Point Start += SX
     sta.b P1 // Store Point Start (P1)
+    lda.b P2 // A = Point End (P2)
+    sec // Set Carry
+    sbc.b SX // IF (Y Error < 0) Point End -= SX
+    sta.b P2 // Store Point End (P2)
     bra LoopY  // Loop Y
 
   LineEnd: // End of Line Drawing
   sep #%00100000 // A Set To 8-Bit
-
 
   WaitNMI() // Wait For NMI Flag
   LoadLOVRAM($7F0000, $0000, $1555, 1) // Copy 1st 1/2 WRAM Buffer To VRAM
