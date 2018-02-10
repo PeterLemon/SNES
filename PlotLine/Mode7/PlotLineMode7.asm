@@ -103,8 +103,13 @@ seek($8000); Start:
   lda.b #BGPal>>16 // Set Source Bank
   sta.w REG_A1B0 // $4304: Source Bank
 
-  lda.b #$F // Turn On Screen, Full Brightness
-  sta.w REG_INIDISP // $2100: Screen Display
+  // Setup Copy Frame Buffer DMA
+  lda.b #$02 // Set DMA Mode (Write 2 Bytes, Increment Source)
+  sta.w REG_DMAP1 // $4310: DMA Control
+  lda.b #$18 // Set Destination Register ($2118: VRAM Write)
+  sta.w REG_BBAD1 // $4311: DMA Destination
+  lda.b #$7F // Set Source Bank
+  sta.w REG_A1B1 // $4314: Source Bank
 
   // Setup Variable Data
   ldx.w #0   // X = Line Point 1 X (X1)
@@ -115,6 +120,9 @@ seek($8000); Start:
   stx.b X2   // Store X2
   ldx.w #127 // X = Line Point 2 Y (Y2)
   stx.b Y2   // Store Y2
+
+  lda.b #$F // Turn On Screen, Full Brightness
+  sta.w REG_INIDISP // $2100: Screen Display
 
 Refresh:
   // Clear Screen
@@ -270,9 +278,6 @@ Refresh:
   LineEnd: // End of Line Drawing
   sep #%00100000 // A Set To 8-Bit
 
-  WaitNMI() // Wait For NMI Flag
-  LoadLOVRAM($7F0000, $0000, $1555, 1) // Copy 1st 1/2 WRAM Buffer To VRAM
-
   Up:
     lda.b Y1 // A = Y1
     cmp.b #0 // IF (Y1 == 0) Skip
@@ -331,11 +336,27 @@ Refresh:
     inc.b X2 // X2++
   Finish:
 
+  ldx.w #$0000 // Set VRAM Destination
+  stx.w REG_VMADDL // $2116: VRAM
+  ldx.w #$0000 // Set Source Offset
+  stx.w REG_A1T1L // $4312: DMA Source
   WaitNMI() // Wait For NMI Flag
-  LoadLOVRAM($7F1555, $2AAA, $1555, 1) // Copy 2nd 1/2 WRAM Buffer To VRAM
+  ldx.w #$1700 // Set Size In Bytes To DMA Transfer
+  stx.w REG_DAS1L // $4315: DMA Transfer Size/HDMA
+  lda.b #%000000010 // Start DMA Transfer On Channel
+  sta.w REG_MDMAEN // $420B: DMA Enable
 
   WaitNMI() // Wait For NMI Flag
-  LoadLOVRAM($7F2AAA, $5554, $1556, 1) // Copy 1st 1/2 WRAM Buffer To VRAM
+  ldx.w #$1700 // Set Size In Bytes To DMA Transfer
+  stx.w REG_DAS1L // $4315: DMA Transfer Size/HDMA
+  lda.b #%000000010 // Start DMA Transfer On Channel
+  sta.w REG_MDMAEN // $420B: DMA Enable
+
+  WaitNMI() // Wait For NMI Flag
+  ldx.w #$1200 // Set Size In Bytes To DMA Transfer
+  stx.w REG_DAS1L // $4315: DMA Transfer Size/HDMA
+  lda.b #%000000010 // Start DMA Transfer On Channel
+  sta.w REG_MDMAEN // $420B: DMA Enable
 
   jmp Refresh
 
