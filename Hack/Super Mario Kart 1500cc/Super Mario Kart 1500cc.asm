@@ -7,6 +7,98 @@ origin $000000; insert "Super Mario Kart (U) [!].sfc" // Include USA Super Mario
 origin $00FFC0
 db "SUPER MARIO KART 1500" // $00FFC0 - PROGRAM TITLE (21 Byte ASCII String, Use Spaces For Unused Bytes)
 
+//------
+// Text
+//------
+// Character Table 1
+map '0', $00, 10 // Map Numbers
+map 'A', $0A, 26 // Map English "Upper Case" Characters
+map '?', $24
+map '.', $25
+map $2C, $26 // Comma ','
+map '!', $27
+map '\s', $28 // Single Quote "'"
+map '\d', $29 // Double Quote '"'
+map '_', $2A // 'cc'
+map ' ', $2F
+
+// Character Color 1
+map 'b', $08 // Color: Blue
+map 'p', $0A // Color: Purple
+map 'g', $0C // Color: Green
+map 'w', $20 // Color: White
+
+macro TextStyle1(OFFSET, TEXT) {
+  origin {OFFSET} // Offset
+  db {TEXT} // Text
+}
+
+// Title Screen
+TextStyle1($58449, "5b0b0b_bCbLbAbSbSb") // "500cc CLASS"
+TextStyle1($5845B, "1p0p0p0p_pCpLpApSpSp") // "1000cc CLASS"
+TextStyle1($5846F, "1g5g0g0g_gCgLgAgSgSg") // "1500cc CLASS"
+
+// Results Screen
+origin $5BFA0
+dw $BFA8 // "500cc" Pointer
+dw $BFB2 // "1000cc" Pointer
+dw $BFA6 // "1500cc" Pointer
+TextStyle1($5BFA6, "1w5w0w0w_w") ; dw $FFFF // "500cc/1500cc"
+TextStyle1($5BFB2, "1w0w0w0w_w") ; dw $FFFF // "1000cc"
+
+// Character Table 2
+map 'A', $3680 // Map English "Upper Case" Characters
+map 'B', $3682
+map 'C', $3684
+map 'D', $3686
+map 'E', $3688
+map 'F', $368A
+map 'G', $368C
+map 'H', $368E
+map 'I', $3690
+map 'J', $3692
+map 'K', $3694
+map 'L', $3696
+map 'M', $3698
+map 'N', $369A
+map 'O', $369C
+map 'P', $369E
+map 'Q', $36A0
+map 'R', $36A2
+map 'S', $36A4
+map 'T', $36A6
+map 'U', $36A8
+map 'V', $36AA
+map 'W', $36AC
+map 'X', $36AE
+map 'Y', $36B0
+map 'Z', $36B2
+map '?', $36B4
+map '.', $36B6
+map $2C, $36B7 // Comma ','
+map '!', $36B8
+map '0', $3708 // Map Numbers
+map '1', $370A
+map '2', $370C
+map '3', $370E
+map '4', $3710
+map '5', $3712
+map '6', $3714
+map '7', $3716
+map '8', $3718
+map '9', $371A
+map ' ', $E500
+
+macro TextStyle2(OFFSET, TEXT) {
+  origin {OFFSET} // Offset
+  dw {TEXT} // Text
+}
+
+// GP Select
+TextStyle2($4F8EF, "500  CLASS") // 500cc CLASS
+TextStyle2($4F903, "1000 CLASS") // 1000cc CLASS
+TextStyle2($4F917, "1500 CLASS") // 1500cc CLASS
+
 //-----------------
 // Kart Properties
 //-----------------
