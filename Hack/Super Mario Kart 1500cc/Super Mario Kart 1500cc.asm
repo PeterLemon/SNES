@@ -99,6 +99,29 @@ TextStyle2($4F8EF, "500  CLASS") // 500cc CLASS
 TextStyle2($4F903, "1000 CLASS") // 1000cc CLASS
 TextStyle2($4F917, "1500 CLASS") // 1500cc CLASS
 
+// Character Table 3
+map '0', $80, 10 // Map Numbers
+map 'A', $8A, 26 // Map English "Upper Case" Characters
+map '?', $A4
+map '.', $A5
+map $2C, $A6 // Comma ','
+map '!', $A7
+map '\s', $A8 // Single Quote "'"
+map '\d', $A9 // Double Quote '"'
+map '_', $AA // 'cc'
+map ' ', $AF
+
+// Character Color 3
+map 'w', $0F // Color: White
+
+// Podium Screen
+origin $5A0C4
+dw $A0CC // "500cc" Pointer
+dw $A0D8 // "1000cc" Pointer
+dw $A0CA // "1500cc" Pointer
+TextStyle1($5A0CA, "1w5w0w0w_w w") ; dw $FFFF // "500cc/1500cc"
+TextStyle1($5A0D8, "1w0w0w0w_w w") ; dw $FFFF // "1000cc"
+
 //-----------------
 // Kart Properties
 //-----------------
