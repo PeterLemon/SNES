@@ -2,6 +2,8 @@
 
 output "Ebisumaru Puzzle Maze - Goemon is Missing!!.sfc", create
 origin $00000; insert "Soreyuke Ebisumaru Karakuri Meiro - Kieta Goemon no Nazo!! (J).sfc" // Include Japanese Soreyuke Ebisumaru Karakuri Meiro - Kieta Goemon no Nazo!! SNES ROM
+origin $007FC0
+db "SOREYUKE EBISUMARU EN" // $007FC0 - PROGRAM TITLE (21 Byte ASCII String, Use Spaces For Unused Bytes)
 
 macro TextNormal(OFFSET, TEXT) {
   origin {OFFSET}
