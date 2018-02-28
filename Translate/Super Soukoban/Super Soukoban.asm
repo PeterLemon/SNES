@@ -2,6 +2,7 @@
 
 output "Super Soukoban.sfc", create
 origin $00000; insert "Super Soukoban (J).sfc" // Include Japanese Super Soukoban SNES ROM
+origin $007FC0
 db "SUPER SOUKOBAN ENG   " // $007FC0 - PROGRAM TITLE (21 Byte ASCII String, Use Spaces For Unused Bytes)
 
 macro TextStyle1(OFFSET, TEXT) {
