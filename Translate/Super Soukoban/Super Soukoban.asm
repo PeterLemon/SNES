@@ -2,6 +2,7 @@
 
 output "Super Soukoban.sfc", create
 origin $00000; insert "Super Soukoban (J).sfc" // Include Japanese Super Soukoban SNES ROM
+db "SUPER SOUKOBAN ENG   " // $007FC0 - PROGRAM TITLE (21 Byte ASCII String, Use Spaces For Unused Bytes)
 
 macro TextStyle1(OFFSET, TEXT) {
   origin {OFFSET}
@@ -48,7 +49,6 @@ TextStyle1($01D99, "MAP DATA?")
 TextStyle1($01DA4, " YES/NO  ")
 
 TextStyle1($01C8D, "EXIT")
-
 
 // Char Table 2
 map '*', $19
