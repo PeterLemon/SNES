@@ -2,6 +2,8 @@
 
 output "Super Naxat Open - Golf Challenge!.sfc", create
 origin $00000; insert "Super Naxat Open - Golf de Shoubu da! Dorabocchan (J).sfc" // Include Japanese Super Naxat Open - Golf de Shoubu da! Dorabocchan SNES ROM
+origin $007FC0
+db "SUPER NAXAT OPEN GOLF" // $007FC0 - PROGRAM TITLE (21 Byte ASCII String, Use Spaces For Unused Bytes)
 
 // Char Table 1
 map ' ', $00
