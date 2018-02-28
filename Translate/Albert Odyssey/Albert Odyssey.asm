@@ -2,6 +2,8 @@
 
 output "Albert Odyssey.sfc", create
 origin $00000; insert "Albert Odyssey (J).sfc" // Include Japanese Albert Odyssey SNES ROM
+origin $007FC0
+db "ALBERT ODYSSEY ENG   " // $007FC0 - PROGRAM TITLE (21 Byte ASCII String, Use Spaces For Unused Bytes)
 
 // Char Table 1
 map '0', $00, 10
