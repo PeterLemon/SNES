@@ -91,6 +91,39 @@ STEREOText:
 MONOText:
   db "MONO  ", $FF
 
+// PAUSE SCREEN
+origin $117DC
+  dw HALLOWEENPauseText + $8000
+  dw MIRURUNPauseText + $8000
+  dw SHAMANPauseText + $8000
+  dw ALADDINPauseText + $8000
+  dw PRINCESSPauseText + $8000
+  dw BITPauseText + $8000
+  dw NINJAPauseText + $8000
+  dw WOLFMANPauseText + $8000
+  dw DRAGONPauseText + $8000
+  dw QUEENPauseText + $8000
+HALLOWEENPauseText:
+  db "HALLOWEN", $FF
+MIRURUNPauseText:
+  db "MIRURUN", $FF
+SHAMANPauseText:
+  db "SHAMAN", $FF
+ALADDINPauseText:
+  db "ALADDIN", $FF
+PRINCESSPauseText:
+  db "PRINCESS", $FF
+BITPauseText:
+  db "  BIT", $FF
+NINJAPauseText:
+  db " NINJA", $FF
+WOLFMANPauseText:
+  db "WOLFMAN", $FF
+DRAGONPauseText:
+  db "DRAGON", $FF
+QUEENPauseText:
+  db " QUEEN", $FF
+
 // INTRO
 origin $1B283
 db "LIKES:    "

@@ -57,7 +57,7 @@
 
 	ニンジャ
 	Ninja
-	$1253
+	$01253
 	C6	DD	BC	DE	AC	20	20	FF	| Original Japanese Hex
 	ニ	ン	シ	"	ャ	 	 	#	| Original Japanese Text
 	N	I	N	J	A	 	 	#	| New English Text
