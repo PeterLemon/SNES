@@ -48,80 +48,80 @@ dw SETTINGSTEREOMONO + $8000
 // BACK GROUND
 origin $01950
 SETTINGBACKGROUND:
-  dw TWOPLAYERBGText + $8000
-  dw HALLOWEENText + $8000
-  dw MIRURUNText + $8000
-  dw SHAMANText + $8000
-  dw ALADDINText + $8000
-  dw PRINCESSText + $8000
-  dw BITText + $8000
-  dw NINJAText + $8000
-  dw WOLFMANText + $8000
-  dw DRAGONText + $8000
-  dw QUEENText + $8000
-TWOPLAYERBGText:
+  dw TWOPLAYERBGSetting + $8000
+  dw HALLOWEENSetting + $8000
+  dw MIRURUNSetting + $8000
+  dw SHAMANSetting + $8000
+  dw ALADDINSetting + $8000
+  dw PRINCESSSetting + $8000
+  dw BITSetting + $8000
+  dw NINJASetting + $8000
+  dw WOLFMANSetting + $8000
+  dw DRAGONSetting + $8000
+  dw QUEENSetting + $8000
+TWOPLAYERBGSetting:
   db "2PLAYERBG", $FF
-HALLOWEENText:
+HALLOWEENSetting:
   db "HALLOWEEN", $FF
-MIRURUNText:
+MIRURUNSetting:
   db "MIRURUN  ", $FF
-SHAMANText:
+SHAMANSetting:
   db "SHAMAN   ", $FF
-ALADDINText:
+ALADDINSetting:
   db "ALADDIN  ", $FF
-PRINCESSText:
+PRINCESSSetting:
   db "PRINCESS ", $FF
-BITText:
+BITSetting:
   db "BIT      ", $FF
-NINJAText:
+NINJASetting:
   db "NINJA    ", $FF
-WOLFMANText:
+WOLFMANSetting:
   db "WOLFMAN  ", $FF
-DRAGONText:
+DRAGONSetting:
   db "DRAGON   ", $FF
-QUEENText:
+QUEENSetting:
   db "QUEEN    ", $FF
 
 // STEREO/MONO
 SETTINGSTEREOMONO:
-  dw STEREOText + $8000
-  dw MONOText + $8000
-STEREOText:
+  dw STEREOSetting + $8000
+  dw MONOSetting + $8000
+STEREOSetting:
   db "STEREO", $FF
-MONOText:
+MONOSetting:
   db "MONO  ", $FF
 
 // PAUSE SCREEN
 origin $117DC
-  dw HALLOWEENPauseText + $8000
-  dw MIRURUNPauseText + $8000
-  dw SHAMANPauseText + $8000
-  dw ALADDINPauseText + $8000
-  dw PRINCESSPauseText + $8000
-  dw BITPauseText + $8000
-  dw NINJAPauseText + $8000
-  dw WOLFMANPauseText + $8000
-  dw DRAGONPauseText + $8000
-  dw QUEENPauseText + $8000
-HALLOWEENPauseText:
+  dw HALLOWEENPauseName + $8000
+  dw MIRURUNPauseName + $8000
+  dw SHAMANPauseName + $8000
+  dw ALADDINPauseName + $8000
+  dw PRINCESSPauseName + $8000
+  dw BITPauseName + $8000
+  dw NINJAPauseName + $8000
+  dw WOLFMANPauseName + $8000
+  dw DRAGONPauseName + $8000
+  dw QUEENPauseName + $8000
+HALLOWEENPauseName:
   db "HALLOWEN", $FF
-MIRURUNPauseText:
+MIRURUNPauseName:
   db "MIRURUN", $FF
-SHAMANPauseText:
+SHAMANPauseName:
   db "SHAMAN", $FF
-ALADDINPauseText:
+ALADDINPauseName:
   db "ALADDIN", $FF
-PRINCESSPauseText:
+PRINCESSPauseName:
   db "PRINCESS", $FF
-BITPauseText:
+BITPauseName:
   db "  BIT", $FF
-NINJAPauseText:
+NINJAPauseName:
   db " NINJA", $FF
-WOLFMANPauseText:
+WOLFMANPauseName:
   db "WOLFMAN", $FF
-DRAGONPauseText:
+DRAGONPauseName:
   db "DRAGON", $FF
-QUEENPauseText:
+QUEENPauseName:
   db " QUEEN", $FF
 
 // INTRO
@@ -214,40 +214,48 @@ db "     TOKYO"
 db "    "
 
 // CHARACTER DESCRIPTIONS
+origin $27222
+  dw HALLOWEENCharacterDescription + $8000; db $90
+  dw MIRURUNCharacterDescription + $8000; db $90
+  dw SHAMANCharacterDescription + $8000; db $90
+  dw ALADDINCharacterDescription; db $87
+  dw PRINCESSCharacterDescription; db $85
+  dw BITCharacterDescription + $8000; db $90
+  dw NINJACharacterDescription + $8000; db $90
+  dw WOLFMANCharacterDescription + $8000; db $9A
+
 origin $2FA1B
-// NINJA: Low Bytes
-db $C3, $00
-TextMapLO(origin(), "AS NINJA WAS") // Line 1: Origin, Text
-TextMapLO(origin(), "TRAINING, HE") // Line 2: Origin, Text
-TextMapLO(origin(), "HEARD THAT")   // Line 3: Origin, Text
-TextMapLO(origin(), "HIS FIANCEE")  // Line 4: Origin, Text
-TextMapLO(origin(), "KYOUKO HAD")   // Line 5: Origin, Text
-TextMapLO(origin(), "BEEN TURNED")  // Line 6: Origin, Text
-TextMapLO(origin(), "INTO A FROG,") // Line 7: Origin, Text
-TextMapLO(origin(), "BY THE HAND")  // Line 8: Origin, Text
-TextMapLO(origin(), "OF AN EVIL")   // Line 9: Origin, Text
-TextMapLO(origin(), "SORCERER...")  // Line 10: Origin, Text
-TextMapLO(origin(), "\dSAVE HER!!\d") // Line 11: Origin, Text
+PRINCESSCharacterDescription:
+db $C3, $00 // Low Bytes
+TextMapLO(origin(), "PRINCESS WAS") // Line 1: Origin, Text
+TextMapLO(origin(), "IN L-SHIP")    // Line 2: Origin, Text
+TextMapLO(origin(), "CASTLE WHEN")  // Line 3: Origin, Text
+TextMapLO(origin(), "HER SISTER")   // Line 4: Origin, Text
+TextMapLO(origin(), "IS KIDNAPPED") // Line 5: Origin, Text
+TextMapLO(origin(), "BY A DRAGON.") // Line 6: Origin, Text
+TextMapLO(origin(), "SHE SETS OUT") // Line 7: Origin, Text
+TextMapLO(origin(), "TO FIND HER.") // Line 8: Origin, Text
+TextMapLO(origin(), "\dHOLD ON SIS") // Line 9: Origin, Text
+TextMapLO(origin(), " I WILL NOT") // Line 10: Origin, Text
+TextMapLO(origin(), " FAIL YOU!!\d") // Line 11: Origin, Text
 db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End Low Bytes
-// NINJA: High Bytes
-db $C3, $00
+db $C3, $00 // High Bytes
 TextMapHI(origin(), $C) // Line 1: Origin, Length
-TextMapHI(origin(), $C) // Line 2: Origin, Length
-TextMapHI(origin(), $A) // Line 3: Origin, Length
-TextMapHI(origin(), $B) // Line 4: Origin, Length
-TextMapHI(origin(), $A) // Line 5: Origin, Length
-TextMapHI(origin(), $B) // Line 6: Origin, Length
+TextMapHI(origin(), $9) // Line 2: Origin, Length
+TextMapHI(origin(), $B) // Line 3: Origin, Length
+TextMapHI(origin(), $A) // Line 4: Origin, Length
+TextMapHI(origin(), $C) // Line 5: Origin, Length
+TextMapHI(origin(), $C) // Line 6: Origin, Length
 TextMapHI(origin(), $C) // Line 7: Origin, Length
-TextMapHI(origin(), $B) // Line 8: Origin, Length
-TextMapHI(origin(), $A) // Line 9: Origin, Length
+TextMapHI(origin(), $C) // Line 8: Origin, Length
+TextMapHI(origin(), $C) // Line 9: Origin, Length
 TextMapHI(origin(), $B) // Line 10: Origin, Length
 TextMapHI(origin(), $C) // Line 11: Origin, Length
 db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End High Bytes
 
-// CHARACTER DESCRIPTIONS
 origin $3FB9C
-// ALADDIN: Low Bytes
-db $C3, $00
+ALADDINCharacterDescription:
+db $C3, $00 // Low Bytes
 TextMapLO(origin(), "ALADDIN IS")   // Line 1: Origin, Text
 TextMapLO(origin(), "DREAMING OF")  // Line 2: Origin, Text
 TextMapLO(origin(), "ADVENTURE...") // Line 3: Origin, Text
@@ -260,8 +268,7 @@ TextMapLO(origin(), " DRAGON DOWN") // Line 9: Origin, Text
 TextMapLO(origin(), " THERE! I'LL") // Line 10: Origin, Text
 TextMapLO(origin(), " LAND HERE!\d") // Line 11: Origin, Text
 db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End Low Bytes
-// ALADDIN: High Bytes
-db $C3, $00
+db $C3, $00 // High Bytes
 TextMapHI(origin(), $A) // Line 1: Origin, Length
 TextMapHI(origin(), $B) // Line 2: Origin, Length
 TextMapHI(origin(), $C) // Line 3: Origin, Length
@@ -276,8 +283,8 @@ TextMapHI(origin(), $C) // Line 11: Origin, Length
 db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End High Bytes
 
 origin $84800
-// BIT: Low Bytes
-db $C3, $00
+BITCharacterDescription:
+db $C3, $00 // Low Bytes
 TextMapLO(origin(), "A GROUP OF 5") // Line 1: Origin, Text
 TextMapLO(origin(), "LADS WHO ARE") // Line 2: Origin, Text
 TextMapLO(origin(), "THE BEST OF")  // Line 3: Origin, Text
@@ -290,8 +297,7 @@ TextMapLO(origin(), "\dYIPPEE!!")   // Line 9: Origin, Text
 TextMapLO(origin(), " WE HAVE SO")  // Line 10: Origin, Text
 TextMapLO(origin(), " MUCH FUN!!\d") // Line 11: Origin, Text
 db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End Low Bytes
-// BIT: High Bytes
-db $C3, $00
+db $C3, $00 // High Bytes
 TextMapHI(origin(), $C) // Line 1: Origin, Length
 TextMapHI(origin(), $C) // Line 2: Origin, Length
 TextMapHI(origin(), $B) // Line 3: Origin, Length
@@ -306,8 +312,8 @@ TextMapHI(origin(), $C) // Line 11: Origin, Length
 db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End High Bytes
 
 origin $849F0
-// HALLOWEEN: Low Bytes
-db $C3, $00
+HALLOWEENCharacterDescription:
+db $C3, $00 // Low Bytes
 TextMapLO(origin(), "HALLOWEEN")    // Line 1: Origin, Text
 TextMapLO(origin(), "LOVES SWEETS") // Line 2: Origin, Text
 TextMapLO(origin(), "& MISCHIEF.")  // Line 3: Origin, Text
@@ -320,8 +326,7 @@ TextMapLO(origin(), "SWEETS FOR")   // Line 9: Origin, Text
 TextMapLO(origin(), "HIMSELF...")   // Line 10: Origin, Text
 TextMapLO(origin(), "\dYUM YUM!!\d") // Line 11: Origin, Text
 db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End Low Bytes
-// HALLOWEEN: High Bytes
-db $C3, $00
+db $C3, $00 // High Bytes
 TextMapHI(origin(), $9) // Line 1: Origin, Length
 TextMapHI(origin(), $C) // Line 2: Origin, Length
 TextMapHI(origin(), $B) // Line 3: Origin, Length
@@ -336,8 +341,8 @@ TextMapHI(origin(), $B) // Line 11: Origin, Length
 db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End High Bytes
 
 origin $84BDE
-// SHAMAN: Low Bytes
-db $C3, $00
+SHAMANCharacterDescription:
+db $C3, $00 // Low Bytes
 TextMapLO(origin(), "SHAMAN IS IN") // Line 1: Origin, Text
 TextMapLO(origin(), "SEARCH OF A")  // Line 2: Origin, Text
 TextMapLO(origin(), "LEGENDARY")    // Line 3: Origin, Text
@@ -350,8 +355,7 @@ TextMapLO(origin(), "DRAGON SCALE") // Line 9: Origin, Text
 TextMapLO(origin(), "TO SUCCEED.")  // Line 10: Origin, Text
 TextMapLO(origin(), "\dHU-WA-YE!!\d") // Line 11: Origin, Text
 db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End Low Bytes
-// SHAMAN: High Bytes
-db $C3, $00
+db $C3, $00 // High Bytes
 TextMapHI(origin(), $C) // Line 1: Origin, Length
 TextMapHI(origin(), $B) // Line 2: Origin, Length
 TextMapHI(origin(), $9) // Line 3: Origin, Length
@@ -366,68 +370,66 @@ TextMapHI(origin(), $C) // Line 11: Origin, Length
 db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End High Bytes
 
 origin $855C7
-// PRINCESS: Low Bytes
-db $C3, $00
-TextMapLO(origin(), "PRINCESS WAS") // Line 1: Origin, Text
-TextMapLO(origin(), "IN L-SHIP")    // Line 2: Origin, Text
-TextMapLO(origin(), "CASTLE WHEN")  // Line 3: Origin, Text
-TextMapLO(origin(), "HER SISTER")   // Line 4: Origin, Text
-TextMapLO(origin(), "IS KIDNAPPED") // Line 5: Origin, Text
-TextMapLO(origin(), "BY A DRAGON.") // Line 6: Origin, Text
-TextMapLO(origin(), "SHE SETS OUT") // Line 7: Origin, Text
-TextMapLO(origin(), "TO FIND HER.") // Line 8: Origin, Text
-TextMapLO(origin(), "\dHOLD ON SIS") // Line 9: Origin, Text
-TextMapLO(origin(), " I WILL NOT") // Line 10: Origin, Text
-TextMapLO(origin(), " FAIL YOU!!\d") // Line 11: Origin, Text
+NINJACharacterDescription:
+db $C3, $00 // Low Bytes
+TextMapLO(origin(), "AS NINJA WAS") // Line 1: Origin, Text
+TextMapLO(origin(), "TRAINING, HE") // Line 2: Origin, Text
+TextMapLO(origin(), "HEARD THAT")   // Line 3: Origin, Text
+TextMapLO(origin(), "HIS FIANCEE")  // Line 4: Origin, Text
+TextMapLO(origin(), "KYOUKO HAD")   // Line 5: Origin, Text
+TextMapLO(origin(), "BEEN TURNED")  // Line 6: Origin, Text
+TextMapLO(origin(), "INTO A FROG,") // Line 7: Origin, Text
+TextMapLO(origin(), "BY THE HAND")  // Line 8: Origin, Text
+TextMapLO(origin(), "OF AN EVIL")   // Line 9: Origin, Text
+TextMapLO(origin(), "SORCERER...")  // Line 10: Origin, Text
+TextMapLO(origin(), "\dSAVE HER!!\d") // Line 11: Origin, Text
 db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End Low Bytes
-// PRINCESS: High Bytes
-db $C3, $00
+db $C3, $00 // High Bytes
 TextMapHI(origin(), $C) // Line 1: Origin, Length
-TextMapHI(origin(), $9) // Line 2: Origin, Length
-TextMapHI(origin(), $B) // Line 3: Origin, Length
-TextMapHI(origin(), $A) // Line 4: Origin, Length
-TextMapHI(origin(), $C) // Line 5: Origin, Length
-TextMapHI(origin(), $C) // Line 6: Origin, Length
+TextMapHI(origin(), $C) // Line 2: Origin, Length
+TextMapHI(origin(), $A) // Line 3: Origin, Length
+TextMapHI(origin(), $B) // Line 4: Origin, Length
+TextMapHI(origin(), $A) // Line 5: Origin, Length
+TextMapHI(origin(), $B) // Line 6: Origin, Length
 TextMapHI(origin(), $C) // Line 7: Origin, Length
-TextMapHI(origin(), $C) // Line 8: Origin, Length
-TextMapHI(origin(), $C) // Line 9: Origin, Length
+TextMapHI(origin(), $B) // Line 8: Origin, Length
+TextMapHI(origin(), $A) // Line 9: Origin, Length
 TextMapHI(origin(), $B) // Line 10: Origin, Length
 TextMapHI(origin(), $C) // Line 11: Origin, Length
 db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End High Bytes
 
 origin $85913
-// MIRURUN: Low Bytes
-db $C3, $00
+MIRURUNCharacterDescription:
+db $C3, $00 // Low Bytes
 TextMapLO(origin(), "MIRURUN IS A") // Line 1: Origin, Text
 TextMapLO(origin(), "CREATURE WHO") // Line 2: Origin, Text
 TextMapLO(origin(), "HAS A HEART")  // Line 3: Origin, Text
-TextMapLO(origin(), "OF GOLD...")   // Line 4: Origin, Text
+TextMapLO(origin(), "OF GOLD.")     // Line 4: Origin, Text
 TextMapLO(origin(), "HE HAS BEEN")  // Line 5: Origin, Text
 TextMapLO(origin(), "ON A JOURNEY") // Line 6: Origin, Text
 TextMapLO(origin(), "TO FIND SOME") // Line 7: Origin, Text
 TextMapLO(origin(), "FRIENDS.")     // Line 8: Origin, Text
 TextMapLO(origin(), "\dWILL YOU")   // Line 9: Origin, Text
-TextMapLO(origin(), " BECOME MY")   // Line 10: Origin, Text
+TextMapLO(origin(), " BE MY")       // Line 10: Origin, Text
 TextMapLO(origin(), " FRIEND?\d...") // Line 11: Origin, Text
 db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End Low Bytes
-// MIRURUN: High Bytes
-db $C3, $00
+db $C3, $00 // High Bytes
 TextMapHI(origin(), $C) // Line 1: Origin, Length
 TextMapHI(origin(), $C) // Line 2: Origin, Length
 TextMapHI(origin(), $B) // Line 3: Origin, Length
-TextMapHI(origin(), $A) // Line 4: Origin, Length
+TextMapHI(origin(), $8) // Line 4: Origin, Length
 TextMapHI(origin(), $B) // Line 5: Origin, Length
 TextMapHI(origin(), $C) // Line 6: Origin, Length
 TextMapHI(origin(), $C) // Line 7: Origin, Length
 TextMapHI(origin(), $8) // Line 8: Origin, Length
 TextMapHI(origin(), $9) // Line 9: Origin, Length
-TextMapHI(origin(), $A) // Line 10: Origin, Length
+TextMapHI(origin(), $6) // Line 10: Origin, Length
 TextMapHI(origin(), $C) // Line 11: Origin, Length
 db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End High Bytes
 
 origin $D7E13
-// WOLFMAN: Low Bytes
-db $C3, $00
+WOLFMANCharacterDescription:
+db $C3, $00 // Low Bytes
 TextMapLO(origin(), "WOLFMAN") // Line 1: Origin, Text
 TextMapLO(origin(), "WENT BACK TO") // Line 2: Origin, Text
 TextMapLO(origin(), "HIS HOMELAND") // Line 3: Origin, Text
@@ -440,8 +442,7 @@ TextMapLO(origin(), "IS KIDNAPPED") // Line 9: Origin, Text
 TextMapLO(origin(), "\dI'LL FIGHT") // Line 10: Origin, Text
 TextMapLO(origin(), "WITH HONOR!\d") // Line 11: Origin, Text
 db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End Low Bytes
-// WOLFMAN: High Bytes
-db $C3, $00
+db $C3, $00 // High Bytes
 TextMapHI(origin(), $7) // Line 1: Origin, Length
 TextMapHI(origin(), $C) // Line 2: Origin, Length
 TextMapHI(origin(), $C) // Line 3: Origin, Length
