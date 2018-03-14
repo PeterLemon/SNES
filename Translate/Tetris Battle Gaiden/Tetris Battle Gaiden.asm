@@ -38,6 +38,25 @@ macro TextMapHI(OFFSET, LENGTH) {
   db $94 + ($C - {LENGTH}), $00
 }
 
+macro TextMapASCII() {
+  map 0, 0, 256 // Map ASCII Font
+}
+
+macro TextMapPause() {
+  // Map Pause Font
+  map '\n', $25
+  map '0', $30, 10
+  map '!', $3A
+  map '?', $3B
+  map 'A', $41, 26
+  map '.', $A1
+  map '\s', $A2 // map "'", $A2
+  map $2C, $A4  // map ',', $A4
+  map '-', $B0
+}
+
+TextMapASCII() // Map ASCII Font
+
 // SETTING
 origin $00C87
 dw SETTINGBACKGROUND + $8000
@@ -123,6 +142,58 @@ DRAGONPauseName:
   db "DRAGON", $FF
 QUEENPauseName:
   db " QUEEN", $FF
+
+TextMapPause() // Map Pause Font
+
+// PAUSE SCREEN COM INFO
+origin $12AB0
+HALLOWEENPauseCOMInfo:
+  db "HA-HA-HA!\n"
+  db "LET'S HAVE FUN.\n"
+  db "COME ON!", $FF
+
+origin $12B37
+MIRURUNPauseCOMInfo:
+  db "HI!\n"
+  db "I WILL DO MY BEST!", $FF
+
+origin $12BAB
+SHAMANPauseCOMInfo:
+  db "I PRAY TO THE GOD\n"
+  db "OF TETRIS FOR MY\n"
+  db "STRENGTH.", $FF
+
+origin $12C5A
+ALADDINPauseCOMInfo:
+  db "HA-HA-HA!\n"
+  db "A VICTORY WILL\n"
+  db "SURELY BE MINE.", $FF
+
+origin $12CD5
+PRINCESSPauseCOMInfo:
+  db "I'LL DO MY BEST!\n"
+  db "BE GENTLE TO ME!", $FF
+
+origin $12D46
+BITPauseCOMInfo:
+  db "HOORAY!\n"
+  db "THERE IS NO BLOCKS"
+  db "WOW, YO!", $FF
+
+origin $12DB0
+NINJAPauseCOMInfo:
+  db "I HAVE THIS.\n"
+  db "I WILL WIN WITH MY"
+  db "NINJUTSU\n"
+  db "I WILL DO IT!", $FF
+
+origin $12E41
+WOLFMANPauseCOMInfo:
+  db "SEE MY TRUE\n"
+  db "STRENGTH\n"
+  db "I WILL BEAT YOU.", $FF
+
+TextMapASCII() // Map ASCII Font
 
 // INTRO
 origin $1B283
