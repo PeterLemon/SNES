@@ -5,6 +5,17 @@ origin $00000; insert "Tetris Battle Gaiden (J).sfc" // Include Japanese Tetris 
 origin $007FC0
 db "TETRIS BATTLE GAIDENG" // $007FC0 - PROGRAM TITLE (21 Byte ASCII String, Use Spaces For Unused Bytes)
 
+macro PC2LoROM(SIZE, OFFSET) {
+    variable lorom({OFFSET} & $FFFF)
+    if lorom < $8000 {
+      lorom = lorom + $8000
+    }
+    variable bank({OFFSET} >> 15)
+    bank = bank + $80
+    lorom = lorom + (bank << 16)
+    {SIZE} lorom
+}
+
 macro TextMapLO(OFFSET, TEXT) {
   // Map Font HI
   map ' ', $00, 16
@@ -59,25 +70,25 @@ TextMapASCII() // Map ASCII Font
 
 // SETTING
 origin $00C87
-dw SETTINGBACKGROUND + $8000
+PC2LoROM(dw, SETTINGBACKGROUND)
 
 origin $00CA0
-dw SETTINGSTEREOMONO + $8000
+PC2LoROM(dw, SETTINGSTEREOMONO)
 
 // BACK GROUND
 origin $01950
 SETTINGBACKGROUND:
-  dw TWOPLAYERBGSetting + $8000
-  dw HALLOWEENSetting + $8000
-  dw MIRURUNSetting + $8000
-  dw SHAMANSetting + $8000
-  dw ALADDINSetting + $8000
-  dw PRINCESSSetting + $8000
-  dw BITSetting + $8000
-  dw NINJASetting + $8000
-  dw WOLFMANSetting + $8000
-  dw DRAGONSetting + $8000
-  dw QUEENSetting + $8000
+  PC2LoROM(dw, TWOPLAYERBGSetting)
+  PC2LoROM(dw, HALLOWEENSetting)
+  PC2LoROM(dw, MIRURUNSetting)
+  PC2LoROM(dw, SHAMANSetting)
+  PC2LoROM(dw, ALADDINSetting)
+  PC2LoROM(dw, PRINCESSSetting)
+  PC2LoROM(dw, BITSetting)
+  PC2LoROM(dw, NINJASetting)
+  PC2LoROM(dw, WOLFMANSetting)
+  PC2LoROM(dw, DRAGONSetting)
+  PC2LoROM(dw, QUEENSetting)
 TWOPLAYERBGSetting:
   db "2PLAYERBG", $FF
 HALLOWEENSetting:
@@ -103,8 +114,8 @@ QUEENSetting:
 
 // STEREO/MONO
 SETTINGSTEREOMONO:
-  dw STEREOSetting + $8000
-  dw MONOSetting + $8000
+  PC2LoROM(dw, STEREOSetting)
+  PC2LoROM(dw, MONOSetting)
 STEREOSetting:
   db "STEREO", $FF
 MONOSetting:
@@ -112,16 +123,16 @@ MONOSetting:
 
 // PAUSE SCREEN
 origin $117DC
-  dw HALLOWEENPauseName + $8000
-  dw MIRURUNPauseName + $8000
-  dw SHAMANPauseName + $8000
-  dw ALADDINPauseName + $8000
-  dw PRINCESSPauseName + $8000
-  dw BITPauseName + $8000
-  dw NINJAPauseName + $8000
-  dw WOLFMANPauseName + $8000
-  dw DRAGONPauseName + $8000
-  dw QUEENPauseName + $8000
+  PC2LoROM(dw, HALLOWEENPauseName)
+  PC2LoROM(dw, MIRURUNPauseName)
+  PC2LoROM(dw, SHAMANPauseName)
+  PC2LoROM(dw, ALADDINPauseName)
+  PC2LoROM(dw, PRINCESSPauseName)
+  PC2LoROM(dw, BITPauseName)
+  PC2LoROM(dw, NINJAPauseName)
+  PC2LoROM(dw, WOLFMANPauseName)
+  PC2LoROM(dw, DRAGONPauseName)
+  PC2LoROM(dw, QUEENPauseName)
 HALLOWEENPauseName:
   db "HALLOWEN", $FF
 MIRURUNPauseName:
@@ -286,14 +297,14 @@ db "    "
 
 // CHARACTER DESCRIPTIONS
 origin $27222
-  dw HALLOWEENCharacterDescription + $8000; db $90
-  dw MIRURUNCharacterDescription + $8000; db $90
-  dw SHAMANCharacterDescription + $8000; db $90
-  dw ALADDINCharacterDescription; db $87
-  dw PRINCESSCharacterDescription; db $85
-  dw BITCharacterDescription + $8000; db $90
-  dw NINJACharacterDescription + $8000; db $90
-  dw WOLFMANCharacterDescription + $8000; db $9A
+  PC2LoROM(dl, HALLOWEENCharacterDescription)
+  PC2LoROM(dl, MIRURUNCharacterDescription)
+  PC2LoROM(dl, SHAMANCharacterDescription)
+  PC2LoROM(dl, ALADDINCharacterDescription)
+  PC2LoROM(dl, PRINCESSCharacterDescription)
+  PC2LoROM(dl, BITCharacterDescription)
+  PC2LoROM(dl, NINJACharacterDescription)
+  PC2LoROM(dl, WOLFMANCharacterDescription)
 
 origin $2FA1B
 PRINCESSCharacterDescription:
