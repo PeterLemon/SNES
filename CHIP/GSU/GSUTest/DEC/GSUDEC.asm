@@ -99,7 +99,7 @@ macro GSUWait() { // Wait For GSU To Finish
 {#}GSUBusy:
     lda.w GSU_SFR // X = GSU Status/Flag Register
     bit.b #GSU_SFR_GSU // Check GSU Is Running
-    beq {#}GSUBusy
+    bne {#}GSUBusy
 }
 
 seek($8000); fill $8000 // Fill Upto $7FFF (Bank 0) With Zero Bytes
