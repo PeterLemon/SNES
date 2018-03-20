@@ -85,7 +85,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
   LoopGSU:
     lda.w GSU_SFR // X = GSU Status/Flag Register
     bit.b #GSU_SFR_GSU // Check GSU Is Running
-    beq LoopGSU
+    bne LoopGSU
 
   WaitNMI() // Wait For Vertical Blank Before Starting HDMA
 
