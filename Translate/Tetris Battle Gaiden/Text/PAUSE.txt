@@ -99,173 +99,566 @@
 	$117EE
         36	98	| Memory Address
 
-PAUSE SCREEN COM INFO:
-	HALLOWEEN:
+PAUSE SCREEN COMPUTER:
+	HALLOWEEN1:
 	キャハハハ!
 	Kyahahaha!
 	$12AB0	(Line 1)
 	23B7	AC	CA	CA	CA	3A	25	| Original Japanese Hex
 	# キ	ャ	ハ	ハ	ハ	!	NL	| Original Japanese Text
-	H A	-	H	A	-	H	A	| New English Text
-	4841	B0	48	41	B0	48	41	| New English Hex
 	さあコテンパンにしてやるぞ。
 	Let's have fun.
 	$12AB8	(Line 2)
 	24BB	B1	23BA	C3	DD	CADF	DD	24C6	BC	C3	D4	D9	BFDE	A1	25	| Original Japanese Hex
 	# さ	あ	# コ	テ	ン	ハ o 	ン	# に	し	て	や	る	そ "	。	NL	| Original Japanese Text
-	! NL	L	E T	'	S	  H 	A	V E	 	F	U	N	. NL	C	O	| New English Text
-	3A25	4C	4554	A2	53	2048	41	5645	20	46	55	4E	A125	43	4F	| New English Hex
 	カモーン!
 	Come on!
 	$12ACC	(Line 3)
 	23B6	D3	B0	DD	3A	FF	| Original Japanese Hex
 	# カ	モ	ー	ン	!	#	| Original Japanese Text
-	M E	 	O	N	!	#	| New English Text
-	4D45	20	4F	4E	3A	FF	| New English Hex
+	$12A4A
+        B0	AA	| Memory Address
 
-        MIRURUN:
+	HALLOWEEN2:
+	キャハハハ!
+	Kyahahaha!
+	$12AD3	(Line 1)
+	23B7	AC	CA	CA	CA	3A	25	| Original Japanese Hex
+	# キ	ャ	ハ	ハ	ハ	!	NL	| Original Japanese Text
+	ちょっとできるからってチョウシに
+	Because I can do it for a while
+	$12ADB	(Line 2)
+	24C1	AE	AF	C4	C3DE	B7	D9	B6	D7	AF	C3	23C1	AE	B3	BC	24C6	25	| Original Japanese Hex
+	# ち	ょ	っ	と	て "	き	る	か	ら	っ	て	# チ	ョ	ウ	シ	# に	NL	| Original Japanese Text
+	のるなよ!
+	Do not settle!
+	$12AF0	(Line 3)
+	C9	D9	C5	D6	3A	25	| Original Japanese Hex
+	の	る	な	よ	!	NL	| Original Japanese Text
+	すぐになかしちゃるからな!
+	It will be an outrage soon!
+	$12AF6	(Line 4)
+	BD	B8DE	C6	C5	B6	BC	C1	AC	D9	B6	D7	C5	3A	FF	| Original Japanese Hex
+	す	く "	に	な	か	し	ち	ゃ	る	か	ら	な	!	#	| Original Japanese Text
+	$12A4C
+        D3	AA	| Memory Address
+
+	HALLOWEEN3:
+	オッ、オイラをここまでおいつめるとは
+	Oh, to put up with us so far/Oh, to put it all together so far
+	$12B05	(Line 1)
+	23B5	AF	A4	B5	B2	D7	24A6	BA	BA	CF	C3DE	B5	B2	C2	D2	D9	C4	CA	| Original Japanese Hex
+	# オ	ッ	、	オ	イ	ラ	# を	こ	こ	ま	て "	お	い	つ	め	る	と	は	| Original Japanese Text
+	ナカナカやるな!
+	Do not panic!
+	$12B1A	(Line 2)
+	23C5	B6	C5	B6	24D4	D9	C5	3A	25	| Original Japanese Hex
+	# ナ	カ	ナ	カ	# や	る	な	!	NL	| Original Japanese Text
+	でもすぐになかしちゃるからな!
+	But it will be used soon!
+	$12B25	(Line 3)
+	C3DE	D3	BD	B8DE	C6	C5	B6	BC	C1	AC	D9	B6	D7	C5	3A	FF	| Original Japanese Hex
+	て "	も	す	く "	に	な	か	し	ち	ゃ	る	か	ら	な	!	#	| Original Japanese Text
+	$12A4E
+        05	AB	| Memory Address
+
+        MIRURUN1:
 	ミルルンがんばるもーん!
 	Mirurun I will do my best!
 	$12B37	(Line 1)
 	23D0	D9	D9	DD	24B6DE	DD	CADE	D9	D3	B0	DD	3A	25	| Original Japanese Hex
 	# ミ	ル	ル	ン	# が "	ん	ば "	る	も	ー	ん	!	NL	| Original Japanese Text
-	H I	!	NL	I	  W I	L	L	D	O	 	M	Y	 	| New English Text
-	4849 	3A	25	49	205749	4C	4C20	44	4F	20	4D	59	20	| New English Hex
 	よろしく!
 	Nice to meet you!
 	$12B48	(Line 2)
 	D6	DB	BC	B8	3A	FF	| Original Japanese Hex
 	よ	ろ	し	く	!	#	| Original Japanese Text
-	B	E	S	T	!	#	| New English Text
-	42	45	53	54	3A	FF	| New English Hex
+	$12A50
+        37	AB	| Memory Address
 
-	SHAMAN:
+	MIRURUN2:
+	ミルルンちょっとピンチ。
+	Mirurun a little pinch.
+	$12B4E	(Line 1)
+	23D0	D9	D9	DD	24C1	AE	AF	C4	23CBDF	DD	C1	A1	25	| Original Japanese Hex
+	# ミ	ル	ル	ン	# ち	ょ	っ	と	# ヒ o	ン	チ	。	NL	| Original Japanese Text
+	でもまけないんだもーん!
+	But I can not lose!
+	$12B5F	(Line 2)
+	24C3DE	D3	CF	B9	C5	B2	DD	C0DE	D3	B0	DD	3A	FF	| Original Japanese Hex
+	# て "	も	ま	け	な	い	ん	た "	も	ー	ん	!	#	| Original Japanese Text
+	$12A52
+        4E	AB	| Memory Address
+
+	MIRURUN3:
+	ミルルンすごくピンチ!
+	Mirurun is really pinch!
+	$12B6F	(Line 1)
+	23D0	D9	D9	DD	24BD	BADE	B8	23CBDF	DD	C1	3A	25	| Original Japanese Hex
+	# ミ	ル	ル	ン	# す	こ "	く	# ヒ o	ン	チ	!	NL	| Original Japanese Text
+	でもがんばっちゃうんだもーん!
+	But I will do my best!
+	$12B80	(Line 2)
+	24C3DE	D3	B6DE	DD	CADE	AF	C1	AC	B3	DD	C0DE	D3	B0	DD	3A	25	| Original Japanese Hex
+	# て "	も	か "	ん	は "	っ	ち	ゃ	う	ん	た "	も	ー	ん	!	NL	| Original Japanese Text
+	すごくがんばっちゃうんだもーん!!
+	I'm doing my best!!
+	$12B95	(Line 3)
+	BD	BADE	B8	B6DE	DD	CADE	AF	C1	AC	B3	DD	C0DE	D3	B0	DD	3A	3A	FF	| Original Japanese Hex
+	す	こ "	く	か "	ん	は "	っ	ち	ゃ	う	ん	た "	も	ー	ん	!	!	#	| Original Japanese Text
+	$12A54
+        6F	AB	| Memory Address
+
+	SHAMAN1:
 	ンンダーウンダバ
 	I'll go easy on you
 	$12BAB	(Line 1)
 	23DD	DD	C0DE	B0	B3	DD	C0DE	CADE	25	| Original Japanese Hex
 	# ン	ン	タ "	ー	ウ	ン	タ "	ハ "	NL	| Original Japanese Text
-	I  	P	R A	Y 	  	T	O	T H	E	| New English Text
-	4920	50	5241	59	20	54	4F20	5448	45	| New English Hex
 	いみ、おれはテトリスのカミにつかえて
 	I worship the god of tetris,
 	$12BB8	(Line 2)
 	24B2	D0	A4	B5	DA	CA	23C3	C4	D8	BD	24C9	23B6	D0	24C6	C2	B6	B4	C3	| Original Japanese Hex
 	# い	み	、	お	れ	は	# テ	ト	リ	ス	# の	# カ	ミ	# に	つ	か	え	て	| Original Japanese Text
-	  G	O	D	NL 	O  	F	  T	 E	T	R	I S  	  F	O  	R	M	Y	NL 	S	| New English Text
-	2047	4F	44	25	4F	46	2054	45	54	52	4953	2046	4F	5220	4D	59	25	53	| New English Hex
 	いるからつよい。
 	who gives me strength.
 	$12BCF	(Line 3)
 	B2	D9	B6	D7	C2	D6	B2	A1	FF	| Original Japanese Hex
 	い	る	か	ら	つ	よ	い	。	#	| Original Japanese Text
-	T	R	E	N	G	T	H	.	#	| New English Text
-	54	52	45	4E	47	54	48	A1	FF	| New English Hex
+	$12A56
+        AB	AB	| Memory Address
 
-	ALADDIN:
+	SHAMAN2:
+	ンダダバオバオ
+	Da Da Bao Bao
+	$12BD8	(Line 1)
+	23DD	C0DE	C0DE	CADE	B5	CADE	B5	25	| Original Japanese Hex
+	# ン	タ "	タ "	ハ "	オ	ハ "	オ	NL	| Original Japanese Text
+	いみ、テトリスのカミはいつもおれを
+	Ok, Tetris game always makes me
+	$12BE5	(Line 2)
+	24B2	D0	A4	23C3	C4	D8	BD	24C9	23B6	D0	24CA	B2	C2	D3	B5	DA	A6	25	| Original Japanese Hex
+	# い	み	、	# テ	ト	リ	ス	# の	# カ	ミ	# は	い	つ	も	お	れ	を	NL	| Original Japanese Text
+	みまもっている。
+	I'm obsessed.
+	$12BFC	(Line 3)
+	D0	CF	D3	AF	C3	B2	D9	A1	25	| Original Japanese Hex
+	み	ま	も	っ	て	い	る	。	NL	| Original Japanese Text
+	だからまけない。
+	So I will not lose.
+	$12C05	(Line 4)
+	C0DE	B6	D7	CF	B9	C5	B2	A1	FF	| Original Japanese Hex
+	た "	か	ら	ま	け	な	い	。	#	| Original Japanese Text
+	$12A58
+        D8	AB	| Memory Address
+
+	SHAMAN3:
+	ンガーンガーオーオー
+	Nga-Nga-Oh-Oh/Singer
+	$12C0F	(Line 1)
+	23DD	B6DE	B0	DD	B6DE	B0	B5	B0	B5	B0	25	| Original Japanese Hex
+	# ン	カ "	ー	ン	カ "	ー	オ	ー	オ	ー	NL	| Original Japanese Text
+	いみ、これはテトリスのカミにあたえら
+	Maybe this is a sign from the god of tetris.
+	$12C1D	(Line 2)
+	24B2	D0	A4	BA	DA	CA	23C3	C4	D8	BD	24C9	23B6	D0	24C6	B1	C0	B4	D7	| Original Japanese Hex
+	# い	み	、	こ	れ	は	# テ	ト	リ	ス	# の	# カ	ミ	# に	あ	た	え	ら	| Original Japanese Text
+	れたシレンである。
+	It was a siren.
+	$12C34	(Line 3)
+	DA	C0	23BC	DA	DD	24C3DE	B1	D9	A1	25	| Original Japanese Hex
+	れ	た	# シ	レ	ン	# て "	あ	る	。	NL	| Original Japanese Text
+	だからかならずシレンをコクフクする!
+	So always make sure to shrink Siren!
+	$12C41	(Line 4)
+	C0DE	B6	D7	B6	C5	D7	BDDE	23BC	DA	DD	24A6	23BA	B8	CC	B8	24BD	D9	3A	FF	| Original Japanese Hex
+	た "	か	ら	か	な	ら	す "	# シ	レ	ン	# を	# コ	ク	フ	ク	# す	る	!	#	| Original Japanese Text
+	$12A5A
+        0F	AC	| Memory Address
+
+	ALADDIN1:
         はっはっは!
 	Ha ha ha!
 	$12C5A	(Line 1)
 	24CA	AF	CA	AF	CA	3A	25	| Original Japanese Hex
 	# は	っ	は	っ	は	!	NL	| Original Japanese Text
-	H A	-	H	A	-	H	A	| New English Text
-	4841	B0	48	41	B0	48	41	| New English Hex
 	このショウブ、ぼくのかちはきまった
 	A Victory will
 	$12C62	(Line 2)
 	BA	C9	23BC	AE	B3	CCDE	A4	24CEDE	B8	C9	B6	C1	CA	B7	CF	AF	C0	25	| Original Japanese Hex
 	こ	の	# シ	ョ	ウ	フ "	、	# ほ "	く	の	か	ち	は	き	ま	っ	た	NL	| Original Japanese Text
-	!	NL	A   	V	I	C T	O	R Y 	W	I	L	L	NL	S	U	R	E	L	| New English Text
-	3A	25	4120	56	49	4354	4F	525920	57	49	4C	4C	25	53	55	52	45	4C	| New English Hex
 	ようなものですね。
 	surely be mine.
 	$12C78	(Line 3)
 	D6	B3	C5	D3	C9	C3DE	BD	C8	A1	FF	| Original Japanese Hex
 	よ	う	な	も	の	て "	す	ね	。	#	| Original Japanese Text
-	Y	 	B	E	 	M I	N	E	.	#	| New English Text
-	59	20	42	45	20	4D49	4E	45	A1	FF	| New English Hex
+	$12A5C
+        5A	AC	| Memory Address
 
-	PRINCESS:
+	ALADDIN2:
+	はっはっは!
+	Ha ha ha!
+	$12C83	(Line 1)
+	24CA	AF	CA	AF	CA	3A	25	| Original Japanese Hex
+	# は	っ	は	っ	は	!	NL	| Original Japanese Text
+	なかなかやりますね。
+	It is quite easy.
+	$12C8B	(Line 2)
+	C5	B6	C5	B6	D4	D8	CF	BD	C8	A1	25	| Original Japanese Hex
+	な	か	な	か	や	り	ま	す	ね	。	NL	| Original Japanese Text
+	でも、ぼくのかちはかわりませんね。
+	But I will not change my win.
+	$12C96	(Line 3)
+	C3DE	D3	A4	CEDE	B8	C9	B6	C1	CA	B6	DC	D8	CF	BE	DD	C8	A1	FF	| Original Japanese Hex
+	て "	も	、	ほ "	く	の	か	ち	は	か	わ	り	ま	せ	ん	ね	。	#	| Original Japanese Text
+	$12A5E
+        83	AC	| Memory Address
+
+	ALADDIN3:
+	ぼっ、ぼくがまけるはずないんだ。
+	But, I can not lose.
+	$12CAA	(Line 1)
+	24CEDE	AF	A4	CEDE	B8	B6DE	CF	B9	D9	CA	BDDE	C5	B2	DD	C0DE	A1	25	| Original Japanese Hex
+	# ほ "	っ	、	ほ "	く	か "	ま	け	る	は	す "	な	い	ん	た "	。	NL	| Original Japanese Text
+	すっ、すぐにかいふくしてやるからな!
+	Well, I will recover quickly!
+	$12CC1	(Line 2)
+	BD	AF	A4	BD	B8DE	C6	B6	B2	CC	B8	BC	C3	D4	D9	B6	D7	C5	3A	FF	| Original Japanese Hex
+	す	っ	、	す	く "	に	か	い	ふ	く	し	て	や	る	か	ら	な	!	#	| Original Japanese Text
+	$12A60
+        AA	AC	| Memory Address
+
+	PRINCESS1:
 	わたし、いっしょうけんめい
 	I'll do my
 	$12CD5	(Line 1)
 	24DC	C0	BC	A4	B2	AF	BC	AE	B3	B9	DD	D2	B2	25	| Original Japanese Hex
 	# わ	た	し	、	い	っ	し	ょ	う	け	ん	め	い	NL	| Original Japanese Text
-	I '	L	L	 	D	O	 	M	Y	 	B	E	S	T	| New English Text
-	49A2	4C	4C	20	44	4F	20	4D	59	20	42	45	53	54	| New English Hex
 	がんばります!
 	best!
 	$12CE4	(Line 2)
 	B6DE	DD	CADE	D8	CF	BD	3A	25	| Original Japanese Hex
 	か "	ん	は "	り	ま	す	!	NL	| Original Japanese Text
-	! NL	B	E	G	E	N	T 	L	| New English Text
-	3A25	42	4520	47	45	4E	54	4C	| New English Hex
 	おてやわらかに!
 	Try to be gentle!
 	$12CEE	(Line 3)
 	B5	C3	D4	DC	D7	B6	C6	3A	FF	| Original Japanese Hex
 	お	て	や	わ	ら	か	に	!	#	| Original Japanese Text
-	E	 	T	O	 	M	E	!	#	| New English Text
-	45	20	54	4F	20	4D	45	3A	FF	| New English Hex
+	$12A62
+        D5	AC	| Memory Address
 
-	BIT:
+	PRINCESS2:
+	ちょっとキケンだわ。
+	I am in a bit of a danger./It is a little dangerous.
+	$12CF7	(Line 1)
+	24C1	AE	AF	C4	23B7	B9	DD	24C0DE	DC	A1	25	| Original Japanese Hex
+	# ち	ょ	っ	と	# キ	ケ	ン	# た "	わ	。	NL	| Original Japanese Text
+	でも、まだまだがんばれるわ!
+	But I will do my best!
+	$12D06	(Line 2)
+	C3DE	D3	A4	CF	C0DE	CF	C0DE	B6DE	DD	CADE	DA	D9	DC	3A	FF	| Original Japanese Hex
+	て "	も	、	ま	た "	ま	た "	か "	ん	は "	れ	る	わ	!	#	| Original Japanese Text
+	$12A64
+        F7	AC	| Memory Address
+
+	PRINCESS3:
+	あーん!
+	Ah!
+	$12D1A	(Line 1)
+	24B1	B0	DD	3A	25	| Original Japanese Hex
+	# あ	ー	ん	!	NL	| Original Japanese Text
+	このままじゃまけちゃう!
+	I will lose just like this!
+	$12D20	(Line 2)
+	BA	C9	CF	CF	BCDE	AC	CF	B9	C1	AC	B3	3A	25	| Original Japanese Hex
+	こ	の	ま	ま	し "	ゃ	ま	け	ち	ゃ	う	!	NL	| Original Japanese Text
+	でもすぐにギャクテンしちゃうからね!
+	But I will soon have a big block!
+	$12D2E	(Line 3)
+	C3DE	D3	BD	B8DE	C6	23B7DE	AC	B8	C3	DD	24BC	C1	AC	B3	B6	D7	C8	3A	FF	| Original Japanese Hex
+	て "	も	す	く "	に	# キ "	ャ	ク	テ	ン	# し	ち	ゃ	う	か	ら	ね	!	#	| Original Japanese Text
+	$12A66
+        1A	AD	| Memory Address
+
+	BIT1:
 	わーい!
 	Hooray!
 	$12D46	(Line 1)
 	24DC	B0	B2	3A	25	| Original Japanese Hex
 	# わ	ー	い	!	NL	| Original Japanese Text
-	H O	O	R	A	Y	| New English Text
-	484F	4F	52	41	59	| New English Hex
 	ブロックがほとんどないぞー
 	There is almost no blocks
 	$12D4C	(Line 2)
 	23CCDE	DB	AF	B8	24B6DE	CE	C4	DD	C4DE	C5	B2	BFDE	B0	25	| Original Japanese Hex
 	# フ "	ロ	ッ	ク	# か "	ほ	と	ん	と "	な	い	そ "	ー	NL	| Original Japanese Text
-	! NLT	H	E	R	E   I	S	 	N	O	B	L	O C	K	S	| New English Text
-	3A2554	48	45	52	452049	53	20	4E	4F20	42	4C	4F43	4B	53	| New English Hex
 	わーい、わーい!
 	Yo, Yo!
 	$12D60	(Line 3)
 	DC	B0	B2	A4	DC	B0	B2	3A	FF	| Original Japanese Hex
 	わ	ー	い	、	わ	ー	い	!	#	| Original Japanese Text
-	W	O	W	,	 	Y	O	!	#	| New English Text
-	57	4F	57	A4	20	59	4F	3A	FF	| New English Hex
+	$12A68
+        46	AD	| Memory Address
 
-	NINJA:
+	BIT2:
+	わーい!
+	Hooray!
+	$12D69	(Line 1)
+	24DC	B0	B2	3A	25	| Original Japanese Hex
+	# わ	ー	い	!	NL	| Original Japanese Text
+	ブロックがたくさんあるぞー
+	There are lots of blocks
+	$12D6F	(Line 2)
+	23CCDE	DB	AF	B8	24B6DE	C0	B8	BB	DD	B1	D9	BFDE	B0	25	| Original Japanese Hex
+	# フ "	ロ	ッ	ク	# か "	た	く	さ	ん	あ	る	そ "	ー	NL	| Original Japanese Text
+	わーい!
+	Hooray!
+	$12D82	(Line 3)
+	DC	B0	B2	3A	FF	| Original Japanese Hex
+	わ	ー	い	!	#	| Original Japanese Text
+	$12A6A
+        69	AD	| Memory Address
+
+	BIT3:
+	アワワ!アワワ!
+	Awawa! Awa!
+	$12D87	(Line 1)
+	23B1	DC	DC	3A	B1	DC	DC	3A	25	| Original Japanese Hex
+	# ア	ワ	ワ	!	ア	ワ	ワ	!	NL	| Original Japanese Text
+	ブロックがウエまであるぞー
+	There are blocks upto the top
+	$12D91	(Line 2)
+	CCDE	DB	AF	B8	24B6DE	23B3	B4	24CF	C3DE	B1	D9	BFDE	B0	2325	| Original Japanese Hex
+	フ "	ロ	ッ	ク	# か "	# ウ	エ	# ま	て "	あ	る	そ "	ー	# NL	| Original Japanese Text
+	アワワ!アワワ!
+	Awawa! Awa!
+	$12DA7	(Line 3)
+	B1	DC	DC	3A	B1	DC	DC	3A	FF	| Original Japanese Hex
+	ア	ワ	ワ	!	ア	ワ	ワ	!	#	| Original Japanese Text
+	$12A6C
+        87	AD	| Memory Address
+
+	NINJA1:
 	このショウブ、もらったな。
 	I have got this game.
 	$12DB0	(Line 1)
 	24BA	C9	23BC	AE	B3	CCDE	A4	24D3	D7	AF	C0	C5	A1	25	| Original Japanese Hex
 	# こ	の	# シ	ョ	ウ	フ "	、	# も	ら	っ	た	な	。	NL	| Original Japanese Text
-	I  	H	A V	E	 	T H	I	S .	NL	I	 	W	I	L	| New English Text
-	4920	48	4156	45	20	5448	49	53A1	25	49	20	57	49	4C	| New English Hex
 	オレのニンジュツでいっきにショウブを
 	I will win this game at once with my ninjutsu
 	$12DC2	(Line 2)
 	23B5	DA	24C9	23C6	DD	BCDE	AD	C2	24C3DE	B2	AF	B7	C6	23BC	AE	B3	CCDE	24A6	| Original Japanese Hex
 	# オ	レ	# の	# ニ	ン	シ "	ュ	ツ	# て "	い	っ	き	に	# シ	ョ	ウ	フ "	# を	| Original Japanese Text
-	L   	W	I N  	  W	I	T H  	 	M	Y N I	N	J	U	T	S U	NL	I	  W	I L	| New English Text
-	4C20	57	494E	2057	49	5448	20	4D	594E49	4E	4A	55	54	5355	25	49	2057	494C	| New English Hex
 	つけてやるぜ!
 	I'll do it!
 	$12DDD	(Line 3)
 	C2	B9	C3	D4	D9	BEDE	3A	FF	| Original Japanese Hex
 	つ	け	て	や	る	せ "	!	#	| Original Japanese Text
-	L	 	D	O	 	I T	!	#	| New English Text
-	4C	20	44	4F	20	4954	3A	FF	| New English Hex
+	$12A6E
+        B0	AD	| Memory Address
 
-	WOLFMAN:
+	NINJA2:
+	むむっ!やるな!
+	Do not do it!
+	$12DE6	(Line 1)
+	24D1	D1	AF	3A	D4	D9	C5	3A	25	| Original Japanese Hex
+	# む	む	っ	!	や	る	な	!	NL	| Original Japanese Text
+	だがこのテイドではおれのニンジュツを
+	It is not possible to break my ninjutsu
+	$12DF0	(Line 2)
+	C0DE	B6DE	BA	C9	23C3	B2	C4DE	24C3DE	CA	B5	DA	C9	23C6	DD	BCDE	AD	C2	24A6	| Original Japanese Hex
+	た "	か "	こ	の	# テ	イ	ト "	# て "	は	お	れ	の	# ニ	ン	シ "	ュ	ツ	# を	| Original Japanese Text
+	やぶることはできないぞ!
+	to this degree!
+	$12E0B	(Line 3)
+	D4	CCDE	D9	BA	C4	CA	C3DE	B7	C5	B2	BFDE	3A	FF	| Original Japanese Hex
+	や	ふ "	る	こ	と	は	て "	き	な	い	そ "	!	#	| Original Japanese Text
+	$12A70
+        E6	AD	| Memory Address
+
+	NINJA3:
+	キョウコ!
+	Growth!
+	$12E1B	(Line 1)
+	23B7	AE	B3	BA	3A	25	| Original Japanese Hex
+	# キ	ョ	ウ	コ	!	NL	| Original Japanese Text
+	かならずギャクテンしてやるからな!
+	I will always be going to play a game!/Always it because I'll reversed!
+	$12E22	(Line 2)
+	24B6	C5	D7	BDDE	23B7DE	AC	B8	C3	DD	24BC	C3	D4	D9	B6	D7	C5	3A	25	| Original Japanese Hex
+	# か	な	ら	す "	# キ "	ャ	ク	テ	ン	# し	て	や	る	か	ら	な	!	NL	| Original Japanese Text
+	まっていろよ!
+	Please wait!
+	$12E39	(Line 3)
+	CF	AF	C3	B2	DB	D6	3A	FF	| Original Japanese Hex
+	ま	っ	て	い	ろ	よ	!	#	| Original Japanese Text
+	$12A72
+        1B	AE	| Memory Address
+
+	WOLFMAN1:
 	せっしゃ、ショウブにシジョウは
 	I will show you my strength
 	$12E41	(Line 1)
 	24BE	AF	BC	AC	A4	23BC	AE	B3	CCDE	24C6	23BC	BCDE	AE	B3	24CA	25	| Original Japanese Hex
 	# せ	っ	し	ゃ	、	# シ	ョ	ウ	フ "	# に	# シ	シ "	ョ	ウ	# は	NL	| Original Japanese Text
-	S E	E	 	M	Y  	  T	R	U	E  	S T	R E	N G	T	H	NL I	 	| New English Text
-	5345	45	20	4D	59	2054	52	55	4525	5354	5245	4E47	54	48	2549	20	| New English Hex
 	もちこまないでござる。
 	I do not mind bothering you.
 	$12E58	(Line 2)
 	D3	C1	BA	CF	C5	B2	C3DE	BADE	BBDE	D9	A1	FF	| Original Japanese Hex
 	も	ち	こ	ま	な	い	て "	こ "	さ "	る	。	#	| Original Japanese Text
-	W	I	L	L	 	B	E A	T  	Y O	U	.	#	| New English Text
-	57	49	4C	4C	20	42	4541	5420	594F	55	A1	FF	| New English Hex
+	$12A74
+        41	AE	| Memory Address
+
+	WOLFMAN2:
+	せっしゃ、このテイドではびくともしな
+	Sadly, this round is awkward
+	$12E67	(Line 1)
+	24BE	AF	BC	AC	A4	BA	C9	23C3	B2	C4DE	24C3DE	CA	CBDE	B8	C4	D3	BC	C5	| Original Japanese Hex
+	# せ	っ	し	ゃ	、	こ	の	# テ	イ	ト "	# て "	は	ひ "	く	と	も	し	な	| Original Japanese Text
+	いでござる。
+	It is bad.
+	$12E7F	(Line 2)
+	B2	C3DE	BADE	BBDE	D9	A1	25	| Original Japanese Hex
+	い	て "	こ "	さ "	る	。	NL	| Original Japanese Text
+	すぐにハンゲキするでござる。
+	It is a pleasure to fight you.
+	$12E89	(Line 3)
+	BD	B8DE	C6	23CA	DD	B9DE	B7	24BD	D9	C3DE	BADE	BBDE	D9	A1	FF	| Original Japanese Hex
+	す	く "	に	# ハ	ン	ケ "	キ	# す	る	て "	こ "	さ "	る	。	#	| Original Japanese Text
+	$12A76
+        67	AE	| Memory Address
+
+	WOLFMAN3:
+	せっしゃ、キュウチにおいてもキボウは
+	Well, even in cucumbers
+	$12E9F	(Line 1)
+	24BE	AF	BC	AC	A4	23B7	AD	B3	C1	24C6	B5	B2	C3	D3	23B7	CEDE	B3	24CA	| Original Japanese Hex
+	# せ	っ	し	ゃ	、	# キ	ュ	ウ	チ	# に	お	い	て	も	# キ	ホ "	ウ	# は	| Original Japanese Text
+	すてないでござる!
+	I will not throw it away!
+	$12EB7	(Line 2)
+	BD	C3	C5	B2	C3DE	BADE	BBDE	D9	3A	25	| Original Japanese Hex
+	す	て	な	い	て "	こ "	さ "	る	!	NL	| Original Japanese Text
+	かならずカリはかえすでござる。
+	Kari is always returning.
+	$12EC4	(Line 3)
+	B6	C5	D7	BDDE	23B6	D8	24CA	B6	B4	BD	C3DE	BADE	BBDE	D9	A1	FF	| Original Japanese Hex
+	か	な	ら	す "	# カ	リ	# は	か	え	す	て "	こ "	さ "	る	。	#	| Original Japanese Text
+	$12A78
+        9F	AE	| Memory Address
+
+	DRAGON1:
+	フッフッフ
+	Fuf fuf fu
+	$12EDA	(Line 1)
+	23CC	AF	CC	AF	CC	25	| Original Japanese Hex
+	# フ	ッ	フ	ッ	フ	NL	| Original Japanese Text
+	このオレさまにかてるとおもうのか?
+	Do you think you can beat me?
+	$12EE1	(Line 2)
+	24BA	C9	23B5	DA	24BB	CF	C6	B6	C3	D9	C4	B5	D3	B3	C9	B6	3B	25	| Original Japanese Hex
+	# こ	の	# オ	レ	# さ	ま	に	か	て	る	と	お	も	う	の	か	?	NL	| Original Japanese Text
+	にげだすならいまのうちだぞ!
+	Give up now, run away!
+	$12EF6	(Line 3)
+	C6	B9DE	C0DE	BD	C5	D7	B2	CF	C9	B3	C1	C0DE	BFDE	3A	FF	| Original Japanese Hex
+	に	け "	た "	す	な	ら	い	ま	の	う	ち	た "	そ "	!	#	| Original Japanese Text
+	$12A7A
+        DA	AE	| Memory Address
+
+	DRAGON2:
+	このテイドでかったとおもったら
+	If you think that you can win this round
+	$12F09	(Line 1)
+	24BA	C9	23C3	B2	C4DE	24C3DE	B6	AF	C0	C4	B5	D3	AF	C0	D7	25	| Original Japanese Hex
+	# こ	の	# テ	イ	ト "	# て "	か	っ	た	と	お	も	っ	た	ら	NL	| Original Japanese Text
+	おおまちがいだぞ。
+	you will lose.
+	$12F1E	(Line 2)
+	B5	B5	CF	C1	B6DE	B2	C0DE	BFDE	A1	25	| Original Japanese Hex
+	お	お	ま	ち	か "	い	た "	そ "	。	NL	| Original Japanese Text
+	すぐにジゴクをみせてやろう。
+	I will show you defeat soon.
+	$12F2B	(Line 3)
+	BD	B8DE	C6	23BCDE	BADE	B8	24A6	D0	BE	C3	D4	DB	B3	A1	FF	| Original Japanese Hex
+	す	く "	に	# シ "	コ "	ク	# を	み	せ	て	や	ろ	う	。	#	| Original Japanese Text
+	$12A7C
+        09	AF	| Memory Address
+
+	DRAGON3:
+	おのれ!
+	You!
+	$12F3F	(Line 1)
+	24B5	C9	DA	3A	25	| Original Japanese Hex
+	# お	の	れ	!	NL	| Original Japanese Text
+	よもやここまでやるとは!
+	Wonder what to do here!
+	$12F45	(Line 2)
+	D6	D3	D4	BA	BA	CF	C3DE	D4	D9	C4	CA	3A	25	| Original Japanese Hex
+	よ	も	や	こ	こ	ま	て "	や	る	と	は	!	NL	| Original Japanese Text
+	だがオレはマダまけんぞ!!
+	But I still will not lose!!
+	$12F53	(Line 3)
+	C0DE	B6DE	23B5	DA	24CA	23CF	C0DE	24CF	B9	DD	BFDE	3A	3A	FF	| Original Japanese Hex
+	た "	か "	# オ	レ	# は	# マ	タ "	# ま	け	ん	そ "	!	!	#	| Original Japanese Text
+	$12A7E
+        3F	AF	| Memory Address
+
+	QUEEN1:
+	ホーッホホホ!
+	Ho ho ho!
+	$12F69	(Line 1)
+	23CE	B0	AF	CE	CE	CE	3A	25	| Original Japanese Hex
+	# ホ	ー	ッ	ホ	ホ	ホ	!	NL	| Original Japanese Text
+	さあ、いまのうちにあやまりなさい!
+	Come now, please apologize!
+	$12F72	(Line 2)
+	24BB	B1	A4	B2	CF	C9	B3	C1	C6	B1	D4	CF	D8	C5	BB	B2	3A	25	| Original Japanese Hex
+	# さ	あ	、	い	ま	の	う	ち	に	あ	や	ま	り	な	さ	い	!	NL	| Original Japanese Text
+	そうすればゆるしてあげるわよ!
+	Then I will forgive you!
+	$12F85	(Line 3)
+	BF	B3	BD	DA	CADE	D5	D9	BC	C3	B1	B9DE	D9	DC	D6	3A	FF	| Original Japanese Hex
+	そ	う	す	れ	は "	ゆ	る	し	て	あ	け "	る	わ	よ	!	#	| Original Japanese Text
+	$12A80
+        69	AF	| Memory Address
+
+	QUEEN2:
+	ホーッホホホ!
+	Ho ho ho!
+	$12F97	(Line 1)
+	23CE	B0	AF	CE	CE	CE	3A	25	| Original Japanese Hex
+	# ホ	ー	ッ	ホ	ホ	ホ	!	NL	| Original Japanese Text
+	なかなかやるわね!
+	It's quite easy!
+	$12FA0	(Line 2)
+	24C5	B6	C5	B6	D4	D9	DC	C8	3A	25	| Original Japanese Hex
+	# な	か	な	か	や	る	わ	ね	!	NL	| Original Japanese Text
+	でもわたくしはまだホンキを
+	But I am still not
+	$12FAB	(Line 3)
+	C3DE	D3	DC	C0	B8	BC	CA	CF	C0DE	23CE	DD	B7	24A6	25	| Original Japanese Hex
+	て "	も	わ	た	く	し	は	ま	た "	# ホ	ン	キ	# を	NL	| Original Japanese Text
+	だしてなくてよ!
+	trying hard!
+	$12FBD	(Line 4)
+	C0DE	BC	C3	C5	B8	C3	D6	3A	FF	| Original Japanese Hex
+	た "	し	て	な	く	て	よ	!	#	| Original Japanese Text
+	$12A82
+        97	AF	| Memory Address
+
+	QUEEN3:
+	ホーッホホホ!
+	Ho ho ho!
+	$12FC7	(Line 1)
+	23CE	B0	AF	CE	CE	CE	3A	25	| Original Japanese Hex
+	# ホ	ー	ッ	ホ	ホ	ホ	!	NL	| Original Japanese Text
+	わたくしをホンキにさせてくれたわね!
+	You made me angry!
+	$12FD0	(Line 2)
+	24DC	C0	B8	BC	A6	23CE	DD	B7	24C6	BB	BE	C3	B8	DA	C0	DC	C8	3A	| Original Japanese Hex
+	# わ	た	く	し	を	# ホ	ン	キ	# に	さ	せ	て	く	れ	た	わ	ね	!	| Original Japanese Text
+	さあ!わたしのまえにひざまづくのよ!
+	Come on! Kneel down before me!
+	$12FE5	(Line 3)
+	BB	B1	3A	DC	C0	BC	C9	CF	B4	C6	CB	BBDE	CF	C2DE	B8	C9	D6	3A	FF	| Original Japanese Hex
+	さ	あ	!	わ	た	し	の	ま	え	に	ひ	さ "	ま	つ "	く	の	よ	!	#	| Original Japanese Text

@@ -156,53 +156,177 @@ QUEENPauseName:
 
 TextMapPause() // Map Pause Font
 
-// PAUSE SCREEN COM INFO
-origin $12AB0
-HALLOWEENPauseCOMInfo:
-  db "HA-HA-HA!\n"
-  db "LET'S HAVE FUN.\n"
-  db "COME ON!", $FF
+// PAUSE SCREEN COMPUTER
+origin $12A4A
+  PC2LoROM(dw, HALLOWEENPauseCOM1)
+  PC2LoROM(dw, HALLOWEENPauseCOM2)
+  PC2LoROM(dw, HALLOWEENPauseCOM3)
+  PC2LoROM(dw, MIRURUNPauseCOM1)
+  PC2LoROM(dw, MIRURUNPauseCOM2)
+  PC2LoROM(dw, MIRURUNPauseCOM3)
+  PC2LoROM(dw, SHAMANPauseCOM1)
+  PC2LoROM(dw, SHAMANPauseCOM2)
+  PC2LoROM(dw, SHAMANPauseCOM3)
+  PC2LoROM(dw, ALADDINPauseCOM1)
+  PC2LoROM(dw, ALADDINPauseCOM2)
+  PC2LoROM(dw, ALADDINPauseCOM3)
+  PC2LoROM(dw, PRINCESSPauseCOM1)
+  PC2LoROM(dw, PRINCESSPauseCOM2)
+  PC2LoROM(dw, PRINCESSPauseCOM3)
+  PC2LoROM(dw, BITPauseCOM1)
+  PC2LoROM(dw, BITPauseCOM2)
+  PC2LoROM(dw, BITPauseCOM3)
+  PC2LoROM(dw, NINJAPauseCOM1)
+  PC2LoROM(dw, NINJAPauseCOM2)
+  PC2LoROM(dw, NINJAPauseCOM3)
+  PC2LoROM(dw, WOLFMANPauseCOM1)
+  PC2LoROM(dw, WOLFMANPauseCOM2)
+  PC2LoROM(dw, WOLFMANPauseCOM3)
+  PC2LoROM(dw, DRAGONPauseCOM1)
+  PC2LoROM(dw, DRAGONPauseCOM2)
+  PC2LoROM(dw, DRAGONPauseCOM3)
+  PC2LoROM(dw, QUEENPauseCOM1)
+  PC2LoROM(dw, QUEENPauseCOM2)
+  PC2LoROM(dw, QUEENPauseCOM3)
 
-origin $12B37
-MIRURUNPauseCOMInfo:
+origin $12AB0
+HALLOWEENPauseCOM1:
+  db "M-WAH-HA!\n"
+  db "WE WILL HAVE FUN.\n"
+  db "COME ON!", $FF
+HALLOWEENPauseCOM2:
+  db "M-WAH-HA!\n"
+  db "KEEP TRYING!\n"
+  db "I WILL DEFEAT YOU\n"
+  db "SOON!", $FF
+HALLOWEENPauseCOM3:
+  db "SO MANY BLOCKS\n"
+  db "I MUST NOT PANIC!\n"
+  db "I WILL USE THEM!", $FF
+
+MIRURUNPauseCOM1:
   db "HI!\n"
   db "I WILL DO MY BEST!", $FF
+MIRURUNPauseCOM2:
+  db "NOT TOO BAD!\n"
+  db "I CAN NOT LOSE!", $FF
+MIRURUNPauseCOM3:
+  db "VERY BAD!\n"
+  db "I WILL DO MY BEST!"
+  db "BUT I TRIED THAT!!", $FF
 
-origin $12BAB
-SHAMANPauseCOMInfo:
+SHAMANPauseCOM1:
   db "I PRAY TO THE GOD\n"
   db "OF TETRIS FOR MY\n"
   db "STRENGTH.", $FF
+SHAMANPauseCOM2:
+  db "I AM OBSESSED WITH"
+  db "TETRIS.\n"
+  db "I WILL NOT LOSE.", $FF
+SHAMANPauseCOM3:
+  db "MAYBE THIS IS A\n"
+  db "SIGN.\n"
+  db "I MUST WIN!", $FF
 
-origin $12C5A
-ALADDINPauseCOMInfo:
-  db "HA-HA-HA!\n"
+ALADDINPauseCOM1:
+  db "HA-HA!\n"
   db "A VICTORY WILL\n"
   db "SURELY BE MINE.", $FF
+ALADDINPauseCOM2:
+  db "HA-HA!\n"
+  db "A LITTLE TROUBLE.\n"
+  db "I WILL STILL WIN!", $FF
+ALADDINPauseCOM3:
+  db "I CAN NOT LOSE.\n"
+  db "I WILL TRY TO\n"
+  db "RECOVER QUICKLY!", $FF
 
-origin $12CD5
-PRINCESSPauseCOMInfo:
-  db "I'LL DO MY BEST!\n"
-  db "BE GENTLE TO ME!", $FF
+PRINCESSPauseCOM1:
+  db "I WILL DO MY BEST!"
+  db "BE GENTLE!", $FF
+PRINCESSPauseCOM2:
+  db "A LITTLE DANGER.\n"
+  db "I WILL TRY HARDER!", $FF
+PRINCESSPauseCOM3:
+  db "AH!\n"
+  db "I WILL LOSE IF I\n"
+  db "PLAY LIKE THIS!\n"
+  db "I MUST DO BETTER!", $FF
 
-origin $12D46
-BITPauseCOMInfo:
+BITPauseCOM1:
   db "HOORAY!\n"
   db "THERE IS NO BLOCKS"
   db "WOW, YO!", $FF
+BITPauseCOM2:
+  db "HOORAY!\n"
+  db "SOME MORE BLOCKS\n"
+  db "HOORAY!", $FF
+BITPauseCOM3:
+  db "WAH! WAH!\n"
+  db "BLOCKS TO THE TOP\n"
+  db "WAH! WAH!", $FF
 
-origin $12DB0
-NINJAPauseCOMInfo:
-  db "I HAVE THIS.\n"
+NINJAPauseCOM1:
+  db "I HAVE GOT THIS.\n"
   db "I WILL WIN WITH MY"
-  db "NINJUTSU\n"
-  db "I WILL DO IT!", $FF
+  db "NINJUTSU, I CAN DO"
+  db "IT!", $FF
+NINJAPauseCOM2:
+  db "DO NOT DO IT!\n"
+  db "IT IS NOT POSSIBLE"
+  db "TO BREAK NINJUTSU\n"
+  db "TO THIS DEGREE!", $FF
+NINJAPauseCOM3:
+  db "GROWTH!\n"
+  db "I MUST REVERSE IT!"
+  db "PLEASE WAIT!", $FF
 
-origin $12E41
-WOLFMANPauseCOMInfo:
+WOLFMANPauseCOM1:
   db "SEE MY TRUE\n"
   db "STRENGTH\n"
   db "I WILL BEAT YOU.", $FF
+WOLFMANPauseCOM2:
+  db "SADLY THIS ROUND\n"
+  db "IS AWKWARD FOR ME."
+  db "IT IS A PLEASURE\n"
+  db "TO FIGHT YOU.", $FF
+WOLFMANPauseCOM3:
+  db "I MUST NOT THROW\n"
+  db "THIS AWAY!\n"
+  db "I CAN FEEL MY\n"
+  db "POWER RETURNING!", $FF
+
+DRAGONPauseCOM1:
+  db "HUFF-PUFF\n"
+  db "THINK YOU CAN WIN?"
+  db "GIVE UP NOW, RUN\n"
+  db "AWAY!", $FF
+DRAGONPauseCOM2:
+  db "IF YOU THINK YOU\n"
+  db "CAN WIN, YOU ARE\n"
+  db "WRONG!\n"
+  db "I WILL BEAT YOU!", $FF
+DRAGONPauseCOM3:
+  db "YOU!\n"
+  db "HMM WHAT TO DO!\n"
+  db "BUT I STILL WILL\n"
+  db "NOT LOSE!!", $FF
+
+QUEENPauseCOM1:
+  db "HO-HO!\n"
+  db "PLEASE APPOLOGIZE!"
+  db "THEN I WILL\n"
+  db "FORGIVE YOU!", $FF
+QUEENPauseCOM2:
+  db "HO-HO!\n"
+  db "IT IS QUITE EASY!\n"
+  db "BUT I AM STILL NOT"
+  db "TRYING HARD!", $FF
+QUEENPauseCOM3:
+  db "HO-HO!\n"
+  db "YOU MADE ME ANGRY!"
+  db "COME ON! KNEEL\n"
+  db "DOWN BEFORE ME!", $FF
 
 TextMapASCII() // Map ASCII Font
 
