@@ -99,6 +99,201 @@
 	$117EE
         36	98	| Memory Address
 
+PAUSE SCREEN PLAYER:
+	ALL:
+	「ワザのつかいかた」
+	"How to use the service"
+	$12A9B	(Line 1)
+	A2	23DC	BBDE	24C9	C2	B6	B2	B6	C0	A3	20	20	20	20	20	20	20	FF	| Original Japanese Hex
+	「	# ワ	サ "	# の	つ	か	い	か	た	」	 	 	 	 	 	 	 	#	| Original Japanese Text
+	-	H O	W 	T O	 	U	S	E	-	 	 	 	 	 	 	 	 	#	| New English Text
+	B0	484F	5720	544F	20	55	53	45	B0	20	20	20	20	20	20	20	20	FF	| New English Hex
+
+	HALLOWEEN:
+	クリスタルをけすとワザがつかえるのだ
+	You can use it if you hit a crystal/You need crystals to use magic
+	$1231D	(Line 1)
+	23B8	D8	BD	C0	D9	24A6	B9	BD	C4	23DC	BBDE	24B6DE	C2	B6	B4	D9	C9	C0DE	| Original Japanese Hex
+	# ク	リ	ス	タ	ル	# を	け	す	と	# ワ	サ "	# か "	つ	か	え	る	の	た "	| Original Japanese Text
+	ジュウジボタンのウエをおしてあいてを
+	Press UP on the D-Pad
+	$12336	(Line 2)
+	23BCDE	AD	B3	BCDE	CEDE	C0	DD	24C9	23B3	B4	24A6	B5	BC	C3	B1	B2	C3	A6	| Original Japanese Hex
+	# シ "	ュ	ウ	シ "	ホ "	タ	ン	# の	# ウ	エ	# を	お	し	て	あ	い	て	を	| Original Japanese Text
+	こまらせるんだな。
+	to use it.
+	$1234F	(Line 3)
+	BA	CF	D7	BE	D9	DD	C0DE	C5	A1	FF	| Original Japanese Hex
+	こ	ま	ら	せ	る	ん	た "	な	。	#	| Original Japanese Text
+	$11AED
+        1D	A3	| Memory Address
+
+	MIRURUN:
+	クリスタルをけすとワザがつかえるよ。
+	You can use a crystal when you hit a crystal.
+	$1235A	(Line 1)
+	23B8	D8	BD	C0	D9	24A6	B9	BD	C4	23DC	BBDE	24B6DE	C2	B6	B4	D9	D6	A1	| Original Japanese Hex
+	# ク	リ	ス	タ	ル	# を	け	す	と	# ワ	サ "	# か "	つ	か	え	る	よ	。	| Original Japanese Text
+	つかいかたはジュウジボタンのウエをお
+	Press UP on the D-Pad
+	$12372	(Line 2)
+	C2	B6	B2	B6	C0	CA	23BCDE	AD	B3	BCDE	CEDE	C0	DD	24C9	23B3	B4	24A6	B5	| Original Japanese Hex
+	つ	か	い	か	た	は	# シ "	ュ	ウ	シ "	ホ "	タ	ン	# の	# ウ	エ	# を	お	| Original Japanese Text
+	すんだ。
+	to use it.
+	$1238B	(Line 3)
+	BD	DD	C0DE	A1	FF	| Original Japanese Hex
+	す	ん	た "	。	#	| Original Japanese Text
+	$11AEF
+        5A	A3	| Memory Address
+
+	SHAMAN:
+	んんーばばばばばん!
+	Nn-babababan! / Good Morning!
+	$12391	(Line 1)
+	24DD	DD	B0	CADE	CADE	CADE	CADE	CADE	DD	3A	25	| Original Japanese Hex
+	# ん	ん	ー	は "	は "	は "	は "	は "	ん	!	NL	| Original Japanese Text
+	いみ、クリスタルをけすとワザがつかえ
+	I do not mind if I miss the crystal.
+	$123A2	(Line 2)
+	24B2	D0	A4	23B8	D8	BD	C0	D9	24A6	B9	BD	C4	23DC	BBDE	24B6DE	C2	B6	B4	| Original Japanese Hex
+	# い	み	、	# ク	リ	ス	タ	ル	# を	け	す	と	# ワ	サ "	# か "	つ	か	え	| Original Japanese Text
+	ます。ジュウジボタンのウエをおします
+	Press UP on the D-Pad to use it.
+	$123BB	(Line 3)
+	CF	BD	A1	23BCDE	AD	B3	BCDE	CEDE	C0	DD	24C9	23B3	B4	24A6	B5	BC	CF	BD	FF	| Original Japanese Hex
+	ま	す	。	# シ "	ュ	ウ	シ "	ホ "	タ	ン	# の	# ウ	エ	# を	お	し	ま	す	#	| Original Japanese Text
+	$11AF1
+        91	A3	| Memory Address
+
+	ALADDIN:
+	クリスタルをけすとボクのすばらしい
+	You can use my wonderful spells by turning off
+	$123D5	(Line 1)
+	23B8	D8	BD	C0	D9	24A6	B9	BD	C4	23CEDE	B8	24C9	BD	CADE	D7	BC	B2	25	| Original Japanese Hex
+	# ク	リ	ス	タ	ル	# を	け	す	と	# ホ "	ク	# の	す	は "	ら	し	い	NL	| Original Japanese Text
+	ジュモンがつかえるぞ。
+	the crystals.
+	$123ED	(Line 2)
+	23BCDE	AD	D3	DD	24B6DE	C2	B6	B4	D9	BFDE	A1	25	| Original Japanese Hex
+	# シ "	ュ	モ	ン	# か "	つ	か	え	る	そ "	。	NL	| Original Japanese Text
+	つかいかたはジュウジボタンのウエだぞ
+	Press UP on the D-Pad to use it.
+	$123FE	(Line 3)
+	C2	B6	B2	B6	C0	CA	23BCDE	AD	B3	BCDE	CEDE	C0	DD	24C9	23B3	B4	24C0DE	BFDE	FF	| Original Japanese Hex
+	つ	か	い	か	た	は	# シ "	ュ	ウ	シ "	ホ "	タ	ン	# の	# ウ	エ	# た "	そ "	#	| Original Japanese Text
+	$11AF3
+        D5	A3	| Memory Address
+
+	PRINCESS:
+	クリスタルをけすとマホウがつかえるの
+	I can use a magic with crushing a crystal.
+	$1241A	(Line 1)
+	23B8	D8	BD	C0	D9	24A6	B9	BD	C4	23CF	CE	B3	24B6DE	C2	B6	B4	D9	C9	| Original Japanese Hex
+	# ク	リ	ス	タ	ル	# を	け	す	と	# マ	ホ	ウ	# か "	つ	か	え	る	の	| Original Japanese Text
+	マホウはジュウジボタンのウエよ。
+	Press UP on the D-Pad to use it.
+	$12431	(Line 2)
+	23CF	CE	B3	24CA	23BCDE	AD	B3	BCDE	CEDE	C0	DD	24C9	23B3	B4	24D6	A1	FF	| Original Japanese Hex
+	# マ	ホ	ウ	# は	# シ "	ュ	ウ	シ "	ホ "	タ	ン	# の	# ウ	エ	# よ	。	#	| Original Japanese Text
+	$11AF5
+        1A	A4	| Memory Address
+
+	BIT:
+	クリスタルをけすとたのしいことがおこ
+	If you break the crystal, something fun
+	$1244B	(Line 1)
+	23B8	D8	BD	C0	D9	24A6	B9	BD	C4	C0	C9	BC	B2	BA	C4	B6DE	B5	BA	| Original Japanese Hex
+	# ク	リ	ス	タ	ル	# を	け	す	と	た	の	し	い	こ	と	か "	お	こ	| Original Japanese Text
+	るんだよ!
+	will happen!
+	$12460	(Line 2)
+	D9	DD	C0DE	D6	3A	25	| Original Japanese Hex
+	る	ん	た "	よ	!	NL	| Original Japanese Text
+	ジュウジボタンのウエをおすんだー!
+	We are waiting for the D-Pad Up button!
+	$12467	(Line 3)
+	23BCDE	AD	B3	BCDE	CEDE	C0	DD	24C9	23B3	B4	24A6	B5	BD	DD	C0DE	B0	3A	FF	| Original Japanese Hex
+	# シ "	ュ	ウ	シ "	ホ "	タ	ン	# の	# ウ	エ	# を	お	す	ん	た "	ー	!	#	| Original Japanese Text
+	$11AF7
+        4B	A4	| Memory Address
+
+	NINJA:
+	クリスタルをけしてニンポウをつかえ!
+	Please remove the crystal and use Ninjutsu power!
+	$12481	(Line 1)
+	23B8	D8	BD	C0	D9	24A6	B9	BC	C3	23C6	DD	CEDF	B3	24A6	C2	B6	B4	3A	| Original Japanese Hex
+	# ク	リ	ス	タ	ル	# を	け	し	て	# ニ	ン	ホ o	ウ	# を	つ	か	え	!	| Original Japanese Text
+	ジュウジボタンのウエでオレのニンポウ
+	Press UP on the D-Pad
+	$12498	(Line 2)
+	23BCDE	AD	B3	BCDE	CEDE	C0	DD	24C9	23B3	B4	24C3DE	23B5	DA	24C9	23C6	DD	CEDF	B3	| Original Japanese Hex
+	# シ "	ュ	ウ	シ "	ホ "	タ	ン	# の	# ウ	エ	# て "	# オ	レ	# の	# ニ	ン	ホ o	ウ	| Original Japanese Text
+	がサクレツするぜ!
+	to use it!
+	$124B6	(Line 3)
+	24B6DE	23BB	B8	DA	C2	24BD	D9	BEDE	3A	FF	| Original Japanese Hex
+	# か "	# サ	ク	レ	ツ	# す	る	せ "	!	#	| Original Japanese Text
+	$11AF9
+        81	A4	| Memory Address
+
+	WOLFMAN:
+	くりすたるをけしてキアイをためよ!
+	Stop crushing and give up Kia!
+	$124C5	(Line 1)
+	24B8	D8	BD	C0	D9	A6	B9	BC	C3	23B7	B1	B2	24A6	C0	D2	D6	3A	25	| Original Japanese Hex
+	# く	り	す	た	る	を	け	し	て	# キ	ア	イ	# を	た	め	よ	!	NL	| Original Japanese Text
+	ジュウジボタンのうえでせっしゃのケン
+	Push the UP button
+	$124DA	(Line 2)
+	23BCDE	AD	B3	BCDE	CEDE	C0	DD	24C9	B3	B4	C3DE	BE	AF	BC	AC	C9	23B9	DD	| Original Japanese Hex
+	# シ "	ュ	ウ	シ "	ホ "	タ	ン	# の	う	え	て "	せ	っ	し	ゃ	の	# ケ	ン	| Original Japanese Text
+	がうなるでござる!
+	to use it!
+	$124F3	(Line 3)
+	24B6DE	B3	C5	D9	C3DE	BADE	BBDE	D9	3A	FF	| Original Japanese Hex
+	# か "	う	な	る	て "	こ "	さ "	る	!	#	| Original Japanese Text
+	$11AFB
+        C5	A4	| Memory Address
+
+	DRAGON:
+	クリスタルをけしてパワーをためるのだ
+	Get crystals and save them for power
+	$12502	(Line 1)
+	23B8	D8	BD	C0	D9	24A6	B9	BC	C3	23CADF	DC	B0	24A6	C0	D2	D9	C9	C0DE	| Original Japanese Hex
+	# ク	リ	ス	タ	ル	# を	け	し	て	# ハ o	ワ	ー	# を	た	め	る	の	た "	| Original Japanese Text
+	ジュウジボタンのウエでオレのマリョク
+	Press UP on the D-Pad
+	$1251A	(Line 2)
+	23BCDE	AD	B3	BCDE	CEDE	C0	DD	24C9	23B3	B4	24C3DE	23B5	DA	24C9	23CF	D8	AE	B8	| Original Japanese Hex
+	# シ "	ュ	ウ	シ "	ホ "	タ	ン	# の	# ウ	エ	# て "	# オ	レ	# の	# マ	リ	ョ	ク	| Original Japanese Text
+	がサクレツだゼ!
+	to use it!
+	$12537	(Line 3)
+	24B6DE	23BB	B8	DA	C2	24C0DE	23BEDE	3A	FF	| Original Japanese Hex
+	# か "	# サ	ク	レ	ツ	# た "	# セ "	!	#	| Original Japanese Text
+	$11AFD
+        02	A5	| Memory Address
+
+	QUEEN:
+	クリスタルをけすのはキホンよ!
+	It is basic knowledge to use crystals!
+	$12547	(Line 1)
+	23B8	D8	BD	C0	D9	24A6	B9	BD	C9	CA	23B7	CE	DD	24D6	3A	25	| Original Japanese Hex
+	# ク	リ	ス	タ	ル	# を	け	す	の	は	# キ	ホ	ン	# よ	!	NL	| Original Japanese Text
+	ジュウジボタンのウエでわたくしのかれ
+	Use UP on D-Pad for my
+	$1255B	(Line 2)
+	23BCDE	AD	B3	BCDE	CEDE	C0	DD	24C9	23B3	B4	24C3DE	DC	C0	B8	BC	C9	B6	DA	| Original Japanese Hex
+	# シ "	ュ	ウ	シ "	ホ "	タ	ン	# の	# ウ	エ	# て "	わ	た	く	し	の	か	れ	| Original Japanese Text
+	いなワザがおがめましてよ!
+	beautiful magic!
+	$12575	(Line 3)
+	B2	C5	23DC	BBDE	24B6DE	B5	B6DE	D2	CF	BC	C3	D6	3A	FF	| Original Japanese Hex
+	い	な	# ワ	サ "	# か "	お	か "	め	ま	し	て	よ	!	#	| Original Japanese Text
+	$11AFF
+        47	A5	| Memory Address
+
 PAUSE SCREEN COMPUTER:
 	HALLOWEEN1:
 	キャハハハ!

@@ -121,6 +121,8 @@ STEREOSetting:
 MONOSetting:
   db "MONO  ", $FF
 
+TextMapPause() // Map Pause Font
+
 // PAUSE SCREEN
 origin $117DC
   PC2LoROM(dw, HALLOWEENPauseName)
@@ -154,175 +156,232 @@ DRAGONPauseName:
 QUEENPauseName:
   db " QUEEN", $FF
 
-TextMapPause() // Map Pause Font
+// PAUSE SCREEN PLAYER
+origin $12A9B
+ALLPausePlayer:
+  db "-HOW TO USE MAGIC-  ", $FF
+
+origin $11AED
+  PC2LoROM(dw, HALLOWEENPausePlayer)
+  PC2LoROM(dw, MIRURUNPausePlayer)
+  PC2LoROM(dw, SHAMANPausePlayer)
+  PC2LoROM(dw, ALADDINPausePlayer)
+  PC2LoROM(dw, PRINCESSPausePlayer)
+  PC2LoROM(dw, BITPausePlayer)
+  PC2LoROM(dw, NINJAPausePlayer)
+  PC2LoROM(dw, WOLFMANPausePlayer)
+  PC2LoROM(dw, DRAGONPausePlayer)
+  PC2LoROM(dw, QUEENPausePlayer)
+
+origin $1231D
+HALLOWEENPausePlayer:
+  db "GET SOME CRYSTALS\n"
+  db "TO USE MY SPELLS!\n"
+  db "PRESS UP ON D-PAD.", $FF
+MIRURUNPausePlayer:
+  db "HI! GET CRYSTALS\n"
+  db "TO CAST MY MAGIC!\n"
+  db "PRESS UP ON D-PAD.", $FF
+SHAMANPausePlayer:
+  db "GET CRYSTALS FOR\n"
+  db "MY SHAMAN MAGIC.\n"
+  db "D-PAD UP TO CAST.", $FF
+ALADDINPausePlayer:
+  db "GATHER CRYSTALS TO"
+  db "USE MY GREAT MAGIC"
+  db "D-PAD UP TO CAST!", $FF
+PRINCESSPausePlayer:
+  db "GATHER CRYSTALS TO"
+  db "USE MY SPELLS. UP\n"
+  db "ON D-PAD TO CAST!", $FF
+BITPausePlayer:
+  db "WE NEED CRYSTALS\n"
+  db "FOR OUR FUN MAGIC!"
+  db "D-PAD UP TO CAST!", $FF
+NINJAPausePlayer:
+  db "MY NINJUTSU NEEDS\n"
+  db "CRYSTALS FOR POWER"
+  db "D-PAD UP TO USE IT", $FF
+WOLFMANPausePlayer:
+  db "MY TRUE STRENGTH\n"
+  db "REQUIRES CRYSTALS."
+  db "PRESS UP ON D-PAD.", $FF
+DRAGONPausePlayer:
+  db "HUFF-PUFF! BRING\n"
+  db "ME CRYSTALS. PRESS"
+  db "UP ON THE D-PAD!", $FF
+QUEENPausePlayer:
+  db "GIVE ME CRYSTALS\n"
+  db "NOW FOR MY SPELLS!"
+  db "THEN USE D-PAD UP!", $FF
 
 // PAUSE SCREEN COMPUTER
 origin $12A4A
-  PC2LoROM(dw, HALLOWEENPauseCOM1)
-  PC2LoROM(dw, HALLOWEENPauseCOM2)
-  PC2LoROM(dw, HALLOWEENPauseCOM3)
-  PC2LoROM(dw, MIRURUNPauseCOM1)
-  PC2LoROM(dw, MIRURUNPauseCOM2)
-  PC2LoROM(dw, MIRURUNPauseCOM3)
-  PC2LoROM(dw, SHAMANPauseCOM1)
-  PC2LoROM(dw, SHAMANPauseCOM2)
-  PC2LoROM(dw, SHAMANPauseCOM3)
-  PC2LoROM(dw, ALADDINPauseCOM1)
-  PC2LoROM(dw, ALADDINPauseCOM2)
-  PC2LoROM(dw, ALADDINPauseCOM3)
-  PC2LoROM(dw, PRINCESSPauseCOM1)
-  PC2LoROM(dw, PRINCESSPauseCOM2)
-  PC2LoROM(dw, PRINCESSPauseCOM3)
-  PC2LoROM(dw, BITPauseCOM1)
-  PC2LoROM(dw, BITPauseCOM2)
-  PC2LoROM(dw, BITPauseCOM3)
-  PC2LoROM(dw, NINJAPauseCOM1)
-  PC2LoROM(dw, NINJAPauseCOM2)
-  PC2LoROM(dw, NINJAPauseCOM3)
-  PC2LoROM(dw, WOLFMANPauseCOM1)
-  PC2LoROM(dw, WOLFMANPauseCOM2)
-  PC2LoROM(dw, WOLFMANPauseCOM3)
-  PC2LoROM(dw, DRAGONPauseCOM1)
-  PC2LoROM(dw, DRAGONPauseCOM2)
-  PC2LoROM(dw, DRAGONPauseCOM3)
-  PC2LoROM(dw, QUEENPauseCOM1)
-  PC2LoROM(dw, QUEENPauseCOM2)
-  PC2LoROM(dw, QUEENPauseCOM3)
+  PC2LoROM(dw, HALLOWEENPauseComputer1)
+  PC2LoROM(dw, HALLOWEENPauseComputer2)
+  PC2LoROM(dw, HALLOWEENPauseComputer3)
+  PC2LoROM(dw, MIRURUNPauseComputer1)
+  PC2LoROM(dw, MIRURUNPauseComputer2)
+  PC2LoROM(dw, MIRURUNPauseComputer3)
+  PC2LoROM(dw, SHAMANPauseComputer1)
+  PC2LoROM(dw, SHAMANPauseComputer2)
+  PC2LoROM(dw, SHAMANPauseComputer3)
+  PC2LoROM(dw, ALADDINPauseComputer1)
+  PC2LoROM(dw, ALADDINPauseComputer2)
+  PC2LoROM(dw, ALADDINPauseComputer3)
+  PC2LoROM(dw, PRINCESSPauseComputer1)
+  PC2LoROM(dw, PRINCESSPauseComputer2)
+  PC2LoROM(dw, PRINCESSPauseComputer3)
+  PC2LoROM(dw, BITPauseComputer1)
+  PC2LoROM(dw, BITPauseComputer2)
+  PC2LoROM(dw, BITPauseComputer3)
+  PC2LoROM(dw, NINJAPauseComputer1)
+  PC2LoROM(dw, NINJAPauseComputer2)
+  PC2LoROM(dw, NINJAPauseComputer3)
+  PC2LoROM(dw, WOLFMANPauseComputer1)
+  PC2LoROM(dw, WOLFMANPauseComputer2)
+  PC2LoROM(dw, WOLFMANPauseComputer3)
+  PC2LoROM(dw, DRAGONPauseComputer1)
+  PC2LoROM(dw, DRAGONPauseComputer2)
+  PC2LoROM(dw, DRAGONPauseComputer3)
+  PC2LoROM(dw, QUEENPauseComputer1)
+  PC2LoROM(dw, QUEENPauseComputer2)
+  PC2LoROM(dw, QUEENPauseComputer3)
 
 origin $12AB0
-HALLOWEENPauseCOM1:
+HALLOWEENPauseComputer1:
   db "M-WAH-HA!\n"
   db "WE WILL HAVE FUN.\n"
   db "COME ON!", $FF
-HALLOWEENPauseCOM2:
+HALLOWEENPauseComputer2:
   db "M-WAH-HA!\n"
   db "KEEP TRYING!\n"
   db "I WILL DEFEAT YOU\n"
   db "SOON!", $FF
-HALLOWEENPauseCOM3:
+HALLOWEENPauseComputer3:
   db "SO MANY BLOCKS\n"
   db "I MUST NOT PANIC!\n"
   db "I WILL USE THEM!", $FF
 
-MIRURUNPauseCOM1:
+MIRURUNPauseComputer1:
   db "HI!\n"
   db "I WILL DO MY BEST!", $FF
-MIRURUNPauseCOM2:
+MIRURUNPauseComputer2:
   db "NOT TOO BAD!\n"
   db "I CAN NOT LOSE!", $FF
-MIRURUNPauseCOM3:
+MIRURUNPauseComputer3:
   db "VERY BAD!\n"
   db "I WILL DO MY BEST!"
   db "BUT I TRIED THAT!!", $FF
 
-SHAMANPauseCOM1:
+SHAMANPauseComputer1:
   db "I PRAY TO THE GOD\n"
   db "OF TETRIS FOR MY\n"
   db "STRENGTH.", $FF
-SHAMANPauseCOM2:
+SHAMANPauseComputer2:
   db "I AM OBSESSED WITH"
   db "TETRIS.\n"
   db "I WILL NOT LOSE.", $FF
-SHAMANPauseCOM3:
+SHAMANPauseComputer3:
   db "MAYBE THIS IS A\n"
   db "SIGN.\n"
   db "I MUST WIN!", $FF
 
-ALADDINPauseCOM1:
+ALADDINPauseComputer1:
   db "HA-HA!\n"
   db "A VICTORY WILL\n"
   db "SURELY BE MINE.", $FF
-ALADDINPauseCOM2:
+ALADDINPauseComputer2:
   db "HA-HA!\n"
   db "A LITTLE TROUBLE.\n"
   db "I WILL STILL WIN!", $FF
-ALADDINPauseCOM3:
+ALADDINPauseComputer3:
   db "I CAN NOT LOSE.\n"
   db "I WILL TRY TO\n"
   db "RECOVER QUICKLY!", $FF
 
-PRINCESSPauseCOM1:
+PRINCESSPauseComputer1:
   db "I WILL DO MY BEST!"
   db "BE GENTLE!", $FF
-PRINCESSPauseCOM2:
+PRINCESSPauseComputer2:
   db "A LITTLE DANGER.\n"
   db "I WILL TRY HARDER!", $FF
-PRINCESSPauseCOM3:
+PRINCESSPauseComputer3:
   db "AH!\n"
   db "I WILL LOSE IF I\n"
   db "PLAY LIKE THIS!\n"
   db "I MUST DO BETTER!", $FF
 
-BITPauseCOM1:
+BITPauseComputer1:
   db "HOORAY!\n"
   db "THERE IS NO BLOCKS"
   db "WOW, YO!", $FF
-BITPauseCOM2:
+BITPauseComputer2:
   db "HOORAY!\n"
   db "SOME MORE BLOCKS\n"
   db "HOORAY!", $FF
-BITPauseCOM3:
+BITPauseComputer3:
   db "WAH! WAH!\n"
   db "BLOCKS TO THE TOP\n"
   db "WAH! WAH!", $FF
 
-NINJAPauseCOM1:
+NINJAPauseComputer1:
   db "I HAVE GOT THIS.\n"
   db "I WILL WIN WITH MY"
   db "NINJUTSU, I CAN DO"
   db "IT!", $FF
-NINJAPauseCOM2:
+NINJAPauseComputer2:
   db "DO NOT DO IT!\n"
   db "IT IS NOT POSSIBLE"
   db "TO BREAK NINJUTSU\n"
   db "TO THIS DEGREE!", $FF
-NINJAPauseCOM3:
+NINJAPauseComputer3:
   db "GROWTH!\n"
   db "I MUST REVERSE IT!"
   db "PLEASE WAIT!", $FF
 
-WOLFMANPauseCOM1:
+WOLFMANPauseComputer1:
   db "SEE MY TRUE\n"
   db "STRENGTH\n"
   db "I WILL BEAT YOU.", $FF
-WOLFMANPauseCOM2:
+WOLFMANPauseComputer2:
   db "SADLY THIS ROUND\n"
   db "IS AWKWARD FOR ME."
   db "IT IS A PLEASURE\n"
   db "TO FIGHT YOU.", $FF
-WOLFMANPauseCOM3:
+WOLFMANPauseComputer3:
   db "I MUST NOT THROW\n"
   db "THIS AWAY!\n"
   db "I CAN FEEL MY\n"
   db "POWER RETURNING!", $FF
 
-DRAGONPauseCOM1:
+DRAGONPauseComputer1:
   db "HUFF-PUFF\n"
   db "THINK YOU CAN WIN?"
   db "GIVE UP NOW, RUN\n"
   db "AWAY!", $FF
-DRAGONPauseCOM2:
+DRAGONPauseComputer2:
   db "IF YOU THINK YOU\n"
   db "CAN WIN, YOU ARE\n"
   db "WRONG!\n"
   db "I WILL BEAT YOU!", $FF
-DRAGONPauseCOM3:
+DRAGONPauseComputer3:
   db "YOU!\n"
   db "HMM WHAT TO DO!\n"
   db "BUT I STILL WILL\n"
   db "NOT LOSE!!", $FF
 
-QUEENPauseCOM1:
+QUEENPauseComputer1:
   db "HO-HO!\n"
   db "PLEASE APPOLOGIZE!"
   db "THEN I WILL\n"
   db "FORGIVE YOU!", $FF
-QUEENPauseCOM2:
+QUEENPauseComputer2:
   db "HO-HO!\n"
   db "IT IS QUITE EASY!\n"
   db "BUT I AM STILL NOT"
   db "TRYING HARD!", $FF
-QUEENPauseCOM3:
+QUEENPauseComputer3:
   db "HO-HO!\n"
   db "YOU MADE ME ANGRY!"
   db "COME ON! KNEEL\n"
