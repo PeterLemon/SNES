@@ -47,8 +47,8 @@ InputLoop:
   DrawBlack:
   // Load Black Background Palette Color
   stz.w REG_CGADD  // $2121: CGRAM Address
-  lda.b #%00000000 // Load White Colour Lo Byte
+  lda.b #%00000000 // Load Black Colour Lo Byte
   sta.w REG_CGDATA // $2122: CGRAM Data Write Lo Byte
-  lda.b #%00000000 // Load White Colour Hi Byte
+  lda.b #%00000000 // Load Black Colour Hi Byte
   sta.w REG_CGDATA // $2122: CGRAM Data Write Hi Byte
   bra InputLoop
