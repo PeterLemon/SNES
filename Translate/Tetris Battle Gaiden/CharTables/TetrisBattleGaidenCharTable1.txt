@@ -4,14 +4,14 @@
 1| 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
 2| 	!	"	#	$	%	&	'	(	)	*	+	,	-	.	/
 3|0	1	2	3	4	5	6	7	8	9	:	;	<	 	>	?
-4|©	A	B	C	D	E	F	G	H	I	J	K	L	M	N	O  
+4|©	A	B	C	D	E	F	G	H	I	J	K	L	M	N	O
 5|P	Q	R	S	T	U	V	W	X	Y	Z	[	 	]	v	_
 6|©	A	B	C	D	E	F	G	H	I	J	K	L	M	N	O
 7|P	Q	R	S	T	U	V	W	X	Y	Z	 	 	 	 	 
 8| 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	  
 9| 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 
-A| 	。	「	」	、	.	ヲ	ァ	ィ	ゥ	ェ	ォ	ャ	ュ	ョ	ッ	$23 (Index Pre-Byte)
-B|ー	ア	イ	ウ	エ	オ	カ	キ	ク	ケ	コ	サ	シ	ス	セ	?	$DE " (Post-Byte)
+A| 	。	「	」	、	・	ヲ	ァ	ィ	ゥ	ェ	ォ	ャ	ュ	ョ	ッ	$23 (Index Pre-Byte)
+B|ー	ア	イ	ウ	エ	オ	カ	キ	ク	ケ	コ	サ	シ	ス	セ	ソ	$DE " (Post-Byte)
 C|タ	チ	ツ	テ	ト	ナ	ニ	ヌ	ネ	ノ	ハ	ヒ	フ	ヘ	ホ	マ	$DF o (Post-Byte)
 D|ミ	ム	メ	モ	ヤ	ユ	ヨ	ラ	リ	ル	レ	ロ	ワ	ン	"	o
 A| 	。	「	」	、	.	を	ぁ	ぃ	ぅ	ぇ	ぉ	ゃ	ゅ	ょ	っ	$24 (Index Pre-Byte)

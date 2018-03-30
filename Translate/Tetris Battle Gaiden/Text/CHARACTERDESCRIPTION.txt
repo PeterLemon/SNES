@@ -1,0 +1,1072 @@
+﻿CHARACTER DESCRIPTION:
+	NINJA:
+	シュギョウちゅうのかれの
+	As he was
+	$2FA1B	(Line 1) (Top Half: MAP LO Bytes)
+	E3	00	0C	AC	8D	A7	8E	A3	41	0D	23	49	26	6A	49	| Original Japanese Hex
+	$2FA2A	(Line 1) (Bottom Half: MAP LO Bytes)
+	94	00	0C	BC	9D	B7	9E	B3	51	1D	33	59	36	7A	59	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	シ	ュ	ギ	ョ	ウ	ち	ゅ	う	の	か	れ	の	| Original Japanese Text
+	$2FB4B	(Line 1) (Top Half: MAP HI Bytes)
+	E3	00	82	24	..01	25 89	24	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$2FB53	(Line 1) (Bottom Half: MAP HI Bytes)
+	94	00	82	24	..01	25 89	24	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RAWLEN	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	もとに、いいなづけのキョ
+	training, word came
+	$2FA39	(Line 2) (Top Half: MAP LO Bytes)
+	94	00	0C	63	44	46	04	22	22	45	42	29	49	A7	8E	| Original Japanese Hex
+	$2FA48	(Line 2) (Bottom Half: MAP LO Bytes)
+	94	00	0C	73	54	56	14	32	32	55	52	39	59	B7	9E	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	も	と	に	、	い	い	な	づ	け	の	キ	ョ	| Original Japanese Text
+	$2FB5B	(Line 2) (Top Half: MAP HI Bytes)
+	94	00	87	24	..	..	..	..	..	..01	25 84	24	..	..	..	| Original Japanese Hex
+	$2FB63	(Line 2) (Bottom Half: MAP HI Bytes)
+	94	00	87	24	..	..	..	..	..	..01	25 84	24	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	RAWLEN	RLELEN	RLEBYTE	..	..	..	| Original Japanese Text
+
+	ウコさんが、ワルいまほう
+	to him, that his fiancee
+	$2FA57	(Line 3) (Top Half: MAP LO Bytes)
+	94	00	0C	A3	AA	2B	6D	26	04	EC	E9	22	4F	4E	23	| Original Japanese Hex
+	$2FA66	(Line 3) (Bottom Half: MAP LO Bytes)
+	94	00	0C	B3	BA	3B	7D	36	14	FC	F9	32	5F	5E	33	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ウ	コ	さ	ん	が	、	ワ	ル	い	ま	ほ	う	| Original Japanese Text
+	$2FB6B	(Line 3) (Top Half: MAP HI Bytes)
+	94	00	84	24	..	..	..01	25 87	24	..	..	..	..	..	..	| Original Japanese Hex
+	$2FB73	(Line 3) (Bottom Half: MAP HI Bytes)
+	94	00	84	24	..	..	..01	25 87	24	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	RAWLEN	RLELEN	RLEBYTE	..	..	..	..	..	..	| Original Japanese Text
+
+	つかいに、まほうでカエル
+	Kyouko, had been turned
+	$2FA75	(Line 4) (Top Half: MAP LO Bytes)
+	94	00	0C	42	26	22	46	04	4F	4E	23	43	A6	A4	E9	| Original Japanese Hex
+	$2FA84	(Line 4) (Bottom Half: MAP LO Bytes)
+	94	00	0C	52	36	32	56	14	5F	5E	33	53	B6	B4	F9	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	つ	か	い	に	、	ま	ほ	う	で	カ	エ	ル	| Original Japanese Text
+	$2FB7B	(Line 4) (Top Half: MAP HI Bytes)
+	94	00	88	24	..	..	..	..	..	..	..01	25 83	24	..	..	| Original Japanese Hex
+	$2FB83	(Line 4) (Bottom Half: MAP HI Bytes)
+	94	00	88	24	..	..	..	..	..	..	..01	25 83	24	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	RAWLEN	RLELEN	RLEBYTE	..	..	| Original Japanese Text
+
+	にされたとのしらせがとど
+	into a frog by an evil
+	$2FA93	(Line 5) (Top Half: MAP LO Bytes)
+	94	00	0C	46	2B	6A	40	44	49	2C	67	2E	26	44	44	| Original Japanese Hex
+	$2FAA2	(Line 5) (Bottom Half: MAP LO Bytes)
+	94	00	0C	56	3B	7A	50	54	59	3C	77	3E	36	54	54	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	に	さ	れ	た	と	の	し	ら	せ	が	と	ど	| Original Japanese Text
+	$2FB8B	(Line 5) (Top Half: MAP HI Bytes)
+	94	00	89	24	03	25	24	25	| Original Japanese Hex
+	$2FB93	(Line 5) (Bottom Half: MAP HI Bytes)
+	94	00	89	24	..	..	..	..	..	..	..	..03	25	24	25	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	RAWLEN	..	..	..	| Original Japanese Text
+
+	いた。もとにもどるには、
+	sorcerer. It seems a potion
+	$2FAB1	(Line 6) (Top Half: MAP LO Bytes)
+	94	00	0C	22	40	01	63	44	46	63	44	69	46	4A	04	| Original Japanese Hex
+	$2FAC0	(Line 6) (Bottom Half: MAP LO Bytes)
+	94	00	0C	32	50	11	73	54	56	73	54	79	56	5A	14	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	い	た	。	も	と	に	も	ど	る	に	は	、	| Original Japanese Text
+	$2FB9B	(Line 6) (Top Half: MAP HI Bytes)
+	94	00	87	24	..	..	..	..	..	..01	25 84	24	..	..	..	| Original Japanese Hex
+	$2FBA3	(Line 6) (Bottom Half: MAP HI Bytes)
+	94	00	87	24	..	..	..	..	..	..01	25 84	24	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	RAWLEN	RLELEN	RLEBYTE	..	..	..	| Original Japanese Text
+
+	ドラゴンのしっているクス
+	is needed to change her back to normal
+	$2FACF	(Line 7) (Top Half: MAP LO Bytes)
+	94	00	0C	C4	E7	AA	ED	49	2C	0F	43	22	69	A8	AD	| Original Japanese Hex
+	$2FADE	(Line 7) (Bottom Half: MAP LO Bytes)
+	94	00	0C	D4	F7	BA	FD	59	3C	1F	53	32	79	B8	BD	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ド	ラ	ゴ	ン	の	し	っ	て	い	る	ク	ス	| Original Japanese Text
+	$2FBAB	(Line 7) (Top Half: MAP HI Bytes)
+	94	00	03	25	24	25 89	24	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$2FBB3	(Line 7) (Bottom Half: MAP HI Bytes)
+	94	00	03	25	24	25 89	24	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	..	..	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	リがひつようらしい・・・
+	and the dragon knows of it...
+	$2FAED	(Line 8) (Top Half: MAP LO Bytes)
+	94	00	09	E8	26	4B	42	66	23	67	2C	22 83	05	..	..	| Original Japanese Hex
+	$2FAFB	(Line 8) (Bottom Half: MAP LO Bytes)
+	94	00	09	F8	36	5B	52	76	33	77	3C	32 83	15	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	リ	が	ひ	つ	よ	う	ら	し	い	・	・	・	| Original Japanese Text
+	$2FBBB	(Line 8) (Top Half: MAP HI Bytes)
+	94	00	02	24	25 8A	24	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$2FBC2	(Line 8) (Bottom Half: MAP HI Bytes)
+	94	00	02	24	25 8A	24	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	..	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	「かならずもとのすがたに
+	"I promise I'll change you
+	$2FB09	(Line 9) (Top Half: MAP LO Bytes)
+	94	00	0C	02	26	45	67	2D	63	44	49	2D	26	40	46	| Original Japanese Hex
+	$2FB18	(Line 9) (Bottom Half: MAP LO Bytes)
+	94	00	0C	12	36	55	77	3D	73	54	59	3D	36	50	56	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	「	か	な	ら	ず	も	と	の	す	が	た	に	| Original Japanese Text
+	$2FBC9	(Line 9) (Top Half: MAP HI Bytes)
+	94	00	84	24	..	..	..01	25 84	24	..	..	..03	25	24	24	| Original Japanese Hex
+	$2FBD5	(Line 9) (Bottom Half: MAP HI Bytes)
+	94	00	84	24	..	..	..01	25 84	24	..	..	..03	25	24	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	RAWLEN	RLELEN	RLEBYTE	..	..	RAWLEN	..	..	..	| Original Japanese Text
+
+	もどしてやるからな。」
+	back to normal."
+	$2FB27	(Line 10) (Top Half: MAP LO Bytes)
+	95	00	0B	63	44	2C	43	64	69	26	67	45	01	03	| Original Japanese Hex
+	$2FB35	(Line 10) (Bottom Half: MAP LO Bytes)
+	95	00	0B	73	54	3C	53	74	79	36	77	55	11	13	FF	00	FF	00	B3	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	も	ど	し	て	や	る	か	ら	な	。	」	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE RLEEND	#	| Original Japanese Text
+	$2FBE1	(Line 10) (Top Half: MAP HI Bytes)
+	95	00	02	24	25 89	24	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$2FBE8	(Line 10) (Bottom Half: MAP HI Bytes)
+	95	00	02	24	25 89	24	..	..	..	..	..	..	..	..	FF	00	FF	00	B3	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	..	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE RLEEND	#	| Original Japanese Text
+
+	$27234
+        1B	FA	85	| Memory Address
+
+	ALADDIN:
+	ぼうけんとユメは、ぼくの
+	Dreams and adventure
+	$3FB9C	(Line 1) (Top Half: MAP LO Bytes)
+	E3	00	0C	4E	23	29	6D	44	E5	E2	4A	04	4E	28	49	| Original Japanese Hex
+	$3FBAB	(Line 1) (Bottom Half: MAP LO Bytes)
+	94	00	0C	5E	33	39	7D	54	F5	F2	5A	14	5E	38	59	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ぼ	う	け	ん	と	ユ	メ	は	、	ぼ	く	の	| Original Japanese Text
+	$3FCBC	(Line 1) (Top Half: MAP HI Bytes)
+	E3	00	01	25 88	24	..	..	..	..	..	..	..03	25	24	24	| Original Japanese Hex
+	$3FCC6	(Line 1) (Bottom Half: MAP HI Bytes)
+	94	00	01	25 88	24	..	..	..	..	..	..	..03	25	24	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	RLELEN	RLEBYTE	..	..	..	..	..	..	RAWLEN	..	..	..	| Original Japanese Text
+
+	たからもの。きょうも、そ
+	are what I treasure!
+	$3FBBA	(Line 2) (Top Half: MAP LO Bytes)
+	94	00	0C	40	26	67	63	49	01	27	0E	23	63	04	2F	| Original Japanese Hex
+	$3FBC9	(Line 2) (Bottom Half: MAP LO Bytes)
+	94	00	0C	50	36	77	73	59	11	37	1E	33	73	14	3F	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	た	か	ら	も	の	。	き	ょ	う	も	、	そ	| Original Japanese Text
+	$3FCD0	(Line 2) (Top Half: MAP HI Bytes)
+	94	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$3FCD4	(Line 2) (Bottom Half: MAP HI Bytes)
+	94	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	らとぶジュウタンにのり、
+	Once again I will take to the skies
+	$3FBD8	(Line 3) (Top Half: MAP LO Bytes)
+	94	00	0C	67	44	4C	AC	8D	A3	C0	ED	46	49	68	04	| Original Japanese Hex
+	$3FBE7	(Line 3) (Bottom Half: MAP LO Bytes)
+	94	00	0C	77	54	5C	BC	9D	B3	D0	FD	56	59	78	14	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ら	と	ぶ	ジ	ュ	ウ	タ	ン	に	の	り	、	| Original Japanese Text
+	$3FCD8	(Line 3) (Top Half: MAP HI Bytes)
+	94	00	82	24	..82	25	..88	24	..	..	..	..	..	..	..	| Original Japanese Hex
+	$3FCE0	(Line 3) (Bottom Half: MAP HI Bytes)
+	94	00	82	24	..82	25	..88	24	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	| Original Japanese Text
+
+	おおぞらをゆく!
+	on my flying carpet!
+	$3FBF6	(Line 4) (Top Half: MAP LO Bytes)
+	94	00	82	25	06	2F	67	06	65	28	01	| Original Japanese Hex
+	$3FC01	(Line 4) (Bottom Half: MAP LO Bytes)
+	98	00	82	35	..06	3F	77	16	75	38	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	お	おRAWLEN	ぞ	ら	を	ゆ	く	!	| Original Japanese Text
+	$3FCE8	(Line 4) (Top Half: MAP HI Bytes)
+	94	00	82	24	..01	25 84	24	..	..	..01	27	| Original Japanese Hex
+	$3FCF2	(Line 4) (Bottom Half: MAP HI Bytes)
+	98	00	82	24	..01	25 84	24	..	..	..01	27	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RAWLEN	RLELEN	RLEBYTE	..	..	RAWLEN	..	| Original Japanese Text
+
+	「おや?たしかここは・・
+	"Huh? I'm sure this is...
+	$3FC0C	(Line 5) (Top Half: MAP LO Bytes)
+	98	00	0C	02	25	64	2F	40	2C	26	2A	2A	4A	05	05	| Original Japanese Hex
+	$3FC1B	(Line 5) (Bottom Half: MAP LO Bytes)
+	94	00	0C	12	35	74	3F	50	3C	36	3A	3A	5A	15	15	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	「	お	や	?	た	し	か	こ	こ	は	・	・	| Original Japanese Text
+	$3FCFC	(Line 5) (Top Half: MAP HI Bytes)
+	98	00	83	24	..	..01	27 88	24	..	..	..	..	..	..	..	| Original Japanese Hex
+	$3FD04	(Line 5) (Bottom Half: MAP HI Bytes)
+	94	00	83	24	..	..01	27 88	24	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	RAWLEN	RLELEN	RLEBYTE	..	..	..	..	..	..	..	| Original Japanese Text
+
+	そうだ!ドラゴンがいる
+	Yes! This is the
+	$3FC2A	(Line 6) (Top Half: MAP LO Bytes)
+	95	00	0B	2F	23	40	01	C4	E7	AA	ED	26	22	69	| Original Japanese Hex
+	$3F3C8	(Line 6) (Bottom Half: MAP LO Bytes)
+	95	00	0B	3F	33	50	11	D4	F7	BA	FD	36	32	79	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	そ	う	だ	!	ド	ラ	ゴ	ン	が	い	る	| Original Japanese Text
+	$3FD0C	(Line 6) (Top Half: MAP HI Bytes)
+	95	00	82	24	09	25	27	25	24	25	24	25	24	24	| Original Japanese Hex
+	$3FD1A	(Line 6) (Bottom Half: MAP HI Bytes)
+	95	00	82	24	..09	25	27	25	24	25	24	25	24	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RAWLEN	..	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	というシマだ!マホウの
+	island the dragon is on!
+	$3FC46	(Line 7) (Top Half: MAP LO Bytes)
+	95	00	0B	44	22	23	AC	CF	40	01	CF	CE	A3	49	| Original Japanese Hex
+	$3FC54	(Line 7) (Bottom Half: MAP LO Bytes)
+	95	00	0B	54	32	33	BC	DF	50	11	DF	DE	B3	59	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	と	い	う	シ	マ	だ	!	マ	ホ	ウ	の	| Original Japanese Text
+	$3FD28	(Line 7) (Top Half: MAP HI Bytes)
+	95	00	85	24	..	..	..	..02	25	27 84	24	..	..	..	| Original Japanese Hex
+	$3FD31	(Line 7) (Bottom Half: MAP HI Bytes)
+	95	00	85	24	..	..	..	..02	25	27 84	24	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	RAWLEN	..	RLELEN	RLEBYTE	..	..	..	| Original Japanese Text
+
+	ランプよ、きょうもちか
+	Magic lamp! Lend me your strength
+	$3FC62	(Line 8) (Top Half: MAP LO Bytes)
+	95	00	0B	E7	ED	CC	66	04	27	0E	23	63	41	26	| Original Japanese Hex
+	$3FC70	(Line 8) (Bottom Half: MAP LO Bytes)
+	95	00	0B	F7	FD	DC	76	14	37	1E	33	73	51	36	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ラ	ン	プ	よ	、	き	ょ	う	も	ち	か	| Original Japanese Text
+	$3FD3A	(Line 8) (Top Half: MAP HI Bytes)
+	95	00	82	24	..01	26 88	24	..	..	..	..	..	..	..	| Original Japanese Hex
+	$3FD42	(Line 8) (Bottom Half: MAP HI Bytes)
+	95	00	82	24	..01	26 88	24	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RAWLEN	RLELEN	RLEBYTE	..	..	..	..	..	..	..	| Original Japanese Text
+
+	らをかしてくれ!さあ!
+	as you have before!
+	$3FC7E	(Line 9) (Top Half: MAP LO Bytes)
+	95	00	0B	67	06	26	2C	43	28	6A	01	2B	21	01	| Original Japanese Hex
+	$3FC8C	(Line 9) (Bottom Half: MAP LO Bytes)
+	95	00	0B	77	16	36	3C	53	38	7A	11	3B	31	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ら	を	か	し	て	く	れ	!	さ	あ	!	| Original Japanese Text
+	$3FD4A	(Line 9) (Top Half: MAP HI Bytes)
+	95	00	87	24	..	..	..	..	..	..04	27	24	24	27	| Original Japanese Hex
+	$3FD53	(Line 9) (Bottom Half: MAP HI Bytes)
+	95	00	87	24	..	..	..	..	..	..04	27	24	24	27	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	RAWLEN	..	..	..	..	| Original Japanese Text
+
+	ぼうけんのせかいへ」
+	Let us journey into a world of adventure!"
+	$3FC9A	(Line 10) (Top Half: MAP LO Bytes)
+	95	00	0A	4E	23	29	6D	49	2E	26	22	4D	03	| Original Japanese Hex
+	$3FCA7	(Line 10) (Bottom Half: MAP LO Bytes)
+	96	00	0A	5E	33	39	7D	59	3E	36	32	5D	13	FF	00	FF	00	B4	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ぼ	う	け	ん	の	せ	か	い	へ	」	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLEEND	#	| Original Japanese Text
+	$3FD5C	(Line 10) (Top Half: MAP HI Bytes)
+	95	00	01	25 89	24	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$3FD62	(Line 10) (Bottom Half: MAP HI Bytes)
+	96	00	01	25 89	24	..	..	..	..	..	..	..	..	FF	00	FF	00	B4	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLEEND	#	| Original Japanese Text
+
+	$2722B
+        9C	FB	87	| Memory Address
+
+	BIT:
+	いつでも、どこにいても、
+	A group of five lads who are best of chums,
+	$84800	(Line 1) (Top Half: MAP LO Bytes)
+	E3	00	0C	22	42	43	63	04	44	2A	46	22	43	63	04	| Original Japanese Hex
+	$8480F	(Line 1) (Bottom Half: MAP LO Bytes)
+	94	00	0C	32	52	53	73	14	54	3A	56	32	53	73	14	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	い	つ	で	も	、	ど	こ	に	い	て	も	、	| Original Japanese Text
+	$84926	(Line 1) (Top Half: MAP HI Bytes)
+	E3	00	82	24	..04	25	24	24	25 86	24	..	..	..	..	..	| Original Japanese Hex
+	$84931	(Line 1) (Bottom Half: MAP HI Bytes)
+	94	00	82	24	..04	25	24	24	25 86	24	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RAWLEN	..	..	..	RLELEN	RLEBYTE	..	..	..	..	..	| Original Japanese Text
+
+	なかよしゴニングミ。
+	whenever and wherever.
+	$8481E	(Line 2) (Top Half: MAP LO Bytes)
+	94	00	0A	45	26	66	2C	AA	C6	ED	A8	E0	01	| Original Japanese Hex
+	$8482B	(Line 2) (Bottom Half: MAP LO Bytes)
+	96	00	0A	55	36	76	3C	BA	D6	FD	B8	F0	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	な	か	よ	し	ゴ	ニ	ン	グ	ミ	。	| Original Japanese Text
+	$8493C	(Line 2) (Top Half: MAP HI Bytes)
+	94	00	84	24	..	..	..06	25	24	24	25	24	24	| Original Japanese Hex
+	$84947	(Line 2) (Bottom Half: MAP HI Bytes)
+	96	00	84	24	..	..	..06	25	24	24	25	24	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	RAWLEN	..	..	..	..	..	..	| Original Japanese Text
+
+	いつでも、どこにいても、
+	A group of five lads who are cheerful,
+	$84838	(Line 3) (Top Half: MAP LO Bytes)
+	96	00	0C	22	42	43	63	04	44	2A	46	22	43	63	04	| Original Japanese Hex
+	$84847	(Line 3) (Bottom Half: MAP LO Bytes)
+	94	00	0C	32	52	53	73	14	54	3A	56	32	53	73	14	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	い	つ	で	も	、	ど	こ	に	い	て	も	、	| Original Japanese Text
+	$84952	(Line 3) (Top Half: MAP HI Bytes)
+	96	00	82	24	..04	25	24	24	25 86	24	..	..	..	..	..	| Original Japanese Hex
+	$8495D	(Line 3) (Bottom Half: MAP HI Bytes)
+	94	00	82	24	..04	25	24	24	25 86	24	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RAWLEN	..	..	..	RLELEN	..	..	..	..	..	..	| Original Japanese Text
+
+	ヨウキなゴニングミ。
+	whenever and wherever.
+	$84856	(Line 4) (Top Half: MAP LO Bytes)
+	94	00	0A	E6	A3	A7	45	AA	C6	ED	A8	E0	01	| Original Japanese Hex
+	$84863	(Line 4) (Bottom Half: MAP LO Bytes)
+	96	00	0A	F6	B3	B7	55	BA	D6	FD	B8	F0	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ヨ	ウ	キ	な	ゴ	ニ	ン	グ	ミ	。	| Original Japanese Text
+	$84968	(Line 4) (Top Half: MAP HI Bytes)
+	94	00	84	24	..	..	..06	25	24	24	25	24	24	| Original Japanese Hex
+	$84973	(Line 4) (Bottom Half: MAP HI Bytes)
+	96	00	84	24	..	..	..06	25	24	24	25	24	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	RAWLEN	..	..	..	..	..	..	| Original Japanese Text
+
+	きょうもみんなで、たのし
+	As always, they wander the world
+	$84870	(Line 5) (Top Half: MAP LO Bytes)
+	96	00	0C	27	0E	23	63	60	6D	45	43	04	40	49	2C	| Original Japanese Hex
+	$8487F	(Line 5) (Bottom Half: MAP LO Bytes)
+	94	00	0C	37	1E	33	73	70	7D	55	53	14	50	59	3C	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	き	ょ	う	も	み	ん	な	で	、	た	の	し	| Original Japanese Text
+	$8497E	(Line 5) (Top Half: MAP HI Bytes)
+	96	00	87	24	..	..	..	..	..	..01	25 84	24	..	..	..	| Original Japanese Hex
+	$84986	(Line 5) (Bottom Half: MAP HI Bytes)
+	94	00	87	24	..	..	..	..	..	..01	25 84	24	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	RAWLEN	RLELEN	RLEBYTE	..	..	..	| Original Japanese Text
+
+	いたびの、そらのした。
+	together, on a fun-filled journey.
+	$8488E	(Line 6) (Top Half: MAP LO Bytes)
+	94	00	0B	22	40	4B	49	04	2F	67	49	2C	40	01	| Original Japanese Hex
+	$8489C	(Line 6) (Bottom Half: MAP LO Bytes)
+	95	00	0B	32	50	5B	59	14	3F	77	59	3C	50	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	い	た	び	の	、	そ	ら	の	し	た	。	| Original Japanese Text
+	$8498E	(Line 6) (Top Half: MAP HI Bytes)
+	94	00	82	24	01	25 88	24	..	..	..	..	..	..	..	| Original Japanese Hex
+	$84996	(Line 6) (Bottom Half: MAP HI Bytes)
+	95	00	82	24	..01	25 88	24	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RAWLEN	RLELEN	RLEBYTE	..	..	..	..	..	..	..	| Original Japanese Text
+
+	だれとでも、ドラゴンとで
+	They want to dance with everyone, including
+	$848AA	(Line 7) (Top Half: MAP LO Bytes)
+	95	00	0C	40	6A	44	43	63	04	C4	E7	AA	ED	44	43	| Original Japanese Hex
+	$848B9	(Line 7) (Bottom Half: MAP LO Bytes)
+	94	00	0C	50	7A	54	53	73	14	D4	F7	BA	FD	54	53	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	だ	れ	と	で	も	、	ド	ラ	ゴ	ン	と	で	| Original Japanese Text
+	$8499E	(Line 7) (Top Half: MAP HI Bytes)
+	95	00	0C	25	24	24	25	24	24	25	24	25	24	24	25	| Original Japanese Hex
+	$849AD	(Line 7) (Bottom Half: MAP HI Bytes)
+	94	00	0C	25	24	24	25	24	24	25	24	25	24	24	25	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	..	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	もヨウキにおどりたい!
+	the dragon!
+	$848C8	(Line 8) (Top Half: MAP LO Bytes)
+	94	00	0B	63	E6	A3	A7	46	25	44	68	40	22	01	| Original Japanese Hex
+	$848D6	(Line 8) (Bottom Half: MAP LO Bytes)
+	95	00	0B	73	F6	B3	B7	56	35	54	78	50	32	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	も	ヨ	ウ	キ	に	お	ど	り	た	い	!	| Original Japanese Text
+	$849BC	(Line 8) (Top Half: MAP HI Bytes)
+	94	00	86	24	..	..	..	..	..01	25 83	24	..	..01	27	| Original Japanese Hex
+	$849C6	(Line 8) (Bottom Half: MAP HI Bytes)
+	95	00	86	24	..	..	..	..	..01	25 83	24	..	..01	27	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	RAWLEN	RLELEN	RLEBYTE	..	RAWLEN	..	| Original Japanese Text
+
+	「ワーイワーイ!たのしい
+	"Yippee! We'll have
+	$848E4	(Line 9) (Top Half: MAP LO Bytes)
+	95	00	0C	02	EC	A0	A2	EC	A0	A2	01	40	49	2C	22	| Original Japanese Hex
+	$848F3	(Line 9) (Bottom Half: MAP LO Bytes)
+	94	00	0C	12	FC	B0	B2	FC	B0	B2	11	50	59	3C	32	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	「	ワ	ー	イ	ワ	ー	イ	!	た	の	し	い	| Original Japanese Text
+	$849D0	(Line 9) (Top Half: MAP HI Bytes)
+	95	00	87	24	..	..	..	..	..	..01	27 84	24	..	..	..	| Original Japanese Hex
+	$849D8	(Line 9) (Bottom Half: MAP HI Bytes)
+	94	00	87	24	..	..	..	..	..	..01	27 84	24	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	RAWLEN	RLELEN	RLEBYTE	..	..	..	| Original Japanese Text
+
+	なったら、たのしいな」
+	fun, fun, fun!"
+	$84902	(Line 10) (Top Half: MAP LO Bytes)
+	95	00	0B	45	0F	40	67	04	40	49	2C	22	45	03	| Original Japanese Hex
+	$84910	(Line 10) (Bottom Half: MAP LO Bytes)
+	95	00	0B	55	1F	50	77	14	50	59	3C	32	55	13	FF	00	FF	00	B3	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	な	っ	た	ら	、	た	の	し	い	な	」	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLEEND	#	| Original Japanese Text
+	$849E0	(Line 10) (Top Half: MAP HI Bytes)
+	95	00	8B	24	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$849E4	(Line 10) (Bottom Half: MAP HI Bytes)
+	95	00	8B	24	..	..	..	..	..	..	..	..	..	..	FF	00	FF	00	B3	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	..	..	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLEEND	#	| Original Japanese Text
+
+	$27231
+        00	C8	90	| Memory Address
+
+	HALLOWEEN:
+	おかしとイタズラが、だい
+	Halloween loves candy
+	$849F0	(Line 1) (Top Half: MAP LO Bytes)
+	E3	00	0C	25	26	2C	44	A2	C0	AD	E7	26	04	40	22	| Original Japanese Hex
+	$849FF	(Line 1) (Bottom Half: MAP LO Bytes)
+	94	00	0C	35	36	3C	54	B2	D0	BD	F7	36	14	50	32	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	お	か	し	と	イ	タ	ズ	ラ	が	、	だ	い	| Original Japanese Text
+	$84B18	(Line 1) (Top Half: MAP HI Bytes)
+	E3	00	86	24	..	..	..	..	..06	25	24	25	24	25	24	| Original Japanese Hex
+	$84B23	(Line 1) (Bottom Half: MAP HI Bytes)
+	94	00	86	24	..	..	..	..	..06	25	24	25	24	25	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	RAWLEN	..	..	..	..	..	..	| Original Japanese Text
+
+	スキなハロウィン。
+	and mischief.
+	$84A0E	(Line 2) (Top Half: MAP LO Bytes)
+	94	00	09	AD	A7	45	CA	EB	A3	88	ED	01	| Original Japanese Hex
+	$84A1A	(Line 2) (Bottom Half: MAP LO Bytes)
+	97	00	09	BD	B7	55	DA	FB	B3	98	FD	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ス	キ	な	ハ	ロ	ウ	ィ	ン	。	| Original Japanese Text
+	$84B2E	(Line 2) (Top Half: MAP HI Bytes)
+	94	00	89	24	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$84B32	(Line 2) (Bottom Half: MAP HI Bytes)
+	97	00	89	24	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	いつもおかしのことで、あ
+	His head is constantly filled
+	$84A26	(Line 3) (Top Half: MAP LO Bytes)
+	97	00	0C	22	42	63	25	26	2C	49	2A	44	43	04	21	| Original Japanese Hex
+	$84A35	(Line 3) (Bottom Half: MAP LO Bytes)
+	94	00	0C	32	52	73	35	36	3C	59	3A	54	53	14	31	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	い	つ	も	お	か	し	の	こ	と	で	、	あ	| Original Japanese Text
+	$84B36	(Line 3) (Top Half: MAP HI Bytes)
+	97	00	89	24	..	..	..	..	..	..	..	..03	25	24	24	| Original Japanese Hex
+	$84B3E	(Line 3) (Bottom Half: MAP HI Bytes)
+	94	00	89	24	..	..	..	..	..	..	..	..03	25	24	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	RAWLEN	..	..	..	| Original Japanese Text
+
+	たまのなかはいっぱいなん
+	with thoughts of
+	$84A44	(Line 4) (Top Half: MAP LO Bytes)
+	94	00	0C	40	4F	49	45	26	4A	22	0F	4A	22	45	6D	| Original Japanese Hex
+	$84A53	(Line 4) (Bottom Half: MAP LO Bytes)
+	94	00	0C	50	5F	59	55	36	5A	32	1F	5A	32	55	7D	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	た	ま	の	な	か	は	い	っ	ぱ	い	な	ん	| Original Japanese Text
+	$84B46	(Line 4) (Top Half: MAP HI Bytes)
+	94	00	88	24	..	..	..	..	..	..	..01	26 83	24	..	..	| Original Japanese Hex
+	$84B4E	(Line 4) (Bottom Half: MAP HI Bytes)
+	94	00	88	24	..	..	..	..	..	..	..01	26 83	24	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	RAWLEN	RLELEN	RLEBYTE	..	..	| Original Japanese Text
+
+	だ。このせかいにすんでい
+	sweets. Naturally,
+	$84A62	(Line 5) (Top Half: MAP LO Bytes)
+	94	00	0C	40	01	2A	49	2E	26	22	46	2D	6D	43	22	| Original Japanese Hex
+	$84A71	(Line 5) (Bottom Half: MAP LO Bytes)
+	94	00	0C	50	11	3A	59	3E	36	32	56	3D	7D	53	32	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	だ	。	こ	の	せ	か	い	に	す	ん	で	い	| Original Japanese Text
+	$84B56	(Line 5) (Top Half: MAP HI Bytes)
+	94	00	01	25 89	24	..	..	..	..	..	..	..	..02	25	24	| Original Japanese Hex
+	$84B5F	(Line 5) (Bottom Half: MAP HI Bytes)
+	94	00	01	25 89	24	..	..	..	..	..	..	..	..02	25	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	RLELEN	RLEBYTE	..	..	..	..	..	..	..	RAWLEN	..	..	| Original Japanese Text
+
+	る、ドラゴンのひみつのお
+	he wants nothing more
+	$84A80	(Line 6) (Top Half: MAP LO Bytes)
+	94	00	0C	69	04	C4	E7	AA	ED	49	4B	60	42	49	25	| Original Japanese Hex
+	$84A8F	(Line 6) (Bottom Half: MAP LO Bytes)
+	94	00	0C	79	14	D4	F7	BA	FD	59	5B	70	52	59	35	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	る	、	ド	ラ	ゴ	ン	の	ひ	み	つ	の	お	| Original Japanese Text
+	$84B68	(Line 6) (Top Half: MAP HI Bytes)
+	94	00	82	24	..03	25	24	25 87	24	..	..	..	..	..	..	| Original Japanese Hex
+	$84B72	(Line 6) (Bottom Half: MAP HI Bytes)
+	94	00	82	24	..03	25	24	25 87	24	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RAWLEN	..	..	RLELEN	RLEBYTE	..	..	..	..	..	..	| Original Japanese Text
+
+	かしが、たべたくて、たべ
+	than to eat the Secret Candy of the dragon, that
+	$84A9E	(Line 7) (Top Half: MAP LO Bytes)
+	94	00	0C	26	2C	26	04	40	4D	40	28	43	04	40	4D	| Original Japanese Hex
+	$84AAD	(Line 7) (Bottom Half: MAP LO Bytes)
+	94	00	0C	36	3C	36	14	50	5D	50	38	53	14	50	5D	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	か	し	が	、	た	べ	た	く	て	、	た	べ	| Original Japanese Text
+	$84B7C	(Line 7) (Top Half: MAP HI Bytes)
+	94	00	82	24	..04	25	24	24	25 85	24	..	..	..	..01	25	| Original Japanese Hex
+	$84B89	(Line 7) (Bottom Half: MAP HI Bytes)
+	94	00	82	24	..04	25	24	24	25 85	24	..	..	..	..01	25	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RAWLEN	..	..	..	RLELEN	RLEBYTE	..	..	..	RAWLEN	..	| Original Japanese Text
+
+	たくてしかたがない。
+	inhabits this world.
+	$84ABC	(Line 8) (Top Half: MAP LO Bytes)
+	94	00	0A	40	28	43	2C	26	40	26	45	22	01	| Original Japanese Hex
+	$84AC9	(Line 8) (Bottom Half: MAP LO Bytes)
+	96	00	0A	50	38	53	3C	36	50	36	55	32	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	た	く	て	し	か	た	が	な	い	。	| Original Japanese Text
+	$84B96	(Line 8) (Top Half: MAP HI Bytes)
+	94	00	86	24	..	..	..	..	..01	25 83	24	..	..	| Original Japanese Hex
+	$84B9E	(Line 8) (Bottom Half: MAP HI Bytes)
+	96	00	86	24	..	..	..	..	..01	25 83	24	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	RAWLEN	RLELEN	RLEBYTE	..	..	| Original Japanese Text
+
+	「どーすればドラゴンのお
+	"Gee, I wonder how I can get
+	$84AD6	(Line 9) (Top Half: MAP LO Bytes)
+	96	00	0C	02	44	20	2D	6A	4A	C4	E7	AA	ED	49	25	| Original Japanese Hex
+	$84AE5	(Line 9) (Bottom Half: MAP LO Bytes)
+	94	00	0C	12	54	30	3D	7A	5A	D4	F7	BA	FD	59	35	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	「	ど	ー	す	れ	ば	ド	ラ	ゴ	ン	の	お	| Original Japanese Text
+	$84BA6	(Line 9) (Top Half: MAP HI Bytes)
+	96	00	02	24	25 83	24	..	..82	25	..02	24	25 83	24	..	..	| Original Japanese Hex
+	$84BB4	(Line 9) (Bottom Half: MAP HI Bytes)
+	94	00	02	24	25 83	24	..	..82	25	..02	24	25 83	24	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	..	RLELEN	RLEBYTE	..	RLELEN	RLEBYTE	RAWLEN	..	RLELEN	RLEBYTE	..	..	| Original Japanese Text
+
+	かしがたべれるのかな」
+	the dragon's candy?"
+	$84AF4	(Line 10) (Top Half: MAP LO Bytes)
+	95	00	0B	26	2C	26	40	4D	6A	69	49	26	45	03	| Original Japanese Hex
+	$84B02	(Line 10) (Bottom Half: MAP LO Bytes)
+	95	00	0B	36	3C	36	50	5D	7A	79	59	36	55	13	FF	00	FF	00	B3	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	か	し	が	た	べ	れ	る	の	か	な	」	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLEEND	#	| Original Japanese Text
+	$84BC2	(Line 10) (Top Half: MAP HI Bytes)
+	95	00	82	24	..03	25	24	25 86	24	..	..	..	..	..	| Original Japanese Hex
+	$84BCC	(Line 10) (Bottom Half: MAP HI Bytes)
+	95	00	82	24	..03	25	24	25 86	24	..	..	..	..	..	FF	00	FF	00	B3	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RAWLEN	..	..	RLELEN	RLEBYTE	..	..	..	..	..	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLEEND	#	| Original Japanese Text
+
+	$27222
+        F0	C9	90	| Memory Address
+
+	SHAMAN:
+	シャーマンいちぞくにつた
+	The tale of a legendary potion
+	$84BDE	(Line 1) (Top Half: MAP LO Bytes)
+	E3	00	0C	AC	8C	A0	CF	ED	22	41	2F	28	46	42	40	| Original Japanese Hex
+	$84BED	(Line 1) (Bottom Half: MAP LO Bytes)
+	94	00	0C	BC	9C	B0	DF	FD	32	51	3F	38	56	52	50	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	シ	ャ	ー	マ	ン	い	ち	ぞ	く	に	つ	た	| Original Japanese Text
+	$84D08	(Line 1) (Top Half: MAP HI Bytes)
+	E3	00	87	24	..	..	..	..	..	..01	25 84	24	..	..	..	| Original Japanese Hex
+	$84D10	(Line 1) (Bottom Half: MAP HI Bytes)
+	94	00	87	24	..	..	..	..	..	..01	25 84	24	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	RAWLEN	RLELEN	RLEBYTE	..	..	..	| Original Japanese Text
+
+	わる、でんせつのクスリ。
+	has been passed down
+	$84BFC	(Line 2) (Top Half: MAP LO Bytes)
+	94	00	0C	6C	69	04	43	6D	2E	42	49	A8	AD	E8	01	| Original Japanese Hex
+	$84C0B	(Line 2) (Bottom Half: MAP LO Bytes)
+	94	00	0C	7C	79	14	53	7D	3E	52	59	B8	BD	F8	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	わ	る	、	で	ん	せ	つ	の	ク	ス	リ	。	| Original Japanese Text
+	$84D18	(Line 2) (Top Half: MAP HI Bytes)
+	94	00	83	24	..	..01	25 88	24	..	..	..	..	..	..	..	| Original Japanese Hex
+	$84D20	(Line 2) (Bottom Half: MAP HI Bytes)
+	94	00	83	24	..	..01	25 88	24	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	RAWLEN	RLELEN	RLEBYTE	..	..	..	..	..	..	..	| Original Japanese Text
+
+	そのクスリは、どんなビョ
+	through a family of Shamans
+	$84C1A	(Line 3) (Top Half: MAP LO Bytes)
+	94	00	0C	2F	49	A8	AD	E8	4A	04	44	6D	45	CB	8E	| Original Japanese Hex
+	$84C29	(Line 3) (Bottom Half: MAP LO Bytes)
+	94	00	0C	3F	59	B8	BD	F8	5A	14	54	7D	55	DB	9E	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	そ	の	ク	ス	リ	は	、	ど	ん	な	ビ	ョ	| Original Japanese Text
+	$84D28	(Line 3) (Top Half: MAP HI Bytes)
+	94	00	87	24	..	..	..	..	..	..05	25	24	24	25	24	| Original Japanese Hex
+	$84D32	(Line 3) (Bottom Half: MAP HI Bytes)
+	94	00	87	24	..	..	..	..	..	..05	25	24	24	25	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	RAWLEN	..	..	..	..	..	| Original Japanese Text
+
+	ウキも、なおしてしまうと
+	a mysterious potion
+	$84C38	(Line 4) (Top Half: MAP LO Bytes)
+	94	00	0C	A3	A7	63	04	45	25	2C	43	2C	4F	23	44	| Original Japanese Hex
+	$84C47	(Line 4) (Bottom Half: MAP LO Bytes)
+	94	00	0C	B3	B7	73	14	55	35	3C	53	3C	5F	33	54	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ウ	キ	も	、	な	お	し	て	し	ま	う	と	| Original Japanese Text
+	$84D3C	(Line 4) (Top Half: MAP HI Bytes)
+	94	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$84D40	(Line 4) (Bottom Half: MAP HI Bytes)
+	94	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	いうフシギなクスリ。
+	which can cure any illness.
+	$84C56	(Line 5) (Top Half: MAP LO Bytes)
+	94	00	0A	22	23	CC	AC	A7	45	A8	AD	E8	01	| Original Japanese Hex
+	$84C63	(Line 5) (Bottom Half: MAP LO Bytes)
+	96	00	0A	32	33	DC	BC	B7	55	B8	BD	F8	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	い	う	フ	シ	ギ	な	ク	ス	リ	。	| Original Japanese Text
+	$84D44	(Line 5) (Top Half: MAP HI Bytes)
+	94	00	84	24	..	..	..01	25 87	24	..	..	..	..	..	..	| Original Japanese Hex
+	$84D4C	(Line 5) (Bottom Half: MAP HI Bytes)
+	94	00	84	24	..	..	..01	25 87	24	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	RAWLEN	RLELEN	RLEBYTE ..	..	..	..	..	..	| Original Japanese Text
+
+	それにはドラゴンのウロコ
+	What's more, this potion seems to require
+	$84C70	(Line 6) (Top Half: MAP LO Bytes)
+	96	00	0C	2F	6A	46	4A	C4	E7	AA	ED	49	A3	EB	AA	| Original Japanese Hex
+	$84C7F	(Line 6) (Bottom Half: MAP LO Bytes)
+	94	00	0C	3F	7A	56	5A	D4	F7	BA	FD	59	B3	FB	BA	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	そ	れ	に	は	ド	ラ	ゴ	ン	の	ウ	ロ	コ	| Original Japanese Text
+	$84D54	(Line 6) (Top Half: MAP HI Bytes)
+	94	00	84	24	..	..	..03	25	24	25 85	24	..	..	..	..	| Original Japanese Hex
+	$84D5E	(Line 6) (Bottom Half: MAP HI Bytes)
+	94	00	84	24	..	..	..03	25	24	25 85	24	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	RAWBYTE	..	..	RAWLEN	..	..	RLELEN	RLEBYTE ..	..	..	..	| Original Japanese Text
+
+	がひつようらしい・・・・
+	a dragon's scale....
+	$84C8E	(Line 7) (Top Half: MAP LO Bytes)
+	94	00	08	26	4B	42	66	23	67	2C	22 84	05	..	..	..	| Original Japanese Hex
+	$84C9B	(Line 7) (Bottom Half: MAP LO Bytes)
+	94	00	08	36	5B	52	76	33	77	3C	32 84	15	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	が	ひ	つ	よ	う	ら	し	いRLELEN	・	・	・	・	| Original Japanese Text
+	$84D68	(Line 7) (Top Half: MAP HI Bytes)
+	94	00	01	25 8B	24	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$84D6E	(Line 7) (Bottom Half: MAP HI Bytes)
+	94	00	01	25 8B	24	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	「ンバボボ!ンバボボ!」
+	"I shall fetch that dragon's scale!"
+	$84CA8	(Line 8) (Top Half: MAP LO Bytes)
+	94	00	0C	02	ED	CA	CE	CE	01	ED	CA	CE	CE	01	03	| Original Japanese Hex
+	$84CB7	(Line 8) (Bottom Half: MAP LO Bytes)
+	94	00	0C	12	FD	DA	DE	DE	11	FD	DA	DE	DE	11	13	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	「	ン	バ	ボ	ボ	!	ン	バ	ボ	ボ	!	」	| Original Japanese Text
+	$84D74	(Line 8) (Top Half: MAP HI Bytes)
+	94	00	82	24	..83	25	..	..02	27	24 83	25	..	..02	27	24	| Original Japanese Hex
+	$84D82	(Line 8) (Bottom Half: MAP HI Bytes)
+	94	00	82	24	..83	25	..	..02	27	24 83	25	..	..02	27	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	RAWLEN	..	RLELEN	RLEBYTE	..	RAWLEN	..	..	| Original Japanese Text
+
+	(おらが、そのドラゴンの
+	(I will take that
+	$84CC6	(Line 9) (Top Half: MAP LO Bytes)
+	94	00	0C	08	25	67	26	04	2F	49	C4	E7	AA	ED	49	| Original Japanese Hex
+	$84CD5	(Line 9) (Bottom Half: MAP LO Bytes)
+	94	00	0C	18	35	77	36	14	3F	59	D4	F7	BA	FD	59	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	(	お	ら	が	、	そ	の	ド	ラ	ゴ	ン	の	| Original Japanese Text
+	$84D90	(Line 9) (Top Half: MAP HI Bytes)
+	94	00	04	27	24	24	25	83	24	05	25	24	25	24	24	| Original Japanese Hex
+	$84D9F	(Line 9) (Bottom Half: MAP HI Bytes)
+	94	00	04	27	24	24	25 83	24	..	..05	25	24	25	24	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	..	..	..	RLELEN	RLEBYTE	..	RAWLEN	..	..	..	..	..	| Original Japanese Text
+
+	ウロコをとってくるだ)
+	dragon 's scales)
+	$84CE4	(Line 10) (Top Half: MAP LO Bytes)
+	95	00	0B	A3	EB	AA	06	44	0F	43	28	69	40	09	| Original Japanese Hex
+	$84CF2	(Line 10) (Bottom Half: MAP LO Bytes)
+	95	00	0B	B3	FB	BA	16	54	1F	53	38	79	50	19	FF	00	FF	00	B3	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ウ	ロ	コ	を	と	っ	て	く	る	だ	)	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLEEND	#	| Original Japanese Text
+	$84DAE	(Line 10) (Top Half: MAP HI Bytes)
+	94	00	8A	24	..	..	..	..	..	..	..	..02	25	27	| Original Japanese Hex
+	$84DB5	(Line 10) (Bottom Half: MAP HI Bytes)
+	94	00	8A	24	..	..	..	..	..	..	..	..02	25	27	FF	00	FF	00	B3	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	RAWLEN	..	..	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLEEND	#	| Original Japanese Text
+
+	$27228
+        DE	CB	90	| Memory Address
+
+	PRINCESS:
+	エルシップジョウにすむ、
+	Two princesses,
+	$855C7	(Line 1) (Top Half: MAP LO Bytes)
+	E3	00	0C	A4	E9	AC	8F	CC	AC	8E	A3	46	2D	61	04	| Original Japanese Hex
+	$855D6	(Line 1) (Bottom Half: MAP LO Bytes)
+	94	00	0C	B4	F9	BC	9F	DC	BC	9E	B3	56	3D	71	14	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	エ	ル	シ	ッ	プ	ジ	ョ	ウ	に	す	む	、	| Original Japanese Text
+	$856E9	(Line 1) (Top Half: MAP HI Bytes)
+	E3	00	84	24	..	..	..02	26	25 86	24	..	..	..	..	..	| Original Japanese Hex
+	$856F2	(Line 1) (Bottom Half: MAP HI Bytes)
+	94	00	84	24	..	..	..02	26	25 86	24	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	RAWLEN	..	RLELEN	RLEBYTE	..	..	..	..	..	| Original Japanese Text
+
+	ふたりのおひめさま。
+	live in L-Ship Castle.
+	$855E5	(Line 2) (Top Half: MAP LO Bytes)
+	94	00	0A	4C	40	68	49	25	4B	62	2B	4F	01	| Original Japanese Hex
+	$855F2	(Line 2) (Bottom Half: MAP LO Bytes)
+	96	00	0A	5C	50	78	59	35	5B	72	3B	5F	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ふ	た	り	の	お	ひ	め	さ	ま	。	| Original Japanese Text
+	$856FB	(Line 2) (Top Half: MAP HI Bytes)
+	94	00	8A	24	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$856FF	(Line 2) (Bottom Half: MAP HI Bytes)
+	96	00	8A	24	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	あるひ、うえのおひめさま
+	One day, though
+	$855FF	(Line 3) (Top Half: MAP LO Bytes)
+	96	00	0C	21	69	4B	04	23	24	49	25	4B	62	2B	4F	| Original Japanese Hex
+	$8560E	(Line 3) (Bottom Half: MAP LO Bytes)
+	94	00	0C	31	79	5B	14	33	34	59	35	5B	72	3B	5F	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	あ	る	ひ	、	う	え	の	お	ひ	め	さ	ま	| Original Japanese Text
+	$85703	(Line 3) (Top Half: MAP HI Bytes)
+	96	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$85707	(Line 3) (Bottom Half: MAP HI Bytes)
+	94	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	が、ドラゴンにさらわれて
+	, the elder one was
+	$8561D	(Line 4) (Top Half: MAP LO Bytes)
+	94	00	0C	26	04	C4	E7	AA	ED	46	2B	67	6C	6A	43	| Original Japanese Hex
+	$8562C	(Line 4) (Bottom Half: MAP LO Bytes)
+	94	00	0C	36	14	D4	F7	BA	FD	56	3B	77	7C	7A	53	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	が	、	ド	ラ	ゴ	ン	に	さ	ら	わ	れ	て	| Original Japanese Text
+	$8570B	(Line 4) (Top Half: MAP HI Bytes)
+	94	00	05	25	24	25	24	25 87	24	..	..	..	..	..	..	| Original Japanese Hex
+	$85715	(Line 4) (Bottom Half: MAP HI Bytes)
+	94	00	05	25	24	25	24	25 87	24	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	..	..	..	..	RLELEN	RLEBYTE	..	..	..	..	..	..	| Original Japanese Text
+
+	しまいました。
+	kidnapped by a dragon.
+	$8563B	(Line 5) (Top Half: MAP LO Bytes)
+	94	00	07	2C	4F	22	4F	2C	40	01	| Original Japanese Hex
+	$85645	(Line 5) (Bottom Half: MAP LO Bytes)
+	99	00	07	3C	5F	32	5F	3C	50	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	し	ま	い	ま	し	た	。	| Original Japanese Text
+	$8571F	(Line 5) (Top Half: MAP HI Bytes)
+	94	00	87	24	..	..	..	..	..	..	| Original Japanese Hex
+	$85723	(Line 5) (Bottom Half: MAP HI Bytes)
+	99	00	87	24	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	| Original Japanese Text
+
+	ちせいと、ゆうきにあふれ
+	The younger one, a girl of
+	$8564F	(Line 6) (Top Half: MAP LO Bytes)
+	99	00	0C	41	2E	22	44	04	65	23	27	46	21	4C	6A	| Original Japanese Hex
+	$8565E	(Line 6) (Bottom Half: MAP LO Bytes)
+	94	00	0C	51	3E	32	54	14	75	33	37	56	31	5C	7A	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ち	せ	い	と	、	ゆ	う	き	に	あ	ふ	れ	| Original Japanese Text
+	$85727	(Line 6) (Top Half: MAP HI Bytes)
+	99	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$8572B	(Line 6) (Bottom Half: MAP HI Bytes)
+	94	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	るおひめさまは、あねをた
+	much intellect, and courage
+	$8566D	(Line 7) (Top Half: MAP LO Bytes)
+	94	00	0C	69	25	4B	62	2B	4F	4A	04	21	48	06	40	| Original Japanese Hex
+	$8567C	(Line 7) (Bottom Half: MAP LO Bytes)
+	94	00	0C	79	35	5B	72	3B	5F	5A	14	31	58	16	50	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	る	お	ひ	め	さ	ま	は	、	あ	ね	を	た	| Original Japanese Text
+	$8572F	(Line 7) (Top Half: MAP HI Bytes)
+	94	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$85733	(Line 7) (Bottom Half: MAP HI Bytes)
+	94	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	すけに、たびだちます。
+	set out on a journey to save her sister.
+	$8568B	(Line 8) (Top Half: MAP LO Bytes)
+	94	00	0B	2D	29	46	04	40	4B	40	41	4F	2D	01	| Original Japanese Hex
+	$85699	(Line 8) (Bottom Half: MAP LO Bytes)
+	95	00	0B	3D	39	56	14	50	5B	50	51	5F	3D	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	す	け	に	、	た	び	だ	ち	ま	す	。	| Original Japanese Text
+	$85737	(Line 8) (Top Half: MAP HI Bytes)
+	94	00	85	24	..	..	..	..82	25	..84	24	..	..	..	| Original Japanese Hex
+	$8573F	(Line 8) (Bottom Half: MAP HI Bytes)
+	95	00	85	24	..	..	..	..82	25	..84	24	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	| Original Japanese Text
+
+	「ねえさま、まっててね!
+	"Hold on, Sister!
+	$856A7	(Line 9) (Top Half: MAP LO Bytes)
+	95	00	0C	02	48	24	2B	4F	04	4F	0F	43	43	48	01	| Original Japanese Hex
+	$856B6	(Line 9) (Bottom Half: MAP LO Bytes)
+	94	00	0C	12	58	34	3B	5F	14	5F	1F	53	53	58	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	「	ね	え	さ	ま	、	ま	っ	て	て	ね	!	| Original Japanese Text
+	$85747	(Line 9) (Top Half: MAP HI Bytes)
+	95	00	8B	24	..	..	..	..	..	..	..	..	..	..01	27	| Original Japanese Hex
+	$8574D	(Line 9) (Bottom Half: MAP HI Bytes)
+	94	00	8B	24	..	..	..	..	..	..	..	..	..	..01	27	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	..	RAWLEN	..	| Original Japanese Text
+
+	わたし・・まけない!」
+	I-I won't fail!"
+	$856C5	(Line 10) (Top Half: MAP LO Bytes)
+	95	00	0B	6C	40	2C	05	05	4F	29	45	22	01	03	| Original Japanese Hex
+	$856D3	(Line 10) (Bottom Half: MAP LO Bytes)
+	95	00	0B	7C	50	3C	15	15	5F	39	55	32	11	13	FF	00	FF	00	B3	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	わ	た	し	・	・	ま	け	な	い	!	」	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLEEND	#	| Original Japanese Text
+	$85753	(Line 10) (Top Half: MAP HI Bytes)
+	95	00	89	24	..	..	..	..	..	..	..	..02	27	24	| Original Japanese Hex
+	$8575A	(Line 10) (Bottom Half: MAP HI Bytes)
+	95	00	89	24	..	..	..	..	..	..	..	..02	27	24	FF	00	FF	00	B3	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	RAWLEN	..	..	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLEEND	#	| Original Japanese Text
+
+	$2722E
+        C7	D5	90	| Memory Address
+
+	MIRURUN:
+	こころやさしいミルルン。
+	A creature with a heart of gold.
+	$85913	(Line 1) (Top Half: MAP LO Bytes)
+	E3	00	82	2A	0A	6B	64	2B	2C	22	E0	E9	E9	ED	01	| Original Japanese Hex
+	$85922	(Line 1) (Bottom Half: MAP LO Bytes)
+	94	00	82	3A	0A	7B	74	3B	3C	32	F0	F9	F9	FD	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	こ	こRAWLEN	ろ	や	さ	し	い	ミ	ル	ル	ン	。	| Original Japanese Text
+	$85A1B	(Line 1) (Top Half: MAP HI Bytes)
+	E3	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$85A1F	(Line 1) (Bottom Half: MAP HI Bytes)
+	94	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	きょうも、あしたも、その
+	Mirurun will continue
+	$85931	(Line 2) (Top Half: MAP LO Bytes)
+	94	00	0C	27	0E	23	63	04	21	2C	40	63	04	2F	49	| Original Japanese Hex
+	$85940	(Line 2) (Bottom Half: MAP LO Bytes)
+	94	00	0C	37	1E	33	73	14	31	3C	50	73	14	3F	59	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	き	ょ	う	も	、	あ	し	た	も	、	そ	の	| Original Japanese Text
+	$85A23	(Line 2) (Top Half: MAP HI Bytes)
+	94	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$85A27	(Line 2) (Bottom Half: MAP HI Bytes)
+	94	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	またつぎのひも、トモダチ
+	its journey to find friends
+	$8594F	(Line 3) (Top Half: MAP LO Bytes)
+	94	00	0C	4F	40	42	27	49	4B	63	04	C4	E3	C0	C1	| Original Japanese Hex
+	$8595E	(Line 3) (Bottom Half: MAP LO Bytes)
+	94	00	0C	5F	50	52	37	59	5B	73	14	D4	F3	D0	D1	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ま	た	つ	ぎ	の	ひ	も	、	ト	モ	ダ	チ	| Original Japanese Text
+	$85A2B	(Line 3) (Top Half: MAP HI Bytes)
+	94	00	83	24	..	..01	25 86	24	..	..	..	..	..02	25	24	| Original Japanese Hex
+	$85A36	(Line 3) (Bottom Half: MAP HI Bytes)
+	94	00	83	24	..	..01	25 86	24	..	..	..	..	..02	25	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	RAWLEN	RLELEN	RLEBYTE	..	..	..	..	RAWLEN	..	..	| Original Japanese Text
+
+	もとめてミルルンのたびは
+	today, tomorrow, and the day
+	$8596D	(Line 4) (Top Half: MAP LO Bytes)
+	94	00	0C	63	44	62	43	E0	E9	E9	ED	49	40	4B	4A	| Original Japanese Hex
+	$8597C	(Line 4) (Bottom Half: MAP LO Bytes)
+	94	00	0C	73	54	72	53	F0	F9	F9	FD	59	50	5B	5A	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	も	と	め	て	ミ	ル	ル	ン	の	た	び	は	| Original Japanese Text
+	$85A41	(Line 4) (Top Half: MAP HI Bytes)
+	94	00	8A	24	..	..	..	..	..	..	..	..	..02	25	24	| Original Japanese Hex
+	$85A48	(Line 4) (Bottom Half: MAP HI Bytes)
+	94	00	8A	24	..	..	..	..	..	..	..	..	..02	25	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	RAWLEN	..	..	| Original Japanese Text
+
+	つづきます。
+	after that.
+	$8598B	(Line 5) (Top Half: MAP LO Bytes)
+	94	00	82	42	..04	27	4F	2D	01	| Original Japanese Hex
+	$85994	(Line 5) (Bottom Half: MAP LO Bytes)
+	9A	00	82	52	..04	37	5F	3D	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	つ	づRAWLEN	き	ま	す	。	| Original Japanese Text
+	$85A4F	(Line 5) (Top Half: MAP HI Bytes)
+	94	00	02	24	25 84	24	..	..	..	| Original Japanese Hex
+	$85A56	(Line 5) (Bottom Half: MAP HI Bytes)
+	9A	00	02	24	25 84	24	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	..	RLELEN	RLEBYTE	..	..	..	| Original Japanese Text
+
+	さあ、きょうもあたらしい
+	And so, as always, Mirurun
+	$8599D	(Line 6) (Top Half: MAP LO Bytes)
+	9A	00	0C	2B	21	04	27	0E	23	63	21	40	67	2C	22	| Original Japanese Hex
+	$859AC	(Line 6) (Bottom Half: MAP LO Bytes)
+	94	00	0C	3B	31	14	37	1E	33	73	31	50	77	3C	32	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	さ	あ	、	き	ょ	う	も	あ	た	ら	し	い	| Original Japanese Text
+	$85A5D	(Line 6) (Top Half: MAP HI Bytes)
+	9A	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	$85A61	(Line 6) (Bottom Half: MAP HI Bytes)
+	94	00	8C	24	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	..	..	..	| Original Japanese Text
+
+	であいが、ミルルンをまっ
+	is waiting, to meet someone
+	$859BB	(Line 7) (Top Half: MAP LO Bytes)
+	94	00	0C	43	21	22	26	04	E0	E9	E9	ED	06	4F	0F	| Original Japanese Hex
+	$859CA	(Line 7) (Bottom Half: MAP LO Bytes)
+	94	00	0C	53	31	32	36	14	F0	F9	F9	FD	16	5F	1F	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	で	あ	い	が	、	ミ	ル	ル	ン	を	ま	っ	| Original Japanese Text
+	$85A65	(Line 7) (Top Half: MAP HI Bytes)
+	94	00	04	25	24	24	25 88	24	..	..	..	..	..	..	..	| Original Japanese Hex
+	$85A6E	(Line 7) (Bottom Half: MAP HI Bytes)
+	94	00	04	25	24	24	25 88	24	..	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	..	..	..	RLELEN	RLEBYTE	..	..	..	..	..	..	..	| Original Japanese Text
+
+	ています。
+	new.
+	$859D9	(Line 8) (Top Half: MAP LO Bytes)
+	94	00	05	43	22	4F	2D	01	| Original Japanese Hex
+	$859E1	(Line 8) (Bottom Half: MAP LO Bytes)
+	9B	00	05	53	32	5F	3D	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	て	い	ま	す	。	| Original Japanese Text
+	$85A77	(Line 8) (Top Half: MAP HI Bytes)
+	94	00	85	24	..	..	..	..	| Original Japanese Hex
+	$85A7B	(Line 8) (Bottom Half: MAP HI Bytes)
+	9B	00	85	24	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	| Original Japanese Text
+
+	「ぼくとトモダチになって
+	"Will you be my
+	$859E9	(Line 9) (Top Half: MAP LO Bytes)
+	9B	00	0C	02	4E	28	44	C4	E3	C0	C1	46	45	0F	43	| Original Japanese Hex
+	$859F8	(Line 9) (Bottom Half: MAP LO Bytes)
+	94	00	0C	12	5E	38	54	D4	F3	D0	D1	56	55	1F	53	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	「	ぼ	く	と	ト	モ	ダ	チ	に	な	っ	て	| Original Japanese Text
+	$85A7F	(Line 9) (Top Half: MAP HI Bytes)
+	9B	00	02	24	25 84	24	..	..	..01	25 85	24	..	..	..	..	| Original Japanese Hex
+	$85A8A	(Line 9) (Bottom Half: MAP HI Bytes)
+	94	00	02	24	25 84	24	..	..	..01	25 85	24	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	..	RLELEN	RLEBYTE	..	..	RAWLEN	RLELEN	RLEBYTE	..	..	..	..	| Original Japanese Text
+
+	ね!」
+	friend!"
+	$85A07	(Line 10) (Top Half: MAP LO Bytes)
+	95	00	03	48	01	03	| Original Japanese Hex
+	$85A0D	(Line 10) (Bottom Half: MAP LO Bytes)
+	9D	00	03	58	11	13	FF	00	FF	00	BB	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ね	!	」	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLEEND	#	| Original Japanese Text
+	$85A95	(Line 10) (Top Half: MAP HI Bytes)
+	95	00	03	24	27	24	| Original Japanese Hex
+	$85A9B	(Line 10) (Bottom Half: MAP HI Bytes)
+	9D	00	03	24	27	24	FF	00	FF	00	BB	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	..	..	..	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLEEND	#	| Original Japanese Text
+
+	$27225
+        13	D9	90	| Memory Address
+
+	WOLFMAN:
+	ひさかたぶりに、こきょう
+	I returned to my homeland, after
+	$D7E13	(Line 1) (Top Half: MAP LO Bytes)
+	E3	00	0C	4B	2B	26	40	4C	68	46	04	2A	27	0E	23	| Original Japanese Hex
+	$D7E22	(Line 1) (Bottom Half: MAP LO Bytes)
+	94	00	0C	5B	3B	36	50	5C	78	56	14	3A	37	1E	33	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	ひ	さ	か	た	ぶ	り	に	、	こ	き	ょ	う	| Original Japanese Text
+	$D7F43	(Line 1) (Top Half: MAP HI Bytes)
+	E3	00	84	24	..	..	..01	25 87	24	..	..	..	..	..	..	| Original Japanese Hex
+	$D7F4B	(Line 1) (Bottom Half: MAP HI Bytes)
+	94	00	84	24	..	..	..01	25 87	24	..	..	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	RAWLEN	RLELEN	RLEBYTE	..	..	..	..	..	..	| Original Japanese Text
+
+	のクニにかえってみれば、
+	a great many years,
+	$D7E31	(Line 2) (Top Half: MAP LO Bytes)
+	94	00	0C	49	A8	C6	46	26	24	0F	43	60	6A	4A	04	| Original Japanese Hex
+	$D7E40	(Line 2) (Bottom Half: MAP LO Bytes)
+	94	00	0C	59	B8	D6	56	36	34	1F	53	70	7A	5A	14	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	の	ク	ニ	に	か	え	っ	て	み	れ	ば	、	| Original Japanese Text
+	$D7F53	(Line 2) (Top Half: MAP HI Bytes)
+	94	00	8A	24	..	..	..	..	..	..	..	..	..02	25	24	| Original Japanese Hex
+	$D7F5A	(Line 2) (Bottom Half: MAP HI Bytes)
+	94	00	8A	24	..	..	..	..	..	..	..	..	..02	25	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	RAWLEN	..	..	| Original Japanese Text
+
+	なんとクニはおおさわぎ!
+	only to find it in an uproar!
+	$D7E4F	(Line 3) (Top Half: MAP LO Bytes)
+	94	00	0C	45	6D	44	A8	C6	4A	25	25	2B	6C	27	01	| Original Japanese Hex
+	$D7E5E	(Line 3) (Bottom Half: MAP LO Bytes)
+	94	00	0C	55	7D	54	B8	D6	5A	35	35	3B	7C	37	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	な	ん	と	ク	ニ	は	お	お	さ	わ	ぎ	!	| Original Japanese Text
+	$D7F61	(Line 3) (Top Half: MAP HI Bytes)
+	94	00	8A	24	..	..	..	..	..	..	..	..	..02	25	27	| Original Japanese Hex
+	$D7F68	(Line 3) (Bottom Half: MAP HI Bytes)
+	94	00	8A	24	..	..	..	..	..	..	..	..	..02	25	27	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	RAWLEN	..	..	| Original Japanese Text
+
+	おひめさまが、ドラゴンに
+	The princess, has been
+	$D7E6D	(Line 4) (Top Half: MAP LO Bytes)
+	94	00	0C	25	4B	62	2B	4F	26	04	C4	E7	AA	ED	46	| Original Japanese Hex
+	$D7E7C	(Line 4) (Bottom Half: MAP LO Bytes)
+	94	00	0C	35	5B	72	3B	5F	36	14	D4	F7	BA	FD	56	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	お	ひ	め	さ	ま	が	、	ド	ラ	ゴ	ン	に	| Original Japanese Text
+	$D7F6F	(Line 4) (Top Half: MAP HI Bytes)
+	94	00	85	24	..	..	..	..07	25	24	25	24	25	24	24	| Original Japanese Hex
+	$D7F7B	(Line 4) (Bottom Half: MAP HI Bytes)
+	94	00	85	24	..	..	..	..07	25	24	25	24	25	24	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	RAWLEN	..	..	..	..	..	..	..	| Original Japanese Text
+
+	かどわかされてしまった!
+	kidnapped by a dragon!
+	$D7E8B	(Line 5) (Top Half: MAP LO Bytes)
+	94	00	0C	26	44	6C	26	2B	6A	43	2C	4F	0F	40	01	| Original Japanese Hex
+	$D7E9A	(Line 5) (Bottom Half: MAP LO Bytes)
+	94	00	0C	36	54	7C	36	3B	7A	53	3C	5F	1F	50	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	か	ど	わ	か	さ	れ	て	し	ま	っ	た	!	| Original Japanese Text
+	$D7F87	(Line 5) (Top Half: MAP HI Bytes)
+	94	00	02	24	25 89	24	..	..	..	..	..	..	..	..01	27	| Original Japanese Hex
+	$D7F90	(Line 5) (Bottom Half: MAP HI Bytes)
+	94	00	02	24	25 89	24	..	..	..	..	..	..	..	..01	27	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	..	RLELEN	RLEBYTE	..	..	..	..	..	..	..	RAWLEN	..	| Original Japanese Text
+
+	このままみすごす、わけに
+	I can't stand by, and
+	$D7EA9	(Line 6) (Top Half: MAP LO Bytes)
+	94	00	0C	2A	49	4F	4F	60	2D	2A	2D	04	6C	29	46	| Original Japanese Hex
+	$D7EB8	(Line 6) (Bottom Half: MAP LO Bytes)
+	94	00	0C	3A	59	5F	5F	70	3D	3A	3D	14	7C	39	56	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	こ	の	ま	ま	み	す	ご	す	、	わ	け	に	| Original Japanese Text
+	$D7F99	(Line 6) (Top Half: MAP HI Bytes)
+	94	00	86	24	..	..	..	..	..01	25 85	24	..	..	..	..	| Original Japanese Hex
+	$D7FA1	(Line 6) (Bottom Half: MAP HI Bytes)
+	94	00	86	24	..	..	..	..	..01	25 85	24	..	..	..	..	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	RAWLEN	RLELEN	RLEBYTE	..	..	..	..	| Original Japanese Text
+
+	はいかねえ!おとこいっぴ
+	do nothing! A real
+	$D7EC7	(Line 7) (Top Half: MAP LO Bytes)
+	94	00	0C	4A	22	26	48	24	01	25	44	2A	22	0F	4B	| Original Japanese Hex
+	$D7ED6	(Line 7) (Bottom Half: MAP LO Bytes)
+	94	00	0C	5A	32	36	58	34	11	35	54	3A	32	1F	5B	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	は	い	か	ね	え	!	お	と	こ	い	っ	ぴ	| Original Japanese Text
+	$D7FA9	(Line 7) (Top Half: MAP HI Bytes)
+	94	00	85	24	..	..	..	..01	27 85	24	..	..	..	..01	26	| Original Japanese Hex
+	$D7FB3	(Line 7) (Bottom Half: MAP HI Bytes)
+	94	00	85	24	..	..	..	..01	27 85	24	..	..	..	..01	26	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	RAWLEN	RLELEN	RLEBYTE	..	..	..	RAWLEN	..	| Original Japanese Text
+
+	き、あとにはひかねえ!
+	man, does not back down!
+	$D7EE5	(Line 8) (Top Half: MAP LO Bytes)
+	94	00	0B	27	04	21	44	46	4A	4B	26	48	24	01	| Original Japanese Hex
+	$D7EF3	(Line 8) (Bottom Half: MAP LO Bytes)
+	95	00	0B	37	14	31	54	56	5A	5B	36	58	34	11	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	き	、	あ	と	に	は	ひ	か	ね	え	!	| Original Japanese Text
+	$D7FBD	(Line 8) (Top Half: MAP HI Bytes)
+	94	00	8A	24	..	..	..	..	..	..	..	..	..01	27	| Original Japanese Hex
+	$D7FC3	(Line 8) (Bottom Half: MAP HI Bytes)
+	95	00	8A	24	..	..	..	..	..	..	..	..	..01	27	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	..	..	..	..	..	..	..	..	RAWLEN	..	| Original Japanese Text
+
+	「いざ!せっしゃと、じん
+	"Come, fight me
+	$D7F01	(Line 9) (Top Half: MAP LO Bytes)
+	95	00	0C	02	22	2B	01	2E	0F	2C	0C	44	04	2C	6D	| Original Japanese Hex
+	$D7F10	(Line 9) (Bottom Half: MAP LO Bytes)
+	94	00	0C	12	32	3B	11	3E	1F	3C	1C	54	14	3C	7D	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	「	い	ざ	!	せ	っ	し	ゃ	と	、	じ	ん	| Original Japanese Text
+	$D7FC9	(Line 9) (Top Half: MAP HI Bytes)
+	95	00	82	24	..02	25	27 86	24	..	..	..	..	..02	25	24	| Original Japanese Hex
+	$D7FD5	(Line 9) (Bottom Half: MAP HI Bytes)
+	94	00	82	24	..02	25	27 86	24	..	..	..	..	..02	25	24	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RAWLEN	..	RLELEN	RLEBYTE	..	..	..	..	RAWLEN	..	..	| Original Japanese Text
+
+	じょうにしょうぶだ!」
+	with honor!"
+	$D7F1F	(Line 10) (Top Half: MAP LO Bytes)
+	95	00	0B	2C	0E	23	46	2C	0E	23	4C	40	01	03	| Original Japanese Hex
+	$D7F2D	(Line 10) (Bottom Half: MAP LO Bytes)
+	95	00	0B	3C	1E	33	56	3C	1E	33	5C	50	11	13	FF	00	FF	00	B3	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RAWLEN	じ	ょ	う	に	し	ょ	う	ぶ	だ	!	」	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLEEND	#	| Original Japanese Text
+	$D7FE1	(Line 10) (Top Half: MAP HI Bytes)
+	95	00	01	25 86	24	..	..	..	..	..82	25	..02	27	24	| Original Japanese Hex
+	$D7FEC	(Line 10) (Bottom Half: MAP HI Bytes)
+	95	00	01	25 86	24	..	..	..	..	..82	25	..02	27	24	FF	00	FF	00	B3	00	00	FF	| Original Japanese Hex
+	RLELEN	RLEBYTE	RLELEN	RLELEN	RLEBYTE	..	..	..	..	RLELEN	RLEBYTE	RAWLEN	..	..	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLELEN	RLEBYTE	RLEEND	#	| Original Japanese Text
+
+	$27237
+        13	FE	9A	| Memory Address

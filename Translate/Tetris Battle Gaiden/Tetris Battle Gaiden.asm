@@ -478,7 +478,7 @@ db " DOWNTOWN,"
 db "     TOKYO"
 db "    "
 
-// CHARACTER DESCRIPTIONS
+// CHARACTER DESCRIPTION
 origin $27222
   PC2LoROM(dl, HALLOWEENCharacterDescription)
   PC2LoROM(dl, MIRURUNCharacterDescription)
