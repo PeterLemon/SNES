@@ -294,6 +294,339 @@ PAUSE SCREEN PLAYER:
 	$11AFF
         47	A5	| Memory Address
 
+PAUSE SCREEN MAGIC:
+	ミルルン
+	Mirurun
+	$125DE
+	20	20	D0	D9	D9	DD	20	20	FF	| Original Japanese Hex
+	 	 	ミ	ル	ル	ン	 	 	#	| Original Japanese Text
+	$12588
+        DE	A5	| Memory Address
+
+	コピー
+	Copy
+	$125E7
+	20	20	20	BA	CBDF	B0	20	20	FF	| Original Japanese Hex
+	 	 	 	コ	ヒ o	ー	 	 	#	| Original Japanese Text
+	$1258A
+        E7	A5	| Memory Address
+
+	メデューサ
+	Medusa
+	$125F1
+	20	20	D2	C3DE	AD	B0	BB	20	FF	| Original Japanese Hex
+	 	 	メ	テ "	ュ	ー	サ	 	#	| Original Japanese Text
+	$1258C
+        F1	A5	| Memory Address
+
+	ボム
+	Bomb
+	$125FB
+	20	20	20	CEDE	D1	20	20	20	FF	| Original Japanese Hex
+	 	 	 	ホ "	ム	 	 	 	#	| Original Japanese Text
+	$1258E
+        FB	A5	| Memory Address
+
+	マヤカシ
+	Deception/Make-Believe/Fake/Counterfeit/Phony
+	$12605
+	20	20	CF	D4	B6	BC	20	20	FF	| Original Japanese Hex
+	 	 	マ	ヤ	カ	シ	 	 	#	| Original Japanese Text
+	$12590
+        05	A6	| Memory Address
+
+	ペンタリス
+	Pentris
+	$1260E
+	20	20	CDDF	DD	C0	D8	BD	20	FF	| Original Japanese Hex
+	 	 	ヘ o	ン	タ	リ	ス	 	#	| Original Japanese Text
+	$12592
+        0E	A6	| Memory Address
+
+	ダイナシ
+	Spoil/Destroy
+	$12618
+	20	20	C0DE	B2	C5	BC	20	20	FF	| Original Japanese Hex
+	 	 	タ "	イ	ナ	シ	 	 	#	| Original Japanese Text
+	$12594
+        18	A6	| Memory Address
+
+	フライ
+	Fry
+	$12622
+	20	20	20	CC	D7	B2	20	20	FF	| Original Japanese Hex
+	 	 	 	フ	ラ	イ	 	 	#	| Original Japanese Text
+	$12596
+        22	A6	| Memory Address
+
+	ノロイ
+	Curse
+	$1262B
+	20	20	20	C9	DB	B2	20	20	FF	| Original Japanese Hex
+	 	 	 	ノ	ロ	イ	 	 	#	| Original Japanese Text
+	$12598
+        2B	A6	| Memory Address
+
+	バンパイア
+	Vampire
+	$12634
+	20	20	CADE	DD	CADF	B2	B1	20	FF	| Original Japanese Hex
+	 	 	ハ "	ン	ハ o	イ	ア	 	#	| Original Japanese Text
+	$1259A
+        34	A6	| Memory Address
+
+	クリアー
+	Clear
+	$1263F
+	20	20	B8	D8	B1	B0	20	20	FF	| Original Japanese Hex
+	 	 	ク	リ	ア	ー	 	 	#	| Original Japanese Text
+	$1259C
+        3F	A6	| Memory Address
+
+	シーソー
+	Seesaw
+	$12648
+	20	20	BC	B0	BF	B0	20	20	FF	| Original Japanese Hex
+	 	 	シ	ー	ソ	ー	 	 	#	| Original Japanese Text
+	$1259E
+        48	A6	| Memory Address
+	$125A0
+        48	A6	| Memory Address
+	$125A2
+        48	A6	| Memory Address
+
+	カット
+	Cut
+	$12651
+	20	20	20	B6	AF	C4	20	20	FF	| Original Japanese Hex
+	 	 	 	カ	ッ	ト	 	 	#	| Original Japanese Text
+	$125A4
+        51	A6	| Memory Address
+
+	モーゼ
+	Moses
+	$1265A
+	20	20	20	D3	B0	BEDE	20	20	FF	| Original Japanese Hex
+	 	 	 	モ	ー	セ "	 	 	#	| Original Japanese Text
+	$125A6
+        5A	A6	| Memory Address
+
+	マンボ
+	Mambo
+	$12664
+	20	20	20	CF	DD	CEDE	20	20	FF	| Original Japanese Hex
+	 	 	 	マ	ン	ホ "	 	 	#	| Original Japanese Text
+	$125A8
+        64	A6	| Memory Address
+
+	スターダスト
+	Stardust
+	$1266E
+	20	BD	C0	B0	C0DE	BD	C4	20	FF	| Original Japanese Hex
+	 	ス	タ	ー	タ "	ス	ト	 	#	| Original Japanese Text
+	$125AA
+        6E	A6	| Memory Address
+
+	リバース
+	Reverse
+	$12678
+	20	20	D8	CADE	B0	BD	20	20	FF	| Original Japanese Hex
+	 	 	リ	ハ "	ー	ス	 	 	#	| Original Japanese Text
+	$125AC
+        78	A6	| Memory Address
+
+	マヒ
+	Paralyze
+	$12682
+	20	20	20	CF	CB	20	20	20	FF	| Original Japanese Hex
+	 	 	 	マ	ヒ	 	 	 	#	| Original Japanese Text
+	$125AE
+        82	A6	| Memory Address
+
+	カイテン
+	Rotate
+	$1268B
+	20	20	B6	B2	C3	DD	20	20	FF	| Original Japanese Hex
+	 	 	カ	イ	テ	ン	 	 	#	| Original Japanese Text
+	$125B0
+        8B	A6	| Memory Address
+
+	ヨセ
+	Yose
+	$12694
+	20	20	20	D6	BE	20	20	20	FF	| Original Japanese Hex
+	 	 	 	ヨ	セ	 	 	 	#	| Original Japanese Text
+	$125B2
+        94	A6	| Memory Address
+
+	ギャング 
+	Gang
+	$1269D
+	20	20	B7DE	AC	DD	B8DE	20	20	FF	| Original Japanese Hex
+	 	 	キ "	ャ	ン	ク "	 	 	#	| Original Japanese Text
+	$125B4
+        9D	A6	| Memory Address
+
+	ドトン
+	Earth Release
+	$126A8
+	20	20	20	C4DE	C4	DD	20	20	FF	| Original Japanese Hex
+	 	 	 	ト "	ト	ン	 	 	#	| Original Japanese Text
+	$125B6
+        A8	A6	| Memory Address
+
+	プレス
+	Press
+	$126B2
+	20	20	20	CCDF	DA	BD	20	20	FF	| Original Japanese Hex
+	 	 	 	フ o	レ	ス	 	 	#	| Original Japanese Text
+	$125B8
+        B2	A6	| Memory Address
+
+	ソル
+	Soul
+	$126BC
+	20	20	20	BF	D9	20	20	20	FF	| Original Japanese Hex
+	 	 	 	ソ	ル	 	 	 	#	| Original Japanese Text
+	$125BA
+        BC	A6	| Memory Address
+
+	スリトテ
+	Sirtet
+	$126C5
+	20	20	BD	D8	C4	C3	20	20	FF	| Original Japanese Hex
+	 	 	ス	リ	ト	テ	 	 	#	| Original Japanese Text
+	$125BC
+        C5	A6	| Memory Address
+
+	ファックス
+	Fax
+	$126CE
+	20	20	CC	A7	AF	B8	BD	20	FF	| Original Japanese Hex
+	 	 	フ	ァ	ッ	ク	ス	 	#	| Original Japanese Text
+	$125BE
+        CE	A6	| Memory Address
+
+	シールド
+	Shield
+	$126D7
+	20	20	BC	B0	D9	C4DE	20	20	FF	| Original Japanese Hex
+	 	 	シ	ー	ル	ト "	 	 	#	| Original Japanese Text
+	$125C0
+        D7	A6	| Memory Address
+
+	ミラー
+	Mirror
+	$126E1
+	20	20	20	D0	D7	B0	20	20	FF	| Original Japanese Hex
+	 	 	 	ミ	ラ	ー	 	 	#	| Original Japanese Text
+	$125C2
+        E1	A6	| Memory Address
+
+	ヘビー
+	Heavy
+	$126EA
+	20	20	20	CD	CBDE	B0	20	20	FF	| Original Japanese Hex
+	 	 	 	ヘ	ヒ "	ー	 	 	#	| Original Japanese Text
+	$125C4
+        EA	A6	| Memory Address
+
+	セレクト
+	Select
+	$126F4
+	20	20	BE	DA	B8	C4	20	20	FF	| Original Japanese Hex
+	 	 	セ	レ	ク	ト	 	 	#	| Original Japanese Text
+	$125C6
+        F4	A6	| Memory Address
+
+	ヌー
+	Gnu/Wildebeest/Nu/New/Noose
+	$126FD
+	20	20	20	C7	B0	20	20	20	FF	| Original Japanese Hex
+	 	 	 	ヌ	ー	 	 	 	#	| Original Japanese Text
+	$125C8
+        FD	A6	| Memory Address
+
+	リモコン
+	Remote Control
+	$12706
+	20	20	D8	D3	BA	DD	20	20	FF	| Original Japanese Hex
+	 	 	リ	モ	コ	ン	 	 	#	| Original Japanese Text
+	$125CA
+        06	A7	| Memory Address
+
+	ハンテン
+	Reversal/Reverse/Invert/Flip
+	$1270F
+	20	20	CA	DD	C3	DD	20	20	FF	| Original Japanese Hex
+	 	 	ハ	ン	テ	ン	 	 	#	| Original Japanese Text
+	$125CC
+        0F	A7	| Memory Address
+
+	ナカヨシ
+	Chum / Buddy / Friend / Heal
+	$12718
+	20	20	C5	B6	D6	BC	20	20	FF	| Original Japanese Hex
+	 	 	ナ	カ	ヨ	シ	 	 	#	| Original Japanese Text
+	$125CE
+        18	A7	| Memory Address
+
+	イノリ
+	Pray
+	$12721
+	20	20	20	B2	C9	D8	20	20	FF	| Original Japanese Hex
+	 	 	 	イ	ノ	リ	 	 	#	| Original Japanese Text
+	$125D0
+        21	A7	| Memory Address
+
+	ルーレット
+	Roulette
+	$1272A
+	20	20	D9	B0	DA	AF	C4	20	FF	| Original Japanese Hex
+	 	 	ル	ー	レ	ッ	ト	 	#	| Original Japanese Text
+	$125D2
+        2A	A7	| Memory Address
+
+	フィーバー
+	Fever
+	$12733
+	20	20	CC	A8	B0	CADE	B0	20	FF	| Original Japanese Hex
+	 	 	フ	ィ	ー	ハ "	ー	 	#	| Original Japanese Text
+	$125D4
+        33	A7	| Memory Address
+
+	チェンジ
+	Change
+	$1273D
+	20	20	C1	AA	DD	BCDE	20	20	FF	| Original Japanese Hex
+	 	 	チ	ェ	ン	シ "	 	 	#	| Original Japanese Text
+	$125D6
+        3D	A7	| Memory Address
+
+	ダブルス
+	Doubles
+	$12747
+	20	20	C0DE	CCDE	D9	BD	20	20	FF	| Original Japanese Hex
+	 	 	タ "	フ "	ル	ス	 	 	#	| Original Japanese Text
+	$125D8
+        47	A7	| Memory Address
+
+	ダーク
+	Dark
+	$12752
+	20	20	20	C0DE	B0	B8	20	20	FF	| Original Japanese Hex
+	 	 	 	タ "	ー	ク	 	 	#	| Original Japanese Text
+	$125DA
+        52	A7	| Memory Address
+
+	ハイパーフライ
+	HyperFry
+	$1275C
+	CA	B2	CADF	B0	CC	D7	B2	20	FF	| Original Japanese Hex
+	ハ	イ	ハ o	ー	フ	ラ	イ	 	#	| Original Japanese Text
+	$125DC
+        5C	A7	| Memory Address
+
 PAUSE SCREEN COMPUTER:
 	HALLOWEEN1:
 	キャハハハ!
@@ -857,3 +1190,5 @@ PAUSE SCREEN COMPUTER:
 	$12FE5	(Line 3)
 	BB	B1	3A	DC	C0	BC	C9	CF	B4	C6	CB	BBDE	CF	C2DE	B8	C9	D6	3A	FF	| Original Japanese Hex
 	さ	あ	!	わ	た	し	の	ま	え	に	ひ	さ "	ま	つ "	く	の	よ	!	#	| Original Japanese Text
+	$12A84
+        C7	AF	| Memory Address

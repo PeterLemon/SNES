@@ -215,6 +215,136 @@ QUEENPausePlayer:
   db "NOW FOR MY SPELLS!"
   db "THEN USE D-PAD UP!", $FF
 
+// PAUSE SCREEN MAGIC
+origin $12588
+  PC2LoROM(dw, PAUSEMAGICMirurun)
+  PC2LoROM(dw, PAUSEMAGICCopy)
+  PC2LoROM(dw, PAUSEMAGICMedusa)
+  PC2LoROM(dw, PAUSEMAGICBomb)
+  PC2LoROM(dw, PAUSEMAGICFake)
+  PC2LoROM(dw, PAUSEMAGICPentris)
+  PC2LoROM(dw, PAUSEMAGICDestroy)
+  PC2LoROM(dw, PAUSEMAGICFry)
+  PC2LoROM(dw, PAUSEMAGICCurse)
+  PC2LoROM(dw, PAUSEMAGICVampire)
+  PC2LoROM(dw, PAUSEMAGICClear)
+  PC2LoROM(dw, PAUSEMAGICSeesaw)
+  PC2LoROM(dw, PAUSEMAGICSeesaw)
+  PC2LoROM(dw, PAUSEMAGICSeesaw)
+  PC2LoROM(dw, PAUSEMAGICCut)
+  PC2LoROM(dw, PAUSEMAGICMoses)
+  PC2LoROM(dw, PAUSEMAGICMambo)
+  PC2LoROM(dw, PAUSEMAGICStardust)
+  PC2LoROM(dw, PAUSEMAGICReverse)
+  PC2LoROM(dw, PAUSEMAGICParalyze)
+  PC2LoROM(dw, PAUSEMAGICRotate)
+  PC2LoROM(dw, PAUSEMAGICYose)
+  PC2LoROM(dw, PAUSEMAGICGang)
+  PC2LoROM(dw, PAUSEMAGICEarth)
+  PC2LoROM(dw, PAUSEMAGICPress)
+  PC2LoROM(dw, PAUSEMAGICSoul)
+  PC2LoROM(dw, PAUSEMAGICSirtet)
+  PC2LoROM(dw, PAUSEMAGICFax)
+  PC2LoROM(dw, PAUSEMAGICShield)
+  PC2LoROM(dw, PAUSEMAGICMirror)
+  PC2LoROM(dw, PAUSEMAGICHeavy)
+  PC2LoROM(dw, PAUSEMAGICSelect)
+  PC2LoROM(dw, PAUSEMAGICGnu)
+  PC2LoROM(dw, PAUSEMAGICRemote)
+  PC2LoROM(dw, PAUSEMAGICInvert)
+  PC2LoROM(dw, PAUSEMAGICChum)
+  PC2LoROM(dw, PAUSEMAGICPray)
+  PC2LoROM(dw, PAUSEMAGICRoulette)
+  PC2LoROM(dw, PAUSEMAGICFever)
+  PC2LoROM(dw, PAUSEMAGICChange)
+  PC2LoROM(dw, PAUSEMAGICDoubles)
+  PC2LoROM(dw, PAUSEMAGICDark)
+  PC2LoROM(dw, PAUSEMAGICHyperfry)
+
+origin $125DE
+PAUSEMAGICMirurun:
+  db "MIRURUN ", $FF
+PAUSEMAGICCopy:
+  db "  COPY  ", $FF
+PAUSEMAGICMedusa:
+  db " MEDUSA ", $FF
+PAUSEMAGICBomb:
+  db "  BOMB  ", $FF
+PAUSEMAGICFake:
+  db "  FAKE  ", $FF
+PAUSEMAGICPentris:
+  db "PENTRIS ", $FF
+PAUSEMAGICDestroy:
+  db "DESTROY ", $FF
+PAUSEMAGICFry:
+  db "  FRY   ", $FF
+PAUSEMAGICCurse:
+  db " CURSE  ", $FF
+PAUSEMAGICVampire:
+  db "VAMPIRE ", $FF
+PAUSEMAGICClear:
+  db " CLEAR  ", $FF
+PAUSEMAGICSeesaw:
+  db " SEESAW ", $FF
+PAUSEMAGICCut:
+  db "  CUT   ", $FF
+PAUSEMAGICMoses:
+  db " MOSES  ", $FF
+PAUSEMAGICMambo:
+  db " MAMBO  ", $FF
+PAUSEMAGICStardust:
+  db "STARDUST", $FF
+PAUSEMAGICReverse:
+  db "REVERSE ", $FF
+PAUSEMAGICParalyze:
+  db "PARALYZE", $FF
+PAUSEMAGICRotate:
+  db " ROTATE ", $FF
+PAUSEMAGICYose:
+  db "  YOSE  ", $FF
+PAUSEMAGICGang:
+  db "  GANG  ", $FF
+PAUSEMAGICEarth:
+  db " EARTH  ", $FF
+PAUSEMAGICPress:
+  db " PRESS  ", $FF
+PAUSEMAGICSoul:
+  db "  SOUL  ", $FF
+PAUSEMAGICSirtet:
+  db " SIRTET ", $FF
+PAUSEMAGICFax:
+  db "  FAX   ", $FF
+PAUSEMAGICShield:
+  db " SHIELD ", $FF
+PAUSEMAGICMirror:
+  db " MIRROR ", $FF
+PAUSEMAGICHeavy:
+  db " HEAVY  ", $FF
+PAUSEMAGICSelect:
+  db " SELECT ", $FF
+PAUSEMAGICGnu:
+  db "  GNU   ", $FF
+PAUSEMAGICRemote:
+  db " REMOTE ", $FF
+PAUSEMAGICInvert:
+  db " INVERT ", $FF
+PAUSEMAGICChum:
+  db "  CHUM  ", $FF
+PAUSEMAGICPray:
+  db "  PRAY  ", $FF
+PAUSEMAGICRoulette:
+  db "ROULETTE", $FF
+PAUSEMAGICFever:
+  db " FEVER  ", $FF
+PAUSEMAGICChange:
+  db " CHANGE ", $FF
+PAUSEMAGICDoubles:
+  db "DOUBLES ", $FF
+PAUSEMAGICDark:
+  db "  DARK  ", $FF
+PAUSEMAGICHyperfry:
+  db "HYPERFRY", $FF
+
 // PAUSE SCREEN COMPUTER
 origin $12A4A
   PC2LoROM(dw, HALLOWEENPauseComputer1)
