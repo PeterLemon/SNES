@@ -295,6 +295,7 @@ PAUSE SCREEN PLAYER:
         47	A5	| Memory Address
 
 PAUSE SCREEN MAGIC:
+	MAGIC01:
 	ミルルン
 	Mirurun
 	$125DE
@@ -303,6 +304,7 @@ PAUSE SCREEN MAGIC:
 	$12588
         DE	A5	| Memory Address
 
+	MAGIC02:
 	コピー
 	Copy
 	$125E7
@@ -311,6 +313,7 @@ PAUSE SCREEN MAGIC:
 	$1258A
         E7	A5	| Memory Address
 
+	MAGIC03:
 	メデューサ
 	Medusa
 	$125F1
@@ -319,6 +322,7 @@ PAUSE SCREEN MAGIC:
 	$1258C
         F1	A5	| Memory Address
 
+	MAGIC04:
 	ボム
 	Bomb
 	$125FB
@@ -327,6 +331,7 @@ PAUSE SCREEN MAGIC:
 	$1258E
         FB	A5	| Memory Address
 
+	MAGIC05:
 	マヤカシ
 	Deception/Make-Believe/Fake/Counterfeit/Phony
 	$12605
@@ -335,6 +340,7 @@ PAUSE SCREEN MAGIC:
 	$12590
         05	A6	| Memory Address
 
+	MAGIC06:
 	ペンタリス
 	Pentris
 	$1260E
@@ -343,6 +349,7 @@ PAUSE SCREEN MAGIC:
 	$12592
         0E	A6	| Memory Address
 
+	MAGIC07:
 	ダイナシ
 	Spoil/Shamble/Destroy
 	$12618
@@ -351,6 +358,7 @@ PAUSE SCREEN MAGIC:
 	$12594
         18	A6	| Memory Address
 
+	MAGIC08:
 	フライ
 	Fry
 	$12622
@@ -359,6 +367,7 @@ PAUSE SCREEN MAGIC:
 	$12596
         22	A6	| Memory Address
 
+	MAGIC09:
 	ノロイ
 	Curse
 	$1262B
@@ -367,6 +376,7 @@ PAUSE SCREEN MAGIC:
 	$12598
         2B	A6	| Memory Address
 
+	MAGIC10:
 	バンパイア
 	Vampire
 	$12634
@@ -375,6 +385,7 @@ PAUSE SCREEN MAGIC:
 	$1259A
         34	A6	| Memory Address
 
+	MAGIC11:
 	クリアー
 	Clear
 	$1263F
@@ -383,6 +394,7 @@ PAUSE SCREEN MAGIC:
 	$1259C
         3F	A6	| Memory Address
 
+	MAGIC12:
 	シーソー
 	Seesaw
 	$12648
@@ -395,6 +407,7 @@ PAUSE SCREEN MAGIC:
 	$125A2
         48	A6	| Memory Address
 
+	MAGIC13:
 	カット
 	Cut
 	$12651
@@ -403,6 +416,7 @@ PAUSE SCREEN MAGIC:
 	$125A4
         51	A6	| Memory Address
 
+	MAGIC14:
 	モーゼ
 	Moses
 	$1265A
@@ -411,6 +425,7 @@ PAUSE SCREEN MAGIC:
 	$125A6
         5A	A6	| Memory Address
 
+	MAGIC15:
 	マンボ
 	Mambo
 	$12664
@@ -419,6 +434,7 @@ PAUSE SCREEN MAGIC:
 	$125A8
         64	A6	| Memory Address
 
+	MAGIC16:
 	スターダスト
 	Stardust
 	$1266E
@@ -427,6 +443,7 @@ PAUSE SCREEN MAGIC:
 	$125AA
         6E	A6	| Memory Address
 
+	MAGIC17:
 	リバース
 	Reverse
 	$12678
@@ -435,6 +452,7 @@ PAUSE SCREEN MAGIC:
 	$125AC
         78	A6	| Memory Address
 
+	MAGIC18:
 	マヒ
 	Paralyze
 	$12682
@@ -443,6 +461,7 @@ PAUSE SCREEN MAGIC:
 	$125AE
         82	A6	| Memory Address
 
+	MAGIC19:
 	カイテン
 	Rotate
 	$1268B
@@ -451,6 +470,7 @@ PAUSE SCREEN MAGIC:
 	$125B0
         8B	A6	| Memory Address
 
+	MAGIC20:
 	ヨセ
 	Yose
 	$12694
@@ -459,6 +479,7 @@ PAUSE SCREEN MAGIC:
 	$125B2
         94	A6	| Memory Address
 
+	MAGIC21:
 	ギャング 
 	Gang
 	$1269D
@@ -467,6 +488,7 @@ PAUSE SCREEN MAGIC:
 	$125B4
         9D	A6	| Memory Address
 
+	MAGIC22:
 	ドトン
 	Earth Release
 	$126A8
@@ -475,6 +497,7 @@ PAUSE SCREEN MAGIC:
 	$125B6
         A8	A6	| Memory Address
 
+	MAGIC23:
 	プレス
 	Press
 	$126B2
@@ -483,6 +506,7 @@ PAUSE SCREEN MAGIC:
 	$125B8
         B2	A6	| Memory Address
 
+	MAGIC24:
 	ソル
 	Soul
 	$126BC
@@ -491,6 +515,7 @@ PAUSE SCREEN MAGIC:
 	$125BA
         BC	A6	| Memory Address
 
+	MAGIC25:
 	スリトテ
 	Sirtet
 	$126C5
@@ -499,6 +524,7 @@ PAUSE SCREEN MAGIC:
 	$125BC
         C5	A6	| Memory Address
 
+	MAGIC26:
 	ファックス
 	Fax
 	$126CE
@@ -507,6 +533,7 @@ PAUSE SCREEN MAGIC:
 	$125BE
         CE	A6	| Memory Address
 
+	MAGIC27:
 	シールド
 	Shield
 	$126D7
@@ -515,6 +542,7 @@ PAUSE SCREEN MAGIC:
 	$125C0
         D7	A6	| Memory Address
 
+	MAGIC28:
 	ミラー
 	Mirror
 	$126E1
@@ -523,6 +551,7 @@ PAUSE SCREEN MAGIC:
 	$125C2
         E1	A6	| Memory Address
 
+	MAGIC29:
 	ヘビー
 	Heavy
 	$126EA
@@ -531,6 +560,7 @@ PAUSE SCREEN MAGIC:
 	$125C4
         EA	A6	| Memory Address
 
+	MAGIC30:
 	セレクト
 	Select
 	$126F4
@@ -539,6 +569,7 @@ PAUSE SCREEN MAGIC:
 	$125C6
         F4	A6	| Memory Address
 
+	MAGIC31:
 	ヌー
 	Gnu/Wildebeest/Nu/New/Noose
 	$126FD
@@ -547,6 +578,7 @@ PAUSE SCREEN MAGIC:
 	$125C8
         FD	A6	| Memory Address
 
+	MAGIC32:
 	リモコン
 	Remote Control
 	$12706
@@ -555,6 +587,7 @@ PAUSE SCREEN MAGIC:
 	$125CA
         06	A7	| Memory Address
 
+	MAGIC33:
 	ハンテン
 	Reversal/Reverse/Invert/Flip
 	$1270F
@@ -563,6 +596,7 @@ PAUSE SCREEN MAGIC:
 	$125CC
         0F	A7	| Memory Address
 
+	MAGIC34:
 	ナカヨシ
 	Chum / Buddy / Friend / Heal
 	$12718
@@ -571,6 +605,7 @@ PAUSE SCREEN MAGIC:
 	$125CE
         18	A7	| Memory Address
 
+	MAGIC35:
 	イノリ
 	Pray
 	$12721
@@ -579,6 +614,7 @@ PAUSE SCREEN MAGIC:
 	$125D0
         21	A7	| Memory Address
 
+	MAGIC36:
 	ルーレット
 	Roulette
 	$1272A
@@ -587,6 +623,7 @@ PAUSE SCREEN MAGIC:
 	$125D2
         2A	A7	| Memory Address
 
+	MAGIC37:
 	フィーバー
 	Fever
 	$12733
@@ -595,6 +632,7 @@ PAUSE SCREEN MAGIC:
 	$125D4
         33	A7	| Memory Address
 
+	MAGIC38:
 	チェンジ
 	Change
 	$1273D
@@ -603,6 +641,7 @@ PAUSE SCREEN MAGIC:
 	$125D6
         3D	A7	| Memory Address
 
+	MAGIC39:
 	ダブルス
 	Doubles
 	$12747
@@ -611,6 +650,7 @@ PAUSE SCREEN MAGIC:
 	$125D8
         47	A7	| Memory Address
 
+	MAGIC40:
 	ダーク
 	Dark
 	$12752
@@ -619,6 +659,7 @@ PAUSE SCREEN MAGIC:
 	$125DA
         52	A7	| Memory Address
 
+	MAGIC41:
 	ハイパーフライ
 	HyperFry
 	$1275C
@@ -1192,5 +1233,3 @@ PAUSE SCREEN COMPUTER:
 	さ	あ	!	わ	た	し	の	ま	え	に	ひ	さ "	ま	つ "	く	の	よ	!	#	| Original Japanese Text
 	$12A84
         C7	AF	| Memory Address
-
-
