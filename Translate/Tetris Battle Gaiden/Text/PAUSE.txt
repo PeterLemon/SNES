@@ -344,7 +344,7 @@ PAUSE SCREEN MAGIC:
         0E	A6	| Memory Address
 
 	ダイナシ
-	Spoil/Destroy
+	Spoil/Shamble/Destroy
 	$12618
 	20	20	C0DE	B2	C5	BC	20	20	FF	| Original Japanese Hex
 	 	 	タ "	イ	ナ	シ	 	 	#	| Original Japanese Text
@@ -1192,3 +1192,5 @@ PAUSE SCREEN COMPUTER:
 	さ	あ	!	わ	た	し	の	ま	え	に	ひ	さ "	ま	つ "	く	の	よ	!	#	| Original Japanese Text
 	$12A84
         C7	AF	| Memory Address
+
+
