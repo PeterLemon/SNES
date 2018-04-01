@@ -130,9 +130,9 @@ seek($8000); Start:
   lda.b #%00001000 // DCBAPMMM: M = Mode, P = Priority, ABCD = BG1,2,3,4 Tile Size
   sta.w REG_BGMODE // $2105: BG Mode 0, Priority 1, BG1 8x8 Tiles
 
-  // Setup BG1 256 Color Background
-  lda.b #%11111100  // AAAAAASS: S = BG Map Size, A = BG Map Address
-  sta.w REG_BG1SC   // $2108: BG1 32x32, BG1 Map Address = $3F (VRAM Address / $400)
+  // Setup BG1 4 Color Background
+  lda.b #%01111100  // AAAAAASS: S = BG Map Size, A = BG Map Address
+  sta.w REG_BG1SC   // $2108: BG1 32x32, BG1 Map Address = $1F (VRAM Address / $400)
   lda.b #%00000000  // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
   sta.w REG_BG12NBA // $210B: BG1 Tile Address = $0 (VRAM Address / $1000)
 
@@ -150,7 +150,7 @@ seek($8000); Start:
   // Copy GSU Code To Cache
   rep #$20 // Set 16-Bit Accumulator
   stz.w GSU_SFR // GSU GO=0 (SFR=$0000)
-  lda.w #GSUROMEnd-GSUROM // A = Length
+  lda.w #(GSUROMEnd-GSUROM)-1 // A = Length
   ldx.w #GSUROM // X = Source
   ldy.w #$3100 // Y = Destination
   mvn $00=$00 // Block Move Bytes To WRAM + CPURAM

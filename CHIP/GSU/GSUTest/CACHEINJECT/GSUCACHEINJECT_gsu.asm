@@ -20,12 +20,4 @@ GSUStart:
   stop // Stop GSU
   nop // Delay Slot
 
-  nop // PAD Cache Line (16 Bytes) 
-  nop
-  nop
-  nop
-  nop
-  nop
-  nop
-  nop
-  nop // END OF Cache Line
+  fill 10 // PAD Cache Line (16 Bytes)
