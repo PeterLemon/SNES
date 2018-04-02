@@ -18,7 +18,7 @@ seek($8000); Start:
 
   // Copy CPU Code To WRAM
   rep #$20 // Set 16-Bit Accumulator
-  lda.w #CPURAMEnd-CPURAM // A = Length
+  lda.w #(CPURAMEnd-CPURAM)-1 // A = Length
   ldx.w #CPURAM // X = Source
   ldy.w #CPURAM // Y = Destination
   mvn $7E=$00 // Block Move Bytes To WRAM + CPURAM
@@ -51,8 +51,8 @@ CPURAM: // CPU Program Code To Be Run From RAM
   sta.w REG_BGMODE // $2105: BG Mode 3, Priority 1, BG2 8x8 Tiles
 
   // Setup BG2 16 Color Background
-  lda.b #%11111100  // AAAAAASS: S = BG Map Size, A = BG Map Address
-  sta.w REG_BG2SC   // $2108: BG2 32x32, BG2 Map Address = $3F (VRAM Address / $400)
+  lda.b #%01111100  // AAAAAASS: S = BG Map Size, A = BG Map Address
+  sta.w REG_BG2SC   // $2108: BG2 32x32, BG2 Map Address = $1F (VRAM Address / $400)
   lda.b #%00000000  // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
   sta.w REG_BG12NBA // $210B: BG2 Tile Address = $0 (VRAM Address / $1000)
 
@@ -73,7 +73,7 @@ CPURAM: // CPU Program Code To Be Run From RAM
 
   stz.w GSU_SCBR // Set Screen Base ($3038)
   stz.w GSU_PBR // Set Program Code Bank ($3034)
-  stz.w GSU_ROMBR // Set Game PAK RAM Bank ($3036)
+  stz.w GSU_ROMBR // Set Game PAK ROM Bank ($3036)
   stz.w GSU_RAMBR // Set Game PAK RAM Bank ($303C)
 
   lda.b #(GSU_RON|GSU_RAN|GSU_SCMR_4BPP|GSU_SCMR_H160) // Screen Size Mode
