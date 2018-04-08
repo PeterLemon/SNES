@@ -99,6 +99,695 @@
 	$117EE
         36	98	| Memory Address
 
+// PAUSE SCREEN MAGIC DESCRIPTION
+	MAGIC01:
+	ぼくのフィールドにあるブロックを
+	Lower the blocks in my field/wall
+	$11B01	(Line 1)
+	24CEDE	B8	C9	23CC	A8	B0	D9	C4DE	24C6	B1	D9	23CCDE	DB	AF	B8	24A6	25	| Original Japanese Hex
+	# ほ "	く	の	# フ	ィ	ー	ル	ト "	# に	あ	る	# フ "	ロ	ッ	ク	# を	NL	| Original Japanese Text
+	4ラインさげるんだ!
+	by 4 lines!
+	$11B1A	(Line 2)
+	2334	D7	B2	DD	24BB	B9DE	D9	DD	C0DE	3A	FF	| Original Japanese Hex
+	# 4	ラ	イ	ン	# さ	け "	る	ん	た "	!	#	| Original Japanese Text
+	$11A95
+        01	9B	| Memory Address
+
+	MAGIC02:
+	わたしのフィールドを、あいての
+	Make my field the same as
+	$11B29	(Line 1)
+	24DC	C0	BC	C9	23CC	A8	B0	D9	C4DE	24A6	A4	B1	B2	C3	C9	25	| Original Japanese Hex
+	# わ	た	し	の	# フ	ィ	ー	ル	ト "	# を	、	あ	い	て	の	NL	| Original Japanese Text
+	フィールドとおなじものにするのよ。
+	the opponent 's field.
+	$11B3D	(Line 2)
+	23CC	A8	B0	D9	C4DE	24C4	B5	C5	BCDE	D3	C9	C6	BD	D9	C9	D6	A1	FF	| Original Japanese Hex
+	# フ	ィ	ー	ル	ト "	# と	お	な	し "	も	の	に	す	る	の	よ	。	#	| Original Japanese Text
+	$11A97
+        29	9B	| Memory Address
+
+	MAGIC03:
+	バテレンようじゅつイシガタメ!
+	Veteran Ishigatame!
+	$11B53	(Line 1)
+	23CADE	C3	DA	DD	24D6	B3	BCDE	AD	C2	23B2	BC	B6DE	C0	D2	3A	2425	| Original Japanese Hex
+	# ハ "	テ	レ	ン	# よ	う	し "	ゅ	つ	# イ	シ	カ "	タ	メ	!	# NL	| Original Japanese Text
+	これであいてのブロックはすベてイシに
+	This will turn all the opponent's blocks
+	$11B6A	(Line 2)
+	BA	DA	C3DE	B1	B2	C3	C9	23CCDE	DB	AF	B8	24CA	BD	CDDE	C3	23B2	BC	24C6	| Original Japanese Hex
+	こ	れ	て "	あ	い	て	の	# フ "	ロ	ッ	ク	# は	す	へ "	て	# イ	シ	# に	| Original Japanese Text
+	してやるゼ!
+	into stone!
+	$11B83	(Line 3)
+	BC	C3	D4	D9	23BEDE	3A	FF	| Original Japanese Hex
+	し	て	や	る	# セ "	!	#	| Original Japanese Text
+	$11A99
+        53	9B	| Memory Address
+
+	MAGIC04:
+	ヒッサツのバクダンをなげこんで、あい
+	Lay down a bunch of bombs and
+	$11B8C	(Line 1)
+	23CB	AF	BB	C2	24C9	23CADE	B8	C0DE	DD	24A6	C5	B9DE	BA	DD	C3DE	A4	B1	B2	| Original Japanese Hex
+	# ヒ	ッ	サ	ツ	# の	# ハ "	ク	タ "	ン	# を	な	け "	こ	ん	て "	、	あ	い	| Original Japanese Text
+	てのフィールドをあなだらけにするんだ
+	blow up the opponent's field
+	$11BA6	(Line 2)
+	C3	C9	23CC	A8	B0	D9	C4DE	24A6	B1	C5	C0DE	D7	B9	C6	BD	D9	DD	C0DE	| Original Japanese Hex
+	て	の	# フ	ィ	ー	ル	ト "	# を	あ	な	た "	ら	け	に	す	る	ん	た "	| Original Japanese Text
+	キャハハハッ!
+	Cahahahaha!
+	$11BBD	(Line 3)
+	23B7	AC	CA	CA	CA	AF	3A	FF	| Original Japanese Hex
+	# キ	ャ	ハ	ハ	ハ	ッ	!	#	| Original Japanese Text
+	$11A9B
+        8C	9B	| Memory Address
+
+	MAGIC05:
+	Fakes the opponent's
+	にんぽうマヤカシのジュツであいての
+	$11BC6	(Line 1)
+	24C6	DD	CEDF	B3	23CF	D4	B6	BC	24C9	23BCDE	AD	C2	24C3DE	B1	B2	C3	C9	25	| Original Japanese Hex
+	# に	ん	ほ o	う	# マ	ヤ	カ	シ	# の	# シ "	ュ	ツ	# て "	あ	い	て	の	NL	| Original Japanese Text
+	ネクストブロックをマヤカすゼ!
+	next blocks!
+	$11BE0	(Line 2)
+	23C8	B8	BD	C4	CCDE	DB	AF	B8	24A6	23CF	D4	B6	24BD	23BEDE	3A	FF	| Original Japanese Hex
+	# ネ	ク	ス	ト	フ "	ロ	ッ	ク	# を	# マ	ヤ	カ	# す	# セ "	!	#	| Original Japanese Text
+	$11A9D
+        C6	9B	| Memory Address
+
+	MAGIC06:
+	あいてのフィールドを5ライン
+	I can add 5 lines to
+	$11BF7	(Line 1)
+	24B1	B2	C3	C9	23CC	A8	B0	D9	C4DE	24A6	2335	D7	B2	DD	2425	| Original Japanese Hex
+	# あ	い	て	の	# フ	ィ	ー	ル	ト "	# を	# 5	ラ	イ	ン	# NL	| Original Japanese Text
+	あげちゃうことができるんだ。
+	the opponent's field.
+	$11C0C	(Line 2)
+	B1	B9DE	C1	AC	B3	BA	C4	B6DE	C3DE	B7	D9	DD	C0DE	A1	FF	| Original Japanese Hex
+	あ	け "	ち	ゃ	う	こ	と	か "	て "	き	る	ん	た "	。	#	| Original Japanese Text
+	$11A9F
+        F7	9B	| Memory Address
+
+	MAGIC07:
+	オレのにんぽうクモのイトはあいてが
+	My spider web will hold
+	$11C1F	(Line 1)
+	23B5	DA	24C9	C6	DD	CEDF	B3	23B8	D3	24C9	23B2	C4	24CA	B1	B2	C3	B6DE	25	| Original Japanese Hex
+	# オ	レ	# の	に	ん	ほ o	う	# ク	モ	# の	# イ	ト	# は	あ	い	て	か "	NL	| Original Japanese Text
+	ラインをそろえてもブロックが
+	up your enemies blocks even
+	$11C39	(Line 2)
+	23D7	B2	DD	24A6	BF	DB	B4	C3	D3	23CCDE	DB	AF	B8	24B6DE	25	| Original Japanese Hex
+	# ラ	イ	ン	# を	そ	ろ	え	て	も	# フ "	ロ	ッ	ク	# か "	NL	| Original Japanese Text
+	おとせなくなるゼ
+	after they have cleared lines below!
+	$11C4E	(Line 3)
+	B5	C4	BE	C5	B8	C5	D9	23BEDE	3A	FF	| Original Japanese Hex
+	お	と	せ	な	く	な	る	# セ "	!	#	| Original Japanese Text
+	$11AA1
+        1F	9C	| Memory Address
+
+	MAGIC08:
+	オイラのフィールドのした3ラインの
+	I will cook/burn 3 lines
+	$11C5A	(Line 1)
+	23B5	B2	D7	24C9	23CC	A8	B0	D9	C4DE	24C9	BC	C0	2333	D7	B2	DD	24C9	25	| Original Japanese Hex
+	# オ	イ	ラ	# の	# フ	ィ	ー	ル	ト "	# の	し	た	# 3	ラ	イ	ン	# の	NL	| Original Japanese Text
+	アナがうまるんだ!
+	on the field!
+	$11C73	(Line 2)
+	23B1	C5	24B6DE	B3	CF	D9	DD	C0DE	3A	25	| Original Japanese Hex
+	# ア	ナ	# か "	う	ま	る	ん	た "	!	NL	| Original Japanese Text
+	ないときはむりやりうめるぞ!
+	Add some weight to see them go!
+	$11C81	(Line 3)
+	C5	B2	C4	B7	CA	D1	D8	D4	D8	B3	D2	D9	BFDE	3A	FF	| Original Japanese Hex
+	な	い	と	き	は	む	り	や	り	う	め	る	そ "	!	#	| Original Japanese Text
+	$11AA3
+        5A	9C	| Memory Address
+
+	MAGIC09:
+	ドロドロガォー
+	Doro doro ga-o
+	$11C91	(Line 1)
+	23C4DE	DB	C4DE	DB	B6DE	AB	B0	2425	| Original Japanese Hex
+	# ト "	ロ	ト "	ロ	カ "	ォ	ー	# NL	| Original Japanese Text
+	いみ、あいてにノロイをかけ
+	I will add blocks of stone
+	$11C9E	(Line 2)
+	B2	D0	A4	B1	B2	C3	C6	23C9	DB	B2	24A6	B6	B9	25	| Original Japanese Hex
+	い	み	、	あ	い	て	に	# ノ	ロ	イ	# を	か	け	NL	| Original Japanese Text
+	せきかブロックをおくります。
+	as soon as possible.
+	$11CAE	(Line 3)
+	BE	B7	B6	23CCDE	DB	AF	B8	24A6	B5	B8	D8	CF	BD	A1	FF	| Original Japanese Hex
+	せ	き	か	# フ "	ロ	ッ	ク	# を	お	く	り	ま	す	。	#	| Original Japanese Text
+	$11AA5
+        91	9C	| Memory Address
+
+	MAGIC10:
+	あいてのクリスタルパワーをオイラのも
+	Steal/Suck crystal power
+	$11CC0	(Line 1)
+	24B1	B2	C3	C9	23B8	D8	BD	C0	D9	CADF	DC	B0	24A6	23B5	B2	D7	24C9	D3	| Original Japanese Hex
+	# あ	い	て	の	# ク	リ	ス	タ	ル	ハ o	ワ	ー	# を	# オ	イ	ラ	# の	も	| Original Japanese Text
+	のにするんだ。
+	from your enemy.
+	$11CD8	(Line 2)
+	C9	C6	BD	D9	DD	C0DE	A1	FF	| Original Japanese Hex
+	の	に	す	る	ん	た "	。	#	| Original Japanese Text
+	$11AA7
+        C0	9C	| Memory Address
+
+	MAGIC11:
+	これでわたくしのフィールドのブロック
+	With this, all the blocks
+	$11CE1	(Line 1)
+	24BA	DA	C3DE	DC	C0	B8	BC	C9	23CC	A8	B0	D9	C4DE	24C9	23CCDE	DB	AF	B8	| Original Japanese Hex
+	# こ	れ	て "	わ	た	く	し	の	# フ	ィ	ー	ル	ト "	# の	# フ "	ロ	ッ	ク	| Original Japanese Text
+	はすべてきえさるのよ!
+	of my field are gone!
+	$11CFA	(Line 2)
+	24CA	BD	CDDE	C3	B7	B4	BB	D9	C9	D6	3A	25	| Original Japanese Hex
+	# は	す 	へ "	て	き	え	さ	る	の	よ	!	NL	| Original Japanese Text
+	なぁーんてすばらしいんでしょう!
+	What a wonderful thing!
+	$11D08	(Line 3)
+	C5	A7	B0	DD	C3	BD	CADE	D7	BC	B2	DD	C3DE	BC	AE	B3	3A	FF	| Original Japanese Hex
+	な	ぁ	ー	ん	て	す	は "	ら	し	い	ん	て "	し	ょ	う	!	#	| Original Japanese Text
+	$11AA9
+        E1	9C	| Memory Address
+
+	MAGIC12:
+	ボクのフィールドのした2ラインを
+	I'm going to give a present
+	$11D1B	(Line 1)
+	23CEDE	B8	24C9	23CC	A8	B0	D9	C4DE	24C9	BC	C0	2332	D7	B2	DD	24A6	25	| Original Japanese Hex
+	# ホ "	ク	# の	# フ	ィ	ー	ル	ト "	# の	し	た	# 2	ラ	イ	ン	# を	NL	| Original Japanese Text
+	あいてにフoレゼントしてしまうのだ。
+	of 2 lines from my field.
+	$11D34	(Line 2)
+	B1	B2	C3	C6	23CCDF	DA	BEDE	DD	C4	24BC	C3	BC	CF	B3	C9	C0DE	A1	FF	| Original Japanese Hex
+	あ	い	て	に	# フ o	レ	セ "	ン	ト	# し	て	し	ま	う	の	た "	。	#	| Original Japanese Text
+	$11AAB
+        1B	9D	| Memory Address
+	$11AAD
+        1B	9D	| Memory Address
+	$11AAF
+        1B	9D	| Memory Address
+
+	MAGIC13:
+	あっしのイアイぎりでじぶんの
+	I cut off 4 lines of blocks
+	$11D4B	(Line 1)
+	24B1	AF	BC	C9	23B2	B1	B2	24B7DE	D8	C3DE	BCDE	CCDE	DD	C9	25	| Original Japanese Hex
+	# あ	っ	し	の	# イ	ア	イ	# き "	り	て "	し "	ふ "	ん	の	NL	| Original Japanese Text
+	フィールドのブロックうえ4ラインを
+	at the end of my current
+	$11D61	(Line 2)
+	23CC	A8	B0	D9	C4DE	24C9	23CCDE	DB	AF	B8	24B3	B4	2334	D7	B2	DD	24A6	25	| Original Japanese Hex
+	# フ	ィ	ー	ル	ト "	# の	# フ "	ロ	ッ	ク	# う	え	# 4	ラ	イ	ン	# を	NL	| Original Japanese Text
+	きるでござる。
+	field.
+	$11D7B	(Line 3)
+	B7	D9	C3DE	BADE	BBDE	D9	A1	FF	| Original Japanese Hex
+	き	る	て "	こ "	さ "	る	。	#	| Original Japanese Text
+	$11AB1
+        4B	9D	| Memory Address
+
+	MAGIC14:
+	ンボビババフン
+	Nbobi baba fun
+	$11D86	(Line 1)
+	23DD	CEDE	CBDE	CADE	CADE	CC	DD	25	| Original Japanese Hex
+	# ン	ホ "	ヒ "	ハ "	ハ "	フ	ン	NL	| Original Japanese Text
+	いみ、じぶんのフィールドのブロックを
+	This will split the blocks
+	$11D93	(Line 2)
+	24B2	D0	A4	24BCDE	CCDE	DD	C9	23CC	A8	B0	D9	C4DE	24C9	23CCDE	DB	AF	B8	24A6	| Original Japanese Hex
+	# い	み	、	# し "	ふ "	ん	の	# フ	ィ	ー	ル	ト "	# の	# フ "	ロ	ッ	ク	# を	| Original Japanese Text
+	サユウによせます。
+	down the middle of my field.
+	$11DAF	(Line 3)
+	23BB	D5	B3	24C6	D6	BE	CF	BD	A1	FF	| Original Japanese Hex
+	# サ	ユ	ウ	# に	よ	せ	ま	す	。	#	| Original Japanese Text
+	$11AB3
+        86	9D	| Memory Address
+
+	MAGIC15:
+	あいてフィールドのブロックたちが
+	With this, the blocks in the field
+	$11DBB	(Line 1)
+	24B1	B2	C3	23CC	A8	B0	D9	C4DE	24C9	23CCDE	DB	AF	B8	24C0	C1	B6DE	25	| Original Japanese Hex
+	# あ	い	て	# フ	ィ	ー	ル	ト "	# の	# フ "	ロ	ッ	ク	# た	ち	か "	NL	| Original Japanese Text
+	おどってメチャクチャになるんだー
+	dance and become messy
+	$11DD4	(Line 2)
+	B5	C4DE	AF	C3	23D2	C1	AC	B8	C1	AC	24C6	C5	D9	DD	C0DE	B0	FF	| Original Japanese Hex
+	お	と "	っ	て	# メ	チ	ャ	ク	チ	ャ	# に	な	る	ん	た "	ー	#	| Original Japanese Text
+	$11AB5
+        BB	9D	| Memory Address
+
+	MAGIC16:
+	おほしさまがふってきてブロックを
+	Shooting stars rain down
+	$11DE9	(Line 1)
+	24B5	CE	BC	BB	CF	B6DE	CC	AF	C3	B7	C3	23CCDE	DB	AF	B8	24A6	25	| Original Japanese Hex
+	# お	ほ	し	さ	ま	か "	ふ	っ	て	き	て	# フ "	ロ	ッ	ク	# を	NL	| Original Japanese Text
+	さげてくれるんだー
+	lowering the blocks.
+	$11DFF	(Line 2)
+	BB	B9DE	C3	B8	DA	D9	DD	C0DE	B0	FF	| Original Japanese Hex
+	さ	け "	て	く	れ	る	ん	た "	ー	#	| Original Japanese Text
+	$11AB7
+        E9	9D	| Memory Address
+
+	MAGIC17:
+	これであいてのサユウいどうサユウかい
+	This will reverse the controls
+	$11E0B	(Line 1)
+	24BA	DA	C3DE	B1	B2	C3	C9	23BB	D5	B3	24B2	C4DE	B3	23BB	D5	B3	24B6	B2	| Original Japanese Hex
+	# こ	れ	て "	あ	い	て	の	# サ	ユ	ウ	# い	と "	う	# サ	ユ	ウ	# か	い	| Original Japanese Text
+	てんがさかさになるのよ!
+	of your opponent!
+	$11E24	(Line 2)
+	C3	DD	B6DE	BB	B6	BB	C6	C5	D9	C9	D6	3A	25	| Original Japanese Hex
+	て	ん	か "	さ	か	さ	に	な	る	の	よ	!	NL	| Original Japanese Text
+	ホーホッホッ!
+	Ho Ho!
+	$11E32	(Line 3)
+	23CE	B0	CE	AF	CE	AF	3A	FF	| Original Japanese Hex
+	# ホ	ー	ホ	ッ	ホ	ッ	!	#	| Original Japanese Text
+	$11AB9
+        0B	9E	| Memory Address
+
+	MAGIC18:
+	わたしのまほうであいてのらっか
+	With my wish I will hold the blocks
+	$11E3B	(Line 1)
+	24DC	C0	BC	C9	CF	CE	B3	C3DE	B1	B2	C3	C9	D7	AF	B6	25	| Original Japanese Hex
+	# わ	た	し	の	ま	ほ	う	て "	あ	い	て	の	ら	っ	か	NL	| Original Japanese Text
+	ブロックのかいてんをとめてしまうのよ
+	on the field of the opponent.
+	$11E4D	(Line 2)
+	23CCDE	DB	AF	B8	24C9	B6	B2	C3	DD	A6	C4	D2	C3	BC	CF	B3	C9	D6	FF	| Original Japanese Hex
+	# フ "	ロ	ッ	ク	# の	か	い	て	ん	を	と	め	て	し	ま	う	の	よ	#	| Original Japanese Text
+	$11ABB
+        3B	9E	| Memory Address
+
+	MAGIC19:
+	ビビロンツイツイ
+	Bi-bi Ron tsui-tsui
+	$11E63	(Line 1)
+	23CBDE	CBDE	DB	DD	C2	B2	C2	B2	25	| Original Japanese Hex
+	# ヒ "	ヒ "	ロ	ン	ツ	イ	ツ	イ	NL	| Original Japanese Text
+	いみ、あいてのカイテンがおもう
+	This will speed up the block rotation
+	$11E6F	(Line 2)
+	24B2	D0	A4	24B1	B2	C3	C9	23B6	B2	C3	DD	24B6DE	B5	D3	B3	25	| Original Japanese Hex
+	# い	み	、	# あ	い	て	の	# カ	イ	テ	ン	# か "	お	も	う	NL	| Original Japanese Text
+	ようにできなくなります。
+	of my opponent.
+	$11E84	(Line 3)
+	D6	B3	C6	C3DE	B7	C5	B8	C5	D8	CF	BD	A1	FF	| Original Japanese Hex
+	よ	う	に	て "	き	な	く	な	り	ま	す	。	#	| Original Japanese Text
+	$11ABD
+        63	9E	| Memory Address
+
+	MAGIC20:
+	オレのにんほoうツムジカゼでフィールド
+	I'm going to hide the holes in my field
+	$11E92	(Line 1)
+	23B5	DA	24C9	C6	DD	CEDF	B3	23C2	D1	BCDE	B6	BEDE	24C3DE	23CC	A8	B0	D9	C4DE	| Original Japanese Hex
+	# オ	レ	# の	に	ん	ほ o	う	# ツ	ム	シ "	カ	セ "	# て "	# フ	ィ	ー	ル	ト "	| Original Japanese Text
+	のブロックをハジによせるゼ!
+	with wind!
+	$11EAE	(Line 2)
+	24C9	23CCDE	DB	AF	B8	24A6	23CA	BCDE	24C6	D6	BE	D9	23BEDE	3A	FF	| Original Japanese Hex
+	# の	# フ "	ロ	ッ	ク	# を	# ハ	シ "	# に	よ	せ	る	# セ "	!	#	| Original Japanese Text
+	$11ABF
+        92	9E	| Memory Address
+
+	MAGIC21:
+	ギャングさんたちがあいてフィールドの
+	A gang will come and steal the crystals
+	$11EC6	(Line 1)
+	23B7DE	AC	DD	B8DE	24BB	DD	C0	C1	B6DE	B1	B2	C3	23CC	A8	B0	D9	C4DE	24C9	| Original Japanese Hex
+	# キ "	ャ	ン	ク "	# さ	ん	た	ち	か "	あ	い	て	# フ	ィ	ー	ル	ト "	# の	| Original Japanese Text
+	クリスタルをとってきてくれるんだー
+	from the opponent's field.
+	$11EE0	(Line 2)
+	23B8	D8	BD	C0	D9	24A6	C4	AF	C3	B7	C3	B8	DA	D9	DD	C0DE	B0	FF	| Original Japanese Hex
+	# ク	リ	ス	タ	ル	# を	と	っ	て	き	て	く	れ	る	ん	た "	ー	#	| Original Japanese Text
+	$11AC1
+        C6	9E	| Memory Address
+
+	MAGIC22:
+	あっしのカタナでブロックをきりつけ
+	I cut off the block with a katana
+	$11EF5	(Line 1)
+	24B1	AF	BC	C9	23B6	C0	C5	24C3DE	23CCDE	DB	AF	B8	24A6	B7	D8	C2	B9	25	| Original Japanese Hex
+	# あ	っ	し	の	# カ	タ	ナ	# て "	# フ "	ロ	ッ	ク	# を	き	り	つ	け	NL	| Original Japanese Text
+	ブロックをトクシュレンサじょうたいに
+	of the day and I will make the
+	$11F0E	(Line 2)
+	23CCDE	DB	AF	B8	24A6	23C4	B8	BC	AD	DA	DD	BB	24BCDE	AE	B3	C0	B2	C6	| Original Japanese Hex
+	# フ "	ロ	ッ	ク	# を	# ト	ク	シ	ュ	レ	ン	サ	# し "	ょ	う	た	い	に	| Original Japanese Text
+	するでござる。
+	blocks into rensa mode.
+	$11F26	(Line 3)
+	BD	D9	C3DE	BADE	BBDE	D9	A1	FF	| Original Japanese Hex
+	す	る	て "	こ "	さ "	る	。	#	| Original Japanese Text
+	$11AC3
+        F5	9E	| Memory Address
+
+	MAGIC23:
+	オレさまのキョウリョクなチカラで
+	I will crush the field blocks
+	$11F31	(Line 1)
+	23B5	DA	24BB	CF	C9	23B7	AE	B3	D8	AE	B8	24C5	23C1	B6	D7	24C3DE	25	| Original Japanese Hex
+	# オ	レ	# さ	ま	の	# キ	ョ	ウ	リ	ョ	ク	# な	# チ	カ	ラ	# て "	NL	| Original Japanese Text
+	フィールドのブロックをつぶすのだ!
+	with my mighty power!
+	$11F49	(Line 2)
+	23CC	A8	B0	D9	C4DE	24C9	23CCDE	DB	AF	B8	24A6	C2	CCDE	BD	C9	C0DE	3A	FF	| Original Japanese Hex
+	# フ	ィ	ー	ル	ト "	# の	# フ "	ロ	ッ	ク	# を	つ	ふ "	す	の	た "	!	#	| Original Japanese Text
+	$11AC5
+        31	9F	| Memory Address
+
+	MAGIC24:
+	わたしのまほうでフィールドのたて
+	I will destroy 3 columns of my field
+	$11F63	(Line 1)
+	24DC	C0	BC	C9	CF	CE	B3	C3DE	23CC	A8	B0	D9	C4DE	24C9	C0	C3	25	| Original Japanese Hex
+	# わ	た	し	の	ま	ほ	う	て "	# フ	ィ	ー	ル	ト "	# の	た	て	NL	| Original Japanese Text
+	3ラインをけしてしまうの。
+	with my magic.
+	$11F79	(Line 2)
+	2333	D7	B2	DD	24A6	B9	BC	C3	BC	CF	B3	C9	A1	25	| Original Japanese Hex
+	# 3	ラ	イ	ン	# を	け	し	て	し	ま	う	の	。	NL	| Original Japanese Text
+	すきなところをけせるのよ!
+	Put it on your favorite place!
+	$11F89	(Line 3)
+	BD	B7	C5	C4	BA	DB	A6	B9	BE	D9	C9	D6	3A	FF	| Original Japanese Hex
+	す	き	な	と	こ	ろ	を	け	せ	る	の	よ	!	#	| Original Japanese Text
+	$11AC7
+        63	9F	| Memory Address
+
+	MAGIC25:
+	あいてのフィールドのブロックの
+	I will replace the place where there is a block
+	$11F97	(Line 1)
+	24B1	B2	C3	C9	23CC	A8	B0	D9	C4DE	24C9	23CCDE	DB	AF	B8	24C9	25	| Original Japanese Hex
+	# あ	い	て	の	# フ	ィ	ー	ル	ト "	# の	# フ "	ロ	ッ	ク	# の	NL	| Original Japanese Text
+	あるところとないところをいれかえちゃ
+	of the field with the place where there is
+	$11FAE	(Line 2)
+	B1	D9	C4	BA	DB	C4	C5	B2	C4	BA	DB	A6	B2	DA	B6	B4	C1	AC	| Original Japanese Hex
+	あ	る	と	こ	ろ	と	な	い	と	こ	ろ	を	い	れ	か	え	ち	ゃ	| Original Japanese Text
+	うんだ。
+	no block.
+	$11FC0	(Line 3)
+	B3	DD	C0DE	A1	FF	| Original Japanese Hex
+	う	ん	た "	。	#	| Original Japanese Text
+	$11AC9
+        97	9F	| Memory Address
+
+	MAGIC26:
+	あいてのフィールドをボクのフィールド
+	It makes the field of the opponent
+	$11FC6	(Line 1)
+	24B1	B2	C3	C9	23CC	A8	B0	D9	C4DE	24A6	23CEDE	B8	24C9	23CC	A8	B0	D9	C4DE	| Original Japanese Hex
+	# あ	い	て	の	# フ	ィ	ー	ル	ト "	# を	# ホ "	ク	# の	# フ	ィ	ー	ル	ト "	| Original Japanese Text
+	とおなじにしてしまうのだ。
+	the same as my field.
+	$11FE1	(Line 2)
+	24C4	B5	C5	BCDE	C6	BC	C3	BC	CF	B3	C9	C0DE	A1	FF	| Original Japanese Hex
+	# と	お	な	し "	に	し	て	し	ま	う	の	た "	。	#	| Original Japanese Text
+	$11ACB
+        C6	9F	| Memory Address
+
+	MAGIC27:
+	これさえあればあいてがラインを
+	Even if the other party erases a line,
+	$11FF2	(Line 1)
+	24BA	DA	BB	B4	B1	DA	CADE	B1	B2	C3	B6DE	23D7	B2	DD	24A6	25	| Original Japanese Hex
+	# こ	れ	さ	え	あ	れ	は "	あ	い	て	か "	# ラ	イ	ン	# を	NL	| Original Japanese Text
+	けしてもしばらくはふせげるのだ。
+	it can be prevented for a while if using this.
+	$12007	(Line 2)
+	B9	BC	C3	D3	BC	CADE	D7	B8	CA	CC	BE	B9DE	D9	C9	C0DE	A1	FF	| Original Japanese Hex
+	け	し	て	も	し	は "	ら	く	は	ふ	せ	け "	る	の	た "	。	#	| Original Japanese Text
+	$11ACD
+        F2	9F	| Memory Address
+
+	MAGIC28:
+	まほうのかがみであいてのかけたワザの
+	Make sure to put a lot of trouble overworking
+	$1201B	(Line 1)
+	24CF	CE	B3	C9	B6	B6DE	D0	C3DE	B1	B2	C3	C9	B6	B9	C0	23DC	BBDE	24C9	| Original Japanese Hex
+	# ま	ほ	う	の	か	か "	み	て "	あ	い	て	の	か	け	た	# ワ	サ "	# の	| Original Japanese Text
+	たいしょうをさかさにするのよ。
+	with magical reflection.
+	$12033	(Line 2)
+	C0	B2	BC	AE	B3	A6	BB	B6	BB	C6	BD	D9	C9	D6	A1	FF	| Original Japanese Hex
+	た	い	し	ょ	う	を	さ	か	さ	に	す	る	の	よ	。	#	| Original Japanese Text
+	$11ACF
+        1B	A0	| Memory Address
+
+	MAGIC29:
+	じぶんのらっかするブロックがおいた
+	I will be confident about the time
+	$12043	(Line 1)
+	24BCDE	CCDE	DD	C9	D7	AF	B6	BD	D9	23CCDE	DB	AF	B8	24B6DE	B5	B2	C0	25	| Original Japanese Hex
+	# し "	ふ "	ん	の	ら	っ	か	す	る	# フ "	ロ	ッ	ク	# か "	お	い	た	NL	| Original Japanese Text
+	しゅんかんにじしんをおこす。
+	it takes a secret block to fall.
+	$1205C	(Line 2)
+	BC	AD	DD	B6	DD	C6	BCDE	BC	DD	A6	B5	BA	BD	A1	FF	| Original Japanese Hex
+	し	ゅ	ん	か	ん	に	し "	し	ん	を	お	こ	す	。	#	| Original Japanese Text
+	$11AD1
+        43	A0	| Memory Address
+
+	MAGIC30:
+	オレさまのマリョクでじぶんの
+	Using L,R buttons
+	$1206C	(Line 1)
+	23B5	DA	24BB	CF	C9	23CF	D8	AE	B8	24C3DE	BCDE	CCDE	DD	C9	25	| Original Japanese Hex
+	# オ	レ	# さ	ま	の	# マ	リ	ョ	ク	# て "	し "	ふ "	ん	の	NL	| Original Japanese Text
+	らっかブロックをすきなものにかえて
+	I can change the next 4 blocks
+	$12082	(Line 2)
+	D7	AF	B6	23CCDE	DB	AF	B8	24A6	BD	B7	C5	D3	C9	C6	B6	B4	C3	25	| Original Japanese Hex
+	ら	っ	か	# フ "	ロ	ッ	ク	# を	す	き	な	も	の	に	か	え	て	NL	| Original Japanese Text
+	しまうのだ!
+	into my favorite one!
+	$12097	(Line 3)
+	BC	CF	B3	C9	C0DE	3A	FF	| Original Japanese Hex
+	し	ま	う	の	た "	!	#	| Original Japanese Text
+	$11AD3
+        6C	A0	| Memory Address
+
+	MAGIC31:
+	あっしのキョウダイブンであるヌーが
+	A giant will
+	$1209F	(Line 1)
+	24B1	AF	BC	C9	23B7	AE	B3	C0DE	B2	CCDE	DD	24C3DE	B1	D9	23C7	B0	24B6DE	25	| Original Japanese Hex
+	# あ	っ	し	の	# キ	ョ	ウ	タ "	イ	フ "	ン	# て "	あ	る	# ヌ	ー	# か "	NL	| Original Japanese Text
+	あいてのらっかブロックのドロップを
+	stop the opponent
+	$120BA	(Line 2)
+	24B1	B2	C3	C9	D7	AF	B6	23CCDE	DB	AF	B8	24C9	23C4DE	DB	AF	CCDF	24A6	25	| Original Japanese Hex
+	# あ	い	て	の	ら	っ	か	# フ "	ロ	ッ	ク	# の	# ト "	ロ	ッ	フ o	# を	NL	| Original Japanese Text
+	うけとめるでござる。
+	from dropping blocks.
+	$120D4	(Line 3)
+	B3	B9	C4	D2	D9	C3DE	BADE	BBDE	D9	A1	FF	| Original Japanese Hex
+	う	け	と	め	る	て "	こ "	さ "	る	。	#	| Original Japanese Text
+	$11AD5
+        9F	A0	| Memory Address
+
+	MAGIC32:
+	あいてのらっかブロックをボクがそうさ
+	I will control the next 2 blocks
+	$120E2	(Line 1)
+	24B1	B2	C3	C9	D7	AF	B6	23CCDE	DB	AF	B8	24A6	23CEDE	B8	24B6DE	BF	B3	BB	| Original Japanese Hex
+	# あ	い	て	の	ら	っ	か	# フ "	ロ	ッ	ク	# を	# ホ "	ク	# か "	そ	う	さ	| Original Japanese Text
+	できるのだ。
+	of my opponent.
+	$120FC	(Line 2)
+	C3DE	B7	D9	C9	C0DE	A1	FF	| Original Japanese Hex
+	て "	き	る	の	た "	。	#	| Original Japanese Text
+	$11AD7
+        E2	A0	| Memory Address
+
+	MAGIC33:
+	あいてのコントローラをさかさまに
+	I will turn the opponent's controller
+	$12105	(Line 1)
+	24B1	B2	C3	C9	23BA	DD	C4	DB	B0	D7	24A6	BB	B6	BB	CF	C6	25	| Original Japanese Hex
+	# あ	い	て	の	# コ	ン	ト	ロ	ー	ラ	# を	さ	か	さ	ま	に	NL	| Original Japanese Text
+	しちゃうんだ。つまり、ボタンでほうこ
+	upside down. In other words, it is inverted
+	$12119	(Line 2)
+	BC	C1	AC	B3	DD	C0DE	A1	C2	CF	D8	A4	23CEDE	C0	DD	24C3DE	CE	B3	BA	| Original Japanese Hex
+	し	ち	ゃ	う	ん	た "	。	つ	ま	り	、	# ホ "	タ	ン	# て "	ほ	う	こ	| Original Japanese Text
+	う、ジュウジキーでカイテンだよ。
+	for the next 3 blocks.
+	$12130	(Line 3)
+	B3	A4	23BCDE	AD	B3	BCDE	B7	B0	24C3DE	23B6	B2	C3	DD	24C0DE	D6	A1	FF	| Original Japanese Hex
+	う	、	# シ "	ュ	ウ	シ "	キ	ー	# て "	# カ	イ	テ	ン	# た "	よ	。	#	| Original Japanese Text
+	$11AD9
+        05	A1	| Memory Address
+
+	MAGIC34:
+	あいてがラインをそろえてさがると
+	As a result, lines that are cleared
+	$12149	(Line 1)
+	24B1	B2	C3	B6DE	23D7	B2	DD	24A6	BF	DB	B4	C3	BB	B6DE	D9	C4	25	| Original Japanese Hex
+	# あ	い	て	か "	# ラ	イ	ン	# を	そ	ろ	え	て	さ	か "	る	と	NL	| Original Japanese Text
+	あっしのフィールドもさがるでござる
+	by my opponent will make my field go down.
+	$1215F	(Line 2)
+	B1	AF	BC	C9	23CC	A8	B0	D9	C4DE	24D3	BB	B6DE	D9	C3DE	BADE	BBDE	D9	FF	| Original Japanese Hex
+	あ	っ	し	の	# フ	ィ	ー	ル	ト "	# も	さ	か "	る	て "	こ "	さ "	る	#	| Original Japanese Text
+	$11ADB
+        49	A1	| Memory Address
+
+	MAGIC35:
+	ンババメラメラ
+	Namba Bamera
+	$12178	(Line 1)
+	23DD	CADE	CADE	D2	D7	D2	D7	25	| Original Japanese Hex
+	# ン	ハ "	ハ "	メ	ラ	メ	ラ	NL	| Original Japanese Text
+	いみ、4レベルのワザがランダムにかか
+	Meanwhile, it takes 4 levels of random 
+	$12183	(Line 2)
+	24B2	D0	A4	34	23DA	CDDE	D9	24C9	23DC	BBDE	24B6DE	23D7	DD	C0DE	D1	24C6	B6	B6	| Original Japanese Hex
+	# い	み	、	4	# レ	ヘ "	ル	# の	# ワ	サ "	# か "	# ラ	ン	タ "	ム	# に	か	か	| Original Japanese Text
+	ります。たまに、しっぱいも・・・
+	play. Occasionally, I also have to do something...
+	$121A0	(Line 3)
+	D8	CF	BD	A1	C0	CF	C6	A4	BC	AF	CADF	B2	D3	A5	A5	A5	FF	| Original Japanese Hex
+	り	ま	す	。	た	ま	に	、	し	っ	は o	い	も	・	・	・	#	| Original Japanese Text
+	$11ADD
+        78	A1	| Memory Address
+
+	MAGIC36:
+	オレさまのマリョクであいての
+	Make my opponent's
+	$121B2	(Line 1)
+	23B5	DA	24BB	CF	C9	23CF	D8	AE	B8	24C3DE	B1	B2	C3	C9	25	| Original Japanese Hex
+	# オ	レ	# さ	ま	の	# マ	リ	ョ	ク	# て "	あ	い	て	の	NL	| Original Japanese Text
+	コントローラーのそうさをメチャクチャ
+	controller buttons
+	$121C6	(Line 2)
+	23BA	DD	C4	DB	B0	D7	B0	24C9	BF	B3	BB	A6	23D2	C1	AC	B8	C1	AC	| Original Japanese Hex
+	# コ	ン	ト	ロ	ー	ラ	ー	# の	そ	う	さ	を	# メ	チ	ャ	ク	チ	ャ	| Original Japanese Text
+	にするのだ!
+	become randomly scrambled!
+	$121DB	(Line 3)
+	24C6	BD	D9	C9	C0DE	3A	FF	| Original Japanese Hex
+	# に	す	る	の	た "	!	#	| Original Japanese Text
+	$11ADF
+        B2	A1	| Memory Address
+
+	MAGIC37:
+	おんなじブロックが10コれんぞくして
+	Repeats the same block 10 times
+	$121E4	(Line 1)
+	24B5	DD	C5	BCDE	23CCDE	DB	AF	B8	24B6DE	2331	30	BA	24DA	DD	BFDE	B8	BC	C3	| Original Japanese Hex
+	# お	ん	な	し "	# フ "	ロ	ッ	ク	# か "	# 1	0	コ	# れ	ん	そ "	く	し	て	| Original Japanese Text
+	おちてくるんだー
+	between both players.
+	$121FF	(Line 2)
+	B5	C1	C3	B8	D9	DD	C0DE	B0	FF	| Original Japanese Hex
+	お	ち	て	く	る	ん	た "	ー	#	| Original Japanese Text
+	$11AE1
+        E4	A1	| Memory Address
+
+	MAGIC38:
+	オレさまのフィールドとあいての
+	This will swap my field
+	$12209	(Line 1)
+	23B5	DA	24BB	CF	C9	23CC	A8	B0	D9	C4DE	24C4	B1	B2	C3	C9	25	| Original Japanese Hex
+	# オ	レ	# さ	ま	の	# フ	ィ	ー	ル	ト "	# と	あ	い	て	の	NL	| Original Japanese Text
+	フィールドをいれかえてしまうのだ!
+	with my opponent!
+	$1221E	(Line 2)
+	23CC	A8	B0	D9	C4DE	24A6	B2	DA	B6	B4	C3	BC	CF	B3	C9	C0DE	3A	25	| Original Japanese Hex
+	# フ	ィ	ー	ル	ト "	# を	い	れ	か	え	て	し	ま	う	の	た "	!	NL	| Original Japanese Text
+	がっはっは!
+	Gwah ha ha!
+	$12234	(Line 3)
+	B6DE	AF	CA	AF	CA	3A	FF	| Original Japanese Hex
+	か "	っ	は	っ	は	!	#	| Original Japanese Text
+	$11AE3
+        09	A2	| Memory Address
+
+	MAGIC39:
+	わたくしのけしたラインすうが2バイに
+	The number of my erased lines doubles
+	$1223C	(Line 1)
+	24DC	C0	B8	BC	C9	B9	BC	C0	23D7	B2	DD	24BD	B3	B6DE	2332	CADE	B2	24C6	| Original Japanese Hex
+	# わ	た	く	し	の	け	し	た	# ラ	イ	ン	# す	う	か "	# 2	ハ "	イ	# に	| Original Japanese Text
+	なってあいてにおくられるのよ!
+	and is sent to my opponent!
+	$12255	(Line 2)
+	C5	AF	C3	B1	B2	C3	C6	B5	B8	D7	DA	D9	C9	D6	3A	25	| Original Japanese Hex
+	な	っ	て	あ	い	て	に	お	く	ら	れ	る	の	よ	!	NL	| Original Japanese Text
+	ホーホッホッホ!
+	Ho ho ho!
+	$12265	(Line 3)
+	23CE	B0	CE	AF	CE	AF	CE	3A	FF	| Original Japanese Hex
+	# ホ	ー	ホ	ッ	ホ	ッ	ホ	!	#	| Original Japanese Text
+	$11AE5
+        3C	A2	| Memory Address
+
+	MAGIC40:
+	あいてのフィールドがまっくらになる。
+	The opponent's field goes dark for 3 blocks.
+	$1226F	(Line 1)
+	24B1	B2	C3	C9	23CC	A8	B0	D9	C4DE	24B6DE	CF	AF	B8	D7	C6	C5	D9	A1	| Original Japanese Hex
+	# あ	い	て	の	# フ	ィ	ー	ル	ト "	# か "	ま	っ	く	ら	に	な	る	。	| Original Japanese Text
+	でもブロックからのライトでみえちゃう
+	But they can see with a light
+	$12286	(Line 2)
+	C3DE	D3	23CCDE	DB	AF	B8	24B6	D7	C9	23D7	B2	C4	24C3DE	D0	B4	C1	AC	B3	| Original Japanese Hex
+	て "	も	# フ "	ロ	ッ	ク	# か	ら	の	# ラ	イ	ト	# て "	み	え	ち	ゃ	う	| Original Japanese Text
+	んだなこれが。
+	from the block.
+	$1229F	(Line 3)
+	DD	C0DE	C5	BA	DA	B6DE	A1	FF	| Original Japanese Hex
+	ん	た "	な	こ	れ	か "	。	#	| Original Japanese Text
+	$11AE7
+        6F	A2	| Memory Address
+
+	MAGIC41:
+	わたくしのはハイパーだからクリスタル
+	With my hyper crystal,
+	$122A9	(Line 1)
+	24DC	C0	B8	BC	C9	CA	23CA	B2	CADF	B0	24C0DE	B6	D7	23B8	D8	BD	C0	D9	| Original Japanese Hex
+	# わ	た	く	し	の	は	# ハ	イ	ハ o	ー	# た "	か	ら	# ク	リ	ス	タ	ル	| Original Japanese Text
+	ブロックいがいのした4ラインを
+	I will burn 4 lines
+	$122C1	(Line 2)
+	CCDE	DB	AF	B8	24B2	B6DE	B2	C9	BC	C0	2334	D7	B2	DD	24A6	25	| Original Japanese Hex
+	フ "	ロ	ッ	ク	# い	か "	い	の	し	た	# 4	ラ	イ	ン	# を	NL	| Original Japanese Text
+	ブロックにかえますのよ!
+	of blocks!
+	$122D6	(Line 3)
+	23CCDE	DB	AF	B8	24C6	B6	B4	CF	BD	C9	D6	3A	FF	| Original Japanese Hex
+	# フ "	ロ	ッ	ク	# に	か	え	ま	す	の	よ	!	#	| Original Japanese Text
+	$11AE9
+        A9	A2	| Memory Address
+
 PAUSE SCREEN PLAYER:
 	ALL:
 	「ワザのつかいかた」
@@ -409,7 +1098,7 @@ PAUSE SCREEN MAGIC:
 
 	MAGIC13:
 	カット
-	Cut
+	Cut / Slice
 	$12651
 	20	20	20	B6	AF	C4	20	20	FF	| Original Japanese Hex
 	 	 	 	カ	ッ	ト	 	 	#	| Original Japanese Text
@@ -490,7 +1179,7 @@ PAUSE SCREEN MAGIC:
 
 	MAGIC22:
 	ドトン
-	Earth Release
+	Earth Release/Rensa
 	$126A8
 	20	20	20	C4DE	C4	DD	20	20	FF	| Original Japanese Hex
 	 	 	 	ト "	ト	ン	 	 	#	| Original Japanese Text
@@ -499,7 +1188,7 @@ PAUSE SCREEN MAGIC:
 
 	MAGIC23:
 	プレス
-	Press
+	Press / Crush / Stomp
 	$126B2
 	20	20	20	CCDF	DA	BD	20	20	FF	| Original Japanese Hex
 	 	 	 	フ o	レ	ス	 	 	#	| Original Japanese Text
@@ -571,7 +1260,7 @@ PAUSE SCREEN MAGIC:
 
 	MAGIC31:
 	ヌー
-	Gnu/Wildebeest/Nu/New/Noose
+	Slow Down/Gnu/Wildebeest/Nu/New/Noose
 	$126FD
 	20	20	20	C7	B0	20	20	20	FF	| Original Japanese Hex
 	 	 	 	ヌ	ー	 	 	 	#	| Original Japanese Text
