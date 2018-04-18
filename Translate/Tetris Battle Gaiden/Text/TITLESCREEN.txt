@@ -1,0 +1,8 @@
+﻿ひとりでバトル
+Battle by myself / 1 Player Battle
+
+ふたりでバトル
+Battle between us / 2 Player Battle
+
+オブション
+Option / Setting

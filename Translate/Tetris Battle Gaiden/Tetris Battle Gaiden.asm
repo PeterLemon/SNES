@@ -277,9 +277,9 @@ PAUSEMAGIC19:
   db "THE BLOCK ROTATION"
   db "OF MY OPPONENT.", $FF
 PAUSEMAGIC20:
-  db "THIS WILL HIDE THE"
-  db "HOLES IN MY FIELD\n"
-  db "WITH THE WIND!", $FF
+  db "THIS WILL PUSH ALL"
+  db "MY BLOCKS TO ONE\n"
+  db "SIDE WITH WIND!", $FF
 PAUSEMAGIC21:
   db "A GANG WILL STEAL\n"
   db "CRYSTALS FROM THE\n"
@@ -508,15 +508,15 @@ PAUSEMAGICNAME17:
 PAUSEMAGICNAME18:
   db "PARALYZE", $FF
 PAUSEMAGICNAME19:
-  db " ROTATE ", $FF
+  db "ROTATION", $FF
 PAUSEMAGICNAME20:
-  db "  YOSE  ", $FF
+  db " GATHER ", $FF
 PAUSEMAGICNAME21:
   db "  GANG  ", $FF
 PAUSEMAGICNAME22:
   db " RENSA  ", $FF
 PAUSEMAGICNAME23:
-  db " STOMP  ", $FF
+  db " PRESS  ", $FF
 PAUSEMAGICNAME24:
   db "  SOUL  ", $FF
 PAUSEMAGICNAME25:
@@ -538,9 +538,9 @@ PAUSEMAGICNAME32:
 PAUSEMAGICNAME33:
   db " INVERT ", $FF
 PAUSEMAGICNAME34:
-  db "  CHUM  ", $FF
+  db "BUDDIES ", $FF
 PAUSEMAGICNAME35:
-  db "  PRAY  ", $FF
+  db " PRAYER ", $FF
 PAUSEMAGICNAME36:
   db "ROULETTE", $FF
 PAUSEMAGICNAME37:
@@ -1059,3 +1059,6 @@ WOLFMANCharacterDescription:
   TextMapHI(origin(), $B) // Line 10: Origin, Length
   TextMapHI(origin(), $C) // Line 11: Origin, Length
   db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End High Bytes
+
+// Include Title Screen
+origin $D6125; insert "TitleScreen.rle" // VRAM $C000..$FFFF 4BPP Title Screen RLE

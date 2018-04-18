@@ -422,12 +422,12 @@
 
 	MAGIC20:
 	オレのにんほoうツムジカゼでフィールド
-	I'm going to hide the holes in my field
+	This will push all my blocks to one side
 	$11E92	(Line 1)
 	23B5	DA	24C9	C6	DD	CEDF	B3	23C2	D1	BCDE	B6	BEDE	24C3DE	23CC	A8	B0	D9	C4DE	| Original Japanese Hex
 	# オ	レ	# の	に	ん	ほ o	う	# ツ	ム	シ "	カ	セ "	# て "	# フ	ィ	ー	ル	ト "	| Original Japanese Text
 	のブロックをハジによせるゼ!
-	with wind!
+	with the wind!
 	$11EAE	(Line 2)
 	24C9	23CCDE	DB	AF	B8	24A6	23CA	BCDE	24C6	D6	BE	D9	23BEDE	3A	FF	| Original Japanese Hex
 	# の	# フ "	ロ	ッ	ク	# を	# ハ	シ "	# に	よ	せ	る	# セ "	!	#	| Original Japanese Text
@@ -1152,7 +1152,7 @@ PAUSE SCREEN MAGIC:
 
 	MAGIC19:
 	カイテン
-	Rotate
+	Rotate/Rotation
 	$1268B
 	20	20	B6	B2	C3	DD	20	20	FF	| Original Japanese Hex
 	 	 	カ	イ	テ	ン	 	 	#	| Original Japanese Text
@@ -1161,7 +1161,7 @@ PAUSE SCREEN MAGIC:
 
 	MAGIC20:
 	ヨセ
-	Yose
+	Yose / Gather
 	$12694
 	20	20	20	D6	BE	20	20	20	FF	| Original Japanese Hex
 	 	 	 	ヨ	セ	 	 	 	#	| Original Japanese Text
@@ -1287,7 +1287,7 @@ PAUSE SCREEN MAGIC:
 
 	MAGIC34:
 	ナカヨシ
-	Chum / Buddy / Friend / Heal
+	Chum / Buddy / Buddies / Friend / Heal
 	$12718
 	20	20	C5	B6	D6	BC	20	20	FF	| Original Japanese Hex
 	 	 	ナ	カ	ヨ	シ	 	 	#	| Original Japanese Text
@@ -1296,7 +1296,7 @@ PAUSE SCREEN MAGIC:
 
 	MAGIC35:
 	イノリ
-	Pray
+	Pray/Prayer
 	$12721
 	20	20	20	B2	C9	D8	20	20	FF	| Original Japanese Hex
 	 	 	 	イ	ノ	リ	 	 	#	| Original Japanese Text
