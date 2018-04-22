@@ -1,425 +1,536 @@
-﻿すきなもの
-Favorite Things:
-$1B283	(Line 1)
-BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
-す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
-L	I	K	E	S	:	 	 	 	 	| New English Text
-4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
-チョコレートケーキ
-Chocolate Cake
-$1B28D	(Line 2)
-5B	C1	AE	BA	DA	B0	C4	B9	B0	B7	5D	20	| Original Japanese Hex
-[	チ	ョ	コ	レ	ー	ト	ケ	ー	キ	]	 	| Original Japanese Text
- 	C	H	O	C	O	L	A	T	E	 	 	| New English Text
-20	43	48	4F	43	4F	4C	41	54	45	20	20	| New English Hex
-$1B299	(Line 3)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	 	C	A	K	E	H	A	| New English Text
-20	20	20	20	43	41	4B	45	48	41	| New English Hex
-きらいなもの
-Things I Hate:
-$1B2A3	(Line 4)
-B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
-き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
-T	E	S	:	 	 	 	 	P	U	| New English Text
-54	45	53	3A	20	20	20	20	50	55	| New English Hex
-カボチャのにつけ
-Pumpkin Pie
-$1B2AD	(Line 5)
-5B	B6	CE	DE	C1	AC	5D	C9	C6	C2	B9	20	| Original Japanese Hex
-[	カ	ホ	"	チ	ャ	]	の	に	つ	け	 	| Original Japanese Text
-M	P	K	I	N	P	I	E	B	O	R	N	| New English Text
-4D	50	4B	49	4E	50	49	45	42	4F	52	4E	| New English Hex
-$1B2B9	(Line 6)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
- 	I	N	:	 	 	 	A		P	| New English Text
-20	49	4E	3A	20	20	20	41	20	50	| New English Hex
-うまれ
-Born In:
-$1B2C3	(Line 7)
-B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
-う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
-U	M	P	K	I	N	 	 	 	 	| New English Text
-55	4D	50	4B	49	4E	20	20	20	20	| New English Hex
-カボチャばだけ
-A Pumpkin Field
-$1B2CD	(Line 8)
-5B	B6	CE	DE	C1	AC	5D	CA	DE	C0	B9	20	00	00	00	| Original Japanese Hex
-[	カ	ホ	"	チ	ャ	]	ば	"	た	け	 	#	#	#	| Original Japanese Text
- 	F	I	E	L	D	 	 	 	 	 	 	#	#	#	| New English Text
-20	46	49	45	4C	44	20	20	20	20	20	20	00	00	00	| New English Hex
+﻿HALLOWEEN:
+	ハロウィン
+	Halloween
+	$1B26F	(Top Half)
+	00	00	C0	C1	C2	C3	C4	00	00	00	| Original Japanese Hex
+	 	 	ハ	ロ	ウ	ィ	ン	 	 	 	| Original Japanese Text
+	H	A	L	L	O	W	E 	E	N	 	| New English Text
+	C7	C0	CB	CB	CE	E6	C4	C4	CD	00	| New English Hex
+	$1B279	(Bottom Half)
+	00	00	D0	D1	D2	D3	D4	00	00	00	| Original Japanese Hex
+	 	 	ハ	ロ	ウ	ィ	ン	 	 	 	| Original Japanese Text
+	H	A	L	L	O	W	E 	E	N	 	| New English Text
+	D7	D0	DB	DB	DE	F6	D4	D4	DD	00	| New English Hex
 
-すきなもの
-Favorite Things:
-$1B2ED	(Line 1)
-BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
-す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
-L	I	K	E	S	:	 	 	 	 	| New English Text
-4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
-ともだち
-Friends
-$1B2F7	(Line 2)
-C4	D3	C0	DE	C1	20	20	20	20	20	| Original Japanese Hex
-と	も	た	"	ち	 	 	 	 	 	| Original Japanese Text
- 	 	 	F	R	I	E	N	D	S	| New English Text
-20	20	20	46	52	49	45	4E	44	53	| New English Hex
-$1B301	(Line 3)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
-H	A	T	E	S	:	 	 	 	 	| New English Text
-48	41	54	45	53	3A	20	20	20	20	| New English Hex
-きらいなもの
-Things I Hate:
-$1B30B	(Line 4)
-B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
-き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
- 	H	A	L	L	O	W	E	E	N	| New English Text
-20	48	41	4C	4C	4F	57	45	45	4E	| New English Hex
-ハロウィン
-Halloween
-$1B315	(Line 5)
-5B	CA	DB	B3	A8	DD	5D	20	20	20	20	20	| Original Japanese Hex
-[	ハ	ロ	ウ	ィ	ン	]	 	 	 	 	 	| Original Japanese Text
- 	 	 	 	 	 	 	 	 	 	B	O	| New English Text
-20	20	20	20	20	20	20	20	20	20	42	4F	| New English Hex
-$1B321	(Line 6)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
-R	N	 	I	N	:	 	 	 	 	| New English Text
-52	4E	20	49	4E	3A	20	20	20	20	| New English Hex
-うまれ
-Born In:
-$1B32B	(Line 7)
-B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
-う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
- 	 	B	A	N	B	O	O	 	 	| New English Text
-20	20	42	41	4E	42	4F	4F	20	20	| New English Hex
-バンブーヤード
-Bamboo Garden
-$1B335	(Line 8)
-5B	CA	DE	DD	CC	DE	B0	D4	B0	C4	DE	5D	00	00	| Original Japanese Hex
-[	ハ	"	ン	フ	"	ー	ヤ	ー	ト	"	]	#	#	| Original Japanese Text
- 	 G	A	R	D	E	N	S	 	 	 	 	#	#	| New English Text
-20	47	41	52	44	45	4E	53	20	20	20	20	00	00	| New English Hex
+	すきなもの
+	Favorite Things:
+	$1B283	(Line 1)
+	BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
+	す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
+	L	I	K	E	S	:	 	 	 	 	| New English Text
+	4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
+	チョコレートケーキ
+	Chocolate Cake
+	$1B28D	(Line 2)
+	5B	C1	AE	BA	DA	B0	C4	B9	B0	B7	5D	20	| Original Japanese Hex
+	[	チ	ョ	コ	レ	ー	ト	ケ	ー	キ	]	 	| Original Japanese Text
+	 	C	H	O	C	O	L	A	T	E	 	 	| New English Text
+	20	43	48	4F	43	4F	4C	41	54	45	20	20	| New English Hex
+	$1B299	(Line 3)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	 	 	 	 	C	A	K	E	H	A	| New English Text
+	20	20	20	20	43	41	4B	45	48	41	| New English Hex
+	きらいなもの
+	Things I Hate:
+	$1B2A3	(Line 4)
+	B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
+	き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
+	T	E	S	:	 	 	 	 	P	U	| New English Text
+	54	45	53	3A	20	20	20	20	50	55	| New English Hex
+	カボチャのにつけ
+	Pumpkin Pie
+	$1B2AD	(Line 5)
+	5B	B6	CE	DE	C1	AC	5D	C9	C6	C2	B9	20	| Original Japanese Hex
+	[	カ	ホ	"	チ	ャ	]	の	に	つ	け	 	| Original Japanese Text
+	M	P	K	I	N	P	I	E	B	O	R	N	| New English Text
+	4D	50	4B	49	4E	50	49	45	42	4F	52	4E	| New English Hex
+	$1B2B9	(Line 6)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	 	I	N	:	 	 	 	A		P	| New English Text
+	20	49	4E	3A	20	20	20	41	20	50	| New English Hex
+	うまれ
+	Born In:
+	$1B2C3	(Line 7)
+	B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
+	う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
+	U	M	P	K	I	N	 	 	 	 	| New English Text
+	55	4D	50	4B	49	4E	20	20	20	20	| New English Hex
+	カボチャばだけ
+	A Pumpkin Field
+	$1B2CD	(Line 8)
+	5B	B6	CE	DE	C1	AC	5D	CA	DE	C0	B9	20	00	00	00	| Original Japanese Hex
+	[	カ	ホ	"	チ	ャ	]	ば	"	た	け	 	#	#	#	| Original Japanese Text
+	 	F	I	E	L	D	 	 	 	 	 	 	#	#	#	| New English Text
+	20	46	49	45	4C	44	20	20	20	20	20	20	00	00	00	| New English Hex
 
-すきなもの
-Favorite Things:
-$1B355	(Line 1)
-BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
-す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
-L	I	K	E	S	:	 	 	 	 	| New English Text
-4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
-おどり
-Dancing
-$1B35F	(Line 2)
-B5	C4	DE	D8	20	20	20	20	20	20	| Original Japanese Hex
-お	と	"	り	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	D	A	N	C	I	N	G	| New English Text
-20	20	20	44	41	4E	43	49	4E	47	| New English Hex
-$1B369	(Line 3)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
-H	A	T	E	S	:	 	 	 	 	| New English Text
-48	41	54	45	53	3A	20	20	20	20	| New English Hex
-きらいなもの
-Things I Hate:
-$1B373	(Line 4)
-B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
-き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
- 	 	 	T	H	U	N	D	E	R	| New English Text
-20	20	20	54	48	55	4E	44	45	52	| New English Hex
-かみなり
-Thunder/Lightning/Storms
-$1B37D	(Line 5)
-B6	D0	C5	D8	20	20	20	20	20	20	| Original Japanese Hex
-か	み	な	り	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	 	 	 	 	 	 		| New English Text
-20	20	20	20	20	20	20	20	20	20	| New English Hex
-$1B387	(Line 3)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
-B	O	R	N	 	I	N	:	 	 	| New English Text
-42	4F	52	4E	20	49	4E	3A	20	20	| New English Hex
-うまれ
-Born In:
-$1B391	(Line 7)
-B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
-う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	 	Y	A	N	B	O	O	| New English Text
-20	20	20	20	59	41	4E	42	4F	4F	| New English Hex
-ヤンブーフォレスト
-Yanboo Forest
-$1B39B	(Line 8)
-5B	D4	DD	CC	DE	B0	CC	AB	DA	BD	C4	5D	00	00	| Original Japanese Hex
-[	ヤ	ン	フ	"	ー	フ	ォ	レ	ス	ト	]	#	#	| Original Japanese Text
- 	 	 	 	F	O	R	E	S	T	 	 	#	#	| New English Text
-20	20	20	20	46	4F	52	45	53	54	20	20	00	00	| New English Hex
+MIRURUN:
+	ミルルン
+	Mirurun
+	$1B2D9	(Top Half)
+	00	00	00	CF	E0	E0	C4	00	00	00	| Original Japanese Hex
+	 	 	 	ミ	ル	ル	ン	 	 	 	| Original Japanese Text
+	 	M	I	R	U	R	U	N	 	 	| New English Text
+	00	CC	C8	E1	E4	E1	E4	CD	00	00	| New English Hex
+	$1B2E3	(Bottom Half)
+	00	00	00	DF	F0	F0	D4	00	00	00	| Original Japanese Hex
+	 	 	 	ミ	ル	ル	ン	 	 	 	| Original Japanese Text
+	 	M	I	R	U	R	U	N	 	 	| New English Text
+	00	DC	D8	F1	F4	F1	F4	DD	00	00	| New English Hex
 
-すきなもの
-Favorite Things:
-$1B3BB	(Line 1)
-BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
-す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
-L	I	K	E	S	:	 	 	 	 	| New English Text
-4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
-ユメ,ボウケン
-Dreams, Adventure
-$1B3C5	(Line 2)
-5B	D5	D2	5D	2C	5B	CE	DE	B3	B9	DD	5D	20	20	| Original Japanese Hex
-[	ユ	メ	]	,	[	ホ	"	ウ	ケ	ン	]	 	 	| Original Japanese Text
- 	 	 	D	R	E	A	M	S	,	 	A	D	V	| New English Text
-20	20	20	44	52	45	41	4D	53	2C	20	41	44	56	| New English Hex
-$1B3D3	(Line 3)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
-E	N	T	U	R	E	H	A	T	E	| New English Text
-45	4E	54	55	52	45	48	41	54	45	| New English Hex
-きらいなもの
-Things I Hate:
-$1B3DD	(Line 4)
-B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
-き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
-S	:	 	 	 	 	 	R	E	A	| New English Text
-53	3A	20	20	20	20	20	52	45	41	| New English Hex
-こんじょう
-Real Life/Temper/Nature
-$1B3E7	(Line 5)
-BA	DD	BC	DE	AE	B3	20	20	20	20	| Original Japanese Hex
-こ	ん	し	"	ょ	う	 	 	 	 	| Original Japanese Text
-L	 	L	I	F	E	 	 	 	 	| New English Text
-4C	20	4C	49	46	45	20	20	20	20	| New English Hex
-$1B3F1	(Line 6)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	 	 	 	B	O	R	N	| New English Text
-20	20	20	20	20	20	42	4F	52	4E	| New English Hex
-うまれ
-Born In:
-$1B3FB	(Line 7)
-B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
-う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
- 	I	N	:	 	 	 	 	 	N	| New English Text
-20	49	4E	3A	20	20	20	20	20	4E	| New English Hex
-ナカダット
-Nakadat
-$1B405	(Line 8)
-5B	C5	B6	C0	DE	AF	C4	5D	20	20	20	20	00	00	| Original Japanese Hex
-[	ナ	カ	タ	"	ッ	ト	]	 	 	 	 	#	#	| Original Japanese Text
-A	K	A	D	A	T	 	 	 	 	 	 	#	#	| New English Text
-41	4B	41	44	41	54	20	20	20	20	20	20	00	00	| New English Hex
+	すきなもの
+	Favorite Things:
+	$1B2ED	(Line 1)
+	BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
+	す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
+	L	I	K	E	S	:	 	 	 	 	| New English Text
+	4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
+	ともだち
+	Friends
+	$1B2F7	(Line 2)
+	C4	D3	C0	DE	C1	20	20	20	20	20	| Original Japanese Hex
+	と	も	た	"	ち	 	 	 	 	 	| Original Japanese Text
+	 	 	 	F	R	I	E	N	D	S	| New English Text
+	20	20	20	46	52	49	45	4E	44	53	| New English Hex
+	$1B301	(Line 3)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	H	A	T	E	S	:	 	 	 	 	| New English Text
+	48	41	54	45	53	3A	20	20	20	20	| New English Hex
+	きらいなもの
+	Things I Hate:
+	$1B30B	(Line 4)
+	B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
+	き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
+ 	H	A	L	L	O	W	E	E	N	 	| New English Text
+	20	48	41	4C	4C	4F	57	45	45	4E	| New English Hex
+	ハロウィン
+	Halloween
+	$1B315	(Line 5)
+	5B	CA	DB	B3	A8	DD	5D	20	20	20	20	20	| Original Japanese Hex
+	[	ハ	ロ	ウ	ィ	ン	]	 	 	 	 	 	| Original Japanese Text
+	 	 	 	 	 	 	 	 	 	 	B	O	| New English Text
+	20	20	20	20	20	20	20	20	20	20	42	4F	| New English Hex
+	$1B321	(Line 6)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	R	N	 	I	N	:	 	 	 	 	| New English Text
+	52	4E	20	49	4E	3A	20	20	20	20	| New English Hex
+	うまれ
+	Born In:
+	$1B32B	(Line 7)
+	B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
+	う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
+	 	 	B	A	N	B	O	O	 	 	| New English Text
+	20	20	42	41	4E	42	4F	4F	20	20	| New English Hex
+	バンブーヤード
+	Bamboo Garden
+	$1B335	(Line 8)
+	5B	CA	DE	DD	CC	DE	B0	D4	B0	C4	DE	5D	00	00	| Original Japanese Hex
+	[	ハ	"	ン	フ	"	ー	ヤ	ー	ト	"	]	#	#	| Original Japanese Text
+	 	 G	A	R	D	E	N	S	 	 	 	 	#	#	| New English Text
+	20	47	41	52	44	45	4E	53	20	20	20	20	00	00	| New English Hex
 
-すきなもの
-Favorite Things:
-$1B425	(Line 1)
-BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
-す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
-L	I	K	E	S	:	 	 	 	 	| New English Text
-4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
-チーズケーキ,いぬ
-Cheese Cake, Dogs
-$1B42F	(Line 2)
-5B	C1	B0	BD	DE	B9	B0	B7	5D	2C	B2	C7	| Original Japanese Hex
-[	チ	ー	ス	"	ケ	ー	キ	]	,	い	ぬ	| Original Japanese Text
-C	H	E	E	S	E	C	A	K	E	 	 	| New English Text
-43	48	45	45	53	45	43	41	4B	45	20	20	| New English Hex
-$1B43B	(Line 3)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	 	D	O	G	S	H	A	| New English Text
-20	20	20	20	44	4F	47	53	48	41	| New English Hex
-きらいなもの
-Things I Hate:
-$1B445	(Line 4)
-B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
-き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
-T	E	S	:	 	 	 	 	E	A	| New English Text
-54	45	53	3A	20	20	20	20	45	41	| New English Hex
-ミミズ,ナメクジ
-Earthworms, Slugs
-$1B44F	(Line 5)
-5B	D0	D0	BD	DE	5D	2C	5B	C5	D2	B8	BC	DE	5D	| Original Japanese Hex
-[	?	?	?	?	]	,	[	?	?	?	?	?	]	| Original Japanese Text
-R	T	H	W	O	R	M	S	 	 	 	 	 	S	| New English Text
-52	54	48	57	4F	52	4D	53	20	20	20	20	20	53	| New English Hex
-$1B45D	(Line 6)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
-L	U	G	S	B	O	R	N	 	I	| New English Text
-4C	55	47	53	42	4F	52	4E	20	49	| New English Hex
-うまれ
-Born In:
-$1B467	(Line 7)
-B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
-う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
-N	:	 	 	 	 	 	 	L	-	| New English Text
-4E	3A	20	20	20	20	20	20	4C	2D	| New English Hex
-エルシップおうこく
-L-Ship Kingdom
-$1B471	(Line 8)
-5B	B4	D9	BC	AF	CC	DF	5D	B5	B3	BA	B8	00	00	00	| Original Japanese Hex
-[	エ	ル	シ	ッ	フ	o	]	お	う	こ	く	#	#	#	| Original Japanese Text
-S	H	I	P	 	 	 	 	 	 	 	 	#	#	#	| New English Text
-53	48	49	50	20	20	20	20	20	20	20	20	00	00	00	| New English Hex
+SHAMAN:
+	シャーマン
+	Shaman
+	$1B341	(Top Half)
+	00	00	C5	C6	C7	C8	C4	00	00	00	| Original Japanese Hex
+	 	 	シ	ャ	ー	マ	ン	 	 	 	| Original Japanese Text
+	 	 	S	H	A	M	A	N	 	 	| New English Text
+	00	00	E2	C7	C0	CC	C0	CD	00	00	| New English Hex
+	$1B34B	(Bottom Half)
+	00	00	D5	D6	D7	D8	D4	00	00	00	| Original Japanese Hex
+	 	 	シ	ャ	ー	マ	ン	 	 	 	| Original Japanese Text
+	 	 	S	H	A	M	A	N	 	 	| New English Text
+	00	00	F2	D7	D0	DC	D0	DD	00	00	| New English Hex
 
-すきなもの
-Favorite Things:
-$1B491	(Line 1)
-BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
-す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
-L	I	K	E	S	:	 	 	 	 	| New English Text
-4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
-ゆかいなこと
-Funny/Amusing/Joyful Things/Entertaining
-$1B49B	(Line 2)
-D5	B6	B2	C5	BA	C4	20	20	20	20	| Original Japanese Hex
-ゆ	か	い	な	こ	と	 	 	 		| Original Japanese Text
-F	U	N	,	 	J	O	K	E	S	| New English Text
-46	55	4E	2C	20	4A	4F	4B	45	53	| New English Hex
-$1B4A5	(Line 3)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
-H	A	T	E	S	:	 	 	 	 	| New English Text
-48	41	54	45	53	3A	20	20	20	20	| New English Hex
-きらいなもの
-Things I Hate:
-$1B4AF	(Line 4)
-B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
-き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
- 	 	 	S	I	L	E	N	C	E	| New English Text
-20	20	20	53	49	4C	45	4E	43	45	| New English Hex
-ちんもく
-Silence
-$1B4B9	(Line 5)
-C1	DD	D3	B8	20	20	20	20	20	20	| Original Japanese Hex
-ち	ん	も	く	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	 	 	 	 	 	 		| New English Text
-20	20	20	20	20	20	20	20	20	20	| New English Hex
-$1B4C3	(Line 6)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
-B	O	R	N	 	I	N	:	 	 	| New English Text
-42	4F	52	4E	20	49	4E	3A	20	20	| New English Hex
-うまれ
-Born In:
-$1B4CD	(Line 7)
-B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
-う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
- 	 	S	U	N	H	O	U	S	E	| New English Text
-20	20	53	55	4E	48	4F	55	53	45	| New English Hex
-サンハウスヒルズ
-SunHouse Hills
-$1B4D7	(Line 8)
-5B	BB	DD	CA	B3	BD	CB	D9	BD	DE	5D	20	00	00	| Original Japanese Hex
-[	サ	ン	ハ	ウ	ス	ヒ	ル	ス	"	]	 	#	#	| Original Japanese Text
- 	 	 	 	 	H	I	L	L	S	 	 	#	#	| New English Text
-20	20	20	20	20	48	49	4C	4C	53	20	20	00	00	| New English Hex
+	すきなもの
+	Favorite Things:
+	$1B355	(Line 1)
+	BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
+	す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
+	L	I	K	E	S	:	 	 	 	 	| New English Text
+	4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
+	おどり
+	Dancing
+	$1B35F	(Line 2)
+	B5	C4	DE	D8	20	20	20	20	20	20	| Original Japanese Hex
+	お	と	"	り	 	 	 	 	 	 	| Original Japanese Text
+	 	 	 	D	A	N	C	I	N	G	| New English Text
+	20	20	20	44	41	4E	43	49	4E	47	| New English Hex
+	$1B369	(Line 3)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	H	A	T	E	S	:	 	 	 	 	| New English Text
+	48	41	54	45	53	3A	20	20	20	20	| New English Hex
+	きらいなもの
+	Things I Hate:
+	$1B373	(Line 4)
+	B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
+	き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
+	 	 	 	T	H	U	N	D	E	R	| New English Text
+	20	20	20	54	48	55	4E	44	45	52	| New English Hex
+	かみなり
+	Thunder/Lightning/Storms
+	$1B37D	(Line 5)
+	B6	D0	C5	D8	20	20	20	20	20	20	| Original Japanese Hex
+	か	み	な	り	 	 	 	 	 	 	| Original Japanese Text
+	 	 	 	 	 	 	 	 	 		| New English Text
+	20	20	20	20	20	20	20	20	20	20	| New English Hex
+	$1B387	(Line 3)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	B	O	R	N	 	I	N	:	 	 	| New English Text
+	42	4F	52	4E	20	49	4E	3A	20	20	| New English Hex
+	うまれ
+	Born In:
+	$1B391	(Line 7)
+	B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
+	う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
+	 	 	 	 	Y	A	N	B	O	O	| New English Text
+	20	20	20	20	59	41	4E	42	4F	4F	| New English Hex
+	ヤンブーフォレスト
+	Yanboo Forest
+	$1B39B	(Line 8)
+	5B	D4	DD	CC	DE	B0	CC	AB	DA	BD	C4	5D	00	00	| Original Japanese Hex
+	[	ヤ	ン	フ	"	ー	フ	ォ	レ	ス	ト	]	#	#	| Original Japanese Text
+	 	 	 	 	F	O	R	E	S	T	 	 	#	#	| New English Text
+	20	20	20	20	46	4F	52	45	53	54	20	20	00	00	| New English Hex
 
-すきなもの
-Favorite Things:
-$1B4F7	(Line 1)
-BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
-す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
-L	I	K	E	S	:	 	 	 	 	| New English Text
-4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
-チョコレート
-Chocolate
-$1B501	(Line 2)
-5B	C1	AE	BA	DA	B0	C4	5D	20	20	20	20	| Original Japanese Hex
-[	チ	ョ	コ	レ	ー	ト	]	 	 	 	 	| Original Japanese Text
- 	C	H	O	C	O	L	A	T	E	 		| New English Text
-20	43	48	4F	43	4F	4C	41	54	45	20	20	| New English Hex
-$1B50D	(Line 3)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	 	 	 	 	 	H	A	| New English Text
-20	20	20	20	20	20	20	20	48	41	| New English Hex
-きらいなもの
-Things I Hate:
-$1B517	(Line 4)
-B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
-き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
-T	E	S	:	 	 	 	 	 	C	| New English Text
-54	45	53	3A	20	20	20	20	20	43	| New English Hex
-ゴキブリ
-Cockroach
-$1B521	(Line 5)
-5B	BA	DE	B7	CC	DE	D8	5D	20	20	20	20	| Original Japanese Hex
-[	コ	"	キ	フ	"	リ	]	 	 	 	 	| Original Japanese Text
-O	C	K	R	O	A	C	H	 	 	 	 	| New English Text
-4F	43	4B	52	4F	41	43	48	20	20	20	20	| New English Hex
-$1B52D	(Line 6)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	 	 	 	B	O	R	N	| New English Text
-20	20	20	20	20	20	42	4F	52	4E	| New English Hex
-うまれ
-Born In:
-$1B537	(Line 7)
-B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
-う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
- 	I	N	:	 	 	 	 	 		| New English Text
-20	49	4E	3A	20	20	20	20	20	20	| New English Hex
-げっこうえどむら
-Gekko Edo-mura
-$1B541	(Line 8)
-B9	DE	AF	BA	B3	B4	C4	DE	D1	D7	00	| Original Japanese Hex
-け	"	っ	こ	う	え	と	"	む	ら	#	| Original Japanese Text
- 	G	E	K	K	O	 	 	 	 	#	| New English Text
-20	47	45	4B	4B	4F	20	20	20	20	00	| New English Hex
+ALADDIN:
+	アラジン
+	Aladdin
+	$1B3A7	(Top Half)
+	00	00	C9	CA	C5	CB	C4	00	00	00	| Original Japanese Hex
+	 	 	ア	ラ	シ	"	ン	 	 	 	| Original Japanese Text
+	 	A	L	A	D	D	I	N	 	 	| New English Text
+	00	C0	CB	C0	C3	C3	C8	CD	00	00	| New English Hex
+	$1B3B1	(Bottom Half)
+	00	00	D9	DA	D5	DB	D4	00	00	00	| Original Japanese Hex
+	 	 	ア	ラ	シ	"	ン	 	 	 	| Original Japanese Text
+	 	A	L	A	D	D	I	N	 	 	| New English Text
+	00	D0	DB	D0	D3	D3	D8	DD	00	00	| New English Hex
 
-すきなもの
-Favorite Things:
-$1B55F	(Line 1)
-BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
-す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
-L	I	K	E	S	:	 	 	 	 	| New English Text
-4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
-オニオンスープ
-Onion Soup
-$1B569	(Line 2)
-5B	B5	C6	B5	DD	BD	B0	CC	DF	5D	20	20	| Original Japanese Hex
-[	オ	ニ	オ	ン	ス	ー	フ	o	]	 	 	| Original Japanese Text
-O	N	I	O	N	 	S	O	U	P	H	A	| New English Text
-4F	4E	49	4F	4E	20	53	4F	55	50	48	41	| New English Hex
-$1B575	(Line 3)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
-T	E	S	:	 	 	 	 	 	 	| New English Text
-54	45	53	3A	20	20	20	20	20	20	| New English Hex
-きらいなもの
-Things I Hate:
-$1B57F	(Line 4)
-B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
-き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
-T	O	M	A	T	O	E	S	 	 	| New English Text
-54	4F	4D	41	54	4F	45	53	20	20	| New English Hex
-トマト
-Tomatoes
-$1B589	(Line 5)
-5B	C4	CF	C4	5D	20	20	20	20	20	20	20	| Original Japanese Hex
-[	ト	マ	ト	]	 	 	 	 	 	 	 	| Original Japanese Text
- 	 	 	 	 	 	 	 	B	O	R	N	| New English Text
-20	20	20	20	20	20	20	20	42	4F	52	4E	| New English Hex
-$1B595	(Line 6)
-20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
- 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
- 	I	N	:	 	 	 	D	O	W	| New English Text
-20	49	4E	3A	20	20	20	44	4F	57	| New English Hex
+	すきなもの
+	Favorite Things:
+	$1B3BB	(Line 1)
+	BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
+	す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
+	L	I	K	E	S	:	 	 	 	 	| New English Text
+	4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
+	ユメ,ボウケン
+	Dreams, Adventure
+	$1B3C5	(Line 2)
+	5B	D5	D2	5D	2C	5B	CE	DE	B3	B9	DD	5D	20	20	| Original Japanese Hex
+	[	ユ	メ	]	,	[	ホ	"	ウ	ケ	ン	]	 	 	| Original Japanese Text
+	 	 	 	D	R	E	A	M	S	,	 	A	D	V	| New English Text
+	20	20	20	44	52	45	41	4D	53	2C	20	41	44	56	| New English Hex
+	$1B3D3	(Line 3)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	E	N	T	U	R	E	H	A	T	E	| New English Text
+	45	4E	54	55	52	45	48	41	54	45	| New English Hex
+	きらいなもの
+	Things I Hate:
+	$1B3DD	(Line 4)
+	B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
+	き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
+	S	:	 	 	 	 	 	R	E	A	| New English Text
+	53	3A	20	20	20	20	20	52	45	41	| New English Hex
+	こんじょう
+	Real Life/Temper/Nature
+	$1B3E7	(Line 5)
+	BA	DD	BC	DE	AE	B3	20	20	20	20	| Original Japanese Hex
+	こ	ん	し	"	ょ	う	 	 	 	 	| Original Japanese Text
+	L	 	L	I	F	E	 	 	 	 	| New English Text
+	4C	20	4C	49	46	45	20	20	20	20	| New English Hex
+	$1B3F1	(Line 6)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	 	 	 	 	 	 	B	O	R	N	| New English Text
+	20	20	20	20	20	20	42	4F	52	4E	| New English Hex
+	うまれ
+	Born In:
+	$1B3FB	(Line 7)
+	B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
+	う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
+	 	I	N	:	 	 	 	 	 	N	| New English Text
+	20	49	4E	3A	20	20	20	20	20	4E	| New English Hex
+	ナカダット
+	Nakadat
+	$1B405	(Line 8)
+	5B	C5	B6	C0	DE	AF	C4	5D	20	20	20	20	00	00	| Original Japanese Hex
+	[	ナ	カ	タ	"	ッ	ト	]	 	 	 	 	#	#	| Original Japanese Text
+	A	K	A	D	A	T	 	 	 	 	 	 	#	#	| New English Text
+	41	4B	41	44	41	54	20	20	20	20	20	20	00	00	| New English Hex
 
-うまれ
-Born In:
-$1B59F	(Line 7)
-B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
-う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
-N	T	O	W	N	,	 	 	 	 	| New English Text
-4E	54	4F	57	4E	2C	20	20	20	20	| New English Hex
+PRINCESS:
+	プリンセス
+	Princess
+	$1B411	(Top Half)
+	00	00	E1	E2	E3	C4	E4	E5	00	00	| Original Japanese Hex
+	 	 	フ	o	リ	ン	セ	ス	 	 	| Original Japanese Text
+	 	 P	R	I	N	C	E	S 	S	 	| New English Text
+	00	CF	E1	C8	CD	C2	C4	E2	E2	00	| New English Hex
+	$1B41B	(Bottom Half)
+	00	00	F1	F2	F3	D4	F4	F5	00	00	| Original Japanese Hex
+	 	 	フ	o	リ	ン	セ	ス	 	 	| Original Japanese Text
+	 	 P	R	I	N	C	E	S 	S	 	| New English Text
+	00	DF	F1	D8	DD	D2	D4	F2	F2	00	| New English Hex
 
-とうきょうしたまち
-Tokyo, Downtown
-$1B5A9	(Line 8)
-C4	B3	B7	AE	B3	BC	C0	CF	C1	20	| Original Japanese Hex
-と	う	き	ょ	う	し	た	ま	ち	 	| Original Japanese Text
- 	T	O	K	Y	O	 	 	 	 	| New English Text
-20	54	4F	4B	59	4F	20	20	20	20	| New English Hex
+	すきなもの
+	Favorite Things:
+	$1B425	(Line 1)
+	BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
+	す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
+	L	I	K	E	S	:	 	 	 	 	| New English Text
+	4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
+	チーズケーキ,いぬ
+	Cheese Cake, Dogs
+	$1B42F	(Line 2)
+	5B	C1	B0	BD	DE	B9	B0	B7	5D	2C	B2	C7	| Original Japanese Hex
+	[	チ	ー	ス	"	ケ	ー	キ	]	,	い	ぬ	| Original Japanese Text
+	C	H	E	E	S	E	C	A	K	E	 	 	| New English Text
+	43	48	45	45	53	45	43	41	4B	45	20	20	| New English Hex
+	$1B43B	(Line 3)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	 	 	 	 	D	O	G	S	H	A	| New English Text
+	20	20	20	20	44	4F	47	53	48	41	| New English Hex
+	きらいなもの
+	Things I Hate:
+	$1B445	(Line 4)
+	B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
+	き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
+	T	E	S	:	 	 	 	 	E	A	| New English Text
+	54	45	53	3A	20	20	20	20	45	41	| New English Hex
+	ミミズ,ナメクジ
+	Earthworms, Slugs
+	$1B44F	(Line 5)
+	5B	D0	D0	BD	DE	5D	2C	5B	C5	D2	B8	BC	DE	5D	| Original Japanese Hex
+	[	?	?	?	?	]	,	[	?	?	?	?	?	]	| Original Japanese Text
+	R	T	H	W	O	R	M	S	 	 	 	 	 	S	| New English Text
+	52	54	48	57	4F	52	4D	53	20	20	20	20	20	53	| New English Hex
+	$1B45D	(Line 6)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	L	U	G	S	B	O	R	N	 	I	| New English Text
+	4C	55	47	53	42	4F	52	4E	20	49	| New English Hex
+	うまれ
+	Born In:
+	$1B467	(Line 7)
+	B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
+	う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
+	N	:	 	 	 	 	 	 	L	-	| New English Text
+	4E	3A	20	20	20	20	20	20	4C	2D	| New English Hex
+	エルシップおうこく
+	L-Ship Kingdom
+	$1B471	(Line 8)
+	5B	B4	D9	BC	AF	CC	DF	5D	B5	B3	BA	B8	00	00	00	| Original Japanese Hex
+	[	エ	ル	シ	ッ	フ	o	]	お	う	こ	く	#	#	#	| Original Japanese Text
+	S	H	I	P	 	 	 	 	 	 	 	 	#	#	#	| New English Text
+	53	48	49	50	20	20	20	20	20	20	20	20	00	00	00	| New English Hex
+
+BIT:
+	ビット
+	Bit
+	$1B47D	(Top Half)
+	00	00	00	CC	CB	CD	CE	00	00	00	| Original Japanese Hex
+	 	 	 	ヒ	"	ッ	ト	 	 	 	| Original Japanese Text
+	 	 	 	B	I	T	 	 	 	 	| New English Text
+	00	00	00	C1	C8	E3	00	00	00	00	| New English Hex
+	$1B487	(Bottom Half)
+	00	00	00	DC	DB	DD	DE	00	00	00	| Original Japanese Hex
+	 	 	 	ヒ	"	ッ	ト	 	 	 	| Original Japanese Text
+	 	 	 	B	I	T	 	 	 	 	| New English Text
+	00	00	00	D1	D8	F3	00	00	00	00	| New English Hex
+
+	すきなもの
+	Favorite Things:
+	$1B491	(Line 1)
+	BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
+	す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
+	L	I	K	E	S	:	 	 	 	 	| New English Text
+	4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
+	ゆかいなこと
+	Funny/Amusing/Joyful Things/Entertaining
+	$1B49B	(Line 2)
+	D5	B6	B2	C5	BA	C4	20	20	20	20	| Original Japanese Hex
+	ゆ	か	い	な	こ	と	 	 	 		| Original Japanese Text
+	F	U	N	,	 	J	O	K	E	S	| New English Text
+	46	55	4E	2C	20	4A	4F	4B	45	53	| New English Hex
+	$1B4A5	(Line 3)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	H	A	T	E	S	:	 	 	 	 	| New English Text
+	48	41	54	45	53	3A	20	20	20	20	| New English Hex
+	きらいなもの
+	Things I Hate:
+	$1B4AF	(Line 4)
+	B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
+	き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
+	 	 	 	S	I	L	E	N	C	E	| New English Text
+	20	20	20	53	49	4C	45	4E	43	45	| New English Hex
+	ちんもく
+	Silence
+	$1B4B9	(Line 5)
+	C1	DD	D3	B8	20	20	20	20	20	20	| Original Japanese Hex
+	ち	ん	も	く	 	 	 	 	 	 	| Original Japanese Text
+	 	 	 	 	 	 	 	 	 		| New English Text
+	20	20	20	20	20	20	20	20	20	20	| New English Hex
+	$1B4C3	(Line 6)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	B	O	R	N	 	I	N	:	 	 	| New English Text
+	42	4F	52	4E	20	49	4E	3A	20	20	| New English Hex
+	うまれ
+	Born In:
+	$1B4CD	(Line 7)
+	B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
+	う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
+	 	 	S	U	N	H	O	U	S	E	| New English Text
+	20	20	53	55	4E	48	4F	55	53	45	| New English Hex
+	サンハウスヒルズ
+	SunHouse Hills
+	$1B4D7	(Line 8)
+	5B	BB	DD	CA	B3	BD	CB	D9	BD	DE	5D	20	00	00	| Original Japanese Hex
+	[	サ	ン	ハ	ウ	ス	ヒ	ル	ス	"	]	 	#	#	| Original Japanese Text
+	 	 	 	 	 	H	I	L	L	S	 	 	#	#	| New English Text
+	20	20	20	20	20	48	49	4C	4C	53	20	20	00	00	| New English Hex
+
+NINJA:
+	ニンジャ
+	Ninja
+	$1B4E3	(Top Half)
+	00	00	E7	C4	C5	CB	C6	00	00	00	| Original Japanese Hex
+	 	 	ニ	ン	シ	"	ャ	 	 	 	| Original Japanese Text
+	 	 	N	I	N	J	A	 	 	 	| New English Text
+	00	00	CD	C8	CD	C9	C0	00	00	00	| New English Hex
+	$1B4ED	(Bottom Half)
+	00	00	F7	D4	D5	DB	D6	00	00	00	| Original Japanese Hex
+	 	 	ニ	ン	シ	"	ャ	 	 	 	| Original Japanese Text
+	 	 	N	I	N	J	A	 	 	 	| New English Text
+	00	00	DD	D8	DD	D9	D0	00	00	00	| New English Hex
+
+	すきなもの
+	Favorite Things:
+	$1B4F7	(Line 1)
+	BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
+	す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
+	L	I	K	E	S	:	 	 	 	 	| New English Text
+	4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
+	チョコレート
+	Chocolate
+	$1B501	(Line 2)
+	5B	C1	AE	BA	DA	B0	C4	5D	20	20	20	20	| Original Japanese Hex
+	[	チ	ョ	コ	レ	ー	ト	]	 	 	 	 	| Original Japanese Text
+	 	C	H	O	C	O	L	A	T	E	 		| New English Text
+	20	43	48	4F	43	4F	4C	41	54	45	20	20	| New English Hex
+	$1B50D	(Line 3)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	 	 	 	 	 	 	 	 	H	A	| New English Text
+	20	20	20	20	20	20	20	20	48	41	| New English Hex
+	きらいなもの
+	Things I Hate:
+	$1B517	(Line 4)
+	B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
+	き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
+	T	E	S	:	 	 	 	 	 	C	| New English Text
+	54	45	53	3A	20	20	20	20	20	43	| New English Hex
+	ゴキブリ
+	Cockroach
+	$1B521	(Line 5)
+	5B	BA	DE	B7	CC	DE	D8	5D	20	20	20	20	| Original Japanese Hex
+	[	コ	"	キ	フ	"	リ	]	 	 	 	 	| Original Japanese Text
+	O	C	K	R	O	A	C	H	 	 	 	 	| New English Text
+	4F	43	4B	52	4F	41	43	48	20	20	20	20	| New English Hex
+	$1B52D	(Line 6)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	 	 	 	 	 	 	B	O	R	N	| New English Text
+	20	20	20	20	20	20	42	4F	52	4E	| New English Hex
+	うまれ
+	Born In:
+	$1B537	(Line 7)
+	B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
+	う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
+	 	I	N	:	 	 	 	 	 		| New English Text
+	20	49	4E	3A	20	20	20	20	20	20	| New English Hex
+	げっこうえどむら
+	Gekko Edo-mura
+	$1B541	(Line 8)
+	B9	DE	AF	BA	B3	B4	C4	DE	D1	D7	00	| Original Japanese Hex
+	け	"	っ	こ	う	え	と	"	む	ら	#	| Original Japanese Text
+	 	G	E	K	K	O	 	 	 	 	#	| New English Text
+	20	47	45	4B	4B	4F	20	20	20	20	00	| New English Hex
+
+WOLFMAN:
+	オオカミオトコ
+	Wolfman
+	$1B54B	(Top Half)
+	00	EB	EB	EC	CF	EB	CE	ED	00	00	| Original Japanese Hex
+	 	オ	オ	カ	ミ	オ	ト	コ	 	 	| Original Japanese Text
+	 	W	O	L	F	M	A	N	 	 	| New English Text
+	00	E6	CE	CB	C5	CC	C0	CD	00	00	| New English Hex
+	$1B555	(Bottom Half)
+	00	FB	FB	FC	DF	FB	DE	FD	00	00	| Original Japanese Hex
+	 	オ	オ	カ	ミ	オ	ト	コ	 	 	| Original Japanese Text
+	 	W	O	L	F	M	A	N	 	 	| New English Text
+	00	F6	DE	DB	D5	DC	D0	DD	00	00	| New English Hex
+
+	すきなもの
+	Favorite Things:
+	$1B55F	(Line 1)
+	BD	B7	C5	D3	C9	20	20	20	20	20	| Original Japanese Hex
+	す	き	な	も	の	 	 	 	 	 	| Original Japanese Text
+	L	I	K	E	S	:	 	 	 	 	| New English Text
+	4C	49	4B	45	53	3A	20	20	20	20	| New English Hex
+	オニオンスープ
+	Onion Soup
+	$1B569	(Line 2)
+	5B	B5	C6	B5	DD	BD	B0	CC	DF	5D	20	20	| Original Japanese Hex
+	[	オ	ニ	オ	ン	ス	ー	フ	o	]	 	 	| Original Japanese Text
+	O	N	I	O	N	 	S	O	U	P	H	A	| New English Text
+	4F	4E	49	4F	4E	20	53	4F	55	50	48	41	| New English Hex
+	$1B575	(Line 3)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	T	E	S	:	 	 	 	 	 	 	| New English Text
+	54	45	53	3A	20	20	20	20	20	20	| New English Hex
+	きらいなもの
+	Things I Hate:
+	$1B57F	(Line 4)
+	B7	D7	B2	C5	D3	C9	20	20	20	20	| Original Japanese Hex
+	き	ら	い	な	も	の	 	 	 	 	| Original Japanese Text
+	T	O	M	A	T	O	E	S	 	 	| New English Text
+	54	4F	4D	41	54	4F	45	53	20	20	| New English Hex
+	トマト
+	Tomatoes
+	$1B589	(Line 5)
+	5B	C4	CF	C4	5D	20	20	20	20	20	20	20	| Original Japanese Hex
+	[	ト	マ	ト	]	 	 	 	 	 	 	 	| Original Japanese Text
+	 	 	 	 	 	 	 	 	B	O	R	N	| New English Text
+	20	20	20	20	20	20	20	20	42	4F	52	4E	| New English Hex
+	$1B595	(Line 6)
+	20	20	20	20	20	20	20	20	20	20	| Original Japanese Hex
+	 	 	 	 	 	 	 	 	 	 	| Original Japanese Text
+	 	I	N	:	 	 	 	D	O	W	| New English Text
+	20	49	4E	3A	20	20	20	44	4F	57	| New English Hex
+	うまれ
+	Born In:
+	$1B59F	(Line 7)
+	B3	CF	DA	20	20	20	20	20	20	20	| Original Japanese Hex
+	う	ま	れ	 	 	 	 	 	 	 	| Original Japanese Text
+	N	T	O	W	N	,	 	 	 	 	| New English Text
+	4E	54	4F	57	4E	2C	20	20	20	20	| New English Hex
+
+	とうきょうしたまち
+	Tokyo, Downtown
+	$1B5A9	(Line 8)
+	C4	B3	B7	AE	B3	BC	C0	CF	C1	20	| Original Japanese Hex
+	と	う	き	ょ	う	し	た	ま	ち	 	| Original Japanese Text
+	 	T	O	K	Y	O	 	 	 	 	| New English Text
+	20	54	4F	4B	59	4F	20	20	20	20	| New English Hex

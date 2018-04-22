@@ -16,6 +16,20 @@ macro PC2LoROM(SIZE, OFFSET) {
     {SIZE} lorom
 }
 
+macro TextMapINTRO(TEXT) {
+  // Map Font HI
+  map ' ', $00
+  map 'A', $C0, 16
+  map 'Q', $E0, 10
+  db {TEXT}
+
+  // Map Font LO
+  map ' ', $00
+  map 'A', $D0, 16
+  map 'Q', $F0, 10
+  db {TEXT}
+}
+
 macro TextMapLO(OFFSET, TEXT) {
   // Map Font HI
   map ' ', $00, 16
@@ -726,10 +740,10 @@ QUEENPauseComputer3:
   db "COME ON! KNEEL\n"
   db "DOWN BEFORE ME!", $FF
 
-TextMapASCII() // Map ASCII Font
-
 // INTRO
-origin $1B283
+origin $1B26F
+TextMapINTRO("HALLOWEEN ") // Map Intro Font
+TextMapASCII() // Map ASCII Font
 db "LIKES:    "
 db " CHOCOLATE"
 db "      CAKE"
@@ -740,7 +754,9 @@ db " A PUMPKIN"
 db "     FIELD"
 db "      ", $00, $00, $00
 
-origin $1B2ED
+origin $1B2D9
+TextMapINTRO(" MIRURUN  ") // Map Intro Font
+TextMapASCII() // Map ASCII Font
 db "LIKES:    "
 db "   FRIENDS"
 db "HATES:    "
@@ -751,7 +767,9 @@ db "    BANBOO"
 db "   GARDENS"
 db "    ", $00, $00
 
-origin $1B355
+origin $1B341
+TextMapINTRO("  SHAMAN  ") // Map Intro Font
+TextMapASCII() // Map ASCII Font
 db "LIKES:    "
 db "   DANCING"
 db "HATES:    "
@@ -762,7 +780,9 @@ db "    YANBOO"
 db "    FOREST"
 db "  ", $00, $00
 
-origin $1B3BB
+origin $1B3A7
+TextMapINTRO(" ALADDIN  ") // Map Intro Font
+TextMapASCII() // Map ASCII Font
 db "LIKES:    "
 db "   DREAMS,"
 db " ADVENTURE"
@@ -773,7 +793,9 @@ db "BORN IN:  "
 db "   NAKADAT"
 db "      ", $00, $00
 
-origin $1B425
+origin $1B411
+TextMapINTRO(" PRINCESS ") // Map Intro Font
+TextMapASCII() // Map ASCII Font
 db "LIKES:    "
 db "CHEESECAKE"
 db "      DOGS"
@@ -784,7 +806,9 @@ db "BORN IN:  "
 db "    L-SHIP"
 db "        ", $00, $00, $00
 
-origin $1B491
+origin $1B47D
+TextMapINTRO("   BIT    ") // Map Intro Font
+TextMapASCII() // Map ASCII Font
 db "LIKES:    "
 db "FUN, JOKES"
 db "HATES:    "
@@ -795,7 +819,9 @@ db "  SUNHOUSE"
 db "     HILLS"
 db "  ", $00, $00
 
-origin $1B4F7
+origin $1B4E3
+TextMapINTRO("  NINJA   ") // Map Intro Font
+TextMapASCII() // Map ASCII Font
 db "LIKES:    "
 db " CHOCOLATE"
 db "          "
@@ -806,7 +832,9 @@ db "BORN IN:  "
 db "     GEKKO"
 db "    ", $00
 
-origin $1B55F
+origin $1B54B
+TextMapINTRO(" WOLFMAN  ") // Map Intro Font
+TextMapASCII() // Map ASCII Font
 db "LIKES:    "
 db "ONION SOUP"
 db "HATES:    "
@@ -1061,4 +1089,7 @@ WOLFMANCharacterDescription:
   db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End High Bytes
 
 // Include Title Screen
-origin $D6125; insert "TitleScreen.rle" // VRAM $C000..$FFFF 4BPP Title Screen RLE
+origin $D6125; insert "TitleScreen.rle" // VRAM $C000..$FFFF 4BPP Title Screen RLE (7248 Bytes)
+
+// Include Intro
+origin $EB3A1; insert "Intro.rle" // VRAM $C000..$DFFF 4BPP Intro RLE (4107 Bytes)

@@ -7,7 +7,7 @@ BLOCKRLE = 0x80   # BLOCK: RLE Copy 7-Bit "0x80 + LENGTH (1..127), RLE BYTE"
 
 fileeven = [] # Clear EVEN Byte Array
 fileodd = [] # Clear ODD Byte Array
-filein = open('TitleScreenENGVRAM$C000.bin', 'rb')
+filein = open('IntroENGVRAM$C000..$DFFF.bin', 'rb')
 byteevenin = filein.read(1)
 byteoddin = filein.read(1)
 while byteevenin: # Load EVEN/ODD Byte Array
@@ -65,6 +65,6 @@ def compress(group):
 compress(groupeven)
 compress(groupodd)
 
-fileout = open('TitleScreen.rle', 'wb')
+fileout = open('Intro.rle', 'wb')
 for byte in out: fileout.write(b"%c" %byte)
 fileout.close()
