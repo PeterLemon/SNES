@@ -30,6 +30,27 @@ macro TextMapINTRO(TEXT) {
   db {TEXT}
 }
 
+macro TextMapCHARACTERSELECTNAME(TEXT) {
+  // Map Font HI
+  map ' ', $01DE
+  map 'A', $01B0, 16
+  map 'Q', $01D0, 10
+  dw {TEXT}
+
+  // Map Font LO
+  map ' ', $01DE
+  map 'A', $01C0, 16
+  map 'Q', $01E0, 10
+  dw {TEXT}
+}
+
+macro TextMapCHARACTERSELECT(TEXT) {
+  // Map Font
+  map ' ', $A5
+  map 'A', $A6, 26
+  dw {TEXT}
+}
+
 macro TextMapLO(OFFSET, TEXT) {
   // Map Font HI
   map ' ', $00, 16
@@ -1088,8 +1109,72 @@ WOLFMANCharacterDescription:
   TextMapHI(origin(), $C) // Line 11: Origin, Length
   db $FF, $00, $FF, $00, $B3, $00, $00, $FF // End High Bytes
 
-// Include Title Screen
+// CHARACTER SELECT MAGIC
+origin $05442
+TextMapCHARACTERSELECT("MIRURUN ") // Level 1 Mirurun
+TextMapCHARACTERSELECT("COPY    ") // Level 4 Princess
+TextMapCHARACTERSELECT("MEDUSA  ") // Level 4 Ninja
+TextMapCHARACTERSELECT("BOMB    ") // Level 4 Halloween
+TextMapCHARACTERSELECT("FAKE    ") // Level 2 Ninja
+TextMapCHARACTERSELECT("PENTRIS ") // Level 3 Mirurun
+TextMapCHARACTERSELECT("SHAMBLE ") // Level 3 Ninja
+TextMapCHARACTERSELECT("FRY     ") // Level 1 Halloween
+TextMapCHARACTERSELECT("CURSE   ") // Level 3 Shaman
+TextMapCHARACTERSELECT("VAMPIRE ") // Level 3 Halloween
+TextMapCHARACTERSELECT("CLEAR   ") // Level 4 Queen
+TextMapCHARACTERSELECT("SEESAW  ") // Level 1 Aladdin
+TextMapCHARACTERSELECT("SEESAW  ") // Level 1 Aladdin
+TextMapCHARACTERSELECT("SEESAW  ") // Level 1 Aladdin
+TextMapCHARACTERSELECT("SLICE   ") // Level 1 Wolfman
+TextMapCHARACTERSELECT("MOSES   ") // Level 1 Shaman
+TextMapCHARACTERSELECT("MAMBO   ") // Level 4 Bit
+TextMapCHARACTERSELECT("STARDUST") // Level 1 Bit
+TextMapCHARACTERSELECT("REVERSE ") // Level 2 Queen
+TextMapCHARACTERSELECT("PARALYZE") // Level 3 Princess
+TextMapCHARACTERSELECT("ROTATION") // Level 2 Shaman
+TextMapCHARACTERSELECT("GATHER  ") // Level 1 Ninja
+TextMapCHARACTERSELECT("GANG    ") // Level 3 Bit
+TextMapCHARACTERSELECT("RENSA   ") // Level 4 Wolfman
+TextMapCHARACTERSELECT("PRESS   ") // Level 1 Dragon
+TextMapCHARACTERSELECT("SOUL    ") // Level 1 Princess
+TextMapCHARACTERSELECT("SIRTET  ") // Level 4 Mirurun
+TextMapCHARACTERSELECT("FAX     ") // Level 3 Aladdin
+TextMapCHARACTERSELECT("SHIELD  ") // Level 2 Aladdin
+TextMapCHARACTERSELECT("MIRROR  ") // Level 2 Princess
+TextMapCHARACTERSELECT("HEAVY   ") // Level ? ????
+TextMapCHARACTERSELECT("SELECT  ") // Level 2 Dragon
+TextMapCHARACTERSELECT("SLOWDOWN") // Level 2 Wolfman
+TextMapCHARACTERSELECT("REMOTE  ") // Level 4 Aladdin
+TextMapCHARACTERSELECT("INVERT  ") // Level 2 Mirurun
+TextMapCHARACTERSELECT("BUDDIES ") // Level 3 Wolfman
+TextMapCHARACTERSELECT("PRAYER  ") // Level 4 Shaman
+TextMapCHARACTERSELECT("ROULETTE") // Level 3 Dragon
+TextMapCHARACTERSELECT("FEVER   ") // Level 2 Bit
+TextMapCHARACTERSELECT("CHANGE  ") // Level 4 Dragon
+TextMapCHARACTERSELECT("DOUBLE  ") // Level 3 Queen
+TextMapCHARACTERSELECT("DARK    ") // Level 2 Halloween
+TextMapCHARACTERSELECT("HYPERFRY") // Level 1 Queen
+
+// CHARACTER SELECT NAME
+origin $1A313
+TextMapCHARACTERSELECTNAME("HALLOWE")
+TextMapCHARACTERSELECTNAME("MIRURUN")
+TextMapCHARACTERSELECTNAME(" SHAMAN")
+TextMapCHARACTERSELECTNAME("ALADDIN")
+TextMapCHARACTERSELECTNAME("PRINCES")
+TextMapCHARACTERSELECTNAME("  BIT  ")
+TextMapCHARACTERSELECTNAME(" NINJA ")
+TextMapCHARACTERSELECTNAME("WOLFMAN")
+
+// Include Character Select Tile MAP
+origin $3D1D2; insert "CharacterSelectMAP.rle" // VRAM $F000..$F7FF MAP Character Select RLE (1224 Bytes)
+// Include Character Select Tiles
+origin $95112; insert "CharacterSelect.rle" // VRAM $0000..$3FFF 4BPP Character Select RLE (9071 Bytes)
+// Include Character Select Page Tile MAP
+origin $FD2B2; insert "CharacterSelectPageMAP.rle" // VRAM $F000..$F7FF MAP Character Select Page RLE (2307 Bytes)
+
+// Include Title Screen Tiles
 origin $D6125; insert "TitleScreen.rle" // VRAM $C000..$FFFF 4BPP Title Screen RLE (7248 Bytes)
 
-// Include Intro
+// Include Intro Tiles
 origin $EB3A1; insert "Intro.rle" // VRAM $C000..$DFFF 4BPP Intro RLE (4107 Bytes)

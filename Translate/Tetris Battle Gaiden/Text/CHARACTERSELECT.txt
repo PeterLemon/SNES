@@ -1,0 +1,442 @@
+﻿CHARACTER SELECT MAGIC:
+	MAGIC01:
+	ミルルン
+	Mirurun
+	$5442
+	D0 00	D9 00	D9 00	DD 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	ミ  #	ル  #	ル  #	ン  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC02:
+	コピー
+	Copy
+	$5452
+	BA 00	CB 00	DF 00	B0 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	コ  #	ヒ  #	o  #	ー  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC03:
+	メデューサ
+	Medusa
+	$5462
+	D2 00	C3 00	DE 00	AD 00	B0 00	BB 00	A5 00	A5 00	| Original Japanese Hex
+	メ  #	テ  #	"  #	ュ  #	ー  #	サ  #	   #	   #	| Original Japanese Text
+
+	MAGIC04:
+	ボム
+	Bomb
+	$5472
+	CE 00	DE 00	D1 00	A5 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	ホ  #	"  #	ム  #	   #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC05:
+	マヤカシ
+	Deception/Fake/Make-Believe/Fake/Counterfeit/Phony
+	$5482
+	CF 00	D4 00	B6 00	BC 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	マ  #	ヤ  #	カ  #	シ  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC06:
+	ペンタリス
+	Pentris
+	$5492
+	CD 00	DF 00	DD 00	C0 00	D8 00	BD 00	A5 00	A5 00	| Original Japanese Hex
+	ヘ  #	o  #	ン  #	タ  #	リ  #	ス  #	   #	   #	| Original Japanese Text
+
+	MAGIC07:
+	ダイナシ
+	Spoil/Shamble/Destroy
+	$54A2
+	C0 00	DE 00	B2 00	C5 00	BC 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	タ  #	"  #	イ  #	ナ  #	シ  #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC08:
+	フライ
+	Fry
+	$54B2
+	CC 00	D7 00	B2 00	A5 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	フ  #	ラ  #	イ  #	   #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC09:
+	ノロイ
+	Curse
+	$54C2
+	C9 00	DB 00	B2 00	A5 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	ノ  #	ロ  #	イ  #	   #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC10:
+	バンパイア
+	Vampire
+	$54D2
+	CA 00	DE 00	DD 00	CA 00	DF 00	B2 00	B1 00	A5 00	| Original Japanese Hex
+	ハ  #	"  #	ン  #	ハ  #	o  #	イ  #	ア  #	   #	| Original Japanese Text
+
+	MAGIC11:
+	クリアー
+	Clear
+	$54E2
+	B8 00	D8 00	B1 00	B0 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	ク  #	リ  #	ア  #	ー  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC12:
+	シーソー
+	Seesaw
+	$54F2
+	BC 00	B0 00	BF 00	B0 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	シ  #	ー  #	ソ  #	ー  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC12:
+	シーソー
+	Seesaw
+	$5502
+	A5 00	A5 00	A5 00	A5 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	   #	   #	   #	   #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC12:
+	シーソー
+	Seesaw
+	$5512
+	A5 00	A5 00	A5 00	A5 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	   #	   #	   #	   #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC13:
+	カット
+	Cut / Slice
+	$5522
+	B6 00	AF 00	C4 00	A5 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	カ  #	ッ  #	ト  #	   #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC14:
+	モーゼ
+	Moses
+	$5532
+	D3 00	B0 00	BE 00	DE 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	モ  #	ー  #	セ  #	"  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC15:
+	マンボ
+	Mambo
+	$5542
+	CF 00	DD 00	CE 00	DE 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	マ  #	ン  #	ホ  #	"  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC16:
+	スターダスト
+	Stardust
+	$5552
+	BD 00	C0 00	B0 00	C0 00	DE 00	BD 00	C4 00	A5 00	| Original Japanese Hex
+	ス  #	タ  #	ー  #	タ  #	"  #	ス  #	ト  #	   #	| Original Japanese Text
+
+	MAGIC17:
+	リバース
+	Reverse
+	$5562
+	D8 00	CA 00	DE 00	B0 00	BD 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	リ  #	ハ  #	"  #	ー  #	ス  #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC18:
+	マヒ
+	Paralyze
+	$5572
+	CF 00	CB 00	A5 00	A5 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	マ  #	ヒ  #	   #	   #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC19:
+	カイテン
+	Rotate/Rotation
+	$5582
+	B6 00	B2 00	C3 00	DD 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	カ  #	イ  #	テ  #	ン  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC20:
+	ヨセ
+	Yose / Gather
+	$5592
+	D6 00	BE 00	A5 00	A5 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	ヨ  #	セ  #	   #	   #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC21:
+	ギャング 
+	Gang
+	$55A2
+	B7 00	DE 00	AC 00	DD 00	B8 00	DE 00	A5 00	A5 00	| Original Japanese Hex
+	キ  #	"  #	ャ  #	ン  #	ク  #	"  #	   #	   #	| Original Japanese Text
+
+	MAGIC22:
+	ドトン
+	Earth Release/Rensa
+	$55B2
+	C4 00	DE 00	C4 00	DD 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	ト  #	"  #	ト  #	ン  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC23:
+	プレス
+	Press / Crush / Stomp
+	$55C2
+	CC 00	DF 00	DA 00	BD 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	フ  #	o  #	レ  #	ス  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC24:
+	ソル
+	Soul
+	$55D2
+	BF 00	D9 00	A5 00	A5 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	ソ  #	ル  #	   #	   #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC25:
+	スリトテ
+	Sirtet
+	$55E2
+	BD 00	D8 00	C4 00	C3 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	ス  #	リ  #	ト  #	テ  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC26:
+	ファックス
+	Fax
+	$55F2
+	CC 00	A7 00	AF 00	B8 00	BD 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	フ  #	ァ  #	ッ  #	ク  #	ス  #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC27:
+	シールド
+	Shield
+	$5602
+	BC 00	B0 00	D9 00	C4 00	DE 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	シ  #	ー  #	ル  #	ト  #	"  #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC28:
+	ミラー
+	Mirror
+	$5612
+	D0 00	D7 00	B0 00	A5 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	ミ  #	ラ  #	ー  #	   #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC29:
+	ヘビー
+	Heavy
+	$5622
+	CD 00	CB 00	DE 00	B0 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	ヘ  #	ヒ  #	"  #	ー  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC30:
+	セレクト
+	Select
+	$5632
+	BE 00	DA 00	B8 00	C4 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	セ  #	レ  #	ク  #	ト  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC31:
+	ヌー
+	Slow Down/Gnu/Wildebeest/Nu/New/Noose
+	$5642
+	C7 00	B0 00	A5 00	A5 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	ヌ  #	ー  #	   #	   #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC32:
+	リモコン
+	Remote Control
+	$5652
+	D8 00	D3 00	BA 00	DD 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	リ  #	モ  #	コ  #	ン  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC33:
+	ハンテン
+	Reversal/Reverse/Invert/Flip
+	$5662
+	CA 00	DD 00	C3 00	DD 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	ハ  #	ン  #	テ  #	ン  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC34:
+	ナカヨシ
+	Chum / Buddy / Buddies / Friend / Heal
+	$5672
+	C5 00	B6 00	D6 00	BC 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	ナ  #	カ  #	ヨ  #	シ  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC35:
+	イノリ
+	Pray/Prayer
+	$5682
+	B2 00	C9 00	D8 00	A5 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	イ  #	ノ  #	リ  #	   #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC36:
+	ルーレット
+	Roulette
+	$5692
+	D9 00	B0 00	DA 00	AF 00	C4 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	ル  #	ー  #	レ  #	ッ  #	ト  #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC37:
+	フィーバー
+	Fever
+	$56A2
+	CC 00	A8 00	B0 00	CA 00	DE 00	B0 00	A5 00	A5 00	| Original Japanese Hex
+	フ  #	ィ  #	ー  #	ハ  #	"  #	ー  #	   #	   #	| Original Japanese Text
+
+	MAGIC38:
+	チェンジ
+	Change
+	$56B2
+	C1 00	AA 00	DD 00	BC 00	DE 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	チ  #	ェ  #	ン  #	シ  #	"  #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC39:
+	ダブルス
+	Doubles
+	$56C2
+	C0 00	DE 00	CC 00	DE 00	D9 00	BD 00	A5 00	A5 00	| Original Japanese Hex
+	タ  #	"  #	フ  #	"  #	ル  #	ス  #	   #	   #	| Original Japanese Text
+
+	MAGIC40:
+	ダーク
+	Dark
+	$56D2
+	C0 00	DE 00	B0 00	B8 00	A5 00	A5 00	A5 00	A5 00	| Original Japanese Hex
+	タ  #	"  #	ー  #	ク  #	   #	   #	   #	   #	| Original Japanese Text
+
+	MAGIC41:
+	ハイパーフライ
+	HyperFry
+	$56E2
+	CA 00	B2 00	CA 00	DF 00	B0 00	CC 00	D7 00	B2 00	| Original Japanese Hex
+	ハ  #	イ  #	ハ  #	o  #	ー  #	フ  #	ラ  #	イ  #	| Original Japanese Text
+
+CHARACTER SELECT NAME:
+	ハロウィン
+	Halloween
+	$1A313	(Top Half)
+	DE 01	B0 01	B1 01	B2 01	B3 01	B4 01	DE 01	| Original Japanese Hex
+	   #	ハ  #	ロ  #	ウ  #	ィ  #	ン  #	   #	| Original Japanese Text
+	H  #	A  #	L  #	L  #	O  #	W  #	E  # 	| New English Text
+	B7 01	B0 01	BB 01	BB 01	BE 01	D6 01	B4 01	| New English Hex
+	$1A321	(Bottom Half)
+	DE 01	C0 01	C1 01	C2 01	C3 01	C4 01	DE 01	| Original Japanese Hex
+	   #	ハ  #	ロ  #	ウ  #	ィ  #	ン  #	   #	| Original Japanese Text
+	H  #	A  #	L  #	L  #	O  #	W  #	E  # 	| New English Text
+	C7 01	C0 01	CB 01	CB 01	CE 01	E6 01	C4 01	| New English Hex
+	$1A303
+        13	A3	| Memory Address
+
+	ミルルン
+	Mirurun
+	$1A32F	(Top Half)
+	DE 01	DE 01	BF 01	D0 01	D0 01	B4 01	DE 01	| Original Japanese Hex
+	   #	   #	ミ  #	ル  #	ル  #	ン  #	   #	| Original Japanese Text
+	M  #	I  #	R  #	U  #	R  #	U  #	N  #	| New English Text
+	BC 01	B8 01	D1 01	D4 01	D1 01	D4 01	BD 01	| New English Hex
+	$1A33D	(Bottom Half)
+	DE 01	DE 01	CF 01	E0 01	E0 01	C4 01	DE 01	| Original Japanese Hex
+	   #	   #	ミ  #	ル  #	ル  #	ン  #	   #	| Original Japanese Text
+	M  #	I  #	R  #	U  #	R  #	U  #	N  #	| New English Text
+	CC 01	C8 01	E1 01	E4 01	E1 01	E4 01	CD 01	| New English Hex
+	$1A305
+        2F	A3	| Memory Address
+
+	シャーマン
+	Shaman
+	$1A34B	(Top Half)
+	DE 01	B5 01	B6 01	B7 01	B8 01	B4 01	DE 01	| Original Japanese Hex
+	   #	シ  #	ャ  #	ー  #	マ  #	ン  #	   #	| Original Japanese Text
+	   #	S  #	H  #	A  #	M  #	A  #	N  #	| New English Text
+	DE 01	D2 01	B7 01	B0 01	BC 01	B0 01	BD 01	| New English Hex
+	$1A359	(Bottom Half)
+	DE 01	C5 01	C6 01	C7 01	C8 01	C4 01	DE 01	| Original Japanese Hex
+	   #	シ  #	ャ  #	ー  #	マ  #	ン  #	   #	| Original Japanese Text
+	   #	S  #	H  #	A  #	M  #	A  #	N  #	| New English Text
+	DE 01	E2 01	C7 01	C0 01	CC 01	C0 01	CD 01	| New English Hex
+	$1A307
+        4B	A3	| Memory Address
+
+	アラジン
+	Aladdin
+	$1A367	(Top Half)
+	DE 01	B9 01	BA 01	B5 01	BB 01	B4 01	DE 01	| Original Japanese Hex
+	   #	ア  #	ラ  #	シ  #	"  #	ン  #	   #	| Original Japanese Text
+	A  #	L  #	A  #	D  #	D  #	I  #	N  #	| New English Text
+	B0 01	BB 01	B0 01	B3 01	B3 01	B8 01	BD 01	| New English Hex
+	$1A375	(Bottom Half)
+	DE 01	C9 01	CA 01	C5 01	CB 01	C4 01	DE 01	| Original Japanese Hex
+	   #	ア  #	ラ  #	シ  #	"  #	ン  #	   #	| Original Japanese Text
+	A  #	L  #	A  #	D  #	D  #	I  #	N  #	| New English Text
+	C0 01	CB 01	C0 01	C3 01	C3 01	C8 01	CD 01	| New English Hex
+	$1A309
+        67	A3	| Memory Address
+
+	プリンセス
+	Princess
+	$1A383	(Top Half)
+	DE 01	D1 01	D2 01	D3 01	B4 01	D4 01	D5 01	| Original Japanese Hex
+	   #	フ  #	o  #	リ  #	ン  #	セ  #	ス  #	| Original Japanese Text
+	P  #	R  #	I  #	N  #	C  #	E  #	S  # 	| New English Text
+	BF 01	D1 01	B8 01	BD 01	B2 01	B4 01	D2 01	| New English Hex
+	$1A391	(Bottom Half)
+	DE 01	E1 01	E2 01	E3 01	C4 01	E4 01	E5 01	| Original Japanese Hex
+	   #	フ  #	o  #	リ  #	ン  #	セ  #	ス  #	| Original Japanese Text
+	P  #	R  #	I  #	N  #	C  #	E  #	S  # 	| New English Text
+	CF 01	E1 01	C8 01	CD 01	C2 01	C4 01	E2 01	| New English Hex
+	$1A30B
+        83	A3	| Memory Address
+
+	ビット
+	Bit
+	$1A39F	(Top Half)
+	DE 01	DE 01	BC 01	BB 01	BD 01	BE 01	DE 01	| Original Japanese Hex
+	   #	   #	ヒ  #	"  #	ッ  #	ト  #	   #	| Original Japanese Text
+	   #	   #	B  #	I  #	T  #	   #	   #	| New English Text
+	DE 01	DE 01	B1 01	B8 01	D3 01	DE 01	DE 01	| New English Hex
+	$1A3AD	(Bottom Half)
+	DE 01	DE 01	CC 01	CB 01	CD 01	CE 01	DE 01	| Original Japanese Hex
+	   #	   #	ヒ  #	"  #	ッ  #	ト  #	   #	| Original Japanese Text
+	   #	   #	B  #	I  #	T  #	   #	   #	| New English Text
+	DE 01	DE 01	C1 01	C8 01	E3 01	DE 01	DE 01	| New English Hex
+	$1A30D
+        9F	A3	| Memory Address
+
+	ニンジャ
+	Ninja
+	$1A3BB	(Top Half)
+	DE 01	D7 01	B4 01	B5 01	BB 01	B6 01	DE 01	| Original Japanese Hex
+	   #	ニ  #	ン  #	シ  #	"  #	ャ  #	   #	| Original Japanese Text
+	   #	N  #	I  #	N  #	J  #	A  #	   #	| New English Text
+	DE 01	BD 01	B8 01	BD 01	B9 01	B0 01	DE 01	| New English Hex
+	$1A3C9	(Bottom Half)
+	DE 01	E7 01	C4 01	C5 01	CB 01	C6 01	DE 01	| Original Japanese Hex
+	   #	ニ  #	ン  #	シ  #	"  #	ャ  #	   #	| Original Japanese Text
+	   #	N  #	I  #	N  #	J  #	A  #	   #	| New English Text
+	DE 01	CD 01	C8 01	CD 01	C9 01	C0 01	DE 01	| New English Hex
+	$1A30F
+        BB	A3	| Memory Address
+
+	オオカミオトコ
+	Wolfman
+	$1A3D7	(Top Half)
+	DB 01	DB 01	DC 01	BF 01	DB 01	BE 01	DD 01	| Original Japanese Hex
+	オ  #	オ  #	カ  #	ミ  #	オ  #	ト  #	コ  #	| Original Japanese Text
+	W  #	O  #	L  #	F  #	M  #	A  #	N  #	| New English Text
+	D6 01	BE 01	BB 01	B5 01	BC 01	B0 01	BD 01	| New English Hex
+	$1A3E5	(Bottom Half)
+	EB 01	EB 01	EC 01	CF 01	EB 01	CE 01	ED 01	| Original Japanese Hex
+	オ  #	オ  #	カ  #	ミ  #	オ  #	ト  #	コ  #	| Original Japanese Text
+	W  #	O  #	L  #	F  #	M  #	A  #	N  #	| New English Text
+	E6 01	CE 01	CB 01	C5 01	CC 01	C0 01	CD 01	| New English Hex
+	$1A311
+        D7	A3	| Memory Address
+
+CHARACTER SELECTION:
+	もくじ
+	Table of Contents
+	$3D271	(Top Half: MAP LO Bytes)
+	05	DC	12	DD	12	DE	| Original Japanese Hex
+	RAW	も	 	く	 	じ	| Original Japanese Text
+	RAW	T	 	O	 	C 	| New English Text
+	05	D3	12	BE	12	B2	| New English Hex
+	$3D4EB	(Top Half: MAP HI Bytes)
+		08	28	08	28	08	| Original Japanese Hex
+		29	28	29	28	29	| New English Hex
+	$3D28B	(Bottom Half: MAP LO Bytes)
+	05	EC	12	ED	12	EE	| Original Japanese Hex
+	RAW	も	 	く	 	じ	| Original Japanese Text
+	RAW	T	 	O	 	C 	| New English Text
+	05	E3	12	CE	12	C2	| New English Hex
+	$3D505	(Bottom Half: MAP HI Bytes)
+		08	28	08	28	08	| Original Japanese Hex
+		29	28	29	28	29	| New English Hex

@@ -1022,7 +1022,7 @@ PAUSE SCREEN MAGIC:
 
 	MAGIC05:
 	マヤカシ
-	Deception/Make-Believe/Fake/Counterfeit/Phony
+	Deception/Fake/Make-Believe/Fake/Counterfeit/Phony
 	$12605
 	20	20	CF	D4	B6	BC	20	20	FF	| Original Japanese Hex
 	 	 	マ	ヤ	カ	シ	 	 	#	| Original Japanese Text
