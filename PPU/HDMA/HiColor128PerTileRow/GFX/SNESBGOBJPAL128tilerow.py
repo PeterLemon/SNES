@@ -12,7 +12,6 @@ kmeans = 3  # Integer
 
 def convert_pal(image, filedata): # Convert To SNES 16 Color Palette Data
     palette = image.getpalette()[:(15*3)] # Get 15 * R,G,B Palette Entries
-    SNEScol = 0
     filedata.write(struct.pack('H', SNEScol)) # Store Black To Palette Color Index 0
     for i in range(15):
         R = palette[i*3]
