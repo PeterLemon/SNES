@@ -93,7 +93,7 @@ RestartVid:
   stx.w MSU_SEEKBANK // $2002: MSU1 Seek Bank Register     
   MSUWaitDataBusy() // Wait For MSU1 Data Busy Flag Status Bit To Clear
 
-  ldx.w #1529>>1 // Load Frame Count / 2
+  ldx.w #1528>>1 // Load Frame Count / 2
   stx.b FrameCount // Store Frame Count
 
 VIDLoop:
