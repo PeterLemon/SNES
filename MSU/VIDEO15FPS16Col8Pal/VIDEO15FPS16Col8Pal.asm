@@ -93,7 +93,7 @@ RestartVid:
   lda.b #%00000100   // HDMA Channel Select (Channel 2)
   sta.w REG_HDMAEN   // $420C: Select H-Blank DMA (H-DMA) Channels 
 
-  ldx.w #1529>>1 // Load Frame Count / 2
+  ldx.w #1528>>1 // Load Frame Count / 2
   stx.b FrameCount // Store Frame Count
 
 VIDLoop:
