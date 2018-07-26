@@ -42,25 +42,6 @@ seek($8000); Start:
   LoadVRAM(BGMap, $7900, 1792, 0) // Load Frame 1 Background Tile Map To VRAM
   LoadVRAM(BGMap, $F900, 1792, 0) // Load Frame 2 Background Tile Map To VRAM
 
-RestartVid:
-  // Audio
-  lda.b #$FF       // Load Audio Volume Byte
-  sta.w MSU_VOLUME // $2006: MSU1 Volume Register
-
-  ldx.w #$0000    // Load Track Number 0
-  stx.w MSU_TRACK // $2004: MSU1 Track Register
-  MSUWaitAudioBusy() // Wait For MSU1 Audio Busy Flag Status Bit To Clear
-
-  lda.b #%00000011  // Play & Repeat Sound (%000000RP R = Repeat On/Off, P = Play On/Off)
-  sta.w MSU_CONTROL // $2007: MSU1 Control Register
-
-  // Video
-  ldx.w #$0000       // Seek To $0000:0000, In The Data .MSU File
-  stx.w MSU_SEEK     // $2000: MSU1 Seek Register
-  ldx.w #$0000       // Set Seek Bank Register
-  stx.w MSU_SEEKBANK // $2002: MSU1 Seek Bank Register     
-  MSUWaitDataBusy() // Wait For MSU1 Data Busy Flag Status Bit To Clear
-
   // Setup Tile DMA On Channel 0
   lda.b #$09
   sta.w REG_DMAP0 // Set DMA Mode (Word, Normal Non Increment) ($4300: DMA Control)
@@ -91,9 +72,28 @@ RestartVid:
   lda.b #0           // HDMA Table Bank
   sta.w REG_A1B2     // $4324: DMA2 DMA/HDMA Table Start Address (Bank)
   lda.b #%00000100   // HDMA Channel Select (Channel 2)
-  sta.w REG_HDMAEN   // $420C: Select H-Blank DMA (H-DMA) Channels 
+  sta.w REG_HDMAEN   // $420C: Select H-Blank DMA (H-DMA) Channels
 
-  ldx.w #1526>>1 // Load Frame Count / 2
+RestartVid:
+  // Audio
+  lda.b #$FF       // Load Audio Volume Byte
+  sta.w MSU_VOLUME // $2006: MSU1 Volume Register
+
+  ldx.w #$0000    // Load Track Number 0
+  stx.w MSU_TRACK // $2004: MSU1 Track Register
+  MSUWaitAudioBusy() // Wait For MSU1 Audio Busy Flag Status Bit To Clear
+
+  lda.b #%00000011  // Play & Repeat Sound (%000000RP R = Repeat On/Off, P = Play On/Off)
+  sta.w MSU_CONTROL // $2007: MSU1 Control Register
+
+  // Video
+  ldx.w #$0000       // Seek To $0000:0000, In The Data .MSU File
+  stx.w MSU_SEEK     // $2000: MSU1 Seek Register
+  ldx.w #$0000       // Set Seek Bank Register
+  stx.w MSU_SEEKBANK // $2002: MSU1 Seek Bank Register     
+  MSUWaitDataBusy() // Wait For MSU1 Data Busy Flag Status Bit To Clear
+
+  ldx.w #1528>>1 // Load Frame Count / 2
   stx.b FrameCount // Store Frame Count
 
 VIDLoop:
@@ -105,7 +105,7 @@ VIDLoop:
 
   // Load Frame 1 Tile Data To VRAM
   stx.w REG_DAS0L // Store Size Of Data Block ($4305: DMA Transfer Size/HDMA)
-  lda.b #%00000001 // Initiate DMA Transfer (Channel 0)
+  lda.b #%00000101 // Initiate DMA Transfer (Channel 0)
   WaitNMI() // Wait For Frame 1 1st Vertical Blank
   sta.w REG_MDMAEN // $420B: DMA Enable
 
@@ -124,7 +124,7 @@ VIDLoop:
   stx.w REG_DAS0L // Store Size Of Data Block ($4305: DMA Transfer Size/HDMA)
   ldy.w #32 // CGRAM Size In Bytes To DMA Transfer (2 Bytes For Each Colour)
   sty.w REG_DAS1L // Store Size Of Data Block ($4315: DMA Transfer Size/HDMA)
-  lda.b #%00000011 // Initiate DMA Transfer (Channel 0&1)
+  lda.b #%00000111 // Initiate DMA Transfer (Channel 0&1)
   WaitNMI() // Wait For Frame 1 4th Vertical Blank
   sta.w REG_MDMAEN // $420B: DMA Enable
 
@@ -140,7 +140,7 @@ VIDLoop:
 
   // Load Frame 2 Tile Data To VRAM
   stx.w REG_DAS0L // Store Size Of Data Block ($4305: DMA Transfer Size/HDMA)
-  lda.b #%00000001 // Initiate DMA Transfer (Channel 0)
+  lda.b #%00000101 // Initiate DMA Transfer (Channel 0)
   WaitNMI() // Wait For Frame 2 1st Vertical Blank
   sta.w REG_MDMAEN // $420B: DMA Enable
 
@@ -159,7 +159,7 @@ VIDLoop:
   stx.w REG_DAS0L // Store Size Of Data Block ($4305: DMA Transfer Size/HDMA)
   ldy.w #32 // CGRAM Size In Bytes To DMA Transfer (2 Bytes For Each Colour)
   sty.w REG_DAS1L // Store Size Of Data Block ($4315: DMA Transfer Size/HDMA)
-  lda.b #%00000011 // Initiate DMA Transfer (Channel 0&1)
+  lda.b #%00000111 // Initiate DMA Transfer (Channel 0&1)
   WaitNMI() // Wait For Frame 2 4th Vertical Blank
   sta.w REG_MDMAEN // $420B: DMA Enable
 
