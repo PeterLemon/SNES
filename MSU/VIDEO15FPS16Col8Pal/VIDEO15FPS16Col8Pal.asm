@@ -44,7 +44,7 @@ seek($8000); Start:
   lda.b #%00000010 // Enable BG2
   sta.w REG_TM     // $212C: BG2 To Main Screen Designation
 
-  LoadVRAM(BGMap, $7900, 1792, 0) // Load Frame 1 Background Tile Map To VRAM
+  LoadVRAM(BGMap, $7900, 1792, 0) // Load Frame 1 & 2 Background Tile Map To VRAM
 
   // Setup Tile DMA On Channel 0
   lda.b #$09
