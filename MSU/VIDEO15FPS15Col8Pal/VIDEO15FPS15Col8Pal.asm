@@ -41,8 +41,8 @@ seek($8000); Start:
   sta.w REG_BG2VOFS // Store A into BG Scroll Pos Low Byte
   stz.w REG_BG2VOFS // Store zero into BG Scroll Pos High Byte
 
-  lda.b #%00000010   // Enable BG2
-  sta.w REG_TM // $212C: BG2 To Main Screen Designation
+  lda.b #%00000010 // Enable BG2
+  sta.w REG_TM     // $212C: BG2 To Main Screen Designation
 
   LoadVRAM(BGMap, $7900, 1792, 0) // Load Frame 1 Background Tile Map To VRAM
 
