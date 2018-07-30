@@ -26,8 +26,13 @@ seek($8000); Start:
   TransferBlockSPC(SPCROM, SPCRAM, SPCROM.size) // Load SPC File To SMP/DSP
   SPCExecute(SPCRAM) // Execute SPC At $0200
 
+  // Setup Video
   lda.b #%00001011 // DCBAPMMM: M = Mode, P = Priority, ABCD = BG1,2,3,4 Tile Size
   sta.w REG_BGMODE // $2105: BG Mode 3, Priority 1, BG2 8x8 Tiles
+
+  // Setup Frame 1 & 2 Background Tile Map
+  lda.b #%00111100  // AAAAAASS: S = BG Map Size, A = BG Map Address
+  sta.w REG_BG2SC   // $2108: BG2 32x32, BG2 Map Address = $7800 (VRAM Address / $400)
 
   stz.w REG_BG2HOFS // Store Zero To BG2 Horizontal Scroll Pos Low Byte
   stz.w REG_BG2HOFS // Store Zero To BG2 Horizontal Scroll Pos High Byte
@@ -36,30 +41,10 @@ seek($8000); Start:
   sta.w REG_BG2VOFS // Store A into BG Scroll Pos Low Byte
   stz.w REG_BG2VOFS // Store zero into BG Scroll Pos High Byte
 
-  lda.b #$02   // Enable BG2
-  sta.w REG_TM // $212C: BG2 To Main Screen Designation
+  lda.b #%00000010 // Enable BG2
+  sta.w REG_TM     // $212C: BG2 To Main Screen Designation
 
   LoadVRAM(BGMap, $7900, 1792, 0) // Load Frame 1 Background Tile Map To VRAM
-  LoadVRAM(BGMap, $F900, 1792, 0) // Load Frame 2 Background Tile Map To VRAM
-
-RestartVid:
-  // Audio
-  lda.b #$FF       // Load Audio Volume Byte
-  sta.w MSU_VOLUME // $2006: MSU1 Volume Register
-
-  ldx.w #$0000    // Load Track Number 0
-  stx.w MSU_TRACK // $2004: MSU1 Track Register
-  MSUWaitAudioBusy() // Wait For MSU1 Audio Busy Flag Status Bit To Clear
-
-  lda.b #%00000011  // Play & Repeat Sound (%000000RP R = Repeat On/Off, P = Play On/Off)
-  sta.w MSU_CONTROL // $2007: MSU1 Control Register
-
-  // Video
-  ldx.w #$0000       // Seek To $0000:0000, In The Data .MSU File
-  stx.w MSU_SEEK     // $2000: MSU1 Seek Register
-  ldx.w #$0000       // Set Seek Bank Register
-  stx.w MSU_SEEKBANK // $2002: MSU1 Seek Bank Register     
-  MSUWaitDataBusy() // Wait For MSU1 Data Busy Flag Status Bit To Clear
 
   // Setup Tile DMA On Channel 0
   lda.b #$09
@@ -93,13 +78,33 @@ RestartVid:
   lda.b #%00000100   // HDMA Channel Select (Channel 2)
   sta.w REG_HDMAEN   // $420C: Select H-Blank DMA (H-DMA) Channels 
 
+RestartVid:
+  // Audio
+  lda.b #$FF       // Load Audio Volume Byte
+  sta.w MSU_VOLUME // $2006: MSU1 Volume Register
+
+  ldx.w #$0000    // Load Track Number 0
+  stx.w MSU_TRACK // $2004: MSU1 Track Register
+  MSUWaitAudioBusy() // Wait For MSU1 Audio Busy Flag Status Bit To Clear
+
+  lda.b #%00000011  // Play & Repeat Sound (%000000RP R = Repeat On/Off, P = Play On/Off)
+  sta.w MSU_CONTROL // $2007: MSU1 Control Register
+
+  // Video
+  ldx.w #$0000       // Seek To $0000:0000, In The Data .MSU File
+  stx.w MSU_SEEK     // $2000: MSU1 Seek Register
+  ldx.w #$0000       // Set Seek Bank Register
+  stx.w MSU_SEEKBANK // $2002: MSU1 Seek Bank Register     
+  MSUWaitDataBusy() // Wait For MSU1 Data Busy Flag Status Bit To Clear
+
   ldx.w #1528>>1 // Load Frame Count / 2
   stx.b FrameCount // Store Frame Count
 
-VIDLoop:
-  ldx.w #7168 // VRAM Size In Bytes To DMA Transfer
+  WaitNMI() // Wait For Vertical Blank
 
+VIDLoop:
   ////////////////////////////////////////////////////////
+  ldx.w #7232 // VRAM Size In Bytes To DMA Transfer
   ldy.w #$0000 >> 1 // VRAM Destination
   sty.w REG_VMADDL  // $2116: VRAM
 
@@ -121,6 +126,7 @@ VIDLoop:
 
   // Load Frame 1 Tile Data To VRAM, Followed By Palette To CGRAM
   stz.w REG_CGADD // $2121: CGRAM
+  ldx.w #6976 // VRAM Size In Bytes To DMA Transfer
   stx.w REG_DAS0L // Store Size Of Data Block ($4305: DMA Transfer Size/HDMA)
   ldy.w #256 // CGRAM Size In Bytes To DMA Transfer (2 Bytes For Each Colour)
   sty.w REG_DAS1L // Store Size Of Data Block ($4315: DMA Transfer Size/HDMA)
@@ -131,10 +137,9 @@ VIDLoop:
   // Setup Frame 1 BG2 16 Colour Background
   lda.b #%00000000  // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
   sta.w REG_BG12NBA // $210B: BG2 Tile Address = $0000 (VRAM Address / $1000)
-  lda.b #%00111100  // AAAAAASS: S = BG Map Size, A = BG Map Address
-  sta.w REG_BG2SC   // $2108: BG2 32x32, BG2 Map Address = $7800 (VRAM Address / $400)
 
   ////////////////////////////////////////////////////////
+  ldx.w #7232 // VRAM Size In Bytes To DMA Transfer
   ldy.w #$8000 >> 1 // VRAM Destination
   sty.w REG_VMADDL  // $2116: VRAM
 
@@ -156,6 +161,7 @@ VIDLoop:
 
   // Load Frame 2 Tile Data To VRAM, Followed By Palette To CGRAM
   stz.w REG_CGADD // $2121: CGRAM
+  ldx.w #6976 // VRAM Size In Bytes To DMA Transfer
   stx.w REG_DAS0L // Store Size Of Data Block ($4305: DMA Transfer Size/HDMA)
   ldy.w #256 // CGRAM Size In Bytes To DMA Transfer (2 Bytes For Each Colour)
   sty.w REG_DAS1L // Store Size Of Data Block ($4315: DMA Transfer Size/HDMA)
@@ -166,8 +172,6 @@ VIDLoop:
   // Setup Frame 2 BG2 16 Colour Background
   lda.b #%01000000  // BBBBAAAA: A = BG1 Tile Address, B = BG2 Tile Address
   sta.w REG_BG12NBA // $210B: BG2 Tile Address = $8000 (VRAM Address / $1000)
-  lda.b #%11111100  // AAAAAASS: S = BG Map Size, A = BG Map Address
-  sta.w REG_BG2SC   // $2108: BG2 32x32, BG2 Map Address = $F800 (VRAM Address / $400)
 
   ////////////////////////////////////////////////////////
 
@@ -180,8 +184,8 @@ Restart:
   jmp RestartVid
 
 HDMATable:
-  db  8, %10000000 // Repeat  8 Scanlines, Turn Off Screen, Zero Brightness
-  db 24, %00001111 // Repeat 24 Scanlines, Turn On Screen, Full Brightness
+  db  7, %10000000 // Repeat  7 Scanlines, Turn Off Screen, Zero Brightness
+  db 25, %00001111 // Repeat 25 Scanlines, Turn On Screen, Full Brightness
   db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
   db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
   db 32, %00001111 // Repeat 32 Scanlines, Turn On Screen, Full Brightness
