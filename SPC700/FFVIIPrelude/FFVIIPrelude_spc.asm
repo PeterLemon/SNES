@@ -95,18 +95,29 @@ seek(SPCRAM); Start:
 
 // Setup Zero Page RAM
 constant PATTERN($00) // Pattern Zero Page RAM Address
+constant PATTERNOFS($02) // Pattern Offset Zero Page RAM Address
 
 StartSong:
-  ldy #0 // Y = Pattern Offset Index
+  lda #PATTERNLIST    // A = Pattern List (LSB)
+  ldy #PATTERNLIST>>8 // Y = Pattern List (MSB)
+  stw PATTERNOFS      // Store YA To Zero Page RAM
+
+  ldy #0 // Y = 0 (Pattern Offset Index)
 
 LoopSong:
 
 
   CHAN1: // Channel 1 Pattern
-    lda.w PATTERNLIST   // A = Pattern List (LSB)
-    sta.b PATTERN       // Store A To Zero Page RAM
-    lda.w PATTERNLIST+1 // A = Pattern List (MSB)
-    sta.b PATTERN+1     // Store A To Zero Page RAM
+    tya // A = Y (Pattern Offset Index)
+    tax // X = A (Pattern Offset Index)
+    ldy #0 // Y = 0
+    lda (PATTERNOFS),y // A = Pattern List (LSB)
+    sta.b PATTERN      // Store A To Zero Page RAM
+    iny // Y++
+    lda (PATTERNOFS),y // A = Pattern List (MSB)
+    sta.b PATTERN+1    // Store A To Zero Page RAM
+    txa // A = X (Pattern Offset Index)
+    tay // Y = A (Pattern Offset Index)
 
     lda (PATTERN),y // A = Pattern Byte
     cmp #REST   // Compare A To REST Byte ($FE)
@@ -136,10 +147,16 @@ LoopSong:
 
 
   CHAN2: // Channel 2 Pattern
-    lda.w PATTERNLIST+2 // A = Pattern List (LSB)
-    sta.b PATTERN       // Store A To Zero Page RAM
-    lda.w PATTERNLIST+3 // A = Pattern List (MSB)
-    sta.b PATTERN+1     // Store A To Zero Page RAM
+    tya // A = Y (Pattern Offset Index)
+    tax // X = A (Pattern Offset Index)
+    ldy #2 // Y = 2
+    lda (PATTERNOFS),y // A = Pattern List (LSB)
+    sta.b PATTERN      // Store A To Zero Page RAM
+    iny // Y++
+    lda (PATTERNOFS),y // A = Pattern List (MSB)
+    sta.b PATTERN+1    // Store A To Zero Page RAM
+    txa // A = X (Pattern Offset Index)
+    tay // Y = A (Pattern Offset Index)
 
     lda (PATTERN),y // A = Pattern Byte
     cmp #REST   // Compare A To REST Byte ($FE)
@@ -169,10 +186,16 @@ LoopSong:
 
 
   CHAN3: // Channel 3 Pattern
-    lda.w PATTERNLIST+4 // A = Pattern List (LSB)
-    sta.b PATTERN       // Store A To Zero Page RAM
-    lda.w PATTERNLIST+5 // A = Pattern List (MSB)
-    sta.b PATTERN+1     // Store A To Zero Page RAM
+    tya // A = Y (Pattern Offset Index)
+    tax // X = A (Pattern Offset Index)
+    ldy #4 // Y = 4
+    lda (PATTERNOFS),y // A = Pattern List (LSB)
+    sta.b PATTERN      // Store A To Zero Page RAM
+    iny // Y++
+    lda (PATTERNOFS),y // A = Pattern List (MSB)
+    sta.b PATTERN+1    // Store A To Zero Page RAM
+    txa // A = X (Pattern Offset Index)
+    tay // Y = A (Pattern Offset Index)
 
     lda (PATTERN),y // A = Pattern Byte
     cmp #REST   // Compare A To REST Byte ($FE)
@@ -202,10 +225,16 @@ LoopSong:
 
 
   CHAN4: // Channel 4 Pattern
-    lda.w PATTERNLIST+6 // A = Pattern List (LSB)
-    sta.b PATTERN       // Store A To Zero Page RAM
-    lda.w PATTERNLIST+7 // A = Pattern List (MSB)
-    sta.b PATTERN+1     // Store A To Zero Page RAM
+    tya // A = Y (Pattern Offset Index)
+    tax // X = A (Pattern Offset Index)
+    ldy #6 // Y = 6
+    lda (PATTERNOFS),y // A = Pattern List (LSB)
+    sta.b PATTERN      // Store A To Zero Page RAM
+    iny // Y++
+    lda (PATTERNOFS),y // A = Pattern List (MSB)
+    sta.b PATTERN+1    // Store A To Zero Page RAM
+    txa // A = X (Pattern Offset Index)
+    tay // Y = A (Pattern Offset Index)
 
     lda (PATTERN),y // A = Pattern Byte
     cmp #REST   // Compare A To REST Byte ($FE)
@@ -235,10 +264,16 @@ LoopSong:
 
 
   CHAN5: // Channel 5 Pattern
-    lda.w PATTERNLIST+8 // A = Pattern List (LSB)
-    sta.b PATTERN       // Store A To Zero Page RAM
-    lda.w PATTERNLIST+9 // A = Pattern List (MSB)
-    sta.b PATTERN+1     // Store A To Zero Page RAM
+    tya // A = Y (Pattern Offset Index)
+    tax // X = A (Pattern Offset Index)
+    ldy #8 // Y = 8
+    lda (PATTERNOFS),y // A = Pattern List (LSB)
+    sta.b PATTERN      // Store A To Zero Page RAM
+    iny // Y++
+    lda (PATTERNOFS),y // A = Pattern List (MSB)
+    sta.b PATTERN+1    // Store A To Zero Page RAM
+    txa // A = X (Pattern Offset Index)
+    tay // Y = A (Pattern Offset Index)
 
     lda (PATTERN),y // A = Pattern Byte
     cmp #REST   // Compare A To REST Byte ($FE)
@@ -268,10 +303,16 @@ LoopSong:
 
 
   CHAN6: // Channel 6 Pattern
-    lda.w PATTERNLIST+10 // A = Pattern List (LSB)
-    sta.b PATTERN        // Store A To Zero Page RAM
-    lda.w PATTERNLIST+11 // A = Pattern List (MSB)
-    sta.b PATTERN+1      // Store A To Zero Page RAM
+    tya // A = Y (Pattern Offset Index)
+    tax // X = A (Pattern Offset Index)
+    ldy #10 // Y = 10
+    lda (PATTERNOFS),y // A = Pattern List (LSB)
+    sta.b PATTERN      // Store A To Zero Page RAM
+    iny // Y++
+    lda (PATTERNOFS),y // A = Pattern List (MSB)
+    sta.b PATTERN+1    // Store A To Zero Page RAM
+    txa // A = X (Pattern Offset Index)
+    tay // Y = A (Pattern Offset Index)
 
     lda (PATTERN),y // A = Pattern Byte
     cmp #REST   // Compare A To REST Byte ($FE)
@@ -301,10 +342,16 @@ LoopSong:
 
 
   CHAN7: // Channel 7 Pattern
-    lda.w PATTERNLIST+12 // A = Pattern List (LSB)
-    sta.b PATTERN        // Store A To Zero Page RAM
-    lda.w PATTERNLIST+13 // A = Pattern List (MSB)
-    sta.b PATTERN+1      // Store A To Zero Page RAM
+    tya // A = Y (Pattern Offset Index)
+    tax // X = A (Pattern Offset Index)
+    ldy #12 // Y = 12
+    lda (PATTERNOFS),y // A = Pattern List (LSB)
+    sta.b PATTERN      // Store A To Zero Page RAM
+    iny // Y++
+    lda (PATTERNOFS),y // A = Pattern List (MSB)
+    sta.b PATTERN+1    // Store A To Zero Page RAM
+    txa // A = X (Pattern Offset Index)
+    tay // Y = A (Pattern Offset Index)
 
     lda (PATTERN),y // A = Pattern Byte
     cmp #REST   // Compare A To REST Byte ($FE)
@@ -334,10 +381,16 @@ LoopSong:
 
 
   CHAN8: // Channel 8 Pattern
-    lda.w PATTERNLIST+14 // A = Pattern List (LSB)
-    sta.b PATTERN        // Store A To Zero Page RAM
-    lda.w PATTERNLIST+15 // A = Pattern List (MSB)
-    sta.b PATTERN+1      // Store A To Zero Page RAM
+    tya // A = Y (Pattern Offset Index)
+    tax // X = A (Pattern Offset Index)
+    ldy #14 // Y = 14
+    lda (PATTERNOFS),y // A = Pattern List (LSB)
+    sta.b PATTERN      // Store A To Zero Page RAM
+    iny // Y++
+    lda (PATTERNOFS),y // A = Pattern List (MSB)
+    sta.b PATTERN+1    // Store A To Zero Page RAM
+    txa // A = X (Pattern Offset Index)
+    tay // Y = A (Pattern Offset Index)
 
     lda (PATTERN),y // A = Pattern Byte
     cmp #REST   // Compare A To REST Byte ($FE)
@@ -376,148 +429,13 @@ LoopSong:
     bne WaitMS // IF (A != 0) Loop Timer Wait
 
   iny // Increment Song Offset
-  beq PatternIncrement // IF (Y == 0) Pattern Increment
-  jmp PatternEnd // ELSE Pattern End
+  bne PatternEnd // IF (Y != 0) Pattern End, ELSE Pattern Increment
 
-
-  PatternIncrement:
-
-
-  // Channel 1 Pattern Increment
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN1 + 1 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN1 + 1
-  bcc CHAN1ANoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN1 + 2 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN1ANoCarry:
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN1 + 6 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN1 + 6
-  bcc CHAN1BNoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN1 + 7 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN1BNoCarry:
-
-
-  // Channel 2 Pattern Increment
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN2 + 1 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN2 + 1
-  bcc CHAN2ANoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN2 + 2 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN2ANoCarry:
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN2 + 6 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN2 + 6
-  bcc CHAN2BNoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN2 + 7 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN2BNoCarry:
-
-
-  // Channel 3 Pattern Increment
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN3 + 1 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN3 + 1
-  bcc CHAN3ANoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN3 + 2 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN3ANoCarry:
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN3 + 6 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN3 + 6
-  bcc CHAN3BNoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN3 + 7 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN3BNoCarry:
-
-
-  // Channel 4 Pattern Increment
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN4 + 1 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN4 + 1
-  bcc CHAN4ANoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN4 + 2 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN4ANoCarry:
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN4 + 6 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN4 + 6
-  bcc CHAN4BNoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN4 + 7 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN4BNoCarry:
-
-
-  // Channel 5 Pattern Increment
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN5 + 1 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN5 + 1
-  bcc CHAN5ANoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN5 + 2 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN5ANoCarry:
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN5 + 6 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN5 + 6
-  bcc CHAN5BNoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN5 + 7 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN5BNoCarry:
-
-
-  // Channel 6 Pattern Increment
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN6 + 1 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN6 + 1
-  bcc CHAN6ANoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN6 + 2 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN6ANoCarry:
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN6 + 6 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN6 + 6
-  bcc CHAN6BNoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN6 + 7 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN6BNoCarry:
-
-
-  // Channel 7 Pattern Increment
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN7 + 1 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN7 + 1
-  bcc CHAN7ANoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN7 + 2 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN7ANoCarry:
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN7 + 6 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN7 + 6
-  bcc CHAN7BNoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN7 + 7 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN7BNoCarry:
-
-
-  // Channel 8 Pattern Increment
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN8 + 1 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN8 + 1
-  bcc CHAN8ANoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN8 + 2 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN8ANoCarry:
-  lda #16 // A = 16
-  clc // Clear Carry Flag
-  adc.w CHAN8 + 6 // Self Modify (Increment) 16-Bit ADDR (Lo Byte) Offset Above
-  sta.w CHAN8 + 6
-  bcc CHAN8BNoCarry // IF (Carry Flag == 0) No Carry, ELSE Increment Hi Byte
-  inc.w CHAN8 + 7 // Self Modify (Increment) 16-Bit ADDR (Hi Byte) Offset Above
-  CHAN8BNoCarry:
-
+  // Channel 1..8 Pattern Increment
+  lda #16 // YA = 16
+  adw PATTERNOFS // YA += Pattern Offset
+  stw PATTERNOFS // Pattern Offset = YA
+  ldy #0 // Y = 0
 
   PatternEnd:
     jmp LoopSong // GOTO Loop Song
