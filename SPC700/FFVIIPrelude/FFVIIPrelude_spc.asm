@@ -428,7 +428,7 @@ LoopSong:
     dec // A--
     bne WaitMS // IF (A != 0) Loop Timer Wait
 
-  iny // Increment Song Offset
+  iny // Increment Pattern Index Offset
   bne PatternEnd // IF (Y != 0) Pattern End, ELSE Pattern Increment
 
   // Channel 1..8 Pattern Increment
@@ -448,7 +448,7 @@ LoopSong:
   stw PATTERNOFS          // Store YA To Zero Page RAM
 
   PatternIncEnd:
-    ldy #0 // Y = 0
+    ldy #0 // Y = 0 (Pattern Index Offset)
 
   PatternEnd:
     jmp LoopSong // GOTO Loop Song
