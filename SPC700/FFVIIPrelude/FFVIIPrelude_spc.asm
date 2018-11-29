@@ -107,316 +107,316 @@ StartSong:
 LoopSong:
 
 
-  CHAN1: // Channel 1 Pattern
-    tya // A = Y (Pattern Offset Index)
-    tax // X = A (Pattern Offset Index)
-    ldy #0 // Y = 0
-    lda (PATTERNOFS),y // A = Pattern List (LSB)
-    sta.b PATTERN      // Store A To Zero Page RAM
-    iny // Y++
-    lda (PATTERNOFS),y // A = Pattern List (MSB)
-    sta.b PATTERN+1    // Store A To Zero Page RAM
-    txa // A = X (Pattern Offset Index)
-    tay // Y = A (Pattern Offset Index)
+  // Channel 1 Pattern
+  tya // A = Y (Pattern Offset Index)
+  tax // X = A (Pattern Offset Index)
+  ldy #0 // Y = 0
+  lda (PATTERNOFS),y // A = Pattern List (LSB)
+  sta.b PATTERN      // Store A To Zero Page RAM
+  iny // Y++
+  lda (PATTERNOFS),y // A = Pattern List (MSB)
+  sta.b PATTERN+1    // Store A To Zero Page RAM
+  txa // A = X (Pattern Offset Index)
+  tay // Y = A (Pattern Offset Index)
 
-    lda (PATTERN),y // A = Pattern Byte
-    cmp #REST   // Compare A To REST Byte ($FE)
-    beq KEYOFF1 // IF (A == REST) GOTO Key Off
-    cmp #SUST   // Compare A To SUST Byte ($FD)
-    beq KEYEND1 // IF (A == SUST) GOTO Key End
-    bra KEYON1  // ELSE GOTO Channel 1: Key On
+  lda (PATTERN),y // A = Pattern Byte
+  cmp #REST   // Compare A To REST Byte ($FE)
+  beq KEYOFF1 // IF (A == REST) GOTO Key Off
+  cmp #SUST   // Compare A To SUST Byte ($FD)
+  beq KEYEND1 // IF (A == SUST) GOTO Key End
+  bra KEYON1  // ELSE GOTO Channel 1: Key On
 
-    KEYOFF1: // Key Off
-      WDSP(DSP_KOFF,%00000001) // DSP Register Data = Key Off Flags
-      bra KEYEND1 // GOTO Key End
+  KEYOFF1: // Key Off
+    WDSP(DSP_KOFF,%00000001) // DSP Register Data = Key Off Flags
+    bra KEYEND1 // GOTO Key End
 
-    KEYON1: // Key On
-      tax // X = A (Sample Pitch Table Offset)
-      str REG_DSPADDR=#DSP_V0PITCHL // DSP Register Index = Voice Pitch (LSB)
-      lda.w SynthHarpPitchTable,x // A = Voice Pitch (LSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
+  KEYON1: // Key On
+    tax // X = A (Sample Pitch Table Offset)
+    str REG_DSPADDR=#DSP_V0PITCHL // DSP Register Index = Voice Pitch (LSB)
+    lda.w SynthHarpPitchTable,x // A = Voice Pitch (LSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
 
-      str REG_DSPADDR=#DSP_V0PITCHH // DSP Register Index = Voice Pitch (MSB)
-      inx // X++ (Increment Sample Pitch Table Offset)
-      lda.w SynthHarpPitchTable,x // A = Voice Pitch (MSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
+    str REG_DSPADDR=#DSP_V0PITCHH // DSP Register Index = Voice Pitch (MSB)
+    inx // X++ (Increment Sample Pitch Table Offset)
+    lda.w SynthHarpPitchTable,x // A = Voice Pitch (MSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
 
-      WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
-      WDSP(DSP_KON,%00000001)  // DSP Register Data = Key On Flags
-    KEYEND1: // Key End
-
-
-  CHAN2: // Channel 2 Pattern
-    tya // A = Y (Pattern Offset Index)
-    tax // X = A (Pattern Offset Index)
-    ldy #2 // Y = 2
-    lda (PATTERNOFS),y // A = Pattern List (LSB)
-    sta.b PATTERN      // Store A To Zero Page RAM
-    iny // Y++
-    lda (PATTERNOFS),y // A = Pattern List (MSB)
-    sta.b PATTERN+1    // Store A To Zero Page RAM
-    txa // A = X (Pattern Offset Index)
-    tay // Y = A (Pattern Offset Index)
-
-    lda (PATTERN),y // A = Pattern Byte
-    cmp #REST   // Compare A To REST Byte ($FE)
-    beq KEYOFF2 // IF (A == REST) GOTO Key Off
-    cmp #SUST   // Compare A To SUST Byte ($FD)
-    beq KEYEND2 // IF (A == SUST) GOTO Key End
-    bra KEYON2  // ELSE GOTO Channel 1: Key On
-
-    KEYOFF2: // Key Off
-      WDSP(DSP_KOFF,%00000010) // DSP Register Data = Key Off Flags
-      bra KEYEND2 // GOTO Key End
-
-    KEYON2: // Key On
-      tax // X = A (Sample Pitch Table Offset)
-      str REG_DSPADDR=#DSP_V1PITCHL // DSP Register Index = Voice Pitch (LSB)
-      lda.w FlutePitchTable,x // A = Voice Pitch (LSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
-
-      str REG_DSPADDR=#DSP_V1PITCHH // DSP Register Index = Voice Pitch (MSB)
-      inx // X++ (Increment Sample Pitch Table Offset)
-      lda.w FlutePitchTable,x // A = Voice Pitch (MSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
-
-      WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
-      WDSP(DSP_KON,%00000010)  // DSP Register Data = Key On Flags
-    KEYEND2: // Key End
+    WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
+    WDSP(DSP_KON,%00000001)  // DSP Register Data = Key On Flags
+  KEYEND1: // Key End
 
 
-  CHAN3: // Channel 3 Pattern
-    tya // A = Y (Pattern Offset Index)
-    tax // X = A (Pattern Offset Index)
-    ldy #4 // Y = 4
-    lda (PATTERNOFS),y // A = Pattern List (LSB)
-    sta.b PATTERN      // Store A To Zero Page RAM
-    iny // Y++
-    lda (PATTERNOFS),y // A = Pattern List (MSB)
-    sta.b PATTERN+1    // Store A To Zero Page RAM
-    txa // A = X (Pattern Offset Index)
-    tay // Y = A (Pattern Offset Index)
+  // Channel 2 Pattern
+  tya // A = Y (Pattern Offset Index)
+  tax // X = A (Pattern Offset Index)
+  ldy #2 // Y = 2
+  lda (PATTERNOFS),y // A = Pattern List (LSB)
+  sta.b PATTERN      // Store A To Zero Page RAM
+  iny // Y++
+  lda (PATTERNOFS),y // A = Pattern List (MSB)
+  sta.b PATTERN+1    // Store A To Zero Page RAM
+  txa // A = X (Pattern Offset Index)
+  tay // Y = A (Pattern Offset Index)
 
-    lda (PATTERN),y // A = Pattern Byte
-    cmp #REST   // Compare A To REST Byte ($FE)
-    beq KEYOFF3 // IF (A == REST) GOTO Key Off
-    cmp #SUST   // Compare A To SUST Byte ($FD)
-    beq KEYEND3 // IF (A == SUST) GOTO Key End
-    bra KEYON3  // ELSE GOTO Channel 1: Key On
+  lda (PATTERN),y // A = Pattern Byte
+  cmp #REST   // Compare A To REST Byte ($FE)
+  beq KEYOFF2 // IF (A == REST) GOTO Key Off
+  cmp #SUST   // Compare A To SUST Byte ($FD)
+  beq KEYEND2 // IF (A == SUST) GOTO Key End
+  bra KEYON2  // ELSE GOTO Channel 1: Key On
 
-    KEYOFF3: // Key Off
-      WDSP(DSP_KOFF,%00000100) // DSP Register Data = Key Off Flags
-      bra KEYEND3 // GOTO Key End
+  KEYOFF2: // Key Off
+    WDSP(DSP_KOFF,%00000010) // DSP Register Data = Key Off Flags
+    bra KEYEND2 // GOTO Key End
 
-    KEYON3: // Key On
-      tax // X = A (Sample Pitch Table Offset)
-      str REG_DSPADDR=#DSP_V2PITCHL // DSP Register Index = Voice Pitch (LSB)
-      lda.w OboePitchTable,x // A = Voice Pitch (LSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
+  KEYON2: // Key On
+    tax // X = A (Sample Pitch Table Offset)
+    str REG_DSPADDR=#DSP_V1PITCHL // DSP Register Index = Voice Pitch (LSB)
+    lda.w FlutePitchTable,x // A = Voice Pitch (LSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
 
-      str REG_DSPADDR=#DSP_V2PITCHH // DSP Register Index = Voice Pitch (MSB)
-      inx // X++ (Increment Sample Pitch Table Offset)
-      lda.w OboePitchTable,x // A = Voice Pitch (MSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
+    str REG_DSPADDR=#DSP_V1PITCHH // DSP Register Index = Voice Pitch (MSB)
+    inx // X++ (Increment Sample Pitch Table Offset)
+    lda.w FlutePitchTable,x // A = Voice Pitch (MSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
 
-      WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
-      WDSP(DSP_KON,%00000100)  // DSP Register Data = Key On Flags
-    KEYEND3: // Key End
-
-
-  CHAN4: // Channel 4 Pattern
-    tya // A = Y (Pattern Offset Index)
-    tax // X = A (Pattern Offset Index)
-    ldy #6 // Y = 6
-    lda (PATTERNOFS),y // A = Pattern List (LSB)
-    sta.b PATTERN      // Store A To Zero Page RAM
-    iny // Y++
-    lda (PATTERNOFS),y // A = Pattern List (MSB)
-    sta.b PATTERN+1    // Store A To Zero Page RAM
-    txa // A = X (Pattern Offset Index)
-    tay // Y = A (Pattern Offset Index)
-
-    lda (PATTERN),y // A = Pattern Byte
-    cmp #REST   // Compare A To REST Byte ($FE)
-    beq KEYOFF4 // IF (A == REST) GOTO Key Off
-    cmp #SUST   // Compare A To SUST Byte ($FD)
-    beq KEYEND4 // IF (A == SUST) GOTO Key End
-    bra KEYON4  // ELSE GOTO Channel 1: Key On
-
-    KEYOFF4: // Key Off
-      WDSP(DSP_KOFF,%00001000) // DSP Register Data = Key Off Flags
-      bra KEYEND4 // GOTO Key End
-
-    KEYON4: // Key On
-      tax // X = A (Sample Pitch Table Offset)
-      str REG_DSPADDR=#DSP_V3PITCHL // DSP Register Index = Voice Pitch (LSB)
-      lda.w ClarinetPitchTable,x // A = Voice Pitch (LSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
-
-      str REG_DSPADDR=#DSP_V3PITCHH // DSP Register Index = Voice Pitch (MSB)
-      inx // X++ (Increment Sample Pitch Table Offset)
-      lda.w ClarinetPitchTable,x // A = Voice Pitch (MSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
-
-      WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
-      WDSP(DSP_KON,%00001000)  // DSP Register Data = Key On Flags
-    KEYEND4: // Key End
+    WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
+    WDSP(DSP_KON,%00000010)  // DSP Register Data = Key On Flags
+  KEYEND2: // Key End
 
 
-  CHAN5: // Channel 5 Pattern
-    tya // A = Y (Pattern Offset Index)
-    tax // X = A (Pattern Offset Index)
-    ldy #8 // Y = 8
-    lda (PATTERNOFS),y // A = Pattern List (LSB)
-    sta.b PATTERN      // Store A To Zero Page RAM
-    iny // Y++
-    lda (PATTERNOFS),y // A = Pattern List (MSB)
-    sta.b PATTERN+1    // Store A To Zero Page RAM
-    txa // A = X (Pattern Offset Index)
-    tay // Y = A (Pattern Offset Index)
+  // Channel 3 Pattern
+  tya // A = Y (Pattern Offset Index)
+  tax // X = A (Pattern Offset Index)
+  ldy #4 // Y = 4
+  lda (PATTERNOFS),y // A = Pattern List (LSB)
+  sta.b PATTERN      // Store A To Zero Page RAM
+  iny // Y++
+  lda (PATTERNOFS),y // A = Pattern List (MSB)
+  sta.b PATTERN+1    // Store A To Zero Page RAM
+  txa // A = X (Pattern Offset Index)
+  tay // Y = A (Pattern Offset Index)
 
-    lda (PATTERN),y // A = Pattern Byte
-    cmp #REST   // Compare A To REST Byte ($FE)
-    beq KEYOFF5 // IF (A == REST) GOTO Key Off
-    cmp #SUST   // Compare A To SUST Byte ($FD)
-    beq KEYEND5 // IF (A == SUST) GOTO Key End
-    bra KEYON5  // ELSE GOTO Channel 1: Key On
+  lda (PATTERN),y // A = Pattern Byte
+  cmp #REST   // Compare A To REST Byte ($FE)
+  beq KEYOFF3 // IF (A == REST) GOTO Key Off
+  cmp #SUST   // Compare A To SUST Byte ($FD)
+  beq KEYEND3 // IF (A == SUST) GOTO Key End
+  bra KEYON3  // ELSE GOTO Channel 1: Key On
 
-    KEYOFF5: // Key Off
-      WDSP(DSP_KOFF,%00010000) // DSP Register Data = Key Off Flags
-      bra KEYEND5 // GOTO Key End
+  KEYOFF3: // Key Off
+    WDSP(DSP_KOFF,%00000100) // DSP Register Data = Key Off Flags
+    bra KEYEND3 // GOTO Key End
 
-    KEYON5: // Key On
-      tax // X = A (Sample Pitch Table Offset)
-      str REG_DSPADDR=#DSP_V4PITCHL // DSP Register Index = Voice Pitch (LSB)
-      lda.w BassoonPitchTable,x // A = Voice Pitch (LSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
+  KEYON3: // Key On
+    tax // X = A (Sample Pitch Table Offset)
+    str REG_DSPADDR=#DSP_V2PITCHL // DSP Register Index = Voice Pitch (LSB)
+    lda.w OboePitchTable,x // A = Voice Pitch (LSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
 
-      str REG_DSPADDR=#DSP_V4PITCHH // DSP Register Index = Voice Pitch (MSB)
-      inx // X++ (Increment Sample Pitch Table Offset)
-      lda.w BassoonPitchTable,x // A = Voice Pitch (MSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
+    str REG_DSPADDR=#DSP_V2PITCHH // DSP Register Index = Voice Pitch (MSB)
+    inx // X++ (Increment Sample Pitch Table Offset)
+    lda.w OboePitchTable,x // A = Voice Pitch (MSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
 
-      WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
-      WDSP(DSP_KON,%00010000)  // DSP Register Data = Key On Flags
-    KEYEND5: // Key End
-
-
-  CHAN6: // Channel 6 Pattern
-    tya // A = Y (Pattern Offset Index)
-    tax // X = A (Pattern Offset Index)
-    ldy #10 // Y = 10
-    lda (PATTERNOFS),y // A = Pattern List (LSB)
-    sta.b PATTERN      // Store A To Zero Page RAM
-    iny // Y++
-    lda (PATTERNOFS),y // A = Pattern List (MSB)
-    sta.b PATTERN+1    // Store A To Zero Page RAM
-    txa // A = X (Pattern Offset Index)
-    tay // Y = A (Pattern Offset Index)
-
-    lda (PATTERN),y // A = Pattern Byte
-    cmp #REST   // Compare A To REST Byte ($FE)
-    beq KEYOFF6 // IF (A == REST) GOTO Key Off
-    cmp #SUST   // Compare A To SUST Byte ($FD)
-    beq KEYEND6 // IF (A == SUST) GOTO Key End
-    bra KEYON6  // ELSE GOTO Channel 1: Key On
-
-    KEYOFF6: // Key Off
-      WDSP(DSP_KOFF,%00100000) // DSP Register Data = Key Off Flags
-      bra KEYEND6 // GOTO Key End
-
-    KEYON6: // Key On
-      tax // X = A (Sample Pitch Table Offset)
-      str REG_DSPADDR=#DSP_V5PITCHL // DSP Register Index = Voice Pitch (LSB)
-      lda.w FrenchHornPitchTable,x // A = Voice Pitch (LSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
-
-      str REG_DSPADDR=#DSP_V5PITCHH // DSP Register Index = Voice Pitch (MSB)
-      inx // X++ (Increment Sample Pitch Table Offset)
-      lda.w FrenchHornPitchTable,x // A = Voice Pitch (MSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
-
-      WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
-      WDSP(DSP_KON,%00100000)  // DSP Register Data = Key On Flags
-    KEYEND6: // Key End
+    WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
+    WDSP(DSP_KON,%00000100)  // DSP Register Data = Key On Flags
+  KEYEND3: // Key End
 
 
-  CHAN7: // Channel 7 Pattern
-    tya // A = Y (Pattern Offset Index)
-    tax // X = A (Pattern Offset Index)
-    ldy #12 // Y = 12
-    lda (PATTERNOFS),y // A = Pattern List (LSB)
-    sta.b PATTERN      // Store A To Zero Page RAM
-    iny // Y++
-    lda (PATTERNOFS),y // A = Pattern List (MSB)
-    sta.b PATTERN+1    // Store A To Zero Page RAM
-    txa // A = X (Pattern Offset Index)
-    tay // Y = A (Pattern Offset Index)
+  // Channel 4 Pattern
+  tya // A = Y (Pattern Offset Index)
+  tax // X = A (Pattern Offset Index)
+  ldy #6 // Y = 6
+  lda (PATTERNOFS),y // A = Pattern List (LSB)
+  sta.b PATTERN      // Store A To Zero Page RAM
+  iny // Y++
+  lda (PATTERNOFS),y // A = Pattern List (MSB)
+  sta.b PATTERN+1    // Store A To Zero Page RAM
+  txa // A = X (Pattern Offset Index)
+  tay // Y = A (Pattern Offset Index)
 
-    lda (PATTERN),y // A = Pattern Byte
-    cmp #REST   // Compare A To REST Byte ($FE)
-    beq KEYOFF7 // IF (A == REST) GOTO Key Off
-    cmp #SUST   // Compare A To SUST Byte ($FD)
-    beq KEYEND7 // IF (A == SUST) GOTO Key End
-    bra KEYON7  // ELSE GOTO Channel 1: Key On
+  lda (PATTERN),y // A = Pattern Byte
+  cmp #REST   // Compare A To REST Byte ($FE)
+  beq KEYOFF4 // IF (A == REST) GOTO Key Off
+  cmp #SUST   // Compare A To SUST Byte ($FD)
+  beq KEYEND4 // IF (A == SUST) GOTO Key End
+  bra KEYON4  // ELSE GOTO Channel 1: Key On
 
-    KEYOFF7: // Key Off
-      WDSP(DSP_KOFF,%01000000) // DSP Register Data = Key Off Flags
-      bra KEYEND7 // GOTO Key End
+  KEYOFF4: // Key Off
+    WDSP(DSP_KOFF,%00001000) // DSP Register Data = Key Off Flags
+    bra KEYEND4 // GOTO Key End
 
-    KEYON7: // Key On
-      tax // X = A (Sample Pitch Table Offset)
-      str REG_DSPADDR=#DSP_V6PITCHL // DSP Register Index = Voice Pitch (LSB)
-      lda.w StringsPitchTable,x // A = Voice Pitch (LSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
+  KEYON4: // Key On
+    tax // X = A (Sample Pitch Table Offset)
+    str REG_DSPADDR=#DSP_V3PITCHL // DSP Register Index = Voice Pitch (LSB)
+    lda.w ClarinetPitchTable,x // A = Voice Pitch (LSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
 
-      str REG_DSPADDR=#DSP_V6PITCHH // DSP Register Index = Voice Pitch (MSB)
-      inx // X++ (Increment Sample Pitch Table Offset)
-      lda.w StringsPitchTable,x // A = Voice Pitch (MSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
+    str REG_DSPADDR=#DSP_V3PITCHH // DSP Register Index = Voice Pitch (MSB)
+    inx // X++ (Increment Sample Pitch Table Offset)
+    lda.w ClarinetPitchTable,x // A = Voice Pitch (MSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
 
-      WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
-      WDSP(DSP_KON,%01000000)  // DSP Register Data = Key On Flags
-    KEYEND7: // Key End
+    WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
+    WDSP(DSP_KON,%00001000)  // DSP Register Data = Key On Flags
+  KEYEND4: // Key End
 
 
-  CHAN8: // Channel 8 Pattern
-    tya // A = Y (Pattern Offset Index)
-    tax // X = A (Pattern Offset Index)
-    ldy #14 // Y = 14
-    lda (PATTERNOFS),y // A = Pattern List (LSB)
-    sta.b PATTERN      // Store A To Zero Page RAM
-    iny // Y++
-    lda (PATTERNOFS),y // A = Pattern List (MSB)
-    sta.b PATTERN+1    // Store A To Zero Page RAM
-    txa // A = X (Pattern Offset Index)
-    tay // Y = A (Pattern Offset Index)
+  // Channel 5 Pattern
+  tya // A = Y (Pattern Offset Index)
+  tax // X = A (Pattern Offset Index)
+  ldy #8 // Y = 8
+  lda (PATTERNOFS),y // A = Pattern List (LSB)
+  sta.b PATTERN      // Store A To Zero Page RAM
+  iny // Y++
+  lda (PATTERNOFS),y // A = Pattern List (MSB)
+  sta.b PATTERN+1    // Store A To Zero Page RAM
+  txa // A = X (Pattern Offset Index)
+  tay // Y = A (Pattern Offset Index)
 
-    lda (PATTERN),y // A = Pattern Byte
-    cmp #REST   // Compare A To REST Byte ($FE)
-    beq KEYOFF8 // IF (A == REST) GOTO Key Off
-    cmp #SUST   // Compare A To SUST Byte ($FD)
-    beq KEYEND8 // IF (A == SUST) GOTO Key End
-    bra KEYON8  // ELSE GOTO Channel 1: Key On
+  lda (PATTERN),y // A = Pattern Byte
+  cmp #REST   // Compare A To REST Byte ($FE)
+  beq KEYOFF5 // IF (A == REST) GOTO Key Off
+  cmp #SUST   // Compare A To SUST Byte ($FD)
+  beq KEYEND5 // IF (A == SUST) GOTO Key End
+  bra KEYON5  // ELSE GOTO Channel 1: Key On
 
-    KEYOFF8: // Key Off
-      WDSP(DSP_KOFF,%10000000) // DSP Register Data = Key Off Flags
-      bra KEYEND8 // GOTO Key End
+  KEYOFF5: // Key Off
+    WDSP(DSP_KOFF,%00010000) // DSP Register Data = Key Off Flags
+    bra KEYEND5 // GOTO Key End
 
-    KEYON8: // Key On
-      tax // X = A (Sample Pitch Table Offset)
-      str REG_DSPADDR=#DSP_V7PITCHL // DSP Register Index = Voice Pitch (LSB)
-      lda.w StringsPitchTable,x // A = Voice Pitch (LSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
+  KEYON5: // Key On
+    tax // X = A (Sample Pitch Table Offset)
+    str REG_DSPADDR=#DSP_V4PITCHL // DSP Register Index = Voice Pitch (LSB)
+    lda.w BassoonPitchTable,x // A = Voice Pitch (LSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
 
-      str REG_DSPADDR=#DSP_V7PITCHH // DSP Register Index = Voice Pitch (MSB)
-      inx // X++ (Increment Sample Pitch Table Offset)
-      lda.w StringsPitchTable,x // A = Voice Pitch (MSB)
-      sta.b REG_DSPDATA // DSP Register Data = A
+    str REG_DSPADDR=#DSP_V4PITCHH // DSP Register Index = Voice Pitch (MSB)
+    inx // X++ (Increment Sample Pitch Table Offset)
+    lda.w BassoonPitchTable,x // A = Voice Pitch (MSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
 
-      WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
-      WDSP(DSP_KON,%10000000)  // DSP Register Data = Key On Flags
-    KEYEND8: // Key End
+    WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
+    WDSP(DSP_KON,%00010000)  // DSP Register Data = Key On Flags
+  KEYEND5: // Key End
+
+
+  // Channel 6 Pattern
+  tya // A = Y (Pattern Offset Index)
+  tax // X = A (Pattern Offset Index)
+  ldy #10 // Y = 10
+  lda (PATTERNOFS),y // A = Pattern List (LSB)
+  sta.b PATTERN      // Store A To Zero Page RAM
+  iny // Y++
+  lda (PATTERNOFS),y // A = Pattern List (MSB)
+  sta.b PATTERN+1    // Store A To Zero Page RAM
+  txa // A = X (Pattern Offset Index)
+  tay // Y = A (Pattern Offset Index)
+
+  lda (PATTERN),y // A = Pattern Byte
+  cmp #REST   // Compare A To REST Byte ($FE)
+  beq KEYOFF6 // IF (A == REST) GOTO Key Off
+  cmp #SUST   // Compare A To SUST Byte ($FD)
+  beq KEYEND6 // IF (A == SUST) GOTO Key End
+  bra KEYON6  // ELSE GOTO Channel 1: Key On
+
+  KEYOFF6: // Key Off
+    WDSP(DSP_KOFF,%00100000) // DSP Register Data = Key Off Flags
+    bra KEYEND6 // GOTO Key End
+
+  KEYON6: // Key On
+    tax // X = A (Sample Pitch Table Offset)
+    str REG_DSPADDR=#DSP_V5PITCHL // DSP Register Index = Voice Pitch (LSB)
+    lda.w FrenchHornPitchTable,x // A = Voice Pitch (LSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
+
+    str REG_DSPADDR=#DSP_V5PITCHH // DSP Register Index = Voice Pitch (MSB)
+    inx // X++ (Increment Sample Pitch Table Offset)
+    lda.w FrenchHornPitchTable,x // A = Voice Pitch (MSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
+
+    WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
+    WDSP(DSP_KON,%00100000)  // DSP Register Data = Key On Flags
+  KEYEND6: // Key End
+
+
+  // Channel 7 Pattern
+  tya // A = Y (Pattern Offset Index)
+  tax // X = A (Pattern Offset Index)
+  ldy #12 // Y = 12
+  lda (PATTERNOFS),y // A = Pattern List (LSB)
+  sta.b PATTERN      // Store A To Zero Page RAM
+  iny // Y++
+  lda (PATTERNOFS),y // A = Pattern List (MSB)
+  sta.b PATTERN+1    // Store A To Zero Page RAM
+  txa // A = X (Pattern Offset Index)
+  tay // Y = A (Pattern Offset Index)
+
+  lda (PATTERN),y // A = Pattern Byte
+  cmp #REST   // Compare A To REST Byte ($FE)
+  beq KEYOFF7 // IF (A == REST) GOTO Key Off
+  cmp #SUST   // Compare A To SUST Byte ($FD)
+  beq KEYEND7 // IF (A == SUST) GOTO Key End
+  bra KEYON7  // ELSE GOTO Channel 1: Key On
+
+  KEYOFF7: // Key Off
+    WDSP(DSP_KOFF,%01000000) // DSP Register Data = Key Off Flags
+    bra KEYEND7 // GOTO Key End
+
+  KEYON7: // Key On
+    tax // X = A (Sample Pitch Table Offset)
+    str REG_DSPADDR=#DSP_V6PITCHL // DSP Register Index = Voice Pitch (LSB)
+    lda.w StringsPitchTable,x // A = Voice Pitch (LSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
+
+    str REG_DSPADDR=#DSP_V6PITCHH // DSP Register Index = Voice Pitch (MSB)
+    inx // X++ (Increment Sample Pitch Table Offset)
+    lda.w StringsPitchTable,x // A = Voice Pitch (MSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
+
+    WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
+    WDSP(DSP_KON,%01000000)  // DSP Register Data = Key On Flags
+  KEYEND7: // Key End
+
+
+  // Channel 8 Pattern
+  tya // A = Y (Pattern Offset Index)
+  tax // X = A (Pattern Offset Index)
+  ldy #14 // Y = 14
+  lda (PATTERNOFS),y // A = Pattern List (LSB)
+  sta.b PATTERN      // Store A To Zero Page RAM
+  iny // Y++
+  lda (PATTERNOFS),y // A = Pattern List (MSB)
+  sta.b PATTERN+1    // Store A To Zero Page RAM
+  txa // A = X (Pattern Offset Index)
+  tay // Y = A (Pattern Offset Index)
+
+  lda (PATTERN),y // A = Pattern Byte
+  cmp #REST   // Compare A To REST Byte ($FE)
+  beq KEYOFF8 // IF (A == REST) GOTO Key Off
+  cmp #SUST   // Compare A To SUST Byte ($FD)
+  beq KEYEND8 // IF (A == SUST) GOTO Key End
+  bra KEYON8  // ELSE GOTO Channel 1: Key On
+
+  KEYOFF8: // Key Off
+    WDSP(DSP_KOFF,%10000000) // DSP Register Data = Key Off Flags
+    bra KEYEND8 // GOTO Key End
+
+  KEYON8: // Key On
+    tax // X = A (Sample Pitch Table Offset)
+    str REG_DSPADDR=#DSP_V7PITCHL // DSP Register Index = Voice Pitch (LSB)
+    lda.w StringsPitchTable,x // A = Voice Pitch (LSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
+
+    str REG_DSPADDR=#DSP_V7PITCHH // DSP Register Index = Voice Pitch (MSB)
+    inx // X++ (Increment Sample Pitch Table Offset)
+    lda.w StringsPitchTable,x // A = Voice Pitch (MSB)
+    sta.b REG_DSPDATA // DSP Register Data = A
+
+    WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
+    WDSP(DSP_KON,%10000000)  // DSP Register Data = Key On Flags
+  KEYEND8: // Key End
 
 
   // Wait For MilliSecond Amount (8kHz Timer)
