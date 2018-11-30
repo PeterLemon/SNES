@@ -167,9 +167,10 @@ LoopSong:
 
   iny // Increment Pattern Index Offset
   cpy #PatternSize // Compare Y To Pattern Size
-  bne PatternEnd // IF (Y != Pattern Size) Pattern End, ELSE Pattern Increment
+  beq PatternIncrement // IF (Y == Pattern Size) Pattern Increment
+  jmp PatternEnd // ELSE Pattern End
 
-  // Channel 1..8 Pattern Increment
+  PatternIncrement: // Channel 1..8 Pattern Increment
   ldy #0  // Y = 0
   lda #ChannelCount * 2 // YA = Channel Count * 2
   adw PATTERNOFS // YA += Pattern Offset
