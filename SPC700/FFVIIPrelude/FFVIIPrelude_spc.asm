@@ -203,7 +203,7 @@ FrenchHornPitchTable:
 StringsPitchTable:
   WritePitchTable($F880) // Write Sample Pitch Table From C9 Pitch, 9 Octaves: C1..B9 (108 Words)
 
-PATTERN00: // Pattern 00: Rest (Channel 2..8)
+PATTERN00: // Pattern 00: Rest (Channel 1..8)
   db REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST // 1
   db REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST // 2
   db REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST, REST // 3
