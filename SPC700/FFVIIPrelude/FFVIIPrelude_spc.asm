@@ -50,6 +50,7 @@ include "LIB/SNES_SPC700.INC" // Include SPC700 Definitions & Macros
 
 // Constants
 constant MaxQuant(180) // Maximum Quantization ms
+constant PatternSize(256) // Pattern Size (Max 256)
 
 // Setup Zero Page RAM
 constant PATTERN($00) // Pattern Zero Page RAM Address
@@ -164,9 +165,11 @@ LoopSong:
     bne WaitMS // IF (A != 0) Loop Timer Wait
 
   iny // Increment Pattern Index Offset
-  bne PatternEnd // IF (Y != 0) Pattern End, ELSE Pattern Increment
+  cpy #PatternSize // Compare Y To Pattern Size
+  bne PatternEnd // IF (Y != Pattern Size) Pattern End, ELSE Pattern Increment
 
   // Channel 1..8 Pattern Increment
+  ldy #0  // Y = 0
   lda #16 // YA = 16 (2 * Channel Count)
   adw PATTERNOFS // YA += Pattern Offset
   stw PATTERNOFS // Pattern Offset = YA
