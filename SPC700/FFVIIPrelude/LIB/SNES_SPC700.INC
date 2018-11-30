@@ -379,6 +379,8 @@ macro SetPitch(voice, note, octave, C9Pitch) {
 }
 
 // Frequency WORD Offsets For Sample Pitch Table
+constant HIT($00)
+
 constant C1($00)
 constant C1s($02)
 constant D1b($02)
@@ -541,9 +543,8 @@ constant A9s($D4)
 constant B9b($D4)
 constant B9($D6)
 
-constant SUST($FD)
-constant REST($FE)
-constant SONGEND($FF)
+constant SUST($FE)
+constant REST($FF)
 
 macro WritePitchTable(C9Pitch) { // Write Sample Pitch Table From C9 Pitch, 9 Octaves: C1..B9 (108 Words)
   variable note(0)
