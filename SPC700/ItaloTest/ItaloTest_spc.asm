@@ -178,7 +178,7 @@ LoopSong:
   adw PATTERNOFS // YA += Pattern Offset
   stw PATTERNOFS // Pattern Offset = YA
 
-  // Compare Pattern List Change 1 Address
+  // Compare Pattern List Change Address
   lda #PATTERNLISTCHANGE    // A = Pattern List Change (LSB)
   ldy #PATTERNLISTCHANGE>>8 // Y = Pattern List Change (MSB)
   cpw PATTERNOFS            // Compare YA To Zero Page RAM
