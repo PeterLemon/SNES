@@ -7,7 +7,7 @@ macro seek(variable offset) { // Set SPC700 Memory Map
   base offset
 }
 
-macro ChannelPattern(CHANNEL, PITCHTABLE) { // Channel Pattern Calculation
+macro ChannelPattern(CHANNEL, VOICE, PITCHTABLE) { // Channel Pattern Calculation
   tya // A = Y (Pattern Offset Index)
   tax // X = A (Pattern Offset Index)
   ldy #{CHANNEL}*2 // Y = CHANNEL * 2
@@ -24,25 +24,25 @@ macro ChannelPattern(CHANNEL, PITCHTABLE) { // Channel Pattern Calculation
   beq {#}KEYOFF // IF (A == REST) GOTO Key Off
   cmp #SUST     // Compare A To SUST Byte ($FD)
   beq {#}KEYEND // IF (A == SUST) GOTO Key End
-  bra {#}KEYON  // ELSE GOTO Channel 1: Key On
+  bra {#}KEYON  // ELSE GOTO Key On
 
   {#}KEYOFF: // Key Off
-    WDSP(DSP_KOFF,1<<{CHANNEL}) // DSP Register Data = Key Off Flags
+    WDSP(DSP_KOFF,1<<{VOICE}) // DSP Register Data = Key Off Flags
     bra {#}KEYEND // GOTO Key End
 
   {#}KEYON: // Key On
     tax // X = A (Sample Pitch Table Offset)
-    str REG_DSPADDR=#DSP_V{CHANNEL}PITCHL // DSP Register Index = Voice Pitch (LSB)
+    str REG_DSPADDR=#DSP_V{VOICE}PITCHL // DSP Register Index = Voice Pitch (LSB)
     lda.w {PITCHTABLE},x // A = Voice Pitch (LSB)
     sta.b REG_DSPDATA // DSP Register Data = A
 
-    str REG_DSPADDR=#DSP_V{CHANNEL}PITCHH // DSP Register Index = Voice Pitch (MSB)
+    str REG_DSPADDR=#DSP_V{VOICE}PITCHH // DSP Register Index = Voice Pitch (MSB)
     inx // X++ (Increment Sample Pitch Table Offset)
     lda.w {PITCHTABLE},x // A = Voice Pitch (MSB)
     sta.b REG_DSPDATA // DSP Register Data = A
 
     WDSP(DSP_KOFF,%00000000) // DSP Register Data = Key Off Flags
-    WDSP(DSP_KON,1<<{CHANNEL})  // DSP Register Data = Key On Flags
+    WDSP(DSP_KON,1<<{VOICE})  // DSP Register Data = Key On Flags
   {#}KEYEND: // Key End
 }
 
@@ -51,7 +51,7 @@ include "LIB/SNES_SPC700.INC" // Include SPC700 Definitions & Macros
 // Constants
 constant MaxQuant(180) // Maximum Quantization ms
 constant PatternSize(256) // Pattern Size (1..256)
-constant ChannelCount(8) // Channel Count (1..8)
+constant ChannelCount(8) // Channel Count (1 For Each Sample)
 
 // Setup Zero Page RAM
 constant PATTERN($00) // Pattern Zero Page RAM Address
@@ -147,14 +147,14 @@ StartSong:
   ldy #0 // Y = 0 (Pattern Offset Index)
 
 LoopSong:
-  ChannelPattern(0, SynthHarpPitchTable)  // Channel 1 Pattern Calculation
-  ChannelPattern(1, FlutePitchTable)      // Channel 2 Pattern Calculation
-  ChannelPattern(2, OboePitchTable)       // Channel 3 Pattern Calculation
-  ChannelPattern(3, ClarinetPitchTable)   // Channel 4 Pattern Calculation
-  ChannelPattern(4, BassoonPitchTable)    // Channel 5 Pattern Calculation
-  ChannelPattern(5, FrenchHornPitchTable) // Channel 6 Pattern Calculation
-  ChannelPattern(6, StringsPitchTable)    // Channel 7 Pattern Calculation
-  ChannelPattern(7, StringsPitchTable)    // Channel 8 Pattern Calculation
+  ChannelPattern(0, 0, SynthHarpPitchTable)  // Channel 1 Pattern Calculation: Channel, Voice, Pitch Table
+  ChannelPattern(1, 1, FlutePitchTable)      // Channel 2 Pattern Calculation: Channel, Voice, Pitch Table
+  ChannelPattern(2, 2, OboePitchTable)       // Channel 3 Pattern Calculation: Channel, Voice, Pitch Table
+  ChannelPattern(3, 3, ClarinetPitchTable)   // Channel 4 Pattern Calculation: Channel, Voice, Pitch Table
+  ChannelPattern(4, 4, BassoonPitchTable)    // Channel 5 Pattern Calculation: Channel, Voice, Pitch Table
+  ChannelPattern(5, 5, FrenchHornPitchTable) // Channel 6 Pattern Calculation: Channel, Voice, Pitch Table
+  ChannelPattern(6, 6, StringsPitchTable)    // Channel 7 Pattern Calculation: Channel, Voice, Pitch Table
+  ChannelPattern(7, 7, StringsPitchTable)    // Channel 8 Pattern Calculation: Channel, Voice, Pitch Table
 
   // Wait For MilliSecond Amount (8kHz Timer)
   lda #MaxQuant // Granularity = 1ms, Max Wait = 256ms
