@@ -184,6 +184,8 @@ LoopSong:
   cpw PATTERNOFS            // Compare YA To Zero Page RAM
   bne PatternCmpEnd         // IF (Pattern Offset != Pattern List Change Offset) Pattern Compare End, ELSE Set Pattern Change Offset
 
+  WDSP(DSP_KOFF,%11000000) // DSP Register Data = Key Off Flags
+
   // Set Synth (Channel 6)
   WDSP(DSP_V6SRCN,7)    // Voice 6: Synth
   WDSP(DSP_V6VOLL,40)   // Voice 6: Volume Left
@@ -208,6 +210,8 @@ LoopSong:
   lda #PATTERNLISTLOOP    // A = Pattern List Loop (LSB)
   ldy #PATTERNLISTLOOP>>8 // Y = Pattern List Loop (MSB)
   stw PATTERNOFS          // Store YA To Zero Page RAM
+
+  WDSP(DSP_KOFF,%11000000) // DSP Register Data = Key Off Flags
 
   // Set Electro Synth (Channel 6)
   WDSP(DSP_V6SRCN,6)    // Voice 6: ElectroSynth
