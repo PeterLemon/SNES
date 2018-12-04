@@ -169,14 +169,16 @@ constant DSP_V7UNUSEDC($7E) // Voice 7 Unused Byte C (1 Byte Of General-Purpose 
 
 // SPC700 Macros
 macro WDSP(REG, variable DATA) {
-  lda #{REG}
-  ldy #DATA
-  stw REG_DSPADDR
+  str REG_DSPADDR=#{REG}
+  str REG_DSPDATA=#DATA
 }
 
 macro WDSP_REG(REG) {
-  lda #{REG}
-  stw REG_DSPADDR
+  str REG_DSPADDR=#{REG}
+}
+
+macro WDSP_DATA(variable DATA) {
+  str REG_DSPDATA=#DATA
 }
 
 macro SPC_INIT() { // SPC700 Initialisation
@@ -310,16 +312,21 @@ macro WriteCTRL(BYTE) { // Write Byte To SPC-700 Control Register
   SPCLoadByte() // Control DATA To $F1
 }
 
-constant CSharp(11)
+constant Cs(11)
+constant Db(11)
 constant D(10)
-constant DSharp(9)
+constant Ds(9)
+constant Eb(9)
 constant E(8)
 constant F(7)
-constant FSharp(6)
+constant Fs(6)
+constant Gb(6)
 constant G(5)
-constant GSharp(4)
+constant Gs(4)
+constant Ab(4)
 constant A(3)
-constant ASharp(2)
+constant As(2)
+constant Bb(2)
 constant B(1)
 constant C(0)
 
@@ -369,4 +376,226 @@ macro SetPitch(voice, note, octave, C9Pitch) {
 
   WDSP(DSP_V{voice}PITCHL,pitch & $FF) // Voice X: Pitch (Lower Byte)
   WDSP(DSP_V{voice}PITCHH,pitch >> 8)  // Voice X: Pitch (Upper Byte)
+}
+
+// Frequency WORD Offsets For Sample Pitch Table
+constant HIT($00)
+
+constant C1($00)
+constant C1s($02)
+constant D1b($02)
+constant D1($04)
+constant D1s($06)
+constant E1b($06)
+constant E1($08)
+constant F1($0A)
+constant F1s($0C)
+constant G1b($0C)
+constant G1($0E)
+constant G1s($10)
+constant A1b($10)
+constant A1($12)
+constant A1s($14)
+constant B1b($14)
+constant B1($16)
+
+constant C2($18)
+constant C2s($1A)
+constant D2b($1A)
+constant D2($1C)
+constant D2s($1E)
+constant E2b($1E)
+constant E2($20)
+constant F2($22)
+constant F2s($24)
+constant G2b($24)
+constant G2($26)
+constant G2s($28)
+constant A2b($28)
+constant A2($2A)
+constant A2s($2C)
+constant B2b($2C)
+constant B2($2E)
+
+constant C3($30)
+constant C3s($32)
+constant D3b($32)
+constant D3($34)
+constant D3s($36)
+constant E3b($36)
+constant E3($38)
+constant F3($3A)
+constant F3s($3C)
+constant G3b($3C)
+constant G3($3E)
+constant G3s($40)
+constant A3b($40)
+constant A3($42)
+constant A3s($44)
+constant B3b($44)
+constant B3($46)
+
+constant C4($48)
+constant C4s($4A)
+constant D4b($4A)
+constant D4($4C)
+constant D4s($4E)
+constant E4b($4E)
+constant E4($50)
+constant F4($52)
+constant F4s($54)
+constant G4b($54)
+constant G4($56)
+constant G4s($58)
+constant A4b($58)
+constant A4($5A)
+constant A4s($5C)
+constant B4b($5C)
+constant B4($5E)
+
+constant C5($60)
+constant C5s($62)
+constant D5b($62)
+constant D5($64)
+constant D5s($66)
+constant E5b($66)
+constant E5($68)
+constant F5($6A)
+constant F5s($6C)
+constant G5b($6C)
+constant G5($6E)
+constant G5s($70)
+constant A5b($70)
+constant A5($72)
+constant A5s($74)
+constant B5b($74)
+constant B5($76)
+
+constant C6($78)
+constant C6s($7A)
+constant D6b($7A)
+constant D6($7C)
+constant D6s($7E)
+constant E6b($7E)
+constant E6($80)
+constant F6($82)
+constant F6s($84)
+constant G6b($84)
+constant G6($86)
+constant G6s($88)
+constant A6b($88)
+constant A6($8A)
+constant A6s($8C)
+constant B6b($8C)
+constant B6($8E)
+
+constant C7($90)
+constant C7s($92)
+constant D7b($92)
+constant D7($94)
+constant D7s($96)
+constant E7b($96)
+constant E7($98)
+constant F7($9A)
+constant F7s($9C)
+constant G7b($9C)
+constant G7($9E)
+constant G7s($A0)
+constant A7b($A0)
+constant A7($A2)
+constant A7s($A4)
+constant B7b($A4)
+constant B7($A6)
+
+constant C8($A8)
+constant C8s($AA)
+constant D8b($AA)
+constant D8($AC)
+constant D8s($AE)
+constant E8b($AE)
+constant E8($B0)
+constant F8($B2)
+constant F8s($B4)
+constant G8b($B4)
+constant G8($B6)
+constant G8s($B8)
+constant A8b($B8)
+constant A8($BA)
+constant A8s($BC)
+constant B8b($BC)
+constant B8($BE)
+
+constant C9($C0)
+constant C9s($C2)
+constant D9b($C2)
+constant D9($C4)
+constant D9s($C6)
+constant E9b($C6)
+constant E9($C8)
+constant F9($CA)
+constant F9s($CC)
+constant G9b($CC)
+constant G9($CE)
+constant G9s($D0)
+constant A9b($D0)
+constant A9($D2)
+constant A9s($D4)
+constant B9b($D4)
+constant B9($D6)
+
+constant SUST($FE)
+constant REST($FF)
+
+macro WritePitchTable(C9Pitch) { // Write Sample Pitch Table From C9 Pitch, 9 Octaves: C1..B9 (108 Words)
+  variable note(0)
+  variable octave(0)
+
+  while octave < 10 {
+    variable pitch({C9Pitch})
+
+    if note >= 1 {
+      pitch = ((pitch * 1000000000) / 1059463094)
+    }
+    if note >= 2 {
+      pitch = ((pitch * 1000000000) / 1059463094)
+    }
+    if note >= 3 {
+      pitch = ((pitch * 1000000000) / 1059463094)
+    }
+    if note >= 4 {
+      pitch = ((pitch * 1000000000) / 1059463094)
+    }
+    if note >= 5 {
+      pitch = ((pitch * 1000000000) / 1059463094)
+    }
+    if note >= 6 {
+      pitch = ((pitch * 1000000000) / 1059463094)
+    }
+    if note >= 7 {
+      pitch = ((pitch * 1000000000) / 1059463094)
+    }
+    if note >= 8 {
+      pitch = ((pitch * 1000000000) / 1059463094)
+    }
+    if note >= 9 {
+      pitch = ((pitch * 1000000000) / 1059463094)
+    }
+    if note >= 10 {
+      pitch = ((pitch * 1000000000) / 1059463094)
+    }
+    if note == 11 {
+      pitch = ((pitch * 1000000000) / 1059463094)
+    }
+
+    pitch = (pitch >> (8-octave))
+
+    if ! note {
+      note = 12
+      octave = (octave+1)
+    }
+
+    note = (note-1)
+
+    dw pitch
+  }
 }
