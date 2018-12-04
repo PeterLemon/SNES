@@ -190,51 +190,51 @@ HarpPitchTable:
 
 PATTERN00: // Pattern 00: Harp (Channel 1)
   db C5,   SUST, SUST, SUST, SUST, SUST, SUST, SUST // 1
-PATTERN01: // Pattern 00: Harp (Channel 1)
+PATTERN01: // Pattern 01: Harp (Channel 1)
   db F5,   SUST, SUST, SUST, SUST, SUST, SUST, SUST // 2
-PATTERN02: // Pattern 00: Harp (Channel 1)
+PATTERN02: // Pattern 02: Harp (Channel 1)
   db G5,   SUST, SUST, SUST, SUST, SUST, SUST, SUST // 3
 
-PATTERN03: // Pattern 00: Harp (Channel 2)
+PATTERN03: // Pattern 03: Harp (Channel 2)
   db SUST, C5,   SUST, SUST, SUST, SUST, SUST, SUST // 1
-PATTERN04: // Pattern 00: Harp (Channel 2)
+PATTERN04: // Pattern 04: Harp (Channel 2)
   db SUST, F5,   SUST, SUST, SUST, SUST, SUST, SUST // 2
-PATTERN05: // Pattern 00: Harp (Channel 1)
+PATTERN05: // Pattern 05: Harp (Channel 2)
   db SUST, G5,   SUST, SUST, SUST, SUST, SUST, SUST // 3
 
-PATTERN06: // Pattern 00: Harp (Channel 3)
+PATTERN06: // Pattern 06: Harp (Channel 3)
   db SUST, SUST, G5,   SUST, SUST, SUST, SUST, SUST // 1
-PATTERN07: // Pattern 00: Harp (Channel 3)
+PATTERN07: // Pattern 07: Harp (Channel 3)
   db SUST, SUST, E5,   SUST, SUST, SUST, SUST, SUST // 2
-PATTERN08: // Pattern 00: Harp (Channel 1)
+PATTERN08: // Pattern 08: Harp (Channel 3)
   db SUST, SUST, F5,   SUST, SUST, SUST, SUST, SUST // 3
 
-PATTERN09: // Pattern 00: Harp (Channel 4)
+PATTERN09: // Pattern 09: Harp (Channel 4)
   db SUST, SUST, SUST, G5,   SUST, SUST, SUST, SUST // 1
-PATTERN10: // Pattern 00: Harp (Channel 4)
+PATTERN10: // Pattern 10: Harp (Channel 4)
   db SUST, SUST, SUST, E5,   SUST, SUST, SUST, SUST // 2
-PATTERN11: // Pattern 00: Harp (Channel 1)
+PATTERN11: // Pattern 11: Harp (Channel 4)
   db SUST, SUST, SUST, F5,   SUST, SUST, SUST, SUST // 3
 
-PATTERN12: // Pattern 00: Harp (Channel 5)
+PATTERN12: // Pattern 12: Harp (Channel 5)
   db SUST, SUST, SUST, SUST, A5,   SUST, SUST, SUST // 1
-PATTERN13: // Pattern 00: Harp (Channel 5)
+PATTERN13: // Pattern 13: Harp (Channel 5)
   db SUST, SUST, SUST, SUST, D5,   SUST, SUST, SUST // 2
-PATTERN14: // Pattern 00: Harp (Channel 1)
+PATTERN14: // Pattern 14: Harp (Channel 5)
   db SUST, SUST, SUST, SUST, E5,   SUST, SUST, SUST // 3
 
-PATTERN15: // Pattern 00: Harp (Channel 6)
+PATTERN15: // Pattern 15: Harp (Channel 6)
   db SUST, SUST, SUST, SUST, SUST, A5,   SUST, SUST // 1
-PATTERN16: // Pattern 00: Harp (Channel 6)
+PATTERN16: // Pattern 16: Harp (Channel 6)
   db SUST, SUST, SUST, SUST, SUST, D5,   SUST, SUST // 2
-PATTERN17: // Pattern 00: Harp (Channel 1)
+PATTERN17: // Pattern 17: Harp (Channel 6)
   db SUST, SUST, SUST, SUST, SUST, E5,   SUST, SUST // 3
 
-PATTERN18: // Pattern 00: Harp (Channel 7)
+PATTERN18: // Pattern 18: Harp (Channel 7)
   db SUST, SUST, SUST, SUST, SUST, SUST, G5,   SUST // 1
-PATTERN19: // Pattern 00: Harp (Channel 7)
+PATTERN19: // Pattern 19: Harp (Channel 7)
   db SUST, SUST, SUST, SUST, SUST, SUST, C5,   SUST // 2
-PATTERN20: // Pattern 00: Harp (Channel 1)
+PATTERN20: // Pattern 20: Harp (Channel 7)
   db SUST, SUST, SUST, SUST, SUST, SUST, D5,   SUST // 3
 
 PATTERNLIST:
