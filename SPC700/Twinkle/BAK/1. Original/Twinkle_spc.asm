@@ -1,6 +1,6 @@
-// SNES SPC700 Play Song Demo (SPC Code) by krom (Peter Lemon):
+// SNES SPC700 Twinkle Song Demo (SPC Code) by krom (Peter Lemon):
 arch snes.smp
-output "PlaySong.spc", create
+output "Twinkle.spc", create
 
 macro seek(variable offset) { // Set SPC700 Memory Map
   origin (offset - SPCRAM)

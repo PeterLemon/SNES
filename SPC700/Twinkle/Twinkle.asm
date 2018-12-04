@@ -1,6 +1,6 @@
-// SNES SPC700 Play Song Demo (CPU Code) by krom (Peter Lemon):
+// SNES SPC700 Twinkle Song Demo (CPU Code) by krom (Peter Lemon):
 arch snes.cpu
-output "PlaySong.sfc", create
+output "Twinkle.sfc", create
 
 macro seek(variable offset) {
   origin ((offset & $7F0000) >> 1) | (offset & $7FFF)
@@ -24,4 +24,4 @@ Loop:
 
 // SPC Code
 // BANK 0
-insert SPCROM, "PlaySong.spc"
+insert SPCROM, "Twinkle.spc"
