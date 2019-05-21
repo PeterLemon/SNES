@@ -1175,6 +1175,7 @@ origin $FD2B2; insert "CharacterSelectPageMAP.rle" // VRAM $F000..$F7FF MAP Char
 
 // Include Title Screen Book Tiles
 origin $9D06F; insert "TitleScreenBookMode7.rle" // VRAM $0001..$7FFF 8BPP Title Screen Book Mode7 RLE (10149 Bytes)
+origin $ACAB5; insert "TitleScreenBook.rle"      // VRAM $C400..$D400 4BPP Title Screen Book RLE (7923 Bytes)
 // Include Title Screen Tiles
 origin $D6125; insert "TitleScreen.rle" // VRAM $C000..$FFFF 4BPP Title Screen RLE (7248 Bytes)
 
