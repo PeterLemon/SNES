@@ -1179,5 +1179,10 @@ origin $ACAB5; insert "TitleScreenBook.rle"      // VRAM $C400..$D400 4BPP Title
 // Include Title Screen Tiles
 origin $D6125; insert "TitleScreen.rle" // VRAM $C000..$FFFF 4BPP Title Screen RLE (7248 Bytes)
 
+// Include Option Screen Tile MAP
+origin $85416; insert "OptionScreenMAP.rle" // VRAM $C000..$C7FF MAP Option Screen RLE (424 Bytes)
+// Include Option Screen Tiles
+origin $E655A; insert "OptionScreen.rle" // VRAM $0000..$1FFF 2BPP Option Screen RLE (2744 Bytes)
+
 // Include Intro Tiles
 origin $EB3A1; insert "Intro.rle" // VRAM $C000..$DFFF 4BPP Intro RLE (4107 Bytes)
