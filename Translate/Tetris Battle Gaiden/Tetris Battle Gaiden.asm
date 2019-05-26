@@ -1169,7 +1169,7 @@ TextMapCHARACTERSELECTNAME("WOLFMAN")
 // Include Character Select Tile MAP
 origin $3D1D2; insert "CharacterSelectMAP.rle" // VRAM $F000..$F7FF MAP Character Select RLE (1224 Bytes)
 // Include Character Select Tiles
-origin $95112; insert "CharacterSelect.rle" // VRAM $0000..$3FFF 4BPP Character Select RLE (9071 Bytes)
+origin $95112; insert "CharacterSelect.rle" // VRAM $0000..$3FFF 4BPP Character Select RLE (9064 Bytes)
 // Include Character Select Page Tile MAP
 origin $FD2B2; insert "CharacterSelectPageMAP.rle" // VRAM $F000..$F7FF MAP Character Select Page RLE (2307 Bytes)
 
