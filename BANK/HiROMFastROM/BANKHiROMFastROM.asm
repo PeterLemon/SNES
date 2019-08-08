@@ -1,14 +1,15 @@
-// SNES Banking HIROM demo by krom (Peter Lemon):
-// 1. DMA Loads Palette Data To CGRAM
-// 2. DMA Loads 1BPP Character Tile Data To VRAM (Converts to 2BPP Tiles)
-// 3. DMA Clears VRAM Map To A Space " " Character
-// 4. DMA Prints Text Characters To Lo Bytes Of Map
+// SNES Bank HiROM/FastROM demo by krom (Peter Lemon):
+// 1. Jump To Bank Code
+// 2. DMA Loads Palette Data To CGRAM
+// 3. DMA Loads 1BPP Character Tile Data To VRAM (Converts to 2BPP Tiles)
+// 4. DMA Clears VRAM Map To A Space " " Character
+// 5. DMA Prints Text Characters To Lo Bytes Of Map
 arch snes.cpu
-output "BANKHIROM.sfc", create
+output "BANKHiROMFastROM.sfc", create
 
 macro seek(variable offset) {
   origin offset & $3FFFFF
-  base offset | $400000
+  base offset | $C00000 // HiROM/FastROM
 }
 
 seek($0000); fill $20000 // Fill Upto $1FFFF (Bank 1) With Zero Bytes
@@ -17,7 +18,7 @@ include "LIB/SNES_HEADER.ASM" // Include Header & Vector Table
 include "LIB/SNES_GFX.INC"    // Include Graphics Macros
 
 seek($8000); Start:
-  SNES_INIT(SLOWROM) // Run SNES Initialisation Routine
+  SNES_INIT(FASTROM) // Run SNES Initialisation Routine
   jml Bank1 // Jump To Bank 1
 
 // BANK 1
@@ -26,8 +27,14 @@ seek($10000); Bank1:
   LoadLOVRAM(BGCHR, $0000, $3F8, 0) // Load 1BPP Tiles To VRAM Lo Bytes (Converts To 2BPP Tiles)
   ClearVRAM(BGCLEAR, $F800, $400, 0) // Clear VRAM Map To Fixed Tile Word
 
+  // Print Title Text
+  LoadLOVRAM(Title, $F882, 30, 0) // Load Text To VRAM Lo Bytes
+
+  // Print Page Break Text
+  LoadLOVRAM(PageBreak, $F8C2, 30, 0) // Load Text To VRAM Lo Bytes
+
   // Print Text
-  LoadLOVRAM(BANKTEXT, $F942, 29, 0) // Load Text To VRAM Lo Bytes
+  LoadLOVRAM(BANKTEXT, $F942, 30, 0) // Load Text To VRAM Lo Bytes
 
   // Setup Video
   lda.b #%00001000 // DCBAPMMM: M = Mode, P = Priority, ABCD = BG1,2,3,4 Tile Size
@@ -52,8 +59,14 @@ seek($10000); Bank1:
 Loop:
   jmp Loop
 
+Title:
+  db "Bank Test HiROM/FastROM ($C0):"
+
+PageBreak:
+  db "------------------------------"
+
 BANKTEXT:
-  db "HIROM Jump Bank 1 Test PASSED" // Hello World Text
+  db "Jump To Bank 1 ($C1)    PASSED"
 
 BGCHR:
   include "Font8x8.asm" // Include BG 1BPP 8x8 Tile Font Character Data (1016 Bytes)

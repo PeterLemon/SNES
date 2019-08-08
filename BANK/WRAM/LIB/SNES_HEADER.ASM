@@ -3,11 +3,11 @@
 //=============
 seek($FFC0)
 // PROGRAM TITLE (21 Byte ASCII String, Use Spaces For Unused Bytes)
-db "HIROM BANKING TEST   "
+db "BANK WRAM            "
 // "123456789012345678901"
 
 // ROM MODE/SPEED (Bits 7-4 = Speed, Bits 3-0 = Map Mode)
-db $21
+db $20
 //  ||___________________Map Mode:
 //  |                    $X0 = LoROM/32K Banks           (Mode 20)
 //  |                    $X1 = HiROM/64K Banks           (Mode 21)
@@ -30,7 +30,7 @@ db $00
 // $5X = S-RTC           $XA = ROM+Co-processor+RAM+Battery+Overclocked
 
 // ROM SIZE (Values are rounded-up for carts with 10,12,20,24 Mbits)
-db $02
+db $01
 // $01 = 1 Bank  =  32Kb (0.25 Mbit), $07 =   7 Banks =  224Kb (1.75 Mbit)
 // $02 = 2 Banks =  64Kb (0.50 Mbit), $08 =   8 Banks =  256Kb (2.00 Mbit)
 // $03 = 3 Banks =  96Kb (0.75 Mbit), $09 =  16 Banks =  512Kb (4.00 Mbit)

@@ -1,17 +1,18 @@
-// SNES Banking LOROM demo by krom (Peter Lemon):
-// 1. DMA Loads Palette Data To CGRAM
-// 2. DMA Loads 1BPP Character Tile Data To VRAM (Converts to 2BPP Tiles)
-// 3. DMA Clears VRAM Map To A Space " " Character
-// 4. DMA Prints Text Characters To Lo Bytes Of Map
+// SNES Bank HiROM/SlowROM demo by krom (Peter Lemon):
+// 1. Jump To Bank Code
+// 2. DMA Loads Palette Data To CGRAM
+// 3. DMA Loads 1BPP Character Tile Data To VRAM (Converts to 2BPP Tiles)
+// 4. DMA Clears VRAM Map To A Space " " Character
+// 5. DMA Prints Text Characters To Lo Bytes Of Map
 arch snes.cpu
-output "BANKLOROM.sfc", create
+output "BANKHiROMSlowROM.sfc", create
 
 macro seek(variable offset) {
-  origin ((offset & $7F0000) >> 1) | (offset & $7FFF)
-  base offset
+  origin offset & $3FFFFF
+  base offset | $400000 // HiROM/SlowROM
 }
 
-seek($8000); fill $10000 // Fill Upto $FFFF (Bank 1) With Zero Bytes
+seek($0000); fill $20000 // Fill Upto $1FFFF (Bank 1) With Zero Bytes
 include "LIB/SNES.INC"        // Include SNES Definitions
 include "LIB/SNES_HEADER.ASM" // Include Header & Vector Table
 include "LIB/SNES_GFX.INC"    // Include Graphics Macros
@@ -21,13 +22,19 @@ seek($8000); Start:
   jml Bank1 // Jump To Bank 1
 
 // BANK 1
-seek($18000); Bank1:
+seek($10000); Bank1:
   LoadPAL(BGPAL, $00, 4, 0) // Load BG Palette Data
   LoadLOVRAM(BGCHR, $0000, $3F8, 0) // Load 1BPP Tiles To VRAM Lo Bytes (Converts To 2BPP Tiles)
   ClearVRAM(BGCLEAR, $F800, $400, 0) // Clear VRAM Map To Fixed Tile Word
 
+  // Print Title Text
+  LoadLOVRAM(Title, $F882, 30, 0) // Load Text To VRAM Lo Bytes
+
+  // Print Page Break Text
+  LoadLOVRAM(PageBreak, $F8C2, 30, 0) // Load Text To VRAM Lo Bytes
+
   // Print Text
-  LoadLOVRAM(BANKTEXT, $F942, 29, 0) // Load Text To VRAM Lo Bytes
+  LoadLOVRAM(BANKTEXT, $F942, 30, 0) // Load Text To VRAM Lo Bytes
 
   // Setup Video
   lda.b #%00001000 // DCBAPMMM: M = Mode, P = Priority, ABCD = BG1,2,3,4 Tile Size
@@ -52,8 +59,14 @@ seek($18000); Bank1:
 Loop:
   jmp Loop
 
+Title:
+  db "Bank Test HiROM/SlowROM ($40):"
+
+PageBreak:
+  db "------------------------------"
+
 BANKTEXT:
-  db "LOROM Jump Bank 1 Test PASSED" // Hello World Text
+  db "Jump To Bank 1 ($41)    PASSED"
 
 BGCHR:
   include "Font8x8.asm" // Include BG 1BPP 8x8 Tile Font Character Data (1016 Bytes)

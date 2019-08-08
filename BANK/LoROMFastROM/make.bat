@@ -1,0 +1,1 @@
+bass BANKLoROMFastROM.asm
