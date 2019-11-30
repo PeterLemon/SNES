@@ -66,7 +66,11 @@ SongStart:
   php // Push Processor Status Register To Stack
 
   // Check Result & Processor Status Flag Data
+  plx // Pull X Register From Stack (X = Processor Status Flag Data)
+  stx.b $E0 // Store PSW Result Data
+  stx.b REG_CPUIO1 // Store Handshake Between CPU<->APU
   sta.b $E1 // Store Result Data
+  sta.b REG_CPUIO2 // Store Handshake Between CPU<->APU
   cmp #$00 // Result Check
   beq Pass1
   Fail1:
@@ -75,9 +79,7 @@ SongStart:
   Fail1Loop:
     bra Fail1Loop
   Pass1:
-    pla // Pull Accumulator Register From Stack (A = Processor Status Flag Data)
-    sta.b $E0 // Store PSW Result Data
-    cmp #$02 // PSW Result Check
+    cpx #$02 // PSW Result Check
     bne Fail1
     WDSP(DSP_KON,%00000001) // Play Voice 0 (PASS)
     str REG_CPUIO0=#$01 // Store Handshake Between CPU<->APU
@@ -94,7 +96,11 @@ SongStart:
   php // Push Processor Status Register To Stack
 
   // Check Result & Processor Status Flag Data
+  plx // Pull X Register From Stack (X = Processor Status Flag Data)
+  stx.b $E0 // Store PSW Result Data
+  stx.b REG_CPUIO1 // Store Handshake Between CPU<->APU
   sta.b $E1 // Store Result Data
+  sta.b REG_CPUIO2 // Store Handshake Between CPU<->APU
   cmp #$80 // Result Check
   beq Pass2
   Fail2:
@@ -103,9 +109,7 @@ SongStart:
   Fail2Loop:
     bra Fail2Loop
   Pass2:
-    pla // Pull Accumulator Register From Stack (A = Processor Status Flag Data)
-    sta.b $E0 // Store PSW Result Data
-    cmp #$80 // PSW Result Check
+    cpx #$80 // PSW Result Check
     bne Fail2
     WDSP(DSP_KON,%00000001) // Play Voice 0 (PASS)
     str REG_CPUIO0=#$02 // Store Handshake Between CPU<->APU
@@ -125,7 +129,11 @@ SongStart:
   php // Push Processor Status Register To Stack
 
   // Check Result & Processor Status Flag Data
+  plx // Pull X Register From Stack (X = Processor Status Flag Data)
+  stx.b $E0 // Store PSW Result Data
+  stx.b REG_CPUIO1 // Store Handshake Between CPU<->APU
   lda.b $E1 // Load Result Data
+  sta.b REG_CPUIO2 // Store Handshake Between CPU<->APU
   cmp #$00 // Result Check
   beq Pass3
   Fail3:
@@ -134,9 +142,7 @@ SongStart:
   Fail3Loop:
     bra Fail3Loop
   Pass3:
-    pla // Pull Accumulator Register From Stack (A = Processor Status Flag Data)
-    sta.b $E0 // Store PSW Result Data
-    cmp #$02 // PSW Result Check
+    cpx #$02 // PSW Result Check
     bne Fail3
     WDSP(DSP_KON,%00000001) // Play Voice 0 (PASS)
     str REG_CPUIO0=#$03 // Store Handshake Between CPU<->APU
@@ -155,7 +161,11 @@ SongStart:
   php // Push Processor Status Register To Stack
 
   // Check Result & Processor Status Flag Data
+  plx // Pull X Register From Stack (X = Processor Status Flag Data)
+  stx.b $E0 // Store PSW Result Data
+  stx.b REG_CPUIO1 // Store Handshake Between CPU<->APU
   lda.b $E1 // Load Result Data
+  sta.b REG_CPUIO2 // Store Handshake Between CPU<->APU
   cmp #$80 // Result Check
   beq Pass4
   Fail4:
@@ -164,9 +174,7 @@ SongStart:
   Fail4Loop:
     bra Fail4Loop
   Pass4:
-    pla // Pull Accumulator Register From Stack (A = Processor Status Flag Data)
-    sta.b $E0 // Store PSW Result Data
-    cmp #$80 // PSW Result Check
+    cpx #$80 // PSW Result Check
     bne Fail4
     WDSP(DSP_KON,%00000001) // Play Voice 0 (PASS)
     str REG_CPUIO0=#$04 // Store Handshake Between CPU<->APU
@@ -186,7 +194,11 @@ SongStart:
   php // Push Processor Status Register To Stack
 
   // Check Result & Processor Status Flag Data
+  plx // Pull X Register From Stack (X = Processor Status Flag Data)
+  stx.b $E0 // Store PSW Result Data
+  stx.b REG_CPUIO1 // Store Handshake Between CPU<->APU
   lda.b $E1 // Load Result Data
+  sta.b REG_CPUIO2 // Store Handshake Between CPU<->APU
   cmp #$00 // Result Check
   beq Pass5
   Fail5:
@@ -195,9 +207,7 @@ SongStart:
   Fail5Loop:
     bra Fail5Loop
   Pass5:
-    pla // Pull Accumulator Register From Stack (A = Processor Status Flag Data)
-    sta.b $E0 // Store PSW Result Data
-    cmp #$02 // PSW Result Check
+    cpx #$02 // PSW Result Check
     bne Fail5
     WDSP(DSP_KON,%00000001) // Play Voice 0 (PASS)
     str REG_CPUIO0=#$05 // Store Handshake Between CPU<->APU
@@ -216,7 +226,11 @@ SongStart:
   php // Push Processor Status Register To Stack
 
   // Check Result & Processor Status Flag Data
+  plx // Pull X Register From Stack (X = Processor Status Flag Data)
+  stx.b $E0 // Store PSW Result Data
+  stx.b REG_CPUIO1 // Store Handshake Between CPU<->APU
   lda.b $E1 // Load Result Data
+  sta.b REG_CPUIO2 // Store Handshake Between CPU<->APU
   cmp #$80 // Result Check
   beq Pass6
   Fail6:
@@ -225,9 +239,7 @@ SongStart:
   Fail6Loop:
     bra Fail6Loop
   Pass6:
-    pla // Pull Accumulator Register From Stack (A = Processor Status Flag Data)
-    sta.b $E0 // Store PSW Result Data
-    cmp #$80 // PSW Result Check
+    cpx #$80 // PSW Result Check
     bne Fail6
     WDSP(DSP_KON,%00000001) // Play Voice 0 (PASS)
     str REG_CPUIO0=#$06 // Store Handshake Between CPU<->APU
@@ -248,7 +260,11 @@ SongStart:
   php // Push Processor Status Register To Stack
 
   // Check Result & Processor Status Flag Data
+  plx // Pull X Register From Stack (X = Processor Status Flag Data)
+  stx.b $E0 // Store PSW Result Data
+  stx.b REG_CPUIO1 // Store Handshake Between CPU<->APU
   lda.b $E1 // Load Result Data
+  sta.b REG_CPUIO2 // Store Handshake Between CPU<->APU
   cmp #$00 // Result Check
   beq Pass7
   Fail7:
@@ -257,9 +273,7 @@ SongStart:
   Fail7Loop:
     bra Fail7Loop
   Pass7:
-    pla // Pull Accumulator Register From Stack (A = Processor Status Flag Data)
-    sta.b $E0 // Store PSW Result Data
-    cmp #$02 // PSW Result Check
+    cpx #$02 // PSW Result Check
     bne Fail7
     WDSP(DSP_KON,%00000001) // Play Voice 0 (PASS)
     str REG_CPUIO0=#$07 // Store Handshake Between CPU<->APU
@@ -279,7 +293,11 @@ SongStart:
   php // Push Processor Status Register To Stack
 
   // Check Result & Processor Status Flag Data
+  plx // Pull X Register From Stack (X = Processor Status Flag Data)
+  stx.b $E0 // Store PSW Result Data
+  stx.b REG_CPUIO1 // Store Handshake Between CPU<->APU
   lda.b $E1 // Load Result Data
+  sta.b REG_CPUIO2 // Store Handshake Between CPU<->APU
   cmp #$80 // Result Check
   beq Pass8
   Fail8:
@@ -288,9 +306,7 @@ SongStart:
   Fail8Loop:
     bra Fail8Loop
   Pass8:
-    pla // Pull Accumulator Register From Stack (A = Processor Status Flag Data)
-    sta.b $E0 // Store PSW Result Data
-    cmp #$80 // PSW Result Check
+    cpx #$80 // PSW Result Check
     bne Fail8
     WDSP(DSP_KON,%00000001) // Play Voice 0 (PASS)
     str REG_CPUIO0=#$08 // Store Handshake Between CPU<->APU
@@ -309,7 +325,11 @@ SongStart:
   php // Push Processor Status Register To Stack
 
   // Check Result & Processor Status Flag Data
+  ply // Pull Y Register From Stack (Y = Processor Status Flag Data)
+  sty.b $E0 // Store PSW Result Data
+  sty.b REG_CPUIO1 // Store Handshake Between CPU<->APU
   stx.b $E1 // Store Result Data
+  stx.b REG_CPUIO2 // Store Handshake Between CPU<->APU
   cpx #$00 // Result Check
   beq Pass9
   Fail9:
@@ -318,9 +338,7 @@ SongStart:
   Fail9Loop:
     bra Fail9Loop
   Pass9:
-    pla // Pull Accumulator Register From Stack (A = Processor Status Flag Data)
-    sta.b $E0 // Store PSW Result Data
-    cmp #$02 // PSW Result Check
+    cpy #$02 // PSW Result Check
     bne Fail9
     WDSP(DSP_KON,%00000001) // Play Voice 0 (PASS)
     str REG_CPUIO0=#$09 // Store Handshake Between CPU<->APU
@@ -338,7 +356,11 @@ SongStart:
   php // Push Processor Status Register To Stack
 
   // Check Result & Processor Status Flag Data
+  ply // Pull Y Register From Stack (Y = Processor Status Flag Data)
+  sty.b $E0 // Store PSW Result Data
+  sty.b REG_CPUIO1 // Store Handshake Between CPU<->APU
   stx.b $E1 // Store Result Data
+  stx.b REG_CPUIO2 // Store Handshake Between CPU<->APU
   cpx #$80 // Result Check
   beq Pass10
   Fail10:
@@ -347,9 +369,7 @@ SongStart:
   Fail10Loop:
     bra Fail10Loop
   Pass10:
-    pla // Pull Accumulator Register From Stack (A = Processor Status Flag Data)
-    sta.b $E0 // Store PSW Result Data
-    cmp #$80 // PSW Result Check
+    cpy #$80 // PSW Result Check
     bne Fail10
     WDSP(DSP_KON,%00000001) // Play Voice 0 (PASS)
     str REG_CPUIO0=#$0A // Store Handshake Between CPU<->APU
@@ -368,7 +388,11 @@ SongStart:
   php // Push Processor Status Register To Stack
 
   // Check Result & Processor Status Flag Data
+  plx // Pull X Register From Stack (X = Processor Status Flag Data)
+  stx.b $E0 // Store PSW Result Data
+  stx.b REG_CPUIO1 // Store Handshake Between CPU<->APU
   sty.b $E1 // Store Result Data
+  sty.b REG_CPUIO2 // Store Handshake Between CPU<->APU
   cpy #$00 // Result Check
   beq Pass11
   Fail11:
@@ -377,9 +401,7 @@ SongStart:
   Fail11Loop:
     bra Fail11Loop
   Pass11:
-    pla // Pull Accumulator Register From Stack (A = Processor Status Flag Data)
-    sta.b $E0 // Store PSW Result Data
-    cmp #$02 // PSW Result Check
+    cpx #$02 // PSW Result Check
     bne Fail11
     WDSP(DSP_KON,%00000001) // Play Voice 0 (PASS)
     str REG_CPUIO0=#$0B // Store Handshake Between CPU<->APU
@@ -397,7 +419,11 @@ SongStart:
   php // Push Processor Status Register To Stack
 
   // Check Result & Processor Status Flag Data
+  plx // Pull X Register From Stack (X = Processor Status Flag Data)
+  stx.b $E0 // Store PSW Result Data
+  stx.b REG_CPUIO1 // Store Handshake Between CPU<->APU
   sty.b $E1 // Store Result Data
+  sty.b REG_CPUIO2 // Store Handshake Between CPU<->APU
   cpy #$80 // Result Check
   beq Pass12
   Fail12:
@@ -406,9 +432,7 @@ SongStart:
   Fail12Loop:
     bra Fail12Loop
   Pass12:
-    pla // Pull Accumulator Register From Stack (A = Processor Status Flag Data)
-    sta.b $E0 // Store PSW Result Data
-    cmp #$80 // PSW Result Check
+    cpy #$80 // PSW Result Check
     bne Fail12
     WDSP(DSP_KON,%00000001) // Play Voice 0 (PASS)
     str REG_CPUIO0=#$0C // Store Handshake Between CPU<->APU
@@ -429,6 +453,12 @@ SongStart:
   php // Push Processor Status Register To Stack
 
   // Check Result & Processor Status Flag Data
+  plx // Pull X Register From Stack (X = Processor Status Flag Data)
+  stx.b $E0 // Store PSW Result Data
+  stx.b REG_CPUIO1 // Store Handshake Between CPU<->APU
+  ldw $E1 // Load Result
+  stw REG_CPUIO2 // Store Handshake Between CPU<->APU
+  ldy #$00 // Y = $00
   lda #$00 // A = $00
   cpw $E1 // Result Check
   beq Pass13
@@ -438,9 +468,7 @@ SongStart:
   Fail13Loop:
     bra Fail13Loop
   Pass13:
-    pla // Pull Accumulator Register From Stack (A = Processor Status Flag Data)
-    sta.b $E0 // Store PSW Result Data
-    cmp #$02 // PSW Result Check
+    cpx #$02 // PSW Result Check
     bne Fail13
     WDSP(DSP_KON,%00000001) // Play Voice 0 (PASS)
     str REG_CPUIO0=#$0D // Store Handshake Between CPU<->APU
@@ -460,6 +488,12 @@ SongStart:
   php // Push Processor Status Register To Stack
 
   // Check Result & Processor Status Flag Data
+  plx // Pull X Register From Stack (X = Processor Status Flag Data)
+  stx.b $E0 // Store PSW Result Data
+  stx.b REG_CPUIO1 // Store Handshake Between CPU<->APU
+  ldw $E1 // Load Result
+  stw REG_CPUIO2 // Store Handshake Between CPU<->APU
+  ldy #$80 // Y = $80
   lda #$00 // A = $00
   cpw $E1 // Result Check
   beq Pass14
@@ -469,9 +503,7 @@ SongStart:
   Fail14Loop:
     bra Fail14Loop
   Pass14:
-    pla // Pull Accumulator Register From Stack (A = Processor Status Flag Data)
-    sta.b $E0 // Store PSW Result Data
-    cmp #$80 // PSW Result Check
+    cpx #$80 // PSW Result Check
     bne Fail14
     WDSP(DSP_KON,%00000001) // Play Voice 0 (PASS)
     str REG_CPUIO0=#$0E // Store Handshake Between CPU<->APU

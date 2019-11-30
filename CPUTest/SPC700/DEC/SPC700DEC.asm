@@ -21,6 +21,83 @@ macro PrintText(SRC, DEST, SIZE) { // Print Text Characters To VRAM
     bne {#}LoopText // IF (X != 0) Loop Text Characters
 }
 
+macro PrintValue(SRC, DEST, SIZE) { // Print HEX Characters To VRAM
+  stz.w REG_VMAIN    // Set Increment VRAM Address After Accessing Lo Byte ($2115: Video Port Control)
+  ldx.w #{DEST} >> 1 // Set VRAM Destination
+  stx.w REG_VMADDL   // $2116: VRAM Address
+
+  lda.b #$24 // A = "$"
+  sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
+
+  ldx.w #{SIZE} // X = Number Of Hex Characters To Print
+
+  {#}LoopHEX:
+    dex // X--
+    ldy.w #0002 // Y = 2 (Char Count)
+
+    lda.w {SRC},x // A = Result Data
+    lsr // A >>= 4
+    lsr
+    lsr
+    lsr // A = Result Hi Nibble
+
+    {#}LoopChar:
+      cmp.b #10 // Compare Hi Nibble To 9
+      clc // Clear Carry Flag
+      bpl {#}HexLetter
+      adc.b #$30 // Add Hi Nibble To ASCII Numbers
+      sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
+      bra {#}HexEnd
+      {#}HexLetter:
+      adc.b #$37 // Add Hi Nibble To ASCII Letters
+      sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
+      {#}HexEnd:
+  
+      lda.w {SRC},x // A = Result Data
+      and.b #$F // A = Result Lo Nibble
+      dey // Y--
+      bne {#}LoopChar // IF (Char Count != 0) Loop Char
+
+    cpx.w #0 // Compare X To 0
+    bne {#}LoopHEX // IF (X != 0) Loop Hex Characters
+}
+
+macro PrintPSW(SRC, DEST) { // Print Processor Status Flags To VRAM
+  stz.w REG_VMAIN    // Set Increment VRAM Address After Accessing Lo Byte ($2115: Video Port Control)
+  ldx.w #{DEST} >> 1 // Set VRAM Destination
+  stx.w REG_VMADDL   // $2116: VRAM Address
+
+  lda.b #%10000000 // A = Negative Flag Bit
+  jsr {#}PSWFlagTest // Test PSW Flag Data
+
+  lda.b #%01000000 // A = Overflow Flag Bit
+  jsr {#}PSWFlagTest // Test PSW Flag Data
+
+  lda.b #%00001000 // A = Half-carry Flag Bit
+  jsr {#}PSWFlagTest // Test PSW Flag Data
+
+  lda.b #%00000010 // A = Zero Flag Bit
+  jsr {#}PSWFlagTest // Test PSW Flag Data
+
+  lda.b #%00000001 // A = Carry Flag Bit
+  jsr {#}PSWFlagTest // Test PSW Flag Data
+
+  bra {#}PSWEnd
+
+  {#}PSWFlagTest:
+    bit.w {SRC} // Test Processor Status Flag Data Bit
+    bne {#}PSWFlagSet
+    lda.b #$30 // A = "0"
+    sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
+    rts // Return From Subroutine
+    {#}PSWFlagSet:
+    lda.b #$31 // A = "1"
+    sta.w REG_VMDATAL // Store Text To VRAM Lo Byte
+    rts // Return From Subroutine
+
+  {#}PSWEnd:
+}
+
 seek($8000); fill $8000 // Fill Upto $7FFF (Bank 0) With Zero Bytes
 include "LIB/SNES.INC"        // Include SNES Definitions
 include "LIB/SNES_HEADER.ASM" // Include Header & Vector Table
@@ -85,8 +162,9 @@ seek($8000); Start:
     bne Wait1
   WaitNMI() // Wait For VSync
 
-  // Print Result Text
-  PrintText(DECRESULT1, $FA02, 21) // Load Text To VRAM Lo Bytes
+  // Print Result & Processor Status Flag Data
+  PrintValue(REG_APUIO2, $FA10, 1) // Print Result Data
+  PrintPSW(REG_APUIO1, $FA22) // Print Processor Status Flag Data
 
   lda.w REG_APUIO0 // Load Handshake Between CPU<->APU
   cmp.b #$81
@@ -105,8 +183,9 @@ seek($8000); Start:
     bne Wait2
   WaitNMI() // Wait For VSync
 
-  // Print Result Text
-  PrintText(DECRESULT2, $FA42, 21) // Load Text To VRAM Lo Bytes
+  // Print Result & Processor Status Flag Data
+  PrintValue(REG_APUIO2, $FA50, 1) // Print Result Data
+  PrintPSW(REG_APUIO1, $FA62) // Print Processor Status Flag Data
 
   lda.w REG_APUIO0 // Load Handshake Between CPU<->APU
   cmp.b #$82
@@ -134,8 +213,9 @@ seek($8000); Start:
   PrintText(DECAddr, $F902, 26) // Load Text To VRAM Lo Bytes
   
   /////////////////////////////////////////////////////////////////
-  // Print Result Text
-  PrintText(DECRESULT1, $FA02, 21) // Load Text To VRAM Lo Bytes
+  // Print Result & Processor Status Flag Data
+  PrintValue(REG_APUIO2, $FA10, 1) // Print Result Data
+  PrintPSW(REG_APUIO1, $FA22) // Print Processor Status Flag Data
 
   lda.w REG_APUIO0 // Load Handshake Between CPU<->APU
   cmp.b #$83
@@ -154,8 +234,9 @@ seek($8000); Start:
     bne Wait4
   WaitNMI() // Wait For VSync
 
-  // Print Result Text
-  PrintText(DECRESULT2, $FA42, 21) // Load Text To VRAM Lo Bytes
+  // Print Result & Processor Status Flag Data
+  PrintValue(REG_APUIO2, $FA50, 1) // Print Result Data
+  PrintPSW(REG_APUIO1, $FA62) // Print Processor Status Flag Data
 
   lda.w REG_APUIO0 // Load Handshake Between CPU<->APU
   cmp.b #$84
@@ -184,8 +265,9 @@ seek($8000); Start:
   PrintText(DECDP, $F902, 26) // Load Text To VRAM Lo Bytes
   
   /////////////////////////////////////////////////////////////////
-  // Print Result Text
-  PrintText(DECRESULT1, $FA02, 21) // Load Text To VRAM Lo Bytes
+  // Print Result & Processor Status Flag Data
+  PrintValue(REG_APUIO2, $FA10, 1) // Print Result Data
+  PrintPSW(REG_APUIO1, $FA22) // Print Processor Status Flag Data
 
   lda.w REG_APUIO0 // Load Handshake Between CPU<->APU
   cmp.b #$85
@@ -204,8 +286,9 @@ seek($8000); Start:
     bne Wait6
   WaitNMI() // Wait For VSync
 
-  // Print Result Text
-  PrintText(DECRESULT2, $FA42, 21) // Load Text To VRAM Lo Bytes
+  // Print Result & Processor Status Flag Data
+  PrintValue(REG_APUIO2, $FA50, 1) // Print Result Data
+  PrintPSW(REG_APUIO1, $FA62) // Print Processor Status Flag Data
 
   lda.w REG_APUIO0 // Load Handshake Between CPU<->APU
   cmp.b #$86
@@ -233,8 +316,9 @@ seek($8000); Start:
   PrintText(DECDPX, $F902, 26) // Load Text To VRAM Lo Bytes
   
   /////////////////////////////////////////////////////////////////
-  // Print Result Text
-  PrintText(DECRESULT1, $FA02, 21) // Load Text To VRAM Lo Bytes
+  // Print Result & Processor Status Flag Data
+  PrintValue(REG_APUIO2, $FA10, 1) // Print Result Data
+  PrintPSW(REG_APUIO1, $FA22) // Print Processor Status Flag Data
 
   lda.w REG_APUIO0 // Load Handshake Between CPU<->APU
   cmp.b #$87
@@ -253,8 +337,9 @@ seek($8000); Start:
     bne Wait8
   WaitNMI() // Wait For VSync
 
-  // Print Result Text
-  PrintText(DECRESULT2, $FA42, 21) // Load Text To VRAM Lo Bytes
+  // Print Result & Processor Status Flag Data
+  PrintValue(REG_APUIO2, $FA50, 1) // Print Result Data
+  PrintPSW(REG_APUIO1, $FA62) // Print Processor Status Flag Data
 
   lda.w REG_APUIO0 // Load Handshake Between CPU<->APU
   cmp.b #$88
@@ -282,8 +367,9 @@ seek($8000); Start:
   PrintText(DECX, $F902, 26) // Load Text To VRAM Lo Bytes
   
   /////////////////////////////////////////////////////////////////
-  // Print Result Text
-  PrintText(DECRESULT1, $FA02, 21) // Load Text To VRAM Lo Bytes
+  // Print Result & Processor Status Flag Data
+  PrintValue(REG_APUIO2, $FA10, 1) // Print Result Data
+  PrintPSW(REG_APUIO1, $FA22) // Print Processor Status Flag Data
 
   lda.w REG_APUIO0 // Load Handshake Between CPU<->APU
   cmp.b #$89
@@ -302,8 +388,9 @@ seek($8000); Start:
     bne Wait10
   WaitNMI() // Wait For VSync
 
-  // Print Result Text
-  PrintText(DECRESULT2, $FA42, 21) // Load Text To VRAM Lo Bytes
+  // Print Result & Processor Status Flag Data
+  PrintValue(REG_APUIO2, $FA50, 1) // Print Result Data
+  PrintPSW(REG_APUIO1, $FA62) // Print Processor Status Flag Data
 
   lda.w REG_APUIO0 // Load Handshake Between CPU<->APU
   cmp.b #$8A
@@ -331,8 +418,9 @@ seek($8000); Start:
   PrintText(DECY, $F902, 26) // Load Text To VRAM Lo Bytes
   
   /////////////////////////////////////////////////////////////////
-  // Print Result Text
-  PrintText(DECRESULT1, $FA02, 21) // Load Text To VRAM Lo Bytes
+  // Print Result & Processor Status Flag Data
+  PrintValue(REG_APUIO2, $FA10, 1) // Print Result Data
+  PrintPSW(REG_APUIO1, $FA22) // Print Processor Status Flag Data
 
   lda.w REG_APUIO0 // Load Handshake Between CPU<->APU
   cmp.b #$8B
@@ -351,8 +439,9 @@ seek($8000); Start:
     bne Wait12
   WaitNMI() // Wait For VSync
 
-  // Print Result Text
-  PrintText(DECRESULT2, $FA42, 21) // Load Text To VRAM Lo Bytes
+  // Print Result & Processor Status Flag Data
+  PrintValue(REG_APUIO2, $FA50, 1) // Print Result Data
+  PrintPSW(REG_APUIO1, $FA62) // Print Processor Status Flag Data
 
   lda.w REG_APUIO0 // Load Handshake Between CPU<->APU
   cmp.b #$8C
@@ -380,8 +469,9 @@ seek($8000); Start:
   PrintText(DECW, $F902, 26) // Load Text To VRAM Lo Bytes
   
   /////////////////////////////////////////////////////////////////
-  // Print Result Text
-  PrintText(DECRESULT3, $FA02, 21) // Load Text To VRAM Lo Bytes
+  // Print Result & Processor Status Flag Data
+  PrintValue(REG_APUIO2, $FA10, 2) // Print Result Data
+  PrintPSW(REG_APUIO1, $FA22) // Print Processor Status Flag Data
 
   lda.w REG_APUIO0 // Load Handshake Between CPU<->APU
   cmp.b #$8D
@@ -400,8 +490,9 @@ seek($8000); Start:
     bne Wait14
   WaitNMI() // Wait For VSync
 
-  // Print Result Text
-  PrintText(DECRESULT4, $FA42, 21) // Load Text To VRAM Lo Bytes
+  // Print Result & Processor Status Flag Data
+  PrintValue(REG_APUIO2, $FA50, 2) // Print Result Data
+  PrintPSW(REG_APUIO1, $FA62) // Print Processor Status Flag Data
 
   lda.w REG_APUIO0 // Load Handshake Between CPU<->APU
   cmp.b #$8E
@@ -442,15 +533,6 @@ DECY:
   db "DEY          (Opcode: $DC)"
 DECW:
   db "DEW dp       (Opcode: $1A)"
-
-DECRESULT1:
-  db "       $00      00010"
-DECRESULT2:
-  db "       $80      10000"
-DECRESULT3:
-  db "       $0000    00010"
-DECRESULT4:
-  db "       $8000    10000"
 
 BGCHR:
   include "Font8x8.asm" // Include BG 1BPP 8x8 Tile Font Character Data (1016 Bytes)
