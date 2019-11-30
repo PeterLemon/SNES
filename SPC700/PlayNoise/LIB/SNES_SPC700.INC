@@ -13,10 +13,10 @@ constant REG_TEST($F0)      // Testing Functions                                
 constant REG_CONTROL($F1)   // Timer, I/O & ROM Control                                  1B/W
 constant REG_DSPADDR($F2)   // DSP Register Index                                        1B/RW
 constant REG_DSPDATA($F3)   // DSP Register Data                                         1B/RW
-constant REG_CPUIO0($F4)    // CPU Input & Output Register 0                             1B/W
-constant REG_CPUIO1($F5)    // CPU Input & Output Register 1                             1B/W
-constant REG_CPUIO2($F6)    // CPU Input & Output Register 2                             1B/W
-constant REG_CPUIO3($F7)    // CPU Input & Output Register 3                             1B/W
+constant REG_CPUIO0($F4)    // CPU Input & Output Register 0                             1B/RW
+constant REG_CPUIO1($F5)    // CPU Input & Output Register 1                             1B/RW
+constant REG_CPUIO2($F6)    // CPU Input & Output Register 2                             1B/RW
+constant REG_CPUIO3($F7)    // CPU Input & Output Register 3                             1B/RW
 constant REG_AUXIO4($F8)    // External I/O Port P4 (S-SMP Pins 34-27)                   1B/RW
 constant REG_AUXIO5($F9)    // External I/O Port P5 (S-SMP Pins 25-18)                   1B/RW
 constant REG_T0DIV($FA)     // Timer 0 Divider  (8000Hz Clock Source)                    1B/W
