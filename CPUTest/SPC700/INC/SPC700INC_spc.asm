@@ -123,8 +123,7 @@ SongStart:
   clv // Clear Overflow Flag
 
   // Run Test
-  lda #$FF // A = $FF
-  sta.b $E1 // Store Result Data
+  str $E1=#$FF // Store DP Data
   inc.w $00E1 // Memory++
   php // Push Processor Status Register To Stack
 
@@ -155,8 +154,7 @@ SongStart:
   clv // Clear Overflow Flag
 
   // Run Test
-  lda #$7F // A = $7F
-  sta.b $E1 // Store Result Data
+  str $E1=#$7F // Store DP Data
   inc.w $00E1 // Memory++
   php // Push Processor Status Register To Stack
 
@@ -188,8 +186,7 @@ SongStart:
   clv // Clear Overflow Flag
 
   // Run Test
-  lda #$FF // A = $FF
-  sta.b $E1 // Store Result Data
+  str $E1=#$FF // Store DP Data
   inc.b $E1 // Memory++
   php // Push Processor Status Register To Stack
 
@@ -220,8 +217,7 @@ SongStart:
   clv // Clear Overflow Flag
 
   // Run Test
-  lda #$7F // A = $7F
-  sta.b $E1 // Store Result Data
+  str $E1=#$7F // Store DP Data
   inc.b $E1 // Memory++
   php // Push Processor Status Register To Stack
 
@@ -253,8 +249,7 @@ SongStart:
   clv // Clear Overflow Flag
 
   // Run Test
-  lda #$FF // A = $FF
-  sta.b $E1 // Store Result Data
+  str $E1=#$FF // Store DP Data
   ldx #0 // X = 0
   inc $E1,x // Memory++
   php // Push Processor Status Register To Stack
@@ -286,8 +281,7 @@ SongStart:
   clv // Clear Overflow Flag
 
   // Run Test
-  lda #$7F // A = $7F
-  sta.b $E1 // Store Result Data
+  str $E1=#$7F // Store DP Data
   ldx #0 // X = 0
   inc $E1,x // Memory++
   php // Push Processor Status Register To Stack
