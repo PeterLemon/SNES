@@ -73,7 +73,7 @@ SongStart:
   cmp #$00 // Result Check
   beq Pass1
   Fail1:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$81 // Store Handshake Between CPU<->APU
   Fail1Loop:
     bra Fail1Loop
@@ -103,7 +103,7 @@ SongStart:
   cmp #$FF // Result Check
   beq Pass2
   Fail2:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$82 // Store Handshake Between CPU<->APU
   Fail2Loop:
     bra Fail2Loop
@@ -134,7 +134,7 @@ SongStart:
   cmp #$00 // Result Check
   beq Pass3
   Fail3:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$83 // Store Handshake Between CPU<->APU
   Fail3Loop:
     bra Fail3Loop
@@ -164,7 +164,7 @@ SongStart:
   cmp #$FF // Result Check
   beq Pass4
   Fail4:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$84 // Store Handshake Between CPU<->APU
   Fail4Loop:
     bra Fail4Loop
@@ -195,7 +195,7 @@ SongStart:
   cmp #$00 // Result Check
   beq Pass5
   Fail5:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$85 // Store Handshake Between CPU<->APU
   Fail5Loop:
     bra Fail5Loop
@@ -225,7 +225,7 @@ SongStart:
   cmp #$FF // Result Check
   beq Pass6
   Fail6:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$86 // Store Handshake Between CPU<->APU
   Fail6Loop:
     bra Fail6Loop
@@ -257,7 +257,7 @@ SongStart:
   cmp #$00 // Result Check
   beq Pass7
   Fail7:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$87 // Store Handshake Between CPU<->APU
   Fail7Loop:
     bra Fail7Loop
@@ -288,7 +288,7 @@ SongStart:
   cmp #$FF // Result Check
   beq Pass8
   Fail8:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$88 // Store Handshake Between CPU<->APU
   Fail8Loop:
     bra Fail8Loop
@@ -320,7 +320,7 @@ SongStart:
   cmp #$00 // Result Check
   beq Pass9
   Fail9:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$89 // Store Handshake Between CPU<->APU
   Fail9Loop:
     bra Fail9Loop
@@ -351,7 +351,7 @@ SongStart:
   cmp #$FF // Result Check
   beq Pass10
   Fail10:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$8A // Store Handshake Between CPU<->APU
   Fail10Loop:
     bra Fail10Loop
@@ -383,7 +383,7 @@ SongStart:
   cmp #$00 // Result Check
   beq Pass11
   Fail11:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$8B // Store Handshake Between CPU<->APU
   Fail11Loop:
     bra Fail11Loop
@@ -414,7 +414,7 @@ SongStart:
   cmp #$FF // Result Check
   beq Pass12
   Fail12:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$8C // Store Handshake Between CPU<->APU
   Fail12Loop:
     bra Fail12Loop
@@ -448,7 +448,7 @@ SongStart:
   cmp #$00 // Result Check
   beq Pass13
   Fail13:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$8D // Store Handshake Between CPU<->APU
   Fail13Loop:
     bra Fail13Loop
@@ -481,7 +481,7 @@ SongStart:
   cmp #$FF // Result Check
   beq Pass14
   Fail14:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$8E // Store Handshake Between CPU<->APU
   Fail14Loop:
     bra Fail14Loop
@@ -515,7 +515,7 @@ SongStart:
   cmp #$00 // Result Check
   beq Pass15
   Fail15:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$8F // Store Handshake Between CPU<->APU
   Fail15Loop:
     bra Fail15Loop
@@ -548,7 +548,7 @@ SongStart:
   cmp #$FF // Result Check
   beq Pass16
   Fail16:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$90 // Store Handshake Between CPU<->APU
   Fail16Loop:
     bra Fail16Loop
@@ -580,7 +580,7 @@ SongStart:
   cmp #$00 // Result Check
   beq Pass17
   Fail17:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$91 // Store Handshake Between CPU<->APU
   Fail17Loop:
     bra Fail17Loop
@@ -611,7 +611,7 @@ SongStart:
   cmp #$FF // Result Check
   beq Pass18
   Fail18:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$92 // Store Handshake Between CPU<->APU
   Fail18Loop:
     bra Fail18Loop
@@ -645,7 +645,7 @@ SongStart:
   cmp #$00 // Result Check
   beq Pass19
   Fail19:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$93 // Store Handshake Between CPU<->APU
   Fail19Loop:
     bra Fail19Loop
@@ -678,7 +678,7 @@ SongStart:
   cmp #$FF // Result Check
   beq Pass20
   Fail20:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$94 // Store Handshake Between CPU<->APU
   Fail20Loop:
     bra Fail20Loop
@@ -709,7 +709,7 @@ SongStart:
   cmp #$00 // Result Check
   beq Pass21
   Fail21:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$95 // Store Handshake Between CPU<->APU
   Fail21Loop:
     bra Fail21Loop
@@ -739,7 +739,7 @@ SongStart:
   cmp #$FF // Result Check
   beq Pass22
   Fail22:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$96 // Store Handshake Between CPU<->APU
   Fail22Loop:
     bra Fail22Loop
@@ -771,7 +771,7 @@ SongStart:
   cmp #$00 // Result Check
   beq Pass23
   Fail23:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$97 // Store Handshake Between CPU<->APU
   Fail23Loop:
     bra Fail23Loop
@@ -802,7 +802,7 @@ SongStart:
   cmp #$FF // Result Check
   beq Pass24
   Fail24:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$98 // Store Handshake Between CPU<->APU
   Fail24Loop:
     bra Fail24Loop
@@ -839,7 +839,7 @@ SongStart:
   cpw $E1 // Result Check
   beq Pass25
   Fail25:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$99 // Store Handshake Between CPU<->APU
   Fail25Loop:
     bra Fail25Loop
@@ -876,7 +876,7 @@ SongStart:
   cpw $E1 // Result Check
   beq Pass26
   Fail26:
-    WDSP(DSP_KON,%00000010) // Play Voice 0 (FAIL)
+    WDSP(DSP_KON,%00000010) // Play Voice 1 (FAIL)
     str REG_CPUIO0=#$9A // Store Handshake Between CPU<->APU
   Fail26Loop:
     bra Fail26Loop
