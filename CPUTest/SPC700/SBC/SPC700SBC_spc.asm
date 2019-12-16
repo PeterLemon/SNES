@@ -148,7 +148,7 @@ SongStart:
 
   /////////////////////////////////////////////////////////////////
   // Setup Flags
-  sec // Clear Carry Flag
+  sec // Set Carry Flag
 
   // Run Test
   str $E1=#$80 // Store DP Data
@@ -209,7 +209,7 @@ SongStart:
 
   /////////////////////////////////////////////////////////////////
   // Setup Flags
-  sec // Clear Carry Flag
+  sec // Set Carry Flag
 
   // Run Test
   str $E1=#$80 // Store DP Data
@@ -271,7 +271,7 @@ SongStart:
 
   /////////////////////////////////////////////////////////////////
   // Setup Flags
-  sec // Clear Carry Flag
+  sec // Set Carry Flag
 
   // Run Test
   str $E1=#$80 // Store DP Data
@@ -334,7 +334,7 @@ SongStart:
 
   /////////////////////////////////////////////////////////////////
   // Setup Flags
-  sec // Clear Carry Flag
+  sec // Set Carry Flag
 
   // Run Test
   str $E1=#$80 // Store DP Data
@@ -397,7 +397,7 @@ SongStart:
 
   /////////////////////////////////////////////////////////////////
   // Setup Flags
-  sec // Clear Carry Flag
+  sec // Set Carry Flag
 
   // Run Test
   str $E1=#$80 // Store DP Data
@@ -462,7 +462,7 @@ SongStart:
 
   /////////////////////////////////////////////////////////////////
   // Setup Flags
-  sec // Clear Carry Flag
+  sec // Set Carry Flag
 
   // Run Test
   str $E1=#$80 // Store DP Data
@@ -529,7 +529,7 @@ SongStart:
 
   /////////////////////////////////////////////////////////////////
   // Setup Flags
-  sec // Clear Carry Flag
+  sec // Set Carry Flag
 
   // Run Test
   str $E1=#$80 // Store DP Data
@@ -594,7 +594,7 @@ SongStart:
 
   /////////////////////////////////////////////////////////////////
   // Setup Flags
-  sec // Clear Carry Flag
+  sec // Set Carry Flag
 
   // Run Test
   str $E1=#$80 // Store Indirect Data
@@ -659,7 +659,7 @@ SongStart:
 
   /////////////////////////////////////////////////////////////////
   // Setup Flags
-  sec // Clear Carry Flag
+  sec // Set Carry Flag
 
   // Run Test
   str $E1=#$7F // Store Indirect Data
@@ -723,7 +723,7 @@ SongStart:
 
   /////////////////////////////////////////////////////////////////
   // Setup Flags
-  sec // Clear Carry Flag
+  sec // Set Carry Flag
 
   // Run Test
   str $E1=#$7F // Store DP Data
@@ -785,7 +785,7 @@ SongStart:
 
   /////////////////////////////////////////////////////////////////
   // Setup Flags
-  sec // Clear Carry Flag
+  sec // Set Carry Flag
 
   // Run Test
   str $E1=#$7F // Store DP Data
@@ -854,7 +854,7 @@ SongStart:
 
   /////////////////////////////////////////////////////////////////
   // Setup Flags
-  sec // Clear Carry Flag
+  sec // Set Carry Flag
 
   // Run Test
   ldy #$80 // Y = $80
