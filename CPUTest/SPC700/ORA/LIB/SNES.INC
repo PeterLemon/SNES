@@ -256,7 +256,83 @@ constant REG_MIRR7($437F)    // DMA7 Mirror Of $437B                            
 // $6000..$7FFF - Expansion (Battery Backed RAM, In HiROM Cartridges)
 // $8000..$FFFF - Cartridge ROM
 
+//================================================
+// ReadD16 - Read Double 8-bit To Memory (16-Bit)
+//================================================
+//  SRC: Source Address
+// DEST: Destination Address
+macro ReadD16(SRC, DEST) {
+  lda {SRC}      // Load Source Low Byte
+  sta {DEST}     // Store Destination Low Byte
+  lda {SRC}      // Load Source High Byte
+  sta {DEST} + 1 // Store Destination High Byte
+}
+
+//====================================================
+// ReadD16Index - Read Double 8-bit To Index (16-Bit)
+//====================================================
+// SRC: Source Address
+// REG: Destination Index Register (x, y)
+macro ReadD16Index(SRC, REG) {
+  lda {SRC} // Load Source Low Byte
+  xba       // Exchange B & A Accumulators
+  lda {SRC} // Load Source High Byte
+  xba       // Exchange B & A Accumulators
+  ta{REG}   // Transfer 16-Bit A To 16-Bit REG
+}
+
+//================================================
+// WriteD8 - Write Memory To Double 8-bit (8-Bit)
+//================================================
+//  SRC: Source Address
+// DEST: Destination Address
+macro WriteD8(SRC, DEST) {
+  lda {SRC}  // Load Source Low Byte
+  sta {DEST} // Store Destination Low Byte
+  stz {DEST} // Store Zero To Destination High Byte
+}
+
+//==================================================
+// WriteD16 - Write Memory To Double 8-bit (16-Bit)
+//==================================================
+//  SRC: Source Address
+// DEST: Destination Address
+macro WriteD16(SRC, DEST) {
+  lda {SRC}     // Load Source Low Byte
+  sta {DEST}    // Store Destination Low Byte
+  lda {SRC} + 1 // Load Source High Byte
+  sta {DEST}    // Store Destination High Byte
+}
+
+//====================================================
+// WriteD8Index - Write Index To Double 8-bit (8-Bit)
+//====================================================
+//  REG: Source Index Register (x, y)
+// DEST: Destination Address
+macro WriteD8Index(REG, DEST) {
+  t{REG}a    // Transfer 8-Bit REG To 8-Bit A
+  sta {DEST} // Store Destination Low Byte
+  stz {DEST} // Store Zero To Destination High Byte
+}
+
+//======================================================
+// WriteD16Index - Write Index To Double 8-bit (16-Bit)
+//======================================================
+//  REG: Source Index Register (x, y)
+// DEST: Destination Address
+macro WriteD16Index(REG, DEST) {
+  rep #$38   // Set 16-Bit Accumulator & Index
+  t{REG}a    // Transfer 16-Bit REG To 16-Bit A
+  sep #$20   // Set 8-Bit Accumulator
+  sta {DEST} // Store Destination Low Byte
+  xba        // Exchange B & A Accumulators
+  sta {DEST} // Store Destination High Byte
+}
+
+//=====================
 // SNES Initialisation
+//=====================
+// ROMSPEED: ROM Speed (SLOWROM, FASTROM)
 constant SLOWROM(0) // Access Cycle Designation (Slow ROM)
 constant FASTROM(1) // Access Cycle Designation (Fast ROM)
 macro SNES_INIT(ROMSPEED) {
