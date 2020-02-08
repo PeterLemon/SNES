@@ -43,7 +43,6 @@ seek($8000); Start:
 
   FadeIN() // Screen Fade In
 
-ldx.w #$0000 // Reset BG X Position
 ldy.w #$0000 // Reset BG Y Position
 
 InputLoop: 
@@ -54,14 +53,14 @@ InputLoop:
     beq Down     // Skip BG Scrolling If Top
     ReadJOY({JOY_UP}) // Test UP Button
     beq Down          // "UP" Not Pressed? Branch Down
-    BGScroll(REG_BG1VOFS, de, y) // Decrement BG1 Y Pos
+    BGScroll8I(y, REG_BG1VOFS, de) // Decrement BG1 Y Pos
 
   Down:
     cpy.w #$00FF // Check If At Bottom Of Screen
     beq Finish   // Skip BG Scrolling If Bottom
     ReadJOY({JOY_DOWN}) // Test DOWN Button
     beq Finish          // "DOWN" Not Pressed? Branch Down
-    BGScroll(REG_BG1VOFS, in, y) // Increment BG1 Y Pos
+    BGScroll8I(y, REG_BG1VOFS, in) // Increment BG1 Y Pos
 
   Finish:
     jmp InputLoop
