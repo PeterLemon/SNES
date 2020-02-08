@@ -449,7 +449,7 @@ macro BGScroll16(BGSCR, BGPOS, DIR) {
 //   REG: Source Index Register (x, y)
 // BGPOS: Destination BG Position Register
 //   DIR: Direction To Scroll (de = Decrement, in = Increment)
-macro BGScroll8I(BGPOS, DIR, REG) {
+macro BGScroll8I(REG, BGPOS, DIR) {
   {DIR}{REG}  // Decrement Or Increment BG Scroll Position Low Byte
   t{REG}a     // Swaps 8-Bit Index To 8-Bit A
   sta {BGPOS} // Store A To BG Scroll Position Low Byte
