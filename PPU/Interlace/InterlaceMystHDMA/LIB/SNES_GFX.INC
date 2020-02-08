@@ -2,25 +2,37 @@
 // SNES Graphics
 //===============
 
+//=============================
+// WaitNMI - Wait For NMI Flag
+//=============================
 macro WaitNMI() {
   -
     bit.w REG_RDNMI // $4210: Read NMI Flag Register
     bpl - // Wait For NMI Flag
 }
 
+//======================================
+// WaitHV - Wait For H/V Timer IRQ Flag
+//======================================
 macro WaitHV() {
   -
     bit.w REG_TIMEUP // $4210: Read H/V-Timer IRQ Flag
     bpl - // Wait For H/V Timer IRQ Flag
 }
 
+//========================================
+// WaitHVB - Wait For V-Blank Period Flag
+//========================================
 macro WaitHVB() {
   -
     bit.w REG_HVBJOY // $4212: Read H/V-Blank Flag & Joypad Busy Flag
     bpl - // Wait For V-Blank Period Flag
 }
 
-macro FadeIN() { // Increment Screen Brightness From 0..15 (VSYNC Timing)
+//================================================================
+// FadeIN - Increment Screen Brightness From 0..15 (VSYNC Timing)
+//================================================================
+macro FadeIN() {
   ldx.w #$0000 // Set X To Mininmum Brightness Level
   -
     bit.w REG_RDNMI // $4210: Read NMI Flag Register
@@ -33,7 +45,10 @@ macro FadeIN() { // Increment Screen Brightness From 0..15 (VSYNC Timing)
   bne -      // IF (Screen != Maximum Brightness Level) Loop
 }
 
-macro FadeOUT() { // Decrement Screen Brightness From 15..0 (VSYNC Timing)
+//=================================================================
+// FadeOUT - Decrement Screen Brightness From 15..0 (VSYNC Timing)
+//=================================================================
+macro FadeOUT() {
   ldx.w #$000F // Set X To Maximum Brightness Level
   -
     bit.w REG_RDNMI // $4210: Read NMI Flag Register
@@ -227,6 +242,48 @@ macro LoadVRAM(SRC, DEST, SIZE, CHAN) {
   sta.w REG_MDMAEN     // $420B: DMA Enable
 }
 
+//========================================================
+// LoadVRAMStride - Load GFX Data To VRAM With DMA Stride
+//========================================================
+//    SRC: 24-Bit Address Of Source Data
+//   DEST: 16-Bit VRAM Destination (WORD Address)
+//   SIZE: Size Of Data (BYTE Size)
+// STRIDE: Dest Offset Stride
+//  COUNT: Number Of DMA Transfers
+//   CHAN: DMA Channel To Transfer Data (0..7)
+macro LoadVRAMStride(SRC, DEST, SIZE, STRIDE, COUNT, CHAN) {
+  lda.b #$80         // Set Increment VRAM Address After Accessing Hi Byte
+  sta.w REG_VMAIN    // $2115: Video Port Control
+
+  lda.b #$01           // Set DMA Mode (Write Word, Increment Source)
+  sta.w REG_DMAP{CHAN} // $43X0: DMA Control
+  lda.b #$18           // Set Destination Register ($2118: VRAM Write)
+  sta.w REG_BBAD{CHAN} // $43X1: DMA Destination
+  ldx.w #{SRC}         // Set Source Offset
+  stx.w REG_A1T{CHAN}L // $43X2: DMA Source
+  lda.b #{SRC} >> 16   // Set Source Bank
+  sta.w REG_A1B{CHAN}  // $43X4: Source Bank
+
+  ldx.w #{DEST} >> 1 // Set VRAM Destination
+  -
+    stx.w REG_VMADDL // $2116: VRAM
+
+    rep #$20 // Set 16-Bit Accumulator
+    txa // A = X
+    clc // Clear Carry Flag
+    adc.w #{STRIDE} >> 1
+    tax // X = A
+    lda.w #{SIZE}        // Set Size In Bytes To DMA Transfer
+    sta.w REG_DAS{CHAN}L // $43X5: DMA Transfer Size/HDMA
+
+    sep #$20 // Set 8-Bit Accumulator
+    lda.b #$01 << {CHAN} // Start DMA Transfer On Channel
+    sta.w REG_MDMAEN     // $420B: DMA Enable
+
+    cpx.w #({DEST} + ({STRIDE} * {COUNT})) >> 1
+    bne -
+}
+
 //======================================
 // UpdateVRAM - Update GFX Data To VRAM
 //======================================
@@ -357,33 +414,62 @@ macro LoadHIVRAM(SRCTILES, DEST, SIZETILES, CHAN) {
   sta.w REG_MDMAEN     // $420B: DMA Enable
 }
 
-//==================================
-// BGScroll - Scroll GFX BG (8-Bit)
-//==================================
-// BGPOS: BG Position Register To Scroll
+//===============================================
+// BGScroll8 - Scroll GFX BG From Memory (8-Bit)
+//===============================================
+// BGSCR: Source BG Scroll Position
+// BGPOS: Destination BG Pos Register
 //   DIR: Direction To Scroll (de = Decrement, in = Increment)
-//   REG: Register Used (x, y)
-macro BGScroll(BGPOS, DIR, REG) {
-  {DIR}{REG}    // Decrement Or Increment BG Scroll Position Low Byte
-  t{REG}a       // Swaps 16-Bit REG To 8-Bit A
-  sta.w {BGPOS} // Store A To BG Scroll Position Low Byte
-  stz.w {BGPOS} // Store Zero To BG Scroll Position High Byte
+macro BGScroll8(BGSCR, BGPOS, DIR) {
+  {DIR}c {BGSCR} // Decrement Or Increment BG Scroll Position Low Byte
+  lda {BGSCR}    // Load BG Scroll Position Low Byte
+  sta {BGPOS}    // Store BG Scroll Position Low Byte
+  stz {BGPOS}    // Store Zero To BG Scroll Position High Byte
 }
 
-//=====================================
-// BGScroll16 - Scroll GFX BG (16-Bit)
-//=====================================
-// BGSCR: BG Scroll Position Word
-// BGPOS: BG Pos Register To Scroll
+//=================================================
+// BGScroll16 - Scroll GFX BG From Memory (16-Bit)
+//=================================================
+// BGSCR: Source BG Scroll Position
+// BGPOS: Destination BG Pos Register
 //   DIR: Direction To Scroll (de = Decrement, in = Increment)
 macro BGScroll16(BGSCR, BGPOS, DIR) {
-  ldx.w {BGSCR}     // Load BG Scroll Position Word
-  {DIR}x            // Decrement Or Increment BG Scroll Position Word
-  stx.w {BGSCR}     // Store To BG Scroll Position Word
-  lda.b {BGSCR}     // Load BG Scroll Position Low Byte
-  sta.w {BGPOS}     // Store BG Scroll Position Low Byte
-  lda.b {BGSCR} + 1 // Load BG Scroll Position High Byte
-  sta.w {BGPOS}     // Store BG Scroll Position High Byte
+  rep #$38        // Set 16-Bit Accumulator & Index
+  {DIR}c {BGSCR}  // Decrement Or Increment BG Scroll Position Word
+  sep #$20        // Set 8-Bit Accumulator
+  lda {BGSCR}     // Load BG Scroll Position Low Byte
+  sta {BGPOS}     // Store BG Scroll Position Low Byte
+  lda {BGSCR} + 1 // Load BG Scroll Position High Byte
+  sta {BGPOS}     // Store BG Scroll Position High Byte
+}
+
+//===============================================
+// BGScroll8I - Scroll GFX BG From Index (8-Bit)
+//===============================================
+//   REG: Source Index Register (x, y)
+// BGPOS: Destination BG Position Register
+//   DIR: Direction To Scroll (de = Decrement, in = Increment)
+macro BGScroll8I(REG, BGPOS, DIR) {
+  {DIR}{REG}  // Decrement Or Increment BG Scroll Position Low Byte
+  t{REG}a     // Swaps 8-Bit Index To 8-Bit A
+  sta {BGPOS} // Store A To BG Scroll Position Low Byte
+  stz {BGPOS} // Store Zero To BG Scroll Position High Byte
+}
+
+//=================================================
+// BGScroll16I - Scroll GFX BG From Index (16-Bit)
+//=================================================
+//   REG: Source Index Register (x, y)
+// BGPOS: Destination BG Position Register
+//   DIR: Direction To Scroll (de = Decrement, in = Increment)
+macro BGScroll16I(REG, BGPOS, DIR) {
+  {DIR}{REG}  // Decrement Or Increment BG Scroll Position Word
+  rep #$38    // Set 16-Bit Accumulator & Index
+  t{REG}a     // Swaps 16-Bit Index To 16-Bit A
+  sep #$20    // Set 8-Bit Accumulator
+  sta {BGPOS} // Store A To BG Scroll Position Low Byte
+  xba         // Exchange B & A Accumulators
+  sta {BGPOS} // Store A To BG Scroll Position High Byte
 }
 
 //======================================

@@ -78,28 +78,28 @@ InputLoop:
     beq Down     // Skip BG Scrolling If Top
     ReadJOY({JOY_UP}) // Test UP Button
     beq Down          // IF (UP ! Pressed) Branch Down
-    BGScroll(REG_BG1VOFS, de, y) // Decrement BG1 Vertical Position
+    BGScroll8I(y, REG_BG1VOFS, de) // Decrement BG1 Vertical Position
 
   Down:
     cpy.w #$00FF // Check If At Bottom Of Screen
     beq Left     // Skip BG Scrolling If Bottom
     ReadJOY({JOY_DOWN}) // Test DOWN Button
     beq Left            // IF (DOWN ! Pressed) Branch Down
-    BGScroll(REG_BG1VOFS, in, y) // Increment BG1 Vertical Position
+    BGScroll8I(y, REG_BG1VOFS, in) // Increment BG1 Vertical Position
 
   Left:
     cpx.w #$0000 // Check If At Left Of Screen
     beq Right    // Skip BG Scrolling If Left
     ReadJOY({JOY_LEFT}) // Test LEFT Button
     beq Right           // IF (LEFT ! Pressed) Branch Down
-    BGScroll(REG_BG1HOFS, de, x) // Decrement BG1 Horizontal Position
+    BGScroll8I(x, REG_BG1HOFS, de) // Decrement BG1 Horizontal Position
 
   Right:
     cpx.w #$00FF // Check If At Right Of Screen
     beq Finish   // Skip BG Scrolling If Right
     ReadJOY({JOY_RIGHT}) // Test RIGHT Button
     beq Finish           // IF (RIGHT ! Pressed) Branch Down
-    BGScroll(REG_BG1HOFS, in, x) // Increment BG1 Horizontal Position
+    BGScroll8I(x, REG_BG1HOFS, in) // Increment BG1 Horizontal Position
 
   Finish:
     jmp InputLoop
