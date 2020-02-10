@@ -22,7 +22,7 @@ seek($8000); Start:
 
   LoadPAL(SpritePal, $80, SpritePal.size, 0) // Load Sprite Palette (Sprite Palette Uses 16 Colors)
   //LoadVRAM(SpriteTiles, $8000, SpriteTiles.size, 0) // Load Sprite Tiles To VRAM
-  LoadVRAMStride(SpriteTiles, $8420, 64, $200, 6, 0) // Load Sprite Tiles To VRAM
+  LoadVRAMStride(SpriteTiles, $8400, 128, $200, 6, 0) // Load Sprite Tiles To VRAM
 
   // Clear OAM
   ldx.w #$0000 // X = $0000
@@ -100,7 +100,7 @@ Loop:
 SpriteOAM:
   // 16x32 / 32x64 Sprites
   // OAM Info (Sprite 32x64)
-  db 112, 56, 0, %00110000
+  db 112, -4, 0, %00110000
 
   // OAM Extra Info
   db %00000010
@@ -108,7 +108,7 @@ SpriteOAM:
 // Character Data
 // BANK 0
 insert SpritePal,   "GFX/Sprite.pal" // Include Sprite Palette Data (32 Bytes)
-insert SpriteTiles, "GFX/Sprite.pic" // Include Sprite Tile Data (384 Bytes)
+insert SpriteTiles, "GFX/Sprite.pic" // Include Sprite Tile Data (768 Bytes)
 insert BGPal,       "GFX/BG.pal" // Include BG Palette Data (32 Bytes)
 insert BGMap,       "GFX/BG.map" // Include BG Map Data (3584 Bytes)
 // BANK 1
