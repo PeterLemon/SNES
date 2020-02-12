@@ -82,13 +82,13 @@ def main(argv=None):
         segment = segment.quantize(colors=colors, method=method, kmeans=kmeans)
         convert_pal(segment, outpal)
 
-        segment = in_img.crop((128, i*8, 192, (i*8)+8)) # Convert Tile Data From 64x8 Picture Segment (Middle Right)
+        segment = in_img.crop((128, i*8, 192, (i*8)+8)) # Convert Tile Data & Palette From 64x8 Picture Segment (Middle Right)
         width, height = segment.size
         convert_segment(segment, height, outtile)
         segment = segment.quantize(colors=colors, method=method, kmeans=kmeans)
         convert_pal(segment, outpal)
 
-        segment = in_img.crop((192, i*8, 256, (i*8)+8)) # Convert Tile Data From 64x8 Picture Segment (Right)
+        segment = in_img.crop((192, i*8, 256, (i*8)+8)) # Convert Tile Data & Palette From 64x8 Picture Segment (Right)
         width, height = segment.size
         convert_segment(segment, height, outtile)
         segment = segment.quantize(colors=colors, method=method, kmeans=kmeans)
