@@ -29,7 +29,7 @@ def convert_tile(image, tilenum, filedata): # Convert To SNES 8x8 4BPP Tile Data
         for x in range(8):
             tile.append(pixels[i] + 1)
             i += 1
-        i += 24
+        i += 24 # Tile Row Segment Stride
 
     SNEStile = [0] * 32 # Set SNES Tile Array (32 Bytes)
     for y in range(8): # Rows
