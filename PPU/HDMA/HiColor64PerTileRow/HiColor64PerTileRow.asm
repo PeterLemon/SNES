@@ -92,12 +92,12 @@ HTIMERIRQ:
   cmp.b #$8 // Compare A To 8
   bne DMAPAL // IF (Scanline Count != Muliple Of 8) DMA Palette, ELSE Reset Palette Address
   stz.w REG_CGADD // $2121: Palette CGRAM Address = 0
-  DMAPAL:
 
-  ldx.w #16        // Set Size In Bytes To DMA Transfer (2 Bytes For Each Color)
-  stx.w REG_DAS0L  // $4305: DMA Transfer Size/HDMA
-  lda.b #%00000001 // Start DMA Transfer (Channel 0)
-  sta.w REG_MDMAEN // $420B: DMA Enable
+  DMAPAL:
+    ldx.w #16        // Set Size In Bytes To DMA Transfer (2 Bytes For Each Color)
+    stx.w REG_DAS0L  // $4305: DMA Transfer Size/HDMA
+    lda.b #%00000001 // Start DMA Transfer (Channel 0)
+    sta.w REG_MDMAEN // $420B: DMA Enable
 
   SkipDMA:
   rti

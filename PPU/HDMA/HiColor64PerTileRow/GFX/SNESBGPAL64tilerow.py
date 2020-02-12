@@ -29,7 +29,7 @@ def convert_tile(image, tilenum, filedata): # Convert To SNES 8x8 4BPP Tile Data
         for x in range(8):
             tile.append(pixels[i] + 1)
             i += 1
-        i += 56
+        i += 56 # Tile Row Segment Stride
 
     SNEStile = [0] * 32 # Set SNES Tile Array (32 Bytes)
     for y in range(8): # Rows
@@ -68,41 +68,31 @@ def main(argv=None):
     in_img = PIL.Image.open(infilename)
     width, height = in_img.size
 
-    # PASS 1: Convert Tile Row Palettes From Full Picture
+    # Convert Tile Row Data & Palette From Full Picture
     for i in range(int(height/8)):
-        tilerowsegment = in_img.crop((0, i*8, 64, (i*8)+8))
-        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
-        convert_pal(tilerowsegment, outpal)
-
-        tilerowsegment = in_img.crop((64, i*8, 128, (i*8)+8))
-        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
-        convert_pal(tilerowsegment, outpal)
-
-        tilerowsegment = in_img.crop((128, i*8, 192, (i*8)+8))
-        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
-        convert_pal(tilerowsegment, outpal)
-
-        tilerowsegment = in_img.crop((192, i*8, 256, (i*8)+8))
-        tilerowsegment = tilerowsegment.quantize(colors=colors, method=method, kmeans=kmeans)
-        convert_pal(tilerowsegment, outpal)
-
-    # PASS 2: Convert Tile Data From Cropped Picture Segments
-    for i in range(int(height/8)):
-        segment = in_img.crop((0, i*8, 64, (i*8)+8)) # Convert Tile Data From 64x8 Picture Segment (Top Left)
+        segment = in_img.crop((0, i*8, 64, (i*8)+8)) # Convert Tile Data & Palette From 64x8 Picture Segment (Left)
         width, height = segment.size
         convert_segment(segment, height, outtile)
+        segment = segment.quantize(colors=colors, method=method, kmeans=kmeans)
+        convert_pal(segment, outpal)
 
-        segment = in_img.crop((64, i*8, 128, (i*8)+8)) # Convert Tile Data From 64x8 Picture Segment (Top Left)
+        segment = in_img.crop((64, i*8, 128, (i*8)+8)) # Convert Tile Data & Palette From 64x8 Picture Segment (Middle Left)
         width, height = segment.size
         convert_segment(segment, height, outtile)
+        segment = segment.quantize(colors=colors, method=method, kmeans=kmeans)
+        convert_pal(segment, outpal)
 
-        segment = in_img.crop((128, i*8, 192, (i*8)+8)) # Convert Tile Data From 64x8 Picture Segment (Top Left)
+        segment = in_img.crop((128, i*8, 192, (i*8)+8)) # Convert Tile Data From 64x8 Picture Segment (Middle Right)
         width, height = segment.size
         convert_segment(segment, height, outtile)
+        segment = segment.quantize(colors=colors, method=method, kmeans=kmeans)
+        convert_pal(segment, outpal)
 
-        segment = in_img.crop((192, i*8, 256, (i*8)+8)) # Convert Tile Data From 64x8 Picture Segment (Top Left)
+        segment = in_img.crop((192, i*8, 256, (i*8)+8)) # Convert Tile Data From 64x8 Picture Segment (Right)
         width, height = segment.size
         convert_segment(segment, height, outtile)
+        segment = segment.quantize(colors=colors, method=method, kmeans=kmeans)
+        convert_pal(segment, outpal)
 
 if __name__ == '__main__':
     main()
