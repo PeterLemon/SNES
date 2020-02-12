@@ -1,4 +1,4 @@
-# Syntax: SNESBGOBJPAL64tilerow.py image.in file.out
+# Syntax: SNESBGPAL64tilerow.py image.in file.out
 # Notes: image.in needs to be 256x224 pixel resolution image
 # Written for Python 3.6.2 with the Pillow 4.2.1 library
 import sys
