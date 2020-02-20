@@ -108,7 +108,6 @@ seek($8000); Start:
   sta.w REG_NMITIMEN // $4200: Interrupt Enable & Joypad Request (Enable NMI)
 
   WaitNMI() // Wait For Vertical Blank
-  ldy.w #224 // Y = Scanline Counter
   cli // Enable Interrupts
 
 loop:
@@ -116,6 +115,7 @@ loop:
   jmp loop
 
 VBLANKIRQ:
+  stz.w REG_CGADD  // $2121: Palette CGRAM Address = 0
   ldx.w #BGOBJPal  // DMA Table Address
   stx.w REG_A1T0L  // $4302: DMA0 DMA/HDMA Table Start Address
   ldx.w #256       // Set Size In Bytes To DMA Transfer (2 Bytes For Each Color)
@@ -126,13 +126,17 @@ VBLANKIRQ:
 
 HTIMERIRQ:
   lda.w REG_TIMEUP // $4211: H/V-Timer IRQ Flag (Read/Ack) (Clear IRQ Line)
-  iny // Scanline Counter++
 
-  cpy.w #261 // Compare Scanline Counter To 261 (Vertical Counter End NTSC)
-  beq StartPaletteUpload 
+  lda.w REG_SLHV   // $2137: PPU1 Latch H/V-Counter By Software (Read=Strobe)
+  lda.w REG_OPVCT  // $213D: PPU2 Vertical Counter Latch (Scanline Lo Byte)
+  xba              // Exchange B & A Accumulators
+  lda.w REG_OPVCT  // $213D: PPU2 Vertical Counter Latch (Scanline Hi Byte)
+  and.b #$01       // A &= 1 (Bit 9 Of Vertical Counter)
+  xba              // Exchange B & A Accumulators (A = Scanline Lo Byte)
+  tax              // Transfer A To X Index (X = Scanline Count)
 
-  cpy.w #217 // Compare Scanline Counter To 217
-  bpl SkipDMA
+  cpx.w #216  // Compare Scanline Count To 216
+  bpl SkipDMA // IF (Scanline Count < 216) Skip DMA
 
   ldx.w #32        // Set Size In Bytes To DMA Transfer (2 Bytes For Each Color)
   stx.w REG_DAS0L  // $4305: DMA Transfer Size/HDMA
@@ -140,10 +144,6 @@ HTIMERIRQ:
   sta.w REG_MDMAEN // $420B: DMA Enable
 
   SkipDMA:
-  rti
-
-  StartPaletteUpload:
-  ldy.w #0 // Scanline Counter = 0
   rti
 
 OAMHDMATable:
