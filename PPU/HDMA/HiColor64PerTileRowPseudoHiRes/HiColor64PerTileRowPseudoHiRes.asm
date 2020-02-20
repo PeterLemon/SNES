@@ -1,6 +1,6 @@
-// SNES Hi Color (64 Per Tile Row) Pseudo Interlace Using 4BPP BG Mode Demo by krom (Peter Lemon):
+// SNES Hi Color (64 Per Tile Row) Pseudo Horizontal High-Resolution (512x224) Using 4BPP BG Mode Demo by krom (Peter Lemon):
 arch snes.cpu
-output "HiColor64PerTileRowPseudoInterlace.sfc", create
+output "HiColor64PerTileRowPseudoHiRes.sfc", create
 
 macro seek(variable offset) {
   origin ((offset & $7F0000) >> 1) | (offset & $7FFF)
@@ -68,7 +68,7 @@ seek($8000); Start:
   sta.w REG_INIDISP // $80: Turn On Screen, Full Brightness ($2100)
 
   // IRQ
-  lda.b #200         // Value Depends On How Long Horizontal IRQ Takes To Start DMA
+  lda.b #190         // Value Depends On How Long Horizontal IRQ Takes To Start DMA
   sta.w REG_HTIMEL   // $4207: H-Count Timer Setting (Lower 8-Bit)
   lda.b #%10010000   // NMI & Horizontal IRQ
   sta.w REG_NMITIMEN // $4200: Interrupt Enable & Joypad Request (Enable NMI)
@@ -84,31 +84,29 @@ VBLANKIRQ:
   stz.w REG_CGADD  // $2121: Palette CGRAM Address = 0
   ldx.w #BGPal     // DMA Table Address
   stx.w REG_A1T0L  // $4302: DMA0 DMA/HDMA Table Start Address
-  ldx.w #256       // Set Size In Bytes To DMA Transfer (2 Bytes For Each Color)
+  ldx.w #128       // Set Size In Bytes To DMA Transfer (2 Bytes For Each Color)
   stx.w REG_DAS0L  // $4305: DMA Transfer Size/HDMA
   lda.b #%00000001 // Start DMA Transfer (Channel 0)
   sta.w REG_MDMAEN // $420B: DMA Enable
-  stz.w REG_CGADD  // $2121: Palette CGRAM Address = 0
-  ldy.w #224 // Y = Scanline Counter
   rti
 
 HTIMERIRQ:
   lda.w REG_TIMEUP // $4211: H/V-Timer IRQ Flag (Read/Ack) (Clear IRQ Line)
-  iny // Scanline Counter++
 
-  cpy.w #261 // Compare Scanline Counter To 261 (Vertical Counter End NTSC)
-  beq StartPaletteUpload 
+  lda.w REG_SLHV   // $2137: PPU1 Latch H/V-Counter By Software (Read=Strobe)
+  lda.w REG_OPVCT  // $213D: PPU2 Vertical Counter Latch (Scanline Lo Byte)
+  xba              // Exchange B & A Accumulators
+  lda.w REG_OPVCT  // $213D: PPU2 Vertical Counter Latch (Scanline Hi Byte)
+  and.b #$01       // A &= 1 (Bit 9 Of Vertical Counter)
+  xba              // Exchange B & A Accumulators (A = Scanline Lo Byte)
+  tax              // Transfer A To X Index (X = Scanline Count)
 
-  cpy.w #8 // Compare Scanline Counter To 8
-  bmi SkipDMA
+  cpx.w #216  // Compare Scanline Count To 216
+  bpl SkipDMA // IF (Scanline Count < 216) Skip DMA
 
-  cpy.w #217 // Compare Scanline Counter To 217
-  bpl SkipDMA
-
-  tya // A = Scanline Counter
-  and.b #$F // A &= $F
-  cmp.b #$8 // Compare A To 8
-  bne DMAPAL // IF (Scanline Count != Muliple Of 8) DMA Palette, ELSE Reset Palette Address
+  and.b #$F       // A &= $F
+  cmp.b #$8       // Compare A To 8
+  bne DMAPAL      // IF (Scanline Count != Muliple Of 8) DMA Palette, ELSE Reset Palette Address
   stz.w REG_CGADD // $2121: Palette CGRAM Address = 0
 
   DMAPAL:
@@ -118,10 +116,6 @@ HTIMERIRQ:
     sta.w REG_MDMAEN // $420B: DMA Enable
 
   SkipDMA:
-  rti
-
-  StartPaletteUpload:
-  ldy.w #0 // Scanline Counter = 0
   rti
 
 BGMap:
