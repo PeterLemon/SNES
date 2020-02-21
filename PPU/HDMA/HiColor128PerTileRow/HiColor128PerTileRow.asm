@@ -102,7 +102,7 @@ seek($8000); Start:
   sta.w REG_INIDISP // $80: Turn On Screen, Full Brightness ($2100)
 
   // IRQ
-  lda.b #200         // Value Depends On How Long Horizontal IRQ Takes To Start DMA
+  lda.b #170         // Value Depends On How Long Horizontal IRQ Takes To Start DMA
   sta.w REG_HTIMEL   // $4207: H-Count Timer Setting (Lower 8-Bit)
   lda.b #%10010000   // NMI & Horizontal IRQ
   sta.w REG_NMITIMEN // $4200: Interrupt Enable & Joypad Request (Enable NMI)
