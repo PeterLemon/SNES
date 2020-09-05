@@ -226,8 +226,8 @@ seek($8000); Start:
   WaitNMI() // Wait For VSync
 
   // Print Result
-  PrintData(ResultDataMVN, $FB02, 8) // Print Result Data
-  PrintData(ResultDataMVN+8, $FB42, 8) // Print Result Data
+  PrintData(ResultDataMVN, $FB02, 8)    // Print Result Data
+  PrintData(ResultDataMVN+8, $FB42, 8)  // Print Result Data
   PrintData(ResultDataMVN+16, $FB82, 8) // Print Result Data
   PrintData(ResultDataMVN+24, $FBC2, 8) // Print Result Data
   PrintData(ResultDataMVN+32, $FC02, 8) // Print Result Data
@@ -242,7 +242,7 @@ seek($8000); Start:
     cmp.w MOVSRCData,x
     bne Fail4
     inx // X++
-    cpx.w #$0040 // Copmpare Result Data Index to 64
+    cpx.w #$0040 // Compare Result Data Index to 64
     bne LoopResult4 // IF (Result Data Index != 64) Loop Result
     beq Pass4
   Fail4:
@@ -269,9 +269,9 @@ seek($8000); Start:
 
   // Run Test
   lda.w #$003F // A = Length (64 Bytes)
-  ldx.w #MOVSRCData // X = Source
-  ldy.w #ResultDataMVP // Y = Destination
-  mvn $00=$00 // Block Move 64 Bytes 
+  ldx.w #MOVSRCData+$3F // X = Source
+  ldy.w #ResultDataMVP+$3F // Y = Destination
+  mvp $00=$00 // Block Move 64 Bytes 
 
   // Store Result Data
   sta.b ResultDataA // Store Result To Memory
@@ -297,7 +297,7 @@ seek($8000); Start:
 
   // Check Result Data
   ldx.b ResultDataX // X = Result Data
-  cpx.w MOVResultCheckB
+  cpx.w MOVResultCheckE
   beq Pass6
   Fail6:
     PrintText(Fail, $FA72, 4) // Load Text To VRAM Lo Bytes
@@ -310,7 +310,7 @@ seek($8000); Start:
 
   // Check Result Data
   ldx.b ResultDataY // X = Result Data
-  cpx.w MOVResultCheckD
+  cpx.w MOVResultCheckF
   beq Pass7
   Fail7:
     PrintText(Fail, $FAB2, 4) // Load Text To VRAM Lo Bytes
@@ -321,8 +321,8 @@ seek($8000); Start:
   WaitNMI() // Wait For VSync
 
   // Print Result
-  PrintData(ResultDataMVP, $FB02, 8) // Print Result Data
-  PrintData(ResultDataMVP+8, $FB42, 8) // Print Result Data
+  PrintData(ResultDataMVP, $FB02, 8)    // Print Result Data
+  PrintData(ResultDataMVP+8, $FB42, 8)  // Print Result Data
   PrintData(ResultDataMVP+16, $FB82, 8) // Print Result Data
   PrintData(ResultDataMVP+24, $FBC2, 8) // Print Result Data
   PrintData(ResultDataMVP+32, $FC02, 8) // Print Result Data
@@ -337,7 +337,7 @@ seek($8000); Start:
     cmp.w MOVSRCData,x
     bne Fail8
     inx // X++
-    cpx.w #$0040 // Copmpare Result Data Index to 64
+    cpx.w #$0040 // Compare Result Data Index to 64
     bne LoopResult8 // IF (Result Data Index != 64) Loop Result
     beq Pass8
   Fail8:
@@ -371,11 +371,15 @@ MOVMVP:
 MOVResultCheckA:
   dw $FFFF
 MOVResultCheckB:
-  dw $8B00
+  dw $8B04
 MOVResultCheckC:
   dw $0046
 MOVResultCheckD:
   dw $0086
+MOVResultCheckE:
+  dw $8AC3
+MOVResultCheckF:
+  dw $0045
 
 MOVSRCData:
   db $01,$02,$03,$04,$05,$06,$07,$08
