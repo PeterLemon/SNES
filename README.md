@@ -3,12 +3,12 @@ SNES
 <br />
 SNES Assembly Code by krom (Peter Lemon).<br />
 <br />
-All code compiles out of box with the bass (v14) assembler by byuu.<br />
+All code compiles out of box with the bass (v14) assembler by Near.<br />
 I use a special version of bass by ARM9 which has been updated with SuperFX/GSU Risc output:<br />
 https://github.com/ARM9/bass<br />
 I have included binaries of all the demos.<br />
 <br />
-Special thanks to byuu, for making the higan emulator, & the bass assembler =D<br />
+Special thanks to Near, for making the higan emulator, & the bass assembler =D<br />
 Please check out higan, a cycle accurate SNES Emulator:<br />
 https://github.com/higan-emu/higan<br />
 <br />
