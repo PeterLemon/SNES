@@ -10,7 +10,7 @@ I have included binaries of all the demos.<br />
 <br />
 Special thanks to byuu, for making the higan emulator, & the bass assembler =D<br />
 Please check out higan, a cycle accurate SNES Emulator:<br />
-http://byuu.org/emulation/higan<br />
+https://github.com/higan-emu/higan<br />
 <br />
 Also thanks to ARM9, for helping me with my SNES initialisation routine, my SuperFX/GSU LIB file, & his SuperFX/GSU bass assembler.<br />
 <br />
